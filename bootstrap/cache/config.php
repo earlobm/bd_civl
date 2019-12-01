@@ -172,11 +172,7 @@
       'file' => 
       array (
         'driver' => 'file',
-<<<<<<< HEAD
-        'path' => 'C:\\xampp\\htdocs\\tumi\\storage\\framework/cache/data',
-=======
-        'path' => 'F:\\tumi_app\\tumi\\storage\\framework/cache/data',
->>>>>>> 8b3c1b48dd55b89d8cf922bba8be2d12b51e0ba8
+        'path' => 'C:\\xampp\\htdocs\\credit\\storage\\framework/cache/data',
       ),
       'memcached' => 
       array (
@@ -216,7 +212,7 @@
       'sqlite' => 
       array (
         'driver' => 'sqlite',
-        'database' => 'tumi',
+        'database' => 'bd_credit',
         'prefix' => '',
       ),
       'mysql' => 
@@ -224,7 +220,7 @@
         'driver' => 'mysql',
         'host' => '107.180.57.58',
         'port' => '3306',
-        'database' => 'tumi',
+        'database' => 'bd_credit',
         'username' => 'tumi',
         'password' => 'tumi123',
         'unix_socket' => '',
@@ -239,7 +235,7 @@
         'driver' => 'pgsql',
         'host' => '107.180.57.58',
         'port' => '3306',
-        'database' => 'tumi',
+        'database' => 'bd_credit',
         'username' => 'tumi',
         'password' => 'tumi123',
         'charset' => 'utf8',
@@ -252,7 +248,7 @@
         'driver' => 'sqlsrv',
         'host' => '107.180.57.58',
         'port' => '3306',
-        'database' => 'tumi',
+        'database' => 'bd_credit',
         'username' => 'tumi',
         'password' => 'tumi123',
         'charset' => 'utf8',
@@ -281,20 +277,12 @@
       'local' => 
       array (
         'driver' => 'local',
-<<<<<<< HEAD
-        'root' => 'C:\\xampp\\htdocs\\tumi\\storage\\app',
-=======
-        'root' => 'F:\\tumi_app\\tumi\\storage\\app',
->>>>>>> 8b3c1b48dd55b89d8cf922bba8be2d12b51e0ba8
+        'root' => 'C:\\xampp\\htdocs\\credit\\storage\\app',
       ),
       'public' => 
       array (
         'driver' => 'local',
-<<<<<<< HEAD
-        'root' => 'C:\\xampp\\htdocs\\tumi\\storage\\app/public',
-=======
-        'root' => 'F:\\tumi_app\\tumi\\storage\\app/public',
->>>>>>> 8b3c1b48dd55b89d8cf922bba8be2d12b51e0ba8
+        'root' => 'C:\\xampp\\htdocs\\credit\\storage\\app/public',
         'url' => 'http://localhost/storage',
         'visibility' => 'public',
       ),
@@ -339,21 +327,13 @@
       'single' => 
       array (
         'driver' => 'single',
-<<<<<<< HEAD
-        'path' => 'C:\\xampp\\htdocs\\tumi\\storage\\logs/laravel.log',
-=======
-        'path' => 'F:\\tumi_app\\tumi\\storage\\logs/laravel.log',
->>>>>>> 8b3c1b48dd55b89d8cf922bba8be2d12b51e0ba8
+        'path' => 'C:\\xampp\\htdocs\\credit\\storage\\logs/laravel.log',
         'level' => 'debug',
       ),
       'daily' => 
       array (
         'driver' => 'daily',
-<<<<<<< HEAD
-        'path' => 'C:\\xampp\\htdocs\\tumi\\storage\\logs/laravel.log',
-=======
-        'path' => 'F:\\tumi_app\\tumi\\storage\\logs/laravel.log',
->>>>>>> 8b3c1b48dd55b89d8cf922bba8be2d12b51e0ba8
+        'path' => 'C:\\xampp\\htdocs\\credit\\storage\\logs/laravel.log',
         'level' => 'debug',
         'days' => 7,
       ),
@@ -405,11 +385,7 @@
       'theme' => 'default',
       'paths' => 
       array (
-<<<<<<< HEAD
-        0 => 'C:\\xampp\\htdocs\\tumi\\resources\\views/vendor/mail',
-=======
-        0 => 'F:\\tumi_app\\tumi\\resources\\views/vendor/mail',
->>>>>>> 8b3c1b48dd55b89d8cf922bba8be2d12b51e0ba8
+        0 => 'C:\\xampp\\htdocs\\credit\\resources\\views/vendor/mail',
       ),
     ),
   ),
@@ -490,11 +466,7 @@
     'lifetime' => '120',
     'expire_on_close' => false,
     'encrypt' => false,
-<<<<<<< HEAD
-    'files' => 'C:\\xampp\\htdocs\\tumi\\storage\\framework/sessions',
-=======
-    'files' => 'F:\\tumi_app\\tumi\\storage\\framework/sessions',
->>>>>>> 8b3c1b48dd55b89d8cf922bba8be2d12b51e0ba8
+    'files' => 'C:\\xampp\\htdocs\\credit\\storage\\framework/sessions',
     'connection' => NULL,
     'table' => 'sessions',
     'store' => NULL,
@@ -514,15 +486,9 @@
   array (
     'paths' => 
     array (
-<<<<<<< HEAD
-      0 => 'C:\\xampp\\htdocs\\tumi\\resources\\views',
+      0 => 'C:\\xampp\\htdocs\\credit\\resources\\views',
     ),
-    'compiled' => 'C:\\xampp\\htdocs\\tumi\\storage\\framework\\views',
-=======
-      0 => 'F:\\tumi_app\\tumi\\resources\\views',
-    ),
-    'compiled' => 'F:\\tumi_app\\tumi\\storage\\framework\\views',
->>>>>>> 8b3c1b48dd55b89d8cf922bba8be2d12b51e0ba8
+    'compiled' => 'C:\\xampp\\htdocs\\credit\\storage\\framework\\views',
   ),
   'tcpdf' => 
   array (
@@ -559,11 +525,7 @@
         'host' => 'localhost',
         'port' => 11211,
       ),
-<<<<<<< HEAD
-      'dir' => 'C:\\xampp\\htdocs\\tumi\\storage\\cache',
-=======
-      'dir' => 'F:\\tumi_app\\tumi\\storage\\cache',
->>>>>>> 8b3c1b48dd55b89d8cf922bba8be2d12b51e0ba8
+      'dir' => 'C:\\xampp\\htdocs\\credit\\storage\\cache',
     ),
     'properties' => 
     array (
@@ -629,11 +591,7 @@
       ),
       'store' => 
       array (
-<<<<<<< HEAD
-        'path' => 'C:\\xampp\\htdocs\\tumi\\storage\\exports',
-=======
-        'path' => 'F:\\tumi_app\\tumi\\storage\\exports',
->>>>>>> 8b3c1b48dd55b89d8cf922bba8be2d12b51e0ba8
+        'path' => 'C:\\xampp\\htdocs\\credit\\storage\\exports',
         'returnInfo' => false,
       ),
       'pdf' => 
@@ -643,27 +601,15 @@
         array (
           'DomPDF' => 
           array (
-<<<<<<< HEAD
-            'path' => 'C:\\xampp\\htdocs\\tumi\\vendor/dompdf/dompdf/',
+            'path' => 'C:\\xampp\\htdocs\\credit\\vendor/dompdf/dompdf/',
           ),
           'tcPDF' => 
           array (
-            'path' => 'C:\\xampp\\htdocs\\tumi\\vendor/tecnick.com/tcpdf/',
+            'path' => 'C:\\xampp\\htdocs\\credit\\vendor/tecnick.com/tcpdf/',
           ),
           'mPDF' => 
           array (
-            'path' => 'C:\\xampp\\htdocs\\tumi\\vendor/mpdf/mpdf/',
-=======
-            'path' => 'F:\\tumi_app\\tumi\\vendor/dompdf/dompdf/',
-          ),
-          'tcPDF' => 
-          array (
-            'path' => 'F:\\tumi_app\\tumi\\vendor/tecnick.com/tcpdf/',
-          ),
-          'mPDF' => 
-          array (
-            'path' => 'F:\\tumi_app\\tumi\\vendor/mpdf/mpdf/',
->>>>>>> 8b3c1b48dd55b89d8cf922bba8be2d12b51e0ba8
+            'path' => 'C:\\xampp\\htdocs\\credit\\vendor/mpdf/mpdf/',
           ),
         ),
       ),

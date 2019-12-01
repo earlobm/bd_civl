@@ -1,5 +1,5 @@
 <?php
-namespace poi\Http\Controllers\RegisterPrestamo;
+namespace poi\Http\Controllers\Register;
 
 use Illuminate\Http\Request;
 use poi\Http\Controllers\Controller;

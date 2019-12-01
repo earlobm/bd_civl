@@ -16,7 +16,6 @@ window.Vue = require('vue');
  */
 
 // Registers
-Vue.component('customerpledge',() => System.import('./components/register/CustomerPledge.vue'));
 Vue.component('customercredit',() => System.import('./components/register/CustomerCredit.vue'));
 Vue.component('staff',() => System.import('./components/register/StaffView.vue'));
 Vue.component('payment',() => System.import('./components/register/PaymentView.vue'));
@@ -26,8 +25,8 @@ Vue.component('detailpledge',() => System.import('./components/register/DetailPl
 Vue.component('contrato',() => System.import('./components/setting/ContratoBoleta.vue'));
 Vue.component('montodia',() => System.import('./components/register/AmountDay.vue'));
 // RegistersCustomer
-Vue.component('document',() => System.import('./components/registercustomer/DocumentCustomer.vue'));
-Vue.component('negocio',() => System.import('./components/registercustomer/TypeCommerce.vue'));
+Vue.component('document',() => System.import('./components/register/DocumentCustomer.vue'));
+Vue.component('business',() => System.import('./components/register/TypeBusiness.vue'));
 // SummaryDay
 Vue.component('resumendia',() => System.import('./components/summaryday/ResumenDia.vue'));
 
@@ -42,10 +41,6 @@ Vue.component('egress',() => System.import('./components/box/EgressView.vue'));
 
 //Vue.component('example-component', require('./components/ExampleComponent.vue'));
 Vue.component('dashboardmain',() => System.import('./components/DashboardMain.vue'));
-Vue.component('programa',() => System.import('./components/registro/mef/Programa.vue'));
-Vue.component('planesestrategico',() => System.import('./components/registro/pei/PlanesEstrategicos.vue'));
-Vue.component('dependencias',() => System.import('./components/registro/dependencia/Dependencias.vue'));
-Vue.component('unidadespoi',() => System.import('./components/planoperativo/unidadpoi/UnidadPoiVista.vue'));
 //plan operativo 
 Vue.component('comboanio', () => System.import('./components/ComboAnio.vue'));
 

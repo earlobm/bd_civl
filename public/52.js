@@ -1,4 +1,4 @@
-webpackJsonp([24],{
+webpackJsonp([52],{
 
 /***/ 195:
 /***/ (function(module, exports) {
@@ -110,7 +110,7 @@ module.exports = function normalizeComponent (
 
 /***/ }),
 
-/***/ 296:
+/***/ 277:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -128,102 +128,149 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-    props: ['idanio'],
-    mounted: function mounted() {
-        console.log('Component mounted.');
-    },
+    props: ['ruta'],
+    data: function data() {
+        return {
+            authUser: 1
 
-    created: function created() {
-        // this.idanio=this.idanio;
+        };
     },
-    methods: {
-        mostrar_colum: function mostrar_colum(val) {
-            this.idanio = val;
-        }
-    }
+    paginaActual: function paginaActual() {
+        this.listado = 1;
+    },
+    mounted: function mounted() {}
 });
 
 /***/ }),
 
-/***/ 297:
+/***/ 278:
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("li", { staticClass: "dropdown show" }, [
-    _vm._m(0),
-    _vm._v(" "),
-    _c(
-      "ul",
-      {
-        staticClass: "dropdown-menu",
-        staticStyle: { "border-radius": "3px", "margin-top": "1.5px" },
-        attrs: { role: "menu" }
-      },
-      [
-        _c("li", [
-          _c(
-            "a",
-            {
-              attrs: { href: "#" },
-              on: {
-                click: function($event) {
-                  return _vm.mostrar_colum((_vm.idanio = 2022))
-                }
-              }
-            },
-            [_vm._v("2022")]
-          )
-        ]),
-        _vm._v(" "),
-        _c("li", [
-          _c(
-            "a",
-            {
-              attrs: { href: "#" },
-              on: {
-                click: function($event) {
-                  return _vm.mostrar_colum((_vm.idanio = 2021))
-                }
-              }
-            },
-            [_vm._v("2021")]
-          )
-        ]),
-        _vm._v(" "),
-        _vm._m(1)
-      ]
-    )
-  ])
+  return _vm._m(0)
 }
 var staticRenderFns = [
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c(
-      "a",
-      {
-        staticClass: "dropdown-toggle",
-        attrs: { href: "#", "data-toggle": "dropdown", "aria-expanded": "true" }
-      },
-      [
-        _c("i", { staticClass: "fa fa-cog" }),
-        _c("b", [_vm._v("Año Operacional")]),
+    return _c("main", { staticClass: "main" }, [
+      _c("section", { staticClass: "content-header" }, [
+        _c("h1", [
+          _vm._v("\n              Bienvenido\n              "),
+          _c("small", [_vm._v("al Sistema de Préstamo y Empeño")])
+        ]),
         _vm._v(" "),
-        _c("span", { staticClass: "caret" })
-      ]
-    )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("li", [_c("a", { attrs: { href: "#" } }, [_vm._v("2020")])])
+        _c("ol", { staticClass: "breadcrumb" }, [
+          _c("li", [
+            _c("a", { attrs: { href: "#" } }, [
+              _c("i", { staticClass: "fa fa-home" }),
+              _vm._v(" Inicio")
+            ])
+          ])
+        ])
+      ]),
+      _vm._v(" "),
+      _c("section", { staticClass: "content" }, [
+        _c("div", { staticClass: "row" }, [
+          _c("div", { staticClass: "col-md-12" }, [
+            _c("div", { staticClass: "box box-primary" }, [
+              _c("div", { staticClass: "box-body" }, [
+                _c("div", { staticClass: "row" }, [
+                  _c("div", { staticClass: "col-md-12" }, [
+                    _c("div", { staticClass: "container-fluid" }, [
+                      _c("div", { staticClass: "card" }, [
+                        _c("div", { staticClass: "card-body" }, [
+                          _c("div", { staticClass: "row" }, [
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "col-lg-12 col-md-12 col-sm-12 col-xs-12"
+                              },
+                              [
+                                _c("div", { staticClass: "box-body" }, [
+                                  _c("div", { staticClass: "row" }, [
+                                    _c(
+                                      "section",
+                                      { attrs: { id: "widget-grid" } },
+                                      [
+                                        _c("div", { staticClass: "row" }, [
+                                          _c(
+                                            "article",
+                                            { staticClass: "col-sm-12" },
+                                            [
+                                              _c("img", {
+                                                staticStyle: {
+                                                  "border-radius": "3px"
+                                                },
+                                                attrs: {
+                                                  width: "100%",
+                                                  src: "img/LOGO-TUMIFINAL.png"
+                                                }
+                                              })
+                                            ]
+                                          )
+                                        ])
+                                      ]
+                                    )
+                                  ])
+                                ])
+                              ]
+                            )
+                          ])
+                        ])
+                      ])
+                    ])
+                  ])
+                ])
+              ])
+            ])
+          ])
+        ])
+      ])
+    ])
   }
 ]
 render._withStripped = true
@@ -231,21 +278,21 @@ module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-390f2fcc", module.exports)
+    require("vue-hot-reload-api")      .rerender("data-v-cb7b9974", module.exports)
   }
 }
 
 /***/ }),
 
-/***/ 61:
+/***/ 56:
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 var normalizeComponent = __webpack_require__(195)
 /* script */
-var __vue_script__ = __webpack_require__(296)
+var __vue_script__ = __webpack_require__(277)
 /* template */
-var __vue_template__ = __webpack_require__(297)
+var __vue_template__ = __webpack_require__(278)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -262,7 +309,7 @@ var Component = normalizeComponent(
   __vue_scopeId__,
   __vue_module_identifier__
 )
-Component.options.__file = "resources/assets/js/components/ComboAnio.vue"
+Component.options.__file = "resources/assets/js/components/DashboardMain.vue"
 
 /* hot reload */
 if (false) {(function () {
@@ -271,9 +318,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-390f2fcc", Component.options)
+    hotAPI.createRecord("data-v-cb7b9974", Component.options)
   } else {
-    hotAPI.reload("data-v-390f2fcc", Component.options)
+    hotAPI.reload("data-v-cb7b9974", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true

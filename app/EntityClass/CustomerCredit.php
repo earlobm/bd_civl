@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class CustomerCredit extends Model{
   //protected $connection = 'mysql-utf8';
-    protected $table='customer_credit';
+    protected $table='customer';
     protected $primaryKey='id';
     public $timestamps = false;
     const UPDATED_AT=NULL;

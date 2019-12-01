@@ -48,16 +48,16 @@ Route::get('/getListCustomerCredit', 'Register\CustomerCreditController@list_cus
 Route::get('/getTypeDocument', 'Register\CustomerCreditController@type_document');
 Route::post('/saveCustomerCredit', 'Register\CustomerCreditController@save'); 
 //DOCUMENT
-Route::post('/save_Document', 'RegisterPrestamo\DocumentCustomerPledgeController@save_Document'); 
-Route::get('/getlistDocument', 'RegisterPrestamo\DocumentCustomerPledgeController@getlistDocument');
-Route::get('/getEditListDocument', 'RegisterPrestamo\DocumentCustomerPledgeController@getEditListDocument');
-Route::post('/delete_Document', 'RegisterPrestamo\DocumentCustomerPledgeController@delete_Document'); 
+Route::post('/save_Document', 'Register\DocumentCustomerController@save_Document'); 
+Route::get('/getlistDocument', 'Register\DocumentCustomerController@getlistDocument');
+Route::get('/getEditListDocument', 'Register\DocumentCustomerController@getEditListDocument');
+Route::post('/delete_Document', 'Register\DocumentCustomerController@delete_Document'); 
 
-//COMMERCE
-Route::post('/save_Commerce', 'RegisterPrestamo\TypeCommerceController@save_Commerce'); 
-Route::get('/getlistCommerce', 'RegisterPrestamo\TypeCommerceController@getlistCommerce');
-Route::get('/getEditListCommerce', 'RegisterPrestamo\TypeCommerceController@getEditListCommerce');
-Route::post('/delete_Commerce', 'RegisterPrestamo\TypeCommerceController@delete_Commerce'); 
+//Business
+Route::post('/save_business', 'Register\TypeBusinessController@saveBusiness'); 
+Route::get('/getlistBusiness', 'Register\TypeBusinessController@getlistBusiness');
+Route::get('/getEditListbusiness', 'Register\TypeBusinessController@getEditListBusiness');
+Route::post('/deleteBusiness', 'Register\TypeBusinessController@deleteBusiness'); 
 
 //personal
 Route::get('/getDatabyNroDocP', 'Register\PersonalController@getDatabyNroDocP'); 

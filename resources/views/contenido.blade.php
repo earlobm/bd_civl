@@ -35,7 +35,7 @@
         <document></document>
         </template>
         <template v-if="menu==23">
-        <negocio></negocio>
+        <business></business>
         </template>
         <template v-if="menu==25">
         <resumendia></resumendia>

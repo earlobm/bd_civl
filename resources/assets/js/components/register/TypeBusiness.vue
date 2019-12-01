@@ -64,7 +64,7 @@
                                                                             </tr> 
                                                                         </thead>
                                                                         <tbody>
-                                                                            <tr v-for="(midata,index) in list_commerce" :key="index" >
+                                                                            <tr v-for="(midata,index) in list_business" :key="index" >
                                                                                 <td style="vertical-align: middle; text-align: center;" >{{(index+1)}}</td>
                                                                                 <td style="vertical-align: middle; text-align: center;" v-text="midata.name"></td>
                                                                                 <td style="text-align: center; vertical-align: middle;">                                                                                    
@@ -108,7 +108,7 @@
                                                                     <button type="button" @click="volver()" class="btn btn-danger">
                                                                         <i class="fa fa-close "></i>&nbsp;CANCELAR
                                                                     </button>
-                                                                    <button type="button" @click="save_typeCommerce()" class="btn btn-save">
+                                                                    <button type="button" @click="save_typebusiness()" class="btn btn-save">
                                                                         <i class="fa fa-save"></i>&nbsp;GUARDAR
                                                                     </button>
                                                                 </div>
@@ -161,7 +161,7 @@
             return {
                 array_branch:[],
                 arrayZona : [],
-                list_commerce : [],idParent:'',year:'',
+                list_business : [],idParent:'',year:'',
                 arrayEntrenador : [],
                 arrayDataDetalle : [],califica:'',
                 arrayCohort:[],datosArrayPbg:[],datosArraySunat:[],
@@ -305,7 +305,7 @@
                 me.listado=2;
                 //me.limpiar();
                 //me.get_branch();
-                var url= 'getEditListCommerce?id='+id;
+                var url= 'getEditListbusiness?id='+id;
                 axios.get(url).then(function (response) {
                     var respuesta= response.data;
                     me.id=respuesta.datax[0].id;
@@ -317,7 +317,7 @@
                 });
                               
             },
-            save_typeCommerce(){
+            save_typebusiness(){
                 if (this.validarData()){
                     return;
                 }
@@ -333,7 +333,7 @@
                 if (result.value) {
 
                 let me = this;
-                axios.post('save_Commerce',{
+                axios.post('save_business',{
                     'id':this.id,
                     'name':this.name,
                 }).then(function (response) {
@@ -374,7 +374,7 @@
                 }).then((result) => {
                     if (result.value) {
                     let me = this;
-                    axios.post('delete_Commerce',{
+                    axios.post('delete_business',{
                         'id': id
 
                     }).then(function (response) {
@@ -410,10 +410,10 @@
             list_data(page){
                 let me=this;      
                 me.listado=0;        
-                var url= 'getlistCommerce';
+                var url= 'getlistBusiness';
                 axios.get(url).then(function (response) {
                     var respuesta= response.data;
-                     me.list_commerce=respuesta.datax;
+                     me.list_business=respuesta.datax;
                      //me.pagination= respuesta.pagination; 
                      me.listado=1;
                 })
