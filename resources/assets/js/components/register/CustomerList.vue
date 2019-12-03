@@ -41,250 +41,7 @@
                                             <div class="card-body">    
                                                 <div class="row">
                                                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">                               
-                                                        <div class="box-body">  
-                                                            <template v-if="listadox==1">                                                   
-                                                                <div class="row"> 
-                                                                    <div class="col-md-4">
-                                                                        <div v-bind:class="errorInputActivity5">
-                                                                            <label for="dni">Código:</label>
-                                                                            <div class="input-group">
-                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;  color:#1e2172"><i class="fa fa-database"></i></span>
-                                                                                <input maxlength="8" v-model="code" type="text" class="form-control">
-                                                                                <span class="input-group-btn">
-                                                                                    <button data-toggle="tooltip" title="Generar Automáticamente" @click="generate_code()" type="submit" class="btn btn-search btn-flat" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;"><i v-bind:class="icon_generate"></i>  GENERAR</button>
-                                                                                </span>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div> 
-                                                                    <div class="col-md-4">
-                                                                        <div class="form-group">
-                                                                            <label for="estado_civil">Tipo de Documento de Identidad:</label>
-                                                                            <div class="input-group">
-                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-user"></i></span>
-                                                                                <select class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;" v-model="id_type_doc">
-                                                                                    <option selected="selected" value="">Seleccione</option>
-                                                                                    <option v-for="datax in array_type_document" :key="datax.id" :value="datax.id">{{ datax.name }}</option>
-                                                                                </select>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-md-4">
-                                                                        <div v-bind:class="errorInputActivity">
-                                                                            <label for="dni">N° de Documento:</label>
-                                                                            <div class="input-group">
-                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;  color:#1e2172"><i class="fa fa-database"></i></span>
-                                                                                <input maxlength="8" v-model="nro_doc" type="text" @keyup="validarData()" @keyup.enter="getData()"  class="form-control">
-                                                                                <span class="input-group-btn">
-                                                                                    <button data-toggle="tooltip" title="Buscar en RENIEC" type="submit" @click="getData()" class="btn btn-search btn-flat" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;"><i v-bind:class="icon_search_dni"></i> BUSCAR</button>
-                                                                                </span>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>                                                                            
-                                                                    <div class="col-md-3">
-                                                                        <div v-bind:class="errorInputActivity3">
-                                                                            <label for="ap_paterno">Apellido Paterno:</label>
-                                                                            <div class="input-group">
-                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-user"></i></span>
-                                                                                <input v-model="paternal_last_name" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">                                                                            
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-md-3">
-                                                                        <div v-bind:class="errorInputActivity4">
-                                                                            <label for="ap_materno">Apellido Materno:</label>
-                                                                            <div class="input-group">
-                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-user"></i></span>
-                                                                                <input v-model="maternal_last_name" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">  
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-md-3">
-                                                                        <div v-bind:class="errorInputActivity2">
-                                                                            <label for="nombres">Nombres:</label>
-                                                                            <div class="input-group">
-                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-user"></i></span>
-                                                                                <input v-model="name" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">  
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-md-3">
-                                                                        <div class="form-group">
-                                                                            <label for="sexo">Sexo:</label>
-                                                                            <div class="input-group">
-                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-transgender"></i></span>
-                                                                            <select class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;" v-model="sex">
-                                                                                <option selected="selected" value="">Seleccione</option>
-                                                                                <option value="M">Masculino</option>
-                                                                                <option value="F">Femenino</option>
-                                                                            </select>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-md-3">
-                                                                        <div class="form-group">
-                                                                            <label for="edad">Fecha de Nacimiento:</label>
-                                                                            <div class="input-group">
-                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-birthday-cake "></i></span>
-                                                                            <date-picker v-model="birthdate" :config="options" style="border-top-right-radius: 3px;border-bottom-right-radius: 3px;"></date-picker>
-                                                                                
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-md-3">
-                                                                        <div class="form-group">
-                                                                            <label for="estado_civil">Estado Civíl:</label>
-                                                                            <div class="input-group">
-                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-heart-o"></i></span>
-                                                                            <select class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;" v-model="marital_status">
-                                                                                <option selected="selected" value="">Seleccione</option>
-                                                                                <option value="SOLTERO">Soltero (a)</option>
-                                                                                <option value="CASADO">Casado (a)</option>
-                                                                                <option value="VIUDO">Viudo (a)</option>
-                                                                                <option value="SEPARADO">Separado (a)</option>
-                                                                            </select>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-md-3">
-                                                                        <div class="form-group">
-                                                                            <label for="celular">Celular:</label>
-                                                                            <div class="input-group">
-                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-mobile-phone"></i></span>
-                                                                                <input v-model="phone" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">  
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-md-3">
-                                                                        <div class="form-group">
-                                                                            <label for="celular">Correo electrónico:</label>
-                                                                            <div class="input-group">
-                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-envelope"></i></span>
-                                                                                <input v-model="email" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">  
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-md-3">
-                                                                        <div class="form-group">
-                                                                            <label for="estado_civil">Departamento:</label>
-                                                                            <div class="input-group">
-                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-map-marker"></i></span>
-                                                                                <select @change="get_province($event.target.value)" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;" v-model="department">
-                                                                                    <option selected="selected" value="">Seleccione</option>
-                                                                                    <option v-for="miselect in array_department" :selected="miselect.id == department" :key="miselect.id" :value="miselect.id">{{ miselect.name}}</option>
-                                                                                </select>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-md-3">
-                                                                        <div class="form-group">
-                                                                            <label for="estado_civil">Provincia:</label>
-                                                                            <div class="input-group">
-                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-map-marker"></i></span>
-                                                                                <select @change="get_district($event.target.value)" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;" v-model="province">
-                                                                                    <option selected="selected" value="">Seleccione</option>
-                                                                                    <option v-for="miselect in array_province" :selected="miselect.id == province" :key="miselect.id" :value="miselect.id">{{ miselect.name}}</option>
-                                                                                </select>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-md-3">
-                                                                        <div class="form-group">
-                                                                            <label for="estado_civil">Distrito:</label>
-                                                                            <div class="input-group">
-                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-map-marker"></i></span>
-                                                                                <select class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;" v-model="district">
-                                                                                    <option selected="selected" value="">Seleccione</option>
-                                                                                    <option v-for="miselect in array_district" :selected="miselect.id == district" :key="miselect.id" :value="miselect.id">{{ miselect.name}}</option>
-                                                                                </select>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-md-3">
-                                                                        <div v-bind:class="errorInputActivity6">
-                                                                            <label for="celular">Dirección:</label>
-                                                                            <div class="input-group">
-                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-location-arrow"></i></span>
-                                                                                <input placeholder="Dirección domiciliaria" v-model="address" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>                                                                     
-                                                                    <div class="col-md-6">
-                                                                        <div class="form-group">
-                                                                            <label for="celular">Referencias:</label>
-                                                                            <div class="input-group">
-                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-file-o"></i></span>
-                                                                                <input placeholder="Referencias de la dirección domiciliaria del cliente." v-model="reference" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;"> 
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-md-3">
-                                                                        <div class="form-group">
-                                                                            <label for="type_business">Ocupación:</label>
-                                                                            <div class="input-group">
-                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-briefcase"></i></span>
-                                                                                <select class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;" v-model="id_job">
-                                                                                    <option selected="selected" value="">Seleccione</option>
-                                                                                    <option v-for="datax in array_job" :key="datax.id" :value="datax.id">{{ datax.name }}</option>
-                                                                                </select>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div> 
-                                                                    <div class="col-md-3">
-                                                                        <div class="form-group">
-                                                                            <label for="type_business">Tipo de Negocio:</label>
-                                                                            <div class="input-group">
-                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-shopping-cart"></i></span>
-                                                                                <select class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;" v-model="id_type_business">
-                                                                                    <option selected="selected" value="">Seleccione</option>
-                                                                                    <option v-for="datax in array_type_business" :key="datax.id" :value="datax.id">{{ datax.name }}</option>
-                                                                                </select>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>    
-                                                                    <div class="col-md-3">
-                                                                        <div class="form-group">
-                                                                            <label>Requisitos:</label>
-                                                                            <ul class="todo-list ui-sortable" v-for="(midata,index) in listProgram" :key="index" style="margin-bottom: 1px;">
-                                                                                <li class="">                                                                                
-                                                                                    <input type="checkbox" value="" v-model="listProgramx[index].check">                                                                               
-                                                                                    <small class="label label-warning">{{midata.id_type_document}}</small>
-                                                                                    <!-- <span class="checkmark"></span> -->
-                                                                                    <span class="text">{{midata.name}}</span>
-                                                                                </li>
-                                                                            </ul>
-                                                                        </div>
-                                                                    </div>     
-                                                                    <div  class="col-md-3">
-                                                                        <div class="form-group">
-                                                                            <label for="cargo_edit">IMPLEMENTACIÓN DOCUMENTARIA</label>
-                                                                            <div class="form-group">
-                                                                                <div class="checkbox">
-                                                                                    <label class="container">
-                                                                                        <input type="checkbox">
-                                                                                            <strong>a. </strong>Libros basicos
-                                                                                        <span class="checkmark"></span>
-                                                                                    </label>
-                                                                                    <label class="container">
-                                                                                        <input type="checkbox">
-                                                                                            <strong>b. </strong>Reglamentos
-                                                                                        <span class="checkmark"></span>
-                                                                                    </label>
-                                                                                    <label class="container">
-                                                                                        <input type="checkbox">
-                                                                                            <strong>c. </strong>Actas
-                                                                                        <span class="checkmark"></span>
-                                                                                    </label>
-                                                                                    <label>
-                                                                                        <input type="checkbox">
-                                                                                            <strong>d. </strong>Otros
-                                                                                            <input type="text" style="border: none;border-bottom: 1px solid #ccc;" placeholder="Especificar">
-                                                                                    </label>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>                                                                                                                                                                                                     
-                                                                </div>
-                                                            </template>
+                                                        <div class="box-body">
                                                                 <!-- Emprender -->
                                                             <template v-if="listadox==3">
                                                                 <div class="row">  
@@ -920,6 +677,96 @@
                                 </div>                    
                             </div>
                         </div>
+                    </div>
+                </div>
+                <!-- Lista de Clientes -->
+                <div class="col-md-12"  v-if="visible">
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <h1 class="box-title"><i class="fa fa-list"></i> Lista de Clientes
+                            </h1>
+                        
+                            <!-- <h1 class="box-title"><i class="fa fa-list"></i> Lista de Clientes</h1> -->
+                            <div class="box-tools pull-right">
+                                <span class="label label-success">TOTAL DE REGISTROS: {{pagination.total}}</span>
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                                </button>
+                                <!-- <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button> -->
+                            </div>
+                        </div>
+                        <template v-if="listado==0">
+                            <div align="center">
+                                <img src="img/loadx.gif" alt="technoserve" align="middle">
+                                <!-- <p>Cargando...</p> -->
+                            </div>
+                        </template>
+                        <template v-if="listado==2">
+                            <div class="box-body table-responsive no-padding">
+                                <div class="col-md-12">
+                                        <div class="input-group" style="margin-bottom: 10px;margin-top: 10px;">
+                                            <input type="text"  v-model="buscar" @keyup.enter="list_data(1)"  class="form-control" placeholder="Buscar por dni o nombres..." style="border-bottom-left-radius: 3px; border-top-left-radius: 3px;">
+                                            <span class="input-group-btn">
+                                                <button type="submit" @click="list_data(1)"  class="btn btn-search btn-flat" style="border-bottom-right-radius: 3px; border-top-right-radius: 3px;"><i v-bind:class="icon_search_client"></i> BUSCAR</button>
+                                            </span>
+                                        </div>                                               
+                                </div>
+                                <table  class="table table-hover" style="font-size:12px">
+                                    <thead style="background: rgb(32, 32, 32);color: #fff;">                                                                                   
+                                        <tr>  
+                                            <th style="vertical-align: middle;">#</th>
+                                            <th style="vertical-align: middle;">DNI</th>
+                                            <th style="vertical-align: middle;">NOMBRE</th>
+                                            <th style="vertical-align: middle;">DIRECCIÓN</th>
+                                            <th style="vertical-align: middle;">CELULAR</th>
+                                            <th style="text-align: center; vertical-align: middle;">ACCIONES</th>
+                                        </tr> 
+                                    </thead>
+                                    <tbody>
+                                        <tr v-for="(midata,index) in list" :key="index" >
+                                            <td style="vertical-align: middle;" >{{(index+1)+((Number(pagination.current_page)-1)*8)}}</td>
+                                            <td style="vertical-align: middle;" v-text="midata.number_doc"></td>
+                                            <td style="vertical-align: middle;" v-text="midata.names+' '+midata.paternal_last_name+' '+midata.maternal_last_name"></td>
+                                            <td style="vertical-align: middle;" v-text="midata.address"></td>
+                                            <td style="vertical-align: middle;" v-text="midata.phone"></td>
+                                            <td style="text-align: center; vertical-align: middle;"> 
+                                                <button type="button" @click="pledge(midata)" class="btn btn-emprendar btn-sm" data-toggle="tooltip" title="Emprendar">
+                                                    <i class="fa fa-archive"></i>
+                                                </button>
+                                                <button type="button" @click="edit_data(midata.id_customer_credit)" class="btn btn-editar btn-sm" data-toggle="tooltip" title="Editar">
+                                                    <i v-bind:class="icon_edit"></i>
+                                                </button>                                                                                                                   
+                                            
+                                                <button type="button" @click="eliminar(midata.id_customer_credit)" class="btn btn-eliminar btn-sm" data-toggle="tooltip" title="Eliminar">
+                                                    <i class="fa fa-trash"></i>
+                                                </button>                            
+                                            </td> 
+                                        </tr>                       
+                                    </tbody>
+                                </table>                                
+                            </div>
+                            <div class="box-footer">
+                                    <div class="col-md-6">                                                                                       
+                                    </div>
+                                    <div class="col-md-6" style="margin-top: -20px; margin-bottom: -25px;">
+                                        <div class="dataTables_paginate paging_simple_numbers" style=" float: right !important;">
+                                            <nav>
+                                                <ul class="pagination">
+                                                    <li class="page-item" v-if="pagination.current_page > 1">
+                                                        <a class="page-link" href="#" @click.prevent="cambiarPagina(Number(pagination.current_page) - 1)"><i class="fa fa-angle-left" style="color:#189900;cursor: pointer"></i></a>
+                                                    </li>
+                                                    <li class="page-item" v-for="page in pagesNumber" :key="page" :class="[page == isActived ? 'active' : '']">
+                                                        <a class="page-link" href="#" @click.prevent="cambiarPagina(page)" v-text="page"></a>
+                                                    </li>
+                                                    <li class="page-item" v-if="pagination.current_page < pagination.last_page">
+                                                        <a class="page-link" href="#" @click.prevent="cambiarPagina(Number(pagination.current_page) + 1)"><i class="fa fa-angle-right" style="color:#189900;cursor: pointer"></i></a>
+                                                    </li>
+                                                </ul>                        
+                                            </nav>
+                                        </div>
+                                    </div>
+                            </div>
+                        </template>
+                        
                     </div>
                 </div>
                 <!-- Lista de Prendas-->

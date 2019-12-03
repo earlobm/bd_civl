@@ -82,7 +82,7 @@ class CustomerCreditController extends Controller
             $sqlx="SELECT p.id, c.id as id_customer_credit, c.code, p.id_type_document, p.number_doc, p.paternal_last_name, p.maternal_last_name, p.names,
             p.phone, p.address, p.birthdate, p.sex, p.marital_status, p.email, p.reference, p.id_district,di.id_province, pr.id_department
             FROM person p 
-            inner join customer_credit c on c.id_person=p.id
+            inner join customer c on c.id_person=p.id
             inner join district di on di.id=p.id_district
             inner join province pr on pr.id=di.id_province
             inner join department de on de.id=pr.id_department
@@ -171,10 +171,10 @@ class CustomerCreditController extends Controller
             p.address,p.phone,p.id_district, p.reference,
             c.id as id_customer_credit,
             (select count(p.id) 
-            from person p inner join customer_credit c on c.id_person=p.id 
+            from person p inner join customer c on c.id_person=p.id 
             where c.state=1 and  concat(p.number_doc,' ',p.names,' ',p.paternal_last_name,' ',p.maternal_last_name) like '%$buscar%') AS total 
             from person p 
-            inner join customer_credit c on c.id_person=p.id 
+            inner join customer c on c.id_person=p.id 
             where c.state=1 and  concat(p.number_doc,' ',p.names,' ',p.paternal_last_name,' ',p.maternal_last_name)  like '%$buscar%' order by c.id limit 8 offset $curre_pagex";
     
             $lastPagex=0;
@@ -333,7 +333,7 @@ class CustomerCreditController extends Controller
         $fecha =date("Y");    
         $sqlx ="";
         $sqlx = "SELECT CONCAT($fecha,right(CONCAT('000000', (COUNT(cp.id) + 1)),6)) as code
-        FROM person p INNER JOIN customer_credit cp ON cp.id_person=p.id";
+        FROM person p INNER JOIN customer cp ON cp.id_person=p.id";
         $miArrayx=DB::select($sqlx);
         $miArray = json_decode(json_encode($miArrayx), true);
         // if(count($miArray)>0){

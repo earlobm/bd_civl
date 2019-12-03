@@ -17,6 +17,7 @@ window.Vue = require('vue');
 
 // Registers
 Vue.component('customercredit',() => System.import('./components/register/CustomerCredit.vue'));
+Vue.component('customerlist',() => System.import('./components/register/CustomerList.vue'));
 Vue.component('staff',() => System.import('./components/register/StaffView.vue'));
 Vue.component('payment',() => System.import('./components/register/PaymentView.vue'));
 Vue.component('branchoffice',() => System.import('./components/register/BranchOffice.vue'));

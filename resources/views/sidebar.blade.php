@@ -24,12 +24,21 @@
                 <span>OPERACIONES</span>
                 <i class="fa fa-angle-left pull-right"></i>
               </a>
-              <ul class="treeview-menu"> 
-                <li @click="menu=13"  class="menux" class="treeview">
-                  <a href="#"><i class="fa fa-users" style="color: #FF5100"></i>Clientes
-                      <!-- <i class="fa fa-angle-left pull-right"></i> -->
+              <ul class="treeview-menu">                 
+                <li class="treeview">
+                  <a href="#"><i class="fa fa-users" style="color: #FFA100"></i>Clientes
+                      <i class="fa fa-angle-left pull-right"></i>
                   </a>
-                </li> 
+                  <ul class="treeview-menu">
+                    <li  @click="menu=13"  class="menux" class="treeview">
+                      <a href="#" ><i class="fa fa-plus "></i>Añadir Cliente</a>
+                    </li>
+                    
+                    <li  @click="menu=26"  class="menux" class="treeview">
+                      <a href="#" ><i class="fa fa-list"></i>Listar Clientes</a>
+                    </li>                 
+                  </ul>
+                </li>
 
                 <li @click="menu=13"  class="menux" class="treeview">
                   <a href="#"><i class="fa fa-users" style="color: #FF5100"></i>Historial
