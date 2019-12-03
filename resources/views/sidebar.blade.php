@@ -41,7 +41,7 @@
                 </li>
 
                 <li @click="menu=13"  class="menux" class="treeview">
-                  <a href="#"><i class="fa fa-users" style="color: #FF5100"></i>Historial
+                  <a href="#"><i class="fa fa-users" style="color: #FF5100"></i>Historial de creditos
                       <!-- <i class="fa fa-angle-left pull-right"></i> -->
                   </a>
                 </li> 
