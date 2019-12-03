@@ -27391,32 +27391,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 
@@ -30293,196 +30267,195 @@ var render = function() {
                                                   ]
                                                 )
                                               ]
-                                            ),
-                                            _vm._v(" "),
-                                            _c(
-                                              "div",
-                                              { staticClass: "col-md-3" },
-                                              [
-                                                _c(
+                                            )
+                                          ]),
+                                          _vm._v(" "),
+                                          _c(
+                                            "div",
+                                            { staticClass: "row" },
+                                            [
+                                              _vm._m(20),
+                                              _vm._v(" "),
+                                              _vm._l(_vm.listProgram, function(
+                                                midata,
+                                                index
+                                              ) {
+                                                return _c(
                                                   "div",
-                                                  { staticClass: "form-group" },
+                                                  {
+                                                    key: index,
+                                                    staticClass: "col-md-3"
+                                                  },
                                                   [
-                                                    _c("label", [
-                                                      _vm._v("Requisitos:")
-                                                    ]),
-                                                    _vm._v(" "),
-                                                    _vm._l(
-                                                      _vm.listProgram,
-                                                      function(midata, index) {
-                                                        return _c(
-                                                          "ul",
+                                                    _c(
+                                                      "div",
+                                                      {
+                                                        staticClass:
+                                                          "form-group"
+                                                      },
+                                                      [
+                                                        _c(
+                                                          "div",
                                                           {
-                                                            key: index,
                                                             staticClass:
-                                                              "todo-list ui-sortable",
-                                                            staticStyle: {
-                                                              "margin-bottom":
-                                                                "1px"
-                                                            }
+                                                              "checkbox"
                                                           },
                                                           [
-                                                            _c("li", {}, [
-                                                              _c("input", {
-                                                                directives: [
-                                                                  {
-                                                                    name:
-                                                                      "model",
-                                                                    rawName:
-                                                                      "v-model",
-                                                                    value:
+                                                            _c(
+                                                              "label",
+                                                              {
+                                                                staticClass:
+                                                                  "container"
+                                                              },
+                                                              [
+                                                                _c("input", {
+                                                                  directives: [
+                                                                    {
+                                                                      name:
+                                                                        "model",
+                                                                      rawName:
+                                                                        "v-model",
+                                                                      value:
+                                                                        _vm
+                                                                          .listProgramx[
+                                                                          index
+                                                                        ].check,
+                                                                      expression:
+                                                                        "listProgramx[index].check"
+                                                                    }
+                                                                  ],
+                                                                  attrs: {
+                                                                    type:
+                                                                      "checkbox"
+                                                                  },
+                                                                  domProps: {
+                                                                    checked: Array.isArray(
                                                                       _vm
                                                                         .listProgramx[
                                                                         index
-                                                                      ].check,
-                                                                    expression:
-                                                                      "listProgramx[index].check"
-                                                                  }
-                                                                ],
-                                                                attrs: {
-                                                                  type:
-                                                                    "checkbox",
-                                                                  value: ""
-                                                                },
-                                                                domProps: {
-                                                                  checked: Array.isArray(
-                                                                    _vm
-                                                                      .listProgramx[
-                                                                      index
-                                                                    ].check
-                                                                  )
-                                                                    ? _vm._i(
-                                                                        _vm
-                                                                          .listProgramx[
-                                                                          index
-                                                                        ].check,
-                                                                        ""
-                                                                      ) > -1
-                                                                    : _vm
-                                                                        .listProgramx[
-                                                                        index
                                                                       ].check
-                                                                },
-                                                                on: {
-                                                                  change: function(
-                                                                    $event
-                                                                  ) {
-                                                                    var $$a =
-                                                                        _vm
+                                                                    )
+                                                                      ? _vm._i(
+                                                                          _vm
+                                                                            .listProgramx[
+                                                                            index
+                                                                          ]
+                                                                            .check,
+                                                                          null
+                                                                        ) > -1
+                                                                      : _vm
                                                                           .listProgramx[
                                                                           index
-                                                                        ].check,
-                                                                      $$el =
-                                                                        $event.target,
-                                                                      $$c = $$el.checked
-                                                                        ? true
-                                                                        : false
-                                                                    if (
-                                                                      Array.isArray(
-                                                                        $$a
-                                                                      )
+                                                                        ].check
+                                                                  },
+                                                                  on: {
+                                                                    change: function(
+                                                                      $event
                                                                     ) {
-                                                                      var $$v =
-                                                                          "",
-                                                                        $$i = _vm._i(
-                                                                          $$a,
-                                                                          $$v
-                                                                        )
+                                                                      var $$a =
+                                                                          _vm
+                                                                            .listProgramx[
+                                                                            index
+                                                                          ]
+                                                                            .check,
+                                                                        $$el =
+                                                                          $event.target,
+                                                                        $$c = $$el.checked
+                                                                          ? true
+                                                                          : false
                                                                       if (
-                                                                        $$el.checked
+                                                                        Array.isArray(
+                                                                          $$a
+                                                                        )
                                                                       ) {
-                                                                        $$i <
-                                                                          0 &&
-                                                                          _vm.$set(
-                                                                            _vm
-                                                                              .listProgramx[
-                                                                              index
-                                                                            ],
-                                                                            "check",
-                                                                            $$a.concat(
-                                                                              [
-                                                                                $$v
-                                                                              ]
+                                                                        var $$v = null,
+                                                                          $$i = _vm._i(
+                                                                            $$a,
+                                                                            $$v
+                                                                          )
+                                                                        if (
+                                                                          $$el.checked
+                                                                        ) {
+                                                                          $$i <
+                                                                            0 &&
+                                                                            _vm.$set(
+                                                                              _vm
+                                                                                .listProgramx[
+                                                                                index
+                                                                              ],
+                                                                              "check",
+                                                                              $$a.concat(
+                                                                                [
+                                                                                  $$v
+                                                                                ]
+                                                                              )
                                                                             )
-                                                                          )
-                                                                      } else {
-                                                                        $$i >
-                                                                          -1 &&
-                                                                          _vm.$set(
-                                                                            _vm
-                                                                              .listProgramx[
-                                                                              index
-                                                                            ],
-                                                                            "check",
-                                                                            $$a
-                                                                              .slice(
-                                                                                0,
-                                                                                $$i
-                                                                              )
-                                                                              .concat(
-                                                                                $$a.slice(
-                                                                                  $$i +
-                                                                                    1
+                                                                        } else {
+                                                                          $$i >
+                                                                            -1 &&
+                                                                            _vm.$set(
+                                                                              _vm
+                                                                                .listProgramx[
+                                                                                index
+                                                                              ],
+                                                                              "check",
+                                                                              $$a
+                                                                                .slice(
+                                                                                  0,
+                                                                                  $$i
                                                                                 )
-                                                                              )
-                                                                          )
+                                                                                .concat(
+                                                                                  $$a.slice(
+                                                                                    $$i +
+                                                                                      1
+                                                                                  )
+                                                                                )
+                                                                            )
+                                                                        }
+                                                                      } else {
+                                                                        _vm.$set(
+                                                                          _vm
+                                                                            .listProgramx[
+                                                                            index
+                                                                          ],
+                                                                          "check",
+                                                                          $$c
+                                                                        )
                                                                       }
-                                                                    } else {
-                                                                      _vm.$set(
-                                                                        _vm
-                                                                          .listProgramx[
-                                                                          index
-                                                                        ],
-                                                                        "check",
-                                                                        $$c
-                                                                      )
                                                                     }
                                                                   }
-                                                                }
-                                                              }),
-                                                              _vm._v(" "),
-                                                              _c(
-                                                                "small",
-                                                                {
-                                                                  staticClass:
-                                                                    "label label-warning"
-                                                                },
-                                                                [
+                                                                }),
+                                                                _vm._v(" "),
+                                                                _c("strong", [
                                                                   _vm._v(
                                                                     _vm._s(
-                                                                      midata.id_type_document
+                                                                      index + 1
                                                                     )
                                                                   )
-                                                                ]
-                                                              ),
-                                                              _vm._v(" "),
-                                                              _c(
-                                                                "span",
-                                                                {
-                                                                  staticClass:
-                                                                    "text"
-                                                                },
-                                                                [
-                                                                  _vm._v(
+                                                                ]),
+                                                                _vm._v(
+                                                                  ". " +
                                                                     _vm._s(
                                                                       midata.name
-                                                                    )
-                                                                  )
-                                                                ]
-                                                              )
-                                                            ])
+                                                                    ) +
+                                                                    "\n                                                                                    "
+                                                                ),
+                                                                _c("span", {
+                                                                  staticClass:
+                                                                    "checkmark"
+                                                                })
+                                                              ]
+                                                            )
                                                           ]
                                                         )
-                                                      }
+                                                      ]
                                                     )
-                                                  ],
-                                                  2
+                                                  ]
                                                 )
-                                              ]
-                                            ),
-                                            _vm._v(" "),
-                                            _vm._m(20)
-                                          ])
+                                              })
+                                            ],
+                                            2
+                                          )
                                         ]
                                       : _vm._e(),
                                     _vm._v(" "),
@@ -33981,7 +33954,7 @@ var render = function() {
                                                   _vm._v(" "),
                                                   _c(
                                                     "div",
-                                                    { staticClass: "col-md-3" },
+                                                    { staticClass: "col-md-6" },
                                                     [
                                                       _c(
                                                         "div",
@@ -34013,7 +33986,7 @@ var render = function() {
                                                             [
                                                               _vm._m(51),
                                                               _vm._v(" "),
-                                                              _c("textarea", {
+                                                              _c("input", {
                                                                 directives: [
                                                                   {
                                                                     name:
@@ -36365,62 +36338,8 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-md-3" }, [
-      _c("div", { staticClass: "form-group" }, [
-        _c("label", { attrs: { for: "cargo_edit" } }, [
-          _vm._v("IMPLEMENTACIÓN DOCUMENTARIA")
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "form-group" }, [
-          _c("div", { staticClass: "checkbox" }, [
-            _c("label", { staticClass: "container" }, [
-              _c("input", { attrs: { type: "checkbox" } }),
-              _vm._v(" "),
-              _c("strong", [_vm._v("a. ")]),
-              _vm._v(
-                "Libros basicos\n                                                                                        "
-              ),
-              _c("span", { staticClass: "checkmark" })
-            ]),
-            _vm._v(" "),
-            _c("label", { staticClass: "container" }, [
-              _c("input", { attrs: { type: "checkbox" } }),
-              _vm._v(" "),
-              _c("strong", [_vm._v("b. ")]),
-              _vm._v(
-                "Reglamentos\n                                                                                        "
-              ),
-              _c("span", { staticClass: "checkmark" })
-            ]),
-            _vm._v(" "),
-            _c("label", { staticClass: "container" }, [
-              _c("input", { attrs: { type: "checkbox" } }),
-              _vm._v(" "),
-              _c("strong", [_vm._v("c. ")]),
-              _vm._v(
-                "Actas\n                                                                                        "
-              ),
-              _c("span", { staticClass: "checkmark" })
-            ]),
-            _vm._v(" "),
-            _c("label", [
-              _c("input", { attrs: { type: "checkbox" } }),
-              _vm._v(" "),
-              _c("strong", [_vm._v("d. ")]),
-              _vm._v(
-                "Otros\n                                                                                            "
-              ),
-              _c("input", {
-                staticStyle: {
-                  border: "none",
-                  "border-bottom": "1px solid #ccc"
-                },
-                attrs: { type: "text", placeholder: "Especificar" }
-              })
-            ])
-          ])
-        ])
-      ])
+    return _c("div", { staticClass: "col-md-12" }, [
+      _c("label", [_vm._v("Requisitos:")])
     ])
   },
   function() {

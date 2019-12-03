@@ -240,46 +240,20 @@
                                                                                 </select>
                                                                             </div>
                                                                         </div>
-                                                                    </div>    
-                                                                    <div class="col-md-3">
+                                                                    </div>
+                                                                </div>     
+                                                                <div class="row">
+                                                                    <div class="col-md-12">
+                                                                        <label>Requisitos:</label>
+                                                                    </div>
+                                                                    <div  class="col-md-3" v-for="(midata,index) in listProgram" :key="index">
                                                                         <div class="form-group">
-                                                                            <label>Requisitos:</label>
-                                                                            <ul class="todo-list ui-sortable" v-for="(midata,index) in listProgram" :key="index" style="margin-bottom: 1px;">
-                                                                                <li class="">                                                                                
-                                                                                    <input type="checkbox" value="" v-model="listProgramx[index].check">                                                                               
-                                                                                    <small class="label label-warning">{{midata.id_type_document}}</small>
-                                                                                    <!-- <span class="checkmark"></span> -->
-                                                                                    <span class="text">{{midata.name}}</span>
-                                                                                </li>
-                                                                            </ul>
-                                                                        </div>
-                                                                    </div>     
-                                                                    <div  class="col-md-3">
-                                                                        <div class="form-group">
-                                                                            <label for="cargo_edit">IMPLEMENTACIÓN DOCUMENTARIA</label>
-                                                                            <div class="form-group">
-                                                                                <div class="checkbox">
-                                                                                    <label class="container">
-                                                                                        <input type="checkbox">
-                                                                                            <strong>a. </strong>Libros basicos
-                                                                                        <span class="checkmark"></span>
-                                                                                    </label>
-                                                                                    <label class="container">
-                                                                                        <input type="checkbox">
-                                                                                            <strong>b. </strong>Reglamentos
-                                                                                        <span class="checkmark"></span>
-                                                                                    </label>
-                                                                                    <label class="container">
-                                                                                        <input type="checkbox">
-                                                                                            <strong>c. </strong>Actas
-                                                                                        <span class="checkmark"></span>
-                                                                                    </label>
-                                                                                    <label>
-                                                                                        <input type="checkbox">
-                                                                                            <strong>d. </strong>Otros
-                                                                                            <input type="text" style="border: none;border-bottom: 1px solid #ccc;" placeholder="Especificar">
-                                                                                    </label>
-                                                                                </div>
+                                                                            <div class="checkbox">
+                                                                                <label class="container">
+                                                                                    <input type="checkbox" v-model="listProgramx[index].check">
+                                                                                        <strong>{{(index+1)}}</strong>. {{midata.name}}
+                                                                                    <span class="checkmark"></span>
+                                                                                </label>
                                                                             </div>
                                                                         </div>
                                                                     </div>                                                                                                                                                                                                     
@@ -656,12 +630,12 @@
                                                                             </div>
                                                                         </div>
                                                                     </div>                                                                     
-                                                                    <div class="col-md-3">
+                                                                    <div class="col-md-6">
                                                                         <div class="form-group">
                                                                             <label for="celular">Referencias:</label>
                                                                             <div class="input-group">
                                                                                 <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-file-o"></i></span>
-                                                                                <textarea placeholder="Referencias de la dirección domiciliaria del cliente." v-model="reference" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;"> </textarea> 
+                                                                                <input placeholder="Referencias de la dirección domiciliaria del cliente." v-model="reference" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">
                                                                             </div>
                                                                         </div>
                                                                     </div>

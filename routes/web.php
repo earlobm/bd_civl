@@ -34,7 +34,6 @@ Route::get('/main', function () {
 
 //Customer Pledge
 Route::get('/getListCustomer', 'Register\CustomerPledgeController@list_customer');
-Route::get('/generate_code', 'Register\CustomerPledgeController@generate_code');  
 Route::get('/edit_data', 'Register\CustomerPledgeController@getDatabyNroDoc'); 
 Route::get('/get_department', 'Register\CustomerPledgeController@list_department'); 
 Route::get('/get_province', 'Register\CustomerPledgeController@list_province');
@@ -47,6 +46,7 @@ Route::post('/deleteCustomerCredit', 'Register\CustomerCreditController@delete')
 Route::get('/getListCustomerCredit', 'Register\CustomerCreditController@list_customer');  
 Route::get('/getTypeDocument', 'Register\CustomerCreditController@type_document');
 Route::post('/saveCustomerCredit', 'Register\CustomerCreditController@save'); 
+Route::get('/generate_code', 'Register\CustomerCreditController@generate_code');  
 //DOCUMENT
 Route::post('/save_Document', 'Register\DocumentCustomerController@save_Document'); 
 Route::get('/getlistDocument', 'Register\DocumentCustomerController@getlistDocument');

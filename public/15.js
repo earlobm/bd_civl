@@ -26630,6 +26630,15 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+<<<<<<< HEAD
+=======
+//
+//
+//
+//
+//
+//
+>>>>>>> dac381ed0b97fbe36e5ca88414e3971eb3c916c6
 
 
 
@@ -26658,7 +26667,11 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
             'last_page': 0,
             'from': 0,
             'to': 0
+<<<<<<< HEAD
         }), _defineProperty(_ref, 'offset', 3), _defineProperty(_ref, 'name', ''), _defineProperty(_ref, 'id_empleado_edit', -1), _defineProperty(_ref, 'paternal_last_name', ''), _defineProperty(_ref, 'maternal_last_name', ''), _defineProperty(_ref, 'date_register', ''), _defineProperty(_ref, 'address', ''), _defineProperty(_ref, 'nro_doc', ''), _defineProperty(_ref, 'errorClase', 0), _defineProperty(_ref, 'id', -1), _defineProperty(_ref, 'errors', {}), _defineProperty(_ref, 'errorInputActivity5', 'form-group'), _defineProperty(_ref, 'errorInputActivity6', 'form-group'), _defineProperty(_ref, 'errorInputAmount', 'form-group'), _defineProperty(_ref, 'errorComboTipoProduco', 'form-group'), _defineProperty(_ref, 'buscar', ''), _defineProperty(_ref, 'sex', ''), _defineProperty(_ref, 'type', ''), _defineProperty(_ref, 'marital_status', ''), _defineProperty(_ref, 'name_customer', ''), _defineProperty(_ref, 'amountAsing', 0), _defineProperty(_ref, 'amountDeli', 0), _defineProperty(_ref, 'date_end', ''), _defineProperty(_ref, 'interest', 0), _defineProperty(_ref, 'term', 1), _defineProperty(_ref, 'total', 0), _defineProperty(_ref, 'guaranty', ''), _defineProperty(_ref, 'id_sucursal', 0), _defineProperty(_ref, 'characteristic', ''), _defineProperty(_ref, 'tea', 20), _defineProperty(_ref, 'id_warehouse', ''), _defineProperty(_ref, 'id_person', 0), _defineProperty(_ref, 'id_sucursal_edit', -1), _defineProperty(_ref, 'quantity', 1), _defineProperty(_ref, 'licence_plate', ''), _defineProperty(_ref, 'serie', ''), _defineProperty(_ref, 'note', ''), _defineProperty(_ref, 'id_mercado_edit', -1), _defineProperty(_ref, 'period', 'Mensual'), _defineProperty(_ref, 'arrayDetailPledge', []), _defineProperty(_ref, 'licence_plate', ''), _defineProperty(_ref, 'serie', ''), _defineProperty(_ref, 'errorTotalAmount', 'form-group'), _defineProperty(_ref, 'errorAmount', 'form-group'), _defineProperty(_ref, 'errorTerm', 'form-group'), _defineProperty(_ref, 'errorTea', 'form-group'), _defineProperty(_ref, 'errorInterested', 'form-group'), _defineProperty(_ref, 'errorWarehouse', 'form-group'), _defineProperty(_ref, 'errorFamilyProduct', 'form-group'), _defineProperty(_ref, 'errorCharacteristic', 'form-group'), _defineProperty(_ref, 'arrayMercado', []), _defineProperty(_ref, 'arraySucursal', []), _defineProperty(_ref, 'arrayEmpleado', []), _ref;
+=======
+        }), _defineProperty(_ref, 'offset', 3), _defineProperty(_ref, 'name', ''), _defineProperty(_ref, 'id_empleado_edit', -1), _defineProperty(_ref, 'paternal_last_name', ''), _defineProperty(_ref, 'maternal_last_name', ''), _defineProperty(_ref, 'date_register', ''), _defineProperty(_ref, 'address', ''), _defineProperty(_ref, 'nro_doc', ''), _defineProperty(_ref, 'errorClase', 0), _defineProperty(_ref, 'id', -1), _defineProperty(_ref, 'errors', {}), _defineProperty(_ref, 'errorInputActivity5', 'form-group'), _defineProperty(_ref, 'errorInputActivity6', 'form-group'), _defineProperty(_ref, 'errorInputAmount', 'form-group'), _defineProperty(_ref, 'errorComboTipoProduco', 'form-group'), _defineProperty(_ref, 'buscar', ''), _defineProperty(_ref, 'sex', ''), _defineProperty(_ref, 'type', ''), _defineProperty(_ref, 'marital_status', ''), _defineProperty(_ref, 'name_customer', ''), _defineProperty(_ref, 'amount', 0), _defineProperty(_ref, 'date_end', ''), _defineProperty(_ref, 'interest', 0), _defineProperty(_ref, 'term', 1), _defineProperty(_ref, 'total', 0), _defineProperty(_ref, 'guaranty', ''), _defineProperty(_ref, 'id_sucursal', 0), _defineProperty(_ref, 'characteristic', ''), _defineProperty(_ref, 'tea', 20), _defineProperty(_ref, 'id_warehouse', ''), _defineProperty(_ref, 'id_person', 0), _defineProperty(_ref, 'id_sucursal_edit', -1), _defineProperty(_ref, 'quantity', 1), _defineProperty(_ref, 'licence_plate', ''), _defineProperty(_ref, 'serie', ''), _defineProperty(_ref, 'note', ''), _defineProperty(_ref, 'id_mercado_edit', -1), _defineProperty(_ref, 'period', 'Mensual'), _defineProperty(_ref, 'arrayDetailPledge', []), _defineProperty(_ref, 'licence_plate', ''), _defineProperty(_ref, 'serie', ''), _defineProperty(_ref, 'errorTotalAmount', 'form-group'), _defineProperty(_ref, 'errorAmount', 'form-group'), _defineProperty(_ref, 'errorTerm', 'form-group'), _defineProperty(_ref, 'errorTea', 'form-group'), _defineProperty(_ref, 'errorInterested', 'form-group'), _defineProperty(_ref, 'errorWarehouse', 'form-group'), _defineProperty(_ref, 'errorFamilyProduct', 'form-group'), _defineProperty(_ref, 'errorCharacteristic', 'form-group'), _defineProperty(_ref, 'arrayMercado', []), _defineProperty(_ref, 'arraySucursal', []), _defineProperty(_ref, 'arrayEmpleado', []), _ref;
+>>>>>>> dac381ed0b97fbe36e5ca88414e3971eb3c916c6
     },
 
     components: {
@@ -26750,6 +26763,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
             if (this.period == 'Semanal') {
                 day = day * 7;
                 fechaoriginal.setDate(fechaoriginal.getDate() + day);
+<<<<<<< HEAD
             }
             if (this.period == 'Quincenal') {
                 day = day * 15;
@@ -26762,6 +26776,20 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
                     fechaoriginal.setSeconds(86400);
                 }
             }
+=======
+            }
+            if (this.period == 'Quincenal') {
+                day = day * 15;
+                fechaoriginal.setDate(fechaoriginal.getDate() + day);
+            }
+            if (this.period == 'Mensual') {
+                fechaoriginal.setMonth(fechaoriginal.getMonth() + day);
+                //comprobando domingo
+                if (fechaoriginal.getUTCDay() == 0) {
+                    fechaoriginal.setSeconds(86400);
+                }
+            }
+>>>>>>> dac381ed0b97fbe36e5ca88414e3971eb3c916c6
 
             var hoy = '' + fechaoriginal.getDate() + '/' + (Number(fechaoriginal.getMonth()) + 1) + '/' + fechaoriginal.getFullYear();
             return hoy;
@@ -26806,12 +26834,20 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
             this.errorClase = 0;
             this.errors.amount = "";
             //input
+<<<<<<< HEAD
             //this.errorInputActivity5='form-group has-success';
 
 
             if (!this.amount) {
                 this.errors.amount = "Ingrese el  monto";
                 //this.errorInputActivity5='form-group has-error';
+=======
+            this.errorInputActivity5 = 'form-group has-success';
+
+            if (!this.amount) {
+                this.errors.amount = "Ingrese el  monto";
+                this.errorInputActivity5 = 'form-group has-error';
+>>>>>>> dac381ed0b97fbe36e5ca88414e3971eb3c916c6
                 this.errorClase = 1;
             }
 
@@ -26825,6 +26861,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
             me.pagination.current_page = page;
             //me.listado=1;
             me.listar(page);
+<<<<<<< HEAD
         },
         editar: function editar(id) {
             var me = this;
@@ -26878,6 +26915,63 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         save: function save() {
             var _this2 = this;
 
+=======
+        },
+        editar: function editar(id) {
+            var me = this;
+            me.listado = 2;
+            me.getLitSucursal(2);
+            //me.limpiar();
+            var url = 'getEditListAmountDay?id=' + id;
+            axios.get(url).then(function (response) {
+                var respuesta = response.data;
+                me.id = respuesta.datax[0].id;
+                me.amount = respuesta.datax[0].amount;
+                me.date_register = __WEBPACK_IMPORTED_MODULE_1_moment_timezone___default()(respuesta.datax[0].date_register).toDate();;
+                me.type = respuesta.datax[0].type;
+                me.id_empleado_edit = respuesta.datax[0].id_employee;
+                me.id_mercado_edit = respuesta.datax[0].id_market;
+                me.id_sucursal_edit = respuesta.datax[0].id_sucursal;
+
+                //me.getMercado(id);
+                // me.getEmpleado(id);
+                //me.id_sucursal_edit =respuesta.datax[0].sex;
+                me.validarData();
+            }).catch(function (error) {
+                console.log(error);
+            });
+        },
+        editarRecibido: function editarRecibido(id) {
+            var me = this;
+            me.listado = 2;
+            me.getLitSucursal(2);
+            //me.limpiar();
+            var url = 'getEditListAmountDayRecibido?id=' + id;
+            axios.get(url).then(function (response) {
+                var respuesta = response.data;
+                me.id = respuesta.datax[0].id;
+                me.amount = respuesta.datax[0].amount;
+                me.date_register = __WEBPACK_IMPORTED_MODULE_1_moment_timezone___default()(respuesta.datax[0].date_register).toDate();;
+                me.type = respuesta.datax[0].type;
+                me.id_empleado_edit = respuesta.datax[0].id_employee;
+                me.id_mercado_edit = respuesta.datax[0].id_market;
+                me.id_sucursal_edit = respuesta.datax[0].id_sucursal;
+
+                //me.getMercado(id);
+                // me.getEmpleado(id);
+                //me.id_sucursal_edit =respuesta.datax[0].sex;
+                me.validarData();
+            }).catch(function (error) {
+                console.log(error);
+            });
+        },
+        save: function save() {
+            var _this2 = this;
+
+            if (this.validarData()) {
+                return;
+            }
+>>>>>>> dac381ed0b97fbe36e5ca88414e3971eb3c916c6
             swal({
                 title: 'Esta seguro de guardar la informacion?',
                 type: 'warning',
@@ -26891,8 +26985,13 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
                     var me = _this2;
                     axios.post('save_Amount', {
+<<<<<<< HEAD
                         'amount_assigned': _this2.amountAsing, 'id_employee': _this2.id_empleado_edit, 'id_market': _this2.id_mercado_edit,
                         'amount_delivered': _this2.amountDeli,
+=======
+                        'amount': _this2.amount, 'id_employee': _this2.id_empleado_edit, 'id_market': _this2.id_mercado_edit,
+                        'type': _this2.type,
+>>>>>>> dac381ed0b97fbe36e5ca88414e3971eb3c916c6
                         'id': _this2.id,
                         'date_register': __WEBPACK_IMPORTED_MODULE_1_moment_timezone___default()(__WEBPACK_IMPORTED_MODULE_1_moment_timezone___default()(_this2.date_register, 'DD/MM/YYYY')).format('YYYY-MM-DD')
                     }).then(function (response) {
@@ -27007,6 +27106,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
             this.name_customer = midata.names + ' ' + midata.paternal_last_name + ' ' + midata.maternal_last_name;
 
             var url = 'getDependenceParent';
+<<<<<<< HEAD
             axios.get(url).then(function (response) {
                 var respuesta = response.data;
                 me.arrayTypeProduct = respuesta.datax;
@@ -27054,6 +27154,55 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
             var url = 'getListaEmpleado';
             axios.get(url).then(function (response) {
                 var respuesta = response.data;
+=======
+            axios.get(url).then(function (response) {
+                var respuesta = response.data;
+                me.arrayTypeProduct = respuesta.datax;
+            }).catch(function (error) {
+                console.log(error);
+            });
+
+            url = 'getWarehouse';
+            axios.get(url).then(function (response) {
+                var respuesta = response.data;
+                me.arrayWarehouse = respuesta.datax;
+            }).catch(function (error) {
+                console.log(error);
+            });
+        },
+        agregar: function agregar() {
+            var me = this;
+            me.listado = 2;
+            this.getLitSucursal(1);
+        },
+        volver: function volver() {
+            var me = this;
+            me.limpiar();
+            me.listado = 1;
+            me.listar(1);
+            me.listarRecibido(1);
+        },
+        descargar: function descargar(buscar) {
+            var url = '/downloadprogram?buscar=' + buscar;
+            window.location.href = url;
+        },
+        limpiar: function limpiar() {
+            this.errorInputActivity5 = 'form-group';
+            this.errors = {};
+            this.errors.amount = "";
+            this.amount = "";
+            this.id = -1;
+            this.id_empleado_edit = -1;
+            this.id_mercado_edit = -1;
+            this.id_sucursal_edit = -1;
+        },
+        listar: function listar(page) {
+            var me = this;
+            me.listado = 0;
+            var url = 'getListaEmpleado';
+            axios.get(url).then(function (response) {
+                var respuesta = response.data;
+>>>>>>> dac381ed0b97fbe36e5ca88414e3971eb3c916c6
                 me.list = respuesta.datax;
                 // me.pagination= respuesta.pagination; 
                 me.listado = 1;
@@ -27150,6 +27299,7 @@ var render = function() {
                                                   )
                                                 ) {
                                                   return null
+<<<<<<< HEAD
                                                 }
                                                 return _vm.listar(1)
                                               },
@@ -27157,6 +27307,15 @@ var render = function() {
                                                 if ($event.target.composing) {
                                                   return
                                                 }
+=======
+                                                }
+                                                return _vm.listar(1)
+                                              },
+                                              input: function($event) {
+                                                if ($event.target.composing) {
+                                                  return
+                                                }
+>>>>>>> dac381ed0b97fbe36e5ca88414e3971eb3c916c6
                                                 _vm.buscar = $event.target.value
                                               }
                                             }
@@ -27343,7 +27502,11 @@ var render = function() {
                                                       },
                                                       domProps: {
                                                         textContent: _vm._s(
+<<<<<<< HEAD
                                                           midata.amount_assigned
+=======
+                                                          midata.amount
+>>>>>>> dac381ed0b97fbe36e5ca88414e3971eb3c916c6
                                                         )
                                                       }
                                                     }),
@@ -27355,7 +27518,11 @@ var render = function() {
                                                       },
                                                       domProps: {
                                                         textContent: _vm._s(
+<<<<<<< HEAD
                                                           midata.amount_delivered
+=======
+                                                          midata.type
+>>>>>>> dac381ed0b97fbe36e5ca88414e3971eb3c916c6
                                                         )
                                                       }
                                                     }),
@@ -27484,6 +27651,238 @@ var render = function() {
                                           ]
                                         )
                                       ]),
+<<<<<<< HEAD
+                                      _vm._v(" "),
+                                      _c("div", { staticClass: "col-sm-7" }, [
+                                        _c(
+                                          "div",
+                                          {
+                                            staticClass:
+                                              "dataTables_paginate paging_simple_numbers",
+                                            staticStyle: {
+                                              float: "right !important"
+                                            }
+                                          },
+                                          [
+                                            _c("nav", [
+                                              _c(
+                                                "ul",
+                                                { staticClass: "pagination" },
+                                                [
+                                                  _vm.pagination.current_page >
+                                                  1
+                                                    ? _c(
+                                                        "li",
+                                                        {
+                                                          staticClass:
+                                                            "page-item"
+                                                        },
+                                                        [
+                                                          _c(
+                                                            "a",
+                                                            {
+                                                              staticClass:
+                                                                "page-link",
+                                                              attrs: {
+                                                                href: "#"
+                                                              },
+                                                              on: {
+                                                                click: function(
+                                                                  $event
+                                                                ) {
+                                                                  $event.preventDefault()
+                                                                  _vm.cambiarPagina(
+                                                                    Number(
+                                                                      _vm
+                                                                        .pagination
+                                                                        .current_page
+                                                                    ) - 1
+                                                                  )
+                                                                }
+                                                              }
+                                                            },
+                                                            [
+                                                              _c("i", {
+                                                                staticClass:
+                                                                  "fa fa-angle-left",
+                                                                staticStyle: {
+                                                                  color:
+                                                                    "#189900",
+                                                                  cursor:
+                                                                    "pointer"
+                                                                }
+                                                              })
+                                                            ]
+                                                          )
+                                                        ]
+                                                      )
+                                                    : _vm._e(),
+                                                  _vm._v(" "),
+                                                  _vm._l(
+                                                    _vm.pagesNumber,
+                                                    function(page) {
+                                                      return _c(
+                                                        "li",
+                                                        {
+                                                          key: page,
+                                                          staticClass:
+                                                            "page-item",
+                                                          class: [
+                                                            page ==
+                                                            _vm.isActived
+                                                              ? "active"
+                                                              : ""
+                                                          ]
+                                                        },
+                                                        [
+                                                          _c("a", {
+                                                            staticClass:
+                                                              "page-link",
+                                                            attrs: {
+                                                              href: "#"
+                                                            },
+                                                            domProps: {
+                                                              textContent: _vm._s(
+                                                                page
+                                                              )
+                                                            },
+                                                            on: {
+                                                              click: function(
+                                                                $event
+                                                              ) {
+                                                                $event.preventDefault()
+                                                                return _vm.cambiarPagina(
+                                                                  page
+                                                                )
+                                                              }
+                                                            }
+                                                          })
+                                                        ]
+                                                      )
+                                                    }
+                                                  ),
+                                                  _vm._v(" "),
+                                                  _vm.pagination.current_page <
+                                                  _vm.pagination.last_page
+                                                    ? _c(
+                                                        "li",
+                                                        {
+                                                          staticClass:
+                                                            "page-item"
+                                                        },
+                                                        [
+                                                          _c(
+                                                            "a",
+                                                            {
+                                                              staticClass:
+                                                                "page-link",
+                                                              attrs: {
+                                                                href: "#"
+                                                              },
+                                                              on: {
+                                                                click: function(
+                                                                  $event
+                                                                ) {
+                                                                  $event.preventDefault()
+                                                                  _vm.cambiarPagina(
+                                                                    Number(
+                                                                      _vm
+                                                                        .pagination
+                                                                        .current_page
+                                                                    ) + 1
+                                                                  )
+                                                                }
+                                                              }
+                                                            },
+                                                            [
+                                                              _c("i", {
+                                                                staticClass:
+                                                                  "fa fa-angle-right",
+                                                                staticStyle: {
+                                                                  color:
+                                                                    "#189900",
+                                                                  cursor:
+                                                                    "pointer"
+                                                                }
+                                                              })
+                                                            ]
+                                                          )
+                                                        ]
+                                                      )
+                                                    : _vm._e()
+                                                ],
+                                                2
+                                              )
+                                            ])
+                                          ]
+                                        )
+                                      ])
+                                    ])
+                                  ])
+                                ])
+                              ]
+                            : _vm._e(),
+                          _vm._v(" "),
+                          _vm.listado == 2
+                            ? [
+                                _c("div", { staticClass: "row" }, [
+                                  _c("div", { staticClass: "col-md-12" }, [
+                                    _c(
+                                      "div",
+                                      {
+                                        staticClass: "btn-group",
+                                        staticStyle: { float: "right" }
+                                      },
+                                      [
+                                        _c(
+                                          "button",
+                                          {
+                                            staticClass: "btn btn-danger",
+                                            attrs: { type: "button" },
+                                            on: {
+                                              click: function($event) {
+                                                return _vm.volver()
+                                              }
+                                            }
+                                          },
+                                          [
+                                            _c("i", {
+                                              staticClass: "fa fa-arrow-left"
+                                            }),
+                                            _vm._v(
+                                              " Volver a la lista\n                                                                "
+                                            )
+                                          ]
+                                        ),
+                                        _vm._v(" "),
+                                        _c(
+                                          "button",
+                                          {
+                                            staticClass: "btn btn-save",
+                                            attrs: { type: "button" },
+                                            on: {
+                                              click: function($event) {
+                                                return _vm.save()
+                                              }
+                                            }
+                                          },
+                                          [
+                                            _c("i", {
+                                              staticClass: "fa fa-save"
+                                            }),
+                                            _vm._v(
+                                              " Guardar Monto del dia\n                                                                "
+                                            )
+                                          ]
+                                        )
+                                      ]
+                                    )
+                                  ])
+                                ]),
+                                _vm._v(" "),
+                                _c("div", { staticClass: "row" }, [
+                                  _vm._m(4),
+=======
                                       _vm._v(" "),
                                       _c("div", { staticClass: "col-sm-7" }, [
                                         _c(
@@ -27815,18 +28214,27 @@ var render = function() {
                                       )
                                     ])
                                   ]),
+>>>>>>> dac381ed0b97fbe36e5ca88414e3971eb3c916c6
                                   _vm._v(" "),
                                   _c("div", { staticClass: "col-md-4" }, [
                                     _c("div", { staticClass: "form-group" }, [
                                       _c("label", { attrs: { for: "sexo" } }, [
+<<<<<<< HEAD
+                                        _vm._v("Sucursal:")
+=======
                                         _vm._v("Mercado:")
+>>>>>>> dac381ed0b97fbe36e5ca88414e3971eb3c916c6
                                       ]),
                                       _vm._v(" "),
                                       _c(
                                         "div",
                                         { staticClass: "input-group" },
                                         [
+<<<<<<< HEAD
+                                          _vm._m(5),
+=======
                                           _vm._m(6),
+>>>>>>> dac381ed0b97fbe36e5ca88414e3971eb3c916c6
                                           _vm._v(" "),
                                           _c(
                                             "select",
@@ -27835,8 +28243,13 @@ var render = function() {
                                                 {
                                                   name: "model",
                                                   rawName: "v-model",
+<<<<<<< HEAD
+                                                  value: _vm.id_sucursal_edit,
+                                                  expression: "id_sucursal_edit"
+=======
                                                   value: _vm.id_mercado_edit,
                                                   expression: "id_mercado_edit"
+>>>>>>> dac381ed0b97fbe36e5ca88414e3971eb3c916c6
                                                 }
                                               ],
                                               staticClass: "form-control",
@@ -27846,6 +28259,150 @@ var render = function() {
                                                 "border-top-right-radius": "3px"
                                               },
                                               on: {
+                                                change: [
+                                                  function($event) {
+                                                    var $$selectedVal = Array.prototype.filter
+                                                      .call(
+                                                        $event.target.options,
+                                                        function(o) {
+                                                          return o.selected
+                                                        }
+                                                      )
+                                                      .map(function(o) {
+                                                        var val =
+                                                          "_value" in o
+                                                            ? o._value
+                                                            : o.value
+                                                        return val
+                                                      })
+<<<<<<< HEAD
+                                                    _vm.id_sucursal_edit = $event
+=======
+                                                    _vm.id_mercado_edit = $event
+>>>>>>> dac381ed0b97fbe36e5ca88414e3971eb3c916c6
+                                                      .target.multiple
+                                                      ? $$selectedVal
+                                                      : $$selectedVal[0]
+                                                  },
+                                                  function($event) {
+<<<<<<< HEAD
+                                                    return _vm.getMercado(
+=======
+                                                    return _vm.getEmpleado(
+>>>>>>> dac381ed0b97fbe36e5ca88414e3971eb3c916c6
+                                                      $event.target.value
+                                                    )
+                                                  }
+                                                ]
+                                              }
+                                            },
+<<<<<<< HEAD
+                                            [
+                                              _c(
+                                                "option",
+                                                {
+                                                  attrs: {
+                                                    selected: "selected",
+                                                    value: ""
+                                                  }
+                                                },
+                                                [_vm._v("Seleccione")]
+                                              ),
+                                              _vm._v(" "),
+                                              _vm._l(
+                                                _vm.arraySucursal,
+                                                function(miselect) {
+                                                  return _c(
+                                                    "option",
+                                                    {
+                                                      key: miselect.id,
+                                                      domProps: {
+                                                        selected:
+                                                          miselect.id ==
+                                                          _vm.id_sucursal_edit,
+                                                        value: miselect.id
+                                                      }
+                                                    },
+                                                    [
+                                                      _vm._v(
+                                                        _vm._s(miselect.name)
+                                                      )
+                                                    ]
+                                                  )
+                                                }
+                                              )
+                                            ],
+                                            2
+=======
+                                            _vm._l(_vm.arrayMercado, function(
+                                              miselect
+                                            ) {
+                                              return _c(
+                                                "option",
+                                                {
+                                                  key: miselect.id,
+                                                  domProps: {
+                                                    selected:
+                                                      miselect.id ==
+                                                      _vm.id_mercado_edit,
+                                                    value: miselect.id
+                                                  }
+                                                },
+                                                [_vm._v(_vm._s(miselect.name))]
+                                              )
+                                            }),
+                                            0
+>>>>>>> dac381ed0b97fbe36e5ca88414e3971eb3c916c6
+                                          )
+                                        ]
+                                      )
+                                    ])
+                                  ]),
+                                  _vm._v(" "),
+                                  _c("div", { staticClass: "col-md-4" }, [
+                                    _c("div", { staticClass: "form-group" }, [
+                                      _c("label", { attrs: { for: "sexo" } }, [
+<<<<<<< HEAD
+                                        _vm._v("Mercado:")
+=======
+                                        _vm._v("Empleados:")
+>>>>>>> dac381ed0b97fbe36e5ca88414e3971eb3c916c6
+                                      ]),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        { staticClass: "input-group" },
+                                        [
+<<<<<<< HEAD
+                                          _vm._m(6),
+=======
+                                          _vm._m(7),
+>>>>>>> dac381ed0b97fbe36e5ca88414e3971eb3c916c6
+                                          _vm._v(" "),
+                                          _c(
+                                            "select",
+                                            {
+                                              directives: [
+                                                {
+                                                  name: "model",
+                                                  rawName: "v-model",
+<<<<<<< HEAD
+                                                  value: _vm.id_mercado_edit,
+                                                  expression: "id_mercado_edit"
+=======
+                                                  value: _vm.id_empleado_edit,
+                                                  expression: "id_empleado_edit"
+>>>>>>> dac381ed0b97fbe36e5ca88414e3971eb3c916c6
+                                                }
+                                              ],
+                                              staticClass: "form-control",
+                                              staticStyle: {
+                                                "border-bottom-right-radius":
+                                                  "3px",
+                                                "border-top-right-radius": "3px"
+                                              },
+                                              on: {
+<<<<<<< HEAD
                                                 change: [
                                                   function($event) {
                                                     var $$selectedVal = Array.prototype.filter
@@ -27876,59 +28433,7 @@ var render = function() {
                                               }
                                             },
                                             _vm._l(_vm.arrayMercado, function(
-                                              miselect
-                                            ) {
-                                              return _c(
-                                                "option",
-                                                {
-                                                  key: miselect.id,
-                                                  domProps: {
-                                                    selected:
-                                                      miselect.id ==
-                                                      _vm.id_mercado_edit,
-                                                    value: miselect.id
-                                                  }
-                                                },
-                                                [_vm._v(_vm._s(miselect.name))]
-                                              )
-                                            }),
-                                            0
-                                          )
-                                        ]
-                                      )
-                                    ])
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("div", { staticClass: "col-md-4" }, [
-                                    _c("div", { staticClass: "form-group" }, [
-                                      _c("label", { attrs: { for: "sexo" } }, [
-                                        _vm._v("Empleados:")
-                                      ]),
-                                      _vm._v(" "),
-                                      _c(
-                                        "div",
-                                        { staticClass: "input-group" },
-                                        [
-                                          _vm._m(7),
-                                          _vm._v(" "),
-                                          _c(
-                                            "select",
-                                            {
-                                              directives: [
-                                                {
-                                                  name: "model",
-                                                  rawName: "v-model",
-                                                  value: _vm.id_empleado_edit,
-                                                  expression: "id_empleado_edit"
-                                                }
-                                              ],
-                                              staticClass: "form-control",
-                                              staticStyle: {
-                                                "border-bottom-right-radius":
-                                                  "3px",
-                                                "border-top-right-radius": "3px"
-                                              },
-                                              on: {
+=======
                                                 change: function($event) {
                                                   var $$selectedVal = Array.prototype.filter
                                                     .call(
@@ -27951,6 +28456,186 @@ var render = function() {
                                                 }
                                               }
                                             },
+                                            _vm._l(_vm.arrayEmpleado, function(
+>>>>>>> dac381ed0b97fbe36e5ca88414e3971eb3c916c6
+                                              miselect
+                                            ) {
+                                              return _c(
+                                                "option",
+                                                {
+                                                  key: miselect.id,
+                                                  domProps: {
+                                                    selected:
+                                                      miselect.id ==
+<<<<<<< HEAD
+                                                      _vm.id_mercado_edit,
+                                                    value: miselect.id
+                                                  }
+                                                },
+                                                [_vm._v(_vm._s(miselect.name))]
+=======
+                                                      _vm.id_empleado_edit,
+                                                    value: miselect.id
+                                                  }
+                                                },
+                                                [
+                                                  _vm._v(
+                                                    _vm._s(
+                                                      miselect.number_doc
+                                                    ) +
+                                                      " " +
+                                                      _vm._s(miselect.names) +
+                                                      " " +
+                                                      _vm._s(
+                                                        miselect.paternal_last_name
+                                                      )
+                                                  )
+                                                ]
+>>>>>>> dac381ed0b97fbe36e5ca88414e3971eb3c916c6
+                                              )
+                                            }),
+                                            0
+                                          )
+                                        ]
+                                      )
+                                    ])
+                                  ]),
+                                  _vm._v(" "),
+                                  _c("div", { staticClass: "col-md-4" }, [
+<<<<<<< HEAD
+                                    _c("div", { staticClass: "form-group" }, [
+                                      _c("label", { attrs: { for: "sexo" } }, [
+                                        _vm._v("Empleados:")
+=======
+                                    _c(
+                                      "div",
+                                      { class: _vm.errorInputActivity5 },
+                                      [
+                                        _c(
+                                          "label",
+                                          { attrs: { for: "nombres" } },
+                                          [_vm._v("Monto del dia:")]
+                                        ),
+                                        _vm._v(" "),
+                                        _c(
+                                          "div",
+                                          { staticClass: "input-group" },
+                                          [
+                                            _vm._m(8),
+                                            _vm._v(" "),
+                                            _c("input", {
+                                              directives: [
+                                                {
+                                                  name: "model",
+                                                  rawName: "v-model",
+                                                  value: _vm.amount,
+                                                  expression: "amount"
+                                                }
+                                              ],
+                                              staticClass: "form-control",
+                                              staticStyle: {
+                                                "border-bottom-right-radius":
+                                                  "3px",
+                                                "border-top-right-radius": "3px"
+                                              },
+                                              attrs: {
+                                                type: "text",
+                                                placeholder: "Monto"
+                                              },
+                                              domProps: { value: _vm.amount },
+                                              on: {
+                                                input: function($event) {
+                                                  if ($event.target.composing) {
+                                                    return
+                                                  }
+                                                  _vm.amount =
+                                                    $event.target.value
+                                                }
+                                              }
+                                            })
+                                          ]
+                                        )
+                                      ]
+                                    )
+                                  ]),
+                                  _vm._v(" "),
+                                  _c("div", { staticClass: "col-md-4" }, [
+                                    _c("div", { staticClass: "form-group" }, [
+                                      _c("label", { attrs: { for: "sexo" } }, [
+                                        _vm._v("Tipo:")
+>>>>>>> dac381ed0b97fbe36e5ca88414e3971eb3c916c6
+                                      ]),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        { staticClass: "input-group" },
+                                        [
+<<<<<<< HEAD
+                                          _vm._m(7),
+=======
+                                          _vm._m(9),
+>>>>>>> dac381ed0b97fbe36e5ca88414e3971eb3c916c6
+                                          _vm._v(" "),
+                                          _c(
+                                            "select",
+                                            {
+                                              directives: [
+                                                {
+                                                  name: "model",
+                                                  rawName: "v-model",
+<<<<<<< HEAD
+                                                  value: _vm.id_empleado_edit,
+                                                  expression: "id_empleado_edit"
+                                                }
+                                              ],
+                                              staticClass: "form-control",
+                                              staticStyle: {
+                                                "border-bottom-right-radius":
+                                                  "3px",
+                                                "border-top-right-radius": "3px"
+=======
+                                                  value: _vm.type,
+                                                  expression: "type"
+                                                }
+                                              ],
+                                              staticClass:
+                                                "form-control select2",
+                                              staticStyle: {
+                                                "border-top-right-radius":
+                                                  "3px",
+                                                "border-bottom-right-radius":
+                                                  "3px"
+>>>>>>> dac381ed0b97fbe36e5ca88414e3971eb3c916c6
+                                              },
+                                              on: {
+                                                change: function($event) {
+                                                  var $$selectedVal = Array.prototype.filter
+                                                    .call(
+                                                      $event.target.options,
+                                                      function(o) {
+                                                        return o.selected
+                                                      }
+                                                    )
+                                                    .map(function(o) {
+                                                      var val =
+                                                        "_value" in o
+                                                          ? o._value
+                                                          : o.value
+                                                      return val
+                                                    })
+<<<<<<< HEAD
+                                                  _vm.id_empleado_edit = $event
+                                                    .target.multiple
+=======
+                                                  _vm.type = $event.target
+                                                    .multiple
+>>>>>>> dac381ed0b97fbe36e5ca88414e3971eb3c916c6
+                                                    ? $$selectedVal
+                                                    : $$selectedVal[0]
+                                                }
+                                              }
+                                            },
+<<<<<<< HEAD
                                             _vm._l(_vm.arrayEmpleado, function(
                                               miselect
                                             ) {
@@ -27981,6 +28666,36 @@ var render = function() {
                                               )
                                             }),
                                             0
+=======
+                                            [
+                                              _c(
+                                                "option",
+                                                {
+                                                  attrs: {
+                                                    selected: "selected",
+                                                    value: ""
+                                                  }
+                                                },
+                                                [_vm._v("SELECCIONE")]
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "option",
+                                                {
+                                                  attrs: { value: "ENTREGADO" }
+                                                },
+                                                [_vm._v("ENTREGADO")]
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "option",
+                                                {
+                                                  attrs: { value: "RECIBIDO" }
+                                                },
+                                                [_vm._v("RECIBIDO")]
+                                              )
+                                            ]
+>>>>>>> dac381ed0b97fbe36e5ca88414e3971eb3c916c6
                                           )
                                         ]
                                       )
@@ -27988,6 +28703,7 @@ var render = function() {
                                   ]),
                                   _vm._v(" "),
                                   _c("div", { staticClass: "col-md-4" }, [
+<<<<<<< HEAD
                                     _c(
                                       "div",
                                       { class: _vm.errorInputActivity5 },
@@ -28098,6 +28814,8 @@ var render = function() {
                                   ]),
                                   _vm._v(" "),
                                   _c("div", { staticClass: "col-md-4" }, [
+=======
+>>>>>>> dac381ed0b97fbe36e5ca88414e3971eb3c916c6
                                     _c("div", { staticClass: "form-group" }, [
                                       _c("label", { attrs: { for: "edad" } }, [
                                         _vm._v("Fecha de Registro:")
@@ -28223,11 +28941,19 @@ var staticRenderFns = [
           ]),
           _vm._v(" "),
           _c("th", { staticStyle: { "vertical-align": "middle" } }, [
+<<<<<<< HEAD
             _vm._v("MONTO ASIGNADO")
           ]),
           _vm._v(" "),
           _c("th", { staticStyle: { "vertical-align": "middle" } }, [
             _vm._v("MONTO DEVUELTO")
+=======
+            _vm._v("MONTO")
+          ]),
+          _vm._v(" "),
+          _c("th", { staticStyle: { "vertical-align": "middle" } }, [
+            _vm._v("TIPO MONTO DEL DIA")
+>>>>>>> dac381ed0b97fbe36e5ca88414e3971eb3c916c6
           ]),
           _vm._v(" "),
           _c("th", { staticStyle: { "vertical-align": "middle" } }, [
@@ -28335,7 +29061,11 @@ var staticRenderFns = [
           "border-top-left-radius": "3px"
         }
       },
+<<<<<<< HEAD
       [_c("i", { staticClass: "fa fa-user" })]
+=======
+      [_c("i", { staticClass: "fa fa-transgender" })]
+>>>>>>> dac381ed0b97fbe36e5ca88414e3971eb3c916c6
     )
   },
   function() {
