@@ -35,10 +35,10 @@ class AmountDayController extends Controller
         }else{
             $clasex = AmountDay::findOrFail($request->id);
         }
-        $clasex->amount = $request->amount;
+        $clasex->amount_assigned = $request->amount_assigned;
+        $clasex->amount_delivered = $request->amount_delivered;
         $clasex->date_register = $request->date_register;
         $clasex->date_system = $newDate;
-        $clasex->type =$request->type;
         $clasex->state ="1";
         $clasex->id_employee =$request->id_employee;
         $clasex->id_market =$request->id_market;
@@ -68,7 +68,7 @@ class AmountDayController extends Controller
         $clasex->save();
     }
         public function getEditListAmountDay(Request $request){
-            $queyAmount="select amo.type,amo.id,per.names,amo.type, per.paternal_last_name,per.maternal_last_name, per.number_doc, su.name as name_sucursal,mer.name as name_mercado,amo.date_register,amo.amount
+            $queyAmount="select amo.id,per.names, per.paternal_last_name,per.maternal_last_name, per.number_doc, su.name as name_sucursal,mer.name as name_mercado,amo.date_register,amo.amount_delivered,amo.amount_assigned
             from branch_office su 
             inner join market mer on su.id=mer.id_branch_office 
             inner join employee em on mer.id=em.id_market
@@ -146,14 +146,14 @@ class AmountDayController extends Controller
                 ];
             }
             public function getListaEmpleado(Request $request){
-                    $queyListEmploye="select amo.id,per.names, per.paternal_last_name,per.maternal_last_name, per.number_doc,amo.type, su.name as name_sucursal,mer.name as name_mercado,amo.date_register,amo.amount
+                    $queyListEmploye="select amo.id,per.names, per.paternal_last_name,per.maternal_last_name, per.number_doc, su.name as name_sucursal,mer.name as name_mercado,amo.date_register,amo.amount_delivered,amo.amount_assigned
                     from branch_office su 
                     inner join market mer on su.id=mer.id_branch_office 
                     inner join employee em on mer.id=em.id_market
                     inner join person per on per.id= em.id_person
                     inner join amount_day amo on em.id=amo.id_employee
                     where su.state=1
-                    and mer.state=1 and amo.state=1 and amo.type='ENTREGADO' or amo.type='RECIBIDO'";
+                    and mer.state=1 and amo.state=1";
                     $listEmploye = DB::select($queyListEmploye);
                     return [
                         'datax'=>$listEmploye

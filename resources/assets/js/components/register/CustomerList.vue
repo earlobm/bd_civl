@@ -41,184 +41,7 @@
                                             <div class="card-body">    
                                                 <div class="row">
                                                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">                               
-                                                        <div class="box-body">  
-                                                            <template v-if="listadox==1">                                                   
-                                                                <div class="row"> 
-                                                                    <div class="col-md-4">
-                                                                        <div v-bind:class="errorInputActivity5">
-                                                                            <label for="dni">Código:</label>
-                                                                            <div class="input-group">
-                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;  color:#1e2172"><i class="fa fa-database"></i></span>
-                                                                                <input maxlength="8" v-model="code" type="text" class="form-control">
-                                                                                <span class="input-group-btn">
-                                                                                    <button data-toggle="tooltip" title="Generar Automáticamente" @click="generate_code()" type="submit" class="btn btn-search btn-flat" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;"><i v-bind:class="icon_generate"></i>  GENERAR</button>
-                                                                                </span>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div> 
-                                                                    <div class="col-md-4">
-                                                                        <div class="form-group">
-                                                                            <label for="estado_civil">Tipo de Documento de Identidad:</label>
-                                                                            <div class="input-group">
-                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-user"></i></span>
-                                                                                <select class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;" v-model="id_type_doc">
-                                                                                    <option selected="selected" value="">Seleccione</option>
-                                                                                    <option v-for="datax in array_type_document" :key="datax.id" :value="datax.id">{{ datax.name }}</option>
-                                                                                </select>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-md-4">
-                                                                        <div v-bind:class="errorInputActivity">
-                                                                            <label for="dni">N° de Documento:</label>
-                                                                            <div class="input-group">
-                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;  color:#1e2172"><i class="fa fa-database"></i></span>
-                                                                                <input maxlength="8" v-model="nro_doc" type="text" @keyup="validarData()" @keyup.enter="getData()"  class="form-control">
-                                                                                <span class="input-group-btn">
-                                                                                    <button data-toggle="tooltip" title="Buscary" type="submit" @click="getData()" class="btn btn-search btn-flat" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;"><i v-bind:class="icon_search_dni"></i> BUSCAR</button>
-                                                                                </span>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>                                                                            
-                                                                    <div class="col-md-3">
-                                                                        <div v-bind:class="errorInputActivity3">
-                                                                            <label for="ap_paterno">Apellido Paterno:</label>
-                                                                            <div class="input-group">
-                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-user"></i></span>
-                                                                                <input v-model="paternal_last_name" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">                                                                            
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-md-3">
-                                                                        <div v-bind:class="errorInputActivity4">
-                                                                            <label for="ap_materno">Apellido Materno:</label>
-                                                                            <div class="input-group">
-                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-user"></i></span>
-                                                                                <input v-model="maternal_last_name" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">  
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-md-3">
-                                                                        <div v-bind:class="errorInputActivity2">
-                                                                            <label for="nombres">Nombres:</label>
-                                                                            <div class="input-group">
-                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-user"></i></span>
-                                                                                <input v-model="name" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">  
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-md-3">
-                                                                        <div class="form-group">
-                                                                            <label for="sexo">Sexo:</label>
-                                                                            <div class="input-group">
-                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-transgender"></i></span>
-                                                                            <select class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;" v-model="sex">
-                                                                                <option selected="selected" value="">Seleccione</option>
-                                                                                <option value="M">Masculino</option>
-                                                                                <option value="F">Femenino</option>
-                                                                            </select>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-md-3">
-                                                                        <div class="form-group">
-                                                                            <label for="edad">Fecha de Nacimiento:</label>
-                                                                            <div class="input-group">
-                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-birthday-cake "></i></span>
-                                                                            <date-picker v-model="birthdate" :config="options" style="border-top-right-radius: 3px;border-bottom-right-radius: 3px;"></date-picker>
-                                                                                
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-md-3">
-                                                                        <div class="form-group">
-                                                                            <label for="estado_civil">Estado Civíl:</label>
-                                                                            <div class="input-group">
-                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-heart-o"></i></span>
-                                                                            <select class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;" v-model="marital_status">
-                                                                                <option selected="selected" value="">Seleccione</option>
-                                                                                <option value="SOLTERO">Soltero (a)</option>
-                                                                                <option value="CASADO">Casado (a)</option>
-                                                                                <option value="VIUDO">Viudo (a)</option>
-                                                                                <option value="SEPARADO">Separado (a)</option>
-                                                                            </select>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-md-3">
-                                                                        <div class="form-group">
-                                                                            <label for="celular">Celular:</label>
-                                                                            <div class="input-group">
-                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-mobile-phone"></i></span>
-                                                                                <input v-model="phone" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">  
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-md-3">
-                                                                        <div class="form-group">
-                                                                            <label for="celular">Correo electrónico:</label>
-                                                                            <div class="input-group">
-                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-envelope"></i></span>
-                                                                                <input v-model="email" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">  
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-md-3">
-                                                                        <div class="form-group">
-                                                                            <label for="estado_civil">Departamento:</label>
-                                                                            <div class="input-group">
-                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-map-marker"></i></span>
-                                                                                <select @change="get_province($event.target.value)" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;" v-model="department">
-                                                                                    <option selected="selected" value="">Seleccione</option>
-                                                                                    <option v-for="miselect in array_department" :selected="miselect.id == department" :key="miselect.id" :value="miselect.id">{{ miselect.name}}</option>
-                                                                                </select>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-md-3">
-                                                                        <div class="form-group">
-                                                                            <label for="estado_civil">Provincia:</label>
-                                                                            <div class="input-group">
-                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-map-marker"></i></span>
-                                                                                <select @change="get_district($event.target.value)" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;" v-model="province">
-                                                                                    <option selected="selected" value="">Seleccione</option>
-                                                                                    <option v-for="miselect in array_province" :selected="miselect.id == province" :key="miselect.id" :value="miselect.id">{{ miselect.name}}</option>
-                                                                                </select>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-md-3">
-                                                                        <div class="form-group">
-                                                                            <label for="estado_civil">Distrito:</label>
-                                                                            <div class="input-group">
-                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-map-marker"></i></span>
-                                                                                <select class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;" v-model="district">
-                                                                                    <option selected="selected" value="">Seleccione</option>
-                                                                                    <option v-for="miselect in array_district" :selected="miselect.id == district" :key="miselect.id" :value="miselect.id">{{ miselect.name}}</option>
-                                                                                </select>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-md-3">
-                                                                        <div v-bind:class="errorInputActivity6">
-                                                                            <label for="celular">Dirección:</label>
-                                                                            <div class="input-group">
-                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-location-arrow"></i></span>
-                                                                                <input placeholder="Dirección domiciliaria" v-model="address" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">
-                                                                            </div>
-                                                                        </div>
-                                                                    </div> 
-                                                                    <div class="col-md-12">
-                                                                        <div class="form-group">
-                                                                            <label for="celular">Referencias:</label>
-                                                                            <div class="input-group">
-                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-file-o"></i></span>
-                                                                            <textarea placeholder="Referencias de la dirección domiciliaria del cliente." v-model="reference" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;"> </textarea> 
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>                                                                                                                                                                                                                    
-                                                                </div>
-                                                            </template>
+                                                        <div class="box-body">
                                                                 <!-- Emprender -->
                                                             <template v-if="listadox==3">
                                                                 <div class="row">  
@@ -407,7 +230,321 @@
                                                                     </div> 
                                                                 </div>
                                                             </template>
-                                                        </div>  
+                                                        </div>
+                                                        <div class="box-footer">
+                                                            <div class="box-tools pull-right" style="right: -15px;">
+                                                                <div class="col-md-12" style="margin-top: 6px;">
+                                                                    <label  class="col-md-8 control-label"><i class="fa fa-user-plus"></i> Agregar Aval</label>
+                                                                    <div class="col-md-4" style="margin-top: -10px;">
+                                                                        <div class="checkbox">
+                                                                            <label class="switch" style="width: 62px;height: 18px;">
+                                                                                <input type="checkbox" v-model="add_aval">
+                                                                                <span class="slider round"></span>
+                                                                            </label>
+                                                                        </div> 
+                                                                    </div> 
+                                                                </div> 
+                                                            </div>
+                                                        </div>
+                                                        <div class="box-body" v-if="add_aval">  
+                                                            <template v-if="listadox==1">                                                   
+                                                                <div class="row"> 
+                                                                    <div class="col-md-4">
+                                                                        <div v-bind:class="errorInputActivity5">
+                                                                            <label for="dni">Código:</label>
+                                                                            <div class="input-group">
+                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;  color:#1e2172"><i class="fa fa-database"></i></span>
+                                                                                <input maxlength="8" v-model="code" type="text" class="form-control">
+                                                                                <span class="input-group-btn">
+                                                                                    <button data-toggle="tooltip" title="Generar Automáticamente" @click="generate_code()" type="submit" class="btn btn-search btn-flat" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;"><i v-bind:class="icon_generate"></i>  GENERAR</button>
+                                                                                </span>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div> 
+                                                                    <div class="col-md-4">
+                                                                        <div class="form-group">
+                                                                            <label for="estado_civil">Tipo de Documento de Identidad:</label>
+                                                                            <div class="input-group">
+                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-user"></i></span>
+                                                                                <select class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;" v-model="id_type_doc">
+                                                                                    <option selected="selected" value="">Seleccione</option>
+                                                                                    <option v-for="datax in array_type_document" :key="datax.id" :value="datax.id">{{ datax.name }}</option>
+                                                                                </select>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-4">
+                                                                        <div v-bind:class="errorInputActivity">
+                                                                            <label for="dni">N° de Documento:</label>
+                                                                            <div class="input-group">
+                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;  color:#1e2172"><i class="fa fa-database"></i></span>
+                                                                                <input maxlength="8" v-model="nro_doc" type="text" @keyup="validarData()" @keyup.enter="getData()"  class="form-control">
+                                                                                <span class="input-group-btn">
+                                                                                    <button data-toggle="tooltip" title="Buscar en RENIEC" type="submit" @click="getData()" class="btn btn-search btn-flat" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;"><i v-bind:class="icon_search_dni"></i> BUSCAR</button>
+                                                                                </span>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>                                                                            
+                                                                    <div class="col-md-3">
+                                                                        <div v-bind:class="errorInputActivity3">
+                                                                            <label for="ap_paterno">Apellido Paterno:</label>
+                                                                            <div class="input-group">
+                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-user"></i></span>
+                                                                                <input v-model="paternal_last_name" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">                                                                            
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-3">
+                                                                        <div v-bind:class="errorInputActivity4">
+                                                                            <label for="ap_materno">Apellido Materno:</label>
+                                                                            <div class="input-group">
+                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-user"></i></span>
+                                                                                <input v-model="maternal_last_name" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">  
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-3">
+                                                                        <div v-bind:class="errorInputActivity2">
+                                                                            <label for="nombres">Nombres:</label>
+                                                                            <div class="input-group">
+                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-user"></i></span>
+                                                                                <input v-model="name" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">  
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-3">
+                                                                        <div class="form-group">
+                                                                            <label for="sexo">Sexo:</label>
+                                                                            <div class="input-group">
+                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-transgender"></i></span>
+                                                                            <select class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;" v-model="sex">
+                                                                                <option selected="selected" value="">Seleccione</option>
+                                                                                <option value="M">Masculino</option>
+                                                                                <option value="F">Femenino</option>
+                                                                            </select>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-3">
+                                                                        <div class="form-group">
+                                                                            <label for="edad">Fecha de Nacimiento:</label>
+                                                                            <div class="input-group">
+                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-birthday-cake "></i></span>
+                                                                            <date-picker v-model="birthdate" :config="options" style="border-top-right-radius: 3px;border-bottom-right-radius: 3px;"></date-picker>
+                                                                                
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-3">
+                                                                        <div class="form-group">
+                                                                            <label for="estado_civil">Estado Civíl:</label>
+                                                                            <div class="input-group">
+                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-heart-o"></i></span>
+                                                                            <select class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;" v-model="marital_status">
+                                                                                <option selected="selected" value="">Seleccione</option>
+                                                                                <option value="SOLTERO">Soltero (a)</option>
+                                                                                <option value="CASADO">Casado (a)</option>
+                                                                                <option value="VIUDO">Viudo (a)</option>
+                                                                                <option value="SEPARADO">Separado (a)</option>
+                                                                            </select>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-3">
+                                                                        <div class="form-group">
+                                                                            <label for="celular">Celular:</label>
+                                                                            <div class="input-group">
+                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-mobile-phone"></i></span>
+                                                                                <input v-model="phone" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">  
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-3">
+                                                                        <div class="form-group">
+                                                                            <label for="celular">Correo electrónico:</label>
+                                                                            <div class="input-group">
+                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-envelope"></i></span>
+                                                                                <input v-model="email" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">  
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-3">
+                                                                        <div class="form-group">
+                                                                            <label for="estado_civil">Departamento:</label>
+                                                                            <div class="input-group">
+                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-map-marker"></i></span>
+                                                                                <select @change="get_province($event.target.value)" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;" v-model="department">
+                                                                                    <option selected="selected" value="">Seleccione</option>
+                                                                                    <option v-for="miselect in array_department" :selected="miselect.id == department" :key="miselect.id" :value="miselect.id">{{ miselect.name}}</option>
+                                                                                </select>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-3">
+                                                                        <div class="form-group">
+                                                                            <label for="estado_civil">Provincia:</label>
+                                                                            <div class="input-group">
+                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-map-marker"></i></span>
+                                                                                <select @change="get_district($event.target.value)" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;" v-model="province">
+                                                                                    <option selected="selected" value="">Seleccione</option>
+                                                                                    <option v-for="miselect in array_province" :selected="miselect.id == province" :key="miselect.id" :value="miselect.id">{{ miselect.name}}</option>
+                                                                                </select>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-3">
+                                                                        <div class="form-group">
+                                                                            <label for="estado_civil">Distrito:</label>
+                                                                            <div class="input-group">
+                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-map-marker"></i></span>
+                                                                                <select class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;" v-model="district">
+                                                                                    <option selected="selected" value="">Seleccione</option>
+                                                                                    <option v-for="miselect in array_district" :selected="miselect.id == district" :key="miselect.id" :value="miselect.id">{{ miselect.name}}</option>
+                                                                                </select>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-3">
+                                                                        <div v-bind:class="errorInputActivity6">
+                                                                            <label for="celular">Dirección:</label>
+                                                                            <div class="input-group">
+                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-location-arrow"></i></span>
+                                                                                <input placeholder="Dirección domiciliaria" v-model="address" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>                                                                     
+                                                                    <div class="col-md-3">
+                                                                        <div class="form-group">
+                                                                            <label for="celular">Referencias:</label>
+                                                                            <div class="input-group">
+                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-file-o"></i></span>
+                                                                                <textarea placeholder="Referencias de la dirección domiciliaria del cliente." v-model="reference" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;"> </textarea> 
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-3">
+                                                                        <div class="form-group">
+                                                                            <label for="type_business">Ocupación:</label>
+                                                                            <div class="input-group">
+                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-briefcase"></i></span>
+                                                                                <select class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;" v-model="id_job">
+                                                                                    <option selected="selected" value="">Seleccione</option>
+                                                                                    <option v-for="datax in array_job" :key="datax.id" :value="datax.id">{{ datax.name }}</option>
+                                                                                </select>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div> 
+                                                                    <div class="col-md-3">
+                                                                        <div class="form-group">
+                                                                            <label for="type_business">Tipo de Negocio:</label>
+                                                                            <div class="input-group">
+                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-shopping-cart"></i></span>
+                                                                                <select class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;" v-model="id_type_business">
+                                                                                    <option selected="selected" value="">Seleccione</option>
+                                                                                    <option v-for="datax in array_type_business" :key="datax.id" :value="datax.id">{{ datax.name }}</option>
+                                                                                </select>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>                                                                                                                                                                                                           
+                                                                </div>
+                                                            </template>
+                                                                <!-- Emprender -->
+                                                            <template v-if="listadox==3">
+                                                                <div class="row">  
+                                                                    <div class="col-md-12">
+                                                                        <div class="form-group">
+                                                                            <label for="nombres">Cliente:</label>
+                                                                            <div class="input-group">
+                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-user"></i></span>
+                                                                                <input disabled v-model="name_customer" type="text" class="form-control" placeholder="Nombres" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">  
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div> 
+                                                                <div class="row">
+                                                                    <div class="col-md-3">
+                                                                        <div class="form-group">
+                                                                            <label for="type_product">Gastos Administrativos:</label>
+                                                                            <div class="input-group">
+                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;">S/.</span>
+                                                                                <input v-model="id_parent" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;text-transform:uppercase;">  
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-3">
+                                                                        <div v-bind:class="errorFamilyProduct">
+                                                                            <label for="family_produc">Porcentaje:</label>
+                                                                            <div class="input-group">
+                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;">%</span>
+                                                                                <input v-model="id_parent" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">  
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-3">
+                                                                        <div v-bind:class="errorFamilyProduct">
+                                                                            <label for="family_produc">Central de Riesgo:</label>
+                                                                            <div class="input-group">
+                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;">S/.</span>
+                                                                                <input v-model="id_parent" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">  
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-3">
+                                                                        <div v-bind:class="errorFamilyProduct">
+                                                                            <label for="family_produc">Monto:</label>
+                                                                            <div class="input-group">
+                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;">S/.</span>
+                                                                                <input v-model="id_parent" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">  
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>                                                                  
+                                                                    
+                                                                    <div class="col-md-3">
+                                                                        <div class="form-group">
+                                                                            <label for="date_init">Fecha del Préstamo:</label>
+                                                                            <div class="input-group">
+                                                                                <div class="input-group-addon" style="border-top-left-radius: 3px;border-bottom-left-radius: 3px;">
+                                                                                    <i class="fa fa-calendar"></i>
+                                                                                </div>
+                                                                                <date-picker @dp-change="calculateTeabyTerm" v-model="date_init" :config="options" style="border-top-right-radius: 3px;border-bottom-right-radius: 3px;"></date-picker>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-3">
+                                                                        <div v-bind:class="errorCharacteristic">
+                                                                            <label for="nombres">Taza:</label>
+                                                                            <div class="input-group">
+                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;">%</span>
+                                                                                <input v-model="characteristic" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px; text-transform:uppercase;">  
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-3">
+                                                                        <div v-bind:class="errorCharacteristic">
+                                                                            <label for="nombres">Plazo:</label>
+                                                                            <div class="input-group">
+                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-calendar-check-o"></i></span>
+                                                                                <input v-model="characteristic" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px; text-transform:uppercase;">  
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-3">
+                                                                        <div v-bind:class="errorWarehouse">
+                                                                            <label for="ap_paterno">Almacen:</label>
+                                                                            <div class="input-group">
+                                                                                <span class="input-group-addon" style="border-top-left-radius:3px;border-bottom-left-radius:3px"><i class="fa fa-archive"></i></span>
+                                                                                <select   v-model="id_warehouse" class="form-control select2" style="border-top-right-radius:3px;border-bottom-right-radius:3px">
+                                                                                    <option selected="selected" value="" >Seleccione</option>
+                                                                                    <option v-for="datax in arrayWarehouse" :key="datax.id" :value="datax">{{ datax.name }}</option>
+                                                                                </select>
+                                                                                
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    
+                                                                </div>
+                                                            </template>
+                                                        </div>
                                                     </div>                                                        
                                                 </div>     
                                             </div>
@@ -425,16 +562,12 @@
                                     <button type="button" @click="save_data()" class="btn btn-save-pledge" data-toggle="tooltip" title="Guardar cliente y empeñar">
                                         <i v-bind:class="icon_save_pledge"></i>&nbsp;GUARDAR / EMPEÑAR
                                     </button>
-                                </template>
+                                </template>  
                                 <template v-if="listadox==3">
-                                    <!-- <button type="button" @click="guardar()" class="btn btn-save">
-                                        <i class="fa fa-save"></i>&nbsp;GUARDAR PRENDA
-                                    </button> -->
-                                    
                                     <button type="button" @click="addPledge()" class="btn btn-save-pledge" data-toggle="tooltip" title="Agregar prenda a empeñar">
-                                        <i class="fa fa-plus"></i>&nbsp;AGREGAR PRENDA
+                                        <i class="fa fa-legal"></i>&nbsp;OTORGAR PRÉSTAMO
                                     </button>
-                                </template>                                
+                                </template>                           
                             </div>
                             <template v-if="listadox==1">
                                 <button type="button" @click="clean_data()" class="btn btn-new" style="float:right; margin-right: 10px;" data-toggle="tooltip" title="Nuevo cliente">
@@ -443,7 +576,7 @@
                             </template>
                             <template v-if="listadox==3">
                                 <button type="button" @click="clean_data()" class="btn btn-new" style="float:right; margin-right: 10px;" data-toggle="tooltip" title="Nueva prenda">
-                                    <i class="fa fa-certificate"></i>&nbsp;NUEVO PRENDA
+                                    <i class="fa fa-calculator"></i>&nbsp;CALCULAR
                                 </button>
                             </template>
                         </div>             
@@ -599,11 +732,11 @@
                                                 <button type="button" @click="pledge(midata)" class="btn btn-emprendar btn-sm" data-toggle="tooltip" title="Emprendar">
                                                     <i class="fa fa-archive"></i>
                                                 </button>
-                                                <button type="button" @click="edit_data(midata.id_customer_pledge)" class="btn btn-editar btn-sm" data-toggle="tooltip" title="Editar">
+                                                <button type="button" @click="edit_data(midata.id_customer_credit)" class="btn btn-editar btn-sm" data-toggle="tooltip" title="Editar">
                                                     <i v-bind:class="icon_edit"></i>
                                                 </button>                                                                                                                   
                                             
-                                                <button type="button" @click="eliminar(midata.id_customer_pledge)" class="btn btn-eliminar btn-sm" data-toggle="tooltip" title="Eliminar">
+                                                <button type="button" @click="eliminar(midata.id_customer_credit)" class="btn btn-eliminar btn-sm" data-toggle="tooltip" title="Eliminar">
                                                     <i class="fa fa-trash"></i>
                                                 </button>                            
                                             </td> 
@@ -795,11 +928,11 @@
                 errorFamilyProduct:'form-group',errorCharacteristic:'form-group',
 
                 arrayTypeProduct:[],arrayFamilyProduct:[],arrayWarehouse:[], array_department:[], array_province: [], array_district: [], array_type_document:[],array_code:[],
-                totalcapital:0,totalInterest:0,modalTicket:0,idcustomer:-1,
-                midatax:[], list:[],totalNumber:0,idcustomerpledge:-1,
+                totalcapital:0,totalInterest:0,modalTicket:0,idcustomer:-1,listProgram : [],listProgramx:[],
+                midatax:[], list:[],totalNumber:0, id_customer_credit:-1,
                 icon_title:'fa fa-plus', icon_save:'fa fa-save',icon_save_pledge:'fa fa-save', icon_edit:'fa fa-pencil',
                 icon_search_dni:'fa fa-search', icon_search_client:'fa fa-search', icon_generate:'fa fa-rotate-right',
-                title:'Agregar Cliente'
+                title:'Agregar Cliente', add_aval:0
             }
         },
          components: {
@@ -832,6 +965,9 @@
 
 			}
         },
+        created: function(){
+            this.init();
+        },
         methods : { 
             generate_code(){
                 let me = this;
@@ -860,7 +996,7 @@
                     .catch(function (error) {
                         console.log(error);
                     });
-            },            
+            },
             get_department(){
                 let me=this;
                // me.listado=0;
@@ -929,7 +1065,7 @@
                 if (result.value) {
                       let me = this;
                         axios.post('save_pledge',{
-                            'idcustomerpledge':this.idcustomerpledge,
+                            'idcustomerpledge':this.id_customer_credit,
                             'date_init':moment(moment(this.date_init, 'DD/MM/YYYY')).format('YYYY-MM-DD') ,
                             'date_end':moment(moment(this.date_end, 'DD/MM/YYYY')).format('YYYY-MM-DD') ,
                             'period':this.period,'licence_plate':this.licence_plate,
@@ -1306,7 +1442,7 @@
                 me.get_type_document();
                 me.icon_edit='fa fa-spinner fa-spin';
                 var url= 'edit_data?id='+id;
-                me.idcustomerpledge=id;
+                me.id_customer_credit=id;
                 axios.get(url).then(function (response) {
                     var respuesta= response.data;
                     me.id=respuesta.datax[0].id;
@@ -1354,7 +1490,7 @@
                     reverseButtons: true
                 }).then((result) =>{
                     if (result.value){                
-                        axios.post('save_customer',{
+                        axios.post('saveCustomerCredit',{
                             'nro_doc':this.nro_doc,'name':this.name,
                             'paternal_last_name':this.paternal_last_name,
                             'maternal_last_name':this.maternal_last_name,
@@ -1365,7 +1501,7 @@
                             'email': this.email,'reference': this.reference,
                             'id_district': this.district,
                             'birthdate' : moment(moment(this.birthdate, 'DD/MM/YYYY')).format('YYYY-MM-DD'),
-                            'idcustomerpledge':this.idcustomerpledge                    
+                            'id_customer_credit':this.id_customer_credit                    
                         }).then(function (response) {
                                 me.clean_data();                                
                                 me.list_data(1);  
@@ -1411,7 +1547,7 @@
                             'email': this.email,'reference': this.reference,
                             'id_district': this.district,
                             'birthdate' : moment(moment(this.birthdate, 'DD/MM/YYYY')).format('YYYY-MM-DD'),
-                            'idcustomerpledge':this.idcustomerpledge                    
+                            'idcustomerpledge':this.id_customer_credit                    
                         }).then(function (response) {
                                 me.midatax=[];
                                 me.midatax.push({id:response.data,names: me.name,paternal_last_name: me.paternal_last_name, maternal_last_name:me.maternal_last_name });
@@ -1428,12 +1564,13 @@
             },
             eliminar(id){
                 swal({
-                title: '¿Esta seguro de eliminar?',
+                title: '¿Estas seguro de eliminar?',
+                text: '¡No podrás revertir esto!',
                 type: 'warning',
                 showCancelButton: true,
                 confirmButtonColor: '#3085d6',
                 cancelButtonColor: '#d33',
-                confirmButtonText: 'Aceptar!',
+                confirmButtonText: 'Aceptar',
                 cancelButtonText: 'Cancelar',
                 confirmButtonClass: 'btn btn-success',
                 cancelButtonClass: 'btn btn-danger',
@@ -1442,12 +1579,13 @@
                 }).then((result) => {
                     if (result.value) {
                     let me = this;
-                    axios.post('delete_customer',{
+                    axios.post('deleteCustomerCredit',{
                         'id': id
 
                     }).then(function (response) {
                     me.listado=1;
                     me.list_data(1);
+                    swal( 'Eliminado!', 'Su cliente ha sido eliminado.', 'success' ); 
                     }).catch(function (error) {
                         console.log(error);
                     });
@@ -1459,7 +1597,7 @@
                 let me=this;
                 me.listadox=3;
                 this.visible=0;
-                this.idcustomerpledge=midata.id_customer_pledge;
+                this.id_customer_credit=midata.id_customer_credit;
                 this.name_customer=midata.names+' '+midata.paternal_last_name+' '+midata.maternal_last_name;
                 this.nro_doc=midata.number_doc;
                 var url= 'getDependenceParent';
@@ -1551,7 +1689,7 @@
                 me.listado=0;
                 me.get_department();
                 me.get_type_document();
-                var url= 'getListCustomer?buscar='+me.buscar+'&page='+page;
+                var url= 'getListCustomerCredit?buscar='+me.buscar+'&page='+page;
                 axios.get(url).then(function (response) {
                     var respuesta= response.data;
                     me.list=respuesta.datax;
@@ -1563,11 +1701,65 @@
                 });
                
             },
+            get_type_document(){
+                let me=this;
+                var url= 'getTypeDocument';
+                axios.get(url).then(function (response) {
+                    var respuesta= response.data;
+                    me.listProgram = respuesta.datax;
+                })
+                .catch(function (error) {
+                    console.log(error);
+                });
+                
+            },
+            get_type_business(){
+                var url= 'get_product_program?id_customer=' + id_product;
+                axios.get(url).then(function (response) {
+                    me.obtenerProgramas();
+                    var respuesta= response.data;
+                    var listactual=respuesta.datax;
+                    for(var i=0; i < me.listProgramx.length; i++){
+                        for(var j=0; j < listactual.length; j++){
+                            if(me.listProgramx[i].id_program==listactual[j].id_program){
+                                me.listProgramx[i].check=true;   
+                                                             
+                            }
+                        }
+                    }
+                    
+                })
+                .catch(function (error) {
+                    console.log(error);
+                });    
+            },
+
+            init: function() {
+            //cargar actividades
+                let me=this;  
+                me.listProgramx=[];        
+                var url= 'getTypeDocument';
+                axios.get(url).then(function (response) {
+                    var respuesta= response.data;
+                    var lista=respuesta.datax;
+                    for(var i=0; i < lista.length; i++){
+                       me.listProgramx.push({ check:false,id_type_document: lista[i].id_type_document, id_product:''});
+                       console.log(me.listProgramx);
+                      
+                    }
+                   
+                })
+                .catch(function (error) {
+                    console.log(error);
+                });
+            },
            
         },
+        
         mounted() {
         //    this.lista_add_client();
            this.list_data(1);
+           this.get_type_document();
            this.listadox=1;
            this.calculateTeabyTerm();
            this.get_province(10);

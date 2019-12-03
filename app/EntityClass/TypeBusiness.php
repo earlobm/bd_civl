@@ -4,8 +4,8 @@ namespace poi\EntityClass;
 
 use Illuminate\Database\Eloquent\Model;
 
-class TypeCommerce extends Model{
-    protected $table='type_commerce';
+class TypeBusiness extends Model{
+    protected $table='type_business';
     protected $primaryKey='id';
     public $timestamps = false;
     const UPDATED_AT=NULL;

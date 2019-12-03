@@ -5,7 +5,10 @@
         </template>
         <!-- SISTEMA DE PRESTAMOS -->
         <template v-if="menu==13">
-        <customercredit></customercredit>
+            <customercredit></customercredit>
+        </template>
+        <template v-if="menu==26">
+            <customerlist></customerlist>
         </template>
         <!-- SISTEMA DE EMPEÑOS -->
         <!-- REGISTERS -->
@@ -35,7 +38,7 @@
         <document></document>
         </template>
         <template v-if="menu==23">
-        <negocio></negocio>
+        <business></business>
         </template>
         <template v-if="menu==25">
         <resumendia></resumendia>

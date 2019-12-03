@@ -1,10 +1,6 @@
 webpackJsonp([50],{
 
-<<<<<<< HEAD
-/***/ 194:
-=======
-/***/ 193:
->>>>>>> 45fac07ff921f0e244292ee89b85f543933a11a8
+/***/ 195:
 /***/ (function(module, exports) {
 
 /* globals __VUE_SSR_CONTEXT__ */
@@ -114,11 +110,7 @@ module.exports = function normalizeComponent (
 
 /***/ }),
 
-<<<<<<< HEAD
-/***/ 287:
-=======
-/***/ 267:
->>>>>>> 45fac07ff921f0e244292ee89b85f543933a11a8
+/***/ 296:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -136,7 +128,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-<<<<<<< HEAD
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     props: ['idanio'],
@@ -152,73 +143,17 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             this.idanio = val;
         }
     }
-=======
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-    props: ['ruta'],
-    data: function data() {
-        return {
-            authUser: 1
-
-        };
-    },
-    paginaActual: function paginaActual() {
-        this.listado = 1;
-    },
-    mounted: function mounted() {}
->>>>>>> 45fac07ff921f0e244292ee89b85f543933a11a8
 });
 
 /***/ }),
 
-<<<<<<< HEAD
-/***/ 288:
-=======
-/***/ 268:
->>>>>>> 45fac07ff921f0e244292ee89b85f543933a11a8
+/***/ 297:
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-<<<<<<< HEAD
   return _c("li", { staticClass: "dropdown show" }, [
     _vm._m(0),
     _vm._v(" "),
@@ -264,16 +199,12 @@ var render = function() {
       ]
     )
   ])
-=======
-  return _vm._m(0)
->>>>>>> 45fac07ff921f0e244292ee89b85f543933a11a8
 }
 var staticRenderFns = [
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-<<<<<<< HEAD
     return _c(
       "a",
       {
@@ -293,84 +224,6 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("li", [_c("a", { attrs: { href: "#" } }, [_vm._v("2020")])])
-=======
-    return _c("main", { staticClass: "main" }, [
-      _c("section", { staticClass: "content-header" }, [
-        _c("h1", [
-          _vm._v("\n              Bienvenido\n              "),
-          _c("small", [_vm._v("al Sistema de Préstamo y Empeño")])
-        ]),
-        _vm._v(" "),
-        _c("ol", { staticClass: "breadcrumb" }, [
-          _c("li", [
-            _c("a", { attrs: { href: "#" } }, [
-              _c("i", { staticClass: "fa fa-home" }),
-              _vm._v(" Inicio")
-            ])
-          ])
-        ])
-      ]),
-      _vm._v(" "),
-      _c("section", { staticClass: "content" }, [
-        _c("div", { staticClass: "row" }, [
-          _c("div", { staticClass: "col-md-12" }, [
-            _c("div", { staticClass: "box box-primary" }, [
-              _c("div", { staticClass: "box-body" }, [
-                _c("div", { staticClass: "row" }, [
-                  _c("div", { staticClass: "col-md-12" }, [
-                    _c("div", { staticClass: "container-fluid" }, [
-                      _c("div", { staticClass: "card" }, [
-                        _c("div", { staticClass: "card-body" }, [
-                          _c("div", { staticClass: "row" }, [
-                            _c(
-                              "div",
-                              {
-                                staticClass:
-                                  "col-lg-12 col-md-12 col-sm-12 col-xs-12"
-                              },
-                              [
-                                _c("div", { staticClass: "box-body" }, [
-                                  _c("div", { staticClass: "row" }, [
-                                    _c(
-                                      "section",
-                                      { attrs: { id: "widget-grid" } },
-                                      [
-                                        _c("div", { staticClass: "row" }, [
-                                          _c(
-                                            "article",
-                                            { staticClass: "col-sm-12" },
-                                            [
-                                              _c("img", {
-                                                staticStyle: {
-                                                  "border-radius": "3px"
-                                                },
-                                                attrs: {
-                                                  width: "100%",
-                                                  src: "img/LOGO-TUMIFINAL.png"
-                                                }
-                                              })
-                                            ]
-                                          )
-                                        ])
-                                      ]
-                                    )
-                                  ])
-                                ])
-                              ]
-                            )
-                          ])
-                        ])
-                      ])
-                    ])
-                  ])
-                ])
-              ])
-            ])
-          ])
-        ])
-      ])
-    ])
->>>>>>> 45fac07ff921f0e244292ee89b85f543933a11a8
   }
 ]
 render._withStripped = true
@@ -378,37 +231,21 @@ module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-<<<<<<< HEAD
     require("vue-hot-reload-api")      .rerender("data-v-390f2fcc", module.exports)
-=======
-    require("vue-hot-reload-api")      .rerender("data-v-cb7b9974", module.exports)
->>>>>>> 45fac07ff921f0e244292ee89b85f543933a11a8
   }
 }
 
 /***/ }),
 
-<<<<<<< HEAD
-/***/ 60:
+/***/ 61:
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
-var normalizeComponent = __webpack_require__(194)
+var normalizeComponent = __webpack_require__(195)
 /* script */
-var __vue_script__ = __webpack_require__(287)
+var __vue_script__ = __webpack_require__(296)
 /* template */
-var __vue_template__ = __webpack_require__(288)
-=======
-/***/ 54:
-/***/ (function(module, exports, __webpack_require__) {
-
-var disposed = false
-var normalizeComponent = __webpack_require__(193)
-/* script */
-var __vue_script__ = __webpack_require__(267)
-/* template */
-var __vue_template__ = __webpack_require__(268)
->>>>>>> 45fac07ff921f0e244292ee89b85f543933a11a8
+var __vue_template__ = __webpack_require__(297)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -425,11 +262,7 @@ var Component = normalizeComponent(
   __vue_scopeId__,
   __vue_module_identifier__
 )
-<<<<<<< HEAD
 Component.options.__file = "resources/assets/js/components/ComboAnio.vue"
-=======
-Component.options.__file = "resources/assets/js/components/DashboardMain.vue"
->>>>>>> 45fac07ff921f0e244292ee89b85f543933a11a8
 
 /* hot reload */
 if (false) {(function () {
@@ -438,15 +271,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-<<<<<<< HEAD
     hotAPI.createRecord("data-v-390f2fcc", Component.options)
   } else {
     hotAPI.reload("data-v-390f2fcc", Component.options)
-=======
-    hotAPI.createRecord("data-v-cb7b9974", Component.options)
-  } else {
-    hotAPI.reload("data-v-cb7b9974", Component.options)
->>>>>>> 45fac07ff921f0e244292ee89b85f543933a11a8
   }
   module.hot.dispose(function (data) {
     disposed = true

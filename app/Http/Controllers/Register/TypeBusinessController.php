@@ -1,11 +1,11 @@
 <?php
-namespace poi\Http\Controllers\RegisterPrestamo;
+namespace poi\Http\Controllers\Register;
 
 use Illuminate\Http\Request;
 use poi\Http\Controllers\Controller;
 use poi\Http\Requests as BaseController;
 use Illuminate\Support\Facades\Redirect;
-use poi\EntityClass\TypeCommerce;
+use poi\EntityClass\TypeBusiness;
 
 use Maatwebsite\Excel\Facades\Excel;
 use Maatwebsite\Excel\Concerns\FromQuery;
@@ -20,17 +20,17 @@ ini_set('post_max_size', '9999999999999M');
 ini_set('upload_max_filesize', '9999999999M');
 
 
-class TypeCommerceController extends Controller
+class TypeBusinessController extends Controller
 {
     public function __construct(){
         //$this->middleware('auth');
     }
 
-    public function save_Commerce(Request $request){
+    public function saveBusiness(Request $request){
         if($request->id==-1){
-            $clasex = new TypeCommerce();
+            $clasex = new TypeBusiness();
         }else{
-            $clasex = TypeCommerce::findOrFail($request->id);
+            $clasex = TypeBusiness::findOrFail($request->id);
         }
         $clasex->name = $request->name;
         $clasex->state =1;
@@ -40,25 +40,25 @@ class TypeCommerceController extends Controller
          
         }
         
-    public function delete_Commerce(Request $request){
-        $clasex = TypeCommerce::findOrFail($request->id);
+    public function deleteBusiness(Request $request){
+        $clasex = TypeBusiness::findOrFail($request->id);
         $clasex->state =0;
         $clasex->save();
     }
         
-        public function getEditListCommerce(Request $request){
-            $queyCommerce="SELECT id,name FROM type_commerce where  state=1 and id='$request->id'";
-            $listCommerce = DB::select($queyCommerce);
+        public function getEditListBusiness(Request $request){
+            $queyBusiness="SELECT id,name FROM type_business where  state=1 and id='$request->id'";
+            $listBusiness = DB::select($queyBusiness);
             //obteniendo la actividad
               return [
-                  'datax'=>$listCommerce
+                  'datax'=>$listBusiness
               ];
         }
-        public function getlistCommerce(Request $request){
-            $queyCommerce="SELECT id,name FROM type_commerce where state=1 ";
-            $listCommerce = DB::select($queyCommerce);
+        public function getlistBusiness(Request $request){
+            $queyBusiness="SELECT id,name FROM type_business where state=1 ";
+            $listBusiness = DB::select($queyBusiness);
             return [
-                'datax'=>$listCommerce
+                'datax'=>$listBusiness
             ];
         }
         public function getDatabyNroDoc(Request $request){

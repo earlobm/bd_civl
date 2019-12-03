@@ -61,8 +61,8 @@
                                                                                 <th style="vertical-align: middle;">NOMBRE</th>
                                                                                  <th style="vertical-align: middle;">SUCURSAL</th>
                                                                                  <th style="vertical-align: middle;">MERCADO</th>
-                                                                                 <th style="vertical-align: middle;">MONTO</th>
-                                                                                 <th style="vertical-align: middle;">TIPO MONTO DEL DIA</th>
+                                                                                 <th style="vertical-align: middle;">MONTO ASIGNADO</th>
+                                                                                 <th style="vertical-align: middle;">MONTO DEVUELTO</th>
                                                                                  <th style="vertical-align: middle;">FECHA</th>
                                                                                 <th style="text-align: center; vertical-align: middle;">ACCIONES</th>
                                                                             </tr> 
@@ -74,8 +74,8 @@
                                                                                 <td style="vertical-align: middle;" v-text="midata.names+' '+midata.paternal_last_name+' '+midata.maternal_last_name"></td>
                                                                                 <td style="vertical-align: middle;" v-text="midata.name_sucursal"></td>
                                                                                 <td style="vertical-align: middle;" v-text="midata.name_mercado"></td>
-                                                                                <td style="vertical-align: middle;" v-text="midata.amount"></td>
-                                                                                <td style="vertical-align: middle;" v-text="midata.type"></td>
+                                                                                <td style="vertical-align: middle;" v-text="midata.amount_assigned"></td>
+                                                                                <td style="vertical-align: middle;" v-text="midata.amount_delivered"></td>
                                                                                 <td style="vertical-align: middle;" v-text="midata.date_register"></td>
                                                                                 <td style="text-align: center; vertical-align: middle;"> 
                                                                                     
@@ -176,25 +176,19 @@
 
                                                             <div class="col-md-4">
                                                                 <div v-bind:class="errorInputActivity5">
-                                                                    <label for="nombres">Monto del dia:</label>
+                                                                    <label for="nombres">Monto Asignado:</label>
                                                                     <div class="input-group">
                                                                         <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-user"></i></span>
-                                                                        <input v-model="amount" type="text" class="form-control" placeholder="Monto" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">  
+                                                                        <input v-model="amountAsing" type="text" class="form-control" placeholder="Monto" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">  
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                             <div class="col-md-4">
-                                                                <div class="form-group">
-                                                                    <label for="sexo">Tipo:</label>
+                                                                <div v-bind:class="errorInputActivity5">
+                                                                    <label for="nombres">Monto Devuelto:</label>
                                                                     <div class="input-group">
-                                                                        <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-transgender"></i></span>
-                                                                    <select v-model="type" class="form-control select2" style="border-top-right-radius:3px;border-bottom-right-radius:3px">
-                                                                                            <option selected="selected" value="">SELECCIONE</option>
-                                                                                            <option value="ENTREGADO">ENTREGADO</option>
-                                                                                            <option  value="RECIBIDO">RECIBIDO</option>
-
-
-                                                                    </select>
+                                                                        <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-user"></i></span>
+                                                                        <input v-model="amountDeli" type="text" class="form-control" placeholder="Monto" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">  
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -265,7 +259,7 @@
                 errorInputActivity5:'form-group', errorInputActivity6:'form-group',
                 errorInputAmount:'form-group',errorComboTipoProduco:'form-group',
                 buscar:'',sex:'',type:'',marital_status:'',
-                name_customer:'',amount:0,date_end:'',interest:0,
+                name_customer:'',amountAsing:0,amountDeli:0,date_end:'',interest:0,
                 term:1,
                 total:0,guaranty:'',id_sucursal:0,characteristic:'',tea:20,id_warehouse:'',
                 id_person:0,id_sucursal_edit:-1,quantity:1,licence_plate:'',serie:'',note:'',id_mercado_edit:-1,
@@ -435,13 +429,13 @@
                 this.errorClase=0;
                 this.errors.amount="";
                 //input
-                this.errorInputActivity5='form-group has-success';
+                //this.errorInputActivity5='form-group has-success';
 
 
                 if (!this.amount) 
                 {   
                     this.errors.amount="Ingrese el  monto";
-                    this.errorInputActivity5='form-group has-error';
+                    //this.errorInputActivity5='form-group has-error';
                     this.errorClase = 1;
                 }
                 
@@ -466,9 +460,9 @@
                 axios.get(url).then(function (response) {
                         var respuesta= response.data;
                                 me.id=respuesta.datax[0].id;
-                                me.amount = respuesta.datax[0].amount;
-                                me.date_register = moment(respuesta.datax[0].date_register).toDate();;
-                                me.type = respuesta.datax[0].type;
+                                me.amountAsing = respuesta.datax[0].amount_assigned;
+                                me.amountDeli = respuesta.datax[0].amount_delivered;
+                                me.date_register = moment(respuesta.datax[0].date_register).toDate();
                                 me.id_empleado_edit = respuesta.datax[0].id_employee;
                                 me.id_mercado_edit =respuesta.datax[0].id_market;
                                 me.id_sucursal_edit=respuesta.datax[0].id_sucursal;
@@ -476,7 +470,7 @@
                                 //me.getMercado(id);
                                 // me.getEmpleado(id);
                                 //me.id_sucursal_edit =respuesta.datax[0].sex;
-                                me.validarData();
+                               // me.validarData();
                               
                     
                 
@@ -516,9 +510,6 @@
                               
             },
             save(){
-                if (this.validarData()){
-                    return;
-                }
               swal({
                 title: 'Esta seguro de guardar la informacion?',
                 type: 'warning',
@@ -532,8 +523,8 @@
 
                 let me = this;
                 axios.post('save_Amount',{
-                    'amount':this.amount,'id_employee':this.id_empleado_edit,'id_market':this.id_mercado_edit,
-                    'type':this.type, 
+                    'amount_assigned':this.amountAsing,'id_employee':this.id_empleado_edit,'id_market':this.id_mercado_edit,
+                    'amount_delivered':this.amountDeli, 
                     'id': this.id,
                     'date_register' : moment(moment(this.date_register, 'DD/MM/YYYY')).format('YYYY-MM-DD')                        
                 }).then(function (response) {

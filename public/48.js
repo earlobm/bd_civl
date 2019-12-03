@@ -1,6 +1,6 @@
 webpackJsonp([48],{
 
-/***/ 194:
+/***/ 195:
 /***/ (function(module, exports) {
 
 /* globals __VUE_SSR_CONTEXT__ */
@@ -110,11 +110,7 @@ module.exports = function normalizeComponent (
 
 /***/ }),
 
-<<<<<<< HEAD
-/***/ 195:
-=======
-/***/ 194:
->>>>>>> 45fac07ff921f0e244292ee89b85f543933a11a8
+/***/ 196:
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -133,11 +129,7 @@ if (typeof DEBUG !== 'undefined' && DEBUG) {
   ) }
 }
 
-<<<<<<< HEAD
-var listToStyles = __webpack_require__(196)
-=======
-var listToStyles = __webpack_require__(195)
->>>>>>> 45fac07ff921f0e244292ee89b85f543933a11a8
+var listToStyles = __webpack_require__(197)
 
 /*
 type StyleObject = {
@@ -347,11 +339,7 @@ function applyToTag (styleElement, obj) {
 
 /***/ }),
 
-<<<<<<< HEAD
-/***/ 196:
-=======
-/***/ 195:
->>>>>>> 45fac07ff921f0e244292ee89b85f543933a11a8
+/***/ 197:
 /***/ (function(module, exports) {
 
 /**
@@ -385,40 +373,23 @@ module.exports = function listToStyles (parentId, list) {
 
 /***/ }),
 
-<<<<<<< HEAD
-/***/ 283:
-=======
-/***/ 305:
->>>>>>> 45fac07ff921f0e244292ee89b85f543933a11a8
+/***/ 315:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-<<<<<<< HEAD
-var content = __webpack_require__(284);
+var content = __webpack_require__(316);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(195)("6a496680", content, false, {});
-=======
-var content = __webpack_require__(306);
-if(typeof content === 'string') content = [[module.i, content, '']];
-if(content.locals) module.exports = content.locals;
-// add the styles to the DOM
-var update = __webpack_require__(194)("1f2b3065", content, false, {});
->>>>>>> 45fac07ff921f0e244292ee89b85f543933a11a8
+var update = __webpack_require__(196)("1f2b3065", content, false, {});
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
  if(!content.locals) {
-<<<<<<< HEAD
-   module.hot.accept("!!../../../../../../node_modules/css-loader/index.js!../../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-a0be3278\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./UnidadPoiVista.vue", function() {
-     var newContent = require("!!../../../../../../node_modules/css-loader/index.js!../../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-a0be3278\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./UnidadPoiVista.vue");
-=======
    module.hot.accept("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-69db425e\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Profile.vue", function() {
      var newContent = require("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-69db425e\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Profile.vue");
->>>>>>> 45fac07ff921f0e244292ee89b85f543933a11a8
      if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
      update(newContent);
    });
@@ -429,37 +400,22 @@ if(false) {
 
 /***/ }),
 
-<<<<<<< HEAD
-/***/ 284:
+/***/ 316:
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(66)(false);
-=======
-/***/ 306:
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(65)(false);
->>>>>>> 45fac07ff921f0e244292ee89b85f543933a11a8
+exports = module.exports = __webpack_require__(67)(false);
 // imports
 
 
 // module
-<<<<<<< HEAD
-exports.push([module.i, "\n.table-bordered th,\r\n.table-bordered td {\r\n  border: 1px solid rgb(204, 198, 198) !important;\n}\r\n", ""]);
-=======
 exports.push([module.i, "\n.table-bordered th,\r\n.table-bordered td {\r\n  border: 1px solid rgb(204, 198, 198) !important;\n}\n.todo-list:hover{\r\n     border-style:dashed;\r\n     /* border: 1px solid red; */\r\n     border-width: 1px;\r\n     border-color:rgb(32, 32, 32);\n}\r\n/* .container .checkmark {\r\n    background-color: #00B1B0;\r\n} */\r\n", ""]);
->>>>>>> 45fac07ff921f0e244292ee89b85f543933a11a8
 
 // exports
 
 
 /***/ }),
 
-<<<<<<< HEAD
-/***/ 285:
-=======
-/***/ 307:
->>>>>>> 45fac07ff921f0e244292ee89b85f543933a11a8
+/***/ 317:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -486,91 +442,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
-<<<<<<< HEAD
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-=======
->>>>>>> 45fac07ff921f0e244292ee89b85f543933a11a8
 //
 //
 //
@@ -630,10 +501,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
             clastab1: 'active', clastab2: '', clastab3: '', clastab4: '',
             clastabdetalle1: 'tab-pane active', clastabdetalle2: 'tab-pane', clastabdetalle3: 'tab-pane', clastabdetalle4: 'tab-pane',
             arrayZona: [],
-<<<<<<< HEAD
-            listUnitPoi: [],
-=======
->>>>>>> 45fac07ff921f0e244292ee89b85f543933a11a8
             arrayEntrenador: [],
             arrayDataDetalle: [], califica: '',
             arrayCohort: [], datosArrayPbg: [], datosArraySunat: [],
@@ -658,21 +525,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
             'last_page': 0,
             'from': 0,
             'to': 0
-<<<<<<< HEAD
-        }), _defineProperty(_ref, 'offset', 3), _defineProperty(_ref, 'datosmapa', ''), _defineProperty(_ref, 'markers', []), _defineProperty(_ref, 'modal', 0), _defineProperty(_ref, 'center', { lat: 45.508, lng: -73.587 }), _defineProperty(_ref, 'code', ''), _defineProperty(_ref, 'name', ''), _defineProperty(_ref, 'id', -1), _defineProperty(_ref, 'errorClase', 0), _defineProperty(_ref, 'errors', {}), _defineProperty(_ref, 'errorInputActivity', 'form-group'), _defineProperty(_ref, 'errorInputActivity1', 'form-group'), _ref;
-    },
-
-    computed: {
-        isActived: function isActived() {
-            return this.pagination.current_page;
-        },
-        //Calcula los elementos de la paginación
-        pagesNumber: function pagesNumber() {
-            if (!this.pagination.to) {
-                return [];
-            }
-
-=======
         }), _defineProperty(_ref, 'offset', 3), _defineProperty(_ref, 'datosmapa', ''), _defineProperty(_ref, 'markers', []), _defineProperty(_ref, 'modal', 0), _defineProperty(_ref, 'center', { lat: 45.508, lng: -73.587 }), _defineProperty(_ref, 'listProgram', []), _defineProperty(_ref, 'listProyect', []), _defineProperty(_ref, 'listProgramx', []), _defineProperty(_ref, 'code', ''), _defineProperty(_ref, 'name', ''), _defineProperty(_ref, 'id', -1), _defineProperty(_ref, 'errorClase', 0), _defineProperty(_ref, 'errors', {}), _defineProperty(_ref, 'errorInputActivity', 'form-group'), _defineProperty(_ref, 'errorInputActivity2', 'form-group'), _defineProperty(_ref, 'buscar', ''), _ref;
     },
 
@@ -686,7 +538,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
                 return [];
             }
 
->>>>>>> 45fac07ff921f0e244292ee89b85f543933a11a8
             var from = this.pagination.current_page - this.offset;
             if (from < 1) {
                 from = 1;
@@ -705,124 +556,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
             return pagesArray;
         }
     },
-<<<<<<< HEAD
-    methods: {
-        validarData: function validarData() {
-            this.errors = {};
-            this.errorClase = 0;
-            this.errors.code = "";
-            this.errors.name = "";
-            //input
-            this.errorInputActivity = 'form-group has-success';
-            this.errorInputActivity1 = 'form-group has-success';
-
-            if (!this.codig) {
-                this.errors.codig = "Ingrese codigo";
-                this.errorInputActivity = 'form-group has-error';
-                this.errorClase = 1;
-            }
-            if (!this.name) {
-                this.errors.name = "Ingrese nombre";
-                this.errorInputActivity1 = 'form-group has-error';
-                this.errorClase = 1;
-            }
-            return this.errorClase;
-        },
-        paginaActual: function paginaActual() {
-            this.listado = 1;
-        },
-        cambiarPagina: function cambiarPagina(page, identrendor, idZona, empresa, estado, fechaInicio, fechaFin) {
-            var me = this;
-            me.pagination.current_page = page;
-            //me.listado=1;
-            me.listar(page, identrendor, idZona, empresa, estado, fechaInicio, fechaFin);
-        },
-        editar: function editar(id) {
-            var me = this;
-            me.listado = 2;
-            me.limpiar();
-            // this.nombre= '';
-            var url = 'get_unitpoi?id_poi_unity=' + id;
-            axios.get(url).then(function (response) {
-                var respuesta = response.data;
-                me.name = respuesta.datax[0].name;
-                me.code = respuesta.datax[0].code;
-                me.id = respuesta.datax[0].id_poi_unity;
-            }).catch(function (error) {
-                console.log(error);
-            });
-            //return;
-        },
-        guardar: function guardar() {
-            var _this = this;
-
-            if (this.validarData()) {
-                return;
-            }
-            swal({
-                title: 'Esta seguro de guardar la informacion?',
-                type: 'warning',
-                showCancelButton: true, confirmButtonColor: '#3085d6',
-                cancelButtonColor: '#d33', confirmButtonText: 'Aceptar!',
-                cancelButtonText: 'Cancelar', confirmButtonClass: 'btn btn-success',
-                cancelButtonClass: 'btn btn-danger', buttonsStyling: false,
-                reverseButtons: true
-            }).then(function (result) {
-                if (result.value) {
-
-                    var me = _this;
-                    axios.post('save_UnitPoi', {
-                        'code': _this.code, 'name': _this.name,
-                        'id': _this.id
-
-                    }).then(function (response) {
-                        me.limpiar();
-                        me.listado = 1;
-                        me.listar();
-                        // me.listar(1,me.micohort);
-                        // me.listado=1;
-                        swal('¡Actualizado!', 'El registro ha sido guardado con éxito.', 'success');
-                    }).catch(function (error) {
-                        console.log(error);
-                    });
-                } else if (
-                // Read more about handling dismissals
-                result.dismiss === swal.DismissReason.cancel) {}
-            });
-        },
-        agregar: function agregar() {
-            var me = this;
-            me.listado = 2;
-            me.limpiar();
-        },
-        volver: function volver() {
-            var me = this;
-            me.listado = 1;
-            me.limpiar();
-        },
-        limpiar: function limpiar() {
-            this.errorInputActivity = 'form-group';
-            this.errorInputActivity1 = 'form-group';
-            this.errors = {};
-            this.errors.code = "";
-            this.errors.name = "";
-            this.name = "";
-            this.code = "";
-            //this.description="";
-            this.id = -1;
-        },
-        listar: function listar() {
-            var me = this;
-            var url = 'get_unitpoi';
-            axios.get(url).then(function (response) {
-                var respuesta = response.data;
-                me.listUnitPoi = respuesta.datax;
-            }).catch(function (error) {
-                console.log(error);
-            });
-        }
-    },
-=======
     created: function created() {
         this.init();
     },
@@ -1030,7 +763,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         }
 
     },
->>>>>>> 45fac07ff921f0e244292ee89b85f543933a11a8
     mounted: function mounted() {
         this.listar();
     }
@@ -1038,644 +770,13 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 /***/ }),
 
-<<<<<<< HEAD
-/***/ 286:
-=======
-/***/ 308:
->>>>>>> 45fac07ff921f0e244292ee89b85f543933a11a8
+/***/ 318:
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-<<<<<<< HEAD
-  return _c("main", { staticClass: "main" }, [
-    _vm._m(0),
-    _vm._v(" "),
-    _c("div", { staticClass: "box-body" }, [
-      _c("div", { staticClass: "row" }, [
-        _c("div", { staticClass: "col-md-12" }, [
-          _c("div", { staticClass: "container-fluid" }, [
-            _c("div", { staticClass: "card" }, [
-              _c("div", { staticClass: "card-body" }, [
-                _c("div", { staticClass: "row" }, [
-                  _c(
-                    "div",
-                    { staticClass: "col-lg-12 col-md-12 col-sm-12 col-xs-12" },
-                    [
-                      _c(
-                        "div",
-                        { staticClass: "box-body" },
-                        [
-                          _vm.listado == 1
-                            ? [
-                                _c("div", { staticClass: "row" }, [
-                                  _vm._m(1),
-                                  _vm._v(" "),
-                                  _c(
-                                    "div",
-                                    {
-                                      staticClass:
-                                        "col-xs-12 col-sm-8 col-md-8 col-lg-4"
-                                    },
-                                    [
-                                      _c(
-                                        "div",
-                                        {
-                                          staticClass: "btn-group",
-                                          staticStyle: { float: "right" }
-                                        },
-                                        [
-                                          _c(
-                                            "button",
-                                            {
-                                              staticClass: "btn btn-import",
-                                              attrs: { type: "button" },
-                                              on: {
-                                                click: function($event) {
-                                                  return _vm.importar()
-                                                }
-                                              }
-                                            },
-                                            [
-                                              _c("i", {
-                                                staticClass: "fa fa-upload"
-                                              }),
-                                              _vm._v(
-                                                " Importar actvidades\n                                                        "
-                                              )
-                                            ]
-                                          ),
-                                          _vm._v(" "),
-                                          _c(
-                                            "button",
-                                            {
-                                              staticClass: "btn btn-add",
-                                              attrs: { type: "button" },
-                                              on: {
-                                                click: function($event) {
-                                                  return _vm.agregar()
-                                                }
-                                              }
-                                            },
-                                            [
-                                              _c("i", {
-                                                staticClass: "fa fa-plus"
-                                              }),
-                                              _vm._v(
-                                                " Agregar actividad\n                                                        "
-                                              )
-                                            ]
-                                          )
-                                        ]
-                                      )
-                                    ]
-                                  )
-                                ]),
-                                _vm._v(" "),
-                                _c("div", { staticClass: "row" }, [
-                                  _c("div", { staticClass: "col-md-12" }, [
-                                    _c(
-                                      "div",
-                                      {
-                                        staticClass:
-                                          "box-body table-responsive no-padding"
-                                      },
-                                      [
-                                        _c(
-                                          "table",
-                                          {
-                                            staticClass: "table table-hover",
-                                            staticStyle: { "font-size": "12px" }
-                                          },
-                                          [
-                                            _vm._m(2),
-                                            _vm._v(" "),
-                                            _c(
-                                              "tbody",
-                                              _vm._l(_vm.listUnitPoi, function(
-                                                midata,
-                                                index
-                                              ) {
-                                                return _c(
-                                                  "tr",
-                                                  { key: index },
-                                                  [
-                                                    _c(
-                                                      "td",
-                                                      {
-                                                        staticStyle: {
-                                                          "vertical-align":
-                                                            "middle"
-                                                        }
-                                                      },
-                                                      [
-                                                        _vm._v(
-                                                          _vm._s(index + 1)
-                                                        )
-                                                      ]
-                                                    ),
-                                                    _vm._v(" "),
-                                                    _c("td", {
-                                                      staticStyle: {
-                                                        "vertical-align":
-                                                          "middle"
-                                                      },
-                                                      domProps: {
-                                                        textContent: _vm._s(
-                                                          midata.code
-                                                        )
-                                                      }
-                                                    }),
-                                                    _vm._v(" "),
-                                                    _c("td", {
-                                                      staticStyle: {
-                                                        "vertical-align":
-                                                          "middle"
-                                                      },
-                                                      domProps: {
-                                                        textContent: _vm._s(
-                                                          midata.name
-                                                        )
-                                                      }
-                                                    }),
-                                                    _vm._v(" "),
-                                                    _c(
-                                                      "td",
-                                                      {
-                                                        staticStyle: {
-                                                          "vertical-align":
-                                                            "middle",
-                                                          "text-align": "center"
-                                                        }
-                                                      },
-                                                      [
-                                                        _c(
-                                                          "button",
-                                                          {
-                                                            staticClass:
-                                                              "btn btn-editar btn-sm",
-                                                            attrs: {
-                                                              type: "button"
-                                                            },
-                                                            on: {
-                                                              click: function(
-                                                                $event
-                                                              ) {
-                                                                return _vm.editar(
-                                                                  midata.id_poi_unity
-                                                                )
-                                                              }
-                                                            }
-                                                          },
-                                                          [
-                                                            _c("i", {
-                                                              staticClass:
-                                                                "fa fa-pencil"
-                                                            })
-                                                          ]
-                                                        ),
-                                                        _vm._v(" "),
-                                                        _c(
-                                                          "button",
-                                                          {
-                                                            staticClass:
-                                                              "btn btn-eliminar btn-sm",
-                                                            attrs: {
-                                                              title: "Eliminar",
-                                                              type: "button"
-                                                            },
-                                                            on: {
-                                                              click: function(
-                                                                $event
-                                                              ) {
-                                                                return _vm.eliminar(
-                                                                  midata.id_poi_unity
-                                                                )
-                                                              }
-                                                            }
-                                                          },
-                                                          [
-                                                            _c("i", {
-                                                              staticClass:
-                                                                "fa fa-trash"
-                                                            })
-                                                          ]
-                                                        )
-                                                      ]
-                                                    )
-                                                  ]
-                                                )
-                                              }),
-                                              0
-                                            )
-                                          ]
-                                        )
-                                      ]
-                                    ),
-                                    _vm._v(" "),
-                                    _c(
-                                      "div",
-                                      {
-                                        staticClass:
-                                          "dataTables_paginate paging_simple_numbers",
-                                        staticStyle: {
-                                          float: "right !important"
-                                        }
-                                      },
-                                      [
-                                        _c("nav", [
-                                          _c(
-                                            "ul",
-                                            { staticClass: "pagination" },
-                                            [
-                                              _vm.pagination.current_page > 1
-                                                ? _c(
-                                                    "li",
-                                                    {
-                                                      staticClass: "page-item"
-                                                    },
-                                                    [
-                                                      _c(
-                                                        "a",
-                                                        {
-                                                          staticClass:
-                                                            "page-link",
-                                                          attrs: { href: "#" },
-                                                          on: {
-                                                            click: function(
-                                                              $event
-                                                            ) {
-                                                              $event.preventDefault()
-                                                              _vm.cambiarPagina(
-                                                                Number(
-                                                                  _vm.pagination
-                                                                    .current_page
-                                                                ) - 1,
-                                                                _vm.identrendor,
-                                                                _vm.idZona,
-                                                                _vm.empresa,
-                                                                _vm.estado,
-                                                                _vm.fechaInicio,
-                                                                _vm.fechaFin
-                                                              )
-                                                            }
-                                                          }
-                                                        },
-                                                        [_vm._v("Ant")]
-                                                      )
-                                                    ]
-                                                  )
-                                                : _vm._e(),
-                                              _vm._v(" "),
-                                              _vm._l(_vm.pagesNumber, function(
-                                                page
-                                              ) {
-                                                return _c(
-                                                  "li",
-                                                  {
-                                                    key: page,
-                                                    staticClass: "page-item",
-                                                    class: [
-                                                      page == _vm.isActived
-                                                        ? "active"
-                                                        : ""
-                                                    ]
-                                                  },
-                                                  [
-                                                    _c("a", {
-                                                      staticClass: "page-link",
-                                                      attrs: { href: "#" },
-                                                      domProps: {
-                                                        textContent: _vm._s(
-                                                          page
-                                                        )
-                                                      },
-                                                      on: {
-                                                        click: function(
-                                                          $event
-                                                        ) {
-                                                          $event.preventDefault()
-                                                          return _vm.cambiarPagina(
-                                                            page,
-                                                            _vm.identrendor,
-                                                            _vm.idZona,
-                                                            _vm.empresa,
-                                                            _vm.estado,
-                                                            _vm.fechaInicio,
-                                                            _vm.fechaFin
-                                                          )
-                                                        }
-                                                      }
-                                                    })
-                                                  ]
-                                                )
-                                              }),
-                                              _vm._v(" "),
-                                              _vm.pagination.current_page <
-                                              _vm.pagination.last_page
-                                                ? _c(
-                                                    "li",
-                                                    {
-                                                      staticClass: "page-item"
-                                                    },
-                                                    [
-                                                      _c(
-                                                        "a",
-                                                        {
-                                                          staticClass:
-                                                            "page-link",
-                                                          attrs: { href: "#" },
-                                                          on: {
-                                                            click: function(
-                                                              $event
-                                                            ) {
-                                                              $event.preventDefault()
-                                                              _vm.cambiarPagina(
-                                                                Number(
-                                                                  _vm.pagination
-                                                                    .current_page
-                                                                ) + 1,
-                                                                _vm.identrendor,
-                                                                _vm.idZona,
-                                                                _vm.empresa,
-                                                                _vm.estado,
-                                                                _vm.fechaInicio,
-                                                                _vm.fechaFin
-                                                              )
-                                                            }
-                                                          }
-                                                        },
-                                                        [_vm._v("Sig")]
-                                                      )
-                                                    ]
-                                                  )
-                                                : _vm._e()
-                                            ],
-                                            2
-                                          )
-                                        ])
-                                      ]
-                                    )
-                                  ])
-                                ])
-                              ]
-                            : _vm._e(),
-                          _vm._v(" "),
-                          _vm.listado == 2
-                            ? [
-                                _c("div", { staticClass: "row" }, [
-                                  _c("div", { staticClass: "col-md-12" }, [
-                                    _c(
-                                      "div",
-                                      {
-                                        staticClass: "btn-group",
-                                        staticStyle: { float: "right" }
-                                      },
-                                      [
-                                        _c(
-                                          "button",
-                                          {
-                                            staticClass: "btn btn-danger",
-                                            attrs: { type: "button" },
-                                            on: {
-                                              click: function($event) {
-                                                return _vm.volver()
-                                              }
-                                            }
-                                          },
-                                          [
-                                            _c("i", {
-                                              staticClass: "fa fa-arrow-left"
-                                            }),
-                                            _vm._v(
-                                              " Volver a la lista\n                                                        "
-                                            )
-                                          ]
-                                        ),
-                                        _vm._v(" "),
-                                        _c(
-                                          "button",
-                                          {
-                                            staticClass: "btn btn-add",
-                                            attrs: { type: "button" },
-                                            on: {
-                                              click: function($event) {
-                                                return _vm.guardar()
-                                              }
-                                            }
-                                          },
-                                          [
-                                            _c("i", {
-                                              staticClass: "fa fa-save"
-                                            }),
-                                            _vm._v(
-                                              " Guardar actividad\n                                                        "
-                                            )
-                                          ]
-                                        )
-                                      ]
-                                    )
-                                  ])
-                                ]),
-                                _vm._v(" "),
-                                _c("div", { staticClass: "row" }, [
-                                  _c("div", { staticClass: "col-md-12" }, [
-                                    _c(
-                                      "div",
-                                      {
-                                        staticClass: "form-horizontal",
-                                        staticStyle: { "margin-top": "15px" }
-                                      },
-                                      [
-                                        _c(
-                                          "div",
-                                          { staticClass: "form-group" },
-                                          [
-                                            _c(
-                                              "div",
-                                              { class: _vm.errorInputActivity },
-                                              [
-                                                _c(
-                                                  "label",
-                                                  {
-                                                    staticClass:
-                                                      "col-md-1 control-label"
-                                                  },
-                                                  [_vm._v("Código")]
-                                                ),
-                                                _vm._v(" "),
-                                                _c(
-                                                  "div",
-                                                  { staticClass: "col-md-11" },
-                                                  [
-                                                    _c("input", {
-                                                      directives: [
-                                                        {
-                                                          name: "model",
-                                                          rawName: "v-model",
-                                                          value: _vm.code,
-                                                          expression: "code"
-                                                        }
-                                                      ],
-                                                      staticClass:
-                                                        "form-control",
-                                                      staticStyle: {
-                                                        "border-radius": "3px"
-                                                      },
-                                                      attrs: { rows: "1" },
-                                                      domProps: {
-                                                        value: _vm.code
-                                                      },
-                                                      on: {
-                                                        keyup: function(
-                                                          $event
-                                                        ) {
-                                                          return _vm.validarData()
-                                                        },
-                                                        input: function(
-                                                          $event
-                                                        ) {
-                                                          if (
-                                                            $event.target
-                                                              .composing
-                                                          ) {
-                                                            return
-                                                          }
-                                                          _vm.code =
-                                                            $event.target.value
-                                                        }
-                                                      }
-                                                    }),
-                                                    _vm._v(" "),
-                                                    _c(
-                                                      "em",
-                                                      {
-                                                        staticClass:
-                                                          "has-error text-danger",
-                                                        staticStyle: {
-                                                          display: "inline"
-                                                        },
-                                                        attrs: {
-                                                          for: "form:code"
-                                                        }
-                                                      },
-                                                      [
-                                                        _vm._v(
-                                                          _vm._s(
-                                                            _vm.errors.code
-                                                          )
-                                                        )
-                                                      ]
-                                                    )
-                                                  ]
-                                                )
-                                              ]
-                                            )
-                                          ]
-                                        ),
-                                        _vm._v(" "),
-                                        _c(
-                                          "div",
-                                          { staticClass: "form-group" },
-                                          [
-                                            _c(
-                                              "div",
-                                              {
-                                                class: _vm.errorInputActivity1
-                                              },
-                                              [
-                                                _c(
-                                                  "label",
-                                                  {
-                                                    staticClass:
-                                                      "col-md-1 control-label"
-                                                  },
-                                                  [_vm._v("NOMBRE")]
-                                                ),
-                                                _vm._v(" "),
-                                                _c(
-                                                  "div",
-                                                  { staticClass: "col-md-11" },
-                                                  [
-                                                    _c("input", {
-                                                      directives: [
-                                                        {
-                                                          name: "model",
-                                                          rawName: "v-model",
-                                                          value: _vm.name,
-                                                          expression: "name"
-                                                        }
-                                                      ],
-                                                      staticClass:
-                                                        "form-control",
-                                                      staticStyle: {
-                                                        "border-radius": "3px"
-                                                      },
-                                                      attrs: { rows: "1" },
-                                                      domProps: {
-                                                        value: _vm.name
-                                                      },
-                                                      on: {
-                                                        keyup: function(
-                                                          $event
-                                                        ) {
-                                                          return _vm.validarData()
-                                                        },
-                                                        input: function(
-                                                          $event
-                                                        ) {
-                                                          if (
-                                                            $event.target
-                                                              .composing
-                                                          ) {
-                                                            return
-                                                          }
-                                                          _vm.name =
-                                                            $event.target.value
-                                                        }
-                                                      }
-                                                    }),
-                                                    _vm._v(" "),
-                                                    _c(
-                                                      "em",
-                                                      {
-                                                        staticClass:
-                                                          "has-error text-danger",
-                                                        staticStyle: {
-                                                          display: "inline"
-                                                        },
-                                                        attrs: {
-                                                          for: "form:code"
-                                                        }
-                                                      },
-                                                      [
-                                                        _vm._v(
-                                                          _vm._s(
-                                                            _vm.errors.name
-                                                          )
-                                                        )
-                                                      ]
-                                                    )
-                                                  ]
-                                                )
-                                              ]
-                                            )
-                                          ]
-                                        )
-                                      ]
-                                    )
-                                  ])
-                                ])
-                              ]
-                            : _vm._e()
-                        ],
-                        2
-                      )
-                    ]
-                  )
-=======
   return _vm._m(0)
 }
 var staticRenderFns = [
@@ -1817,7 +918,6 @@ var staticRenderFns = [
                       ]
                     )
                   ])
->>>>>>> 45fac07ff921f0e244292ee89b85f543933a11a8
                 ])
               ])
             ])
@@ -1825,108 +925,6 @@ var staticRenderFns = [
         ])
       ])
     ])
-  ])
-}
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "box-header with-border" }, [
-      _c("section", { staticClass: "content-header" }, [
-        _c("h3", { staticClass: "box-title" }, [
-          _c("strong", [_vm._v(" \n                UNIDAD POI")])
-        ]),
-        _vm._v(" "),
-        _c("ol", { staticClass: "breadcrumb" }, [
-          _c("li", [
-            _c("a", { attrs: { href: "#" } }, [
-              _c("i", { staticClass: "fa fa-shopping-cart" }),
-              _vm._v("Acceso a Mercados")
-            ])
-          ]),
-          _vm._v(" "),
-          _c("li", [_c("a", { attrs: { href: "#" } }, [_vm._v("PBG")])]),
-          _vm._v(" "),
-          _c("li", [_c("a", { attrs: { href: "#" } }, [_vm._v("Emergente")])]),
-          _vm._v(" "),
-          _c("li", { staticClass: "active" }, [_vm._v("Estado de Plan")])
-        ])
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "box-tools pull-right" })
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-xs-12 col-sm-4 col-md-4 col-lg-8" }, [
-      _c(
-        "div",
-        {
-          staticClass: "input-group input-group-sm",
-          staticStyle: { "margin-bottom": "15px" }
-        },
-        [
-          _c("input", {
-            staticClass: "form-control",
-            attrs: {
-              type: "text",
-              placeholder: "Buscar por código o nombre..."
-            }
-          }),
-          _vm._v(" "),
-          _c("span", { staticClass: "input-group-btn" }, [
-            _c(
-              "button",
-              {
-                staticClass: "btn btn-mostrar btn-flat",
-                attrs: { type: "submit" }
-              },
-              [_c("i", { staticClass: "fa fa-search" }), _vm._v(" Buscar")]
-            )
-          ])
-        ]
-      )
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "thead",
-      { staticStyle: { background: "#90a4ae", color: "#fff" } },
-      [
-        _c("tr"),
-        _c("tr", [
-          _c("th", { staticStyle: { "vertical-align": "middle" } }, [
-            _vm._v("#")
-          ]),
-          _vm._v(" "),
-          _c("th", { staticStyle: { "vertical-align": "middle" } }, [
-            _vm._v("CODIGO")
-          ]),
-          _vm._v(" "),
-          _c("th", { staticStyle: { "vertical-align": "middle" } }, [
-            _vm._v("NOMBRE")
-          ]),
-          _vm._v(" "),
-          _c(
-            "th",
-            {
-              staticStyle: {
-                "text-align": "center",
-                "vertical-align": "middle"
-              },
-              attrs: { colspan: "2" }
-            },
-            [_vm._v("ACCIONES")]
-          )
-        ])
-      ]
-    )
   }
 ]
 render._withStripped = true
@@ -1934,43 +932,25 @@ module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-<<<<<<< HEAD
-    require("vue-hot-reload-api")      .rerender("data-v-a0be3278", module.exports)
-=======
     require("vue-hot-reload-api")      .rerender("data-v-69db425e", module.exports)
->>>>>>> 45fac07ff921f0e244292ee89b85f543933a11a8
   }
 }
 
 /***/ }),
 
-<<<<<<< HEAD
-/***/ 59:
-=======
-/***/ 62:
->>>>>>> 45fac07ff921f0e244292ee89b85f543933a11a8
+/***/ 64:
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-<<<<<<< HEAD
-  __webpack_require__(283)
+  __webpack_require__(315)
 }
-var normalizeComponent = __webpack_require__(194)
+var normalizeComponent = __webpack_require__(195)
 /* script */
-var __vue_script__ = __webpack_require__(285)
+var __vue_script__ = __webpack_require__(317)
 /* template */
-var __vue_template__ = __webpack_require__(286)
-=======
-  __webpack_require__(305)
-}
-var normalizeComponent = __webpack_require__(193)
-/* script */
-var __vue_script__ = __webpack_require__(307)
-/* template */
-var __vue_template__ = __webpack_require__(308)
->>>>>>> 45fac07ff921f0e244292ee89b85f543933a11a8
+var __vue_template__ = __webpack_require__(318)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -1987,11 +967,7 @@ var Component = normalizeComponent(
   __vue_scopeId__,
   __vue_module_identifier__
 )
-<<<<<<< HEAD
-Component.options.__file = "resources/assets/js/components/planoperativo/unidadpoi/UnidadPoiVista.vue"
-=======
 Component.options.__file = "resources/assets/js/components/security/Profile.vue"
->>>>>>> 45fac07ff921f0e244292ee89b85f543933a11a8
 
 /* hot reload */
 if (false) {(function () {
@@ -2000,15 +976,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-<<<<<<< HEAD
-    hotAPI.createRecord("data-v-a0be3278", Component.options)
-  } else {
-    hotAPI.reload("data-v-a0be3278", Component.options)
-=======
     hotAPI.createRecord("data-v-69db425e", Component.options)
   } else {
     hotAPI.reload("data-v-69db425e", Component.options)
->>>>>>> 45fac07ff921f0e244292ee89b85f543933a11a8
   }
   module.hot.dispose(function (data) {
     disposed = true
@@ -2020,11 +990,7 @@ module.exports = Component.exports
 
 /***/ }),
 
-<<<<<<< HEAD
-/***/ 66:
-=======
-/***/ 65:
->>>>>>> 45fac07ff921f0e244292ee89b85f543933a11a8
+/***/ 67:
 /***/ (function(module, exports) {
 
 /*

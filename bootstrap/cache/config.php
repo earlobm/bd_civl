@@ -212,7 +212,7 @@
       'sqlite' => 
       array (
         'driver' => 'sqlite',
-        'database' => 'tumi',
+        'database' => 'bd_credit',
         'prefix' => '',
       ),
       'mysql' => 
@@ -220,7 +220,7 @@
         'driver' => 'mysql',
         'host' => '107.180.57.58',
         'port' => '3306',
-        'database' => 'tumi',
+        'database' => 'bd_credit',
         'username' => 'tumi',
         'password' => 'tumi123',
         'unix_socket' => '',
@@ -235,7 +235,7 @@
         'driver' => 'pgsql',
         'host' => '107.180.57.58',
         'port' => '3306',
-        'database' => 'tumi',
+        'database' => 'bd_credit',
         'username' => 'tumi',
         'password' => 'tumi123',
         'charset' => 'utf8',
@@ -248,7 +248,7 @@
         'driver' => 'sqlsrv',
         'host' => '107.180.57.58',
         'port' => '3306',
-        'database' => 'tumi',
+        'database' => 'bd_credit',
         'username' => 'tumi',
         'password' => 'tumi123',
         'charset' => 'utf8',

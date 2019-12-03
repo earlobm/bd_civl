@@ -24,58 +24,53 @@
                 <span>OPERACIONES</span>
                 <i class="fa fa-angle-left pull-right"></i>
               </a>
-              <ul class="treeview-menu"> 
+              <ul class="treeview-menu">                 
+                <li class="treeview">
+                  <a href="#"><i class="fa fa-users" style="color: #FFA100"></i>Clientes
+                      <i class="fa fa-angle-left pull-right"></i>
+                  </a>
+                  <ul class="treeview-menu">
+                    <li  @click="menu=13"  class="menux" class="treeview">
+                      <a href="#" ><i class="fa fa-plus "></i>Añadir Cliente</a>
+                    </li>
+                    
+                    <li  @click="menu=26"  class="menux" class="treeview">
+                      <a href="#" ><i class="fa fa-list"></i>Listar Clientes</a>
+                    </li>                 
+                  </ul>
+                </li>
+
                 <li @click="menu=13"  class="menux" class="treeview">
-                  <a href="#"><i class="fa fa-users" style="color: #FF5100"></i>Clientes
+                  <a href="#"><i class="fa fa-users" style="color: #FF5100"></i>Historial
                       <!-- <i class="fa fa-angle-left pull-right"></i> -->
                   </a>
                 </li> 
-              </ul>
-            </li>
-            <li class="treeview">
-              <a href="#">
-                <i class="fa fa-shield" style="color: #FFB400 !important;"></i>
-                <span>MANTENIMIENTO</span>
-                <i class="fa fa-angle-left pull-right"></i>
-              </a>               
-              <ul class="treeview-menu">                        
-                <li @click="menu=23"  class="menux" class="treeview">
-                  <a href="#"><i class="fa fa-users" style="color: #00AE01 !important;"></i>Tipo de Negocio
+
+                <li @click="menu=100"  class="menux" class="treeview">
+                  <a href="#"><i class="fa fa-users" style="color: #FF5100"></i>Cobranza de prestamos
                       <!-- <i class="fa fa-angle-left pull-right"></i> -->
                   </a>
-                </li>
-                                     
-                <li @click="menu=24"  class="menux" class="treeview">
-                  <a href="#"><i class="fa fa-sitemap" style="color: #00A5C8 !important;"></i>Tipo de Documento
-                      <!-- <i class="fa fa-angle-left pull-right"></i> -->
-                  </a>
-                </li>
+                </li> 
+
                 <li @click="menu=22"  class="menux" class="treeview">
-                  <a href="#"><i class="fa fa-tags" style="color: #FF5100"></i>Monto del dia 
+                  <a href="#"><i class="fa fa-tags" style="color: #FF5100"></i>Monto por promotor 
                       <!-- <i class="fa fa-angle-left pull-right"></i> -->
                   </a>
                 </li>
+
+                <li @click="menu=22"  class="menux" class="treeview">
+                  <a href="#"><i class="fa fa-tags" style="color: #FF5100"></i>Balance diario
+                      <!-- <i class="fa fa-angle-left pull-right"></i> -->
+                  </a>
+                </li>
+
+
                 <li @click="menu=25"  class="menux" class="treeview">
                   <a href="#"><i class="fa fa-sitemap" style="color: #00A5C8 !important;"></i>Resumen del Dia
                       <!-- <i class="fa fa-angle-left pull-right"></i> -->
                   </a>
                 </li>
-              </ul>        
-            </li>     
-            <li class="header">SISTEMA DE EMPEÑOS<div></div></li>           
-            <li class="treeview">
-              <a href="#">
-                <i class="fa fa-cogs" style="color: #00A3FF !important;"></i>
-                <span>OPERACIONES</span>
-                <i class="fa fa-angle-left pull-right"></i>
-              </a>
-              <ul class="treeview-menu"> 
-                <li @click="menu=1"  class="menux" class="treeview">
-                  <a href="#"><i class="fa fa-users" style="color: #FF5100"></i>Clientes
-                      <!-- <i class="fa fa-angle-left pull-right"></i> -->
-                  </a>
-                </li> 
-                               
+
                 <li class="treeview">
                   <a href="#"><i class="fa fa-calculator" style="color: #FFA100"></i>Caja
                       <i class="fa fa-angle-left pull-right"></i>
@@ -93,24 +88,51 @@
                     </li>                    
                   </ul>
                 </li>
-                               
-                <li @click="menu=11"  class="menux" class="treeview">
-                  <a href="#"><i class="fa fa-archive" style="color: #FF5100"></i>Empeñados
+
+              </ul>
+            </li>
+            <li class="treeview">
+              <a href="#">
+                <i class="fa fa-shield" style="color: #FFB400 !important;"></i>
+                <span>MANTENIMIENTO</span>
+                <i class="fa fa-angle-left pull-right"></i>
+              </a>               
+              <ul class="treeview-menu"> 
+                <li @click="menu=15"  class="menux" class="treeview">
+                  <a href="#"><i class="fa fa-building" style="color: #00AE01 !important;"></i>Sucursal
                       <!-- <i class="fa fa-angle-left pull-right"></i> -->
                   </a>
                 </li>
-                <li @click="menu=20"  class="menux" class="treeview">
-                  <a href="#"><i class="fa fa-diamond" style="color: #A72G60"></i>Prendas
+
+                <li @click="menu=19"  class="menux" class="treeview">
+                  <a href="#"><i class="fa fa-home" style="color: #00AE01 !important;"></i>Mercado
                       <!-- <i class="fa fa-angle-left pull-right"></i> -->
                   </a>
                 </li>
-                <li @click="menu=20"  class="menux" class="treeview">
-                  <a href="#"><i class="fa fa-history" style="color: #A72G60"></i>Historial
+              
+                <li @click="menu=23"  class="menux" class="treeview">
+                  <a href="#"><i class="fa fa-users" style="color: #00AE01 !important;"></i>Tipo de Negocio
                       <!-- <i class="fa fa-angle-left pull-right"></i> -->
                   </a>
                 </li>
+                                     
+                <li @click="menu=24"  class="menux" class="treeview">
+                  <a href="#"><i class="fa fa-sitemap" style="color: #00A5C8 !important;"></i>Tipo de Documento
+                      <!-- <i class="fa fa-angle-left pull-right"></i> -->
+                  </a>
+                </li>
+
+                <li @click="menu=2"  class="menux" class="treeview">
+                  <a href="#"><i class="fa fa-black-tie" style="color: #FF5100"></i>Promotores
+                      <!-- <i class="fa fa-angle-left pull-right"></i> -->
+                  </a>
+                </li> 
+
+                
               </ul>        
-            </li>  
+            </li>     
+            <li class="header">SIG<div></div></li>           
+          
 
             <li class="treeview">
               <a href="#">
@@ -133,52 +155,6 @@
               </ul>        
             </li>  
                
-                  
-            <li class="treeview">
-              <a href="#">
-                <i class="fa fa-edit" style="color: #D80000 !important;"></i>
-                <span>MANTENIMIENTO</span>
-                <i class="fa fa-angle-left pull-right"></i>
-              </a>               
-              <ul class="treeview-menu">    
-                <li class="treeview">
-                  <a href="#"><i class="fa fa-sitemap" style="color: #FFA100"></i>Sucursal
-                      <i class="fa fa-angle-left pull-right"></i>
-                  </a>
-                  <ul class="treeview-menu">
-                    <li  @click="menu=15"  class="menux" class="treeview">
-                      <a href="#" ><i class="fa fa-building"></i>Gestión de Sucursales</a>
-                    </li>
-                    
-                    <li  @click="menu=19"  class="menux" class="treeview">
-                      <a href="#" ><i class="fa fa-home"></i>Gestión de Mercados</a>
-                    </li>                  
-                  </ul>
-                </li>
-                <li @click="menu=2"  class="menux" class="treeview">
-                  <a href="#"><i class="fa fa-black-tie" style="color: #FF5100"></i>Promotores
-                      <!-- <i class="fa fa-angle-left pull-right"></i> -->
-                  </a>
-                </li>                     
-                <li @click="menu=14" class="menux" class="treeview">
-                  <a href="#"><i class="fa fa-file-text" style="color: #3300AF !important;"></i>Referencias
-                      <!-- <i class="fa fa-angle-left pull-right"></i> -->
-                  </a>
-                </li>                            
-                <li @click="menu=12"  class="menux" class="treeview">
-                  <a href="#"><i class="fa fa-diamond" style="color: #FFB400 !important;"></i>Tipo de Prenda
-                      <!-- <i class="fa fa-angle-left pull-right"></i> -->
-                  </a>
-                </li>
-                <li @click="menu=21"  class="menux" class="treeview">
-                  <a href="#"><i class="fa fa-chain" style="color: #E10068 !important;"></i>Numero de Contrato
-                      <!-- <i class="fa fa-angle-left pull-right"></i> -->
-                  </a>
-                </li>
-                
-                
-              </ul>        
-            </li>  
             
             <li class="header">ADMINISTRACIÓN<div></div></li>    
             <li class="treeview">
