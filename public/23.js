@@ -1,10 +1,6 @@
 webpackJsonp([23],{
 
-<<<<<<< HEAD
 /***/ 195:
-=======
-/***/ 196:
->>>>>>> 8b3c1b48dd55b89d8cf922bba8be2d12b51e0ba8
 /***/ (function(module, exports) {
 
 /* globals __VUE_SSR_CONTEXT__ */
@@ -114,11 +110,7 @@ module.exports = function normalizeComponent (
 
 /***/ }),
 
-<<<<<<< HEAD
 /***/ 196:
-=======
-/***/ 197:
->>>>>>> 8b3c1b48dd55b89d8cf922bba8be2d12b51e0ba8
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -137,11 +129,7 @@ if (typeof DEBUG !== 'undefined' && DEBUG) {
   ) }
 }
 
-<<<<<<< HEAD
 var listToStyles = __webpack_require__(197)
-=======
-var listToStyles = __webpack_require__(198)
->>>>>>> 8b3c1b48dd55b89d8cf922bba8be2d12b51e0ba8
 
 /*
 type StyleObject = {
@@ -351,11 +339,7 @@ function applyToTag (styleElement, obj) {
 
 /***/ }),
 
-<<<<<<< HEAD
 /***/ 197:
-=======
-/***/ 198:
->>>>>>> 8b3c1b48dd55b89d8cf922bba8be2d12b51e0ba8
 /***/ (function(module, exports) {
 
 /**
@@ -389,29 +373,17 @@ module.exports = function listToStyles (parentId, list) {
 
 /***/ }),
 
-<<<<<<< HEAD
 /***/ 315:
-=======
-/***/ 316:
->>>>>>> 8b3c1b48dd55b89d8cf922bba8be2d12b51e0ba8
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-<<<<<<< HEAD
 var content = __webpack_require__(316);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
 var update = __webpack_require__(196)("1f2b3065", content, false, {});
-=======
-var content = __webpack_require__(317);
-if(typeof content === 'string') content = [[module.i, content, '']];
-if(content.locals) module.exports = content.locals;
-// add the styles to the DOM
-var update = __webpack_require__(197)("1f2b3065", content, false, {});
->>>>>>> 8b3c1b48dd55b89d8cf922bba8be2d12b51e0ba8
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
@@ -428,17 +400,10 @@ if(false) {
 
 /***/ }),
 
-<<<<<<< HEAD
 /***/ 316:
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(67)(false);
-=======
-/***/ 317:
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(68)(false);
->>>>>>> 8b3c1b48dd55b89d8cf922bba8be2d12b51e0ba8
 // imports
 
 
@@ -450,11 +415,7 @@ exports.push([module.i, "\n.table-bordered th,\r\n.table-bordered td {\r\n  bord
 
 /***/ }),
 
-<<<<<<< HEAD
 /***/ 317:
-=======
-/***/ 318:
->>>>>>> 8b3c1b48dd55b89d8cf922bba8be2d12b51e0ba8
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -742,7 +703,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
             var me = this;
             me.limpiarlista();
             var url = 'get_programx';
-<<<<<<< HEAD
             axios.get(url).then(function (response) {
                 var respuesta = response.data;
                 me.listProgram = respuesta.datax;
@@ -793,58 +753,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
             var url = 'get_program';
             axios.get(url).then(function (response) {
                 var respuesta = response.data;
-=======
-            axios.get(url).then(function (response) {
-                var respuesta = response.data;
-                me.listProgram = respuesta.datax;
-                me.listado = 2;
-            }).catch(function (error) {
-                console.log(error);
-            });
-        },
-        eliminar: function eliminar(id) {
-            var _this2 = this;
-
-            swal({
-                title: '¿Esta seguro de eliminar este asistente?',
-                type: 'warning',
-                showCancelButton: true,
-                confirmButtonColor: '#3085d6',
-                cancelButtonColor: '#d33',
-                confirmButtonText: 'Aceptar!',
-                cancelButtonText: 'Cancelar',
-                confirmButtonClass: 'btn btn-success',
-                cancelButtonClass: 'btn btn-danger',
-                buttonsStyling: false,
-                reverseButtons: true
-            }).then(function (result) {
-                if (result.value) {
-
-                    var me = _this2;
-                    axios.post('delete_product', {
-                        'id_product': id
-
-                    }).then(function (response) {
-                        me.listado = 1;
-                        me.listar();
-                    }).catch(function (error) {
-                        console.log(error);
-                    });
-                } else if (
-                // Read more about handling dismissals
-                result.dismiss === swal.DismissReason.cancel) {}
-            });
-        },
-
-
-        init: function init() {
-            //cargar actividades
-            var me = this;
-            me.listProgramx = [];
-            var url = 'get_program';
-            axios.get(url).then(function (response) {
-                var respuesta = response.data;
->>>>>>> 8b3c1b48dd55b89d8cf922bba8be2d12b51e0ba8
                 var lista = respuesta.datax;
                 for (var i = 0; i < lista.length; i++) {
                     me.listProgramx.push({ check: false, id_program: lista[i].id_program, id_product: '' });
@@ -862,11 +770,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 /***/ }),
 
-<<<<<<< HEAD
 /***/ 318:
-=======
-/***/ 319:
->>>>>>> 8b3c1b48dd55b89d8cf922bba8be2d12b51e0ba8
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -1034,17 +938,12 @@ if (false) {
 
 /***/ }),
 
-<<<<<<< HEAD
 /***/ 64:
-=======
-/***/ 65:
->>>>>>> 8b3c1b48dd55b89d8cf922bba8be2d12b51e0ba8
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-<<<<<<< HEAD
   __webpack_require__(315)
 }
 var normalizeComponent = __webpack_require__(195)
@@ -1052,15 +951,6 @@ var normalizeComponent = __webpack_require__(195)
 var __vue_script__ = __webpack_require__(317)
 /* template */
 var __vue_template__ = __webpack_require__(318)
-=======
-  __webpack_require__(316)
-}
-var normalizeComponent = __webpack_require__(196)
-/* script */
-var __vue_script__ = __webpack_require__(318)
-/* template */
-var __vue_template__ = __webpack_require__(319)
->>>>>>> 8b3c1b48dd55b89d8cf922bba8be2d12b51e0ba8
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -1100,11 +990,7 @@ module.exports = Component.exports
 
 /***/ }),
 
-<<<<<<< HEAD
 /***/ 67:
-=======
-/***/ 68:
->>>>>>> 8b3c1b48dd55b89d8cf922bba8be2d12b51e0ba8
 /***/ (function(module, exports) {
 
 /*

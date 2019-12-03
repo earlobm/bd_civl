@@ -14313,67 +14313,51 @@ __webpack_provided_window_dot_Vue = __webpack_require__(3);
 
 // Registers
 Vue.component('customerpledge', function () {
-<<<<<<< HEAD
   return __webpack_require__.e/* import() */(15).then(__webpack_require__.bind(null, 39));
 });
 Vue.component('customercredit', function () {
   return __webpack_require__.e/* import() */(16).then(__webpack_require__.bind(null, 40));
-=======
-  return __webpack_require__.e/* import() */(15).then(__webpack_require__.bind(null, 40));
->>>>>>> 8b3c1b48dd55b89d8cf922bba8be2d12b51e0ba8
-});
-Vue.component('customercredit', function () {
-  return __webpack_require__.e/* import() */(16).then(__webpack_require__.bind(null, 41));
 });
 Vue.component('staff', function () {
-  return __webpack_require__.e/* import() */(11).then(__webpack_require__.bind(null, 42));
+  return __webpack_require__.e/* import() */(11).then(__webpack_require__.bind(null, 41));
 });
 Vue.component('payment', function () {
-  return __webpack_require__.e/* import() */(12).then(__webpack_require__.bind(null, 43));
+  return __webpack_require__.e/* import() */(12).then(__webpack_require__.bind(null, 42));
 });
 Vue.component('branchoffice', function () {
-<<<<<<< HEAD
   return __webpack_require__.e/* import() */(17).then(__webpack_require__.bind(null, 43));
-=======
-  return __webpack_require__.e/* import() */(17).then(__webpack_require__.bind(null, 44));
->>>>>>> 8b3c1b48dd55b89d8cf922bba8be2d12b51e0ba8
 });
 Vue.component('market', function () {
-  return __webpack_require__.e/* import() */(13).then(__webpack_require__.bind(null, 45));
+  return __webpack_require__.e/* import() */(13).then(__webpack_require__.bind(null, 44));
 });
 Vue.component('detailpledge', function () {
-  return __webpack_require__.e/* import() */(14).then(__webpack_require__.bind(null, 46));
+  return __webpack_require__.e/* import() */(14).then(__webpack_require__.bind(null, 45));
 });
 Vue.component('contrato', function () {
-  return __webpack_require__.e/* import() */(5).then(__webpack_require__.bind(null, 47));
+  return __webpack_require__.e/* import() */(5).then(__webpack_require__.bind(null, 46));
 });
 Vue.component('montodia', function () {
-<<<<<<< HEAD
   return __webpack_require__.e/* import() */(18).then(__webpack_require__.bind(null, 47));
-=======
-  return __webpack_require__.e/* import() */(18).then(__webpack_require__.bind(null, 48));
->>>>>>> 8b3c1b48dd55b89d8cf922bba8be2d12b51e0ba8
 });
 // RegistersCustomer
 Vue.component('document', function () {
-  return __webpack_require__.e/* import() */(10).then(__webpack_require__.bind(null, 49));
+  return __webpack_require__.e/* import() */(10).then(__webpack_require__.bind(null, 48));
 });
 Vue.component('negocio', function () {
-  return __webpack_require__.e/* import() */(9).then(__webpack_require__.bind(null, 50));
+  return __webpack_require__.e/* import() */(9).then(__webpack_require__.bind(null, 49));
 });
 // SummaryDay
 Vue.component('resumendia', function () {
-  return __webpack_require__.e/* import() */(2).then(__webpack_require__.bind(null, 51));
+  return __webpack_require__.e/* import() */(2).then(__webpack_require__.bind(null, 50));
 });
 
 Vue.component('reference', function () {
-  return __webpack_require__.e/* import() */(3).then(__webpack_require__.bind(null, 52));
+  return __webpack_require__.e/* import() */(3).then(__webpack_require__.bind(null, 51));
 });
 Vue.component('garmenttype', function () {
-  return __webpack_require__.e/* import() */(4).then(__webpack_require__.bind(null, 53));
+  return __webpack_require__.e/* import() */(4).then(__webpack_require__.bind(null, 52));
 });
 Vue.component('carhregister', function () {
-<<<<<<< HEAD
   return __webpack_require__.e/* import() */(22).then(__webpack_require__.bind(null, 53));
 });
 Vue.component('income', function () {
@@ -14381,53 +14365,31 @@ Vue.component('income', function () {
 });
 Vue.component('egress', function () {
   return __webpack_require__.e/* import() */(21).then(__webpack_require__.bind(null, 55));
-=======
-  return __webpack_require__.e/* import() */(22).then(__webpack_require__.bind(null, 54));
-});
-Vue.component('income', function () {
-  return __webpack_require__.e/* import() */(20).then(__webpack_require__.bind(null, 55));
-});
-Vue.component('egress', function () {
-  return __webpack_require__.e/* import() */(21).then(__webpack_require__.bind(null, 56));
->>>>>>> 8b3c1b48dd55b89d8cf922bba8be2d12b51e0ba8
 });
 
 //Vue.component('example-component', require('./components/ExampleComponent.vue'));
 Vue.component('dashboardmain', function () {
-<<<<<<< HEAD
   return __webpack_require__.e/* import() */(25).then(__webpack_require__.bind(null, 56));
-=======
-  return __webpack_require__.e/* import() */(25).then(__webpack_require__.bind(null, 57));
->>>>>>> 8b3c1b48dd55b89d8cf922bba8be2d12b51e0ba8
 });
 Vue.component('programa', function () {
-  return __webpack_require__.e/* import() */(8).then(__webpack_require__.bind(null, 58));
+  return __webpack_require__.e/* import() */(8).then(__webpack_require__.bind(null, 57));
 });
 Vue.component('planesestrategico', function () {
-  return __webpack_require__.e/* import() */(7).then(__webpack_require__.bind(null, 59));
+  return __webpack_require__.e/* import() */(7).then(__webpack_require__.bind(null, 58));
 });
 Vue.component('dependencias', function () {
-  return __webpack_require__.e/* import() */(1).then(__webpack_require__.bind(null, 60));
+  return __webpack_require__.e/* import() */(1).then(__webpack_require__.bind(null, 59));
 });
 Vue.component('unidadespoi', function () {
-<<<<<<< HEAD
   return __webpack_require__.e/* import() */(24).then(__webpack_require__.bind(null, 60));
 });
 //plan operativo 
 Vue.component('comboanio', function () {
   return __webpack_require__.e/* import() */(26).then(__webpack_require__.bind(null, 61));
-=======
-  return __webpack_require__.e/* import() */(24).then(__webpack_require__.bind(null, 61));
-});
-//plan operativo 
-Vue.component('comboanio', function () {
-  return __webpack_require__.e/* import() */(26).then(__webpack_require__.bind(null, 62));
->>>>>>> 8b3c1b48dd55b89d8cf922bba8be2d12b51e0ba8
 });
 
 //Security 11
 Vue.component('role', function () {
-<<<<<<< HEAD
   return __webpack_require__.e/* import() */(6).then(__webpack_require__.bind(null, 62));
 });
 Vue.component('user', function () {
@@ -14439,19 +14401,6 @@ Vue.component('profile', function () {
 //para creditos
 Vue.component('dailycollection', function () {
   return __webpack_require__.e/* import() */(19).then(__webpack_require__.bind(null, 65));
-=======
-  return __webpack_require__.e/* import() */(6).then(__webpack_require__.bind(null, 63));
-});
-Vue.component('user', function () {
-  return __webpack_require__.e/* import() */(0).then(__webpack_require__.bind(null, 64));
-});
-Vue.component('profile', function () {
-  return __webpack_require__.e/* import() */(23).then(__webpack_require__.bind(null, 65));
-});
-//para creditos
-Vue.component('dailycollection', function () {
-  return __webpack_require__.e/* import() */(19).then(__webpack_require__.bind(null, 66));
->>>>>>> 8b3c1b48dd55b89d8cf922bba8be2d12b51e0ba8
 });
 
 var app = new Vue({

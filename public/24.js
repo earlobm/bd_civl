@@ -1,10 +1,6 @@
 webpackJsonp([24],{
 
-<<<<<<< HEAD
 /***/ 195:
-=======
-/***/ 196:
->>>>>>> 8b3c1b48dd55b89d8cf922bba8be2d12b51e0ba8
 /***/ (function(module, exports) {
 
 /* globals __VUE_SSR_CONTEXT__ */
@@ -114,11 +110,7 @@ module.exports = function normalizeComponent (
 
 /***/ }),
 
-<<<<<<< HEAD
 /***/ 196:
-=======
-/***/ 197:
->>>>>>> 8b3c1b48dd55b89d8cf922bba8be2d12b51e0ba8
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -137,11 +129,7 @@ if (typeof DEBUG !== 'undefined' && DEBUG) {
   ) }
 }
 
-<<<<<<< HEAD
 var listToStyles = __webpack_require__(197)
-=======
-var listToStyles = __webpack_require__(198)
->>>>>>> 8b3c1b48dd55b89d8cf922bba8be2d12b51e0ba8
 
 /*
 type StyleObject = {
@@ -351,11 +339,7 @@ function applyToTag (styleElement, obj) {
 
 /***/ }),
 
-<<<<<<< HEAD
 /***/ 197:
-=======
-/***/ 198:
->>>>>>> 8b3c1b48dd55b89d8cf922bba8be2d12b51e0ba8
 /***/ (function(module, exports) {
 
 /**
@@ -389,29 +373,17 @@ module.exports = function listToStyles (parentId, list) {
 
 /***/ }),
 
-<<<<<<< HEAD
 /***/ 292:
-=======
-/***/ 293:
->>>>>>> 8b3c1b48dd55b89d8cf922bba8be2d12b51e0ba8
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-<<<<<<< HEAD
 var content = __webpack_require__(293);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
 var update = __webpack_require__(196)("6a496680", content, false, {});
-=======
-var content = __webpack_require__(294);
-if(typeof content === 'string') content = [[module.i, content, '']];
-if(content.locals) module.exports = content.locals;
-// add the styles to the DOM
-var update = __webpack_require__(197)("6a496680", content, false, {});
->>>>>>> 8b3c1b48dd55b89d8cf922bba8be2d12b51e0ba8
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
@@ -428,17 +400,10 @@ if(false) {
 
 /***/ }),
 
-<<<<<<< HEAD
 /***/ 293:
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(67)(false);
-=======
-/***/ 294:
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(68)(false);
->>>>>>> 8b3c1b48dd55b89d8cf922bba8be2d12b51e0ba8
 // imports
 
 
@@ -450,11 +415,7 @@ exports.push([module.i, "\n.table-bordered th,\r\n.table-bordered td {\r\n  bord
 
 /***/ }),
 
-<<<<<<< HEAD
 /***/ 294:
-=======
-/***/ 295:
->>>>>>> 8b3c1b48dd55b89d8cf922bba8be2d12b51e0ba8
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -801,11 +762,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 /***/ }),
 
-<<<<<<< HEAD
 /***/ 295:
-=======
-/***/ 296:
->>>>>>> 8b3c1b48dd55b89d8cf922bba8be2d12b51e0ba8
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -1559,17 +1516,12 @@ if (false) {
 
 /***/ }),
 
-<<<<<<< HEAD
 /***/ 60:
-=======
-/***/ 61:
->>>>>>> 8b3c1b48dd55b89d8cf922bba8be2d12b51e0ba8
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-<<<<<<< HEAD
   __webpack_require__(292)
 }
 var normalizeComponent = __webpack_require__(195)
@@ -1577,15 +1529,6 @@ var normalizeComponent = __webpack_require__(195)
 var __vue_script__ = __webpack_require__(294)
 /* template */
 var __vue_template__ = __webpack_require__(295)
-=======
-  __webpack_require__(293)
-}
-var normalizeComponent = __webpack_require__(196)
-/* script */
-var __vue_script__ = __webpack_require__(295)
-/* template */
-var __vue_template__ = __webpack_require__(296)
->>>>>>> 8b3c1b48dd55b89d8cf922bba8be2d12b51e0ba8
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -1625,11 +1568,7 @@ module.exports = Component.exports
 
 /***/ }),
 
-<<<<<<< HEAD
 /***/ 67:
-=======
-/***/ 68:
->>>>>>> 8b3c1b48dd55b89d8cf922bba8be2d12b51e0ba8
 /***/ (function(module, exports) {
 
 /*
