@@ -26705,6 +26705,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
 
 
 
@@ -26742,7 +26744,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
             'last_page': 0,
             'from': 0,
             'to': 0
-        }), _defineProperty(_ref, 'offset', 3), _defineProperty(_ref, 'datosmapa', ''), _defineProperty(_ref, 'markers', []), _defineProperty(_ref, 'modal', 0), _defineProperty(_ref, 'center', { lat: 45.508, lng: -73.587 }), _defineProperty(_ref, 'name_type_income', ''), _defineProperty(_ref, 'id', -1), _defineProperty(_ref, 'description', ''), _defineProperty(_ref, 'amount', ''), _defineProperty(_ref, 'TypeIncome', ''), _defineProperty(_ref, 'id_type_income', ''), _defineProperty(_ref, 'birthdate', ''), _defineProperty(_ref, 'errorClase', 0), _defineProperty(_ref, 'errors', {}), _defineProperty(_ref, 'listIncome', []), _defineProperty(_ref, 'array_income', []), _defineProperty(_ref, 'listTypeIncome', []), _defineProperty(_ref, 'errorInputname_type_income', 'form-group'), _defineProperty(_ref, 'errordescription', 'form-group'), _defineProperty(_ref, 'erroramount', 'form-group'), _defineProperty(_ref, 'buscar', ''), _ref;
+        }), _defineProperty(_ref, 'offset', 3), _defineProperty(_ref, 'datosmapa', ''), _defineProperty(_ref, 'markers', []), _defineProperty(_ref, 'modal', 0), _defineProperty(_ref, 'center', { lat: 45.508, lng: -73.587 }), _defineProperty(_ref, 'name_type_income', ''), _defineProperty(_ref, 'id', -1), _defineProperty(_ref, 'description', ''), _defineProperty(_ref, 'amount', ''), _defineProperty(_ref, 'TypeIncome', ''), _defineProperty(_ref, 'id_type_income', ''), _defineProperty(_ref, 'birthdate', ''), _defineProperty(_ref, 'names', ''), _defineProperty(_ref, 'id', -1), _defineProperty(_ref, 'code', ''), _defineProperty(_ref, 'category', 'INGRESO'), _defineProperty(_ref, 'errorClase', 0), _defineProperty(_ref, 'errors', {}), _defineProperty(_ref, 'listIncome', []), _defineProperty(_ref, 'array_income', []), _defineProperty(_ref, 'listTypeIncome', []), _defineProperty(_ref, 'errorInputname_type_income', 'form-group'), _defineProperty(_ref, 'errordescription', 'form-group'), _defineProperty(_ref, 'erroramount', 'form-group'), _defineProperty(_ref, 'buscar', ''), _ref;
     },
 
     components: {
@@ -26794,7 +26796,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         getComboIncome: function getComboIncome(page) {
             var me = this;
             //me.listado=0;             
-            var url = 'comboTypeIncome_list';
+            var url = 'comboTypeIncome_list?page=' + page;
             axios.get(url).then(function (response) {
                 var respuesta = response.data;
                 me.array_income = respuesta.datax;
@@ -26872,7 +26874,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
                 me.amount = respuesta.datax[0].amount;
                 me.id = respuesta.datax[0].id;
                 me.birthdate = __WEBPACK_IMPORTED_MODULE_1_moment_timezone___default()(respuesta.datax[0].date).toDate();
-                me.id_type_income = respuesta.datax[0].id_type_income;
+                me.id_type_income = respuesta.datax[0].account_book_id;
                 me.market = respuesta.datax[0].id_market;
             }).catch(function (error) {
                 console.log(error);
@@ -26882,9 +26884,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         guardarTypeIncome: function guardarTypeIncome() {
             var _this = this;
 
-            if (this.validarDataTypeIncome()) {
-                return;
-            }
             swal({
                 title: 'Esta seguro de guardar la informacion?',
                 type: 'warning',
@@ -26897,7 +26896,9 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
                 if (result.value) {
                     var me = _this;
                     axios.post('saveIncomeType', {
-                        'name': _this.name_type_income,
+                        'names': _this.names,
+                        'code': _this.code,
+                        'category': _this.category,
                         'id': _this.id
 
                     }).then(function (response) {
@@ -26937,7 +26938,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
                         'description': _this2.description,
                         'amount': _this2.amount,
                         'date': __WEBPACK_IMPORTED_MODULE_1_moment_timezone___default()(__WEBPACK_IMPORTED_MODULE_1_moment_timezone___default()(_this2.birthdate, 'DD/MM/YYYY')).format('YYYY-MM-DD'),
-                        'id_type_income': _this2.id_type_income,
+                        'account_book_id': _this2.id_type_income,
                         'id_market': _this2.market,
                         'id': _this2.id
 
@@ -27303,7 +27304,7 @@ var render = function() {
                                                       value: datax.id
                                                     }
                                                   },
-                                                  [_vm._v(_vm._s(datax.name))]
+                                                  [_vm._v(_vm._s(datax.names))]
                                                 )
                                               })
                                             ],
@@ -27636,7 +27637,7 @@ var render = function() {
                                   _c("td", {
                                     staticStyle: { "vertical-align": "middle" },
                                     domProps: {
-                                      textContent: _vm._s(midata.name)
+                                      textContent: _vm._s(midata.names)
                                     }
                                   }),
                                   _vm._v(" "),
@@ -27894,70 +27895,79 @@ var render = function() {
                     [
                       _c("div", { staticClass: "box-body" }, [
                         _c("div", { staticClass: "row" }, [
-                          _c("div", { staticClass: "col-md-12" }, [
-                            _c("div", { staticClass: "form-horizontal" }, [
-                              _c(
-                                "div",
-                                { class: _vm.errorInputname_type_income },
-                                [
-                                  _c(
-                                    "label",
-                                    { staticClass: "col-md-2 control-label" },
-                                    [_vm._v("Tipo:")]
-                                  ),
-                                  _vm._v(" "),
-                                  _c("div", { staticClass: "col-md-10" }, [
-                                    _c("div", { staticClass: "input-group" }, [
-                                      _vm._m(11),
-                                      _vm._v(" "),
-                                      _c("input", {
-                                        directives: [
-                                          {
-                                            name: "model",
-                                            rawName: "v-model",
-                                            value: _vm.name_type_income,
-                                            expression: "name_type_income"
-                                          }
-                                        ],
-                                        staticClass: "form-control",
-                                        staticStyle: {
-                                          "border-top-right-radius": "3px"
-                                        },
-                                        attrs: { type: "text" },
-                                        domProps: {
-                                          value: _vm.name_type_income
-                                        },
-                                        on: {
-                                          keyup: function($event) {
-                                            return _vm.validarDataTypeIncome()
-                                          },
-                                          input: function($event) {
-                                            if ($event.target.composing) {
-                                              return
-                                            }
-                                            _vm.name_type_income =
-                                              $event.target.value
-                                          }
-                                        }
-                                      }),
-                                      _vm._v(" "),
-                                      _c(
-                                        "em",
-                                        {
-                                          staticClass: "has-error text-danger",
-                                          staticStyle: { display: "inline" },
-                                          attrs: { for: "form:code" }
-                                        },
-                                        [
-                                          _vm._v(
-                                            _vm._s(_vm.errors.name_type_income)
-                                          )
-                                        ]
-                                      )
-                                    ])
-                                  ])
-                                ]
-                              )
+                          _c("div", { staticClass: "col-md-6" }, [
+                            _c("div", { class: _vm.errornames }, [
+                              _c("label", { attrs: { for: "nombres" } }, [
+                                _vm._v("Nombre:")
+                              ]),
+                              _vm._v(" "),
+                              _c("div", { staticClass: "input-group" }, [
+                                _vm._m(11),
+                                _vm._v(" "),
+                                _c("input", {
+                                  directives: [
+                                    {
+                                      name: "model",
+                                      rawName: "v-model",
+                                      value: _vm.names,
+                                      expression: "names"
+                                    }
+                                  ],
+                                  staticClass: "form-control",
+                                  staticStyle: {
+                                    "border-bottom-right-radius": "3px",
+                                    "border-top-right-radius": "3px"
+                                  },
+                                  attrs: { type: "text" },
+                                  domProps: { value: _vm.names },
+                                  on: {
+                                    input: function($event) {
+                                      if ($event.target.composing) {
+                                        return
+                                      }
+                                      _vm.names = $event.target.value
+                                    }
+                                  }
+                                })
+                              ])
+                            ])
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "col-md-6" }, [
+                            _c("div", { class: _vm.errorcode }, [
+                              _c("label", { attrs: { for: "nombres" } }, [
+                                _vm._v("Codigo:")
+                              ]),
+                              _vm._v(" "),
+                              _c("div", { staticClass: "input-group" }, [
+                                _vm._m(12),
+                                _vm._v(" "),
+                                _c("input", {
+                                  directives: [
+                                    {
+                                      name: "model",
+                                      rawName: "v-model",
+                                      value: _vm.code,
+                                      expression: "code"
+                                    }
+                                  ],
+                                  staticClass: "form-control",
+                                  staticStyle: {
+                                    "border-bottom-right-radius": "3px",
+                                    "border-top-right-radius": "3px"
+                                  },
+                                  attrs: { type: "text" },
+                                  domProps: { value: _vm.code },
+                                  on: {
+                                    input: function($event) {
+                                      if ($event.target.composing) {
+                                        return
+                                      }
+                                      _vm.code = $event.target.value
+                                    }
+                                  }
+                                })
+                              ])
                             ])
                           ])
                         ])
@@ -28221,11 +28231,26 @@ var staticRenderFns = [
         staticClass: "input-group-addon",
         staticStyle: {
           "border-bottom-left-radius": "3px",
-          "border-top-left-radius": "3px",
-          color: "#1e2172"
+          "border-top-left-radius": "3px"
         }
       },
-      [_c("i", { staticClass: "fa fa-indent" })]
+      [_c("i", { staticClass: "fa fa-user" })]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "span",
+      {
+        staticClass: "input-group-addon",
+        staticStyle: {
+          "border-bottom-left-radius": "3px",
+          "border-top-left-radius": "3px"
+        }
+      },
+      [_c("i", { staticClass: "fa fa-user" })]
     )
   }
 ]

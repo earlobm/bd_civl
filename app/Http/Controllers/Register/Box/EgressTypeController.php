@@ -5,7 +5,7 @@ use Illuminate\Http\Request;
 use poi\Http\Controllers\Controller;
 use poi\Http\Requests as BaseController;
 use Illuminate\Support\Facades\Redirect;
-use poi\EntityClass\EgressType;
+use poi\EntityClass\AcountBox;
 
 
 use Illuminate\Support\Facades\Auth;
@@ -42,9 +42,9 @@ class EgressTypeController extends Controller
         $queyEgressType="";
         if(isset($request->id)){
             $idx=$request->id;
-            $queyEgressType="select * from egress_type where id=$idx and state=1";
+            $queyEgressType="select * from account_book where category='EGRESO' and id=$idx and state=1";
         }else{
-            $queyEgressType="select * from egress_type where state=1"; 
+            $queyEgressType="select * from account_book where category='EGRESO' and  state=1"; 
         }
        
         $listEgressType = DB::select($queyEgressType);
@@ -109,13 +109,15 @@ class EgressTypeController extends Controller
     public function saveEgressType(Request $request){
         
         if($request->id==-1){
-            $clasex = new EgressType();
+            $clasex = new AcountBox();
         }else{
-            $clasex = EgressType::findOrFail($request->id);
+            $clasex = AcountBox::findOrFail($request->id);
             //DependencyActivity::where('id_dependency', $request->id)->delete();
             //DependencyActivity::where('id', $request->id)->update(['state' => false]);
         }
-        $clasex->name = $request->name;
+        $clasex->names = $request->names;
+        $clasex->code = $request->code;
+        $clasex->category = $request->category;
         $clasex->state = 1;
         //($request->idParent!=''?$clasex->id_parent=$request->idParent:'');
         $clasex->save(); 

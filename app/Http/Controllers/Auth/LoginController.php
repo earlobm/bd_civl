@@ -59,13 +59,8 @@ class LoginController extends Controller
             $user->ip_access =$request->ip();
             $user->save();
             
-<<<<<<< HEAD
             // DB::statement(" update pledge set state=2 where current_date()>date_end and state=1");
             // DB::statement("update detail_pledge set state=2 where current_date()>date_end and state=1");
-=======
-          //  DB::statement(" update pledge set state=2 where current_date()>date_end and state=1");
-          //  DB::statement("update detail_pledge set state=2 where current_date()>date_end and state=1");
->>>>>>> 65f3157da3b08fcec5dfcd47a4291bf259c569d6
 
             //guardando el historial
             // $clasex = new History();

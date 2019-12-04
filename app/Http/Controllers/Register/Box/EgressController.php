@@ -5,7 +5,7 @@ use Illuminate\Http\Request;
 use poi\Http\Controllers\Controller;
 use poi\Http\Requests as BaseController;
 use Illuminate\Support\Facades\Redirect;
-use poi\EntityClass\Egress;
+use poi\EntityClass\BookBox;
 
 
 use Illuminate\Support\Facades\Auth;
@@ -25,10 +25,10 @@ class EgressController extends Controller
   
     public function getListEgress(Request $request){
         $search=$request->buscar;
-        $queyEgress="SELECT er.id, tip.name,er.description,er.amount,er.date 
-        FROM egress_type tip inner join egress er on er.id_type_egress=tip.id 
-        WHERE er.state=1
-        AND concat(tip.name,' ', er.description,' ',er.amount) like '%$search%'";
+        $queyEgress="SELECT er.id, tip.names,er.description,er.amount,er.date 
+        FROM account_book tip inner join book_box er on er.account_book_id=tip.id 
+        WHERE tip.category='EGRESO' and  er.state=1
+        AND concat(tip.names,' ', er.description,' ',er.amount) like '%$search%'";
         $listEgress = DB::select($queyEgress);
           return [
               'datax'=>$listEgress,
@@ -85,7 +85,7 @@ class EgressController extends Controller
     }
 
     public function getEditEgress(Request $request){
-        $queyEgress="select * from egress where state =1 and id='$request->id' ";
+        $queyEgress="select * from book_box where state =1 and id='$request->id' ";
         $listEgress = DB::select($queyEgress);
         //obteniendo la actividad
           return [
@@ -94,7 +94,7 @@ class EgressController extends Controller
     }
 
     public function delete_Egress(Request $request){
-        $clasex = Egress::findOrFail($request->id);
+        $clasex = BookBox::findOrFail($request->id);
         $clasex->state =0;
         $clasex->save();
     }
@@ -104,27 +104,13 @@ class EgressController extends Controller
         $clasex->save();
     }
     
-    public function saveIncomeType(Request $request){
-        
-        if($request->id==-1){
-            $clasex = new IncomeType();
-        }else{
-            $clasex = IncomeType::findOrFail($request->id);
-            //DependencyActivity::where('id_dependency', $request->id)->delete();
-            //DependencyActivity::where('id', $request->id)->update(['state' => false]);
-        }
-        $clasex->name = $request->name;
-        $clasex->state = 1;
-        //($request->idParent!=''?$clasex->id_parent=$request->idParent:'');
-        $clasex->save(); 
-       
-    }
+    
     public function saveEgress(Request $request){
         
         if($request->id==-1){
-            $clasex = new Egress();
+            $clasex = new BookBox();
         }else{
-            $clasex = Egress::findOrFail($request->id);
+            $clasex = BookBox::findOrFail($request->id);
             //DependencyActivity::where('id_dependency', $request->id)->delete();
             //DependencyActivity::where('id', $request->id)->update(['state' => false]);
         }
@@ -132,7 +118,7 @@ class EgressController extends Controller
         $clasex->description = $request->description;
         $clasex->amount = $request->amount;
         $clasex->date =  $request->date;
-        $clasex->id_type_egress =  $request->id_type_egress;
+        $clasex->account_book_id =  $request->account_book_id;
         $clasex->state = 1;
         $clasex->id_market =  $request->id_market;
         //($request->idParent!=''?$clasex->id_parent=$request->idParent:'');

@@ -5,7 +5,7 @@ use Illuminate\Http\Request;
 use poi\Http\Controllers\Controller;
 use poi\Http\Requests as BaseController;
 use Illuminate\Support\Facades\Redirect;
-use poi\EntityClass\IncomeType;
+use poi\EntityClass\AcountBox;
 
 
 use Illuminate\Support\Facades\Auth;
@@ -43,9 +43,9 @@ class IncomeTypeController extends Controller
         $queyIncomeType="";
         if(isset($request->id)){
             $idx=$request->id;
-            $queyIncomeType="select * from income_type where id=$idx and state=1";
+            $queyIncomeType="select * from account_book where category='INGRESO' and id=$idx and state=1";
         }else{
-            $queyIncomeType="select * from income_type where  state=1"; 
+            $queyIncomeType="select * from account_book where category='INGRESO' and  state=1"; 
         }
        
         $listIncomeType = DB::select($queyIncomeType);
@@ -110,13 +110,15 @@ class IncomeTypeController extends Controller
     public function saveIncomeType(Request $request){
         
         if($request->id==-1){
-            $clasex = new IncomeType();
+            $clasex = new AcountBox();
         }else{
-            $clasex = IncomeType::findOrFail($request->id);
+            $clasex = AcountBox::findOrFail($request->id);
             //DependencyActivity::where('id_dependency', $request->id)->delete();
             //DependencyActivity::where('id', $request->id)->update(['state' => false]);
         }
-        $clasex->name = $request->name;
+        $clasex->names = $request->names;
+        $clasex->code = $request->code;
+        $clasex->category = $request->category;
         $clasex->state = 1;
         //($request->idParent!=''?$clasex->id_parent=$request->idParent:'');
         $clasex->save(); 

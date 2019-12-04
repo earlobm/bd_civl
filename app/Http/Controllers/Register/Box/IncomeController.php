@@ -5,7 +5,7 @@ use Illuminate\Http\Request;
 use poi\Http\Controllers\Controller;
 use poi\Http\Requests as BaseController;
 use Illuminate\Support\Facades\Redirect;
-use poi\EntityClass\Income;
+use poi\EntityClass\BookBox;
 
 
 use Illuminate\Support\Facades\Auth;
@@ -33,10 +33,10 @@ class IncomeController extends Controller
             $queyIncome="select * from income where state =1";
         }*/
         $search=$request->buscar;
-        $queyIncome="SELECT er.id, tip.name,er.description,er.amount, er.date
-        FROM income_type tip inner join income er on er.id_type_income=tip.id
-        WHERE er.state=1
-        AND concat(tip.name,' ', er.description,' ',er.amount) like '%$search%'";
+        $queyIncome="SELECT er.id, tip.names,er.description,er.amount, er.date
+        FROM account_book tip inner join book_box er on er.account_book_id=tip.id
+        WHERE tip.category='INGRESO' and er.state=1
+        AND concat(tip.names,' ', er.description,' ',er.amount) like '%$search%'";
         $listIncome = DB::select($queyIncome);
           return [
               'datax'=>$listIncome,
@@ -92,7 +92,7 @@ class IncomeController extends Controller
     }
 
     public function getEditIncome(Request $request){
-        $queyIncome="select * from income where state =1 and id='$request->id' ";
+        $queyIncome="select * from book_box where state =1 and id='$request->id' ";
         $listIncome = DB::select($queyIncome);
         //obteniendo la actividad
           return [
@@ -101,7 +101,7 @@ class IncomeController extends Controller
     }
 
     public function delete_Income(Request $request){
-        $clasex = Income::findOrFail($request->id);
+        $clasex = BookBox::findOrFail($request->id);
         $clasex->state =0;
         $clasex->save();
     }
@@ -111,27 +111,13 @@ class IncomeController extends Controller
         $clasex->save();
     }
     
-    public function saveIncomeType(Request $request){
-        
-        if($request->id==-1){
-            $clasex = new IncomeType();
-        }else{
-            $clasex = IncomeType::findOrFail($request->id);
-            //DependencyActivity::where('id_dependency', $request->id)->delete();
-            //DependencyActivity::where('id', $request->id)->update(['state' => false]);
-        }
-        $clasex->name = $request->name;
-        $clasex->state = 1;
-        //($request->idParent!=''?$clasex->id_parent=$request->idParent:'');
-        $clasex->save(); 
-       
-    }
+    
     public function saveIncome(Request $request){
         
         if($request->id==-1){
-            $clasex = new Income();
+            $clasex = new BookBox();
         }else{
-            $clasex = Income::findOrFail($request->id);
+            $clasex = BookBox::findOrFail($request->id);
             //DependencyActivity::where('id_dependency', $request->id)->delete();
             //DependencyActivity::where('id', $request->id)->update(['state' => false]);
         }
@@ -139,7 +125,7 @@ class IncomeController extends Controller
         $clasex->description = $request->description;
         $clasex->amount = $request->amount;
         $clasex->date =  $request->date;
-        $clasex->id_type_income =  $request->id_type_income;
+        $clasex->account_book_id =  $request->account_book_id;
         $clasex->id_market =  $request->id_market;
         $clasex->state = 1;
         //($request->idParent!=''?$clasex->id_parent=$request->idParent:'');

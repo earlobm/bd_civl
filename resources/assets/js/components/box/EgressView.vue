@@ -63,7 +63,7 @@
                                                                                 <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-magic"></i></span>
                                                                                 <select  @change="getComboEgress($event.target.value)" v-model="id_type_egress" class="form-control select2" style="border-top-right-radius:3px;border-bottom-right-radius:3px">
                                                                                     <option selected="selected" value="" >Seleccione</option>
-                                                                                    <option v-for="datax in array_egress" :key="datax.id" :value="datax.id">{{ datax.name }}</option>
+                                                                                    <option v-for="datax in array_egress" :key="datax.id" :value="datax.id">{{ datax.names }}</option>
                                                                                 </select>
                                                                                 <span class="input-group-btn">
                                                                                     <button data-toggle="tooltip" title="Agregar nuevo Tipo de Ingreso" type="submit" @click="add_type_egress()" class="btn btn-add btn-flat" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;"><i class="fa fa-plus"></i> AGREGAR</button>
@@ -153,7 +153,7 @@
                                     <tbody>
                                         <tr v-for="(midata,index) in listEgress" :key="index" >
                                             <td style="vertical-align: middle;" >{{(index+1)}}</td>
-                                            <td style="vertical-align: middle;" v-text="midata.name"></td>
+                                            <td style="vertical-align: middle;" v-text="midata.names"></td>
                                             <td style="vertical-align: middle;" v-text="midata.description"></td>
                                             <td style="vertical-align: middle;" v-text="midata.amount"></td>
                                             <td style="vertical-align: middle;" v-text="midata.date"></td>
@@ -202,26 +202,30 @@
                     <div class="modal-body">  
                         <div class="row">    
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"> 
-                                <div class="box-body">                                     
+                                <div class="box-body">                                    
                                     <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="form-horizontal">
-                                                <div v-bind:class="errorInputname_type_egress" >
-                                                    <label  class="col-md-2 control-label">Tipo:</label>
-                                                    <div class="col-md-10">
-                                                        <div class="input-group">
-                                                            <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;  color:#1e2172">
-                                                                <i class="fa fa-indent"></i>
-                                                            </span>
-                                                            <input v-model="name_type_egress" type="text" @keyup="validarDataTypeEgress()" class="form-control" style="border-bottom-right-radius:
-                                                             3px;border-top-right-radius: 3px;">
-                                                             <em for="form:code" class="has-error text-danger" style="display: inline;">{{errors.name_type_income}}</em>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                        
+                                
+                                    <div class="col-md-6">
+                                        <div v-bind:class="errornames">
+                                            <label for="nombres">Nombre:</label>
+                                            <div class="input-group">
+                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-user"></i></span>
+                                                <input  v-model="names" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">  
                                             </div>
                                         </div>
                                     </div>
+                                    <div class="col-md-6">
+                                        <div v-bind:class="errorcode">
+                                            <label for="nombres">Codigo:</label>
+                                            <div class="input-group">
+                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-user"></i></span>
+                                                <input  v-model="code" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">  
+                                            </div>
+                                        </div>
+                                    </div>
+                                    </div>
+                                   
                                     <!-- <div class="row">  
                                         <div class="col-md-12">
                                             <div class="box-body table-responsive no-padding">
@@ -272,7 +276,7 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-danger" @click="close_modal(1)"><i class="fa fa-times"></i> CERRAR</button>
-                        <button type="button" @click="guardarTypeEgress()" class="btn btn-save"><i class="fa fa-save"></i>&nbsp;GUARDAR TIPO DE INGRESO</button>                        
+                        <button type="button" @click="guardarTypeEgress()" class="btn btn-save"><i class="fa fa-save"></i>&nbsp;GUARDAR TIPO DE EGRESO</button>                        
                     </div>
                 </div>
             </div>
@@ -325,6 +329,7 @@
                  datosmapa:'',markers:[],modal:0,
                 center: { lat: 45.508, lng: -73.587 },  
                 name_type_egress:'',id:-1,description:'',amount:'',name:'',id_type_egress:'',birthdate:'',
+                names:'',id:-1,code:'',category:'EGRESO',
                 errorClase : 0,
                 errors:{},
                 listEgress :[],
@@ -388,7 +393,7 @@
             getComboEgress(page){
                 let me=this; 
                 //me.listado=0;             
-                var url= 'comboTypeEgress_list';
+                var url= 'comboTypeEgress_list?page='+page;
                 axios.get(url).then(function (response) {
                     var respuesta= response.data;
                     me.array_egress =respuesta.datax;
@@ -476,7 +481,7 @@
                     me.amount=respuesta.datax[0].amount;
                     me.id=respuesta.datax[0].id;
                     me.birthdate=moment(respuesta.datax[0].date).toDate();
-                    me.id_type_egress=respuesta.datax[0].id_type_egress;
+                    me.id_type_egress=respuesta.datax[0].account_book_id;
                     me.market=respuesta.datax[0].id_market;      
                                   
 				}) 
@@ -487,9 +492,7 @@
                
             },
             guardarTypeEgress(){
-                if (this.validarDataTypeEgress()){
-                    return;
-                }
+                
                 swal({
                 title: 'Esta seguro de guardar la informacion?',
                 type: 'warning',
@@ -503,11 +506,13 @@
 
                 let me = this;
                 axios.post('saveEgressType',{
-                    'name':this.name_type_egress,
+                    'names':this.names,
+                    'code':this.code,
+                    'category':this.category,
                     'id': this.id
                     
                 }).then(function (response) {
-                    me.limpiarTypeEgress();
+                   // me.limpiarTypeEgress();
                     me.getComboEgress(1);
                     me.close_modal(0);
                     swal(
@@ -549,7 +554,7 @@
                     'description':this.description,
                     'amount':this.amount,
                     'date':moment(moment(this.birthdate, 'DD/MM/YYYY')).format('YYYY-MM-DD'),
-                    'id_type_egress': this.id_type_egress,
+                    'account_book_id': this.id_type_egress,
                     'id_market': this.market,
                     'id': this.id
                     
@@ -654,7 +659,7 @@
             },
 
             descargar(buscar){
-                var url= '/download_strategic_plan?buscar='+buscar;;
+                var url= '/download_strategic_plan?buscar='+buscar;
                 window.location.href = url;
             },
 
