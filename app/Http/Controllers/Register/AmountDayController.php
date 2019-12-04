@@ -117,14 +117,14 @@ class AmountDayController extends Controller
         public function getResumenDayFecha(Request $request){
             $id=$request->id;
             $date_register=$request->date_register;
-            $queyMercado="SELECT amo.id,per.names, per.paternal_last_name,per.maternal_last_name, per.number_doc,amo.type, su.name as name_sucursal,mer.name as name_mercado,amo.date_register,amo.amount
+            $queyMercado="SELECT amo.id,per.names, per.paternal_last_name,per.maternal_last_name, per.number_doc,amo.amount_delivered, su.name as name_sucursal,mer.name as name_mercado,amo.date_register
             from branch_office su 
             inner join market mer on su.id=mer.id_branch_office 
             inner join employee em on mer.id=em.id_market
             inner join person per on per.id= em.id_person
             inner join amount_day amo on em.id=amo.id_employee
-            where su.state=1
-            and mer.state=1 and amo.state=1 and amo.type='ENTREGADO'
+            where su.state=1 and amo.amount_delivered <> 0
+            and mer.state=1 and amo.state=1 
             and mer.id='$id' and amo.date_register='$date_register'" ;
             $listMercado = DB::select($queyMercado);
             return [
@@ -153,7 +153,7 @@ class AmountDayController extends Controller
                     inner join person per on per.id= em.id_person
                     inner join amount_day amo on em.id=amo.id_employee
                     where su.state=1
-                    and mer.state=1 and amo.state=1";
+                    and mer.state=1 and amo.state=1 order by amo.date_register desc";
                     $listEmploye = DB::select($queyListEmploye);
                     return [
                         'datax'=>$listEmploye
@@ -162,14 +162,14 @@ class AmountDayController extends Controller
                 public function getListaResumenDay(Request $request){
                     $date = date("Y-m-d");
                     
-                    $queyListEmployeDay="SELECT amo.id,per.names, per.paternal_last_name,per.maternal_last_name, per.number_doc,amo.type, su.name as name_sucursal,mer.name as name_mercado,amo.date_register,amo.amount
+                    $queyListEmployeDay="SELECT amo.id,per.names, per.paternal_last_name,per.maternal_last_name, per.number_doc,amo.amount_delivered, su.name as name_sucursal,mer.name as name_mercado,amo.date_register
                     from branch_office su 
                     inner join market mer on su.id=mer.id_branch_office 
                     inner join employee em on mer.id=em.id_market
                     inner join person per on per.id= em.id_person
                     inner join amount_day amo on em.id=amo.id_employee
-                    where su.state=1
-                    and mer.state=1 and amo.state=1 and amo.type='ENTREGADO' and amo.date_register='$date'";
+                    where su.state=1 and amo.amount_delivered <> 0
+                    and mer.state=1 and amo.state=1 and amo.date_register='$date'";
                     $listEmployeDay = DB::select($queyListEmployeDay);
                     return [
                         'datax'=>$listEmployeDay

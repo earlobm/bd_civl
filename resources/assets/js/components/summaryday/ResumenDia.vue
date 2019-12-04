@@ -89,7 +89,7 @@
                                                                         <tbody>
                                                                             <tr v-for="(midata,index) in list_resumenday" :key="index" >
                                                                                 <td style="vertical-align: middle; text-align: center;" >{{(index+1)}}</td>
-                                                                                <td style="vertical-align: middle; text-align: center;" v-text="midata.amount"></td>
+                                                                                <td style="vertical-align: middle; text-align: center;" v-text="midata.amount_delivered"></td>
                                                                                 <td style="vertical-align: middle; text-align: center;" v-text="midata.names+' '+midata.paternal_last_name+' '+midata.maternal_last_name"></td>
                                                                                 <td style="vertical-align: middle;" v-text="midata.name_sucursal"></td>
                                                                                 <td style="vertical-align: middle;" v-text="midata.name_mercado"></td>

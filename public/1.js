@@ -27383,7 +27383,7 @@ var render = function() {
                                                           },
                                                           domProps: {
                                                             textContent: _vm._s(
-                                                              midata.amount
+                                                              midata.amount_delivered
                                                             )
                                                           }
                                                         }),
