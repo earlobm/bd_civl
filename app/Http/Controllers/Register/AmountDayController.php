@@ -160,7 +160,7 @@ class AmountDayController extends Controller
                     ];
                 }
                 public function getListaResumenDay(Request $request){
-                    $date = date("Y-m-d");
+                    $ldate = date('Y-m-d');
                     
                     $queyListEmployeDay="SELECT amo.id,per.names, per.paternal_last_name,per.maternal_last_name, per.number_doc,amo.amount_delivered, su.name as name_sucursal,mer.name as name_mercado,amo.date_register
                     from branch_office su 
@@ -168,8 +168,7 @@ class AmountDayController extends Controller
                     inner join employee em on mer.id=em.id_market
                     inner join person per on per.id= em.id_person
                     inner join amount_day amo on em.id=amo.id_employee
-                    where su.state=1 and amo.amount_delivered <> 0
-                    and mer.state=1 and amo.state=1 and amo.date_register='$date'";
+                    where su.state=1 and amo.amount_delivered <> 0 and mer.state=1 and amo.state=1 and amo.date_register='$ldate'";
                     $listEmployeDay = DB::select($queyListEmployeDay);
                     return [
                         'datax'=>$listEmployeDay
