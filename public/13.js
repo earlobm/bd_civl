@@ -27415,7 +27415,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         return _ref = {
 
             id_parent: '', visible: 1, array_job: [], id_job: '',
-            array_type_business: [], id_type_business: '',
+            array_type_business: [], id_type_business: '', array_employee: [],
             authUser: '', porcent: 50,
             listadox: 1,
             listado: 2
@@ -27482,7 +27482,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
                 console.log(error);
             });
         },
-        get_type_document: function get_type_document() {
+        getTypeDocument: function getTypeDocument() {
             var me = this;
             // me.listado=0;
             var url = 'get_type_document';
@@ -27493,7 +27493,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
                 console.log(error);
             });
         },
-        get_type_business: function get_type_business() {
+        getTypeBusiness: function getTypeBusiness() {
             var me = this;
             // me.listado=0;
             var url = 'get_type_business';
@@ -27504,7 +27504,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
                 console.log(error);
             });
         },
-        get_department: function get_department() {
+        getDepartment: function getDepartment() {
             var me = this;
             // me.listado=0;
             var url = 'get_department';
@@ -27515,7 +27515,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
                 console.log(error);
             });
         },
-        get_province: function get_province(id_department) {
+        getProvince: function getProvince(id_department) {
             var me = this;
             // me.listado=0;
             var url = 'get_province?id=' + id_department;
@@ -27526,7 +27526,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
                 console.log(error);
             });
         },
-        get_district: function get_district(id_province) {
+        getDistrict: function getDistrict(id_province) {
             var me = this;
             // me.listado=0;
             var url = 'get_district?id=' + id_province;
@@ -27899,7 +27899,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         //     let me=this;
         //     me.listado=2;
         //     me.clean_data();
-        //     me.get_type_document();
+        //     me.getTypeDocument();
         //     me.icon_edit='fa fa-spinner fa-spin';
         //     var url= 'edit_data?id='+id;
         //     me.id_customer_credit=id;
@@ -28146,8 +28146,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         // list_data(page){
         //     let me=this;                      
         //     me.listado=0;
-        //     me.get_department();
-        //     me.get_type_document();
+        //     me.getDepartment();
+        //     me.getTypeDocument();
         //     var url= 'getListCustomerCredit?buscar='+me.buscar+'&page='+page;
         //     axios.get(url).then(function (response) {
         //         var respuesta= response.data;
@@ -28160,9 +28160,9 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         //     });
 
         // },
-        get_type_requirement: function get_type_requirement() {
+        getTypeRequirement: function getTypeRequirement() {
             var me = this;
-            var url = 'get_type_requeriment';
+            var url = 'get_type_requirement';
             axios.get(url).then(function (response) {
                 var respuesta = response.data;
                 me.array_requirement = respuesta.datax;
@@ -28170,12 +28170,22 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
                 console.log(error);
             });
         },
-        get_job: function get_job() {
+        getJob: function getJob() {
             var me = this;
             var url = 'get_job';
             axios.get(url).then(function (response) {
                 var respuesta = response.data;
                 me.array_job = respuesta.datax;
+            }).catch(function (error) {
+                console.log(error);
+            });
+        },
+        getEmployee: function getEmployee() {
+            var me = this;
+            var url = 'get_employee';
+            axios.get(url).then(function (response) {
+                var respuesta = response.data;
+                me.array_employee = respuesta.datax;
             }).catch(function (error) {
                 console.log(error);
             });
@@ -28186,7 +28196,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
             //cargar actividades
             var me = this;
             me.requirements = [];
-            var url = 'get_type_requeriment';
+            var url = 'get_type_requirement';
             axios.get(url).then(function (response) {
                 var respuesta = response.data;
                 var lista = respuesta.datax;
@@ -28202,17 +28212,18 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     },
 
     mounted: function mounted() {
+        this.listadox = 1;
         //    this.lista_add_client();
         //    this.list_data(1);
-        this.get_department();
-        this.get_type_business();
-        this.get_job();
-        this.get_type_document();
-        this.get_type_requirement();
-        this.listadox = 1;
+        this.getDepartment();
+        this.getTypeBusiness();
+        this.getJob();
+        this.getEmployee();
+        this.getTypeDocument();
+        this.getTypeRequirement();
         this.calculateTeabyTerm();
-        this.get_province(10);
-        this.get_district(92);
+        this.getProvince(10);
+        this.getDistrict(92);
     }
 });
 
@@ -29810,7 +29821,7 @@ var render = function() {
                                                             ),
                                                             _vm._v(" "),
                                                             _vm._l(
-                                                              _vm.array_type_business,
+                                                              _vm.array_employee,
                                                               function(datax) {
                                                                 return _c(
                                                                   "option",
@@ -29825,7 +29836,7 @@ var render = function() {
                                                                   [
                                                                     _vm._v(
                                                                       _vm._s(
-                                                                        datax.name
+                                                                        datax.employee
                                                                       )
                                                                     )
                                                                   ]
@@ -29928,7 +29939,7 @@ var render = function() {
                                                                 function(
                                                                   $event
                                                                 ) {
-                                                                  return _vm.get_province(
+                                                                  return _vm.getProvince(
                                                                     $event
                                                                       .target
                                                                       .value
@@ -30078,7 +30089,7 @@ var render = function() {
                                                                 function(
                                                                   $event
                                                                 ) {
-                                                                  return _vm.get_district(
+                                                                  return _vm.getDistrict(
                                                                     $event
                                                                       .target
                                                                       .value
@@ -33662,7 +33673,7 @@ var render = function() {
                                                                       function(
                                                                         $event
                                                                       ) {
-                                                                        return _vm.get_province(
+                                                                        return _vm.getProvince(
                                                                           $event
                                                                             .target
                                                                             .value
@@ -33822,7 +33833,7 @@ var render = function() {
                                                                       function(
                                                                         $event
                                                                       ) {
-                                                                        return _vm.get_district(
+                                                                        return _vm.getDistrict(
                                                                           $event
                                                                             .target
                                                                             .value
