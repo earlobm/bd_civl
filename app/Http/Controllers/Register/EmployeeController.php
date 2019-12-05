@@ -36,7 +36,7 @@ class EmployeeController extends Controller
         $clasex->state = 1;
         $clasex->id_person = $request->id_person;
         $clasex->id_market =$request->id_market;
-        $clasex->role_id =$request->role_id;
+        $clasex->id_role =$request->role_id;
 
         $clasex->save(); 
         /* $DateOfRequest= date("Y-m-d H:i:s");
@@ -54,7 +54,7 @@ class EmployeeController extends Controller
             inner join market mer on su.id=mer.id_branch_office 
             inner join employee em on mer.id=em.id_market
             inner join person per on per.id= em.id_person
-			inner join role ro on ro.id=em.role_id
+			inner join role ro on ro.id=em.id_role
             where su.state=1
             and mer.state=1 and em.state=1";
             $listEmploye = DB::select($queyListEmploye);
@@ -68,7 +68,7 @@ class EmployeeController extends Controller
             inner join market mer on su.id=mer.id_branch_office 
             inner join employee em on mer.id=em.id_market
             inner join person per on per.id= em.id_person
-			inner join role ro on ro.id=em.role_id
+			inner join role ro on ro.id=em.id_role
             where su.state=1
             and mer.state=1 and em.state=1 and em.id='$request->id'";
             $listEmploye = DB::select($queyListEmploye);
