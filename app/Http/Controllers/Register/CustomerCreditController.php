@@ -211,7 +211,7 @@ class CustomerCreditController extends Controller
     
     }
 
-    public function save(Request $request){
+    public function save_data(Request $request){
         
         //preguntamos si el cliente ya existe
         if($request->id_customer_credit==-1){
@@ -227,7 +227,6 @@ class CustomerCreditController extends Controller
             $clasex = Person::findOrFail($request->id);
         }        
         $clasex->number_doc = trim($request->nro_doc);
-        //$clasex->id_type_doc = $request->id_type_doc;
         $clasex->paternal_last_name = trim($request->paternal_last_name);
         $clasex->maternal_last_name =trim($request->maternal_last_name);
         $clasex->names = trim($request->name);
@@ -240,12 +239,15 @@ class CustomerCreditController extends Controller
         $clasex->reference =  $request->reference;
         $clasex->id_type_document =  $request->id_type_document;
         $clasex->sex = $request->sex;
-        $clasex->marital_status = $request->marital_status;
-        //$DateOfRequest= date("Y-m-d H:i:s");
+        $clasex->marital_status = $request->marital_status;        
         $clasex->save(); 
         //registrando en la tabla de cliente empeño
+        $DateOfRequest= date("Y-m-d H:i:s");
         $clase_customer->state=1;
+        $clase_customer->id_type_business=1;
+        $clase_customer->date_inscription=$DateOfRequest;
         $clase_customer->id_person=$clasex->id;
+        $clase_customer->id_promote =Auth::user()->id;
         $clase_customer->save(); 
         /* $DateOfRequest= date("Y-m-d H:i:s");
             $clasex->modificado ='Modificado por '.Auth::user()->nick.' '. $DateOfRequest;*/
@@ -323,7 +325,7 @@ class CustomerCreditController extends Controller
           ];
     }
     public function list_type_document(Request $request){
-        $sqlx="SELECT * FROM type_document where state=1 and type=1 order by id";
+        $sqlx="SELECT * FROM type_document where state=1 and type=1 order by name";
         $datax=DB::select($sqlx);
           return [
               'datax'=>$datax,
@@ -344,11 +346,32 @@ class CustomerCreditController extends Controller
             'datax' => $miArray
         ];
     }
-    public function type_document(Request $request){
+    public function list_type_requerement(Request $request){
         $sqlx="";
-        $sqlx="SELECT id as id_type_document,
+        $sqlx="SELECT id as id_type_requerement,
         name from type_document where type=2 and state=1
-        order by id";
+        order by name";
+        $miLista = DB::select($sqlx);
+        return [
+            'datax' => $miLista
+        ];
+    }
+
+    public function list_type_business(Request $request){
+        $sqlx="";
+        $sqlx="SELECT id as id_type_business,
+        name from type_business where state=1
+        order by name";
+        $miLista = DB::select($sqlx);
+        return [
+            'datax' => $miLista
+        ];
+    }
+    public function list_job(Request $request){
+        $sqlx="";
+        $sqlx="SELECT id,
+        name from job 
+        order by name";
         $miLista = DB::select($sqlx);
         return [
             'datax' => $miLista

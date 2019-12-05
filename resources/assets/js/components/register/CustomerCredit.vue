@@ -246,11 +246,11 @@
                                                                     <div class="col-md-12">
                                                                         <label>Requisitos:</label>
                                                                     </div>
-                                                                    <div  class="col-md-3" v-for="(midata,index) in listProgram" :key="index">
+                                                                    <div  class="col-md-3" v-for="(midata,index) in array_requirement" :key="index">
                                                                         <div class="form-group">
                                                                             <div class="checkbox">
                                                                                 <label class="container">
-                                                                                    <input type="checkbox" v-model="listProgramx[index].check">
+                                                                                    <input type="checkbox" v-model="requirements[index].check">
                                                                                         <strong>{{(index+1)}}</strong>. {{midata.name}}
                                                                                     <span class="checkmark"></span>
                                                                                 </label>
@@ -1014,7 +1014,8 @@
         data (){
             return {
                 
-                id_parent:'',visible:1,
+                id_parent:'',visible:1,array_job:[], id_job:'',
+                array_type_business:[],id_type_business:'',
                 authUser:'',porcent: 50,
                 listadox:1,
                 listado:2,
@@ -1055,7 +1056,7 @@
                 errorFamilyProduct:'form-group',errorCharacteristic:'form-group',
 
                 arrayTypeProduct:[],arrayFamilyProduct:[],arrayWarehouse:[], array_department:[], array_province: [], array_district: [], array_type_document:[],array_code:[],
-                totalcapital:0,totalInterest:0,modalTicket:0,idcustomer:-1,listProgram : [],listProgramx:[],
+                totalcapital:0,totalInterest:0,modalTicket:0,idcustomer:-1,array_requirement : [], requirements:[],
                 midatax:[], list:[],totalNumber:0, id_customer_credit:-1,
                 icon_title:'fa fa-plus', icon_save:'fa fa-save',icon_save_pledge:'fa fa-save', icon_edit:'fa fa-pencil',
                 icon_search_dni:'fa fa-search', icon_search_client:'fa fa-search', icon_generate:'fa fa-rotate-right',
@@ -1112,6 +1113,7 @@
                     console.log(error);
                 });
             },
+            
             get_type_document(){
                 let me=this;
                // me.listado=0;
@@ -1119,6 +1121,18 @@
                     axios.get(url).then(function (response) {
                         var respuesta= response.data;
                         me.array_type_document=respuesta.datax;
+                    })
+                    .catch(function (error) {
+                        console.log(error);
+                    });
+            },
+            get_type_business(){
+                let me=this;
+               // me.listado=0;
+                var url= 'get_type_business';
+                    axios.get(url).then(function (response) {
+                        var respuesta= response.data;
+                        me.array_type_business=respuesta.datax;
                     })
                     .catch(function (error) {
                         console.log(error);
@@ -1562,41 +1576,41 @@
 				me.list_data(page);
                 
             },
-            edit_data(id){
-                let me=this;
-                me.listado=2;
-                me.clean_data();
-                me.get_type_document();
-                me.icon_edit='fa fa-spinner fa-spin';
-                var url= 'edit_data?id='+id;
-                me.id_customer_credit=id;
-                axios.get(url).then(function (response) {
-                    var respuesta= response.data;
-                    me.id=respuesta.datax[0].id;
-                    me.nro_doc = respuesta.datax[0].number_doc;
-                    me.name = respuesta.datax[0].names;
-                    me.paternal_last_name = respuesta.datax[0].paternal_last_name;
-                    me.maternal_last_name = respuesta.datax[0].maternal_last_name;
-                    me.phone = respuesta.datax[0].phone;
-                    me.address =respuesta.datax[0].address;
-                    me.sex =respuesta.datax[0].sex;
-                    me.reference =respuesta.datax[0].reference;
-                    me.code =respuesta.datax[0].code;
-                    me.email =respuesta.datax[0].email;
-                    me.district =respuesta.datax[0].id_district;
-                    me.province =respuesta.datax[0].id_province;
-                    me.department =respuesta.datax[0].id_department;
-                    me.id_type_doc =respuesta.datax[0].id_type_document;
-                    me.marital_status =respuesta.datax[0].marital_status;
-                    me.birthdate=moment(respuesta.datax[0].birthdate).toDate();
-                    me.validarData();         
-                    me.icon_edit='fa fa-pencil';       
-                })
-                .catch(function (error) {
-                    console.log(error);
-                });
+            // edit_data(id){
+            //     let me=this;
+            //     me.listado=2;
+            //     me.clean_data();
+            //     me.get_type_document();
+            //     me.icon_edit='fa fa-spinner fa-spin';
+            //     var url= 'edit_data?id='+id;
+            //     me.id_customer_credit=id;
+            //     axios.get(url).then(function (response) {
+            //         var respuesta= response.data;
+            //         me.id=respuesta.datax[0].id;
+            //         me.nro_doc = respuesta.datax[0].number_doc;
+            //         me.name = respuesta.datax[0].names;
+            //         me.paternal_last_name = respuesta.datax[0].paternal_last_name;
+            //         me.maternal_last_name = respuesta.datax[0].maternal_last_name;
+            //         me.phone = respuesta.datax[0].phone;
+            //         me.address =respuesta.datax[0].address;
+            //         me.sex =respuesta.datax[0].sex;
+            //         me.reference =respuesta.datax[0].reference;
+            //         me.code =respuesta.datax[0].code;
+            //         me.email =respuesta.datax[0].email;
+            //         me.district =respuesta.datax[0].id_district;
+            //         me.province =respuesta.datax[0].id_province;
+            //         me.department =respuesta.datax[0].id_department;
+            //         me.id_type_doc =respuesta.datax[0].id_type_document;
+            //         me.marital_status =respuesta.datax[0].marital_status;
+            //         me.birthdate=moment(respuesta.datax[0].birthdate).toDate();
+            //         me.validarData();         
+            //         me.icon_edit='fa fa-pencil';       
+            //     })
+            //     .catch(function (error) {
+            //         console.log(error);
+            //     });
                               
-            },
+            // },
             save_data_only_client(){
                 //val =1 guardar y empeñar
                 //val = 0 solo registrar cliente  
@@ -1628,7 +1642,9 @@
                             'email': this.email,'reference': this.reference,
                             'id_district': this.district,
                             'birthdate' : moment(moment(this.birthdate, 'DD/MM/YYYY')).format('YYYY-MM-DD'),
-                            'id_customer_credit':this.id_customer_credit                    
+                            'id_customer_credit':this.id_customer_credit,
+                            'id_job':this.id_job, 'id_type_business':this.id_type_business
+
                         }).then(function (response) {
                                 me.clean_data();                                
                                 me.list_data(1);  
@@ -1811,67 +1827,59 @@
                 this.interest=0;
                 
             },
-            list_data(page){
-                let me=this;                      
-                me.listado=0;
-                me.get_department();
-                me.get_type_document();
-                var url= 'getListCustomerCredit?buscar='+me.buscar+'&page='+page;
-                axios.get(url).then(function (response) {
-                    var respuesta= response.data;
-                    me.list=respuesta.datax;
-                    me.pagination= respuesta.pagination;                     
-                    me.listado=2;
-                })
-                .catch(function (error) {
-                    console.log(error);
-                });
+            // list_data(page){
+            //     let me=this;                      
+            //     me.listado=0;
+            //     me.get_department();
+            //     me.get_type_document();
+            //     var url= 'getListCustomerCredit?buscar='+me.buscar+'&page='+page;
+            //     axios.get(url).then(function (response) {
+            //         var respuesta= response.data;
+            //         me.list=respuesta.datax;
+            //         me.pagination= respuesta.pagination;                     
+            //         me.listado=2;
+            //     })
+            //     .catch(function (error) {
+            //         console.log(error);
+            //     });
                
-            },
-            get_type_document(){
+            // },
+            get_type_requirement(){
                 let me=this;
-                var url= 'getTypeDocument';
+                var url= 'get_type_requeriment';
                 axios.get(url).then(function (response) {
                     var respuesta= response.data;
-                    me.listProgram = respuesta.datax;
+                    me.array_requirement = respuesta.datax;
                 })
                 .catch(function (error) {
                     console.log(error);
                 });
                 
             },
-            get_type_business(){
-                var url= 'get_product_program?id_customer=' + id_product;
+            get_job(){
+                let me=this;
+                var url= 'get_job';
                 axios.get(url).then(function (response) {
-                    me.obtenerProgramas();
                     var respuesta= response.data;
-                    var listactual=respuesta.datax;
-                    for(var i=0; i < me.listProgramx.length; i++){
-                        for(var j=0; j < listactual.length; j++){
-                            if(me.listProgramx[i].id_program==listactual[j].id_program){
-                                me.listProgramx[i].check=true;   
-                                                             
-                            }
-                        }
-                    }
-                    
+                    me.array_job = respuesta.datax;
                 })
                 .catch(function (error) {
                     console.log(error);
-                });    
+                });
+                
             },
 
             init: function() {
             //cargar actividades
                 let me=this;  
-                me.listProgramx=[];        
-                var url= 'getTypeDocument';
+                me.requirements=[];        
+                var url= 'get_type_requeriment';
                 axios.get(url).then(function (response) {
                     var respuesta= response.data;
                     var lista=respuesta.datax;
                     for(var i=0; i < lista.length; i++){
-                       me.listProgramx.push({ check:false,id_type_document: lista[i].id_type_document, id_product:''});
-                       console.log(me.listProgramx);
+                       me.requirements.push({ check:false,id_type_requerement: lista[i].id_type_requerement, name:''});
+                       console.log(me.requirements);
                       
                     }
                    
@@ -1885,8 +1893,12 @@
         
         mounted() {
         //    this.lista_add_client();
-           this.list_data(1);
+        //    this.list_data(1);
+        this.get_department();
+        this.get_type_business();
+        this.get_job();
            this.get_type_document();
+           this.get_type_requirement();
            this.listadox=1;
            this.calculateTeabyTerm();
            this.get_province(10);

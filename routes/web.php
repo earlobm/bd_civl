@@ -44,8 +44,10 @@ Route::post('/delete_customer', 'Register\CustomerPledgeController@delete');
 //Customer Credit
 Route::post('/deleteCustomerCredit', 'Register\CustomerCreditController@delete'); 
 Route::get('/getListCustomerCredit', 'Register\CustomerCreditController@list_customer');  
-Route::get('/getTypeDocument', 'Register\CustomerCreditController@type_document');
-Route::post('/saveCustomerCredit', 'Register\CustomerCreditController@save'); 
+Route::get('/get_type_requeriment', 'Register\CustomerCreditController@list_type_requerement');
+Route::get('/get_type_business', 'Register\CustomerCreditController@list_type_business');
+Route::get('/get_job', 'Register\CustomerCreditController@list_job');
+Route::post('/saveCustomerCredit', 'Register\CustomerCreditController@save_data'); 
 Route::get('/generate_code', 'Register\CustomerCreditController@generate_code');  
 //DOCUMENT
 Route::post('/save_Document', 'Register\DocumentCustomerController@save_Document'); 

@@ -26381,8 +26381,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_vue_bootstrap_datetimepicker___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_vue_bootstrap_datetimepicker__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_pc_bootstrap4_datetimepicker_build_css_bootstrap_datetimepicker_css__ = __webpack_require__(201);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_pc_bootstrap4_datetimepicker_build_css_bootstrap_datetimepicker_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_pc_bootstrap4_datetimepicker_build_css_bootstrap_datetimepicker_css__);
-var _methods;
-
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 //
@@ -27403,7 +27401,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
         return _ref = {
 
-            id_parent: '', visible: 1,
+            id_parent: '', visible: 1, array_job: [], id_job: '',
+            array_type_business: [], id_type_business: '',
             authUser: '', porcent: 50,
             listadox: 1,
             listado: 2
@@ -27419,7 +27418,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
             'last_page': 0,
             'from': 0,
             'to': 0
-        }), _defineProperty(_ref, 'offset', 3), _defineProperty(_ref, 'code', ''), _defineProperty(_ref, 'name', ''), _defineProperty(_ref, 'id', -1), _defineProperty(_ref, 'paternal_last_name', ''), _defineProperty(_ref, 'maternal_last_name', ''), _defineProperty(_ref, 'phone', ''), _defineProperty(_ref, 'address', ''), _defineProperty(_ref, 'nro_doc', ''), _defineProperty(_ref, 'id_type_doc', ''), _defineProperty(_ref, 'email', ''), _defineProperty(_ref, 'department', '10'), _defineProperty(_ref, 'province', '92'), _defineProperty(_ref, 'district', ''), _defineProperty(_ref, 'reference', ''), _defineProperty(_ref, 'errorClase', 0), _defineProperty(_ref, 'errors', {}), _defineProperty(_ref, 'errorInputActivity', 'form-group'), _defineProperty(_ref, 'errorInputActivity2', 'form-group'), _defineProperty(_ref, 'errorInputActivity3', 'form-group'), _defineProperty(_ref, 'errorInputActivity4', 'form-group'), _defineProperty(_ref, 'errorInputActivity5', 'form-group'), _defineProperty(_ref, 'errorInputActivity6', 'form-group'), _defineProperty(_ref, 'errorInputcapital', 'form-group'), _defineProperty(_ref, 'errorComboTipoProduco', 'form-group'), _defineProperty(_ref, 'buscar', ''), _defineProperty(_ref, 'sex', ''), _defineProperty(_ref, 'marital_status', ''), _defineProperty(_ref, 'name_customer', ''), _defineProperty(_ref, 'capital', 0), _defineProperty(_ref, 'date_end', ''), _defineProperty(_ref, 'interest', 0), _defineProperty(_ref, 'term', 1), _defineProperty(_ref, 'total', 0), _defineProperty(_ref, 'guaranty', ''), _defineProperty(_ref, 'id_dependence', 0), _defineProperty(_ref, 'characteristic', ''), _defineProperty(_ref, 'tea', 20), _defineProperty(_ref, 'id_warehouse', ''), _defineProperty(_ref, 'id_person', 0), _defineProperty(_ref, 'id_pledge', 0), _defineProperty(_ref, 'quantity', 1), _defineProperty(_ref, 'licence_plate', ''), _defineProperty(_ref, 'serie', ''), _defineProperty(_ref, 'note', ''), _defineProperty(_ref, 'capital', 0), _defineProperty(_ref, 'period', 'Mensual'), _defineProperty(_ref, 'arrayDetailPledge', []), _defineProperty(_ref, 'licence_plate', ''), _defineProperty(_ref, 'errorTotalcapital', 'form-group'), _defineProperty(_ref, 'errorcapital', 'form-group'), _defineProperty(_ref, 'errorTerm', 'form-group'), _defineProperty(_ref, 'errorTea', 'form-group'), _defineProperty(_ref, 'errorInterested', 'form-group'), _defineProperty(_ref, 'errorWarehouse', 'form-group'), _defineProperty(_ref, 'errorFamilyProduct', 'form-group'), _defineProperty(_ref, 'errorCharacteristic', 'form-group'), _defineProperty(_ref, 'arrayTypeProduct', []), _defineProperty(_ref, 'arrayFamilyProduct', []), _defineProperty(_ref, 'arrayWarehouse', []), _defineProperty(_ref, 'array_department', []), _defineProperty(_ref, 'array_province', []), _defineProperty(_ref, 'array_district', []), _defineProperty(_ref, 'array_type_document', []), _defineProperty(_ref, 'array_code', []), _defineProperty(_ref, 'totalcapital', 0), _defineProperty(_ref, 'totalInterest', 0), _defineProperty(_ref, 'modalTicket', 0), _defineProperty(_ref, 'idcustomer', -1), _defineProperty(_ref, 'listProgram', []), _defineProperty(_ref, 'listProgramx', []), _defineProperty(_ref, 'midatax', []), _defineProperty(_ref, 'list', []), _defineProperty(_ref, 'totalNumber', 0), _defineProperty(_ref, 'id_customer_credit', -1), _defineProperty(_ref, 'icon_title', 'fa fa-plus'), _defineProperty(_ref, 'icon_save', 'fa fa-save'), _defineProperty(_ref, 'icon_save_pledge', 'fa fa-save'), _defineProperty(_ref, 'icon_edit', 'fa fa-pencil'), _defineProperty(_ref, 'icon_search_dni', 'fa fa-search'), _defineProperty(_ref, 'icon_search_client', 'fa fa-search'), _defineProperty(_ref, 'icon_generate', 'fa fa-rotate-right'), _defineProperty(_ref, 'title', 'Agregar Cliente'), _defineProperty(_ref, 'add_aval', 0), _ref;
+        }), _defineProperty(_ref, 'offset', 3), _defineProperty(_ref, 'code', ''), _defineProperty(_ref, 'name', ''), _defineProperty(_ref, 'id', -1), _defineProperty(_ref, 'paternal_last_name', ''), _defineProperty(_ref, 'maternal_last_name', ''), _defineProperty(_ref, 'phone', ''), _defineProperty(_ref, 'address', ''), _defineProperty(_ref, 'nro_doc', ''), _defineProperty(_ref, 'id_type_doc', ''), _defineProperty(_ref, 'email', ''), _defineProperty(_ref, 'department', '10'), _defineProperty(_ref, 'province', '92'), _defineProperty(_ref, 'district', ''), _defineProperty(_ref, 'reference', ''), _defineProperty(_ref, 'errorClase', 0), _defineProperty(_ref, 'errors', {}), _defineProperty(_ref, 'errorInputActivity', 'form-group'), _defineProperty(_ref, 'errorInputActivity2', 'form-group'), _defineProperty(_ref, 'errorInputActivity3', 'form-group'), _defineProperty(_ref, 'errorInputActivity4', 'form-group'), _defineProperty(_ref, 'errorInputActivity5', 'form-group'), _defineProperty(_ref, 'errorInputActivity6', 'form-group'), _defineProperty(_ref, 'errorInputcapital', 'form-group'), _defineProperty(_ref, 'errorComboTipoProduco', 'form-group'), _defineProperty(_ref, 'buscar', ''), _defineProperty(_ref, 'sex', ''), _defineProperty(_ref, 'marital_status', ''), _defineProperty(_ref, 'name_customer', ''), _defineProperty(_ref, 'capital', 0), _defineProperty(_ref, 'date_end', ''), _defineProperty(_ref, 'interest', 0), _defineProperty(_ref, 'term', 1), _defineProperty(_ref, 'total', 0), _defineProperty(_ref, 'guaranty', ''), _defineProperty(_ref, 'id_dependence', 0), _defineProperty(_ref, 'characteristic', ''), _defineProperty(_ref, 'tea', 20), _defineProperty(_ref, 'id_warehouse', ''), _defineProperty(_ref, 'id_person', 0), _defineProperty(_ref, 'id_pledge', 0), _defineProperty(_ref, 'quantity', 1), _defineProperty(_ref, 'licence_plate', ''), _defineProperty(_ref, 'serie', ''), _defineProperty(_ref, 'note', ''), _defineProperty(_ref, 'capital', 0), _defineProperty(_ref, 'period', 'Mensual'), _defineProperty(_ref, 'arrayDetailPledge', []), _defineProperty(_ref, 'licence_plate', ''), _defineProperty(_ref, 'errorTotalcapital', 'form-group'), _defineProperty(_ref, 'errorcapital', 'form-group'), _defineProperty(_ref, 'errorTerm', 'form-group'), _defineProperty(_ref, 'errorTea', 'form-group'), _defineProperty(_ref, 'errorInterested', 'form-group'), _defineProperty(_ref, 'errorWarehouse', 'form-group'), _defineProperty(_ref, 'errorFamilyProduct', 'form-group'), _defineProperty(_ref, 'errorCharacteristic', 'form-group'), _defineProperty(_ref, 'arrayTypeProduct', []), _defineProperty(_ref, 'arrayFamilyProduct', []), _defineProperty(_ref, 'arrayWarehouse', []), _defineProperty(_ref, 'array_department', []), _defineProperty(_ref, 'array_province', []), _defineProperty(_ref, 'array_district', []), _defineProperty(_ref, 'array_type_document', []), _defineProperty(_ref, 'array_code', []), _defineProperty(_ref, 'totalcapital', 0), _defineProperty(_ref, 'totalInterest', 0), _defineProperty(_ref, 'modalTicket', 0), _defineProperty(_ref, 'idcustomer', -1), _defineProperty(_ref, 'array_requirement', []), _defineProperty(_ref, 'requirements', []), _defineProperty(_ref, 'midatax', []), _defineProperty(_ref, 'list', []), _defineProperty(_ref, 'totalNumber', 0), _defineProperty(_ref, 'id_customer_credit', -1), _defineProperty(_ref, 'icon_title', 'fa fa-plus'), _defineProperty(_ref, 'icon_save', 'fa fa-save'), _defineProperty(_ref, 'icon_save_pledge', 'fa fa-save'), _defineProperty(_ref, 'icon_edit', 'fa fa-pencil'), _defineProperty(_ref, 'icon_search_dni', 'fa fa-search'), _defineProperty(_ref, 'icon_search_client', 'fa fa-search'), _defineProperty(_ref, 'icon_generate', 'fa fa-rotate-right'), _defineProperty(_ref, 'title', 'Agregar Cliente'), _defineProperty(_ref, 'add_aval', 0), _ref;
     },
 
     components: {
@@ -27454,7 +27453,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     created: function created() {
         this.init();
     },
-    methods: (_methods = {
+    methods: {
         generate_code: function generate_code() {
             var me = this;
             me.icon_generate = 'fa fa-refresh fa-spin';
@@ -27477,6 +27476,17 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
             axios.get(url).then(function (response) {
                 var respuesta = response.data;
                 me.array_type_document = respuesta.datax;
+            }).catch(function (error) {
+                console.log(error);
+            });
+        },
+        get_type_business: function get_type_business() {
+            var me = this;
+            // me.listado=0;
+            var url = 'get_type_business';
+            axios.get(url).then(function (response) {
+                var respuesta = response.data;
+                me.array_type_business = respuesta.datax;
             }).catch(function (error) {
                 console.log(error);
             });
@@ -27546,7 +27556,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
                 buttonsStyling: false, reverseButtons: true
             }).then(function (result) {
                 if (result.value) {
-                    var _me = _this;
+                    var me = _this;
                     axios.post('save_pledge', {
                         'idcustomerpledge': _this.id_customer_credit,
                         'date_init': __WEBPACK_IMPORTED_MODULE_1_moment_timezone___default()(__WEBPACK_IMPORTED_MODULE_1_moment_timezone___default()(_this.date_init, 'DD/MM/YYYY')).format('YYYY-MM-DD'),
@@ -27560,13 +27570,13 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
                     }).then(function (response) {
 
                         swal('Guardado!', 'El registro ha sido guardado con éxito.', 'success');
-                        _me.dowloadContract();
+                        me.dowloadContract();
 
-                        var url = 'ticket_plegde?capital=' + _me.totalcapital + '&interest=' + _me.totalInterest + '&name_customer=' + _me.name_customer + '&date_movement=' + __WEBPACK_IMPORTED_MODULE_1_moment_timezone___default()(__WEBPACK_IMPORTED_MODULE_1_moment_timezone___default()(_me.date_init, 'DD/MM/YYYY')).format('YYYY-MM-DD') + '&type=Empenio';
+                        var url = 'ticket_plegde?capital=' + me.totalcapital + '&interest=' + me.totalInterest + '&name_customer=' + me.name_customer + '&date_movement=' + __WEBPACK_IMPORTED_MODULE_1_moment_timezone___default()(__WEBPACK_IMPORTED_MODULE_1_moment_timezone___default()(me.date_init, 'DD/MM/YYYY')).format('YYYY-MM-DD') + '&type=Empenio';
                         window.open(url, '_blank');
 
-                        _me.volver();
-                        _me.list_data(1);
+                        me.volver();
+                        me.list_data(1);
                     }).catch(function (error) {
                         console.log(error);
                     });
@@ -27730,32 +27740,32 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         getData: function getData() {
             //obteniendo datos de reniec
             if (this.nro_doc.length == 8) {
-                var _me2 = this;
-                _me2.icon_search_dni = 'fa fa-spinner fa-spin';
-                var url = 'getDataCustomerBynro_doc?nro_doc=' + _me2.nro_doc;
+                var me = this;
+                me.icon_search_dni = 'fa fa-spinner fa-spin';
+                var url = 'getDataCustomerBynro_doc?nro_doc=' + me.nro_doc;
                 axios.get(url).then(function (response) {
                     var respuesta = response.data;
                     var tipo = respuesta.tipo;
                     if (respuesta.datax.length > 0) {
                         if (tipo == 'bd') {
-                            _me2.id = respuesta.datax[0].id;
-                            _me2.name = respuesta.datax[0].names;
-                            _me2.paternal_last_name = respuesta.datax[0].paternal_last_name;
-                            _me2.maternal_last_name = respuesta.datax[0].maternal_last_name;
-                            _me2.phone = respuesta.datax[0].phone;
-                            _me2.address = respuesta.datax[0].address;
-                            _me2.sex = respuesta.datax[0].sex;
-                            _me2.marital_status = respuesta.datax[0].marital_status;
-                            _me2.birthdate = __WEBPACK_IMPORTED_MODULE_1_moment_timezone___default()(respuesta.datax[0].birthdate).toDate();
-                            _me2.validarData();
+                            me.id = respuesta.datax[0].id;
+                            me.name = respuesta.datax[0].names;
+                            me.paternal_last_name = respuesta.datax[0].paternal_last_name;
+                            me.maternal_last_name = respuesta.datax[0].maternal_last_name;
+                            me.phone = respuesta.datax[0].phone;
+                            me.address = respuesta.datax[0].address;
+                            me.sex = respuesta.datax[0].sex;
+                            me.marital_status = respuesta.datax[0].marital_status;
+                            me.birthdate = __WEBPACK_IMPORTED_MODULE_1_moment_timezone___default()(respuesta.datax[0].birthdate).toDate();
+                            me.validarData();
                         } else {
-                            _me2.paternal_last_name = respuesta.datax[0];
-                            _me2.name = respuesta.datax[1];
+                            me.paternal_last_name = respuesta.datax[0];
+                            me.name = respuesta.datax[1];
 
-                            _me2.maternal_last_name = respuesta.datax[2];
-                            _me2.validarData();
+                            me.maternal_last_name = respuesta.datax[2];
+                            me.validarData();
                         }
-                        _me2.icon_search_dni = 'fa fa-search';
+                        me.icon_search_dni = 'fa fa-search';
                     }
                 }).catch(function (error) {
                     console.log(error);
@@ -27766,15 +27776,15 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         validarReniec: function validarReniec() {
             //obteniendo datos de reniec
             if (this.nro_doc.length == 8) {
-                var _me3 = this;
-                var url = 'getDataCustomerBynro_doc?nro_doc=' + _me3.nro_doc;
+                var me = this;
+                var url = 'getDataCustomerBynro_doc?nro_doc=' + me.nro_doc;
                 axios.get(url).then(function (response) {
                     var respuesta = response.data;
                     var tipo = respuesta.tipo;
                     if (respuesta.datax.length > 0) {
-                        _me3.paternal_last_name = respuesta.datax[0];
-                        _me3.name = respuesta.datax[1];
-                        _me3.maternal_last_name = respuesta.datax[2];
+                        me.paternal_last_name = respuesta.datax[0];
+                        me.name = respuesta.datax[1];
+                        me.maternal_last_name = respuesta.datax[2];
                     }
                 }).catch(function (error) {
                     console.log(error);
@@ -27871,39 +27881,42 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
             //me.listado=1;
             me.list_data(page);
         },
-        edit_data: function edit_data(id) {
-            var me = this;
-            me.listado = 2;
-            me.clean_data();
-            me.get_type_document();
-            me.icon_edit = 'fa fa-spinner fa-spin';
-            var url = 'edit_data?id=' + id;
-            me.id_customer_credit = id;
-            axios.get(url).then(function (response) {
-                var respuesta = response.data;
-                me.id = respuesta.datax[0].id;
-                me.nro_doc = respuesta.datax[0].number_doc;
-                me.name = respuesta.datax[0].names;
-                me.paternal_last_name = respuesta.datax[0].paternal_last_name;
-                me.maternal_last_name = respuesta.datax[0].maternal_last_name;
-                me.phone = respuesta.datax[0].phone;
-                me.address = respuesta.datax[0].address;
-                me.sex = respuesta.datax[0].sex;
-                me.reference = respuesta.datax[0].reference;
-                me.code = respuesta.datax[0].code;
-                me.email = respuesta.datax[0].email;
-                me.district = respuesta.datax[0].id_district;
-                me.province = respuesta.datax[0].id_province;
-                me.department = respuesta.datax[0].id_department;
-                me.id_type_doc = respuesta.datax[0].id_type_document;
-                me.marital_status = respuesta.datax[0].marital_status;
-                me.birthdate = __WEBPACK_IMPORTED_MODULE_1_moment_timezone___default()(respuesta.datax[0].birthdate).toDate();
-                me.validarData();
-                me.icon_edit = 'fa fa-pencil';
-            }).catch(function (error) {
-                console.log(error);
-            });
-        },
+
+        // edit_data(id){
+        //     let me=this;
+        //     me.listado=2;
+        //     me.clean_data();
+        //     me.get_type_document();
+        //     me.icon_edit='fa fa-spinner fa-spin';
+        //     var url= 'edit_data?id='+id;
+        //     me.id_customer_credit=id;
+        //     axios.get(url).then(function (response) {
+        //         var respuesta= response.data;
+        //         me.id=respuesta.datax[0].id;
+        //         me.nro_doc = respuesta.datax[0].number_doc;
+        //         me.name = respuesta.datax[0].names;
+        //         me.paternal_last_name = respuesta.datax[0].paternal_last_name;
+        //         me.maternal_last_name = respuesta.datax[0].maternal_last_name;
+        //         me.phone = respuesta.datax[0].phone;
+        //         me.address =respuesta.datax[0].address;
+        //         me.sex =respuesta.datax[0].sex;
+        //         me.reference =respuesta.datax[0].reference;
+        //         me.code =respuesta.datax[0].code;
+        //         me.email =respuesta.datax[0].email;
+        //         me.district =respuesta.datax[0].id_district;
+        //         me.province =respuesta.datax[0].id_province;
+        //         me.department =respuesta.datax[0].id_department;
+        //         me.id_type_doc =respuesta.datax[0].id_type_document;
+        //         me.marital_status =respuesta.datax[0].marital_status;
+        //         me.birthdate=moment(respuesta.datax[0].birthdate).toDate();
+        //         me.validarData();         
+        //         me.icon_edit='fa fa-pencil';       
+        //     })
+        //     .catch(function (error) {
+        //         console.log(error);
+        //     });
+
+        // },
         save_data_only_client: function save_data_only_client() {
             var _this3 = this;
 
@@ -27937,7 +27950,9 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
                         'email': _this3.email, 'reference': _this3.reference,
                         'id_district': _this3.district,
                         'birthdate': __WEBPACK_IMPORTED_MODULE_1_moment_timezone___default()(__WEBPACK_IMPORTED_MODULE_1_moment_timezone___default()(_this3.birthdate, 'DD/MM/YYYY')).format('YYYY-MM-DD'),
-                        'id_customer_credit': _this3.id_customer_credit
+                        'id_customer_credit': _this3.id_customer_credit,
+                        'id_job': _this3.id_job, 'id_type_business': _this3.id_type_business
+
                     }).then(function (response) {
                         me.clean_data();
                         me.list_data(1);
@@ -28014,13 +28029,13 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
                 reverseButtons: true
             }).then(function (result) {
                 if (result.value) {
-                    var _me4 = _this5;
+                    var me = _this5;
                     axios.post('deleteCustomerCredit', {
                         'id': id
 
                     }).then(function (response) {
-                        _me4.listado = 1;
-                        _me4.list_data(1);
+                        me.listado = 1;
+                        me.list_data(1);
                         swal('Eliminado!', 'Su cliente ha sido eliminado.', 'success');
                     }).catch(function (error) {
                         console.log(error);
@@ -28114,67 +28129,73 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
             this.term = 1;
             this.interest = 0;
         },
-        list_data: function list_data(page) {
+
+        // list_data(page){
+        //     let me=this;                      
+        //     me.listado=0;
+        //     me.get_department();
+        //     me.get_type_document();
+        //     var url= 'getListCustomerCredit?buscar='+me.buscar+'&page='+page;
+        //     axios.get(url).then(function (response) {
+        //         var respuesta= response.data;
+        //         me.list=respuesta.datax;
+        //         me.pagination= respuesta.pagination;                     
+        //         me.listado=2;
+        //     })
+        //     .catch(function (error) {
+        //         console.log(error);
+        //     });
+
+        // },
+        get_type_requirement: function get_type_requirement() {
             var me = this;
-            me.listado = 0;
-            me.get_department();
-            me.get_type_document();
-            var url = 'getListCustomerCredit?buscar=' + me.buscar + '&page=' + page;
+            var url = 'get_type_requeriment';
             axios.get(url).then(function (response) {
                 var respuesta = response.data;
-                me.list = respuesta.datax;
-                me.pagination = respuesta.pagination;
-                me.listado = 2;
+                me.array_requirement = respuesta.datax;
+            }).catch(function (error) {
+                console.log(error);
+            });
+        },
+        get_job: function get_job() {
+            var me = this;
+            var url = 'get_job';
+            axios.get(url).then(function (response) {
+                var respuesta = response.data;
+                me.array_job = respuesta.datax;
+            }).catch(function (error) {
+                console.log(error);
+            });
+        },
+
+
+        init: function init() {
+            //cargar actividades
+            var me = this;
+            me.requirements = [];
+            var url = 'get_type_requeriment';
+            axios.get(url).then(function (response) {
+                var respuesta = response.data;
+                var lista = respuesta.datax;
+                for (var i = 0; i < lista.length; i++) {
+                    me.requirements.push({ check: false, id_type_requerement: lista[i].id_type_requerement, name: '' });
+                    console.log(me.requirements);
+                }
             }).catch(function (error) {
                 console.log(error);
             });
         }
-    }, _defineProperty(_methods, 'get_type_document', function get_type_document() {
-        var me = this;
-        var url = 'getTypeDocument';
-        axios.get(url).then(function (response) {
-            var respuesta = response.data;
-            me.listProgram = respuesta.datax;
-        }).catch(function (error) {
-            console.log(error);
-        });
-    }), _defineProperty(_methods, 'get_type_business', function get_type_business() {
-        var url = 'get_product_program?id_customer=' + id_product;
-        axios.get(url).then(function (response) {
-            me.obtenerProgramas();
-            var respuesta = response.data;
-            var listactual = respuesta.datax;
-            for (var i = 0; i < me.listProgramx.length; i++) {
-                for (var j = 0; j < listactual.length; j++) {
-                    if (me.listProgramx[i].id_program == listactual[j].id_program) {
-                        me.listProgramx[i].check = true;
-                    }
-                }
-            }
-        }).catch(function (error) {
-            console.log(error);
-        });
-    }), _defineProperty(_methods, 'init', function init() {
-        //cargar actividades
-        var me = this;
-        me.listProgramx = [];
-        var url = 'getTypeDocument';
-        axios.get(url).then(function (response) {
-            var respuesta = response.data;
-            var lista = respuesta.datax;
-            for (var i = 0; i < lista.length; i++) {
-                me.listProgramx.push({ check: false, id_type_document: lista[i].id_type_document, id_product: '' });
-                console.log(me.listProgramx);
-            }
-        }).catch(function (error) {
-            console.log(error);
-        });
-    }), _methods),
+
+    },
 
     mounted: function mounted() {
         //    this.lista_add_client();
-        this.list_data(1);
+        //    this.list_data(1);
+        this.get_department();
+        this.get_type_business();
+        this.get_job();
         this.get_type_document();
+        this.get_type_requirement();
         this.listadox = 1;
         this.calculateTeabyTerm();
         this.get_province(10);
@@ -30276,183 +30297,186 @@ var render = function() {
                                             [
                                               _vm._m(20),
                                               _vm._v(" "),
-                                              _vm._l(_vm.listProgram, function(
-                                                midata,
-                                                index
-                                              ) {
-                                                return _c(
-                                                  "div",
-                                                  {
-                                                    key: index,
-                                                    staticClass: "col-md-3"
-                                                  },
-                                                  [
-                                                    _c(
-                                                      "div",
-                                                      {
-                                                        staticClass:
-                                                          "form-group"
-                                                      },
-                                                      [
-                                                        _c(
-                                                          "div",
-                                                          {
-                                                            staticClass:
-                                                              "checkbox"
-                                                          },
-                                                          [
-                                                            _c(
-                                                              "label",
-                                                              {
-                                                                staticClass:
-                                                                  "container"
-                                                              },
-                                                              [
-                                                                _c("input", {
-                                                                  directives: [
-                                                                    {
-                                                                      name:
-                                                                        "model",
-                                                                      rawName:
-                                                                        "v-model",
-                                                                      value:
-                                                                        _vm
-                                                                          .listProgramx[
-                                                                          index
-                                                                        ].check,
-                                                                      expression:
-                                                                        "listProgramx[index].check"
-                                                                    }
-                                                                  ],
-                                                                  attrs: {
-                                                                    type:
-                                                                      "checkbox"
-                                                                  },
-                                                                  domProps: {
-                                                                    checked: Array.isArray(
-                                                                      _vm
-                                                                        .listProgramx[
-                                                                        index
-                                                                      ].check
-                                                                    )
-                                                                      ? _vm._i(
+                                              _vm._l(
+                                                _vm.array_requirement,
+                                                function(midata, index) {
+                                                  return _c(
+                                                    "div",
+                                                    {
+                                                      key: index,
+                                                      staticClass: "col-md-3"
+                                                    },
+                                                    [
+                                                      _c(
+                                                        "div",
+                                                        {
+                                                          staticClass:
+                                                            "form-group"
+                                                        },
+                                                        [
+                                                          _c(
+                                                            "div",
+                                                            {
+                                                              staticClass:
+                                                                "checkbox"
+                                                            },
+                                                            [
+                                                              _c(
+                                                                "label",
+                                                                {
+                                                                  staticClass:
+                                                                    "container"
+                                                                },
+                                                                [
+                                                                  _c("input", {
+                                                                    directives: [
+                                                                      {
+                                                                        name:
+                                                                          "model",
+                                                                        rawName:
+                                                                          "v-model",
+                                                                        value:
                                                                           _vm
-                                                                            .listProgramx[
+                                                                            .requirements[
                                                                             index
                                                                           ]
                                                                             .check,
-                                                                          null
-                                                                        ) > -1
-                                                                      : _vm
-                                                                          .listProgramx[
+                                                                        expression:
+                                                                          "requirements[index].check"
+                                                                      }
+                                                                    ],
+                                                                    attrs: {
+                                                                      type:
+                                                                        "checkbox"
+                                                                    },
+                                                                    domProps: {
+                                                                      checked: Array.isArray(
+                                                                        _vm
+                                                                          .requirements[
                                                                           index
                                                                         ].check
-                                                                  },
-                                                                  on: {
-                                                                    change: function(
-                                                                      $event
-                                                                    ) {
-                                                                      var $$a =
-                                                                          _vm
-                                                                            .listProgramx[
+                                                                      )
+                                                                        ? _vm._i(
+                                                                            _vm
+                                                                              .requirements[
+                                                                              index
+                                                                            ]
+                                                                              .check,
+                                                                            null
+                                                                          ) > -1
+                                                                        : _vm
+                                                                            .requirements[
                                                                             index
                                                                           ]
-                                                                            .check,
-                                                                        $$el =
-                                                                          $event.target,
-                                                                        $$c = $$el.checked
-                                                                          ? true
-                                                                          : false
-                                                                      if (
-                                                                        Array.isArray(
-                                                                          $$a
-                                                                        )
+                                                                            .check
+                                                                    },
+                                                                    on: {
+                                                                      change: function(
+                                                                        $event
                                                                       ) {
-                                                                        var $$v = null,
-                                                                          $$i = _vm._i(
-                                                                            $$a,
-                                                                            $$v
-                                                                          )
+                                                                        var $$a =
+                                                                            _vm
+                                                                              .requirements[
+                                                                              index
+                                                                            ]
+                                                                              .check,
+                                                                          $$el =
+                                                                            $event.target,
+                                                                          $$c = $$el.checked
+                                                                            ? true
+                                                                            : false
                                                                         if (
-                                                                          $$el.checked
+                                                                          Array.isArray(
+                                                                            $$a
+                                                                          )
                                                                         ) {
-                                                                          $$i <
-                                                                            0 &&
-                                                                            _vm.$set(
-                                                                              _vm
-                                                                                .listProgramx[
-                                                                                index
-                                                                              ],
-                                                                              "check",
-                                                                              $$a.concat(
-                                                                                [
-                                                                                  $$v
-                                                                                ]
+                                                                          var $$v = null,
+                                                                            $$i = _vm._i(
+                                                                              $$a,
+                                                                              $$v
+                                                                            )
+                                                                          if (
+                                                                            $$el.checked
+                                                                          ) {
+                                                                            $$i <
+                                                                              0 &&
+                                                                              _vm.$set(
+                                                                                _vm
+                                                                                  .requirements[
+                                                                                  index
+                                                                                ],
+                                                                                "check",
+                                                                                $$a.concat(
+                                                                                  [
+                                                                                    $$v
+                                                                                  ]
+                                                                                )
                                                                               )
-                                                                            )
-                                                                        } else {
-                                                                          $$i >
-                                                                            -1 &&
-                                                                            _vm.$set(
-                                                                              _vm
-                                                                                .listProgramx[
-                                                                                index
-                                                                              ],
-                                                                              "check",
-                                                                              $$a
-                                                                                .slice(
-                                                                                  0,
-                                                                                  $$i
-                                                                                )
-                                                                                .concat(
-                                                                                  $$a.slice(
-                                                                                    $$i +
-                                                                                      1
+                                                                          } else {
+                                                                            $$i >
+                                                                              -1 &&
+                                                                              _vm.$set(
+                                                                                _vm
+                                                                                  .requirements[
+                                                                                  index
+                                                                                ],
+                                                                                "check",
+                                                                                $$a
+                                                                                  .slice(
+                                                                                    0,
+                                                                                    $$i
                                                                                   )
-                                                                                )
-                                                                            )
+                                                                                  .concat(
+                                                                                    $$a.slice(
+                                                                                      $$i +
+                                                                                        1
+                                                                                    )
+                                                                                  )
+                                                                              )
+                                                                          }
+                                                                        } else {
+                                                                          _vm.$set(
+                                                                            _vm
+                                                                              .requirements[
+                                                                              index
+                                                                            ],
+                                                                            "check",
+                                                                            $$c
+                                                                          )
                                                                         }
-                                                                      } else {
-                                                                        _vm.$set(
-                                                                          _vm
-                                                                            .listProgramx[
-                                                                            index
-                                                                          ],
-                                                                          "check",
-                                                                          $$c
-                                                                        )
                                                                       }
                                                                     }
-                                                                  }
-                                                                }),
-                                                                _vm._v(" "),
-                                                                _c("strong", [
-                                                                  _vm._v(
-                                                                    _vm._s(
-                                                                      index + 1
+                                                                  }),
+                                                                  _vm._v(" "),
+                                                                  _c("strong", [
+                                                                    _vm._v(
+                                                                      _vm._s(
+                                                                        index +
+                                                                          1
+                                                                      )
                                                                     )
-                                                                  )
-                                                                ]),
-                                                                _vm._v(
-                                                                  ". " +
-                                                                    _vm._s(
-                                                                      midata.name
-                                                                    ) +
-                                                                    "\n                                                                                    "
-                                                                ),
-                                                                _c("span", {
-                                                                  staticClass:
-                                                                    "checkmark"
-                                                                })
-                                                              ]
-                                                            )
-                                                          ]
-                                                        )
-                                                      ]
-                                                    )
-                                                  ]
-                                                )
-                                              })
+                                                                  ]),
+                                                                  _vm._v(
+                                                                    ". " +
+                                                                      _vm._s(
+                                                                        midata.name
+                                                                      ) +
+                                                                      "\n                                                                                    "
+                                                                  ),
+                                                                  _c("span", {
+                                                                    staticClass:
+                                                                      "checkmark"
+                                                                  })
+                                                                ]
+                                                              )
+                                                            ]
+                                                          )
+                                                        ]
+                                                      )
+                                                    ]
+                                                  )
+                                                }
+                                              )
                                             ],
                                             2
                                           )
