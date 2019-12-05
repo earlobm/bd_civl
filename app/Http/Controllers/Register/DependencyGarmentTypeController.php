@@ -5,7 +5,7 @@ use Illuminate\Http\Request;
 use poi\Http\Controllers\Controller;
 use poi\Http\Requests as BaseController;
 use Illuminate\Support\Facades\Redirect;
-use poi\EntityClass\Dependency;
+use poi\EntityClass\Dependence;
 
 use Maatwebsite\Excel\Facades\Excel;
 use Maatwebsite\Excel\Concerns\FromQuery;
@@ -187,9 +187,9 @@ class DependencyGarmentTypeController extends Controller
     public function saveDependency(Request $request){
         
         if($request->id==-1){
-            $clasex = new Dependency();
+            $clasex = new Dependence();
         }else{
-            $clasex = Dependency::findOrFail($request->id);
+            $clasex = Dependence::findOrFail($request->id);
             //DependencyActivity::where('id_dependency', $request->id)->delete();
             DependencyActivity::where('id_dependency', $request->id)->update(['state' => false]);
         }

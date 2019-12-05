@@ -27389,6 +27389,19 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -27402,11 +27415,11 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         return _ref = {
 
             id_parent: '', visible: 1, array_job: [], id_job: '',
-            array_type_business: [], id_type_business: '',
+            array_type_business: [], id_type_business: '', array_employee: [],
             authUser: '', porcent: 50,
             listadox: 1,
             listado: 2
-        }, _defineProperty(_ref, 'authUser', 1), _defineProperty(_ref, 'birthdate', ''), _defineProperty(_ref, 'date_init', '' + new Date().getDate() + '/' + (Number(new Date().getMonth()) + 1) + '/' + new Date().getFullYear()), _defineProperty(_ref, 'options', {
+        }, _defineProperty(_ref, 'authUser', 1), _defineProperty(_ref, 'birthdate', '' + new Date().getDate() + '/' + (Number(new Date().getMonth()) + 1) + '/' + new Date().getFullYear()), _defineProperty(_ref, 'options', {
             format: 'DD/MM/YYYY',
             useCurrent: false,
             locale: 'es',
@@ -27469,7 +27482,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
                 console.log(error);
             });
         },
-        get_type_document: function get_type_document() {
+        getTypeDocument: function getTypeDocument() {
             var me = this;
             // me.listado=0;
             var url = 'get_type_document';
@@ -27480,7 +27493,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
                 console.log(error);
             });
         },
-        get_type_business: function get_type_business() {
+        getTypeBusiness: function getTypeBusiness() {
             var me = this;
             // me.listado=0;
             var url = 'get_type_business';
@@ -27491,7 +27504,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
                 console.log(error);
             });
         },
-        get_department: function get_department() {
+        getDepartment: function getDepartment() {
             var me = this;
             // me.listado=0;
             var url = 'get_department';
@@ -27502,7 +27515,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
                 console.log(error);
             });
         },
-        get_province: function get_province(id_department) {
+        getProvince: function getProvince(id_department) {
             var me = this;
             // me.listado=0;
             var url = 'get_province?id=' + id_department;
@@ -27513,7 +27526,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
                 console.log(error);
             });
         },
-        get_district: function get_district(id_province) {
+        getDistrict: function getDistrict(id_province) {
             var me = this;
             // me.listado=0;
             var url = 'get_district?id=' + id_province;
@@ -27886,7 +27899,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         //     let me=this;
         //     me.listado=2;
         //     me.clean_data();
-        //     me.get_type_document();
+        //     me.getTypeDocument();
         //     me.icon_edit='fa fa-spinner fa-spin';
         //     var url= 'edit_data?id='+id;
         //     me.id_customer_credit=id;
@@ -28133,8 +28146,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         // list_data(page){
         //     let me=this;                      
         //     me.listado=0;
-        //     me.get_department();
-        //     me.get_type_document();
+        //     me.getDepartment();
+        //     me.getTypeDocument();
         //     var url= 'getListCustomerCredit?buscar='+me.buscar+'&page='+page;
         //     axios.get(url).then(function (response) {
         //         var respuesta= response.data;
@@ -28147,9 +28160,9 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         //     });
 
         // },
-        get_type_requirement: function get_type_requirement() {
+        getTypeRequirement: function getTypeRequirement() {
             var me = this;
-            var url = 'get_type_requeriment';
+            var url = 'get_type_requirement';
             axios.get(url).then(function (response) {
                 var respuesta = response.data;
                 me.array_requirement = respuesta.datax;
@@ -28157,12 +28170,22 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
                 console.log(error);
             });
         },
-        get_job: function get_job() {
+        getJob: function getJob() {
             var me = this;
             var url = 'get_job';
             axios.get(url).then(function (response) {
                 var respuesta = response.data;
                 me.array_job = respuesta.datax;
+            }).catch(function (error) {
+                console.log(error);
+            });
+        },
+        getEmployee: function getEmployee() {
+            var me = this;
+            var url = 'get_employee';
+            axios.get(url).then(function (response) {
+                var respuesta = response.data;
+                me.array_employee = respuesta.datax;
             }).catch(function (error) {
                 console.log(error);
             });
@@ -28173,7 +28196,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
             //cargar actividades
             var me = this;
             me.requirements = [];
-            var url = 'get_type_requeriment';
+            var url = 'get_type_requirement';
             axios.get(url).then(function (response) {
                 var respuesta = response.data;
                 var lista = respuesta.datax;
@@ -28189,17 +28212,18 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     },
 
     mounted: function mounted() {
+        this.listadox = 1;
         //    this.lista_add_client();
         //    this.list_data(1);
-        this.get_department();
-        this.get_type_business();
-        this.get_job();
-        this.get_type_document();
-        this.get_type_requirement();
-        this.listadox = 1;
+        this.getDepartment();
+        this.getTypeBusiness();
+        this.getJob();
+        this.getEmployee();
+        this.getTypeDocument();
+        this.getTypeRequirement();
         this.calculateTeabyTerm();
-        this.get_province(10);
-        this.get_district(92);
+        this.getProvince(10);
+        this.getDistrict(92);
     }
 });
 
@@ -28679,7 +28703,7 @@ var render = function() {
                                             _vm._v(" "),
                                             _c(
                                               "div",
-                                              { staticClass: "col-md-3" },
+                                              { staticClass: "col-md-4" },
                                               [
                                                 _c(
                                                   "div",
@@ -28762,7 +28786,7 @@ var render = function() {
                                             _vm._v(" "),
                                             _c(
                                               "div",
-                                              { staticClass: "col-md-3" },
+                                              { staticClass: "col-md-4" },
                                               [
                                                 _c(
                                                   "div",
@@ -28845,7 +28869,7 @@ var render = function() {
                                             _vm._v(" "),
                                             _c(
                                               "div",
-                                              { staticClass: "col-md-3" },
+                                              { staticClass: "col-md-4" },
                                               [
                                                 _c(
                                                   "div",
@@ -29401,7 +29425,8 @@ var render = function() {
                                                               "3px"
                                                           },
                                                           attrs: {
-                                                            type: "text"
+                                                            type: "email",
+                                                            name: "email"
                                                           },
                                                           domProps: {
                                                             value: _vm.email
@@ -29440,6 +29465,406 @@ var render = function() {
                                                       "label",
                                                       {
                                                         attrs: {
+                                                          for: "type_business"
+                                                        }
+                                                      },
+                                                      [_vm._v("Ocupación:")]
+                                                    ),
+                                                    _vm._v(" "),
+                                                    _c(
+                                                      "div",
+                                                      {
+                                                        staticClass:
+                                                          "input-group"
+                                                      },
+                                                      [
+                                                        _vm._m(13),
+                                                        _vm._v(" "),
+                                                        _c(
+                                                          "select",
+                                                          {
+                                                            directives: [
+                                                              {
+                                                                name: "model",
+                                                                rawName:
+                                                                  "v-model",
+                                                                value:
+                                                                  _vm.id_job,
+                                                                expression:
+                                                                  "id_job"
+                                                              }
+                                                            ],
+                                                            staticClass:
+                                                              "form-control",
+                                                            staticStyle: {
+                                                              "border-bottom-right-radius":
+                                                                "3px",
+                                                              "border-top-right-radius":
+                                                                "3px"
+                                                            },
+                                                            on: {
+                                                              change: function(
+                                                                $event
+                                                              ) {
+                                                                var $$selectedVal = Array.prototype.filter
+                                                                  .call(
+                                                                    $event
+                                                                      .target
+                                                                      .options,
+                                                                    function(
+                                                                      o
+                                                                    ) {
+                                                                      return o.selected
+                                                                    }
+                                                                  )
+                                                                  .map(function(
+                                                                    o
+                                                                  ) {
+                                                                    var val =
+                                                                      "_value" in
+                                                                      o
+                                                                        ? o._value
+                                                                        : o.value
+                                                                    return val
+                                                                  })
+                                                                _vm.id_job = $event
+                                                                  .target
+                                                                  .multiple
+                                                                  ? $$selectedVal
+                                                                  : $$selectedVal[0]
+                                                              }
+                                                            }
+                                                          },
+                                                          [
+                                                            _c(
+                                                              "option",
+                                                              {
+                                                                attrs: {
+                                                                  selected:
+                                                                    "selected",
+                                                                  value: ""
+                                                                }
+                                                              },
+                                                              [
+                                                                _vm._v(
+                                                                  "Seleccione"
+                                                                )
+                                                              ]
+                                                            ),
+                                                            _vm._v(" "),
+                                                            _vm._l(
+                                                              _vm.array_job,
+                                                              function(datax) {
+                                                                return _c(
+                                                                  "option",
+                                                                  {
+                                                                    key:
+                                                                      datax.id,
+                                                                    domProps: {
+                                                                      value:
+                                                                        datax.id
+                                                                    }
+                                                                  },
+                                                                  [
+                                                                    _vm._v(
+                                                                      _vm._s(
+                                                                        datax.name
+                                                                      )
+                                                                    )
+                                                                  ]
+                                                                )
+                                                              }
+                                                            )
+                                                          ],
+                                                          2
+                                                        )
+                                                      ]
+                                                    )
+                                                  ]
+                                                )
+                                              ]
+                                            ),
+                                            _vm._v(" "),
+                                            _c(
+                                              "div",
+                                              { staticClass: "col-md-3" },
+                                              [
+                                                _c(
+                                                  "div",
+                                                  { staticClass: "form-group" },
+                                                  [
+                                                    _c(
+                                                      "label",
+                                                      {
+                                                        attrs: {
+                                                          for: "type_business"
+                                                        }
+                                                      },
+                                                      [
+                                                        _vm._v(
+                                                          "Tipo de Negocio:"
+                                                        )
+                                                      ]
+                                                    ),
+                                                    _vm._v(" "),
+                                                    _c(
+                                                      "div",
+                                                      {
+                                                        staticClass:
+                                                          "input-group"
+                                                      },
+                                                      [
+                                                        _vm._m(14),
+                                                        _vm._v(" "),
+                                                        _c(
+                                                          "select",
+                                                          {
+                                                            directives: [
+                                                              {
+                                                                name: "model",
+                                                                rawName:
+                                                                  "v-model",
+                                                                value:
+                                                                  _vm.id_type_business,
+                                                                expression:
+                                                                  "id_type_business"
+                                                              }
+                                                            ],
+                                                            staticClass:
+                                                              "form-control",
+                                                            staticStyle: {
+                                                              "border-bottom-right-radius":
+                                                                "3px",
+                                                              "border-top-right-radius":
+                                                                "3px"
+                                                            },
+                                                            on: {
+                                                              change: function(
+                                                                $event
+                                                              ) {
+                                                                var $$selectedVal = Array.prototype.filter
+                                                                  .call(
+                                                                    $event
+                                                                      .target
+                                                                      .options,
+                                                                    function(
+                                                                      o
+                                                                    ) {
+                                                                      return o.selected
+                                                                    }
+                                                                  )
+                                                                  .map(function(
+                                                                    o
+                                                                  ) {
+                                                                    var val =
+                                                                      "_value" in
+                                                                      o
+                                                                        ? o._value
+                                                                        : o.value
+                                                                    return val
+                                                                  })
+                                                                _vm.id_type_business = $event
+                                                                  .target
+                                                                  .multiple
+                                                                  ? $$selectedVal
+                                                                  : $$selectedVal[0]
+                                                              }
+                                                            }
+                                                          },
+                                                          [
+                                                            _c(
+                                                              "option",
+                                                              {
+                                                                attrs: {
+                                                                  selected:
+                                                                    "selected",
+                                                                  value: ""
+                                                                }
+                                                              },
+                                                              [
+                                                                _vm._v(
+                                                                  "Seleccione"
+                                                                )
+                                                              ]
+                                                            ),
+                                                            _vm._v(" "),
+                                                            _vm._l(
+                                                              _vm.array_type_business,
+                                                              function(datax) {
+                                                                return _c(
+                                                                  "option",
+                                                                  {
+                                                                    key:
+                                                                      datax.id,
+                                                                    domProps: {
+                                                                      value:
+                                                                        datax.id
+                                                                    }
+                                                                  },
+                                                                  [
+                                                                    _vm._v(
+                                                                      _vm._s(
+                                                                        datax.name
+                                                                      )
+                                                                    )
+                                                                  ]
+                                                                )
+                                                              }
+                                                            )
+                                                          ],
+                                                          2
+                                                        )
+                                                      ]
+                                                    )
+                                                  ]
+                                                )
+                                              ]
+                                            ),
+                                            _vm._v(" "),
+                                            _c(
+                                              "div",
+                                              { staticClass: "col-md-3" },
+                                              [
+                                                _c(
+                                                  "div",
+                                                  { staticClass: "form-group" },
+                                                  [
+                                                    _c(
+                                                      "label",
+                                                      {
+                                                        attrs: {
+                                                          for: "type_business"
+                                                        }
+                                                      },
+                                                      [_vm._v("Promotor:")]
+                                                    ),
+                                                    _vm._v(" "),
+                                                    _c(
+                                                      "div",
+                                                      {
+                                                        staticClass:
+                                                          "input-group"
+                                                      },
+                                                      [
+                                                        _vm._m(15),
+                                                        _vm._v(" "),
+                                                        _c(
+                                                          "select",
+                                                          {
+                                                            directives: [
+                                                              {
+                                                                name: "model",
+                                                                rawName:
+                                                                  "v-model",
+                                                                value:
+                                                                  _vm.id_type_business,
+                                                                expression:
+                                                                  "id_type_business"
+                                                              }
+                                                            ],
+                                                            staticClass:
+                                                              "form-control",
+                                                            staticStyle: {
+                                                              "border-bottom-right-radius":
+                                                                "3px",
+                                                              "border-top-right-radius":
+                                                                "3px"
+                                                            },
+                                                            on: {
+                                                              change: function(
+                                                                $event
+                                                              ) {
+                                                                var $$selectedVal = Array.prototype.filter
+                                                                  .call(
+                                                                    $event
+                                                                      .target
+                                                                      .options,
+                                                                    function(
+                                                                      o
+                                                                    ) {
+                                                                      return o.selected
+                                                                    }
+                                                                  )
+                                                                  .map(function(
+                                                                    o
+                                                                  ) {
+                                                                    var val =
+                                                                      "_value" in
+                                                                      o
+                                                                        ? o._value
+                                                                        : o.value
+                                                                    return val
+                                                                  })
+                                                                _vm.id_type_business = $event
+                                                                  .target
+                                                                  .multiple
+                                                                  ? $$selectedVal
+                                                                  : $$selectedVal[0]
+                                                              }
+                                                            }
+                                                          },
+                                                          [
+                                                            _c(
+                                                              "option",
+                                                              {
+                                                                attrs: {
+                                                                  selected:
+                                                                    "selected",
+                                                                  value: ""
+                                                                }
+                                                              },
+                                                              [
+                                                                _vm._v(
+                                                                  "Seleccione"
+                                                                )
+                                                              ]
+                                                            ),
+                                                            _vm._v(" "),
+                                                            _vm._l(
+                                                              _vm.array_employee,
+                                                              function(datax) {
+                                                                return _c(
+                                                                  "option",
+                                                                  {
+                                                                    key:
+                                                                      datax.id,
+                                                                    domProps: {
+                                                                      value:
+                                                                        datax.id
+                                                                    }
+                                                                  },
+                                                                  [
+                                                                    _vm._v(
+                                                                      _vm._s(
+                                                                        datax.employee
+                                                                      )
+                                                                    )
+                                                                  ]
+                                                                )
+                                                              }
+                                                            )
+                                                          ],
+                                                          2
+                                                        )
+                                                      ]
+                                                    )
+                                                  ]
+                                                )
+                                              ]
+                                            ),
+                                            _vm._v(" "),
+                                            _c(
+                                              "div",
+                                              { staticClass: "col-md-3" },
+                                              [
+                                                _c(
+                                                  "div",
+                                                  { staticClass: "form-group" },
+                                                  [
+                                                    _c(
+                                                      "label",
+                                                      {
+                                                        attrs: {
                                                           for: "estado_civil"
                                                         }
                                                       },
@@ -29453,7 +29878,7 @@ var render = function() {
                                                           "input-group"
                                                       },
                                                       [
-                                                        _vm._m(13),
+                                                        _vm._m(16),
                                                         _vm._v(" "),
                                                         _c(
                                                           "select",
@@ -29514,7 +29939,7 @@ var render = function() {
                                                                 function(
                                                                   $event
                                                                 ) {
-                                                                  return _vm.get_province(
+                                                                  return _vm.getProvince(
                                                                     $event
                                                                       .target
                                                                       .value
@@ -29603,7 +30028,7 @@ var render = function() {
                                                           "input-group"
                                                       },
                                                       [
-                                                        _vm._m(14),
+                                                        _vm._m(17),
                                                         _vm._v(" "),
                                                         _c(
                                                           "select",
@@ -29664,7 +30089,7 @@ var render = function() {
                                                                 function(
                                                                   $event
                                                                 ) {
-                                                                  return _vm.get_district(
+                                                                  return _vm.getDistrict(
                                                                     $event
                                                                       .target
                                                                       .value
@@ -29753,7 +30178,7 @@ var render = function() {
                                                           "input-group"
                                                       },
                                                       [
-                                                        _vm._m(15),
+                                                        _vm._m(18),
                                                         _vm._v(" "),
                                                         _c(
                                                           "select",
@@ -29893,7 +30318,7 @@ var render = function() {
                                                           "input-group"
                                                       },
                                                       [
-                                                        _vm._m(16),
+                                                        _vm._m(19),
                                                         _vm._v(" "),
                                                         _c("input", {
                                                           directives: [
@@ -29947,7 +30372,7 @@ var render = function() {
                                             _vm._v(" "),
                                             _c(
                                               "div",
-                                              { staticClass: "col-md-6" },
+                                              { staticClass: "col-md-12" },
                                               [
                                                 _c(
                                                   "div",
@@ -29970,9 +30395,9 @@ var render = function() {
                                                           "input-group"
                                                       },
                                                       [
-                                                        _vm._m(17),
+                                                        _vm._m(20),
                                                         _vm._v(" "),
-                                                        _c("input", {
+                                                        _c("textarea", {
                                                           directives: [
                                                             {
                                                               name: "model",
@@ -30020,274 +30445,6 @@ var render = function() {
                                                   ]
                                                 )
                                               ]
-                                            ),
-                                            _vm._v(" "),
-                                            _c(
-                                              "div",
-                                              { staticClass: "col-md-3" },
-                                              [
-                                                _c(
-                                                  "div",
-                                                  { staticClass: "form-group" },
-                                                  [
-                                                    _c(
-                                                      "label",
-                                                      {
-                                                        attrs: {
-                                                          for: "type_business"
-                                                        }
-                                                      },
-                                                      [_vm._v("Ocupación:")]
-                                                    ),
-                                                    _vm._v(" "),
-                                                    _c(
-                                                      "div",
-                                                      {
-                                                        staticClass:
-                                                          "input-group"
-                                                      },
-                                                      [
-                                                        _vm._m(18),
-                                                        _vm._v(" "),
-                                                        _c(
-                                                          "select",
-                                                          {
-                                                            directives: [
-                                                              {
-                                                                name: "model",
-                                                                rawName:
-                                                                  "v-model",
-                                                                value:
-                                                                  _vm.id_job,
-                                                                expression:
-                                                                  "id_job"
-                                                              }
-                                                            ],
-                                                            staticClass:
-                                                              "form-control",
-                                                            staticStyle: {
-                                                              "border-bottom-right-radius":
-                                                                "3px",
-                                                              "border-top-right-radius":
-                                                                "3px"
-                                                            },
-                                                            on: {
-                                                              change: function(
-                                                                $event
-                                                              ) {
-                                                                var $$selectedVal = Array.prototype.filter
-                                                                  .call(
-                                                                    $event
-                                                                      .target
-                                                                      .options,
-                                                                    function(
-                                                                      o
-                                                                    ) {
-                                                                      return o.selected
-                                                                    }
-                                                                  )
-                                                                  .map(function(
-                                                                    o
-                                                                  ) {
-                                                                    var val =
-                                                                      "_value" in
-                                                                      o
-                                                                        ? o._value
-                                                                        : o.value
-                                                                    return val
-                                                                  })
-                                                                _vm.id_job = $event
-                                                                  .target
-                                                                  .multiple
-                                                                  ? $$selectedVal
-                                                                  : $$selectedVal[0]
-                                                              }
-                                                            }
-                                                          },
-                                                          [
-                                                            _c(
-                                                              "option",
-                                                              {
-                                                                attrs: {
-                                                                  selected:
-                                                                    "selected",
-                                                                  value: ""
-                                                                }
-                                                              },
-                                                              [
-                                                                _vm._v(
-                                                                  "Seleccione"
-                                                                )
-                                                              ]
-                                                            ),
-                                                            _vm._v(" "),
-                                                            _vm._l(
-                                                              _vm.array_job,
-                                                              function(datax) {
-                                                                return _c(
-                                                                  "option",
-                                                                  {
-                                                                    key:
-                                                                      datax.id,
-                                                                    domProps: {
-                                                                      value:
-                                                                        datax.id
-                                                                    }
-                                                                  },
-                                                                  [
-                                                                    _vm._v(
-                                                                      _vm._s(
-                                                                        datax.name
-                                                                      )
-                                                                    )
-                                                                  ]
-                                                                )
-                                                              }
-                                                            )
-                                                          ],
-                                                          2
-                                                        )
-                                                      ]
-                                                    )
-                                                  ]
-                                                )
-                                              ]
-                                            ),
-                                            _vm._v(" "),
-                                            _c(
-                                              "div",
-                                              { staticClass: "col-md-3" },
-                                              [
-                                                _c(
-                                                  "div",
-                                                  { staticClass: "form-group" },
-                                                  [
-                                                    _c(
-                                                      "label",
-                                                      {
-                                                        attrs: {
-                                                          for: "type_business"
-                                                        }
-                                                      },
-                                                      [
-                                                        _vm._v(
-                                                          "Tipo de Negocio:"
-                                                        )
-                                                      ]
-                                                    ),
-                                                    _vm._v(" "),
-                                                    _c(
-                                                      "div",
-                                                      {
-                                                        staticClass:
-                                                          "input-group"
-                                                      },
-                                                      [
-                                                        _vm._m(19),
-                                                        _vm._v(" "),
-                                                        _c(
-                                                          "select",
-                                                          {
-                                                            directives: [
-                                                              {
-                                                                name: "model",
-                                                                rawName:
-                                                                  "v-model",
-                                                                value:
-                                                                  _vm.id_type_business,
-                                                                expression:
-                                                                  "id_type_business"
-                                                              }
-                                                            ],
-                                                            staticClass:
-                                                              "form-control",
-                                                            staticStyle: {
-                                                              "border-bottom-right-radius":
-                                                                "3px",
-                                                              "border-top-right-radius":
-                                                                "3px"
-                                                            },
-                                                            on: {
-                                                              change: function(
-                                                                $event
-                                                              ) {
-                                                                var $$selectedVal = Array.prototype.filter
-                                                                  .call(
-                                                                    $event
-                                                                      .target
-                                                                      .options,
-                                                                    function(
-                                                                      o
-                                                                    ) {
-                                                                      return o.selected
-                                                                    }
-                                                                  )
-                                                                  .map(function(
-                                                                    o
-                                                                  ) {
-                                                                    var val =
-                                                                      "_value" in
-                                                                      o
-                                                                        ? o._value
-                                                                        : o.value
-                                                                    return val
-                                                                  })
-                                                                _vm.id_type_business = $event
-                                                                  .target
-                                                                  .multiple
-                                                                  ? $$selectedVal
-                                                                  : $$selectedVal[0]
-                                                              }
-                                                            }
-                                                          },
-                                                          [
-                                                            _c(
-                                                              "option",
-                                                              {
-                                                                attrs: {
-                                                                  selected:
-                                                                    "selected",
-                                                                  value: ""
-                                                                }
-                                                              },
-                                                              [
-                                                                _vm._v(
-                                                                  "Seleccione"
-                                                                )
-                                                              ]
-                                                            ),
-                                                            _vm._v(" "),
-                                                            _vm._l(
-                                                              _vm.array_type_business,
-                                                              function(datax) {
-                                                                return _c(
-                                                                  "option",
-                                                                  {
-                                                                    key:
-                                                                      datax.id,
-                                                                    domProps: {
-                                                                      value:
-                                                                        datax.id
-                                                                    }
-                                                                  },
-                                                                  [
-                                                                    _vm._v(
-                                                                      _vm._s(
-                                                                        datax.name
-                                                                      )
-                                                                    )
-                                                                  ]
-                                                                )
-                                                              }
-                                                            )
-                                                          ],
-                                                          2
-                                                        )
-                                                      ]
-                                                    )
-                                                  ]
-                                                )
-                                              ]
                                             )
                                           ]),
                                           _vm._v(" "),
@@ -30295,7 +30452,7 @@ var render = function() {
                                             "div",
                                             { staticClass: "row" },
                                             [
-                                              _vm._m(20),
+                                              _vm._m(21),
                                               _vm._v(" "),
                                               _vm._l(
                                                 _vm.array_requirement,
@@ -30511,7 +30668,7 @@ var render = function() {
                                                           "input-group"
                                                       },
                                                       [
-                                                        _vm._m(21),
+                                                        _vm._m(22),
                                                         _vm._v(" "),
                                                         _c("input", {
                                                           directives: [
@@ -30596,7 +30753,7 @@ var render = function() {
                                                           "input-group"
                                                       },
                                                       [
-                                                        _vm._m(22),
+                                                        _vm._m(23),
                                                         _vm._v(" "),
                                                         _c(
                                                           "select",
@@ -30748,7 +30905,7 @@ var render = function() {
                                                           "input-group"
                                                       },
                                                       [
-                                                        _vm._m(23),
+                                                        _vm._m(24),
                                                         _vm._v(" "),
                                                         _c(
                                                           "select",
@@ -30879,7 +31036,7 @@ var render = function() {
                                                           "input-group"
                                                       },
                                                       [
-                                                        _vm._m(24),
+                                                        _vm._m(25),
                                                         _vm._v(" "),
                                                         _c(
                                                           "select",
@@ -31017,7 +31174,7 @@ var render = function() {
                                                           "input-group"
                                                       },
                                                       [
-                                                        _vm._m(25),
+                                                        _vm._m(26),
                                                         _vm._v(" "),
                                                         _c("input", {
                                                           directives: [
@@ -31101,7 +31258,7 @@ var render = function() {
                                                           "input-group"
                                                       },
                                                       [
-                                                        _vm._m(26),
+                                                        _vm._m(27),
                                                         _vm._v(" "),
                                                         _c("date-picker", {
                                                           staticStyle: {
@@ -31162,7 +31319,7 @@ var render = function() {
                                                           "input-group"
                                                       },
                                                       [
-                                                        _vm._m(27),
+                                                        _vm._m(28),
                                                         _vm._v(" "),
                                                         _c("date-picker", {
                                                           staticStyle: {
@@ -31221,7 +31378,7 @@ var render = function() {
                                                           "input-group"
                                                       },
                                                       [
-                                                        _vm._m(28),
+                                                        _vm._m(29),
                                                         _vm._v(" "),
                                                         _c("input", {
                                                           directives: [
@@ -31301,7 +31458,7 @@ var render = function() {
                                                           "input-group"
                                                       },
                                                       [
-                                                        _vm._m(29),
+                                                        _vm._m(30),
                                                         _vm._v(" "),
                                                         _c("input", {
                                                           directives: [
@@ -31676,7 +31833,7 @@ var render = function() {
                                                           "input-group"
                                                       },
                                                       [
-                                                        _vm._m(30),
+                                                        _vm._m(31),
                                                         _vm._v(" "),
                                                         _c("input", {
                                                           directives: [
@@ -31754,7 +31911,7 @@ var render = function() {
                                                           "input-group"
                                                       },
                                                       [
-                                                        _vm._m(31),
+                                                        _vm._m(32),
                                                         _vm._v(" "),
                                                         _c("input", {
                                                           directives: [
@@ -31832,7 +31989,7 @@ var render = function() {
                                                           "input-group"
                                                       },
                                                       [
-                                                        _vm._m(32),
+                                                        _vm._m(33),
                                                         _vm._v(" "),
                                                         _c("input", {
                                                           directives: [
@@ -31914,7 +32071,7 @@ var render = function() {
                                                           "input-group"
                                                       },
                                                       [
-                                                        _vm._m(33),
+                                                        _vm._m(34),
                                                         _vm._v(" "),
                                                         _c("input", {
                                                           directives: [
@@ -31992,7 +32149,7 @@ var render = function() {
                                                           "input-group"
                                                       },
                                                       [
-                                                        _vm._m(34),
+                                                        _vm._m(35),
                                                         _vm._v(" "),
                                                         _c("textarea", {
                                                           directives: [
@@ -32065,7 +32222,7 @@ var render = function() {
                                           staticStyle: { "margin-top": "6px" }
                                         },
                                         [
-                                          _vm._m(35),
+                                          _vm._m(36),
                                           _vm._v(" "),
                                           _c(
                                             "div",
@@ -32214,7 +32371,7 @@ var render = function() {
                                                                 "input-group"
                                                             },
                                                             [
-                                                              _vm._m(36),
+                                                              _vm._m(37),
                                                               _vm._v(" "),
                                                               _c("input", {
                                                                 directives: [
@@ -32343,7 +32500,7 @@ var render = function() {
                                                                 "input-group"
                                                             },
                                                             [
-                                                              _vm._m(37),
+                                                              _vm._m(38),
                                                               _vm._v(" "),
                                                               _c(
                                                                 "select",
@@ -32488,7 +32645,7 @@ var render = function() {
                                                                 "input-group"
                                                             },
                                                             [
-                                                              _vm._m(38),
+                                                              _vm._m(39),
                                                               _vm._v(" "),
                                                               _c("input", {
                                                                 directives: [
@@ -32643,7 +32800,7 @@ var render = function() {
                                                                 "input-group"
                                                             },
                                                             [
-                                                              _vm._m(39),
+                                                              _vm._m(40),
                                                               _vm._v(" "),
                                                               _c("input", {
                                                                 directives: [
@@ -32729,7 +32886,7 @@ var render = function() {
                                                                 "input-group"
                                                             },
                                                             [
-                                                              _vm._m(40),
+                                                              _vm._m(41),
                                                               _vm._v(" "),
                                                               _c("input", {
                                                                 directives: [
@@ -32810,7 +32967,7 @@ var render = function() {
                                                                 "input-group"
                                                             },
                                                             [
-                                                              _vm._m(41),
+                                                              _vm._m(42),
                                                               _vm._v(" "),
                                                               _c("input", {
                                                                 directives: [
@@ -32891,7 +33048,7 @@ var render = function() {
                                                                 "input-group"
                                                             },
                                                             [
-                                                              _vm._m(42),
+                                                              _vm._m(43),
                                                               _vm._v(" "),
                                                               _c(
                                                                 "select",
@@ -33039,7 +33196,7 @@ var render = function() {
                                                                 "input-group"
                                                             },
                                                             [
-                                                              _vm._m(43),
+                                                              _vm._m(44),
                                                               _vm._v(" "),
                                                               _c(
                                                                 "date-picker",
@@ -33108,7 +33265,7 @@ var render = function() {
                                                                 "input-group"
                                                             },
                                                             [
-                                                              _vm._m(44),
+                                                              _vm._m(45),
                                                               _vm._v(" "),
                                                               _c(
                                                                 "select",
@@ -33282,7 +33439,7 @@ var render = function() {
                                                                 "input-group"
                                                             },
                                                             [
-                                                              _vm._m(45),
+                                                              _vm._m(46),
                                                               _vm._v(" "),
                                                               _c("input", {
                                                                 directives: [
@@ -33367,7 +33524,7 @@ var render = function() {
                                                                 "input-group"
                                                             },
                                                             [
-                                                              _vm._m(46),
+                                                              _vm._m(47),
                                                               _vm._v(" "),
                                                               _c("input", {
                                                                 directives: [
@@ -33391,7 +33548,8 @@ var render = function() {
                                                                     "3px"
                                                                 },
                                                                 attrs: {
-                                                                  type: "text"
+                                                                  type: "email",
+                                                                  name: "email"
                                                                 },
                                                                 domProps: {
                                                                   value:
@@ -33453,7 +33611,7 @@ var render = function() {
                                                                 "input-group"
                                                             },
                                                             [
-                                                              _vm._m(47),
+                                                              _vm._m(48),
                                                               _vm._v(" "),
                                                               _c(
                                                                 "select",
@@ -33515,7 +33673,7 @@ var render = function() {
                                                                       function(
                                                                         $event
                                                                       ) {
-                                                                        return _vm.get_province(
+                                                                        return _vm.getProvince(
                                                                           $event
                                                                             .target
                                                                             .value
@@ -33613,7 +33771,7 @@ var render = function() {
                                                                 "input-group"
                                                             },
                                                             [
-                                                              _vm._m(48),
+                                                              _vm._m(49),
                                                               _vm._v(" "),
                                                               _c(
                                                                 "select",
@@ -33675,7 +33833,7 @@ var render = function() {
                                                                       function(
                                                                         $event
                                                                       ) {
-                                                                        return _vm.get_district(
+                                                                        return _vm.getDistrict(
                                                                           $event
                                                                             .target
                                                                             .value
@@ -33773,7 +33931,7 @@ var render = function() {
                                                                 "input-group"
                                                             },
                                                             [
-                                                              _vm._m(49),
+                                                              _vm._m(50),
                                                               _vm._v(" "),
                                                               _c(
                                                                 "select",
@@ -33921,7 +34079,7 @@ var render = function() {
                                                                 "input-group"
                                                             },
                                                             [
-                                                              _vm._m(50),
+                                                              _vm._m(51),
                                                               _vm._v(" "),
                                                               _c("input", {
                                                                 directives: [
@@ -34008,7 +34166,7 @@ var render = function() {
                                                                 "input-group"
                                                             },
                                                             [
-                                                              _vm._m(51),
+                                                              _vm._m(52),
                                                               _vm._v(" "),
                                                               _c("input", {
                                                                 directives: [
@@ -34096,7 +34254,7 @@ var render = function() {
                                                                 "input-group"
                                                             },
                                                             [
-                                                              _vm._m(52),
+                                                              _vm._m(53),
                                                               _vm._v(" "),
                                                               _c(
                                                                 "select",
@@ -34242,7 +34400,7 @@ var render = function() {
                                                                 "input-group"
                                                             },
                                                             [
-                                                              _vm._m(53),
+                                                              _vm._m(54),
                                                               _vm._v(" "),
                                                               _c(
                                                                 "select",
@@ -34395,7 +34553,7 @@ var render = function() {
                                                                 "input-group"
                                                             },
                                                             [
-                                                              _vm._m(54),
+                                                              _vm._m(55),
                                                               _vm._v(" "),
                                                               _c("input", {
                                                                 directives: [
@@ -34883,7 +35041,7 @@ var render = function() {
                                                                 "input-group"
                                                             },
                                                             [
-                                                              _vm._m(55),
+                                                              _vm._m(56),
                                                               _vm._v(" "),
                                                               _c(
                                                                 "date-picker",
@@ -35047,7 +35205,7 @@ var render = function() {
                                                                 "input-group"
                                                             },
                                                             [
-                                                              _vm._m(56),
+                                                              _vm._m(57),
                                                               _vm._v(" "),
                                                               _c("input", {
                                                                 directives: [
@@ -35131,7 +35289,7 @@ var render = function() {
                                                                 "input-group"
                                                             },
                                                             [
-                                                              _vm._m(57),
+                                                              _vm._m(58),
                                                               _vm._v(" "),
                                                               _c(
                                                                 "select",
@@ -35464,7 +35622,7 @@ var render = function() {
                             ]
                           ),
                           _vm._v(" "),
-                          _vm._m(58)
+                          _vm._m(59)
                         ]
                       ),
                       _vm._v(" "),
@@ -35524,7 +35682,7 @@ var render = function() {
                                           attrs: { "ui-view": "" }
                                         },
                                         [
-                                          _vm._m(59),
+                                          _vm._m(60),
                                           _vm._v(" "),
                                           _c(
                                             "div",
@@ -35708,7 +35866,7 @@ var render = function() {
                                             ]
                                           ),
                                           _vm._v(" "),
-                                          _vm._m(60)
+                                          _vm._m(61)
                                         ]
                                       ),
                                       _vm._v(" "),
@@ -35736,7 +35894,7 @@ var render = function() {
             ? [
                 _c("div", { staticClass: "col-md-12" }, [
                   _c("div", { staticClass: "box box-primary" }, [
-                    _vm._m(61),
+                    _vm._m(62),
                     _vm._v(" "),
                     _c(
                       "div",
@@ -35749,7 +35907,7 @@ var render = function() {
                             staticStyle: { "font-size": "12px" }
                           },
                           [
-                            _vm._m(62),
+                            _vm._m(63),
                             _vm._v(" "),
                             _c(
                               "tbody",
@@ -36082,7 +36240,7 @@ var staticRenderFns = [
           color: "#1e2172"
         }
       },
-      [_c("i", { staticClass: "fa fa-database" })]
+      [_c("i", { staticClass: "fa fa-barcode" })]
     )
   },
   function() {
@@ -36259,6 +36417,54 @@ var staticRenderFns = [
           "border-top-left-radius": "3px"
         }
       },
+      [_c("i", { staticClass: "fa fa-briefcase" })]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "span",
+      {
+        staticClass: "input-group-addon",
+        staticStyle: {
+          "border-bottom-left-radius": "3px",
+          "border-top-left-radius": "3px"
+        }
+      },
+      [_c("i", { staticClass: "fa fa-shopping-cart" })]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "span",
+      {
+        staticClass: "input-group-addon",
+        staticStyle: {
+          "border-bottom-left-radius": "3px",
+          "border-top-left-radius": "3px"
+        }
+      },
+      [_c("i", { staticClass: "fa fa-shopping-cart" })]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "span",
+      {
+        staticClass: "input-group-addon",
+        staticStyle: {
+          "border-bottom-left-radius": "3px",
+          "border-top-left-radius": "3px"
+        }
+      },
       [_c("i", { staticClass: "fa fa-map-marker" })]
     )
   },
@@ -36324,38 +36530,6 @@ var staticRenderFns = [
         }
       },
       [_c("i", { staticClass: "fa fa-file-o" })]
-    )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "span",
-      {
-        staticClass: "input-group-addon",
-        staticStyle: {
-          "border-bottom-left-radius": "3px",
-          "border-top-left-radius": "3px"
-        }
-      },
-      [_c("i", { staticClass: "fa fa-briefcase" })]
-    )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "span",
-      {
-        staticClass: "input-group-addon",
-        staticStyle: {
-          "border-bottom-left-radius": "3px",
-          "border-top-left-radius": "3px"
-        }
-      },
-      [_c("i", { staticClass: "fa fa-shopping-cart" })]
     )
   },
   function() {
@@ -36613,7 +36787,7 @@ var staticRenderFns = [
           color: "#1e2172"
         }
       },
-      [_c("i", { staticClass: "fa fa-database" })]
+      [_c("i", { staticClass: "fa fa-barcode" })]
     )
   },
   function() {

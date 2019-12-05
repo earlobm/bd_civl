@@ -48,7 +48,7 @@
                                                                         <div v-bind:class="errorInputActivity5">
                                                                             <label for="dni">Código:</label>
                                                                             <div class="input-group">
-                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;  color:#1e2172"><i class="fa fa-database"></i></span>
+                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;  color:#1e2172"><i class="fa fa-barcode"></i></span>
                                                                                 <input maxlength="8" v-model="code" type="text" class="form-control">
                                                                                 <span class="input-group-btn">
                                                                                     <button data-toggle="tooltip" title="Generar Automáticamente" @click="generate_code()" type="submit" class="btn btn-search btn-flat" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;"><i v-bind:class="icon_generate"></i>  GENERAR</button>
@@ -80,7 +80,7 @@
                                                                             </div>
                                                                         </div>
                                                                     </div>                                                                            
-                                                                    <div class="col-md-3">
+                                                                    <div class="col-md-4">
                                                                         <div v-bind:class="errorInputActivity3">
                                                                             <label for="ap_paterno">Apellido Paterno:</label>
                                                                             <div class="input-group">
@@ -89,7 +89,7 @@
                                                                             </div>
                                                                         </div>
                                                                     </div>
-                                                                    <div class="col-md-3">
+                                                                    <div class="col-md-4">
                                                                         <div v-bind:class="errorInputActivity4">
                                                                             <label for="ap_materno">Apellido Materno:</label>
                                                                             <div class="input-group">
@@ -98,7 +98,7 @@
                                                                             </div>
                                                                         </div>
                                                                     </div>
-                                                                    <div class="col-md-3">
+                                                                    <div class="col-md-4">
                                                                         <div v-bind:class="errorInputActivity2">
                                                                             <label for="nombres">Nombres:</label>
                                                                             <div class="input-group">
@@ -159,61 +159,7 @@
                                                                             <label for="celular">Correo electrónico:</label>
                                                                             <div class="input-group">
                                                                                 <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-envelope"></i></span>
-                                                                                <input v-model="email" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">  
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-md-3">
-                                                                        <div class="form-group">
-                                                                            <label for="estado_civil">Departamento:</label>
-                                                                            <div class="input-group">
-                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-map-marker"></i></span>
-                                                                                <select @change="get_province($event.target.value)" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;" v-model="department">
-                                                                                    <option selected="selected" value="">Seleccione</option>
-                                                                                    <option v-for="miselect in array_department" :selected="miselect.id == department" :key="miselect.id" :value="miselect.id">{{ miselect.name}}</option>
-                                                                                </select>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-md-3">
-                                                                        <div class="form-group">
-                                                                            <label for="estado_civil">Provincia:</label>
-                                                                            <div class="input-group">
-                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-map-marker"></i></span>
-                                                                                <select @change="get_district($event.target.value)" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;" v-model="province">
-                                                                                    <option selected="selected" value="">Seleccione</option>
-                                                                                    <option v-for="miselect in array_province" :selected="miselect.id == province" :key="miselect.id" :value="miselect.id">{{ miselect.name}}</option>
-                                                                                </select>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-md-3">
-                                                                        <div class="form-group">
-                                                                            <label for="estado_civil">Distrito:</label>
-                                                                            <div class="input-group">
-                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-map-marker"></i></span>
-                                                                                <select class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;" v-model="district">
-                                                                                    <option selected="selected" value="">Seleccione</option>
-                                                                                    <option v-for="miselect in array_district" :selected="miselect.id == district" :key="miselect.id" :value="miselect.id">{{ miselect.name}}</option>
-                                                                                </select>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-md-3">
-                                                                        <div v-bind:class="errorInputActivity6">
-                                                                            <label for="celular">Dirección:</label>
-                                                                            <div class="input-group">
-                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-location-arrow"></i></span>
-                                                                                <input placeholder="Dirección domiciliaria" v-model="address" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>                                                                     
-                                                                    <div class="col-md-6">
-                                                                        <div class="form-group">
-                                                                            <label for="celular">Referencias:</label>
-                                                                            <div class="input-group">
-                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-file-o"></i></span>
-                                                                                <input placeholder="Referencias de la dirección domiciliaria del cliente." v-model="reference" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;"> 
+                                                                                <input v-model="email" type="email" name="email" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">  
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -241,6 +187,73 @@
                                                                             </div>
                                                                         </div>
                                                                     </div>
+                                                                    <div class="col-md-3">
+                                                                        <div class="form-group">
+                                                                            <label for="type_business">Promotor:</label>
+                                                                            <div class="input-group">
+                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-shopping-cart"></i></span>
+                                                                                <select class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;" v-model="id_type_business">
+                                                                                    <option selected="selected" value="">Seleccione</option>
+                                                                                    <option v-for="datax in array_employee" :key="datax.id" :value="datax.id">{{ datax.employee }}</option>
+                                                                                </select>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-3">
+                                                                        <div class="form-group">
+                                                                            <label for="estado_civil">Departamento:</label>
+                                                                            <div class="input-group">
+                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-map-marker"></i></span>
+                                                                                <select @change="getProvince($event.target.value)" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;" v-model="department">
+                                                                                    <option selected="selected" value="">Seleccione</option>
+                                                                                    <option v-for="miselect in array_department" :selected="miselect.id == department" :key="miselect.id" :value="miselect.id">{{ miselect.name}}</option>
+                                                                                </select>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-3">
+                                                                        <div class="form-group">
+                                                                            <label for="estado_civil">Provincia:</label>
+                                                                            <div class="input-group">
+                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-map-marker"></i></span>
+                                                                                <select @change="getDistrict($event.target.value)" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;" v-model="province">
+                                                                                    <option selected="selected" value="">Seleccione</option>
+                                                                                    <option v-for="miselect in array_province" :selected="miselect.id == province" :key="miselect.id" :value="miselect.id">{{ miselect.name}}</option>
+                                                                                </select>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-3">
+                                                                        <div class="form-group">
+                                                                            <label for="estado_civil">Distrito:</label>
+                                                                            <div class="input-group">
+                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-map-marker"></i></span>
+                                                                                <select class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;" v-model="district">
+                                                                                    <option selected="selected" value="">Seleccione</option>
+                                                                                    <option v-for="miselect in array_district" :selected="miselect.id == district" :key="miselect.id" :value="miselect.id">{{ miselect.name}}</option>
+                                                                                </select>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-3">
+                                                                        <div v-bind:class="errorInputActivity6">
+                                                                            <label for="celular">Dirección:</label>
+                                                                            <div class="input-group">
+                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-location-arrow"></i></span>
+                                                                                <input placeholder="Dirección domiciliaria" v-model="address" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>                                                                     
+                                                                    <div class="col-md-12">
+                                                                        <div class="form-group">
+                                                                            <label for="celular">Referencias:</label>
+                                                                            <div class="input-group">
+                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-file-o"></i></span>
+                                                                                <textarea placeholder="Referencias de la dirección domiciliaria del cliente." v-model="reference" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;"></textarea>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    
                                                                 </div>     
                                                                 <div class="row">
                                                                     <div class="col-md-12">
@@ -470,7 +483,7 @@
                                                                         <div v-bind:class="errorInputActivity5">
                                                                             <label for="dni">Código:</label>
                                                                             <div class="input-group">
-                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;  color:#1e2172"><i class="fa fa-database"></i></span>
+                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;  color:#1e2172"><i class="fa fa-barcode"></i></span>
                                                                                 <input maxlength="8" v-model="code" type="text" class="form-control">
                                                                                 <span class="input-group-btn">
                                                                                     <button data-toggle="tooltip" title="Generar Automáticamente" @click="generate_code()" type="submit" class="btn btn-search btn-flat" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;"><i v-bind:class="icon_generate"></i>  GENERAR</button>
@@ -581,7 +594,7 @@
                                                                             <label for="celular">Correo electrónico:</label>
                                                                             <div class="input-group">
                                                                                 <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-envelope"></i></span>
-                                                                                <input v-model="email" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">  
+                                                                                <input v-model="email" type="email" name="email" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">  
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -590,7 +603,7 @@
                                                                             <label for="estado_civil">Departamento:</label>
                                                                             <div class="input-group">
                                                                                 <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-map-marker"></i></span>
-                                                                                <select @change="get_province($event.target.value)" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;" v-model="department">
+                                                                                <select @change="getProvince($event.target.value)" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;" v-model="department">
                                                                                     <option selected="selected" value="">Seleccione</option>
                                                                                     <option v-for="miselect in array_department" :selected="miselect.id == department" :key="miselect.id" :value="miselect.id">{{ miselect.name}}</option>
                                                                                 </select>
@@ -602,7 +615,7 @@
                                                                             <label for="estado_civil">Provincia:</label>
                                                                             <div class="input-group">
                                                                                 <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-map-marker"></i></span>
-                                                                                <select @change="get_district($event.target.value)" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;" v-model="province">
+                                                                                <select @change="getDistrict($event.target.value)" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;" v-model="province">
                                                                                     <option selected="selected" value="">Seleccione</option>
                                                                                     <option v-for="miselect in array_province" :selected="miselect.id == province" :key="miselect.id" :value="miselect.id">{{ miselect.name}}</option>
                                                                                 </select>
@@ -1015,14 +1028,13 @@
             return {
                 
                 id_parent:'',visible:1,array_job:[], id_job:'',
-                array_type_business:[],id_type_business:'',
+                array_type_business:[],id_type_business:'', array_employee:[],
                 authUser:'',porcent: 50,
                 listadox:1,
                 listado:2,
                 //fechas
                 authUser:1,
-                birthdate: '',
-                date_init: ''+new Date().getDate()+'/'+(Number(new Date().getMonth())+1)+'/'+new Date().getFullYear(),
+                birthdate: ''+new Date().getDate()+'/'+(Number(new Date().getMonth())+1)+'/'+new Date().getFullYear(),
                 options: {
                 format: 'DD/MM/YYYY',
                 useCurrent: false,
@@ -1114,7 +1126,7 @@
                 });
             },
             
-            get_type_document(){
+            getTypeDocument(){
                 let me=this;
                // me.listado=0;
                 var url= 'get_type_document';
@@ -1126,7 +1138,7 @@
                         console.log(error);
                     });
             },
-            get_type_business(){
+            getTypeBusiness(){
                 let me=this;
                // me.listado=0;
                 var url= 'get_type_business';
@@ -1138,7 +1150,7 @@
                         console.log(error);
                     });
             },
-            get_department(){
+            getDepartment(){
                 let me=this;
                // me.listado=0;
                 var url= 'get_department';
@@ -1150,7 +1162,7 @@
                         console.log(error);
                     });
             },
-            get_province(id_department){
+            getProvince(id_department){
                 let me=this;
                // me.listado=0;
                 var url= 'get_province?id='+ id_department;
@@ -1162,7 +1174,7 @@
                         console.log(error);
                     });
             },
-            get_district(id_province){
+            getDistrict(id_province){
                 let me=this;
                // me.listado=0;
                 var url= 'get_district?id='+ id_province;
@@ -1580,7 +1592,7 @@
             //     let me=this;
             //     me.listado=2;
             //     me.clean_data();
-            //     me.get_type_document();
+            //     me.getTypeDocument();
             //     me.icon_edit='fa fa-spinner fa-spin';
             //     var url= 'edit_data?id='+id;
             //     me.id_customer_credit=id;
@@ -1830,8 +1842,8 @@
             // list_data(page){
             //     let me=this;                      
             //     me.listado=0;
-            //     me.get_department();
-            //     me.get_type_document();
+            //     me.getDepartment();
+            //     me.getTypeDocument();
             //     var url= 'getListCustomerCredit?buscar='+me.buscar+'&page='+page;
             //     axios.get(url).then(function (response) {
             //         var respuesta= response.data;
@@ -1844,9 +1856,9 @@
             //     });
                
             // },
-            get_type_requirement(){
+            getTypeRequirement(){
                 let me=this;
-                var url= 'get_type_requeriment';
+                var url= 'get_type_requirement';
                 axios.get(url).then(function (response) {
                     var respuesta= response.data;
                     me.array_requirement = respuesta.datax;
@@ -1856,7 +1868,7 @@
                 });
                 
             },
-            get_job(){
+            getJob(){
                 let me=this;
                 var url= 'get_job';
                 axios.get(url).then(function (response) {
@@ -1868,12 +1880,24 @@
                 });
                 
             },
+            getEmployee(){
+                let me=this;
+                var url= 'get_employee';
+                axios.get(url).then(function (response) {
+                    var respuesta= response.data;
+                    me.array_employee = respuesta.datax;
+                })
+                .catch(function (error) {
+                    console.log(error);
+                });
+                
+            },
 
             init: function() {
             //cargar actividades
                 let me=this;  
                 me.requirements=[];        
-                var url= 'get_type_requeriment';
+                var url= 'get_type_requirement';
                 axios.get(url).then(function (response) {
                     var respuesta= response.data;
                     var lista=respuesta.datax;
@@ -1892,17 +1916,18 @@
         },
         
         mounted() {
+            this.listadox=1;
         //    this.lista_add_client();
         //    this.list_data(1);
-        this.get_department();
-        this.get_type_business();
-        this.get_job();
-           this.get_type_document();
-           this.get_type_requirement();
-           this.listadox=1;
-           this.calculateTeabyTerm();
-           this.get_province(10);
-           this.get_district(92);
+            this.getDepartment();
+            this.getTypeBusiness();
+            this.getJob();
+            this.getEmployee();
+            this.getTypeDocument();
+            this.getTypeRequirement();            
+            this.calculateTeabyTerm();
+            this.getProvince(10);
+            this.getDistrict(92);
          }
          
     }
