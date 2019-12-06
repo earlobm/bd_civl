@@ -61,7 +61,7 @@
                                 <span aria-hidden="true">&times;</span></button>
                             <h4 class="modal-title">Recuperar contraseña</h4>
                         </div>
-                        <form method="POST" action="{{ route('restablecer') }}">
+                        <form method="POST" >
                             {{ csrf_field() }}
                             <div class="modal-body">
                                 <div class="box box-success">
