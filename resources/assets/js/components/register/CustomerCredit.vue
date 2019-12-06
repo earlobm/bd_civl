@@ -192,7 +192,7 @@
                                                                             <label for="type_business">Promotor:</label>
                                                                             <div class="input-group">
                                                                                 <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-shopping-cart"></i></span>
-                                                                                <select class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;" v-model="id_type_business">
+                                                                                <select class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;" v-model="id_employee">
                                                                                     <option selected="selected" value="">Seleccione</option>
                                                                                     <option v-for="datax in array_employee" :key="datax.id" :value="datax.id">{{ datax.employee }}</option>
                                                                                 </select>
@@ -1029,11 +1029,13 @@
                 
                 id_parent:'',visible:1,array_job:[], id_job:'',
                 array_type_business:[],id_type_business:'', array_employee:[],
+                id_employee:'',
                 authUser:'',porcent: 50,
                 listadox:1,
                 listado:2,
                 //fechas
                 authUser:1,
+                date_init: ''+new Date().getDate()+'/'+(Number(new Date().getMonth())+1)+'/'+new Date().getFullYear(),
                 birthdate: ''+new Date().getDate()+'/'+(Number(new Date().getMonth())+1)+'/'+new Date().getFullYear(),
                 options: {
                 format: 'DD/MM/YYYY',
@@ -1655,8 +1657,8 @@
                             'id_district': this.district,
                             'birthdate' : moment(moment(this.birthdate, 'DD/MM/YYYY')).format('YYYY-MM-DD'),
                             'id_customer_credit':this.id_customer_credit,
-                            'id_job':this.id_job, 'id_type_business':this.id_type_business
-
+                            'id_job':this.id_job, 'id_type_business':this.id_type_business,
+                            'id_employee':this.id_employee
                         }).then(function (response) {
                                 me.clean_data();                                
                                 me.list_data(1);  

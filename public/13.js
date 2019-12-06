@@ -27416,10 +27416,11 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
             id_parent: '', visible: 1, array_job: [], id_job: '',
             array_type_business: [], id_type_business: '', array_employee: [],
+            id_employee: '',
             authUser: '', porcent: 50,
             listadox: 1,
             listado: 2
-        }, _defineProperty(_ref, 'authUser', 1), _defineProperty(_ref, 'birthdate', '' + new Date().getDate() + '/' + (Number(new Date().getMonth()) + 1) + '/' + new Date().getFullYear()), _defineProperty(_ref, 'options', {
+        }, _defineProperty(_ref, 'authUser', 1), _defineProperty(_ref, 'date_init', '' + new Date().getDate() + '/' + (Number(new Date().getMonth()) + 1) + '/' + new Date().getFullYear()), _defineProperty(_ref, 'birthdate', '' + new Date().getDate() + '/' + (Number(new Date().getMonth()) + 1) + '/' + new Date().getFullYear()), _defineProperty(_ref, 'options', {
             format: 'DD/MM/YYYY',
             useCurrent: false,
             locale: 'es',
@@ -27964,8 +27965,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
                         'id_district': _this3.district,
                         'birthdate': __WEBPACK_IMPORTED_MODULE_1_moment_timezone___default()(__WEBPACK_IMPORTED_MODULE_1_moment_timezone___default()(_this3.birthdate, 'DD/MM/YYYY')).format('YYYY-MM-DD'),
                         'id_customer_credit': _this3.id_customer_credit,
-                        'id_job': _this3.id_job, 'id_type_business': _this3.id_type_business
-
+                        'id_job': _this3.id_job, 'id_type_business': _this3.id_type_business,
+                        'id_employee': _this3.id_employee
                     }).then(function (response) {
                         me.clean_data();
                         me.list_data(1);
@@ -29757,9 +29758,9 @@ var render = function() {
                                                                 rawName:
                                                                   "v-model",
                                                                 value:
-                                                                  _vm.id_type_business,
+                                                                  _vm.id_employee,
                                                                 expression:
-                                                                  "id_type_business"
+                                                                  "id_employee"
                                                               }
                                                             ],
                                                             staticClass:
@@ -29795,7 +29796,7 @@ var render = function() {
                                                                         : o.value
                                                                     return val
                                                                   })
-                                                                _vm.id_type_business = $event
+                                                                _vm.id_employee = $event
                                                                   .target
                                                                   .multiple
                                                                   ? $$selectedVal

@@ -247,7 +247,8 @@ class CustomerCreditController extends Controller
         $clase_customer->id_type_business=1;
         $clase_customer->date_inscription=$DateOfRequest;
         $clase_customer->id_person=$clasex->id;
-        $clase_customer->id_promote =Auth::user()->id;
+        $clase_customer->id_promoter =$request->id_employee;
+        $clase_customer->id_job =$request->id_job;
         $clase_customer->save(); 
         /* $DateOfRequest= date("Y-m-d H:i:s");
             $clasex->modificado ='Modificado por '.Auth::user()->nick.' '. $DateOfRequest;*/
@@ -370,13 +371,14 @@ class CustomerCreditController extends Controller
     public function list_job(Request $request){
         $sqlx="";
         $sqlx="SELECT id,
-        name from job 
+        name from job WHERE state=1 
         order by name";
         $miLista = DB::select($sqlx);
         return [
             'datax' => $miLista
         ];
     }
+
 }
 
 

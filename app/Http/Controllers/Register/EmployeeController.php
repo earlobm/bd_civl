@@ -48,8 +48,14 @@ class EmployeeController extends Controller
             $clasex->state =0;
             $clasex->save();
         }
-        public function getListaEmpleadoList(Request $request){
-            $queyListEmploye="select em.id,per.names, per.paternal_last_name,per.maternal_last_name, per.number_doc,ro.name as name_role, su.name as name_sucursal,mer.name as name_mercado
+        public function list_employee(Request $request){
+            $queyListEmploye="SELECT em.id,
+            CONCAT(paternal_last_name,' ', names) as employee,
+            per.names, 
+            per.paternal_last_name,per.maternal_last_name, 
+            per.number_doc,ro.name as name_role, 
+            su.name as name_sucursal,
+            mer.name as name_mercado
             from branch_office su 
             inner join market mer on su.id=mer.id_branch_office 
             inner join employee em on mer.id=em.id_market

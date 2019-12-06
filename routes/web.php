@@ -47,7 +47,7 @@ Route::get('/getListCustomerCredit', 'Register\CustomerCreditController@list_cus
 Route::get('/get_type_requirement', 'Register\CustomerCreditController@list_type_requerement');
 Route::get('/get_type_business', 'Register\CustomerCreditController@list_type_business');
 Route::get('/get_job', 'Register\CustomerCreditController@list_job');
-Route::get('/get_employee', 'Register\CustomerCreditController@list_employee');
+Route::get('/get_employee', 'Register\EmployeeController@list_employee');
 Route::post('/saveCustomerCredit', 'Register\CustomerCreditController@save_data'); 
 Route::get('/generate_code', 'Register\CustomerCreditController@generate_code');  
 //DOCUMENT
@@ -65,7 +65,7 @@ Route::post('/deleteBusiness', 'Register\TypeBusinessController@deleteBusiness')
 //personal
 Route::get('/getDatabyNroDocP', 'Register\PersonalController@getDatabyNroDocP'); 
 Route::post('/saveEmployee', 'Register\EmployeeController@saveEmployee');
-Route::get('/getListaEmpleadoList', 'Register\EmployeeController@getListaEmpleadoList');
+Route::get('/getListaEmpleadoList', 'Register\EmployeeController@list_employee');
 //credit
 Route::get('/getListDailyCollection', 'Movement\DailyCollectionController@getListDailyCollection'); 
 
