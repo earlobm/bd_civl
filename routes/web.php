@@ -32,16 +32,11 @@ Route::get('/main', function () {
     return view('contenido');
 })->name('main');
 
-//Customer Pledge
-Route::get('/getListCustomer', 'Register\CustomerPledgeController@list_customer');
-Route::get('/edit_data', 'Register\CustomerPledgeController@getDatabyNroDoc'); 
-Route::get('/get_department', 'Register\CustomerPledgeController@list_department'); 
-Route::get('/get_province', 'Register\CustomerPledgeController@list_province');
-Route::get('/get_district', 'Register\CustomerPledgeController@list_district'); 
-Route::get('/get_type_document', 'Register\CustomerPledgeController@list_type_document'); 
-Route::post('/save_customer', 'Register\CustomerPledgeController@save'); 
-Route::post('/delete_customer', 'Register\CustomerPledgeController@delete'); 
 //Customer Credit
+Route::get('/get_department', 'Register\CustomerCreditController@list_department'); 
+Route::get('/get_province', 'Register\CustomerCreditController@list_province');
+Route::get('/get_district', 'Register\CustomerCreditController@list_district'); 
+Route::get('/get_type_document', 'Register\CustomerCreditController@list_type_document'); 
 Route::post('/deleteCustomerCredit', 'Register\CustomerCreditController@delete'); 
 Route::get('/getListCustomerCredit', 'Register\CustomerCreditController@list_customer');  
 Route::get('/get_type_requirement', 'Register\CustomerCreditController@list_type_requerement');
@@ -50,6 +45,7 @@ Route::get('/get_job', 'Register\CustomerCreditController@list_job');
 Route::get('/get_employee', 'Register\EmployeeController@list_employee');
 Route::post('/saveCustomerCredit', 'Register\CustomerCreditController@save_data'); 
 Route::get('/generate_code', 'Register\CustomerCreditController@generate_code');  
+Route::get('/get_customer_by_dni', 'Register\CustomerCreditController@get_customer_by_dni'); 
 //DOCUMENT
 Route::post('/save_Document', 'Register\DocumentCustomerController@save_Document'); 
 Route::get('/getlistDocument', 'Register\DocumentCustomerController@getlistDocument');

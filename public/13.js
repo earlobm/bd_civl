@@ -27432,7 +27432,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
             'last_page': 0,
             'from': 0,
             'to': 0
-        }), _defineProperty(_ref, 'offset', 3), _defineProperty(_ref, 'code', ''), _defineProperty(_ref, 'name', ''), _defineProperty(_ref, 'id', -1), _defineProperty(_ref, 'paternal_last_name', ''), _defineProperty(_ref, 'maternal_last_name', ''), _defineProperty(_ref, 'phone', ''), _defineProperty(_ref, 'address', ''), _defineProperty(_ref, 'nro_doc', ''), _defineProperty(_ref, 'id_type_doc', ''), _defineProperty(_ref, 'email', ''), _defineProperty(_ref, 'department', '10'), _defineProperty(_ref, 'province', '92'), _defineProperty(_ref, 'district', ''), _defineProperty(_ref, 'reference', ''), _defineProperty(_ref, 'errorClase', 0), _defineProperty(_ref, 'errors', {}), _defineProperty(_ref, 'errorInputActivity', 'form-group'), _defineProperty(_ref, 'errorInputActivity2', 'form-group'), _defineProperty(_ref, 'errorInputActivity3', 'form-group'), _defineProperty(_ref, 'errorInputActivity4', 'form-group'), _defineProperty(_ref, 'errorInputActivity5', 'form-group'), _defineProperty(_ref, 'errorInputActivity6', 'form-group'), _defineProperty(_ref, 'errorInputcapital', 'form-group'), _defineProperty(_ref, 'errorComboTipoProduco', 'form-group'), _defineProperty(_ref, 'buscar', ''), _defineProperty(_ref, 'sex', ''), _defineProperty(_ref, 'marital_status', ''), _defineProperty(_ref, 'name_customer', ''), _defineProperty(_ref, 'capital', 0), _defineProperty(_ref, 'date_end', ''), _defineProperty(_ref, 'interest', 0), _defineProperty(_ref, 'term', 1), _defineProperty(_ref, 'total', 0), _defineProperty(_ref, 'guaranty', ''), _defineProperty(_ref, 'id_dependence', 0), _defineProperty(_ref, 'characteristic', ''), _defineProperty(_ref, 'tea', 20), _defineProperty(_ref, 'id_warehouse', ''), _defineProperty(_ref, 'id_person', 0), _defineProperty(_ref, 'id_pledge', 0), _defineProperty(_ref, 'quantity', 1), _defineProperty(_ref, 'licence_plate', ''), _defineProperty(_ref, 'serie', ''), _defineProperty(_ref, 'note', ''), _defineProperty(_ref, 'capital', 0), _defineProperty(_ref, 'period', 'Mensual'), _defineProperty(_ref, 'arrayDetailPledge', []), _defineProperty(_ref, 'licence_plate', ''), _defineProperty(_ref, 'errorTotalcapital', 'form-group'), _defineProperty(_ref, 'errorcapital', 'form-group'), _defineProperty(_ref, 'errorTerm', 'form-group'), _defineProperty(_ref, 'errorTea', 'form-group'), _defineProperty(_ref, 'errorInterested', 'form-group'), _defineProperty(_ref, 'errorWarehouse', 'form-group'), _defineProperty(_ref, 'errorFamilyProduct', 'form-group'), _defineProperty(_ref, 'errorCharacteristic', 'form-group'), _defineProperty(_ref, 'arrayTypeProduct', []), _defineProperty(_ref, 'arrayFamilyProduct', []), _defineProperty(_ref, 'arrayWarehouse', []), _defineProperty(_ref, 'array_department', []), _defineProperty(_ref, 'array_province', []), _defineProperty(_ref, 'array_district', []), _defineProperty(_ref, 'array_type_document', []), _defineProperty(_ref, 'array_code', []), _defineProperty(_ref, 'totalcapital', 0), _defineProperty(_ref, 'totalInterest', 0), _defineProperty(_ref, 'modalTicket', 0), _defineProperty(_ref, 'idcustomer', -1), _defineProperty(_ref, 'array_requirement', []), _defineProperty(_ref, 'requirements', []), _defineProperty(_ref, 'midatax', []), _defineProperty(_ref, 'list', []), _defineProperty(_ref, 'totalNumber', 0), _defineProperty(_ref, 'id_customer_credit', -1), _defineProperty(_ref, 'icon_title', 'fa fa-plus'), _defineProperty(_ref, 'icon_save', 'fa fa-save'), _defineProperty(_ref, 'icon_save_pledge', 'fa fa-save'), _defineProperty(_ref, 'icon_edit', 'fa fa-pencil'), _defineProperty(_ref, 'icon_search_dni', 'fa fa-search'), _defineProperty(_ref, 'icon_search_client', 'fa fa-search'), _defineProperty(_ref, 'icon_generate', 'fa fa-rotate-right'), _defineProperty(_ref, 'title', 'Agregar Cliente'), _defineProperty(_ref, 'add_aval', 0), _ref;
+        }), _defineProperty(_ref, 'offset', 3), _defineProperty(_ref, 'code', ''), _defineProperty(_ref, 'name', ''), _defineProperty(_ref, 'id', -1), _defineProperty(_ref, 'paternal_last_name', ''), _defineProperty(_ref, 'maternal_last_name', ''), _defineProperty(_ref, 'phone', ''), _defineProperty(_ref, 'address', ''), _defineProperty(_ref, 'nro_doc', ''), _defineProperty(_ref, 'id_type_doc', ''), _defineProperty(_ref, 'email', ''), _defineProperty(_ref, 'department', '10'), _defineProperty(_ref, 'province', '92'), _defineProperty(_ref, 'district', ''), _defineProperty(_ref, 'reference', ''), _defineProperty(_ref, 'errorClase', 0), _defineProperty(_ref, 'errors', {}), _defineProperty(_ref, 'errorInputActivity', 'form-group'), _defineProperty(_ref, 'errorInputActivity2', 'form-group'), _defineProperty(_ref, 'errorInputActivity3', 'form-group'), _defineProperty(_ref, 'errorInputActivity4', 'form-group'), _defineProperty(_ref, 'errorInputActivity5', 'form-group'), _defineProperty(_ref, 'errorInputActivity6', 'form-group'), _defineProperty(_ref, 'errorInputcapital', 'form-group'), _defineProperty(_ref, 'errorComboTipoProduco', 'form-group'), _defineProperty(_ref, 'buscar', ''), _defineProperty(_ref, 'sex', ''), _defineProperty(_ref, 'marital_status', ''), _defineProperty(_ref, 'name_customer', ''), _defineProperty(_ref, 'capital', 0), _defineProperty(_ref, 'date_end', ''), _defineProperty(_ref, 'interest', 0), _defineProperty(_ref, 'term', 1), _defineProperty(_ref, 'total', 0), _defineProperty(_ref, 'guaranty', ''), _defineProperty(_ref, 'id_dependence', 0), _defineProperty(_ref, 'characteristic', ''), _defineProperty(_ref, 'tea', 20), _defineProperty(_ref, 'id_warehouse', ''), _defineProperty(_ref, 'id_person', 0), _defineProperty(_ref, 'id_pledge', 0), _defineProperty(_ref, 'quantity', 1), _defineProperty(_ref, 'licence_plate', ''), _defineProperty(_ref, 'serie', ''), _defineProperty(_ref, 'note', ''), _defineProperty(_ref, 'capital', 0), _defineProperty(_ref, 'period', 'Mensual'), _defineProperty(_ref, 'arrayDetailPledge', []), _defineProperty(_ref, 'licence_plate', ''), _defineProperty(_ref, 'errorTotalcapital', 'form-group'), _defineProperty(_ref, 'errorcapital', 'form-group'), _defineProperty(_ref, 'errorTerm', 'form-group'), _defineProperty(_ref, 'errorTea', 'form-group'), _defineProperty(_ref, 'errorInterested', 'form-group'), _defineProperty(_ref, 'errorWarehouse', 'form-group'), _defineProperty(_ref, 'errorFamilyProduct', 'form-group'), _defineProperty(_ref, 'errorCharacteristic', 'form-group'), _defineProperty(_ref, 'arrayTypeProduct', []), _defineProperty(_ref, 'arrayFamilyProduct', []), _defineProperty(_ref, 'arrayWarehouse', []), _defineProperty(_ref, 'array_department', []), _defineProperty(_ref, 'array_province', []), _defineProperty(_ref, 'array_district', []), _defineProperty(_ref, 'array_type_document', []), _defineProperty(_ref, 'array_code', []), _defineProperty(_ref, 'totalcapital', 0), _defineProperty(_ref, 'totalInterest', 0), _defineProperty(_ref, 'modalTicket', 0), _defineProperty(_ref, 'idcustomer', -1), _defineProperty(_ref, 'array_requirement', []), _defineProperty(_ref, 'array_requirement_true', []), _defineProperty(_ref, 'requirements', []), _defineProperty(_ref, 'midatax', []), _defineProperty(_ref, 'list', []), _defineProperty(_ref, 'totalNumber', 0), _defineProperty(_ref, 'id_customer_credit', -1), _defineProperty(_ref, 'icon_title', 'fa fa-plus'), _defineProperty(_ref, 'icon_save', 'fa fa-save'), _defineProperty(_ref, 'icon_save_pledge', 'fa fa-save'), _defineProperty(_ref, 'icon_edit', 'fa fa-pencil'), _defineProperty(_ref, 'icon_search_dni', 'fa fa-search'), _defineProperty(_ref, 'icon_search_client', 'fa fa-search'), _defineProperty(_ref, 'icon_generate', 'fa fa-rotate-right'), _defineProperty(_ref, 'title', 'Agregar Cliente'), _defineProperty(_ref, 'add_aval', 0), _ref;
     },
 
     components: {
@@ -27507,7 +27507,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         },
         getDepartment: function getDepartment() {
             var me = this;
-            // me.listado=0;
+            me.listado = 0;
             var url = 'get_department';
             axios.get(url).then(function (response) {
                 var respuesta = response.data;
@@ -27555,50 +27555,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
             var me = this;
             me.modalTicket = 0;
         },
-        savePledge: function savePledge() {
-            var _this = this;
-
-            if (this.arrayDetailPledge.length < 1) {
-                return;
-            }
-            swal({
-                title: '¿Esta seguro?',
-                type: 'warning', showCancelButton: true,
-                confirmButtonColor: '#3085d6', cancelButtonColor: '#d33',
-                confirmButtonText: 'Aceptar!', cancelButtonText: 'Cancelar',
-                confirmButtonClass: 'btn btn-success', cancelButtonClass: 'btn btn-danger',
-                buttonsStyling: false, reverseButtons: true
-            }).then(function (result) {
-                if (result.value) {
-                    var me = _this;
-                    axios.post('save_pledge', {
-                        'idcustomerpledge': _this.id_customer_credit,
-                        'date_init': __WEBPACK_IMPORTED_MODULE_1_moment_timezone___default()(__WEBPACK_IMPORTED_MODULE_1_moment_timezone___default()(_this.date_init, 'DD/MM/YYYY')).format('YYYY-MM-DD'),
-                        'date_end': __WEBPACK_IMPORTED_MODULE_1_moment_timezone___default()(__WEBPACK_IMPORTED_MODULE_1_moment_timezone___default()(_this.date_end, 'DD/MM/YYYY')).format('YYYY-MM-DD'),
-                        'period': _this.period, 'licence_plate': _this.licence_plate,
-                        'serie': _this.serie,
-                        'term': _this.term, 'tea': _this.tea, 'interest': _this.totalInterest,
-                        'capital': _this.totalcapital, 'total': Number(_this.totalcapital) + Number(_this.totalInterest),
-                        'detail_pledge': _this.arrayDetailPledge,
-                        'id_warehouse': _this.id_warehouse.id
-                    }).then(function (response) {
-
-                        swal('Guardado!', 'El registro ha sido guardado con éxito.', 'success');
-                        me.dowloadContract();
-
-                        var url = 'ticket_plegde?capital=' + me.totalcapital + '&interest=' + me.totalInterest + '&name_customer=' + me.name_customer + '&date_movement=' + __WEBPACK_IMPORTED_MODULE_1_moment_timezone___default()(__WEBPACK_IMPORTED_MODULE_1_moment_timezone___default()(me.date_init, 'DD/MM/YYYY')).format('YYYY-MM-DD') + '&type=Empenio';
-                        window.open(url, '_blank');
-
-                        me.volver();
-                        me.list_data(1);
-                    }).catch(function (error) {
-                        console.log(error);
-                    });
-
-                    //  this.modalTicket=1;
-                } else if (result.dismiss === swal.DismissReason.cancel) {}
-            });
-        },
         dowloadContract: function dowloadContract() {
             //var entre = document.getElementById("entre");
             //var nombreentre = entre.options[entre.selectedIndex].text;
@@ -27640,7 +27596,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         },
 
         deletePledge: function deletePledge(item) {
-            var _this2 = this;
+            var _this = this;
 
             swal({
                 title: '¿Esta seguro de eliminar?',
@@ -27652,9 +27608,9 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
             }).then(function (result) {
                 if (result.value) {
                     // this.arrayActivity.push(item);
-                    var index = _this2.arrayDetailPledge.indexOf(item);
-                    _this2.arrayDetailPledge.splice(index, 1);
-                    _this2.sumTotal();
+                    var index = _this.arrayDetailPledge.indexOf(item);
+                    _this.arrayDetailPledge.splice(index, 1);
+                    _this.sumTotal();
                 } else if (result.dismiss === swal.DismissReason.cancel) {}
             });
         },
@@ -27756,22 +27712,42 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
             if (this.nro_doc.length == 8) {
                 var me = this;
                 me.icon_search_dni = 'fa fa-spinner fa-spin';
-                var url = 'getDataCustomerBynro_doc?nro_doc=' + me.nro_doc;
+                var url = 'get_customer_by_dni?nro_doc=' + me.nro_doc;
                 axios.get(url).then(function (response) {
                     var respuesta = response.data;
                     var tipo = respuesta.tipo;
                     if (respuesta.datax.length > 0) {
                         if (tipo == 'bd') {
                             me.id = respuesta.datax[0].id;
+                            me.id_customer_credit = respuesta.datax[0].id_customer_credit;
                             me.name = respuesta.datax[0].names;
                             me.paternal_last_name = respuesta.datax[0].paternal_last_name;
                             me.maternal_last_name = respuesta.datax[0].maternal_last_name;
                             me.phone = respuesta.datax[0].phone;
+                            me.code = respuesta.datax[0].code;
                             me.address = respuesta.datax[0].address;
+                            me.reference = respuesta.datax[0].reference;
                             me.sex = respuesta.datax[0].sex;
+                            me.email = respuesta.datax[0].email;
+                            me.department = respuesta.datax[0].id_department;
+                            me.province = respuesta.datax[0].id_province;
+                            me.district = respuesta.datax[0].id_district;
+                            me.id_job = respuesta.datax[0].id_job;
+                            me.id_employee = respuesta.datax[0].id_promoter;
+                            me.id_type_business = respuesta.datax[0].id_type_business;
+                            me.id_type_doc = respuesta.datax[0].id_type_document;
                             me.marital_status = respuesta.datax[0].marital_status;
                             me.birthdate = __WEBPACK_IMPORTED_MODULE_1_moment_timezone___default()(respuesta.datax[0].birthdate).toDate();
                             me.validarData();
+                            me.array_requirement_true = respuesta.requirements_data;
+                            //para los requisitos
+                            for (var x = 0; x < me.requirements.length; x++) {
+                                for (var y = 0; y < me.array_requirement_true.length; y++) {
+                                    if (me.requirements[x].id_type_requerement == me.array_requirement_true[y].id_type_document) {
+                                        me.requirements[x].check = true;
+                                    }
+                                }
+                            }
                         } else {
                             me.paternal_last_name = respuesta.datax[0];
                             me.name = respuesta.datax[1];
@@ -27932,7 +27908,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
         // },
         save_data_only_client: function save_data_only_client() {
-            var _this3 = this;
+            var _this2 = this;
 
             //val =1 guardar y empeñar
             //val = 0 solo registrar cliente  
@@ -27954,19 +27930,20 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
             }).then(function (result) {
                 if (result.value) {
                     axios.post('saveCustomerCredit', {
-                        'nro_doc': _this3.nro_doc, 'name': _this3.name,
-                        'paternal_last_name': _this3.paternal_last_name,
-                        'maternal_last_name': _this3.maternal_last_name,
-                        'phone': _this3.phone, 'address': _this3.address,
-                        'id': _this3.id, 'sex': _this3.sex,
-                        'code': _this3.code, 'id_type_document': _this3.id_type_doc,
-                        'marital_status': _this3.marital_status,
-                        'email': _this3.email, 'reference': _this3.reference,
-                        'id_district': _this3.district,
-                        'birthdate': __WEBPACK_IMPORTED_MODULE_1_moment_timezone___default()(__WEBPACK_IMPORTED_MODULE_1_moment_timezone___default()(_this3.birthdate, 'DD/MM/YYYY')).format('YYYY-MM-DD'),
-                        'id_customer_credit': _this3.id_customer_credit,
-                        'id_job': _this3.id_job, 'id_type_business': _this3.id_type_business,
-                        'id_employee': _this3.id_employee
+                        'nro_doc': _this2.nro_doc, 'name': _this2.name,
+                        'paternal_last_name': _this2.paternal_last_name,
+                        'maternal_last_name': _this2.maternal_last_name,
+                        'phone': _this2.phone, 'address': _this2.address,
+                        'id': _this2.id, 'sex': _this2.sex,
+                        'code': _this2.code, 'id_type_document': _this2.id_type_doc,
+                        'marital_status': _this2.marital_status,
+                        'email': _this2.email, 'reference': _this2.reference,
+                        'id_district': _this2.district,
+                        'birthdate': __WEBPACK_IMPORTED_MODULE_1_moment_timezone___default()(__WEBPACK_IMPORTED_MODULE_1_moment_timezone___default()(_this2.birthdate, 'DD/MM/YYYY')).format('YYYY-MM-DD'),
+                        'id_customer_credit': _this2.id_customer_credit,
+                        'id_job': _this2.id_job, 'id_type_business': _this2.id_type_business,
+                        'id_employee': _this2.id_employee,
+                        'requirements': _this2.requirements
                     }).then(function (response) {
                         me.clean_data();
                         me.list_data(1);
@@ -27980,7 +27957,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
             });
         },
         save_data: function save_data() {
-            var _this4 = this;
+            var _this3 = this;
 
             //val =1 guardar y empeñar
             //val = 0 solo registrar cliente  
@@ -28002,17 +27979,17 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
             }).then(function (result) {
                 if (result.value) {
                     axios.post('save_customer', {
-                        'nro_doc': _this4.nro_doc, 'name': _this4.name,
-                        'paternal_last_name': _this4.paternal_last_name,
-                        'maternal_last_name': _this4.maternal_last_name,
-                        'phone': _this4.phone, 'address': _this4.address,
-                        'id': _this4.id, 'sex': _this4.sex,
-                        'code': _this4.code, 'id_type_document': _this4.id_type_doc,
-                        'marital_status': _this4.marital_status,
-                        'email': _this4.email, 'reference': _this4.reference,
-                        'id_district': _this4.district,
-                        'birthdate': __WEBPACK_IMPORTED_MODULE_1_moment_timezone___default()(__WEBPACK_IMPORTED_MODULE_1_moment_timezone___default()(_this4.birthdate, 'DD/MM/YYYY')).format('YYYY-MM-DD'),
-                        'idcustomerpledge': _this4.id_customer_credit
+                        'nro_doc': _this3.nro_doc, 'name': _this3.name,
+                        'paternal_last_name': _this3.paternal_last_name,
+                        'maternal_last_name': _this3.maternal_last_name,
+                        'phone': _this3.phone, 'address': _this3.address,
+                        'id': _this3.id, 'sex': _this3.sex,
+                        'code': _this3.code, 'id_type_document': _this3.id_type_doc,
+                        'marital_status': _this3.marital_status,
+                        'email': _this3.email, 'reference': _this3.reference,
+                        'id_district': _this3.district,
+                        'birthdate': __WEBPACK_IMPORTED_MODULE_1_moment_timezone___default()(__WEBPACK_IMPORTED_MODULE_1_moment_timezone___default()(_this3.birthdate, 'DD/MM/YYYY')).format('YYYY-MM-DD'),
+                        'idcustomerpledge': _this3.id_customer_credit
                     }).then(function (response) {
                         me.midatax = [];
                         me.midatax.push({ id: response.data, names: me.name, paternal_last_name: me.paternal_last_name, maternal_last_name: me.maternal_last_name });
@@ -28026,7 +28003,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
             });
         },
         eliminar: function eliminar(id) {
-            var _this5 = this;
+            var _this4 = this;
 
             swal({
                 title: '¿Estas seguro de eliminar?',
@@ -28043,7 +28020,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
                 reverseButtons: true
             }).then(function (result) {
                 if (result.value) {
-                    var me = _this5;
+                    var me = _this4;
                     axios.post('deleteCustomerCredit', {
                         'id': id
 
@@ -28202,7 +28179,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
                 var respuesta = response.data;
                 var lista = respuesta.datax;
                 for (var i = 0; i < lista.length; i++) {
-                    me.requirements.push({ check: false, id_type_requerement: lista[i].id_type_requerement, name: '' });
+                    me.requirements.push({ check: false, id_type_requerement: lista[i].id_type_requerement });
                     console.log(me.requirements);
                 }
             }).catch(function (error) {
@@ -29569,7 +29546,7 @@ var render = function() {
                                                                   [
                                                                     _vm._v(
                                                                       _vm._s(
-                                                                        datax.name
+                                                                        datax.names
                                                                       )
                                                                     )
                                                                   ]
@@ -34351,7 +34328,7 @@ var render = function() {
                                                                         [
                                                                           _vm._v(
                                                                             _vm._s(
-                                                                              datax.name
+                                                                              datax.names
                                                                             )
                                                                           )
                                                                         ]
@@ -36155,25 +36132,7 @@ var render = function() {
                             ]
                           ),
                           _vm._v(" "),
-                          _c(
-                            "button",
-                            {
-                              staticClass: "btn btn-save",
-                              staticStyle: { width: "100%" },
-                              attrs: { type: "button" },
-                              on: {
-                                click: function($event) {
-                                  return _vm.savePledge()
-                                }
-                              }
-                            },
-                            [
-                              _c("i", { staticClass: "fa fa-save" }),
-                              _vm._v(
-                                " GUARDAR EMPEÑO\n                                        "
-                              )
-                            ]
-                          )
+                          _vm._m(64)
                         ]),
                         _vm._v(" "),
                         _c("br")
@@ -37292,6 +37251,23 @@ var staticRenderFns = [
             [_vm._v("ACCIONES")]
           )
         ])
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "button",
+      {
+        staticClass: "btn btn-save",
+        staticStyle: { width: "100%" },
+        attrs: { type: "button" }
+      },
+      [
+        _c("i", { staticClass: "fa fa-save" }),
+        _vm._v(" GUARDAR EMPEÑO\n                                        ")
       ]
     )
   }

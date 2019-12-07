@@ -14,7 +14,8 @@ use Maatwebsite\Excel\Concerns\Exportable;
 
 use Illuminate\Support\Facades\Auth;
 use DB;
-use PDF; // at the top of the file
+use PDF;
+use poi\EntityClass\CustomerTypeDocument; // at the top of the file
 
 ini_set ('memory_limit', '999999999999M');
 ini_set('max_execution_time', 900000000000);
@@ -76,30 +77,32 @@ class CustomerCreditController extends Controller
             'datax' => $obj
         ];
     }
-    public function getDatabyNroDoc(Request $request){
-        if(isset($request->id)){
-            $id=$request->id;
+    public function get_customer_by_dni(Request $request){
+        
+            $sqlx="";
+            $tipo='';
+        
+            $dni=$request->nro_doc;
             $sqlx="SELECT p.id, c.id as id_customer_credit, c.code, p.id_type_document, p.number_doc, p.paternal_last_name, p.maternal_last_name, p.names,
-            p.phone, p.address, p.birthdate, p.sex, p.marital_status, p.email, p.reference, p.id_district,di.id_province, pr.id_department
+            p.phone, p.address, p.birthdate, p.sex, p.marital_status, p.email, p.reference, p.id_district,di.id_province, pr.id_department, c.id_job, c.id_promoter, c.id_type_business
             FROM person p 
             inner join customer c on c.id_person=p.id
             inner join district di on di.id=p.id_district
             inner join province pr on pr.id=di.id_province
             inner join department de on de.id=pr.id_department
-            where c.id=$id";
-            $datax=DB::select($sqlx);
-              return [
-                  'datax'=>$datax
-              ];
-
-        }else{
-            $sqlx="";
-            $tipo='';
-        
-            $dni=$request->nro_doc;
-            $sqlx="select * from person where number_doc='$dni' ";
+            where p.number_doc='$dni' ";
             $miArrayx = DB::select($sqlx);
             $miArray = json_decode(json_encode($miArrayx), true);
+
+            //Para traer los requerimientos que tiene el cliente
+            $sql="SELECT ct.id_type_document
+            FROM person p 
+            inner join customer c on c.id_person=p.id
+            inner join customer_type_doc ct on ct.id_customer=c.id
+            where ct.state=1 and p.number_doc='$dni' ";
+            $ArrayR = DB::select($sql);
+            $ArrayReq = json_decode(json_encode($ArrayR), true);
+
             if(count($miArray)==0){
                 $url = 'http://aplicaciones007.jne.gob.pe/srop_publico/Consulta/api/AfiliadoApi/GetNombresCiudadano';
                 $ch = curl_init($url);
@@ -151,9 +154,10 @@ class CustomerCreditController extends Controller
             }else {$tipo='bd';}
             return [
                 'datax' => $miArray,
-                'tipo'=>$tipo
+                'tipo'=>$tipo,
+                'requirements_data'=>$ArrayReq
             ];
-        }
+        
     }
     public function list_customer(Request $request){
        
@@ -244,12 +248,44 @@ class CustomerCreditController extends Controller
         //registrando en la tabla de cliente empeño
         $DateOfRequest= date("Y-m-d H:i:s");
         $clase_customer->state=1;
-        $clase_customer->id_type_business=1;
+        $clase_customer->id_type_business=$request->id_type_business;
         $clase_customer->date_inscription=$DateOfRequest;
         $clase_customer->id_person=$clasex->id;
         $clase_customer->id_promoter =$request->id_employee;
         $clase_customer->id_job =$request->id_job;
         $clase_customer->save(); 
+
+        $t = json_decode(json_encode($request->requirements), true);
+        foreach ($t as $key => $value) {
+            
+            //id_type_document 	id_customer 
+            if($value['check']){
+                $controller =CustomerTypeDocument::where('id_type_document','=', $value['id_type_requerement'])->where('id_customer', '=', $clase_customer->id)
+                ->select('id')->take(1)->get();
+                if(count($controller)==0){
+                    $controller = new CustomerTypeDocument();
+                    $controller->id_type_document = $value['id_type_requerement'];
+                    $controller->id_customer = $clase_customer->id;
+                    $controller->state =1;
+                    $controller->save(); 
+                }else{
+                    $id=$controller[0]['id'];
+                    $controller = CustomerTypeDocument::findOrFail($id); 
+                    $controller->state =1;
+                    $controller->save(); 
+                }
+            }else{
+                $controller =CustomerTypeDocument::where('id_type_document','=', $value['id_type_requerement'])->where('id_customer', '=', $clase_customer->id)
+                ->select('id')->take(1)->get();
+                if(count($controller)>0){
+                    $id=$controller[0]['id'];
+                    $controller = CustomerTypeDocument::findOrFail($id);     
+                    $controller->state =0;
+                    $controller->save(); 
+                }                
+            }
+            
+        }
         /* $DateOfRequest= date("Y-m-d H:i:s");
             $clasex->modificado ='Modificado por '.Auth::user()->nick.' '. $DateOfRequest;*/
           return  $clasex->id; 
@@ -333,7 +369,8 @@ class CustomerCreditController extends Controller
           ];
     }
     public function generate_code(Request $request){    
-        $fecha =date("Y");    
+        $fecha =date("Y");   
+        $fecha=substr($fecha,2,3); 
         $sqlx ="";
         $sqlx = "SELECT CONCAT($fecha,right(CONCAT('000000', (COUNT(cp.id) + 1)),6)) as code
         FROM person p INNER JOIN customer cp ON cp.id_person=p.id";
@@ -360,7 +397,7 @@ class CustomerCreditController extends Controller
 
     public function list_type_business(Request $request){
         $sqlx="";
-        $sqlx="SELECT id as id_type_business,
+        $sqlx="SELECT id,
         name from type_business where state=1
         order by name";
         $miLista = DB::select($sqlx);
@@ -371,8 +408,8 @@ class CustomerCreditController extends Controller
     public function list_job(Request $request){
         $sqlx="";
         $sqlx="SELECT id,
-        name from job WHERE state=1 
-        order by name";
+        names from job WHERE state=1 
+        order by names";
         $miLista = DB::select($sqlx);
         return [
             'datax' => $miLista

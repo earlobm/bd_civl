@@ -170,7 +170,7 @@
                                                                                 <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-briefcase"></i></span>
                                                                                 <select class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;" v-model="id_job">
                                                                                     <option selected="selected" value="">Seleccione</option>
-                                                                                    <option v-for="datax in array_job" :key="datax.id" :value="datax.id">{{ datax.name }}</option>
+                                                                                    <option v-for="datax in array_job" :key="datax.id" :value="datax.id">{{ datax.names }}</option>
                                                                                 </select>
                                                                             </div>
                                                                         </div>
@@ -182,7 +182,7 @@
                                                                                 <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-shopping-cart"></i></span>
                                                                                 <select class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;" v-model="id_type_business">
                                                                                     <option selected="selected" value="">Seleccione</option>
-                                                                                    <option v-for="datax in array_type_business" :key="datax.id" :value="datax.id">{{ datax.name }}</option>
+                                                                                    <option v-for="datax in array_type_business" :key="datax.id" :value="datax.id">{{ datax.name}}</option>
                                                                                 </select>
                                                                             </div>
                                                                         </div>
@@ -659,7 +659,7 @@
                                                                                 <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-briefcase"></i></span>
                                                                                 <select class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;" v-model="id_job">
                                                                                     <option selected="selected" value="">Seleccione</option>
-                                                                                    <option v-for="datax in array_job" :key="datax.id" :value="datax.id">{{ datax.name }}</option>
+                                                                                    <option v-for="datax in array_job" :key="datax.id" :value="datax.id">{{ datax.names }}</option>
                                                                                 </select>
                                                                             </div>
                                                                         </div>
@@ -1001,7 +1001,7 @@
                                             </table>
                                         </div>
                                      
-                                        <button type="button" @click="savePledge()" class="btn btn-save" style="width: 100%;">
+                                        <button type="button" class="btn btn-save" style="width: 100%;">
                                             <i class="fa fa-save"></i>&nbsp;GUARDAR EMPEÑO
                                         </button>
                                     </div>
@@ -1070,7 +1070,7 @@
                 errorFamilyProduct:'form-group',errorCharacteristic:'form-group',
 
                 arrayTypeProduct:[],arrayFamilyProduct:[],arrayWarehouse:[], array_department:[], array_province: [], array_district: [], array_type_document:[],array_code:[],
-                totalcapital:0,totalInterest:0,modalTicket:0,idcustomer:-1,array_requirement : [], requirements:[],
+                totalcapital:0,totalInterest:0,modalTicket:0,idcustomer:-1,array_requirement : [],array_requirement_true : [], requirements:[],
                 midatax:[], list:[],totalNumber:0, id_customer_credit:-1,
                 icon_title:'fa fa-plus', icon_save:'fa fa-save',icon_save_pledge:'fa fa-save', icon_edit:'fa fa-pencil',
                 icon_search_dni:'fa fa-search', icon_search_client:'fa fa-search', icon_generate:'fa fa-rotate-right',
@@ -1154,7 +1154,7 @@
             },
             getDepartment(){
                 let me=this;
-               // me.listado=0;
+                me.listado=0;
                 var url= 'get_department';
                     axios.get(url).then(function (response) {
                         var respuesta= response.data;
@@ -1204,57 +1204,6 @@
             closeModal(){
                 let me=this;
                 me.modalTicket=0;
-            },
-            savePledge() {
-                if(this.arrayDetailPledge.length<1){
-                    return;
-                }
-                swal({
-                title: '¿Esta seguro?',
-                type: 'warning',showCancelButton: true,
-                confirmButtonColor: '#3085d6', cancelButtonColor: '#d33',
-                confirmButtonText: 'Aceptar!',cancelButtonText: 'Cancelar',
-                confirmButtonClass: 'btn btn-success',cancelButtonClass: 'btn btn-danger',
-                buttonsStyling: false,reverseButtons: true
-                }).then((result) => {
-                if (result.value) {
-                      let me = this;
-                        axios.post('save_pledge',{
-                            'idcustomerpledge':this.id_customer_credit,
-                            'date_init':moment(moment(this.date_init, 'DD/MM/YYYY')).format('YYYY-MM-DD') ,
-                            'date_end':moment(moment(this.date_end, 'DD/MM/YYYY')).format('YYYY-MM-DD') ,
-                            'period':this.period,'licence_plate':this.licence_plate,
-                            'serie':this.serie,
-                            'term': this.term,'tea': this.tea,'interest': this.totalInterest,
-                            'capital':this.totalcapital,'total':Number(this.totalcapital)+Number(this.totalInterest),
-                            'detail_pledge':this.arrayDetailPledge,
-                            'id_warehouse':this.id_warehouse.id               
-                        }).then(function (response) {
-
-                             swal(
-                                'Guardado!',
-                                'El registro ha sido guardado con éxito.',
-                                'success'
-                                )
-                           me.dowloadContract();     
-
-                           var url= 'ticket_plegde?capital='+me.totalcapital+'&interest='+me.totalInterest+'&name_customer='+me.name_customer
-                            +'&date_movement='+moment(moment(me.date_init, 'DD/MM/YYYY')).format('YYYY-MM-DD')+
-                            '&type=Empenio';
-                            window.open(url, '_blank');  
-
-                             
-                             me.volver();
-                             me.list_data(1); 
-                        }).catch(function (error) {
-                            console.log(error);
-                        });
-
-                  //  this.modalTicket=1;
-                   
-                } else if ( result.dismiss === swal.DismissReason.cancel
-                ) {} }) 
-                
             },
             dowloadContract(){
 				  //var entre = document.getElementById("entre");
@@ -1424,22 +1373,42 @@
                 if (this.nro_doc.length==8){   
                     let me=this;          
                     me.icon_search_dni='fa fa-spinner fa-spin';    
-                    var url= 'getDataCustomerBynro_doc?nro_doc='+me.nro_doc;
+                    var url= 'get_customer_by_dni?nro_doc='+me.nro_doc;
                     axios.get(url).then(function (response) {
                          var respuesta= response.data;
                          var tipo=respuesta.tipo;
                           if(respuesta.datax.length>0){
                             if(tipo=='bd'){
                                     me.id=respuesta.datax[0].id;
+                                    me.id_customer_credit=respuesta.datax[0].id_customer_credit;
                                     me.name = respuesta.datax[0].names;
                                     me.paternal_last_name = respuesta.datax[0].paternal_last_name;
                                     me.maternal_last_name = respuesta.datax[0].maternal_last_name;
                                     me.phone = respuesta.datax[0].phone;
+                                    me.code = respuesta.datax[0].code;
                                     me.address =respuesta.datax[0].address;
+                                    me.reference =respuesta.datax[0].reference;
                                     me.sex =respuesta.datax[0].sex;
+                                    me.email =respuesta.datax[0].email;
+                                    me.department =respuesta.datax[0].id_department;
+                                    me.province =respuesta.datax[0].id_province;
+                                    me.district =respuesta.datax[0].id_district;
+                                    me.id_job =respuesta.datax[0].id_job;
+                                    me.id_employee =respuesta.datax[0].id_promoter;
+                                    me.id_type_business =respuesta.datax[0].id_type_business;
+                                    me.id_type_doc =respuesta.datax[0].id_type_document;
                                     me.marital_status =respuesta.datax[0].marital_status;
                                     me.birthdate=moment(respuesta.datax[0].birthdate).toDate();
                                     me.validarData();
+                                    me.array_requirement_true=respuesta.requirements_data;
+                                    //para los requisitos
+                                    for (var x=0;x<me.requirements.length;x++){
+                                        for (var y=0;y<me.array_requirement_true.length;y++){
+                                            if(me.requirements[x].id_type_requerement==me.array_requirement_true[y].id_type_document){
+                                                me.requirements[x].check=true;    
+                                            }
+                                        } 
+                                    }
 
                                     }
                                     else{
@@ -1452,6 +1421,7 @@
                                     me.icon_search_dni='fa fa-search'; 
     
                         }
+                        
                     
                     })
                     .catch(function (error) {
@@ -1658,7 +1628,8 @@
                             'birthdate' : moment(moment(this.birthdate, 'DD/MM/YYYY')).format('YYYY-MM-DD'),
                             'id_customer_credit':this.id_customer_credit,
                             'id_job':this.id_job, 'id_type_business':this.id_type_business,
-                            'id_employee':this.id_employee
+                            'id_employee':this.id_employee,
+                            'requirements':this.requirements
                         }).then(function (response) {
                                 me.clean_data();                                
                                 me.list_data(1);  
@@ -1904,7 +1875,7 @@
                     var respuesta= response.data;
                     var lista=respuesta.datax;
                     for(var i=0; i < lista.length; i++){
-                       me.requirements.push({ check:false,id_type_requerement: lista[i].id_type_requerement, name:''});
+                       me.requirements.push({ check:false,id_type_requerement: lista[i].id_type_requerement});
                        console.log(me.requirements);
                       
                     }
