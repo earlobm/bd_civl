@@ -46,6 +46,7 @@ Route::get('/get_employee', 'Register\EmployeeController@list_employee');
 Route::post('/saveCustomerCredit', 'Register\CustomerCreditController@save_data'); 
 Route::get('/generate_code', 'Register\CustomerCreditController@generate_code');  
 Route::get('/get_customer_by_dni', 'Register\CustomerCreditController@get_customer_by_dni'); 
+Route::get('/get_aval_by_dni', 'Register\CustomerCreditController@get_aval_by_dni'); 
 //DOCUMENT
 Route::post('/save_Document', 'Register\DocumentCustomerController@save_Document'); 
 Route::get('/getlistDocument', 'Register\DocumentCustomerController@getlistDocument');

@@ -1475,12 +1475,13 @@
                 if (this.nro_doc_aval.length==8){   
                     let me=this;          
                     me.icon_search_dni_aval='fa fa-spinner fa-spin';    
-                    var url= 'get_aval_by_dni?nro_doc='+me.nro_doc_aval;
+                    var url= 'get_aval_by_dni?nro_doc_aval='+me.nro_doc_aval;
                     axios.get(url).then(function (response) {
                         var respuesta= response.data;
                         var tipo=respuesta.tipo;
                         if(respuesta.datax.length>0){
-                            if(tipo=='bd'){
+                            if(tipo=='person'){
+                                console.log('algo aqui'+ respuesta.datax[0].id_guarantor);
                                 me.id_guarantor=respuesta.datax[0].id_guarantor;
                                 me.id_type_doc_aval =respuesta.datax[0].id_type_document_aval;
                                 me.nro_doc_aval = respuesta.datax[0].number_doc_aval;                                
@@ -1499,7 +1500,10 @@
                                 me.id_type_business_aval =respuesta.datax[0].id_type_business_aval;                                
                                 me.marital_status_aval =respuesta.datax[0].marital_status_aval;
                                 me.birthdate_aval=moment(respuesta.datax[0].birthdate_aval).toDate();
-                            }else{
+                            }else if(tipo=='bd'){
+                                alert ('Esta persona ya es un garante.');
+                            }
+                            else{
                                 me.paternal_last_name_aval = respuesta.datax[0];
                                 me.name_aval = respuesta.datax[1];
                                 me.maternal_last_name_aval = respuesta.datax[2];    
@@ -1833,19 +1837,17 @@
                             'email_aval': this.email_aval,'reference_aval': this.reference_aval,
                             'id_district_aval': this.district_aval,
                             'birthdate_aval' : moment(moment(this.birthdate_aval, 'DD/MM/YYYY')).format('YYYY-MM-DD'),
-                            'id_job_aval':this.id_job_aval, 'id_type_business_aval':this.id_type_business_aval,
-                            
+                            'id_job_aval':this.id_job_aval, 'id_type_business_aval':this.id_type_business_aval,                            
                             'requirements':this.requirements
                         }).then(function (response) {
                                 me.clean_data();                                
-                                me.list_data(1);  
+                                // me.list_data(1);  
                                 me.icon_save='fa fa-save';
                                 swal( 'Guardado!', 'El registro ha sido guardado con éxito.', 'success' ); 
                         }).catch(function (error) {
                             console.log(error);
                         });                        
-                    }else if(result.dismiss === swal.DismissReason.cancel) {  
-                        me.icon_save='fa fa-save';                  
+                    }else if(result.dismiss === swal.DismissReason.cancel) { 
                     }
                 }) 
             },
