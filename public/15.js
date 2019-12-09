@@ -26930,10 +26930,10 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
                 console.log(error);
             });
         },
-        getEmpleado: function getEmpleado() {
+        getEmpleado: function getEmpleado(id) {
             var me = this;
             // me.listado=0;
-            var url = 'getEmpleado';
+            var url = 'getEmpleado?id=' + id;
             axios.get(url).then(function (response) {
                 var respuesta = response.data;
                 me.arrayEmpleado = respuesta.datax;

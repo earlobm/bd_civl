@@ -58,8 +58,12 @@ class LoginController extends Controller
             $user->last_entry = $DateOfRequest;
             $user->ip_access =$request->ip();
             $user->save();
-            
-            // DB::statement(" update pledge set state=2 where current_date()>date_end and state=1");
+            $sql="update credit set day_mora=case when DATEDIFF(NOW(),date_expiration+1)>0  
+            then DATEDIFF(NOW(),date_expiration+1) else 0 end
+            , mora = round((0.00385) * case when DATEDIFF(NOW(),date_expiration+1)>0  
+            then DATEDIFF(NOW(),date_expiration+1) else 0 end * saldo, 1)
+            where state =1 ";
+             DB::statement($sql);
             // DB::statement("update detail_pledge set state=2 where current_date()>date_end and state=1");
 
             //guardando el historial

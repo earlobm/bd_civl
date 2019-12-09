@@ -14358,13 +14358,13 @@ Vue.component('garmenttype', function () {
   return __webpack_require__.e/* import() */(3).then(__webpack_require__.bind(null, 52));
 });
 Vue.component('carhregister', function () {
-  return __webpack_require__.e/* import() */(19).then(__webpack_require__.bind(null, 53));
+  return __webpack_require__.e/* import() */(18).then(__webpack_require__.bind(null, 53));
 });
 Vue.component('income', function () {
-  return __webpack_require__.e/* import() */(17).then(__webpack_require__.bind(null, 54));
+  return __webpack_require__.e/* import() */(16).then(__webpack_require__.bind(null, 54));
 });
 Vue.component('egress', function () {
-  return __webpack_require__.e/* import() */(18).then(__webpack_require__.bind(null, 55));
+  return __webpack_require__.e/* import() */(17).then(__webpack_require__.bind(null, 55));
 });
 
 //Vue.component('example-component', require('./components/ExampleComponent.vue'));
@@ -14384,11 +14384,11 @@ Vue.component('user', function () {
   return __webpack_require__.e/* import() */(0).then(__webpack_require__.bind(null, 59));
 });
 Vue.component('profile', function () {
-  return __webpack_require__.e/* import() */(20).then(__webpack_require__.bind(null, 60));
+  return __webpack_require__.e/* import() */(19).then(__webpack_require__.bind(null, 60));
 });
 //para creditos
 Vue.component('dailycollection', function () {
-  return __webpack_require__.e/* import() */(16).then(__webpack_require__.bind(null, 61));
+  return __webpack_require__.e/* import() */(20).then(__webpack_require__.bind(null, 61));
 });
 
 var app = new Vue({

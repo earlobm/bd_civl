@@ -87,17 +87,13 @@ Route::get('/getSuggestedPrice','Register\PledgeController@send_to_sales');
 Route::get('/getProductSales','Register\PledgeController@product_sales');
 Route::post('/save_suggested_price','Register\PledgeController@save_suggested_price');
 Route::post('/save_final_price','Register\PledgeController@save_final_price');
-//payment
-Route::get('/get_detail_movement_pledge', 'Register\PledgeController@get_detail_movement_pledge'); 
-Route::get('/get_movement_pledge', 'Register\PledgeController@get_movement_pledge'); 
-Route::get('/get_list_on_sale','Register\PledgeController@list_on_sale');
-Route::get('/get_list_pawned','Register\PledgeController@list_pawned');
-Route::get('/get_list_defeated','Register\PledgeController@list_defeated');
-Route::get('/get_list_data','Register\PledgeController@list_data');
+
+//movement Payment
+Route::post('/save_payment','Movement\DailyCollectionController@save');
+Route::get('/downloadDayliCollection','Movement\DailyCollectionController@downloadDayliCollection');
 
 //guardando pagos de empeño
 Route::post('/save_payment_pledge','Movement\PaymentPledgeController@save');
-Route::get('/ticket_plegde','Movement\PaymentPledgeController@ticket_plegde');
 
 //garmentType
 Route::get('/getDependenceParent', 'Register\DependenceController@getDependenceParent');

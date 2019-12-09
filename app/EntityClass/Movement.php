@@ -4,9 +4,9 @@ namespace poi\EntityClass;
 
 use Illuminate\Database\Eloquent\Model;
 
-class MovementPledge extends Model{
+class Movement extends Model{
   //protected $connection = 'mysql-utf8';
-    protected $table='movement_pledge';
+    protected $table='movement';
     protected $primaryKey='id';
     public $timestamps = false;
     const UPDATED_AT=NULL;

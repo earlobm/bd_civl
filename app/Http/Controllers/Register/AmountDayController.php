@@ -139,7 +139,7 @@ class AmountDayController extends Controller
                 inner join employee em on mer.id=em.id_market
                 inner join person per on per.id= em.id_person
                 where su.state=1
-                and mer.state=1 ";
+                and mer.state=1 and mer.id=$id";
                 $listMercado = DB::select($queyMercado);
                 return [
                     'datax'=>$listMercado

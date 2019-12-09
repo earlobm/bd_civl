@@ -572,10 +572,10 @@
                     console.log(error);
                 });
             },
-            getEmpleado(){
+            getEmpleado(id){
                 let me=this;
                // me.listado=0;
-                var url= 'getEmpleado';
+                var url= 'getEmpleado?id='+id;
                 axios.get(url).then(function (response) {
                     var respuesta= response.data;
                     me.arrayEmpleado = respuesta.datax;
