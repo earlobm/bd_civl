@@ -68,7 +68,8 @@ class AmountDayController extends Controller
         $clasex->save();
     }
         public function getEditListAmountDay(Request $request){
-            $queyAmount="select amo.id,per.names, per.paternal_last_name,per.maternal_last_name, per.number_doc, su.name as name_sucursal,mer.name as name_mercado,amo.date_register,amo.amount_delivered,amo.amount_assigned
+            $queyAmount="select amo.id,per.names, per.paternal_last_name,per.maternal_last_name, per.number_doc, su.name as name_sucursal,mer.name as name_mercado,amo.date_register,amo.amount_delivered,amo.amount_assigned,
+            mer.id as id_market,su.id as id_sucursal,em.id as id_employee
             from branch_office su 
             inner join market mer on su.id=mer.id_branch_office 
             inner join employee em on mer.id=em.id_market

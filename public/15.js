@@ -26646,7 +26646,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
             listRecibido: [],
             authUser: '', porcent: 50,
             listado: 1
-        }, _defineProperty(_ref, 'authUser', 1), _defineProperty(_ref, 'date_init', '' + new Date().getDate() + '/' + (Number(new Date().getMonth()) + 1) + '/' + new Date().getFullYear()), _defineProperty(_ref, 'options', {
+        }, _defineProperty(_ref, 'authUser', 1), _defineProperty(_ref, 'date_register', '' + new Date().getDate() + '/' + (Number(new Date().getMonth()) + 1) + '/' + new Date().getFullYear()), _defineProperty(_ref, 'options', {
             format: 'DD/MM/YYYY',
             useCurrent: false,
             locale: 'es',
@@ -26658,7 +26658,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
             'last_page': 0,
             'from': 0,
             'to': 0
-        }), _defineProperty(_ref, 'offset', 3), _defineProperty(_ref, 'name', ''), _defineProperty(_ref, 'id_empleado_edit', -1), _defineProperty(_ref, 'paternal_last_name', ''), _defineProperty(_ref, 'maternal_last_name', ''), _defineProperty(_ref, 'date_register', ''), _defineProperty(_ref, 'address', ''), _defineProperty(_ref, 'nro_doc', ''), _defineProperty(_ref, 'errorClase', 0), _defineProperty(_ref, 'id', -1), _defineProperty(_ref, 'errors', {}), _defineProperty(_ref, 'errorInputActivity5', 'form-group'), _defineProperty(_ref, 'errorInputActivity6', 'form-group'), _defineProperty(_ref, 'errorInputAmount', 'form-group'), _defineProperty(_ref, 'errorComboTipoProduco', 'form-group'), _defineProperty(_ref, 'buscar', ''), _defineProperty(_ref, 'sex', ''), _defineProperty(_ref, 'type', ''), _defineProperty(_ref, 'marital_status', ''), _defineProperty(_ref, 'name_customer', ''), _defineProperty(_ref, 'amountAsing', 0), _defineProperty(_ref, 'amountDeli', 0), _defineProperty(_ref, 'date_end', ''), _defineProperty(_ref, 'interest', 0), _defineProperty(_ref, 'term', 1), _defineProperty(_ref, 'total', 0), _defineProperty(_ref, 'guaranty', ''), _defineProperty(_ref, 'id_sucursal', 0), _defineProperty(_ref, 'characteristic', ''), _defineProperty(_ref, 'tea', 20), _defineProperty(_ref, 'id_warehouse', ''), _defineProperty(_ref, 'id_person', 0), _defineProperty(_ref, 'id_sucursal_edit', -1), _defineProperty(_ref, 'quantity', 1), _defineProperty(_ref, 'licence_plate', ''), _defineProperty(_ref, 'serie', ''), _defineProperty(_ref, 'note', ''), _defineProperty(_ref, 'id_mercado_edit', -1), _defineProperty(_ref, 'period', 'Mensual'), _defineProperty(_ref, 'arrayDetailPledge', []), _defineProperty(_ref, 'licence_plate', ''), _defineProperty(_ref, 'serie', ''), _defineProperty(_ref, 'errorTotalAmount', 'form-group'), _defineProperty(_ref, 'errorAmount', 'form-group'), _defineProperty(_ref, 'errorTerm', 'form-group'), _defineProperty(_ref, 'errorTea', 'form-group'), _defineProperty(_ref, 'errorInterested', 'form-group'), _defineProperty(_ref, 'errorWarehouse', 'form-group'), _defineProperty(_ref, 'errorFamilyProduct', 'form-group'), _defineProperty(_ref, 'errorCharacteristic', 'form-group'), _defineProperty(_ref, 'arrayMercado', []), _defineProperty(_ref, 'arraySucursal', []), _defineProperty(_ref, 'arrayEmpleado', []), _ref;
+        }), _defineProperty(_ref, 'offset', 3), _defineProperty(_ref, 'name', ''), _defineProperty(_ref, 'id_empleado_edit', -1), _defineProperty(_ref, 'nro_doc', ''), _defineProperty(_ref, 'errorClase', 0), _defineProperty(_ref, 'id', -1), _defineProperty(_ref, 'errors', {}), _defineProperty(_ref, 'errorInputActivity5', 'form-group'), _defineProperty(_ref, 'errorInputActivity6', 'form-group'), _defineProperty(_ref, 'errorInputAmount', 'form-group'), _defineProperty(_ref, 'buscar', ''), _defineProperty(_ref, 'amountAsing', 0), _defineProperty(_ref, 'amountDeli', 0), _defineProperty(_ref, 'id_person', 0), _defineProperty(_ref, 'id_sucursal_edit', -1), _defineProperty(_ref, 'id_mercado_edit', -1), _defineProperty(_ref, 'errorAmount', 'form-group'), _defineProperty(_ref, 'arrayMercado', []), _defineProperty(_ref, 'arraySucursal', []), _defineProperty(_ref, 'arrayEmpleado', []), _ref;
     },
 
     components: {
@@ -26691,130 +26691,14 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         }
     },
     methods: {
-        addPledge: function addPledge() {
-            if (this.validateDataPledge()) {
-                return;
-            }
-            this.arrayDetailPledge.push({ guaranty: this.guaranty.name, characteristic: this.characteristic,
-                note: this.note,
-                date_init: this.date_init,
-                date_end: this.date_end, id_warehouse: this.id_warehouse,
-                licence_plate: this.licence_plate, serie: this.serie,
-                amount: this.amount, interest: this.interest });
-        },
-
-        deletePledge: function deletePledge(item) {
-            var _this = this;
-
-            swal({
-                title: '¿Esta seguro de eliminar?',
-                type: 'warning', showCancelButton: true,
-                confirmButtonColor: '#3085d6', cancelButtonColor: '#d33',
-                confirmButtonText: 'Aceptar!', cancelButtonText: 'Cancelar',
-                confirmButtonClass: 'btn btn-success', cancelButtonClass: 'btn btn-danger',
-                buttonsStyling: false, reverseButtons: true
-            }).then(function (result) {
-                if (result.value) {
-                    // this.arrayActivity.push(item);
-                    var index = _this.arrayDetailPledge.indexOf(item);
-                    _this.arrayDetailPledge.splice(index, 1);
-                } else if (result.dismiss === swal.DismissReason.cancel) {}
-            });
-        },
-        addDay: function addDay(day) {
-
-            var fecha = new Date();
-            fecha.setDate(__WEBPACK_IMPORTED_MODULE_1_moment_timezone___default()(__WEBPACK_IMPORTED_MODULE_1_moment_timezone___default()(this.date_init, 'DD/MM/YYYY')).format('DD'));
-            fecha.setMonth(__WEBPACK_IMPORTED_MODULE_1_moment_timezone___default()(__WEBPACK_IMPORTED_MODULE_1_moment_timezone___default()(this.date_init, 'DD/MM/YYYY')).format('MM') - 1);
-            fecha.setYear(__WEBPACK_IMPORTED_MODULE_1_moment_timezone___default()(__WEBPACK_IMPORTED_MODULE_1_moment_timezone___default()(this.date_init, 'DD/MM/YYYY')).format('YYYY'));
-            var fechaoriginal = new Date();
-
-            fechaoriginal.setDate(__WEBPACK_IMPORTED_MODULE_1_moment_timezone___default()(__WEBPACK_IMPORTED_MODULE_1_moment_timezone___default()(this.date_init, 'DD/MM/YYYY')).format('DD'));
-            fechaoriginal.setMonth(__WEBPACK_IMPORTED_MODULE_1_moment_timezone___default()(__WEBPACK_IMPORTED_MODULE_1_moment_timezone___default()(this.date_init, 'DD/MM/YYYY')).format('MM') - 1);
-            fechaoriginal.setYear(__WEBPACK_IMPORTED_MODULE_1_moment_timezone___default()(__WEBPACK_IMPORTED_MODULE_1_moment_timezone___default()(this.date_init, 'DD/MM/YYYY')).format('YYYY'));
-            var contador = 0;
-            var dayoriginal = day;
-            if (this.period == 'Diario') {
-                //var addTime = i * 86400; //Tiempo en segundos
-                fecha.setSeconds(86400); //Añado el tiempo
-                for (var i = 0; i < day; i++) {
-                    if (fecha.getUTCDay() == 0) {
-                        contador++;
-                        day++;
-                    }
-                    fecha.setSeconds(86400);
-                }
-                contador = contador + dayoriginal;
-                fechaoriginal.setSeconds(contador * 86400);
-            }
-            if (this.period == 'Semanal') {
-                day = day * 7;
-                fechaoriginal.setDate(fechaoriginal.getDate() + day);
-            }
-            if (this.period == 'Quincenal') {
-                day = day * 15;
-                fechaoriginal.setDate(fechaoriginal.getDate() + day);
-            }
-            if (this.period == 'Mensual') {
-                fechaoriginal.setMonth(fechaoriginal.getMonth() + day);
-                //comprobando domingo
-                if (fechaoriginal.getUTCDay() == 0) {
-                    fechaoriginal.setSeconds(86400);
-                }
-            }
-
-            var hoy = '' + fechaoriginal.getDate() + '/' + (Number(fechaoriginal.getMonth()) + 1) + '/' + fechaoriginal.getFullYear();
-            return hoy;
-        },
-        getData: function getData() {
-            //obteniendo datos de reniec
-            if (this.nro_doc.length == 8) {
-                var me = this;
-                var url = 'getDataCustomerBynro_doc?nro_doc=' + me.nro_doc;
-                axios.get(url).then(function (response) {
-                    var respuesta = response.data;
-                    var tipo = respuesta.tipo;
-                    if (respuesta.datax.length > 0) {
-                        if (tipo == 'bd') {
-                            me.id_employee = respuesta.datax[0].id;
-                            me.name = respuesta.datax[0].names;
-                            me.paternal_last_name = respuesta.datax[0].paternal_last_name;
-                            me.maternal_last_name = respuesta.datax[0].maternal_last_name;
-                            me.phone = respuesta.datax[0].phone;
-                            //me.array_mark =respuesta.datax[0].id_market;
-                            //me.array_mark=respuesta.datax[0].id_market;
-                            me.address = respuesta.datax[0].address;
-                            me.sex = respuesta.datax[0].sex;
-                            me.marital_status = respuesta.datax[0].marital_status;
-                            me.birthdate = __WEBPACK_IMPORTED_MODULE_1_moment_timezone___default()(respuesta.datax[0].birthdate).toDate();
-                            me.validarData();
-                        } else {
-                            me.paternal_last_name = respuesta.datax[0];
-                            me.name = respuesta.datax[1];
-                            me.maternal_last_name = respuesta.datax[2];
-                            me.validarData();
-                        }
-                    }
-                }).catch(function (error) {
-                    console.log(error);
-                });
-                //obtener datos
-            }
-        },
         validarData: function validarData() {
             this.errors = {};
             this.errorClase = 0;
-            this.errors.amount = "";
-            //input
-            //this.errorInputActivity5='form-group has-success';
-
-
-            if (!this.amount) {
-                this.errors.amount = "Ingrese el  monto";
-                //this.errorInputActivity5='form-group has-error';
+            if (!this.amountAsing && !this.amountDeli) {
+                this.errorInputActivity5 = "form-group has-error";
+                this.errorInputActivity6 = "form-group has-error";
                 this.errorClase = 1;
             }
-
             return this.errorClase;
         },
         paginaActual: function paginaActual() {
@@ -26828,8 +26712,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         },
         editar: function editar(id) {
             var me = this;
-            me.listado = 2;
-            me.getLitSucursal(2);
+            me.listado = 0;
+            me.getLitSucursal();
             //me.limpiar();
             var url = 'getEditListAmountDay?id=' + id;
             axios.get(url).then(function (response) {
@@ -26841,42 +26725,19 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
                 me.id_empleado_edit = respuesta.datax[0].id_employee;
                 me.id_mercado_edit = respuesta.datax[0].id_market;
                 me.id_sucursal_edit = respuesta.datax[0].id_sucursal;
-
-                //me.getMercado(id);
-                // me.getEmpleado(id);
-                //me.id_sucursal_edit =respuesta.datax[0].sex;
-                // me.validarData();
-
-            }).catch(function (error) {
-                console.log(error);
-            });
-        },
-        editarRecibido: function editarRecibido(id) {
-            var me = this;
-            me.listado = 2;
-            me.getLitSucursal(2);
-            //me.limpiar();
-            var url = 'getEditListAmountDayRecibido?id=' + id;
-            axios.get(url).then(function (response) {
-                var respuesta = response.data;
-                me.id = respuesta.datax[0].id;
-                me.amount = respuesta.datax[0].amount;
-                me.date_register = __WEBPACK_IMPORTED_MODULE_1_moment_timezone___default()(respuesta.datax[0].date_register).toDate();;
-                me.type = respuesta.datax[0].type;
-                me.id_empleado_edit = respuesta.datax[0].id_employee;
-                me.id_mercado_edit = respuesta.datax[0].id_market;
-                me.id_sucursal_edit = respuesta.datax[0].id_sucursal;
-
-                //me.getMercado(id);
-                // me.getEmpleado(id);
-                //me.id_sucursal_edit =respuesta.datax[0].sex;
-                me.validarData();
+                me.getMercado(me.id_sucursal_edit);
+                me.getEmpleado(me.id_mercado_edit);
+                me.listado = 2;
             }).catch(function (error) {
                 console.log(error);
             });
         },
         save: function save() {
-            var _this2 = this;
+            var _this = this;
+
+            if (this.validarData()) {
+                return;
+            }
 
             swal({
                 title: 'Esta seguro de guardar la informacion?',
@@ -26889,16 +26750,17 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
             }).then(function (result) {
                 if (result.value) {
 
-                    var me = _this2;
+                    var me = _this;
+                    me.listado = 0;
                     axios.post('save_Amount', {
-                        'amount_assigned': _this2.amountAsing, 'id_employee': _this2.id_empleado_edit, 'id_market': _this2.id_mercado_edit,
-                        'amount_delivered': _this2.amountDeli,
-                        'id': _this2.id,
-                        'date_register': __WEBPACK_IMPORTED_MODULE_1_moment_timezone___default()(__WEBPACK_IMPORTED_MODULE_1_moment_timezone___default()(_this2.date_register, 'DD/MM/YYYY')).format('YYYY-MM-DD')
+                        'amount_assigned': _this.amountAsing, 'id_employee': _this.id_empleado_edit, 'id_market': _this.id_mercado_edit,
+                        'amount_delivered': _this.amountDeli,
+                        'id': _this.id,
+                        'date_register': __WEBPACK_IMPORTED_MODULE_1_moment_timezone___default()(__WEBPACK_IMPORTED_MODULE_1_moment_timezone___default()(_this.date_register, 'DD/MM/YYYY')).format('YYYY-MM-DD')
                     }).then(function (response) {
                         me.limpiar();
-                        //me.listado=1; 
-                        // me.listar(1);                  
+                        me.listar(1);
+                        //me.listado=1;                
                         swal('Guardado!', 'El registro ha sido guardado con éxito.', 'success');
                     }).catch(function (error) {
                         console.log(error);
@@ -26908,7 +26770,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
                 result.dismiss === swal.DismissReason.cancel) {}
             });
         },
-        getLitSucursal: function getLitSucursal(page) {
+        getLitSucursal: function getLitSucursal() {
             var me = this;
             // me.listado=0;
             var url = 'getlistSucursal';
@@ -26942,7 +26804,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
             });
         },
         eliminar: function eliminar(id) {
-            var _this3 = this;
+            var _this2 = this;
 
             swal({
                 title: '¿Esta seguro de eliminar?',
@@ -26958,7 +26820,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
                 reverseButtons: true
             }).then(function (result) {
                 if (result.value) {
-                    var me = _this3;
+                    var me = _this2;
                     axios.post('delete_AmountDay', {
                         'id': id
 
@@ -26969,70 +26831,18 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
                         console.log(error);
                     });
                 } else if (result.dismiss === swal.DismissReason.cancel) {}
-            });
-        },
-        eliminarRecibido: function eliminarRecibido(id) {
-            var _this4 = this;
-
-            swal({
-                title: '¿Esta seguro de eliminar?',
-                type: 'warning',
-                showCancelButton: true,
-                confirmButtonColor: '#3085d6',
-                cancelButtonColor: '#d33',
-                confirmButtonText: 'Aceptar!',
-                cancelButtonText: 'Cancelar',
-                confirmButtonClass: 'btn btn-success',
-                cancelButtonClass: 'btn btn-danger',
-                buttonsStyling: false,
-                reverseButtons: true
-            }).then(function (result) {
-                if (result.value) {
-                    var me = _this4;
-                    axios.post('delete_AmountDay', {
-                        'id': id
-
-                    }).then(function (response) {
-                        me.listado = 1;
-                        me.listar(1);
-                    }).catch(function (error) {
-                        console.log(error);
-                    });
-                } else if (result.dismiss === swal.DismissReason.cancel) {}
-            });
-        },
-        pledge: function pledge(midata) {
-            var me = this;
-            me.listado = 3;
-            this.name_customer = midata.names + ' ' + midata.paternal_last_name + ' ' + midata.maternal_last_name;
-
-            var url = 'getDependenceParent';
-            axios.get(url).then(function (response) {
-                var respuesta = response.data;
-                me.arrayTypeProduct = respuesta.datax;
-            }).catch(function (error) {
-                console.log(error);
-            });
-
-            url = 'getWarehouse';
-            axios.get(url).then(function (response) {
-                var respuesta = response.data;
-                me.arrayWarehouse = respuesta.datax;
-            }).catch(function (error) {
-                console.log(error);
             });
         },
         agregar: function agregar() {
             var me = this;
             me.listado = 2;
-            this.getLitSucursal(1);
+            this.getLitSucursal();
         },
         volver: function volver() {
             var me = this;
             me.limpiar();
             me.listado = 1;
             me.listar(1);
-            me.listarRecibido(1);
         },
         descargar: function descargar(buscar) {
             var url = '/downloadprogram?buscar=' + buscar;
@@ -27040,6 +26850,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         },
         limpiar: function limpiar() {
             this.errorInputActivity5 = 'form-group';
+            this.errorInputActivity6 = 'form-group';
             this.errors = {};
             this.errors.amount = "";
             this.amount = "";
@@ -27047,6 +26858,9 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
             this.id_empleado_edit = -1;
             this.id_mercado_edit = -1;
             this.id_sucursal_edit = -1;
+            this.amountAsing = 0;
+            this.amountDeli = 0;
+            this.date_register = '' + new Date().getDate() + '/' + (Number(new Date().getMonth()) + 1) + '/' + new Date().getFullYear();
         },
         listar: function listar(page) {
             var me = this;
@@ -27780,7 +27594,7 @@ var render = function() {
                                                 {
                                                   attrs: {
                                                     selected: "selected",
-                                                    value: ""
+                                                    value: "-1"
                                                   }
                                                 },
                                                 [_vm._v("Seleccione")]
@@ -28045,7 +27859,7 @@ var render = function() {
                                   _c("div", { staticClass: "col-md-4" }, [
                                     _c(
                                       "div",
-                                      { class: _vm.errorInputActivity5 },
+                                      { class: _vm.errorInputActivity6 },
                                       [
                                         _c(
                                           "label",

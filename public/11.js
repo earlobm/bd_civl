@@ -26380,7 +26380,7 @@ exports = module.exports = __webpack_require__(63)(false);
 
 
 // module
-exports.push([module.i, "\n.table-bordered th,\n.table-bordered td {\n  border: 1px solid rgb(204, 198, 198) !important;\n}\n\n", ""]);
+exports.push([module.i, "\n.table-bordered th,\r\n.table-bordered td {\r\n  border: 1px solid rgb(204, 198, 198) !important;\n}\r\n\r\n", ""]);
 
 // exports
 
