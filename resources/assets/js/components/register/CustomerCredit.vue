@@ -45,7 +45,7 @@
                                                             <template v-if="listadox==1">                                                   
                                                                 <div class="row"> 
                                                                     <div class="col-md-4">
-                                                                        <div v-bind:class="errorInputActivity5">
+                                                                        <div v-bind:class="errorInputCode">
                                                                             <label for="dni">Código:</label>
                                                                             <div class="input-group">
                                                                                 <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;  color:#1e2172"><i class="fa fa-barcode"></i></span>
@@ -57,10 +57,10 @@
                                                                         </div>
                                                                     </div> 
                                                                     <div class="col-md-4">
-                                                                        <div class="form-group">
+                                                                        <div v-bind:class="errorInputTypeDoc">
                                                                             <label for="estado_civil">Tipo de Documento de Identidad:</label>
                                                                             <div class="input-group">
-                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-user"></i></span>
+                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-list-alt"></i></span>
                                                                                 <select class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;" v-model="id_type_doc">
                                                                                     <option selected="selected" value="">Seleccione</option>
                                                                                     <option v-for="datax in array_type_document" :key="datax.id" :value="datax.id">{{ datax.name }}</option>
@@ -69,11 +69,11 @@
                                                                         </div>
                                                                     </div>
                                                                     <div class="col-md-4">
-                                                                        <div v-bind:class="errorInputActivity">
+                                                                        <div v-bind:class="errorInputNroDoc">
                                                                             <label for="dni">N° de Documento:</label>
                                                                             <div class="input-group">
                                                                                 <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;  color:#1e2172"><i class="fa fa-database"></i></span>
-                                                                                <input maxlength="8" v-model="nro_doc" type="text" @keyup="validarData()" @keyup.enter="getData()"  class="form-control">
+                                                                                <input maxlength="8" v-model="nro_doc" type="text" @keyup.enter="getData()"  class="form-control">
                                                                                 <span class="input-group-btn">
                                                                                     <button data-toggle="tooltip" title="Buscar en RENIEC" type="submit" @click="getData()" class="btn btn-search btn-flat" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;"><i v-bind:class="icon_search_dni"></i> BUSCAR</button>
                                                                                 </span>
@@ -81,7 +81,7 @@
                                                                         </div>
                                                                     </div>                                                                            
                                                                     <div class="col-md-4">
-                                                                        <div v-bind:class="errorInputActivity3">
+                                                                        <div v-bind:class="errorInputPaternal">
                                                                             <label for="ap_paterno">Apellido Paterno:</label>
                                                                             <div class="input-group">
                                                                                 <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-user"></i></span>
@@ -90,7 +90,7 @@
                                                                         </div>
                                                                     </div>
                                                                     <div class="col-md-4">
-                                                                        <div v-bind:class="errorInputActivity4">
+                                                                        <div v-bind:class="errorInputMaternal">
                                                                             <label for="ap_materno">Apellido Materno:</label>
                                                                             <div class="input-group">
                                                                                 <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-user"></i></span>
@@ -99,7 +99,7 @@
                                                                         </div>
                                                                     </div>
                                                                     <div class="col-md-4">
-                                                                        <div v-bind:class="errorInputActivity2">
+                                                                        <div v-bind:class="errorInputNames">
                                                                             <label for="nombres">Nombres:</label>
                                                                             <div class="input-group">
                                                                                 <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-user"></i></span>
@@ -108,7 +108,7 @@
                                                                         </div>
                                                                     </div>
                                                                     <div class="col-md-3">
-                                                                        <div class="form-group">
+                                                                        <div v-bind:class="errorInputSex">
                                                                             <label for="sexo">Sexo:</label>
                                                                             <div class="input-group">
                                                                                 <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-transgender"></i></span>
@@ -131,7 +131,7 @@
                                                                         </div>
                                                                     </div>
                                                                     <div class="col-md-3">
-                                                                        <div class="form-group">
+                                                                        <div v-bind:class="errorInputMaritalState">
                                                                             <label for="estado_civil">Estado Civíl:</label>
                                                                             <div class="input-group">
                                                                                 <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-heart-o"></i></span>
@@ -164,7 +164,7 @@
                                                                         </div>
                                                                     </div>
                                                                     <div class="col-md-3">
-                                                                        <div class="form-group">
+                                                                        <div v-bind:class="errorInputJob">
                                                                             <label for="type_business">Ocupación:</label>
                                                                             <div class="input-group">
                                                                                 <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-briefcase"></i></span>
@@ -176,7 +176,7 @@
                                                                         </div>
                                                                     </div> 
                                                                     <div class="col-md-3">
-                                                                        <div class="form-group">
+                                                                        <div v-bind:class="errorInputTypeBusiness">
                                                                             <label for="type_business">Tipo de Negocio:</label>
                                                                             <div class="input-group">
                                                                                 <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-shopping-cart"></i></span>
@@ -188,7 +188,7 @@
                                                                         </div>
                                                                     </div>
                                                                     <div class="col-md-3">
-                                                                        <div class="form-group">
+                                                                        <div v-bind:class="errorInputEmployee">
                                                                             <label for="type_business">Promotor:</label>
                                                                             <div class="input-group">
                                                                                 <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-shopping-cart"></i></span>
@@ -200,7 +200,7 @@
                                                                         </div>
                                                                     </div>
                                                                     <div class="col-md-3">
-                                                                        <div class="form-group">
+                                                                        <div v-bind:class="errorInputDepartment">
                                                                             <label for="estado_civil">Departamento:</label>
                                                                             <div class="input-group">
                                                                                 <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-map-marker"></i></span>
@@ -212,7 +212,7 @@
                                                                         </div>
                                                                     </div>
                                                                     <div class="col-md-3">
-                                                                        <div class="form-group">
+                                                                        <div v-bind:class="errorInputProvince">
                                                                             <label for="estado_civil">Provincia:</label>
                                                                             <div class="input-group">
                                                                                 <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-map-marker"></i></span>
@@ -224,7 +224,7 @@
                                                                         </div>
                                                                     </div>
                                                                     <div class="col-md-3">
-                                                                        <div class="form-group">
+                                                                        <div v-bind:class="errorInputDistrict">
                                                                             <label for="estado_civil">Distrito:</label>
                                                                             <div class="input-group">
                                                                                 <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-map-marker"></i></span>
@@ -236,7 +236,7 @@
                                                                         </div>
                                                                     </div>
                                                                     <div class="col-md-3">
-                                                                        <div v-bind:class="errorInputActivity6">
+                                                                        <div v-bind:class="errorInputAddress">
                                                                             <label for="celular">Dirección:</label>
                                                                             <div class="input-group">
                                                                                 <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-location-arrow"></i></span>
@@ -252,8 +252,7 @@
                                                                                 <textarea placeholder="Referencias de la dirección domiciliaria del cliente." v-model="reference" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;"></textarea>
                                                                             </div>
                                                                         </div>
-                                                                    </div>
-                                                                    
+                                                                    </div>                                                                    
                                                                 </div>     
                                                                 <div class="row">
                                                                     <div class="col-md-12">
@@ -478,76 +477,64 @@
                                                         </div>
                                                         <div class="box-body" v-if="add_aval">  
                                                             <template v-if="listadox==1">                                                   
-                                                                <div class="row"> 
-                                                                    <div class="col-md-4">
-                                                                        <div v-bind:class="errorInputActivity5">
-                                                                            <label for="dni">Código:</label>
-                                                                            <div class="input-group">
-                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;  color:#1e2172"><i class="fa fa-barcode"></i></span>
-                                                                                <input maxlength="8" v-model="code" type="text" class="form-control">
-                                                                                <span class="input-group-btn">
-                                                                                    <button data-toggle="tooltip" title="Generar Automáticamente" @click="generate_code()" type="submit" class="btn btn-search btn-flat" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;"><i v-bind:class="icon_generate"></i>  GENERAR</button>
-                                                                                </span>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div> 
-                                                                    <div class="col-md-4">
-                                                                        <div class="form-group">
+                                                                <div class="row">
+                                                                    <div class="col-md-3">
+                                                                        <div v-bind:class="errorInputTypeDocAval">
                                                                             <label for="estado_civil">Tipo de Documento de Identidad:</label>
                                                                             <div class="input-group">
-                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-user"></i></span>
-                                                                                <select class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;" v-model="id_type_doc">
+                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-list-alt"></i></span>
+                                                                                <select class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;" v-model="id_type_doc_aval">
                                                                                     <option selected="selected" value="">Seleccione</option>
                                                                                     <option v-for="datax in array_type_document" :key="datax.id" :value="datax.id">{{ datax.name }}</option>
                                                                                 </select>
                                                                             </div>
                                                                         </div>
                                                                     </div>
-                                                                    <div class="col-md-4">
-                                                                        <div v-bind:class="errorInputActivity">
+                                                                    <div class="col-md-3">
+                                                                        <div v-bind:class="errorInputNroDocAval">
                                                                             <label for="dni">N° de Documento:</label>
                                                                             <div class="input-group">
                                                                                 <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;  color:#1e2172"><i class="fa fa-database"></i></span>
-                                                                                <input maxlength="8" v-model="nro_doc" type="text" @keyup="validarData()" @keyup.enter="getData()"  class="form-control">
+                                                                                <input maxlength="8" v-model="nro_doc_aval" type="text" @keyup="validateDataAval()" @keyup.enter="getDataAval()"  class="form-control">
                                                                                 <span class="input-group-btn">
-                                                                                    <button data-toggle="tooltip" title="Buscar en RENIEC" type="submit" @click="getData()" class="btn btn-search btn-flat" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;"><i v-bind:class="icon_search_dni"></i> BUSCAR</button>
+                                                                                    <button data-toggle="tooltip" title="Buscar en RENIEC" type="submit" @click="getDataAval()" class="btn btn-search btn-flat" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;"><i v-bind:class="icon_search_dni_aval"></i> BUSCAR</button>
                                                                                 </span>
                                                                             </div>
                                                                         </div>
                                                                     </div>                                                                            
                                                                     <div class="col-md-3">
-                                                                        <div v-bind:class="errorInputActivity3">
+                                                                        <div v-bind:class="errorInputPaternalAval">
                                                                             <label for="ap_paterno">Apellido Paterno:</label>
                                                                             <div class="input-group">
                                                                                 <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-user"></i></span>
-                                                                                <input v-model="paternal_last_name" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">                                                                            
+                                                                                <input v-model="paternal_last_name_aval" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">                                                                            
                                                                             </div>
                                                                         </div>
                                                                     </div>
                                                                     <div class="col-md-3">
-                                                                        <div v-bind:class="errorInputActivity4">
+                                                                        <div v-bind:class="errorInputMaternalAval">
                                                                             <label for="ap_materno">Apellido Materno:</label>
                                                                             <div class="input-group">
                                                                                 <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-user"></i></span>
-                                                                                <input v-model="maternal_last_name" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">  
+                                                                                <input v-model="maternal_last_name_aval" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">  
                                                                             </div>
                                                                         </div>
                                                                     </div>
                                                                     <div class="col-md-3">
-                                                                        <div v-bind:class="errorInputActivity2">
+                                                                        <div v-bind:class="errorInputNamesAval">
                                                                             <label for="nombres">Nombres:</label>
                                                                             <div class="input-group">
                                                                                 <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-user"></i></span>
-                                                                                <input v-model="name" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">  
+                                                                                <input v-model="name_aval" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">  
                                                                             </div>
                                                                         </div>
                                                                     </div>
                                                                     <div class="col-md-3">
-                                                                        <div class="form-group">
+                                                                        <div v-bind:class="errorInputSexAval">
                                                                             <label for="sexo">Sexo:</label>
                                                                             <div class="input-group">
                                                                                 <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-transgender"></i></span>
-                                                                            <select class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;" v-model="sex">
+                                                                            <select class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;" v-model="sex_aval">
                                                                                 <option selected="selected" value="">Seleccione</option>
                                                                                 <option value="M">Masculino</option>
                                                                                 <option value="F">Femenino</option>
@@ -560,17 +547,17 @@
                                                                             <label for="edad">Fecha de Nacimiento:</label>
                                                                             <div class="input-group">
                                                                                 <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-birthday-cake "></i></span>
-                                                                            <date-picker v-model="birthdate" :config="options" style="border-top-right-radius: 3px;border-bottom-right-radius: 3px;"></date-picker>
+                                                                            <date-picker v-model="birthdate_aval" :config="options" style="border-top-right-radius: 3px;border-bottom-right-radius: 3px;"></date-picker>
                                                                                 
                                                                             </div>
                                                                         </div>
                                                                     </div>
                                                                     <div class="col-md-3">
-                                                                        <div class="form-group">
+                                                                        <div v-bind:class="errorInputMaritalStateAval">
                                                                             <label for="estado_civil">Estado Civíl:</label>
                                                                             <div class="input-group">
                                                                                 <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-heart-o"></i></span>
-                                                                            <select class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;" v-model="marital_status">
+                                                                            <select class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;" v-model="marital_status_aval">
                                                                                 <option selected="selected" value="">Seleccione</option>
                                                                                 <option value="SOLTERO">Soltero (a)</option>
                                                                                 <option value="CASADO">Casado (a)</option>
@@ -585,7 +572,7 @@
                                                                             <label for="celular">Celular:</label>
                                                                             <div class="input-group">
                                                                                 <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-mobile-phone"></i></span>
-                                                                                <input v-model="phone" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">  
+                                                                                <input v-model="phone_aval" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">  
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -594,70 +581,16 @@
                                                                             <label for="celular">Correo electrónico:</label>
                                                                             <div class="input-group">
                                                                                 <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-envelope"></i></span>
-                                                                                <input v-model="email" type="email" name="email" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">  
+                                                                                <input v-model="email_aval" type="email" name="email" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">  
                                                                             </div>
                                                                         </div>
                                                                     </div>
                                                                     <div class="col-md-3">
-                                                                        <div class="form-group">
-                                                                            <label for="estado_civil">Departamento:</label>
-                                                                            <div class="input-group">
-                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-map-marker"></i></span>
-                                                                                <select @change="getProvince($event.target.value)" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;" v-model="department">
-                                                                                    <option selected="selected" value="">Seleccione</option>
-                                                                                    <option v-for="miselect in array_department" :selected="miselect.id == department" :key="miselect.id" :value="miselect.id">{{ miselect.name}}</option>
-                                                                                </select>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-md-3">
-                                                                        <div class="form-group">
-                                                                            <label for="estado_civil">Provincia:</label>
-                                                                            <div class="input-group">
-                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-map-marker"></i></span>
-                                                                                <select @change="getDistrict($event.target.value)" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;" v-model="province">
-                                                                                    <option selected="selected" value="">Seleccione</option>
-                                                                                    <option v-for="miselect in array_province" :selected="miselect.id == province" :key="miselect.id" :value="miselect.id">{{ miselect.name}}</option>
-                                                                                </select>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-md-3">
-                                                                        <div class="form-group">
-                                                                            <label for="estado_civil">Distrito:</label>
-                                                                            <div class="input-group">
-                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-map-marker"></i></span>
-                                                                                <select class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;" v-model="district">
-                                                                                    <option selected="selected" value="">Seleccione</option>
-                                                                                    <option v-for="miselect in array_district" :selected="miselect.id == district" :key="miselect.id" :value="miselect.id">{{ miselect.name}}</option>
-                                                                                </select>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-md-3">
-                                                                        <div v-bind:class="errorInputActivity6">
-                                                                            <label for="celular">Dirección:</label>
-                                                                            <div class="input-group">
-                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-location-arrow"></i></span>
-                                                                                <input placeholder="Dirección domiciliaria" v-model="address" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>                                                                     
-                                                                    <div class="col-md-6">
-                                                                        <div class="form-group">
-                                                                            <label for="celular">Referencias:</label>
-                                                                            <div class="input-group">
-                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-file-o"></i></span>
-                                                                                <input placeholder="Referencias de la dirección domiciliaria del cliente." v-model="reference" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-md-3">
-                                                                        <div class="form-group">
+                                                                        <div v-bind:class="errorInputJobAval">
                                                                             <label for="type_business">Ocupación:</label>
                                                                             <div class="input-group">
                                                                                 <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-briefcase"></i></span>
-                                                                                <select class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;" v-model="id_job">
+                                                                                <select class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;" v-model="id_job_aval">
                                                                                     <option selected="selected" value="">Seleccione</option>
                                                                                     <option v-for="datax in array_job" :key="datax.id" :value="datax.id">{{ datax.names }}</option>
                                                                                 </select>
@@ -665,17 +598,71 @@
                                                                         </div>
                                                                     </div> 
                                                                     <div class="col-md-3">
-                                                                        <div class="form-group">
+                                                                        <div v-bind:class="errorInputTypeBusinessAval">
                                                                             <label for="type_business">Tipo de Negocio:</label>
                                                                             <div class="input-group">
                                                                                 <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-shopping-cart"></i></span>
-                                                                                <select class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;" v-model="id_type_business">
+                                                                                <select class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;" v-model="id_type_business_aval">
                                                                                     <option selected="selected" value="">Seleccione</option>
                                                                                     <option v-for="datax in array_type_business" :key="datax.id" :value="datax.id">{{ datax.name }}</option>
                                                                                 </select>
                                                                             </div>
                                                                         </div>
-                                                                    </div>                                                                                                                                                                                                           
+                                                                    </div> 
+                                                                    <div class="col-md-3">
+                                                                        <div v-bind:class="errorInputDepartmentAval">
+                                                                            <label for="estado_civil">Departamento:</label>
+                                                                            <div class="input-group">
+                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-map-marker"></i></span>
+                                                                                <select @change="getProvince($event.target.value)" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;" v-model="department_aval">
+                                                                                    <option selected="selected" value="">Seleccione</option>
+                                                                                    <option v-for="miselect in array_department" :selected="miselect.id == department_aval" :key="miselect.id" :value="miselect.id">{{ miselect.name}}</option>
+                                                                                </select>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-3">
+                                                                        <div v-bind:class="errorInputProvinceAval">
+                                                                            <label for="estado_civil">Provincia:</label>
+                                                                            <div class="input-group">
+                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-map-marker"></i></span>
+                                                                                <select @change="getDistrict($event.target.value)" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;" v-model="province_aval">
+                                                                                    <option selected="selected" value="">Seleccione</option>
+                                                                                    <option v-for="miselect in array_province" :selected="miselect.id == province_aval" :key="miselect.id" :value="miselect.id">{{ miselect.name}}</option>
+                                                                                </select>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-3">
+                                                                        <div v-bind:class="errorInputDistrictAval">
+                                                                            <label for="estado_civil">Distrito:</label>
+                                                                            <div class="input-group">
+                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-map-marker"></i></span>
+                                                                                <select class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;" v-model="district_aval">
+                                                                                    <option selected="selected" value="">Seleccione</option>
+                                                                                    <option v-for="miselect in array_district" :selected="miselect.id == district_aval" :key="miselect.id" :value="miselect.id">{{ miselect.name}}</option>
+                                                                                </select>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-3">
+                                                                        <div v-bind:class="errorInputAddressAval">
+                                                                            <label for="celular">Dirección:</label>
+                                                                            <div class="input-group">
+                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-location-arrow"></i></span>
+                                                                                <input placeholder="Dirección domiciliaria" v-model="address_aval" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>                                                                     
+                                                                    <div class="col-md-12">
+                                                                        <div class="form-group">
+                                                                            <label for="celular">Referencias:</label>
+                                                                            <div class="input-group">
+                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-file-o"></i></span>
+                                                                                <textarea placeholder="Referencias de la dirección domiciliaria del cliente." v-model="reference_aval" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;"></textarea>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>                                                                                                                                                                                                          
                                                                 </div>
                                                             </template>
                                                                 <!-- Emprender -->
@@ -790,7 +777,7 @@
                                         <i v-bind:class="icon_save"></i>&nbsp;GUARDAR CLIENTE
                                     </button>
                                     <button type="button" @click="save_data()" class="btn btn-save-pledge" data-toggle="tooltip" title="Guardar cliente y empeñar">
-                                        <i v-bind:class="icon_save_pledge"></i>&nbsp;GUARDAR / EMPEÑAR
+                                        <i v-bind:class="icon_save_pledge"></i>&nbsp;GUARDAR / DAR CRÉDITO
                                     </button>
                                 </template>  
                                 <template v-if="listadox==3">
@@ -1027,8 +1014,9 @@
         data (){
             return {
                 
-                id_parent:'',visible:1,array_job:[], id_job:'',
-                array_type_business:[],id_type_business:'', array_employee:[],
+                id_parent:'',visible:1,
+                array_job:[], id_job:'',array_job:[], id_job_aval:'',
+                array_type_business:[],array_employee:[],
                 id_employee:'',
                 authUser:'',porcent: 50,
                 listadox:1,
@@ -1037,6 +1025,7 @@
                 authUser:1,
                 date_init: ''+new Date().getDate()+'/'+(Number(new Date().getMonth())+1)+'/'+new Date().getFullYear(),
                 birthdate: ''+new Date().getDate()+'/'+(Number(new Date().getMonth())+1)+'/'+new Date().getFullYear(),
+                birthdate_aval: ''+new Date().getDate()+'/'+(Number(new Date().getMonth())+1)+'/'+new Date().getFullYear(),
                 options: {
                 format: 'DD/MM/YYYY',
                 useCurrent: false,
@@ -1051,15 +1040,40 @@
 					'from' : 0,
 					'to' : 0,
                 },offset: 3,
-                code:'', name:'',id:-1,paternal_last_name:'',maternal_last_name:'',phone:'',address:'',nro_doc:'',
-                id_type_doc:'', email:'', department:'10', province:'92', district:'', reference:'',
+                id:-1,
+                code:'', name:'', paternal_last_name:'',maternal_last_name:'',
+                phone:'',address:'',nro_doc:'', id_type_doc:'', email:'',                 
+                department:'10', province:'92', district:'', id_type_business:'', 
+                reference:'', sex:'', marital_status:'',
+
+                code_aval:'', name_aval:'', paternal_last_name_aval:'',maternal_last_name_aval:'',
+                phone_aval:'',address_aval:'',nro_doc_aval:'', id_type_doc_aval:'', email_aval:'', 
+                department_aval:'10', province_aval:'92', district_aval:'', id_type_business_aval:'', 
+                reference_aval:'', sex_aval:'', marital_status_aval:'',
                 errorClase : 0,
                 errors:{},
-                errorInputActivity:'form-group',errorInputActivity2:'form-group',
-                errorInputActivity3:'form-group', errorInputActivity4:'form-group',
-                errorInputActivity5:'form-group', errorInputActivity6:'form-group',
+
+                errorInputCode:'form-group',errorInputTypeDoc:'form-group',
+                errorInputNroDoc:'form-group',errorInputNames:'form-group',
+                errorInputPaternal:'form-group', errorInputMaternal:'form-group',
+                errorInputSex:'form-group', 
+                errorInputMaritalState:'form-group', errorInputAddress:'form-group',
+                errorInputJob:'form-group', errorInputTypeBusiness:'form-group',
+                errorInputEmployee:'form-group', errorInputDepartment:'form-group',
+                errorInputProvince:'form-group', errorInputDistrict:'form-group',
+
+                errorInputTypeDocAval:'form-group',
+                errorInputNroDocAval:'form-group',errorInputNamesAval:'form-group',
+                errorInputPaternalAval:'form-group', errorInputMaternalAval:'form-group',
+                errorInputSexAval:'form-group', 
+                errorInputMaritalStateAval:'form-group', errorInputAddressAval:'form-group',
+                errorInputJobAval:'form-group', errorInputTypeBusinessAval:'form-group',
+                errorInputDepartmentAval:'form-group',
+                errorInputProvinceAval:'form-group', errorInputDistrictAval:'form-group',
+
                 errorInputcapital:'form-group',errorComboTipoProduco:'form-group',
-                buscar:'',sex:'', marital_status:'',
+
+                buscar:'',
                 name_customer:'',capital:0,date_end:'',interest:0,
                 term:1,
                 total:0,guaranty:'',id_dependence:0,characteristic:'',tea:20,id_warehouse:'',
@@ -1071,9 +1085,16 @@
 
                 arrayTypeProduct:[],arrayFamilyProduct:[],arrayWarehouse:[], array_department:[], array_province: [], array_district: [], array_type_document:[],array_code:[],
                 totalcapital:0,totalInterest:0,modalTicket:0,idcustomer:-1,array_requirement : [],array_requirement_true : [], requirements:[],
-                midatax:[], list:[],totalNumber:0, id_customer_credit:-1,
-                icon_title:'fa fa-plus', icon_save:'fa fa-save',icon_save_pledge:'fa fa-save', icon_edit:'fa fa-pencil',
-                icon_search_dni:'fa fa-search', icon_search_client:'fa fa-search', icon_generate:'fa fa-rotate-right',
+                midatax:[], list:[],totalNumber:0, 
+                id_customer_credit:-1, id_guarantor:-1,
+                icon_title:'fa fa-plus', 
+                icon_save:'fa fa-save',
+                icon_save_pledge:'fa fa-save', 
+                icon_edit:'fa fa-pencil',
+                icon_search_dni:'fa fa-search',
+                icon_search_dni_aval:'fa fa-search',
+                icon_search_client:'fa fa-search',
+                icon_generate:'fa fa-rotate-right',
                 title:'Agregar Cliente', add_aval:0
             }
         },
@@ -1126,8 +1147,7 @@
                 .catch(function (error) {
                     console.log(error);
                 });
-            },
-            
+            },            
             getTypeDocument(){
                 let me=this;
                // me.listado=0;
@@ -1214,15 +1234,12 @@
             	window.location.href = url;
 			 },
             sumTotal(){
-                      this.totalcapital=0;
-                      this.totalInterest=0;
-                       for(var i=0;i<this.arrayDetailPledge.length;i++) 
-                        {
-                            this.totalcapital =  Number(this.totalcapital)+Number(this.arrayDetailPledge[i].capital);
-                            this.totalInterest =  Number(this.totalInterest)+Number(this.arrayDetailPledge[i].interest);
-                            
-                        }
-                   
+                this.totalcapital=0;
+                this.totalInterest=0;
+                for(var i=0;i<this.arrayDetailPledge.length;i++){
+                    this.totalcapital =  Number(this.totalcapital)+Number(this.arrayDetailPledge[i].capital);
+                    this.totalInterest =  Number(this.totalInterest)+Number(this.arrayDetailPledge[i].interest);
+                }  
             },  
             getFamilyProduct(id_parent){
                 let me=this;
@@ -1324,105 +1341,189 @@
                 //this.date_end='01-01-01';
                 // var hoy= ''+new Date().getDate()+'/'+(Number(new Date().getMonth())+1)+'/'+new Date().getFullYear();
                 this.date_end=this.addDay(Number(this.term));
-               },
+            },
             calculateTeabyInteres(){
-                   if(this.period=='Diario'){
-                       this.interest=Number(this.capital)*(Number(this.tea)*Number(this.term))/100;
-                        this.interest=Number((this.interest).toFixed(1));
-                   }
-                   if(this.period=='Semanal'){
-                       this.interest=Number(this.capital)*(Number(this.tea)*Number(this.term))/100;
-                       this.interest=Number((this.interest).toFixed(1));
-                   }
-                    if(this.period=='Quincenal'){
-                       this.interest= (Number(this.capital)*(Number(this.tea)*Number(this.term))/100);
-                       this.interest=Number((this.interest).toFixed(1));
-                   }
-                    if(this.period=='Mensual'){
-                       this.interest= (Number(this.capital)*(Number(this.tea)*Number(this.term))/100);
-                       this.interest=Number((this.interest).toFixed(1));
-                   }
-                       
-               },
+                if(this.period=='Diario'){
+                    this.interest=Number(this.capital)*(Number(this.tea)*Number(this.term))/100;
+                    this.interest=Number((this.interest).toFixed(1));
+                }
+                if(this.period=='Semanal'){
+                    this.interest=Number(this.capital)*(Number(this.tea)*Number(this.term))/100;
+                    this.interest=Number((this.interest).toFixed(1));
+                }
+                if(this.period=='Quincenal'){
+                    this.interest= (Number(this.capital)*(Number(this.tea)*Number(this.term))/100);
+                    this.interest=Number((this.interest).toFixed(1));
+                }
+                if(this.period=='Mensual'){
+                    this.interest= (Number(this.capital)*(Number(this.tea)*Number(this.term))/100);
+                    this.interest=Number((this.interest).toFixed(1));
+                }
+                    
+            },
             calculateTeabyPerioid(){
-                   if(this.period=='Diario'){
-                       this.tea=0.67;
-                       this.interest=Number(this.capital)*(Number(this.tea)*Number(this.term))/100;
+                if(this.period=='Diario'){
+                    this.tea=0.67;
+                    this.interest=Number(this.capital)*(Number(this.tea)*Number(this.term))/100;
                         this.interest=Number((this.interest).toFixed(1));
-                   }
-                   if(this.period=='Semanal'){
-                       this.tea=5;
-                       this.interest=Number(this.capital)*(Number(this.tea)*Number(this.term))/100;
-                       this.interest=Number((this.interest).toFixed(1));
-                   }
+                }
+                if(this.period=='Semanal'){
+                    this.tea=5;
+                    this.interest=Number(this.capital)*(Number(this.tea)*Number(this.term))/100;
+                    this.interest=Number((this.interest).toFixed(1));
+                }
                     if(this.period=='Quincenal'){
-                       this.tea=10;
-                       this.interest= (Number(this.capital)*(Number(this.tea)*Number(this.term))/100);
-                       this.interest=Number((this.interest).toFixed(1));
-                   }
+                    this.tea=10;
+                    this.interest= (Number(this.capital)*(Number(this.tea)*Number(this.term))/100);
+                    this.interest=Number((this.interest).toFixed(1));
+                }
                     if(this.period=='Mensual'){
-                       this.tea=20;
-                       this.interest= (Number(this.capital)*(Number(this.tea)*Number(this.term))/100);
-                       this.interest=Number((this.interest).toFixed(1));
-                   }
-                   this.calculateTeabyTerm();
-                       
-               },
-            getData(){
-                     //obteniendo datos de reniec
+                    this.tea=20;
+                    this.interest= (Number(this.capital)*(Number(this.tea)*Number(this.term))/100);
+                    this.interest=Number((this.interest).toFixed(1));
+                }
+                this.calculateTeabyTerm();
+                    
+            },
+            getData(){//obteniendo datos de reniec                     
                 if (this.nro_doc.length==8){   
                     let me=this;          
                     me.icon_search_dni='fa fa-spinner fa-spin';    
                     var url= 'get_customer_by_dni?nro_doc='+me.nro_doc;
                     axios.get(url).then(function (response) {
-                         var respuesta= response.data;
-                         var tipo=respuesta.tipo;
-                          if(respuesta.datax.length>0){
+                        var respuesta= response.data;
+                        var respuestax= response.data;
+                        var tipo=respuesta.tipo;
+                        var aval=respuestax.aval;
+                        if(respuesta.datax.length>0){
                             if(tipo=='bd'){
-                                    me.id=respuesta.datax[0].id;
-                                    me.id_customer_credit=respuesta.datax[0].id_customer_credit;
-                                    me.name = respuesta.datax[0].names;
-                                    me.paternal_last_name = respuesta.datax[0].paternal_last_name;
-                                    me.maternal_last_name = respuesta.datax[0].maternal_last_name;
-                                    me.phone = respuesta.datax[0].phone;
-                                    me.code = respuesta.datax[0].code;
-                                    me.address =respuesta.datax[0].address;
-                                    me.reference =respuesta.datax[0].reference;
-                                    me.sex =respuesta.datax[0].sex;
-                                    me.email =respuesta.datax[0].email;
-                                    me.department =respuesta.datax[0].id_department;
-                                    me.province =respuesta.datax[0].id_province;
-                                    me.district =respuesta.datax[0].id_district;
-                                    me.id_job =respuesta.datax[0].id_job;
-                                    me.id_employee =respuesta.datax[0].id_promoter;
-                                    me.id_type_business =respuesta.datax[0].id_type_business;
-                                    me.id_type_doc =respuesta.datax[0].id_type_document;
-                                    me.marital_status =respuesta.datax[0].marital_status;
-                                    me.birthdate=moment(respuesta.datax[0].birthdate).toDate();
-                                    me.validarData();
-                                    me.array_requirement_true=respuesta.requirements_data;
-                                    //para los requisitos
-                                    for (var x=0;x<me.requirements.length;x++){
-                                        for (var y=0;y<me.array_requirement_true.length;y++){
-                                            if(me.requirements[x].id_type_requerement==me.array_requirement_true[y].id_type_document){
-                                                me.requirements[x].check=true;    
-                                            }
-                                        } 
-                                    }
+                                me.id=respuesta.datax[0].id;
+                                me.id_guarantor=respuesta.datax[0].id_guarantor;
+                                me.id_customer_credit=respuesta.datax[0].id_customer_credit;
+                                me.code = respuesta.datax[0].code;
+                                me.name = respuesta.datax[0].names;
+                                me.paternal_last_name = respuesta.datax[0].paternal_last_name;
+                                me.maternal_last_name = respuesta.datax[0].maternal_last_name;
+                                me.phone = respuesta.datax[0].phone;
+                                me.address =respuesta.datax[0].address;
+                                me.reference =respuesta.datax[0].reference;
+                                me.sex =respuesta.datax[0].sex;
+                                me.email =respuesta.datax[0].email;
+                                me.department =respuesta.datax[0].id_department;
+                                me.province =respuesta.datax[0].id_province;
+                                me.district =respuesta.datax[0].id_district;
+                                me.id_job =respuesta.datax[0].id_job;
+                                me.id_employee =respuesta.datax[0].id_promoter;
+                                me.id_type_business =respuesta.datax[0].id_type_business;
+                                me.id_type_doc =respuesta.datax[0].id_type_document;
+                                me.marital_status =respuesta.datax[0].marital_status;
+                                me.birthdate=moment(respuesta.datax[0].birthdate).toDate();                               
 
-                                    }
-                                    else{
-                                    me.paternal_last_name = respuesta.datax[0];
-                                    me.name = respuesta.datax[1];
+                                me.nro_doc_aval = respuesta.datax[0].number_doc_aval;                                
+                                me.name_aval = respuesta.datax[0].names_aval;                                
+                                me.paternal_last_name_aval = respuesta.datax[0].paternal_last_name_aval;                                
+                                me.maternal_last_name_aval = respuesta.datax[0].maternal_last_name_aval;
+                                me.phone_aval = respuesta.datax[0].phone_aval;                                
+                                me.address_aval =respuesta.datax[0].address_aval;
+                                me.reference_aval =respuesta.datax[0].reference_aval;
+                                me.sex_aval =respuesta.datax[0].sex_aval;
+                                me.email_aval =respuesta.datax[0].email_aval;
+                                me.department_aval =respuesta.datax[0].id_department_aval;
+                                me.province_aval =respuesta.datax[0].id_province_aval;
+                                me.district_aval =respuesta.datax[0].id_district_aval;
+                                me.id_job_aval =respuesta.datax[0].id_job_aval;
+                                me.id_type_business_aval =respuesta.datax[0].id_type_business_aval;
+                                me.id_type_doc_aval =respuesta.datax[0].id_type_document_aval;
+                                me.marital_status_aval =respuesta.datax[0].marital_status_aval;
+                                me.birthdate_aval=moment(respuesta.datax[0].birthdate_aval).toDate();
 
-                                    me.maternal_last_name = respuesta.datax[2];
-                                    me.validarData();
-                                    }
-                                    me.icon_search_dni='fa fa-search'; 
-    
+                                me.array_requirement_true=respuesta.requirements_data;
+                                //para los requisitos
+                                for (var x=0;x<me.requirements.length;x++){
+                                    for (var y=0;y<me.array_requirement_true.length;y++){
+                                        if(me.requirements[x].id_type_requerement==me.array_requirement_true[y].id_type_document){
+                                            me.requirements[x].check=true;    
+                                        }
+                                    } 
+                                }
+                            }else{
+                                me.paternal_last_name = respuesta.datax[0];
+                                me.maternal_last_name = respuesta.datax[2];
+                                me.name = respuesta.datax[1];
+                                me.validateData();
+                            }
+                            me.icon_search_dni='fa fa-search';
                         }
                         
+                        if(respuestax.data.length>0){
+                        if(aval=='si'){
+                                me.add_aval=1;
+                                console.log(aval);
+                                
+                        }else{
+                            me.add_aval=0;    
+                            console.log(aval);                            
+                        }   
+                        console.log(aval);
+                        }
+                        
+                        
+                    })
+                    .catch(function (error) {
+                        console.log(error);
+                    });
+                    //obtener datos
                     
+                }
+            },
+            getDataAval(){//obteniendo datos de reniec                     
+                if (this.nro_doc_aval.length==8){   
+                    let me=this;          
+                    me.icon_search_dni_aval='fa fa-spinner fa-spin';    
+                    var url= 'get_customer_by_dni?nro_doc='+me.nro_doc_aval;
+                    axios.get(url).then(function (response) {
+                        var respuesta= response.data;
+                        var tipo=respuesta.tipo;
+                        if(respuesta.datax.length>0){
+                            if(tipo=='bd'){
+                                me.id=respuesta.datax[0].id;
+                                me.id_customer_credit=respuesta.datax[0].id_customer_credit;
+                                me.paternal_last_name_aval = respuesta.datax[0].paternal_last_name;
+                                me.maternal_last_name_aval = respuesta.datax[0].maternal_last_name;
+                                me.name_aval = respuesta.datax[0].names;
+                                me.phone = respuesta.datax[0].phone;
+                                me.code = respuesta.datax[0].code;
+                                me.address =respuesta.datax[0].address;
+                                me.reference =respuesta.datax[0].reference;
+                                me.sex =respuesta.datax[0].sex;
+                                me.email =respuesta.datax[0].email;
+                                me.department =respuesta.datax[0].id_department;
+                                me.province =respuesta.datax[0].id_province;
+                                me.district =respuesta.datax[0].id_district;
+                                me.id_job =respuesta.datax[0].id_job;
+                                me.id_employee =respuesta.datax[0].id_promoter;
+                                me.id_type_business =respuesta.datax[0].id_type_business;
+                                me.id_type_doc =respuesta.datax[0].id_type_document;
+                                me.marital_status =respuesta.datax[0].marital_status;
+                                me.birthdate=moment(respuesta.datax[0].birthdate).toDate();
+                                me.validateDataAval();
+                                me.array_requirement_true=respuesta.requirements_data;
+                                //para los requisitos
+                                for (var x=0;x<me.requirements.length;x++){
+                                    for (var y=0;y<me.array_requirement_true.length;y++){
+                                        if(me.requirements[x].id_type_requerement==me.array_requirement_true[y].id_type_document){
+                                            me.requirements[x].check=true;    
+                                        }
+                                    } 
+                                }
+                            }else{
+                                me.paternal_last_name_aval = respuesta.datax[0];
+                                me.name_aval = respuesta.datax[1];
+                                me.maternal_last_name_aval = respuesta.datax[2];                                
+                                me.validateData();
+                            }
+                            me.icon_search_dni_aval='fa fa-search';     
+                        }
                     })
                     .catch(function (error) {
                         console.log(error);
@@ -1455,49 +1556,156 @@
                     
                 }
             },
-            validarData(){
+            validateData(){
                 this.errors = {};
                 this.errorClase=0;
                 //input
-                this.errorInputActivity='form-group';
-                this.errorInputActivity2='form-group';
-                this.errorInputActivity3='form-group';
-                this.errorInputActivity4='form-group';
-                this.errorInputActivity5='form-group';
-                this.errorInputActivity6='form-group';
-                this.errorInputcapital='form-group';
-                this.errorComboTipoProduco='form-group';
-                this.errorTotalcapital='form-group';
+                this.errorInputCode='form-group';
+                this.errorInputTypeDoc='form-group';
+                this.errorInputNroDoc='form-group';
+                this.errorInputNames='form-group';
+                this.errorInputPaternal='form-group';
+                this.errorInputMaternal='form-group';
+                this.errorInputSex='form-group';
+                this.errorInputMaritalState='form-group';                
+                this.errorInputAddress='form-group';
+                this.errorInputJob='form-group';
+                this.errorInputTypeBusiness='form-group';
+                this.errorInputEmployee='form-group';
+                this.errorInputDepartment='form-group';
+                this.errorInputProvince='form-group';
+                this.errorInputDistrict='form-group';
 
+                if (!this.code){  
+                    this.errorInputCode='form-group has-error';
+                    this.errorClase = 1;
+                }
+                if (!this.id_type_doc){  
+                    this.errorInputTypeDoc='form-group has-error';
+                    this.errorClase = 1;
+                }
+                if (!this.nro_doc){  
+                    this.errorInputNroDoc='form-group has-error';
+                    this.errorClase = 1;
+                }
+                if (!this.name){  
+                    this.errorInputNames='form-group has-error';
+                    this.errorClase = 1;
+                }
+                if (!this.paternal_last_name){  
+                    this.errorInputPaternal='form-group has-error';
+                    this.errorClase = 1;
+                }
+                if (!this.maternal_last_name){  
+                    this.errorInputMaternal='form-group has-error';
+                    this.errorClase = 1;
+                }   
+                if (!this.sex){  
+                    this.errorInputSex='form-group has-error';
+                    this.errorClase = 1;
+                }
+                if (!this.marital_status){  
+                    this.errorInputMaritalState='form-group has-error';
+                    this.errorClase = 1;
+                }        
+                if (!this.address){  
+                    this.errorInputAddress='form-group has-error';
+                    this.errorClase = 1;
+                }
+                if (!this.id_job){  
+                    this.errorInputJob='form-group has-error';
+                    this.errorClase = 1;
+                }
+                if (!this.id_type_business){  
+                    this.errorInputTypeBusiness='form-group has-error';
+                    this.errorClase = 1;
+                }
+                if (!this.id_employee){  
+                    this.errorInputEmployee='form-group has-error';
+                    this.errorClase = 1;
+                }
+                if (!this.department){  
+                    this.errorInputDepartment='form-group has-error';
+                    this.errorClase = 1;
+                }
+                if (!this.province){  
+                    this.errorInputProvince='form-group has-error';
+                    this.errorClase = 1;
+                }
+                if (!this.district){  
+                    this.errorInputDistrict='form-group has-error';
+                    this.errorClase = 1;
+                }
+                
+                return this.errorClase;
+            }, 
+            validateDataAval(){
+                this.errors = {};
+                this.errorClase=0;
+                this.errorInputTypeDocAval='form-group';
+                this.errorInputNroDocAval='form-group';
+                this.errorInputNamesAval='form-group';
+                this.errorInputPaternalAval='form-group';
+                this.errorInputMaternalAval='form-group';
+                this.errorInputSexAval='form-group';
+                this.errorInputMaritalStateAval='form-group';                
+                this.errorInputAddressAval='form-group';
+                this.errorInputJobAval='form-group';
+                this.errorInputTypeBusinessAval='form-group';
+                this.errorInputDepartmentAval='form-group';
+                this.errorInputProvinceAval='form-group';
+                this.errorInputDistrictAval='form-group';
 
-                if (!this.nro_doc) 
-                {  
-                    this.errorInputActivity='form-group has-error';
+                if (!this.id_type_doc_aval){  
+                    this.errorInputTypeDocAval='form-group has-error';
                     this.errorClase = 1;
                 }
-                if (!this.name) 
-                {  
-                    this.errorInputActivity2='form-group has-error';
+                if (!this.nro_doc_aval){  
+                    this.errorInputNroDocAval='form-group has-error';
                     this.errorClase = 1;
                 }
-                if (!this.paternal_last_name) 
-                {  
-                    this.errorInputActivity3='form-group has-error';
+                if (!this.name_aval){  
+                    this.errorInputNamesAval='form-group has-error';
                     this.errorClase = 1;
                 }
-                if (!this.maternal_last_name) 
-                {  
-                    this.errorInputActivity4='form-group has-error';
+                if (!this.paternal_last_name_aval){  
+                    this.errorInputPaternalAval='form-group has-error';
                     this.errorClase = 1;
                 }
-                if (!this.code) 
-                {  
-                    this.errorInputActivity5='form-group has-error';
+                if (!this.maternal_last_name_aval){  
+                    this.errorInputMaternalAval='form-group has-error';
+                    this.errorClase = 1;
+                }   
+                if (!this.sex_aval){  
+                    this.errorInputSexAval='form-group has-error';
                     this.errorClase = 1;
                 }
-                if (!this.address) 
-                {  
-                    this.errorInputActivity6='form-group has-error';
+                if (!this.marital_status_aval){  
+                    this.errorInputMaritalStateAval='form-group has-error';
+                    this.errorClase = 1;
+                }        
+                if (!this.address_aval){  
+                    this.errorInputAddressAval='form-group has-error';
+                    this.errorClase = 1;
+                }
+                if (!this.id_job_aval){  
+                    this.errorInputJobAval='form-group has-error';
+                    this.errorClase = 1;
+                }
+                if (!this.id_type_business_aval){  
+                    this.errorInputTypeBusinessAval='form-group has-error';
+                    this.errorClase = 1;
+                }
+                if (!this.department_aval){  
+                    this.errorInputDepartmentAval='form-group has-error';
+                    this.errorClase = 1;
+                }
+                if (!this.province_aval){  
+                    this.errorInputProvinceAval='form-group has-error';
+                    this.errorClase = 1;
+                }
+                if (!this.district_aval){  
+                    this.errorInputDistrictAval='form-group has-error';
                     this.errorClase = 1;
                 }
                 
@@ -1587,7 +1795,7 @@
             //         me.id_type_doc =respuesta.datax[0].id_type_document;
             //         me.marital_status =respuesta.datax[0].marital_status;
             //         me.birthdate=moment(respuesta.datax[0].birthdate).toDate();
-            //         me.validarData();         
+            //         me.validateData();         
             //         me.icon_edit='fa fa-pencil';       
             //     })
             //     .catch(function (error) {
@@ -1597,14 +1805,17 @@
             // },
             save_data_only_client(){
                 //val =1 guardar y empeñar
-                //val = 0 solo registrar cliente  
-                this.visible=0;
+                //val = 0 solo registrar cliente
                 let me = this;
-                me.icon_save='fa fa-spinner fa-spin';
-                if (this.validarData()){
+                if(this.add_aval==1){
+                    if (this.validateDataAval()){
+                        return;
+                    }
+                }
+                if (this.validateData()){
                     return;
                 }
-                
+                me.icon_save='fa fa-spinner fa-spin';                
                 swal({
                     title: 'Esta seguro de guardar la informacion?',
                     type: 'warning',
@@ -1629,18 +1840,30 @@
                             'id_customer_credit':this.id_customer_credit,
                             'id_job':this.id_job, 'id_type_business':this.id_type_business,
                             'id_employee':this.id_employee,
+
+                            'nro_doc_aval':this.nro_doc_aval,'name_aval':this.name_aval,
+                            'paternal_last_name_aval':this.paternal_last_name_aval,
+                            'maternal_last_name_aval':this.maternal_last_name_aval,
+                            'phone_aval':this.phone_aval,'address_aval':this.address_aval, 
+                            'id_guarantor': this.id_guarantor,'sex_aval': this.sex_aval,
+                            'id_type_document_aval': this.id_type_doc_aval,
+                            'marital_status_aval': this.marital_status_aval,
+                            'email_aval': this.email_aval,'reference_aval': this.reference_aval,
+                            'id_district_aval': this.district_aval,
+                            'birthdate_aval' : moment(moment(this.birthdate_aval, 'DD/MM/YYYY')).format('YYYY-MM-DD'),
+                            'id_job_aval':this.id_job_aval, 'id_type_business_aval':this.id_type_business_aval,
+                            
                             'requirements':this.requirements
                         }).then(function (response) {
                                 me.clean_data();                                
                                 me.list_data(1);  
-                                me.visible=1;
                                 me.icon_save='fa fa-save';
                                 swal( 'Guardado!', 'El registro ha sido guardado con éxito.', 'success' ); 
                         }).catch(function (error) {
                             console.log(error);
-                        });
-
-                    }else if(result.dismiss === swal.DismissReason.cancel) {                    
+                        });                        
+                    }else if(result.dismiss === swal.DismissReason.cancel) {  
+                        me.icon_save='fa fa-save';                  
                     }
                 }) 
             },
@@ -1650,7 +1873,7 @@
                 this.visible=0;
                 let me = this;
                 me.icon_save_pledge='fa fa-spinner fa-spin';
-                if (this.validarData()){
+                if (this.validateData()){
                     return;
                 }
                 
@@ -1763,8 +1986,8 @@
                 window.location.href = url;
             },
             clean_data(){
-               this.errorInputActivity='form-group';
-                this.errorInputActivity2='form-group';
+               this.errorInputNroDoc='form-group';
+                this.errorInputNames='form-group';
                 this.errors = {};
                 this.errors.nro_doc="";
                 this.errors.name="";
