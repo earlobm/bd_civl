@@ -27697,9 +27697,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
                 var url = 'get_customer_by_dni?nro_doc=' + me.nro_doc;
                 axios.get(url).then(function (response) {
                     var respuesta = response.data;
-                    var respuestax = response.data;
                     var tipo = respuesta.tipo;
-                    var aval = respuestax.aval;
+                    var aval = respuesta.aval;
                     if (respuesta.datax.length > 0) {
                         if (tipo == 'bd') {
                             me.id = respuesta.datax[0].id;
@@ -27755,19 +27754,15 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
                             me.paternal_last_name = respuesta.datax[0];
                             me.maternal_last_name = respuesta.datax[2];
                             me.name = respuesta.datax[1];
-                            me.validateData();
                         }
                         me.icon_search_dni = 'fa fa-search';
                     }
 
-                    if (respuestax.data.length > 0) {
-                        if (aval == 'si') {
-                            me.add_aval = 1;
-                            console.log(aval);
-                        } else {
-                            me.add_aval = 0;
-                            console.log(aval);
-                        }
+                    if (aval == 'si') {
+                        me.add_aval = 1;
+                        console.log(aval);
+                    } else {
+                        me.add_aval = 0;
                         console.log(aval);
                     }
                 }).catch(function (error) {
@@ -27781,47 +27776,34 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
             if (this.nro_doc_aval.length == 8) {
                 var me = this;
                 me.icon_search_dni_aval = 'fa fa-spinner fa-spin';
-                var url = 'get_customer_by_dni?nro_doc=' + me.nro_doc_aval;
+                var url = 'get_aval_by_dni?nro_doc=' + me.nro_doc_aval;
                 axios.get(url).then(function (response) {
                     var respuesta = response.data;
                     var tipo = respuesta.tipo;
                     if (respuesta.datax.length > 0) {
                         if (tipo == 'bd') {
-                            me.id = respuesta.datax[0].id;
-                            me.id_customer_credit = respuesta.datax[0].id_customer_credit;
-                            me.paternal_last_name_aval = respuesta.datax[0].paternal_last_name;
-                            me.maternal_last_name_aval = respuesta.datax[0].maternal_last_name;
-                            me.name_aval = respuesta.datax[0].names;
-                            me.phone = respuesta.datax[0].phone;
-                            me.code = respuesta.datax[0].code;
-                            me.address = respuesta.datax[0].address;
-                            me.reference = respuesta.datax[0].reference;
-                            me.sex = respuesta.datax[0].sex;
-                            me.email = respuesta.datax[0].email;
-                            me.department = respuesta.datax[0].id_department;
-                            me.province = respuesta.datax[0].id_province;
-                            me.district = respuesta.datax[0].id_district;
-                            me.id_job = respuesta.datax[0].id_job;
-                            me.id_employee = respuesta.datax[0].id_promoter;
-                            me.id_type_business = respuesta.datax[0].id_type_business;
-                            me.id_type_doc = respuesta.datax[0].id_type_document;
-                            me.marital_status = respuesta.datax[0].marital_status;
-                            me.birthdate = __WEBPACK_IMPORTED_MODULE_1_moment_timezone___default()(respuesta.datax[0].birthdate).toDate();
-                            me.validateDataAval();
-                            me.array_requirement_true = respuesta.requirements_data;
-                            //para los requisitos
-                            for (var x = 0; x < me.requirements.length; x++) {
-                                for (var y = 0; y < me.array_requirement_true.length; y++) {
-                                    if (me.requirements[x].id_type_requerement == me.array_requirement_true[y].id_type_document) {
-                                        me.requirements[x].check = true;
-                                    }
-                                }
-                            }
+                            me.id_guarantor = respuesta.datax[0].id_guarantor;
+                            me.id_type_doc_aval = respuesta.datax[0].id_type_document_aval;
+                            me.nro_doc_aval = respuesta.datax[0].number_doc_aval;
+                            me.name_aval = respuesta.datax[0].names_aval;
+                            me.paternal_last_name_aval = respuesta.datax[0].paternal_last_name_aval;
+                            me.maternal_last_name_aval = respuesta.datax[0].maternal_last_name_aval;
+                            me.phone_aval = respuesta.datax[0].phone_aval;
+                            me.address_aval = respuesta.datax[0].address_aval;
+                            me.reference_aval = respuesta.datax[0].reference_aval;
+                            me.sex_aval = respuesta.datax[0].sex_aval;
+                            me.email_aval = respuesta.datax[0].email_aval;
+                            me.department_aval = respuesta.datax[0].id_department_aval;
+                            me.province_aval = respuesta.datax[0].id_province_aval;
+                            me.district_aval = respuesta.datax[0].id_district_aval;
+                            me.id_job_aval = respuesta.datax[0].id_job_aval;
+                            me.id_type_business_aval = respuesta.datax[0].id_type_business_aval;
+                            me.marital_status_aval = respuesta.datax[0].marital_status_aval;
+                            me.birthdate_aval = __WEBPACK_IMPORTED_MODULE_1_moment_timezone___default()(respuesta.datax[0].birthdate_aval).toDate();
                         } else {
                             me.paternal_last_name_aval = respuesta.datax[0];
                             me.name_aval = respuesta.datax[1];
                             me.maternal_last_name_aval = respuesta.datax[2];
-                            me.validateData();
                         }
                         me.icon_search_dni_aval = 'fa fa-search';
                     }
@@ -32736,32 +32718,25 @@ var render = function() {
                                                                     _vm.nro_doc_aval
                                                                 },
                                                                 on: {
-                                                                  keyup: [
-                                                                    function(
-                                                                      $event
+                                                                  keyup: function(
+                                                                    $event
+                                                                  ) {
+                                                                    if (
+                                                                      !$event.type.indexOf(
+                                                                        "key"
+                                                                      ) &&
+                                                                      _vm._k(
+                                                                        $event.keyCode,
+                                                                        "enter",
+                                                                        13,
+                                                                        $event.key,
+                                                                        "Enter"
+                                                                      )
                                                                     ) {
-                                                                      return _vm.validateDataAval()
-                                                                    },
-                                                                    function(
-                                                                      $event
-                                                                    ) {
-                                                                      if (
-                                                                        !$event.type.indexOf(
-                                                                          "key"
-                                                                        ) &&
-                                                                        _vm._k(
-                                                                          $event.keyCode,
-                                                                          "enter",
-                                                                          13,
-                                                                          $event.key,
-                                                                          "Enter"
-                                                                        )
-                                                                      ) {
-                                                                        return null
-                                                                      }
-                                                                      return _vm.getDataAval()
+                                                                      return null
                                                                     }
-                                                                  ],
+                                                                    return _vm.getDataAval()
+                                                                  },
                                                                   input: function(
                                                                     $event
                                                                   ) {
