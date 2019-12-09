@@ -77,86 +77,114 @@ class CustomerCreditController extends Controller
             'datax' => $obj
         ];
     }
-    public function get_customer_by_dni(Request $request){
-        
-            $sqlx="";
-            $tipo='';
-        
-            $dni=$request->nro_doc;
-            $sqlx="SELECT p.id, c.id as id_customer_credit, c.code, p.id_type_document, p.number_doc, p.paternal_last_name, p.maternal_last_name, p.names,
-            p.phone, p.address, p.birthdate, p.sex, p.marital_status, p.email, p.reference, p.id_district,di.id_province, pr.id_department, c.id_job, c.id_promoter, c.id_type_business
-            FROM person p 
-            inner join customer c on c.id_person=p.id
-            inner join district di on di.id=p.id_district
-            inner join province pr on pr.id=di.id_province
-            inner join department de on de.id=pr.id_department
-            where p.number_doc='$dni' ";
-            $miArrayx = DB::select($sqlx);
-            $miArray = json_decode(json_encode($miArrayx), true);
-
-            //Para traer los requerimientos que tiene el cliente
-            $sql="SELECT ct.id_type_document
-            FROM person p 
-            inner join customer c on c.id_person=p.id
-            inner join customer_type_doc ct on ct.id_customer=c.id
-            where ct.state=1 and p.number_doc='$dni' ";
-            $ArrayR = DB::select($sql);
-            $ArrayReq = json_decode(json_encode($ArrayR), true);
-
-            if(count($miArray)==0){
-                $url = 'http://aplicaciones007.jne.gob.pe/srop_publico/Consulta/api/AfiliadoApi/GetNombresCiudadano';
-                $ch = curl_init($url);
-                $data = array( 'CODDNI' => $dni);
-                $json = json_encode($data);
-                curl_setopt($ch, CURLOPT_POSTFIELDS, $json);
-                curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type:application/json','RequestVerificationToken:LGJ_UzYRpe-uIfvAURygyhbasD2M-vngQeRNRk_7USURjBavQZxwmgIAHZ9SpTnjEPjEQcimXcavv4iLbaN5fFvnxqN3ml31qxzJIWpK5Mc1:1N7LY5_JphRxTF7psEYSVcnSx_t5RwzXnyxpYBcsV8-eO_XcFRsip1UOk_C1JjDSAQXwXPZwp6tdZe5bgU2SYHQpml2-1zdS_DV2QyYD2QE1'));
-                curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-                $result = curl_exec($ch);
-                $resultado = json_decode($result);
-                $html=$resultado->data;
-                curl_close($ch);
-                $miArray = explode("|", $html);
-                if(count($miArray)==4){
-                    //buscamos en el otro web service
-                    libxml_use_internal_errors(true);
-                    $htmlContent = file_get_contents('http://clientes.reniec.gob.pe/padronElectoral2012/consulta.htm?hTipo=2&hDni='.$dni.'&hApPat=&hApMat=&hNombre=');
-                    $dom = new \DOMDocument();
-                    $dom->loadHTML($htmlContent);
-                    $dom->preserveWhiteSpace = false;
-                    $dom->strictErrorChecking = false;
-                    $content = $dom->getElementsByTagname('td');
-                    $out = array();
-                    foreach ($content as $item)
-                    {
-                        $out[] = $item->nodeValue;
-                    }
+    public function get_customer_by_dni(Request $request){        
+        $sqlx="";
+        $tipo='';
+        $aval='';
     
-                    $miArray=array();
-                    $miArray = explode(",", $out[7]);
-                    $apellidosx=array();
-                    $apellidosx = explode(" ", $miArray[0]);
-                    $nombre=$miArray[1];
-                    if(count($apellidosx)==2){
-                        $miArray[0]=$apellidosx[0] ;
-                        $miArray[2]=$apellidosx[1];
-                        $miArray[1]=$nombre;
-                    }
-                    
-                    }else{
-                        $nombre=$miArray[2];
-                    // $datos[0]=$datos[0];
-                        $miArray[2]=$miArray[1];
-                        $miArray[1]=$nombre;
-                    }
+        $dni=$request->nro_doc;
+        $sqlx="SELECT p.id, c.id as id_customer_credit, c.id_guarantor, c.code, 
+        p.id_type_document, p.number_doc, p.paternal_last_name, p.maternal_last_name, p.names,
+        p.phone, p.address, p.birthdate, p.sex, p.marital_status, p.email, p.reference, 
+        p.id_district,di.id_province, pr.id_department, p.id_job,  p.id_type_business, 
 
-                    $tipo='reniec';
+        g.id_type_document as id_type_document_aval, g.number_doc as number_doc_aval, g.paternal_last_name as paternal_last_name_aval, g.maternal_last_name as maternal_last_name_aval, g.names as names_aval,        
+        g.phone as phone_aval, g.address as address_aval, g.birthdate as birthdate_aval, g.sex as sex_aval, g.marital_status as marital_status_aval, g.email as email_aval, g.reference as reference_aval,         
+        g.id_district as id_district_aval,di.id_province as id_province_aval, pr.id_department as id_department_aval,
+        g.id_job as id_job_aval,  g.id_type_business as id_type_business_aval, c.id_promoter
+        FROM customer c 
+        inner join person p on p.id=c.id_person
+        left join person g on g.id=c.id_guarantor
+        inner join district di on di.id=p.id_district
+        left join district dg on dg.id=g.id_district
+        inner join province pr on pr.id=di.id_province
+        left join province pg on pg.id=dg.id_province
+        inner join department de on de.id=pr.id_department
+        left join department deg on deg.id=pg.id_department
+        where p.number_doc='$dni' ";
+        $miArrayx = DB::select($sqlx);
+        $miArray = json_decode(json_encode($miArrayx), true);
+
+        $sqly="SELECT c.id_guarantor
+        FROM customer c 
+        inner join person p on p.id=c.id_person
+        left join person g on g.id=c.id_guarantor
+        where p.number_doc='$dni' ";
+        $miArrayGuarantor = DB::select($sqly);
+        $ArrayGuarantor = json_decode(json_encode($miArrayGuarantor), true);
+
+        //Para traer los requerimientos que tiene el cliente
+        $sql="SELECT ct.id_type_document
+        FROM person p 
+        inner join customer c on c.id_person=p.id
+        inner join customer_type_doc ct on ct.id_customer=c.id
+        where ct.state=1 and p.number_doc='$dni' ";
+        $ArrayR = DB::select($sql);
+        $ArrayReq = json_decode(json_encode($ArrayR), true);
+
+        if(count($ArrayGuarantor)==0){
+            $aval='no';
+
+        }else{
+            $aval='si';
+        }
+
+        if(count($miArray)==0){
+            $url = 'http://aplicaciones007.jne.gob.pe/srop_publico/Consulta/api/AfiliadoApi/GetNombresCiudadano';
+            $ch = curl_init($url);
+            $data = array( 'CODDNI' => $dni);
+            $json = json_encode($data);
+            curl_setopt($ch, CURLOPT_POSTFIELDS, $json);
+            curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type:application/json','RequestVerificationToken:LGJ_UzYRpe-uIfvAURygyhbasD2M-vngQeRNRk_7USURjBavQZxwmgIAHZ9SpTnjEPjEQcimXcavv4iLbaN5fFvnxqN3ml31qxzJIWpK5Mc1:1N7LY5_JphRxTF7psEYSVcnSx_t5RwzXnyxpYBcsV8-eO_XcFRsip1UOk_C1JjDSAQXwXPZwp6tdZe5bgU2SYHQpml2-1zdS_DV2QyYD2QE1'));
+            curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+            $result = curl_exec($ch);
+            $resultado = json_decode($result);
+            $html=$resultado->data;
+            curl_close($ch);
+            $miArray = explode("|", $html);
+            if(count($miArray)==4){
+                //buscamos en el otro web service
+                libxml_use_internal_errors(true);
+                $htmlContent = file_get_contents('http://clientes.reniec.gob.pe/padronElectoral2012/consulta.htm?hTipo=2&hDni='.$dni.'&hApPat=&hApMat=&hNombre=');
+                $dom = new \DOMDocument();
+                $dom->loadHTML($htmlContent);
+                $dom->preserveWhiteSpace = false;
+                $dom->strictErrorChecking = false;
+                $content = $dom->getElementsByTagname('td');
+                $out = array();
+                foreach ($content as $item){
+                    $out[] = $item->nodeValue;
+                }
+
+                $miArray=array();
+                $miArray = explode(",", $out[7]);
+                $apellidosx=array();
+                $apellidosx = explode(" ", $miArray[0]);
+                $nombre=$miArray[1];
+                if(count($apellidosx)==2){
+                    $miArray[0]=$apellidosx[0] ;
+                    $miArray[2]=$apellidosx[1];
+                    $miArray[1]=$nombre;
+                }
                 
-            }else {$tipo='bd';}
-            return [
-                'datax' => $miArray,
-                'tipo'=>$tipo,
-                'requirements_data'=>$ArrayReq
-            ];
+                }else{
+                    $nombre=$miArray[2];
+                // $datos[0]=$datos[0];
+                    $miArray[2]=$miArray[1];
+                    $miArray[1]=$nombre;
+                }
+
+                $tipo='reniec';
+            
+        }else {
+            $tipo='bd';
+        }
+        return [
+            'datax' => $miArray,
+            'tipo'=>$tipo,
+            'aval'=>$aval,
+            'requirements_data'=>$ArrayReq
+        ];
         
     }
     public function list_customer(Request $request){
@@ -224,12 +252,21 @@ class CustomerCreditController extends Controller
         }else{
             $clase_customer = CustomerCredit::findOrFail($request->id_customer_credit);
         }
-        ///p/reguntamos si la persona existe
+        ///Preguntamos si la persona existe
         if($request->id==-1){
             $clasex = new Person();
+            $clase_guarantor = new Person();
         }else{
             $clasex = Person::findOrFail($request->id);
-        }        
+            $clase_guarantor = Person::findOrFail($request->id_guarantor);
+        }  
+        ///Preguntamos si el aval existe
+        if($request->id_guarantor==-1){
+            $clase_guarantor = new Person();
+        }else{
+            $clase_guarantor = Person::findOrFail($request->id_guarantor);
+        }      
+        $clasex->id_type_document =  $request->id_type_document;
         $clasex->number_doc = trim($request->nro_doc);
         $clasex->paternal_last_name = trim($request->paternal_last_name);
         $clasex->maternal_last_name =trim($request->maternal_last_name);
@@ -238,21 +275,39 @@ class CustomerCreditController extends Controller
         $clasex->address = $request->address;
         $clasex->state = 1;
         $clasex->birthdate =  $request->birthdate;
-        $clasex->id_district =  $request->id_district;
         $clasex->email =  $request->email;
-        $clasex->reference =  $request->reference;
-        $clasex->id_type_document =  $request->id_type_document;
+        $clasex->id_district =  $request->id_district;        
+        $clasex->reference =  $request->reference;        
         $clasex->sex = $request->sex;
-        $clasex->marital_status = $request->marital_status;        
+        $clasex->marital_status = $request->marital_status;    
+        $clasex->id_type_business=$request->id_type_business; 
+        $clasex->id_job =$request->id_job;   
         $clasex->save(); 
+
+        $clase_guarantor->id_type_document =  $request->id_type_document_aval;
+        $clase_guarantor->number_doc = trim($request->nro_doc_aval);
+        $clase_guarantor->paternal_last_name = trim($request->paternal_last_name_aval);
+        $clase_guarantor->maternal_last_name =trim($request->maternal_last_name_aval);
+        $clase_guarantor->names = trim($request->name_aval);
+        $clase_guarantor->phone = $request->phone_aval;
+        $clase_guarantor->address = $request->address_aval;
+        $clase_guarantor->state = 1;
+        $clase_guarantor->birthdate =  $request->birthdate_aval;
+        $clase_guarantor->email =  $request->email_aval;
+        $clase_guarantor->id_district =  $request->id_district_aval;        
+        $clase_guarantor->reference =  $request->reference_aval;        
+        $clase_guarantor->sex = $request->sex_aval;
+        $clase_guarantor->marital_status = $request->marital_status_aval;  
+        $clase_guarantor->id_type_business=$request->id_type_business_aval; 
+        $clase_guarantor->id_job =$request->id_job_aval;       
+        $clase_guarantor->save(); 
         //registrando en la tabla de cliente empeño
         $DateOfRequest= date("Y-m-d H:i:s");
-        $clase_customer->state=1;
-        $clase_customer->id_type_business=$request->id_type_business;
+        $clase_customer->state=1;        
         $clase_customer->date_inscription=$DateOfRequest;
         $clase_customer->id_person=$clasex->id;
-        $clase_customer->id_promoter =$request->id_employee;
-        $clase_customer->id_job =$request->id_job;
+        $clase_customer->id_guarantor=$clase_guarantor->id_guarantor;
+        $clase_customer->id_promoter =$request->id_employee;        
         $clase_customer->save(); 
 
         $t = json_decode(json_encode($request->requirements), true);
