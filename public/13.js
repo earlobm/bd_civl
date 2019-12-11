@@ -27217,178 +27217,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 
@@ -27414,7 +27242,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
             'last_page': 0,
             'from': 0,
             'to': 0
-        }), _defineProperty(_ref, 'offset', 3), _defineProperty(_ref, 'id', -1), _defineProperty(_ref, 'code', ''), _defineProperty(_ref, 'name', ''), _defineProperty(_ref, 'paternal_last_name', ''), _defineProperty(_ref, 'maternal_last_name', ''), _defineProperty(_ref, 'phone', ''), _defineProperty(_ref, 'address', ''), _defineProperty(_ref, 'nro_doc', ''), _defineProperty(_ref, 'id_type_doc', ''), _defineProperty(_ref, 'email', ''), _defineProperty(_ref, 'department', '10'), _defineProperty(_ref, 'province', '92'), _defineProperty(_ref, 'district', ''), _defineProperty(_ref, 'id_type_business', ''), _defineProperty(_ref, 'reference', ''), _defineProperty(_ref, 'sex', ''), _defineProperty(_ref, 'marital_status', ''), _defineProperty(_ref, 'code_aval', ''), _defineProperty(_ref, 'name_aval', ''), _defineProperty(_ref, 'paternal_last_name_aval', ''), _defineProperty(_ref, 'maternal_last_name_aval', ''), _defineProperty(_ref, 'phone_aval', ''), _defineProperty(_ref, 'address_aval', ''), _defineProperty(_ref, 'nro_doc_aval', ''), _defineProperty(_ref, 'id_type_doc_aval', ''), _defineProperty(_ref, 'email_aval', ''), _defineProperty(_ref, 'department_aval', '10'), _defineProperty(_ref, 'province_aval', '92'), _defineProperty(_ref, 'district_aval', ''), _defineProperty(_ref, 'id_type_business_aval', ''), _defineProperty(_ref, 'reference_aval', ''), _defineProperty(_ref, 'sex_aval', ''), _defineProperty(_ref, 'marital_status_aval', ''), _defineProperty(_ref, 'errorClase', 0), _defineProperty(_ref, 'errors', {}), _defineProperty(_ref, 'errorInputCode', 'form-group'), _defineProperty(_ref, 'errorInputTypeDoc', 'form-group'), _defineProperty(_ref, 'errorInputNroDoc', 'form-group'), _defineProperty(_ref, 'errorInputNames', 'form-group'), _defineProperty(_ref, 'errorInputPaternal', 'form-group'), _defineProperty(_ref, 'errorInputMaternal', 'form-group'), _defineProperty(_ref, 'errorInputSex', 'form-group'), _defineProperty(_ref, 'errorInputMaritalState', 'form-group'), _defineProperty(_ref, 'errorInputAddress', 'form-group'), _defineProperty(_ref, 'errorInputJob', 'form-group'), _defineProperty(_ref, 'errorInputTypeBusiness', 'form-group'), _defineProperty(_ref, 'errorInputEmployee', 'form-group'), _defineProperty(_ref, 'errorInputDepartment', 'form-group'), _defineProperty(_ref, 'errorInputProvince', 'form-group'), _defineProperty(_ref, 'errorInputDistrict', 'form-group'), _defineProperty(_ref, 'errorInputTypeDocAval', 'form-group'), _defineProperty(_ref, 'errorInputNroDocAval', 'form-group'), _defineProperty(_ref, 'errorInputNamesAval', 'form-group'), _defineProperty(_ref, 'errorInputPaternalAval', 'form-group'), _defineProperty(_ref, 'errorInputMaternalAval', 'form-group'), _defineProperty(_ref, 'errorInputSexAval', 'form-group'), _defineProperty(_ref, 'errorInputMaritalStateAval', 'form-group'), _defineProperty(_ref, 'errorInputAddressAval', 'form-group'), _defineProperty(_ref, 'errorInputJobAval', 'form-group'), _defineProperty(_ref, 'errorInputTypeBusinessAval', 'form-group'), _defineProperty(_ref, 'errorInputDepartmentAval', 'form-group'), _defineProperty(_ref, 'errorInputProvinceAval', 'form-group'), _defineProperty(_ref, 'errorInputDistrictAval', 'form-group'), _defineProperty(_ref, 'errorInputcapital', 'form-group'), _defineProperty(_ref, 'errorComboTipoProduco', 'form-group'), _defineProperty(_ref, 'buscar', ''), _defineProperty(_ref, 'name_customer', ''), _defineProperty(_ref, 'capital', 0), _defineProperty(_ref, 'date_end', ''), _defineProperty(_ref, 'interest', 0), _defineProperty(_ref, 'term', 1), _defineProperty(_ref, 'total', 0), _defineProperty(_ref, 'guaranty', ''), _defineProperty(_ref, 'id_dependence', 0), _defineProperty(_ref, 'characteristic', ''), _defineProperty(_ref, 'tea', 20), _defineProperty(_ref, 'id_warehouse', ''), _defineProperty(_ref, 'id_person', 0), _defineProperty(_ref, 'id_pledge', 0), _defineProperty(_ref, 'quantity', 1), _defineProperty(_ref, 'licence_plate', ''), _defineProperty(_ref, 'serie', ''), _defineProperty(_ref, 'note', ''), _defineProperty(_ref, 'capital', 0), _defineProperty(_ref, 'period', 'Mensual'), _defineProperty(_ref, 'arrayDetailPledge', []), _defineProperty(_ref, 'licence_plate', ''), _defineProperty(_ref, 'errorTotalcapital', 'form-group'), _defineProperty(_ref, 'errorcapital', 'form-group'), _defineProperty(_ref, 'errorTerm', 'form-group'), _defineProperty(_ref, 'errorTea', 'form-group'), _defineProperty(_ref, 'errorInterested', 'form-group'), _defineProperty(_ref, 'errorWarehouse', 'form-group'), _defineProperty(_ref, 'errorFamilyProduct', 'form-group'), _defineProperty(_ref, 'errorCharacteristic', 'form-group'), _defineProperty(_ref, 'arrayTypeProduct', []), _defineProperty(_ref, 'arrayFamilyProduct', []), _defineProperty(_ref, 'arrayWarehouse', []), _defineProperty(_ref, 'array_department', []), _defineProperty(_ref, 'array_province', []), _defineProperty(_ref, 'array_district', []), _defineProperty(_ref, 'array_type_document', []), _defineProperty(_ref, 'array_code', []), _defineProperty(_ref, 'totalcapital', 0), _defineProperty(_ref, 'totalInterest', 0), _defineProperty(_ref, 'modalTicket', 0), _defineProperty(_ref, 'idcustomer', -1), _defineProperty(_ref, 'array_requirement', []), _defineProperty(_ref, 'array_requirement_true', []), _defineProperty(_ref, 'requirements', []), _defineProperty(_ref, 'midatax', []), _defineProperty(_ref, 'list', []), _defineProperty(_ref, 'totalNumber', 0), _defineProperty(_ref, 'id_customer_credit', -1), _defineProperty(_ref, 'id_guarantor', -1), _defineProperty(_ref, 'icon_title', 'fa fa-plus'), _defineProperty(_ref, 'icon_save', 'fa fa-save'), _defineProperty(_ref, 'icon_save_pledge', 'fa fa-save'), _defineProperty(_ref, 'icon_edit', 'fa fa-pencil'), _defineProperty(_ref, 'icon_search_dni', 'fa fa-search'), _defineProperty(_ref, 'icon_search_dni_aval', 'fa fa-search'), _defineProperty(_ref, 'icon_search_client', 'fa fa-search'), _defineProperty(_ref, 'icon_generate', 'fa fa-rotate-right'), _defineProperty(_ref, 'title', 'Agregar Cliente'), _defineProperty(_ref, 'add_aval', 0), _ref;
+        }), _defineProperty(_ref, 'offset', 3), _defineProperty(_ref, 'id', -1), _defineProperty(_ref, 'code', ''), _defineProperty(_ref, 'name', ''), _defineProperty(_ref, 'paternal_last_name', ''), _defineProperty(_ref, 'maternal_last_name', ''), _defineProperty(_ref, 'phone', ''), _defineProperty(_ref, 'address', ''), _defineProperty(_ref, 'nro_doc', ''), _defineProperty(_ref, 'id_type_doc', ''), _defineProperty(_ref, 'email', ''), _defineProperty(_ref, 'department', '10'), _defineProperty(_ref, 'province', '92'), _defineProperty(_ref, 'district', ''), _defineProperty(_ref, 'id_type_business', ''), _defineProperty(_ref, 'reference', ''), _defineProperty(_ref, 'sex', ''), _defineProperty(_ref, 'marital_status', ''), _defineProperty(_ref, 'code_aval', ''), _defineProperty(_ref, 'name_aval', ''), _defineProperty(_ref, 'paternal_last_name_aval', ''), _defineProperty(_ref, 'maternal_last_name_aval', ''), _defineProperty(_ref, 'phone_aval', ''), _defineProperty(_ref, 'address_aval', ''), _defineProperty(_ref, 'nro_doc_aval', ''), _defineProperty(_ref, 'id_type_doc_aval', ''), _defineProperty(_ref, 'email_aval', ''), _defineProperty(_ref, 'department_aval', '10'), _defineProperty(_ref, 'province_aval', '92'), _defineProperty(_ref, 'district_aval', ''), _defineProperty(_ref, 'id_type_business_aval', ''), _defineProperty(_ref, 'reference_aval', ''), _defineProperty(_ref, 'sex_aval', ''), _defineProperty(_ref, 'marital_status_aval', ''), _defineProperty(_ref, 'errorClase', 0), _defineProperty(_ref, 'errors', {}), _defineProperty(_ref, 'errorInputCode', 'form-group'), _defineProperty(_ref, 'errorInputTypeDoc', 'form-group'), _defineProperty(_ref, 'errorInputNroDoc', 'form-group'), _defineProperty(_ref, 'errorInputNames', 'form-group'), _defineProperty(_ref, 'errorInputPaternal', 'form-group'), _defineProperty(_ref, 'errorInputMaternal', 'form-group'), _defineProperty(_ref, 'errorInputSex', 'form-group'), _defineProperty(_ref, 'errorInputMaritalState', 'form-group'), _defineProperty(_ref, 'errorInputAddress', 'form-group'), _defineProperty(_ref, 'errorInputJob', 'form-group'), _defineProperty(_ref, 'errorInputTypeBusiness', 'form-group'), _defineProperty(_ref, 'errorInputEmployee', 'form-group'), _defineProperty(_ref, 'errorInputDepartment', 'form-group'), _defineProperty(_ref, 'errorInputProvince', 'form-group'), _defineProperty(_ref, 'errorInputDistrict', 'form-group'), _defineProperty(_ref, 'errorInputTypeDocAval', 'form-group'), _defineProperty(_ref, 'errorInputNroDocAval', 'form-group'), _defineProperty(_ref, 'errorInputNamesAval', 'form-group'), _defineProperty(_ref, 'errorInputPaternalAval', 'form-group'), _defineProperty(_ref, 'errorInputMaternalAval', 'form-group'), _defineProperty(_ref, 'errorInputSexAval', 'form-group'), _defineProperty(_ref, 'errorInputMaritalStateAval', 'form-group'), _defineProperty(_ref, 'errorInputAddressAval', 'form-group'), _defineProperty(_ref, 'errorInputJobAval', 'form-group'), _defineProperty(_ref, 'errorInputTypeBusinessAval', 'form-group'), _defineProperty(_ref, 'errorInputDepartmentAval', 'form-group'), _defineProperty(_ref, 'errorInputProvinceAval', 'form-group'), _defineProperty(_ref, 'errorInputDistrictAval', 'form-group'), _defineProperty(_ref, 'errorInputcapital', 'form-group'), _defineProperty(_ref, 'errorComboTipoProduco', 'form-group'), _defineProperty(_ref, 'buscar', ''), _defineProperty(_ref, 'name_customer', ''), _defineProperty(_ref, 'capital', 0), _defineProperty(_ref, 'date_end', ''), _defineProperty(_ref, 'interest', 0), _defineProperty(_ref, 'term', 1), _defineProperty(_ref, 'total', 0), _defineProperty(_ref, 'guaranty', ''), _defineProperty(_ref, 'id_dependence', 0), _defineProperty(_ref, 'characteristic', ''), _defineProperty(_ref, 'tea', 20), _defineProperty(_ref, 'id_warehouse', ''), _defineProperty(_ref, 'id_person', 0), _defineProperty(_ref, 'id_pledge', 0), _defineProperty(_ref, 'quantity', 1), _defineProperty(_ref, 'licence_plate', ''), _defineProperty(_ref, 'serie', ''), _defineProperty(_ref, 'note', ''), _defineProperty(_ref, 'capital', 0), _defineProperty(_ref, 'period', 'Mensual'), _defineProperty(_ref, 'arrayDetailPledge', []), _defineProperty(_ref, 'licence_plate', ''), _defineProperty(_ref, 'errorTotalcapital', 'form-group'), _defineProperty(_ref, 'errorcapital', 'form-group'), _defineProperty(_ref, 'errorTerm', 'form-group'), _defineProperty(_ref, 'errorTea', 'form-group'), _defineProperty(_ref, 'errorInterested', 'form-group'), _defineProperty(_ref, 'errorWarehouse', 'form-group'), _defineProperty(_ref, 'errorFamilyProduct', 'form-group'), _defineProperty(_ref, 'errorCharacteristic', 'form-group'), _defineProperty(_ref, 'arrayFamilyProduct', []), _defineProperty(_ref, 'array_department', []), _defineProperty(_ref, 'array_province', []), _defineProperty(_ref, 'array_district', []), _defineProperty(_ref, 'array_type_document', []), _defineProperty(_ref, 'array_code', []), _defineProperty(_ref, 'totalcapital', 0), _defineProperty(_ref, 'totalInterest', 0), _defineProperty(_ref, 'modalTicket', 0), _defineProperty(_ref, 'idcustomer', -1), _defineProperty(_ref, 'array_requirement', []), _defineProperty(_ref, 'array_requirement_true', []), _defineProperty(_ref, 'requirements', []), _defineProperty(_ref, 'midatax', []), _defineProperty(_ref, 'list', []), _defineProperty(_ref, 'totalNumber', 0), _defineProperty(_ref, 'id_customer_credit', -1), _defineProperty(_ref, 'id_guarantor', -1), _defineProperty(_ref, 'icon_title', 'fa fa-plus'), _defineProperty(_ref, 'icon_save', 'fa fa-save'), _defineProperty(_ref, 'icon_save_pledge', 'fa fa-save'), _defineProperty(_ref, 'icon_edit', 'fa fa-pencil'), _defineProperty(_ref, 'icon_search_dni', 'fa fa-search'), _defineProperty(_ref, 'icon_search_dni_aval', 'fa fa-search'), _defineProperty(_ref, 'icon_search_client', 'fa fa-search'), _defineProperty(_ref, 'icon_generate', 'fa fa-rotate-right'), _defineProperty(_ref, 'title', 'Agregar Cliente'), _defineProperty(_ref, 'add_aval', 0), _ref;
     },
 
     components: {
@@ -27776,12 +27604,13 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
             if (this.nro_doc_aval.length == 8) {
                 var me = this;
                 me.icon_search_dni_aval = 'fa fa-spinner fa-spin';
-                var url = 'get_aval_by_dni?nro_doc=' + me.nro_doc_aval;
+                var url = 'get_aval_by_dni?nro_doc_aval=' + me.nro_doc_aval;
                 axios.get(url).then(function (response) {
                     var respuesta = response.data;
                     var tipo = respuesta.tipo;
                     if (respuesta.datax.length > 0) {
-                        if (tipo == 'bd') {
+                        if (tipo == 'person') {
+                            console.log('algo aqui' + respuesta.datax[0].id_guarantor);
                             me.id_guarantor = respuesta.datax[0].id_guarantor;
                             me.id_type_doc_aval = respuesta.datax[0].id_type_document_aval;
                             me.nro_doc_aval = respuesta.datax[0].number_doc_aval;
@@ -27800,6 +27629,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
                             me.id_type_business_aval = respuesta.datax[0].id_type_business_aval;
                             me.marital_status_aval = respuesta.datax[0].marital_status_aval;
                             me.birthdate_aval = __WEBPACK_IMPORTED_MODULE_1_moment_timezone___default()(respuesta.datax[0].birthdate_aval).toDate();
+                        } else if (tipo == 'bd') {
+                            alert('Esta persona ya es un garante.');
                         } else {
                             me.paternal_last_name_aval = respuesta.datax[0];
                             me.name_aval = respuesta.datax[1];
@@ -28122,19 +27953,16 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
                         'id_district_aval': _this2.district_aval,
                         'birthdate_aval': __WEBPACK_IMPORTED_MODULE_1_moment_timezone___default()(__WEBPACK_IMPORTED_MODULE_1_moment_timezone___default()(_this2.birthdate_aval, 'DD/MM/YYYY')).format('YYYY-MM-DD'),
                         'id_job_aval': _this2.id_job_aval, 'id_type_business_aval': _this2.id_type_business_aval,
-
                         'requirements': _this2.requirements
                     }).then(function (response) {
                         me.clean_data();
-                        me.list_data(1);
+                        // me.list_data(1);  
                         me.icon_save = 'fa fa-save';
                         swal('Guardado!', 'El registro ha sido guardado con éxito.', 'success');
                     }).catch(function (error) {
                         console.log(error);
                     });
-                } else if (result.dismiss === swal.DismissReason.cancel) {
-                    me.icon_save = 'fa fa-save';
-                }
+                } else if (result.dismiss === swal.DismissReason.cancel) {}
             });
         },
         save_data: function save_data() {
@@ -28159,7 +27987,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
                 reverseButtons: true
             }).then(function (result) {
                 if (result.value) {
-                    axios.post('save_customer', {
+                    axios.post('saveCustomerCredit', {
                         'nro_doc': _this3.nro_doc, 'name': _this3.name,
                         'paternal_last_name': _this3.paternal_last_name,
                         'maternal_last_name': _this3.maternal_last_name,
@@ -28170,11 +27998,26 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
                         'email': _this3.email, 'reference': _this3.reference,
                         'id_district': _this3.district,
                         'birthdate': __WEBPACK_IMPORTED_MODULE_1_moment_timezone___default()(__WEBPACK_IMPORTED_MODULE_1_moment_timezone___default()(_this3.birthdate, 'DD/MM/YYYY')).format('YYYY-MM-DD'),
-                        'idcustomerpledge': _this3.id_customer_credit
+                        'id_customer_credit': _this3.id_customer_credit,
+                        'id_job': _this3.id_job, 'id_type_business': _this3.id_type_business,
+                        'id_employee': _this3.id_employee,
+
+                        'nro_doc_aval': _this3.nro_doc_aval, 'name_aval': _this3.name_aval,
+                        'paternal_last_name_aval': _this3.paternal_last_name_aval,
+                        'maternal_last_name_aval': _this3.maternal_last_name_aval,
+                        'phone_aval': _this3.phone_aval, 'address_aval': _this3.address_aval,
+                        'id_guarantor': _this3.id_guarantor, 'sex_aval': _this3.sex_aval,
+                        'id_type_document_aval': _this3.id_type_doc_aval,
+                        'marital_status_aval': _this3.marital_status_aval,
+                        'email_aval': _this3.email_aval, 'reference_aval': _this3.reference_aval,
+                        'id_district_aval': _this3.district_aval,
+                        'birthdate_aval': __WEBPACK_IMPORTED_MODULE_1_moment_timezone___default()(__WEBPACK_IMPORTED_MODULE_1_moment_timezone___default()(_this3.birthdate_aval, 'DD/MM/YYYY')).format('YYYY-MM-DD'),
+                        'id_job_aval': _this3.id_job_aval, 'id_type_business_aval': _this3.id_type_business_aval,
+                        'requirements': _this3.requirements
                     }).then(function (response) {
                         me.midatax = [];
                         me.midatax.push({ id: response.data, names: me.name, paternal_last_name: me.paternal_last_name, maternal_last_name: me.maternal_last_name });
-                        me.pledge(me.midatax[0]);
+                        me.give_credit(me.midatax[0]);
                         me.icon_save_pledge = 'fa fa-save';
                         swal('Guardado!', 'El registro ha sido guardado con éxito.', 'success');
                     }).catch(function (error) {
@@ -28215,28 +28058,13 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
                 } else if (result.dismiss === swal.DismissReason.cancel) {}
             });
         },
-        pledge: function pledge(midata) {
+        give_credit: function give_credit(midata) {
             var me = this;
             me.listadox = 3;
             this.visible = 0;
             this.id_customer_credit = midata.id_customer_credit;
             this.name_customer = midata.names + ' ' + midata.paternal_last_name + ' ' + midata.maternal_last_name;
             this.nro_doc = midata.number_doc;
-            var url = 'getDependenceParent';
-            axios.get(url).then(function (response) {
-                var respuesta = response.data;
-                me.arrayTypeProduct = respuesta.datax;
-            }).catch(function (error) {
-                console.log(error);
-            });
-
-            url = 'getWarehouse';
-            axios.get(url).then(function (response) {
-                var respuesta = response.data;
-                me.arrayWarehouse = respuesta.datax;
-            }).catch(function (error) {
-                console.log(error);
-            });
         },
         addCustomer: function addCustomer() {
             var me = this;
@@ -30896,7 +30724,7 @@ var render = function() {
                                           _c("div", { staticClass: "row" }, [
                                             _c(
                                               "div",
-                                              { staticClass: "col-md-4" },
+                                              { staticClass: "col-md-3" },
                                               [
                                                 _c(
                                                   "div",
@@ -30911,7 +30739,7 @@ var render = function() {
                                                       },
                                                       [
                                                         _vm._v(
-                                                          "Tipo de Producto:"
+                                                          "Gastos Administrativos:"
                                                         )
                                                       ]
                                                     ),
@@ -30923,119 +30751,64 @@ var render = function() {
                                                           "input-group"
                                                       },
                                                       [
-                                                        _vm._m(23),
-                                                        _vm._v(" "),
                                                         _c(
-                                                          "select",
+                                                          "span",
                                                           {
-                                                            directives: [
-                                                              {
-                                                                name: "model",
-                                                                rawName:
-                                                                  "v-model",
-                                                                value:
-                                                                  _vm.id_parent,
-                                                                expression:
-                                                                  "id_parent"
-                                                              }
-                                                            ],
                                                             staticClass:
-                                                              "form-control select2",
+                                                              "input-group-addon",
                                                             staticStyle: {
-                                                              "border-top-right-radius":
+                                                              "border-bottom-left-radius":
                                                                 "3px",
-                                                              "border-bottom-right-radius":
+                                                              "border-top-left-radius":
                                                                 "3px"
-                                                            },
-                                                            on: {
-                                                              change: [
-                                                                function(
-                                                                  $event
-                                                                ) {
-                                                                  var $$selectedVal = Array.prototype.filter
-                                                                    .call(
-                                                                      $event
-                                                                        .target
-                                                                        .options,
-                                                                      function(
-                                                                        o
-                                                                      ) {
-                                                                        return o.selected
-                                                                      }
-                                                                    )
-                                                                    .map(
-                                                                      function(
-                                                                        o
-                                                                      ) {
-                                                                        var val =
-                                                                          "_value" in
-                                                                          o
-                                                                            ? o._value
-                                                                            : o.value
-                                                                        return val
-                                                                      }
-                                                                    )
-                                                                  _vm.id_parent = $event
-                                                                    .target
-                                                                    .multiple
-                                                                    ? $$selectedVal
-                                                                    : $$selectedVal[0]
-                                                                },
-                                                                function(
-                                                                  $event
-                                                                ) {
-                                                                  return _vm.getFamilyProduct(
-                                                                    $event
-                                                                      .target
-                                                                      .value
-                                                                  )
-                                                                }
-                                                              ]
                                                             }
                                                           },
-                                                          [
-                                                            _c(
-                                                              "option",
-                                                              {
-                                                                attrs: {
-                                                                  selected:
-                                                                    "selected",
-                                                                  value: ""
-                                                                }
-                                                              },
-                                                              [
-                                                                _vm._v(
-                                                                  "Ninguno"
-                                                                )
-                                                              ]
-                                                            ),
-                                                            _vm._v(" "),
-                                                            _vm._l(
-                                                              _vm.arrayTypeProduct,
-                                                              function(datax) {
-                                                                return _c(
-                                                                  "option",
-                                                                  {
-                                                                    key:
-                                                                      datax.id,
-                                                                    domProps: {
-                                                                      value:
-                                                                        datax.id
-                                                                    }
-                                                                  },
-                                                                  [
-                                                                    _vm._v(
-                                                                      _vm._s(
-                                                                        datax.name
-                                                                      )
-                                                                    )
-                                                                  ]
-                                                                )
-                                                              }
-                                                            )
+                                                          [_vm._v("S/.")]
+                                                        ),
+                                                        _vm._v(" "),
+                                                        _c("input", {
+                                                          directives: [
+                                                            {
+                                                              name: "model",
+                                                              rawName:
+                                                                "v-model",
+                                                              value:
+                                                                _vm.id_parent,
+                                                              expression:
+                                                                "id_parent"
+                                                            }
                                                           ],
-                                                          2
-                                                        )
+                                                          staticClass:
+                                                            "form-control",
+                                                          staticStyle: {
+                                                            "border-bottom-right-radius":
+                                                              "3px",
+                                                            "border-top-right-radius":
+                                                              "3px",
+                                                            "text-transform":
+                                                              "uppercase"
+                                                          },
+                                                          attrs: {
+                                                            type: "text"
+                                                          },
+                                                          domProps: {
+                                                            value: _vm.id_parent
+                                                          },
+                                                          on: {
+                                                            input: function(
+                                                              $event
+                                                            ) {
+                                                              if (
+                                                                $event.target
+                                                                  .composing
+                                                              ) {
+                                                                return
+                                                              }
+                                                              _vm.id_parent =
+                                                                $event.target.value
+                                                            }
+                                                          }
+                                                        })
                                                       ]
                                                     )
                                                   ]
@@ -31045,7 +30818,102 @@ var render = function() {
                                             _vm._v(" "),
                                             _c(
                                               "div",
-                                              { staticClass: "col-md-4" },
+                                              { staticClass: "col-md-3" },
+                                              [
+                                                _c(
+                                                  "div",
+                                                  {
+                                                    class:
+                                                      _vm.errorFamilyProduct
+                                                  },
+                                                  [
+                                                    _c(
+                                                      "label",
+                                                      {
+                                                        staticStyle: {
+                                                          visibility: "hidden"
+                                                        },
+                                                        attrs: {
+                                                          for: "family_produc"
+                                                        }
+                                                      },
+                                                      [_vm._v("Porcentaje:")]
+                                                    ),
+                                                    _vm._v(" "),
+                                                    _c(
+                                                      "div",
+                                                      {
+                                                        staticClass:
+                                                          "input-group"
+                                                      },
+                                                      [
+                                                        _c(
+                                                          "span",
+                                                          {
+                                                            staticClass:
+                                                              "input-group-addon",
+                                                            staticStyle: {
+                                                              "border-bottom-left-radius":
+                                                                "3px",
+                                                              "border-top-left-radius":
+                                                                "3px"
+                                                            }
+                                                          },
+                                                          [_vm._v("%")]
+                                                        ),
+                                                        _vm._v(" "),
+                                                        _c("input", {
+                                                          directives: [
+                                                            {
+                                                              name: "model",
+                                                              rawName:
+                                                                "v-model",
+                                                              value:
+                                                                _vm.id_parent,
+                                                              expression:
+                                                                "id_parent"
+                                                            }
+                                                          ],
+                                                          staticClass:
+                                                            "form-control",
+                                                          staticStyle: {
+                                                            "border-bottom-right-radius":
+                                                              "3px",
+                                                            "border-top-right-radius":
+                                                              "3px"
+                                                          },
+                                                          attrs: {
+                                                            disabled: "",
+                                                            type: "text"
+                                                          },
+                                                          domProps: {
+                                                            value: _vm.id_parent
+                                                          },
+                                                          on: {
+                                                            input: function(
+                                                              $event
+                                                            ) {
+                                                              if (
+                                                                $event.target
+                                                                  .composing
+                                                              ) {
+                                                                return
+                                                              }
+                                                              _vm.id_parent =
+                                                                $event.target.value
+                                                            }
+                                                          }
+                                                        })
+                                                      ]
+                                                    )
+                                                  ]
+                                                )
+                                              ]
+                                            ),
+                                            _vm._v(" "),
+                                            _c(
+                                              "div",
+                                              { staticClass: "col-md-3" },
                                               [
                                                 _c(
                                                   "div",
@@ -31063,7 +30931,7 @@ var render = function() {
                                                       },
                                                       [
                                                         _vm._v(
-                                                          "Familia del Producto:"
+                                                          "Central de Riesgo:"
                                                         )
                                                       ]
                                                     ),
@@ -31075,105 +30943,62 @@ var render = function() {
                                                           "input-group"
                                                       },
                                                       [
-                                                        _vm._m(24),
-                                                        _vm._v(" "),
                                                         _c(
-                                                          "select",
+                                                          "span",
                                                           {
-                                                            directives: [
-                                                              {
-                                                                name: "model",
-                                                                rawName:
-                                                                  "v-model",
-                                                                value:
-                                                                  _vm.guaranty,
-                                                                expression:
-                                                                  "guaranty"
-                                                              }
-                                                            ],
                                                             staticClass:
-                                                              "form-control select2",
+                                                              "input-group-addon",
                                                             staticStyle: {
-                                                              "border-top-right-radius":
+                                                              "border-bottom-left-radius":
                                                                 "3px",
-                                                              "border-bottom-right-radius":
+                                                              "border-top-left-radius":
                                                                 "3px"
-                                                            },
-                                                            on: {
-                                                              change: function(
-                                                                $event
-                                                              ) {
-                                                                var $$selectedVal = Array.prototype.filter
-                                                                  .call(
-                                                                    $event
-                                                                      .target
-                                                                      .options,
-                                                                    function(
-                                                                      o
-                                                                    ) {
-                                                                      return o.selected
-                                                                    }
-                                                                  )
-                                                                  .map(function(
-                                                                    o
-                                                                  ) {
-                                                                    var val =
-                                                                      "_value" in
-                                                                      o
-                                                                        ? o._value
-                                                                        : o.value
-                                                                    return val
-                                                                  })
-                                                                _vm.guaranty = $event
-                                                                  .target
-                                                                  .multiple
-                                                                  ? $$selectedVal
-                                                                  : $$selectedVal[0]
-                                                              }
                                                             }
                                                           },
-                                                          [
-                                                            _c(
-                                                              "option",
-                                                              {
-                                                                attrs: {
-                                                                  selected:
-                                                                    "selected",
-                                                                  value: ""
-                                                                }
-                                                              },
-                                                              [
-                                                                _vm._v(
-                                                                  "Ninguno"
-                                                                )
-                                                              ]
-                                                            ),
-                                                            _vm._v(" "),
-                                                            _vm._l(
-                                                              _vm.arrayFamilyProduct,
-                                                              function(datax) {
-                                                                return _c(
-                                                                  "option",
-                                                                  {
-                                                                    key:
-                                                                      datax.id,
-                                                                    domProps: {
-                                                                      value: datax
-                                                                    }
-                                                                  },
-                                                                  [
-                                                                    _vm._v(
-                                                                      _vm._s(
-                                                                        datax.name
-                                                                      )
-                                                                    )
-                                                                  ]
-                                                                )
-                                                              }
-                                                            )
+                                                          [_vm._v("S/.")]
+                                                        ),
+                                                        _vm._v(" "),
+                                                        _c("input", {
+                                                          directives: [
+                                                            {
+                                                              name: "model",
+                                                              rawName:
+                                                                "v-model",
+                                                              value:
+                                                                _vm.id_parent,
+                                                              expression:
+                                                                "id_parent"
+                                                            }
                                                           ],
-                                                          2
-                                                        )
+                                                          staticClass:
+                                                            "form-control",
+                                                          staticStyle: {
+                                                            "border-bottom-right-radius":
+                                                              "3px",
+                                                            "border-top-right-radius":
+                                                              "3px"
+                                                          },
+                                                          attrs: {
+                                                            type: "text"
+                                                          },
+                                                          domProps: {
+                                                            value: _vm.id_parent
+                                                          },
+                                                          on: {
+                                                            input: function(
+                                                              $event
+                                                            ) {
+                                                              if (
+                                                                $event.target
+                                                                  .composing
+                                                              ) {
+                                                                return
+                                                              }
+                                                              _vm.id_parent =
+                                                                $event.target.value
+                                                            }
+                                                          }
+                                                        })
                                                       ]
                                                     )
                                                   ]
@@ -31183,7 +31008,338 @@ var render = function() {
                                             _vm._v(" "),
                                             _c(
                                               "div",
-                                              { staticClass: "col-md-4" },
+                                              { staticClass: "col-md-3" },
+                                              [
+                                                _c(
+                                                  "div",
+                                                  {
+                                                    class:
+                                                      _vm.errorFamilyProduct
+                                                  },
+                                                  [
+                                                    _c(
+                                                      "label",
+                                                      {
+                                                        attrs: {
+                                                          for: "family_produc"
+                                                        }
+                                                      },
+                                                      [_vm._v("Monto:")]
+                                                    ),
+                                                    _vm._v(" "),
+                                                    _c(
+                                                      "div",
+                                                      {
+                                                        staticClass:
+                                                          "input-group"
+                                                      },
+                                                      [
+                                                        _c(
+                                                          "span",
+                                                          {
+                                                            staticClass:
+                                                              "input-group-addon",
+                                                            staticStyle: {
+                                                              "border-bottom-left-radius":
+                                                                "3px",
+                                                              "border-top-left-radius":
+                                                                "3px"
+                                                            }
+                                                          },
+                                                          [_vm._v("S/.")]
+                                                        ),
+                                                        _vm._v(" "),
+                                                        _c("input", {
+                                                          directives: [
+                                                            {
+                                                              name: "model",
+                                                              rawName:
+                                                                "v-model",
+                                                              value:
+                                                                _vm.id_parent,
+                                                              expression:
+                                                                "id_parent"
+                                                            }
+                                                          ],
+                                                          staticClass:
+                                                            "form-control",
+                                                          staticStyle: {
+                                                            "border-bottom-right-radius":
+                                                              "3px",
+                                                            "border-top-right-radius":
+                                                              "3px"
+                                                          },
+                                                          attrs: {
+                                                            type: "text"
+                                                          },
+                                                          domProps: {
+                                                            value: _vm.id_parent
+                                                          },
+                                                          on: {
+                                                            input: function(
+                                                              $event
+                                                            ) {
+                                                              if (
+                                                                $event.target
+                                                                  .composing
+                                                              ) {
+                                                                return
+                                                              }
+                                                              _vm.id_parent =
+                                                                $event.target.value
+                                                            }
+                                                          }
+                                                        })
+                                                      ]
+                                                    )
+                                                  ]
+                                                )
+                                              ]
+                                            ),
+                                            _vm._v(" "),
+                                            _c(
+                                              "div",
+                                              { staticClass: "col-md-3" },
+                                              [
+                                                _c(
+                                                  "div",
+                                                  { staticClass: "form-group" },
+                                                  [
+                                                    _c(
+                                                      "label",
+                                                      {
+                                                        attrs: {
+                                                          for: "date_init"
+                                                        }
+                                                      },
+                                                      [
+                                                        _vm._v(
+                                                          "Fecha del Préstamo:"
+                                                        )
+                                                      ]
+                                                    ),
+                                                    _vm._v(" "),
+                                                    _c(
+                                                      "div",
+                                                      {
+                                                        staticClass:
+                                                          "input-group"
+                                                      },
+                                                      [
+                                                        _vm._m(23),
+                                                        _vm._v(" "),
+                                                        _c("date-picker", {
+                                                          staticStyle: {
+                                                            "border-top-right-radius":
+                                                              "3px",
+                                                            "border-bottom-right-radius":
+                                                              "3px"
+                                                          },
+                                                          attrs: {
+                                                            config: _vm.options
+                                                          },
+                                                          on: {
+                                                            "dp-change":
+                                                              _vm.calculateTeabyTerm
+                                                          },
+                                                          model: {
+                                                            value:
+                                                              _vm.date_init,
+                                                            callback: function(
+                                                              $$v
+                                                            ) {
+                                                              _vm.date_init = $$v
+                                                            },
+                                                            expression:
+                                                              "date_init"
+                                                          }
+                                                        })
+                                                      ],
+                                                      1
+                                                    )
+                                                  ]
+                                                )
+                                              ]
+                                            ),
+                                            _vm._v(" "),
+                                            _c(
+                                              "div",
+                                              { staticClass: "col-md-2" },
+                                              [
+                                                _c(
+                                                  "div",
+                                                  {
+                                                    class:
+                                                      _vm.errorCharacteristic
+                                                  },
+                                                  [
+                                                    _c(
+                                                      "label",
+                                                      {
+                                                        attrs: {
+                                                          for: "nombres"
+                                                        }
+                                                      },
+                                                      [_vm._v("Taza:")]
+                                                    ),
+                                                    _vm._v(" "),
+                                                    _c(
+                                                      "div",
+                                                      {
+                                                        staticClass:
+                                                          "input-group"
+                                                      },
+                                                      [
+                                                        _c(
+                                                          "span",
+                                                          {
+                                                            staticClass:
+                                                              "input-group-addon",
+                                                            staticStyle: {
+                                                              "border-bottom-left-radius":
+                                                                "3px",
+                                                              "border-top-left-radius":
+                                                                "3px"
+                                                            }
+                                                          },
+                                                          [_vm._v("%")]
+                                                        ),
+                                                        _vm._v(" "),
+                                                        _c("input", {
+                                                          directives: [
+                                                            {
+                                                              name: "model",
+                                                              rawName:
+                                                                "v-model",
+                                                              value:
+                                                                _vm.characteristic,
+                                                              expression:
+                                                                "characteristic"
+                                                            }
+                                                          ],
+                                                          staticClass:
+                                                            "form-control",
+                                                          staticStyle: {
+                                                            "border-bottom-right-radius":
+                                                              "3px",
+                                                            "border-top-right-radius":
+                                                              "3px",
+                                                            "text-transform":
+                                                              "uppercase"
+                                                          },
+                                                          attrs: {
+                                                            type: "text"
+                                                          },
+                                                          domProps: {
+                                                            value:
+                                                              _vm.characteristic
+                                                          },
+                                                          on: {
+                                                            input: function(
+                                                              $event
+                                                            ) {
+                                                              if (
+                                                                $event.target
+                                                                  .composing
+                                                              ) {
+                                                                return
+                                                              }
+                                                              _vm.characteristic =
+                                                                $event.target.value
+                                                            }
+                                                          }
+                                                        })
+                                                      ]
+                                                    )
+                                                  ]
+                                                )
+                                              ]
+                                            ),
+                                            _vm._v(" "),
+                                            _c(
+                                              "div",
+                                              { staticClass: "col-md-2" },
+                                              [
+                                                _c(
+                                                  "div",
+                                                  {
+                                                    class:
+                                                      _vm.errorCharacteristic
+                                                  },
+                                                  [
+                                                    _c(
+                                                      "label",
+                                                      {
+                                                        attrs: {
+                                                          for: "nombres"
+                                                        }
+                                                      },
+                                                      [_vm._v("Plazo:")]
+                                                    ),
+                                                    _vm._v(" "),
+                                                    _c(
+                                                      "div",
+                                                      {
+                                                        staticClass:
+                                                          "input-group"
+                                                      },
+                                                      [
+                                                        _vm._m(24),
+                                                        _vm._v(" "),
+                                                        _c("input", {
+                                                          directives: [
+                                                            {
+                                                              name: "model",
+                                                              rawName:
+                                                                "v-model",
+                                                              value:
+                                                                _vm.characteristic,
+                                                              expression:
+                                                                "characteristic"
+                                                            }
+                                                          ],
+                                                          staticClass:
+                                                            "form-control",
+                                                          staticStyle: {
+                                                            "border-bottom-right-radius":
+                                                              "3px",
+                                                            "border-top-right-radius":
+                                                              "3px",
+                                                            "text-transform":
+                                                              "uppercase"
+                                                          },
+                                                          attrs: {
+                                                            type: "text"
+                                                          },
+                                                          domProps: {
+                                                            value:
+                                                              _vm.characteristic
+                                                          },
+                                                          on: {
+                                                            input: function(
+                                                              $event
+                                                            ) {
+                                                              if (
+                                                                $event.target
+                                                                  .composing
+                                                              ) {
+                                                                return
+                                                              }
+                                                              _vm.characteristic =
+                                                                $event.target.value
+                                                            }
+                                                          }
+                                                        })
+                                                      ]
+                                                    )
+                                                  ]
+                                                )
+                                              ]
+                                            ),
+                                            _vm._v(" "),
+                                            _c(
+                                              "div",
+                                              { staticClass: "col-md-3" },
                                               [
                                                 _c(
                                                   "div",
@@ -31192,11 +31348,14 @@ var render = function() {
                                                     _c(
                                                       "label",
                                                       {
+                                                        staticStyle: {
+                                                          visibility: "hidden"
+                                                        },
                                                         attrs: {
                                                           for: "ap_paterno"
                                                         }
                                                       },
-                                                      [_vm._v("Almacen:")]
+                                                      [_vm._v("Forma de Pago:")]
                                                     ),
                                                     _vm._v(" "),
                                                     _c(
@@ -31280,692 +31439,40 @@ var render = function() {
                                                               ]
                                                             ),
                                                             _vm._v(" "),
-                                                            _vm._l(
-                                                              _vm.arrayWarehouse,
-                                                              function(datax) {
-                                                                return _c(
-                                                                  "option",
-                                                                  {
-                                                                    key:
-                                                                      datax.id,
-                                                                    domProps: {
-                                                                      value: datax
-                                                                    }
-                                                                  },
-                                                                  [
-                                                                    _vm._v(
-                                                                      _vm._s(
-                                                                        datax.name
-                                                                      )
-                                                                    )
-                                                                  ]
+                                                            _c(
+                                                              "option",
+                                                              {
+                                                                attrs: {
+                                                                  value:
+                                                                    "DIARIO"
+                                                                }
+                                                              },
+                                                              [_vm._v("Diario")]
+                                                            ),
+                                                            _vm._v(" "),
+                                                            _c(
+                                                              "option",
+                                                              {
+                                                                attrs: {
+                                                                  value:
+                                                                    "MENSUAL"
+                                                                }
+                                                              },
+                                                              [
+                                                                _vm._v(
+                                                                  "Mensual"
                                                                 )
-                                                              }
-                                                            )
-                                                          ],
-                                                          2
-                                                        )
-                                                      ]
-                                                    )
-                                                  ]
-                                                )
-                                              ]
-                                            ),
-                                            _vm._v(" "),
-                                            _c(
-                                              "div",
-                                              { staticClass: "col-md-4" },
-                                              [
-                                                _c(
-                                                  "div",
-                                                  {
-                                                    class:
-                                                      _vm.errorCharacteristic
-                                                  },
-                                                  [
-                                                    _c(
-                                                      "label",
-                                                      {
-                                                        attrs: {
-                                                          for: "nombres"
-                                                        }
-                                                      },
-                                                      [
-                                                        _vm._v(
-                                                          "Características:"
-                                                        )
-                                                      ]
-                                                    ),
-                                                    _vm._v(" "),
-                                                    _c(
-                                                      "div",
-                                                      {
-                                                        staticClass:
-                                                          "input-group"
-                                                      },
-                                                      [
-                                                        _vm._m(26),
-                                                        _vm._v(" "),
-                                                        _c("input", {
-                                                          directives: [
-                                                            {
-                                                              name: "model",
-                                                              rawName:
-                                                                "v-model",
-                                                              value:
-                                                                _vm.characteristic,
-                                                              expression:
-                                                                "characteristic"
-                                                            }
-                                                          ],
-                                                          staticClass:
-                                                            "form-control",
-                                                          staticStyle: {
-                                                            "border-bottom-right-radius":
-                                                              "3px",
-                                                            "border-top-right-radius":
-                                                              "3px",
-                                                            "text-transform":
-                                                              "uppercase"
-                                                          },
-                                                          attrs: {
-                                                            type: "text",
-                                                            placeholder:
-                                                              "Caracteristicas"
-                                                          },
-                                                          domProps: {
-                                                            value:
-                                                              _vm.characteristic
-                                                          },
-                                                          on: {
-                                                            input: function(
-                                                              $event
-                                                            ) {
-                                                              if (
-                                                                $event.target
-                                                                  .composing
-                                                              ) {
-                                                                return
-                                                              }
-                                                              _vm.characteristic =
-                                                                $event.target.value
-                                                            }
-                                                          }
-                                                        })
-                                                      ]
-                                                    )
-                                                  ]
-                                                )
-                                              ]
-                                            ),
-                                            _vm._v(" "),
-                                            _c(
-                                              "div",
-                                              { staticClass: "col-md-4" },
-                                              [
-                                                _c(
-                                                  "div",
-                                                  { staticClass: "form-group" },
-                                                  [
-                                                    _c(
-                                                      "label",
-                                                      {
-                                                        attrs: {
-                                                          for: "date_init"
-                                                        }
-                                                      },
-                                                      [
-                                                        _vm._v(
-                                                          "Fecha de Inicio:"
-                                                        )
-                                                      ]
-                                                    ),
-                                                    _vm._v(" "),
-                                                    _c(
-                                                      "div",
-                                                      {
-                                                        staticClass:
-                                                          "input-group"
-                                                      },
-                                                      [
-                                                        _vm._m(27),
-                                                        _vm._v(" "),
-                                                        _c("date-picker", {
-                                                          staticStyle: {
-                                                            "border-top-right-radius":
-                                                              "3px",
-                                                            "border-bottom-right-radius":
-                                                              "3px"
-                                                          },
-                                                          attrs: {
-                                                            config: _vm.options
-                                                          },
-                                                          on: {
-                                                            "dp-change":
-                                                              _vm.calculateTeabyTerm
-                                                          },
-                                                          model: {
-                                                            value:
-                                                              _vm.date_init,
-                                                            callback: function(
-                                                              $$v
-                                                            ) {
-                                                              _vm.date_init = $$v
-                                                            },
-                                                            expression:
-                                                              "date_init"
-                                                          }
-                                                        })
-                                                      ],
-                                                      1
-                                                    )
-                                                  ]
-                                                )
-                                              ]
-                                            ),
-                                            _vm._v(" "),
-                                            _c(
-                                              "div",
-                                              { staticClass: "col-md-4" },
-                                              [
-                                                _c(
-                                                  "div",
-                                                  { staticClass: "form-group" },
-                                                  [
-                                                    _c(
-                                                      "label",
-                                                      {
-                                                        attrs: {
-                                                          for: "date_end"
-                                                        }
-                                                      },
-                                                      [_vm._v("Fecha Final:")]
-                                                    ),
-                                                    _vm._v(" "),
-                                                    _c(
-                                                      "div",
-                                                      {
-                                                        staticClass:
-                                                          "input-group"
-                                                      },
-                                                      [
-                                                        _vm._m(28),
-                                                        _vm._v(" "),
-                                                        _c("date-picker", {
-                                                          staticStyle: {
-                                                            "border-top-right-radius":
-                                                              "3px",
-                                                            "border-bottom-right-radius":
-                                                              "3px"
-                                                          },
-                                                          attrs: {
-                                                            disabled: "",
-                                                            config: _vm.options
-                                                          },
-                                                          model: {
-                                                            value: _vm.date_end,
-                                                            callback: function(
-                                                              $$v
-                                                            ) {
-                                                              _vm.date_end = $$v
-                                                            },
-                                                            expression:
-                                                              "date_end"
-                                                          }
-                                                        })
-                                                      ],
-                                                      1
-                                                    )
-                                                  ]
-                                                )
-                                              ]
-                                            )
-                                          ]),
-                                          _vm._v(" "),
-                                          _c("div", { staticClass: "row" }, [
-                                            _c(
-                                              "div",
-                                              { staticClass: "col-md-4" },
-                                              [
-                                                _c(
-                                                  "div",
-                                                  { staticClass: "form-group" },
-                                                  [
-                                                    _c(
-                                                      "label",
-                                                      {
-                                                        attrs: {
-                                                          for: "nombres"
-                                                        }
-                                                      },
-                                                      [_vm._v("Placa:")]
-                                                    ),
-                                                    _vm._v(" "),
-                                                    _c(
-                                                      "div",
-                                                      {
-                                                        staticClass:
-                                                          "input-group"
-                                                      },
-                                                      [
-                                                        _vm._m(29),
-                                                        _vm._v(" "),
-                                                        _c("input", {
-                                                          directives: [
-                                                            {
-                                                              name: "model",
-                                                              rawName:
-                                                                "v-model",
-                                                              value:
-                                                                _vm.licence_plate,
-                                                              expression:
-                                                                "licence_plate"
-                                                            }
-                                                          ],
-                                                          staticClass:
-                                                            "form-control",
-                                                          staticStyle: {
-                                                            "border-bottom-right-radius":
-                                                              "3px",
-                                                            "border-top-right-radius":
-                                                              "3px",
-                                                            "text-transform":
-                                                              "uppercase"
-                                                          },
-                                                          attrs: {
-                                                            type: "text",
-                                                            placeholder:
-                                                              "SM-1688"
-                                                          },
-                                                          domProps: {
-                                                            value:
-                                                              _vm.licence_plate
-                                                          },
-                                                          on: {
-                                                            input: function(
-                                                              $event
-                                                            ) {
-                                                              if (
-                                                                $event.target
-                                                                  .composing
-                                                              ) {
-                                                                return
-                                                              }
-                                                              _vm.licence_plate =
-                                                                $event.target.value
-                                                            }
-                                                          }
-                                                        })
-                                                      ]
-                                                    )
-                                                  ]
-                                                )
-                                              ]
-                                            ),
-                                            _vm._v(" "),
-                                            _c(
-                                              "div",
-                                              { staticClass: "col-md-3" },
-                                              [
-                                                _c(
-                                                  "div",
-                                                  { staticClass: "form-group" },
-                                                  [
-                                                    _c(
-                                                      "label",
-                                                      {
-                                                        attrs: {
-                                                          for: "nombres"
-                                                        }
-                                                      },
-                                                      [_vm._v("Serie:")]
-                                                    ),
-                                                    _vm._v(" "),
-                                                    _c(
-                                                      "div",
-                                                      {
-                                                        staticClass:
-                                                          "input-group"
-                                                      },
-                                                      [
-                                                        _vm._m(30),
-                                                        _vm._v(" "),
-                                                        _c("input", {
-                                                          directives: [
-                                                            {
-                                                              name: "model",
-                                                              rawName:
-                                                                "v-model",
-                                                              value: _vm.serie,
-                                                              expression:
-                                                                "serie"
-                                                            }
-                                                          ],
-                                                          staticClass:
-                                                            "form-control",
-                                                          staticStyle: {
-                                                            "border-bottom-right-radius":
-                                                              "3px",
-                                                            "border-top-right-radius":
-                                                              "3px",
-                                                            "text-transform":
-                                                              "uppercase"
-                                                          },
-                                                          attrs: {
-                                                            type: "text",
-                                                            placeholder:
-                                                              "123566532"
-                                                          },
-                                                          domProps: {
-                                                            value: _vm.serie
-                                                          },
-                                                          on: {
-                                                            input: function(
-                                                              $event
-                                                            ) {
-                                                              if (
-                                                                $event.target
-                                                                  .composing
-                                                              ) {
-                                                                return
-                                                              }
-                                                              _vm.serie =
-                                                                $event.target.value
-                                                            }
-                                                          }
-                                                        })
-                                                      ]
-                                                    )
-                                                  ]
-                                                )
-                                              ]
-                                            ),
-                                            _vm._v(" "),
-                                            _c(
-                                              "div",
-                                              { staticClass: "col-md-5" },
-                                              [
-                                                _c(
-                                                  "div",
-                                                  { staticClass: "form-group" },
-                                                  [
-                                                    _c(
-                                                      "label",
-                                                      {
-                                                        attrs: {
-                                                          for: "nombres"
-                                                        }
-                                                      },
-                                                      [_vm._v("Periodo:")]
-                                                    ),
-                                                    _vm._v(" "),
-                                                    _c(
-                                                      "div",
-                                                      {
-                                                        staticClass:
-                                                          "input-group"
-                                                      },
-                                                      [
-                                                        _c(
-                                                          "div",
-                                                          {
-                                                            staticClass:
-                                                              "col-md-1 "
-                                                          },
-                                                          [
-                                                            _c(
-                                                              "label",
-                                                              {
-                                                                staticClass:
-                                                                  "container"
-                                                              },
-                                                              [
-                                                                _vm._v(
-                                                                  "Diario\n                                                                                        "
-                                                                ),
-                                                                _c("input", {
-                                                                  directives: [
-                                                                    {
-                                                                      name:
-                                                                        "model",
-                                                                      rawName:
-                                                                        "v-model",
-                                                                      value:
-                                                                        _vm.period,
-                                                                      expression:
-                                                                        "period"
-                                                                    }
-                                                                  ],
-                                                                  attrs: {
-                                                                    type:
-                                                                      "radio",
-                                                                    value:
-                                                                      "Diario",
-                                                                    name:
-                                                                      "optradio"
-                                                                  },
-                                                                  domProps: {
-                                                                    checked: _vm._q(
-                                                                      _vm.period,
-                                                                      "Diario"
-                                                                    )
-                                                                  },
-                                                                  on: {
-                                                                    change: [
-                                                                      function(
-                                                                        $event
-                                                                      ) {
-                                                                        _vm.period =
-                                                                          "Diario"
-                                                                      },
-                                                                      _vm.calculateTeabyPerioid
-                                                                    ]
-                                                                  }
-                                                                }),
-                                                                _vm._v(" "),
-                                                                _c("span", {
-                                                                  staticClass:
-                                                                    "radiochevere"
-                                                                })
                                                               ]
-                                                            )
-                                                          ]
-                                                        ),
-                                                        _vm._v(" "),
-                                                        _c(
-                                                          "div",
-                                                          {
-                                                            staticClass:
-                                                              "col-md-1 "
-                                                          },
-                                                          [
+                                                            ),
+                                                            _vm._v(" "),
                                                             _c(
-                                                              "label",
+                                                              "option",
                                                               {
-                                                                staticClass:
-                                                                  "container"
+                                                                attrs: {
+                                                                  value: "ANUAL"
+                                                                }
                                                               },
-                                                              [
-                                                                _vm._v(
-                                                                  "Semanal\n                                                                                        "
-                                                                ),
-                                                                _c("input", {
-                                                                  directives: [
-                                                                    {
-                                                                      name:
-                                                                        "model",
-                                                                      rawName:
-                                                                        "v-model",
-                                                                      value:
-                                                                        _vm.period,
-                                                                      expression:
-                                                                        "period"
-                                                                    }
-                                                                  ],
-                                                                  attrs: {
-                                                                    type:
-                                                                      "radio",
-                                                                    value:
-                                                                      "Semanal",
-                                                                    name:
-                                                                      "optradio"
-                                                                  },
-                                                                  domProps: {
-                                                                    checked: _vm._q(
-                                                                      _vm.period,
-                                                                      "Semanal"
-                                                                    )
-                                                                  },
-                                                                  on: {
-                                                                    change: [
-                                                                      function(
-                                                                        $event
-                                                                      ) {
-                                                                        _vm.period =
-                                                                          "Semanal"
-                                                                      },
-                                                                      _vm.calculateTeabyPerioid
-                                                                    ]
-                                                                  }
-                                                                }),
-                                                                _vm._v(" "),
-                                                                _c("span", {
-                                                                  staticClass:
-                                                                    "radiochevere"
-                                                                })
-                                                              ]
-                                                            )
-                                                          ]
-                                                        ),
-                                                        _vm._v(" "),
-                                                        _c(
-                                                          "div",
-                                                          {
-                                                            staticClass:
-                                                              "col-md-1"
-                                                          },
-                                                          [
-                                                            _c(
-                                                              "label",
-                                                              {
-                                                                staticClass:
-                                                                  "container"
-                                                              },
-                                                              [
-                                                                _vm._v(
-                                                                  "Quincenal\n                                                                                        "
-                                                                ),
-                                                                _c("input", {
-                                                                  directives: [
-                                                                    {
-                                                                      name:
-                                                                        "model",
-                                                                      rawName:
-                                                                        "v-model",
-                                                                      value:
-                                                                        _vm.period,
-                                                                      expression:
-                                                                        "period"
-                                                                    }
-                                                                  ],
-                                                                  attrs: {
-                                                                    type:
-                                                                      "radio",
-                                                                    value:
-                                                                      "Quincenal",
-                                                                    name:
-                                                                      "optradio"
-                                                                  },
-                                                                  domProps: {
-                                                                    checked: _vm._q(
-                                                                      _vm.period,
-                                                                      "Quincenal"
-                                                                    )
-                                                                  },
-                                                                  on: {
-                                                                    change: [
-                                                                      function(
-                                                                        $event
-                                                                      ) {
-                                                                        _vm.period =
-                                                                          "Quincenal"
-                                                                      },
-                                                                      _vm.calculateTeabyPerioid
-                                                                    ]
-                                                                  }
-                                                                }),
-                                                                _vm._v(" "),
-                                                                _c("span", {
-                                                                  staticClass:
-                                                                    "radiochevere"
-                                                                })
-                                                              ]
-                                                            )
-                                                          ]
-                                                        ),
-                                                        _vm._v(" "),
-                                                        _c(
-                                                          "div",
-                                                          {
-                                                            staticClass:
-                                                              "col-md-1"
-                                                          },
-                                                          [
-                                                            _c(
-                                                              "label",
-                                                              {
-                                                                staticClass:
-                                                                  "container"
-                                                              },
-                                                              [
-                                                                _vm._v(
-                                                                  "Mensual\n                                                                                        "
-                                                                ),
-                                                                _c("input", {
-                                                                  directives: [
-                                                                    {
-                                                                      name:
-                                                                        "model",
-                                                                      rawName:
-                                                                        "v-model",
-                                                                      value:
-                                                                        _vm.period,
-                                                                      expression:
-                                                                        "period"
-                                                                    }
-                                                                  ],
-                                                                  attrs: {
-                                                                    type:
-                                                                      "radio",
-                                                                    value:
-                                                                      "Mensual",
-                                                                    name:
-                                                                      "optradio"
-                                                                  },
-                                                                  domProps: {
-                                                                    checked: _vm._q(
-                                                                      _vm.period,
-                                                                      "Mensual"
-                                                                    )
-                                                                  },
-                                                                  on: {
-                                                                    change: [
-                                                                      function(
-                                                                        $event
-                                                                      ) {
-                                                                        _vm.period =
-                                                                          "Mensual"
-                                                                      },
-                                                                      _vm.calculateTeabyPerioid
-                                                                    ]
-                                                                  }
-                                                                }),
-                                                                _vm._v(" "),
-                                                                _c("span", {
-                                                                  staticClass:
-                                                                    "radiochevere"
-                                                                })
-                                                              ]
+                                                              [_vm._v("Anual")]
                                                             )
                                                           ]
                                                         )
@@ -31974,402 +31481,9 @@ var render = function() {
                                                   ]
                                                 )
                                               ]
-                                            )
-                                          ]),
-                                          _vm._v(" "),
-                                          _c("div", { staticClass: "row" }, [
-                                            _c(
-                                              "div",
-                                              { staticClass: "col-md-3" },
-                                              [
-                                                _c(
-                                                  "div",
-                                                  { class: _vm.errorcapital },
-                                                  [
-                                                    _c(
-                                                      "label",
-                                                      {
-                                                        attrs: {
-                                                          for: "nombres"
-                                                        }
-                                                      },
-                                                      [_vm._v("Préstamo:")]
-                                                    ),
-                                                    _vm._v(" "),
-                                                    _c(
-                                                      "div",
-                                                      {
-                                                        staticClass:
-                                                          "input-group"
-                                                      },
-                                                      [
-                                                        _vm._m(31),
-                                                        _vm._v(" "),
-                                                        _c("input", {
-                                                          directives: [
-                                                            {
-                                                              name: "model",
-                                                              rawName:
-                                                                "v-model",
-                                                              value:
-                                                                _vm.capital,
-                                                              expression:
-                                                                "capital"
-                                                            }
-                                                          ],
-                                                          staticClass:
-                                                            "form-control",
-                                                          staticStyle: {
-                                                            "border-bottom-right-radius":
-                                                              "3px",
-                                                            "border-top-right-radius":
-                                                              "3px"
-                                                          },
-                                                          attrs: {
-                                                            type: "text",
-                                                            placeholder: "S/"
-                                                          },
-                                                          domProps: {
-                                                            value: _vm.capital
-                                                          },
-                                                          on: {
-                                                            keyup:
-                                                              _vm.calculateTeabyPerioid,
-                                                            input: function(
-                                                              $event
-                                                            ) {
-                                                              if (
-                                                                $event.target
-                                                                  .composing
-                                                              ) {
-                                                                return
-                                                              }
-                                                              _vm.capital =
-                                                                $event.target.value
-                                                            }
-                                                          }
-                                                        })
-                                                      ]
-                                                    )
-                                                  ]
-                                                )
-                                              ]
                                             ),
                                             _vm._v(" "),
-                                            _c(
-                                              "div",
-                                              { staticClass: "col-md-3" },
-                                              [
-                                                _c(
-                                                  "div",
-                                                  { class: _vm.errorTerm },
-                                                  [
-                                                    _c(
-                                                      "label",
-                                                      {
-                                                        attrs: {
-                                                          for: "nombres"
-                                                        }
-                                                      },
-                                                      [_vm._v("Plazo:")]
-                                                    ),
-                                                    _vm._v(" "),
-                                                    _c(
-                                                      "div",
-                                                      {
-                                                        staticClass:
-                                                          "input-group"
-                                                      },
-                                                      [
-                                                        _vm._m(32),
-                                                        _vm._v(" "),
-                                                        _c("input", {
-                                                          directives: [
-                                                            {
-                                                              name: "model",
-                                                              rawName:
-                                                                "v-model",
-                                                              value: _vm.term,
-                                                              expression: "term"
-                                                            }
-                                                          ],
-                                                          staticClass:
-                                                            "form-control",
-                                                          staticStyle: {
-                                                            "border-bottom-right-radius":
-                                                              "3px",
-                                                            "border-top-right-radius":
-                                                              "3px"
-                                                          },
-                                                          attrs: {
-                                                            type: "number",
-                                                            placeholder: "1"
-                                                          },
-                                                          domProps: {
-                                                            value: _vm.term
-                                                          },
-                                                          on: {
-                                                            change:
-                                                              _vm.calculateTeabyTerm,
-                                                            keyup:
-                                                              _vm.calculateTeabyTerm,
-                                                            input: function(
-                                                              $event
-                                                            ) {
-                                                              if (
-                                                                $event.target
-                                                                  .composing
-                                                              ) {
-                                                                return
-                                                              }
-                                                              _vm.term =
-                                                                $event.target.value
-                                                            }
-                                                          }
-                                                        })
-                                                      ]
-                                                    )
-                                                  ]
-                                                )
-                                              ]
-                                            ),
-                                            _vm._v(" "),
-                                            _c(
-                                              "div",
-                                              { staticClass: "col-md-3" },
-                                              [
-                                                _c(
-                                                  "div",
-                                                  { class: _vm.errorTea },
-                                                  [
-                                                    _c(
-                                                      "label",
-                                                      {
-                                                        attrs: {
-                                                          for: "nombres"
-                                                        }
-                                                      },
-                                                      [_vm._v("TEA %:")]
-                                                    ),
-                                                    _vm._v(" "),
-                                                    _c(
-                                                      "div",
-                                                      {
-                                                        staticClass:
-                                                          "input-group"
-                                                      },
-                                                      [
-                                                        _vm._m(33),
-                                                        _vm._v(" "),
-                                                        _c("input", {
-                                                          directives: [
-                                                            {
-                                                              name: "model",
-                                                              rawName:
-                                                                "v-model",
-                                                              value: _vm.tea,
-                                                              expression: "tea"
-                                                            }
-                                                          ],
-                                                          staticClass:
-                                                            "form-control",
-                                                          staticStyle: {
-                                                            "border-bottom-right-radius":
-                                                              "3px",
-                                                            "border-top-right-radius":
-                                                              "3px"
-                                                          },
-                                                          attrs: {
-                                                            type: "text",
-                                                            placeholder:
-                                                              "Porcentaje"
-                                                          },
-                                                          domProps: {
-                                                            value: _vm.tea
-                                                          },
-                                                          on: {
-                                                            keyup: function(
-                                                              $event
-                                                            ) {
-                                                              return _vm.calculateTeabyInteres()
-                                                            },
-                                                            input: function(
-                                                              $event
-                                                            ) {
-                                                              if (
-                                                                $event.target
-                                                                  .composing
-                                                              ) {
-                                                                return
-                                                              }
-                                                              _vm.tea =
-                                                                $event.target.value
-                                                            }
-                                                          }
-                                                        })
-                                                      ]
-                                                    )
-                                                  ]
-                                                )
-                                              ]
-                                            ),
-                                            _vm._v(" "),
-                                            _c(
-                                              "div",
-                                              { staticClass: "col-md-3" },
-                                              [
-                                                _c(
-                                                  "div",
-                                                  {
-                                                    class: _vm.errorInterested
-                                                  },
-                                                  [
-                                                    _c(
-                                                      "label",
-                                                      {
-                                                        attrs: {
-                                                          for: "nombres"
-                                                        }
-                                                      },
-                                                      [_vm._v("Interés:")]
-                                                    ),
-                                                    _vm._v(" "),
-                                                    _c(
-                                                      "div",
-                                                      {
-                                                        staticClass:
-                                                          "input-group"
-                                                      },
-                                                      [
-                                                        _vm._m(34),
-                                                        _vm._v(" "),
-                                                        _c("input", {
-                                                          directives: [
-                                                            {
-                                                              name: "model",
-                                                              rawName:
-                                                                "v-model",
-                                                              value:
-                                                                _vm.interest,
-                                                              expression:
-                                                                "interest"
-                                                            }
-                                                          ],
-                                                          staticClass:
-                                                            "form-control",
-                                                          staticStyle: {
-                                                            "border-bottom-right-radius":
-                                                              "3px",
-                                                            "border-top-right-radius":
-                                                              "3px"
-                                                          },
-                                                          attrs: {
-                                                            disabled: "",
-                                                            type: "text",
-                                                            placeholder:
-                                                              "Interes"
-                                                          },
-                                                          domProps: {
-                                                            value: _vm.interest
-                                                          },
-                                                          on: {
-                                                            input: function(
-                                                              $event
-                                                            ) {
-                                                              if (
-                                                                $event.target
-                                                                  .composing
-                                                              ) {
-                                                                return
-                                                              }
-                                                              _vm.interest =
-                                                                $event.target.value
-                                                            }
-                                                          }
-                                                        })
-                                                      ]
-                                                    )
-                                                  ]
-                                                )
-                                              ]
-                                            ),
-                                            _vm._v(" "),
-                                            _c(
-                                              "div",
-                                              { staticClass: "col-md-12" },
-                                              [
-                                                _c(
-                                                  "div",
-                                                  { staticClass: "form-group" },
-                                                  [
-                                                    _c(
-                                                      "label",
-                                                      {
-                                                        attrs: {
-                                                          for: "nombres"
-                                                        }
-                                                      },
-                                                      [_vm._v("Observaciones:")]
-                                                    ),
-                                                    _vm._v(" "),
-                                                    _c(
-                                                      "div",
-                                                      {
-                                                        staticClass:
-                                                          "input-group"
-                                                      },
-                                                      [
-                                                        _vm._m(35),
-                                                        _vm._v(" "),
-                                                        _c("textarea", {
-                                                          directives: [
-                                                            {
-                                                              name: "model",
-                                                              rawName:
-                                                                "v-model",
-                                                              value: _vm.note,
-                                                              expression: "note"
-                                                            }
-                                                          ],
-                                                          staticClass:
-                                                            "form-control",
-                                                          staticStyle: {
-                                                            "border-bottom-right-radius":
-                                                              "3px",
-                                                            "border-top-right-radius":
-                                                              "3px",
-                                                            "text-transform":
-                                                              "uppercase"
-                                                          },
-                                                          attrs: {
-                                                            type: "text",
-                                                            placeholder:
-                                                              "Describa alguna observación que crea conveniente registrarla."
-                                                          },
-                                                          domProps: {
-                                                            value: _vm.note
-                                                          },
-                                                          on: {
-                                                            input: function(
-                                                              $event
-                                                            ) {
-                                                              if (
-                                                                $event.target
-                                                                  .composing
-                                                              ) {
-                                                                return
-                                                              }
-                                                              _vm.note =
-                                                                $event.target.value
-                                                            }
-                                                          }
-                                                        })
-                                                      ]
-                                                    )
-                                                  ]
-                                                )
-                                              ]
-                                            )
+                                            _vm._m(26)
                                           ])
                                         ]
                                       : _vm._e()
@@ -32377,3079 +31491,2335 @@ var render = function() {
                                   2
                                 ),
                                 _vm._v(" "),
-                                _c("div", { staticClass: "box-footer" }, [
-                                  _c(
-                                    "div",
-                                    {
-                                      staticClass: "box-tools pull-right",
-                                      staticStyle: { right: "-15px" }
-                                    },
-                                    [
-                                      _c(
-                                        "div",
-                                        {
-                                          staticClass: "col-md-12",
-                                          staticStyle: { "margin-top": "6px" }
-                                        },
-                                        [
-                                          _vm._m(36),
-                                          _vm._v(" "),
-                                          _c(
-                                            "div",
-                                            {
-                                              staticClass: "col-md-4",
-                                              staticStyle: {
-                                                "margin-top": "-10px"
-                                              }
-                                            },
-                                            [
-                                              _c(
-                                                "div",
-                                                { staticClass: "checkbox" },
-                                                [
-                                                  _c(
-                                                    "label",
-                                                    {
-                                                      staticClass: "switch",
-                                                      staticStyle: {
-                                                        width: "62px",
-                                                        height: "18px"
-                                                      }
-                                                    },
-                                                    [
-                                                      _c("input", {
-                                                        directives: [
+                                _vm.listadox == 1
+                                  ? [
+                                      _c("div", { staticClass: "box-footer" }, [
+                                        _c(
+                                          "div",
+                                          {
+                                            staticClass: "box-tools pull-right",
+                                            staticStyle: { right: "-15px" }
+                                          },
+                                          [
+                                            _c(
+                                              "div",
+                                              {
+                                                staticClass: "col-md-12",
+                                                staticStyle: {
+                                                  "margin-top": "6px"
+                                                }
+                                              },
+                                              [
+                                                _vm._m(27),
+                                                _vm._v(" "),
+                                                _c(
+                                                  "div",
+                                                  {
+                                                    staticClass: "col-md-4",
+                                                    staticStyle: {
+                                                      "margin-top": "-10px"
+                                                    }
+                                                  },
+                                                  [
+                                                    _c(
+                                                      "div",
+                                                      {
+                                                        staticClass: "checkbox"
+                                                      },
+                                                      [
+                                                        _c(
+                                                          "label",
                                                           {
-                                                            name: "model",
-                                                            rawName: "v-model",
-                                                            value: _vm.add_aval,
-                                                            expression:
-                                                              "add_aval"
-                                                          }
-                                                        ],
-                                                        attrs: {
-                                                          type: "checkbox"
-                                                        },
-                                                        domProps: {
-                                                          checked: Array.isArray(
-                                                            _vm.add_aval
-                                                          )
-                                                            ? _vm._i(
-                                                                _vm.add_aval,
-                                                                null
-                                                              ) > -1
-                                                            : _vm.add_aval
-                                                        },
-                                                        on: {
-                                                          change: function(
-                                                            $event
-                                                          ) {
-                                                            var $$a =
-                                                                _vm.add_aval,
-                                                              $$el =
-                                                                $event.target,
-                                                              $$c = $$el.checked
-                                                                ? true
-                                                                : false
-                                                            if (
-                                                              Array.isArray($$a)
-                                                            ) {
-                                                              var $$v = null,
-                                                                $$i = _vm._i(
-                                                                  $$a,
-                                                                  $$v
-                                                                )
-                                                              if (
-                                                                $$el.checked
-                                                              ) {
-                                                                $$i < 0 &&
-                                                                  (_vm.add_aval = $$a.concat(
-                                                                    [$$v]
-                                                                  ))
-                                                              } else {
-                                                                $$i > -1 &&
-                                                                  (_vm.add_aval = $$a
-                                                                    .slice(
-                                                                      0,
-                                                                      $$i
-                                                                    )
-                                                                    .concat(
-                                                                      $$a.slice(
-                                                                        $$i + 1
-                                                                      )
-                                                                    ))
-                                                              }
-                                                            } else {
-                                                              _vm.add_aval = $$c
+                                                            staticClass:
+                                                              "switch",
+                                                            staticStyle: {
+                                                              width: "62px",
+                                                              height: "18px"
                                                             }
-                                                          }
-                                                        }
-                                                      }),
-                                                      _vm._v(" "),
-                                                      _c("span", {
-                                                        staticClass:
-                                                          "slider round"
-                                                      })
-                                                    ]
-                                                  )
-                                                ]
-                                              )
-                                            ]
-                                          )
-                                        ]
-                                      )
-                                    ]
-                                  )
-                                ]),
-                                _vm._v(" "),
-                                _vm.add_aval
-                                  ? _c(
-                                      "div",
-                                      { staticClass: "box-body" },
-                                      [
-                                        _vm.listadox == 1
-                                          ? [
-                                              _c(
-                                                "div",
-                                                { staticClass: "row" },
-                                                [
-                                                  _c(
-                                                    "div",
-                                                    { staticClass: "col-md-3" },
-                                                    [
-                                                      _c(
-                                                        "div",
-                                                        {
-                                                          class:
-                                                            _vm.errorInputTypeDocAval
-                                                        },
-                                                        [
-                                                          _c(
-                                                            "label",
-                                                            {
-                                                              attrs: {
-                                                                for:
-                                                                  "estado_civil"
-                                                              }
-                                                            },
-                                                            [
-                                                              _vm._v(
-                                                                "Tipo de Documento de Identidad:"
-                                                              )
-                                                            ]
-                                                          ),
-                                                          _vm._v(" "),
-                                                          _c(
-                                                            "div",
-                                                            {
-                                                              staticClass:
-                                                                "input-group"
-                                                            },
-                                                            [
-                                                              _vm._m(37),
-                                                              _vm._v(" "),
-                                                              _c(
-                                                                "select",
+                                                          },
+                                                          [
+                                                            _c("input", {
+                                                              directives: [
                                                                 {
-                                                                  directives: [
-                                                                    {
-                                                                      name:
-                                                                        "model",
-                                                                      rawName:
-                                                                        "v-model",
-                                                                      value:
-                                                                        _vm.id_type_doc_aval,
-                                                                      expression:
-                                                                        "id_type_doc_aval"
-                                                                    }
-                                                                  ],
-                                                                  staticClass:
-                                                                    "form-control",
-                                                                  staticStyle: {
-                                                                    "border-bottom-right-radius":
-                                                                      "3px",
-                                                                    "border-top-right-radius":
-                                                                      "3px"
-                                                                  },
-                                                                  on: {
-                                                                    change: function(
-                                                                      $event
-                                                                    ) {
-                                                                      var $$selectedVal = Array.prototype.filter
-                                                                        .call(
-                                                                          $event
-                                                                            .target
-                                                                            .options,
-                                                                          function(
-                                                                            o
-                                                                          ) {
-                                                                            return o.selected
-                                                                          }
-                                                                        )
-                                                                        .map(
-                                                                          function(
-                                                                            o
-                                                                          ) {
-                                                                            var val =
-                                                                              "_value" in
-                                                                              o
-                                                                                ? o._value
-                                                                                : o.value
-                                                                            return val
-                                                                          }
-                                                                        )
-                                                                      _vm.id_type_doc_aval = $event
-                                                                        .target
-                                                                        .multiple
-                                                                        ? $$selectedVal
-                                                                        : $$selectedVal[0]
-                                                                    }
-                                                                  }
-                                                                },
-                                                                [
-                                                                  _c(
-                                                                    "option",
-                                                                    {
-                                                                      attrs: {
-                                                                        selected:
-                                                                          "selected",
-                                                                        value:
-                                                                          ""
-                                                                      }
-                                                                    },
-                                                                    [
-                                                                      _vm._v(
-                                                                        "Seleccione"
-                                                                      )
-                                                                    ]
-                                                                  ),
-                                                                  _vm._v(" "),
-                                                                  _vm._l(
-                                                                    _vm.array_type_document,
-                                                                    function(
-                                                                      datax
-                                                                    ) {
-                                                                      return _c(
-                                                                        "option",
-                                                                        {
-                                                                          key:
-                                                                            datax.id,
-                                                                          domProps: {
-                                                                            value:
-                                                                              datax.id
-                                                                          }
-                                                                        },
-                                                                        [
-                                                                          _vm._v(
-                                                                            _vm._s(
-                                                                              datax.name
-                                                                            )
-                                                                          )
-                                                                        ]
-                                                                      )
-                                                                    }
-                                                                  )
-                                                                ],
-                                                                2
-                                                              )
-                                                            ]
-                                                          )
-                                                        ]
-                                                      )
-                                                    ]
-                                                  ),
-                                                  _vm._v(" "),
-                                                  _c(
-                                                    "div",
-                                                    { staticClass: "col-md-3" },
-                                                    [
-                                                      _c(
-                                                        "div",
-                                                        {
-                                                          class:
-                                                            _vm.errorInputNroDocAval
-                                                        },
-                                                        [
-                                                          _c(
-                                                            "label",
-                                                            {
-                                                              attrs: {
-                                                                for: "dni"
-                                                              }
-                                                            },
-                                                            [
-                                                              _vm._v(
-                                                                "N° de Documento:"
-                                                              )
-                                                            ]
-                                                          ),
-                                                          _vm._v(" "),
-                                                          _c(
-                                                            "div",
-                                                            {
-                                                              staticClass:
-                                                                "input-group"
-                                                            },
-                                                            [
-                                                              _vm._m(38),
-                                                              _vm._v(" "),
-                                                              _c("input", {
-                                                                directives: [
-                                                                  {
-                                                                    name:
-                                                                      "model",
-                                                                    rawName:
-                                                                      "v-model",
-                                                                    value:
-                                                                      _vm.nro_doc_aval,
-                                                                    expression:
-                                                                      "nro_doc_aval"
-                                                                  }
-                                                                ],
-                                                                staticClass:
-                                                                  "form-control",
-                                                                attrs: {
-                                                                  maxlength:
-                                                                    "8",
-                                                                  type: "text"
-                                                                },
-                                                                domProps: {
+                                                                  name: "model",
+                                                                  rawName:
+                                                                    "v-model",
                                                                   value:
-                                                                    _vm.nro_doc_aval
-                                                                },
-                                                                on: {
-                                                                  keyup: function(
-                                                                    $event
+                                                                    _vm.add_aval,
+                                                                  expression:
+                                                                    "add_aval"
+                                                                }
+                                                              ],
+                                                              attrs: {
+                                                                type: "checkbox"
+                                                              },
+                                                              domProps: {
+                                                                checked: Array.isArray(
+                                                                  _vm.add_aval
+                                                                )
+                                                                  ? _vm._i(
+                                                                      _vm.add_aval,
+                                                                      null
+                                                                    ) > -1
+                                                                  : _vm.add_aval
+                                                              },
+                                                              on: {
+                                                                change: function(
+                                                                  $event
+                                                                ) {
+                                                                  var $$a =
+                                                                      _vm.add_aval,
+                                                                    $$el =
+                                                                      $event.target,
+                                                                    $$c = $$el.checked
+                                                                      ? true
+                                                                      : false
+                                                                  if (
+                                                                    Array.isArray(
+                                                                      $$a
+                                                                    )
                                                                   ) {
-                                                                    if (
-                                                                      !$event.type.indexOf(
-                                                                        "key"
-                                                                      ) &&
-                                                                      _vm._k(
-                                                                        $event.keyCode,
-                                                                        "enter",
-                                                                        13,
-                                                                        $event.key,
-                                                                        "Enter"
+                                                                    var $$v = null,
+                                                                      $$i = _vm._i(
+                                                                        $$a,
+                                                                        $$v
                                                                       )
-                                                                    ) {
-                                                                      return null
-                                                                    }
-                                                                    return _vm.getDataAval()
-                                                                  },
-                                                                  input: function(
-                                                                    $event
-                                                                  ) {
                                                                     if (
-                                                                      $event
-                                                                        .target
-                                                                        .composing
+                                                                      $$el.checked
                                                                     ) {
-                                                                      return
+                                                                      $$i < 0 &&
+                                                                        (_vm.add_aval = $$a.concat(
+                                                                          [$$v]
+                                                                        ))
+                                                                    } else {
+                                                                      $$i >
+                                                                        -1 &&
+                                                                        (_vm.add_aval = $$a
+                                                                          .slice(
+                                                                            0,
+                                                                            $$i
+                                                                          )
+                                                                          .concat(
+                                                                            $$a.slice(
+                                                                              $$i +
+                                                                                1
+                                                                            )
+                                                                          ))
                                                                     }
-                                                                    _vm.nro_doc_aval =
-                                                                      $event.target.value
+                                                                  } else {
+                                                                    _vm.add_aval = $$c
                                                                   }
                                                                 }
-                                                              }),
-                                                              _vm._v(" "),
-                                                              _c(
-                                                                "span",
-                                                                {
-                                                                  staticClass:
-                                                                    "input-group-btn"
-                                                                },
-                                                                [
-                                                                  _c(
-                                                                    "button",
-                                                                    {
-                                                                      staticClass:
-                                                                        "btn btn-search btn-flat",
-                                                                      staticStyle: {
-                                                                        "border-bottom-right-radius":
-                                                                          "3px",
-                                                                        "border-top-right-radius":
-                                                                          "3px"
+                                                              }
+                                                            }),
+                                                            _vm._v(" "),
+                                                            _c("span", {
+                                                              staticClass:
+                                                                "slider round"
+                                                            })
+                                                          ]
+                                                        )
+                                                      ]
+                                                    )
+                                                  ]
+                                                )
+                                              ]
+                                            )
+                                          ]
+                                        )
+                                      ]),
+                                      _vm._v(" "),
+                                      _vm.add_aval
+                                        ? _c(
+                                            "div",
+                                            { staticClass: "box-body" },
+                                            [
+                                              _vm.listadox == 1
+                                                ? [
+                                                    _c(
+                                                      "div",
+                                                      { staticClass: "row" },
+                                                      [
+                                                        _c(
+                                                          "div",
+                                                          {
+                                                            staticClass:
+                                                              "col-md-3"
+                                                          },
+                                                          [
+                                                            _c(
+                                                              "div",
+                                                              {
+                                                                class:
+                                                                  _vm.errorInputTypeDocAval
+                                                              },
+                                                              [
+                                                                _c(
+                                                                  "label",
+                                                                  {
+                                                                    attrs: {
+                                                                      for:
+                                                                        "estado_civil"
+                                                                    }
+                                                                  },
+                                                                  [
+                                                                    _vm._v(
+                                                                      "Tipo de Documento de Identidad:"
+                                                                    )
+                                                                  ]
+                                                                ),
+                                                                _vm._v(" "),
+                                                                _c(
+                                                                  "div",
+                                                                  {
+                                                                    staticClass:
+                                                                      "input-group"
+                                                                  },
+                                                                  [
+                                                                    _vm._m(28),
+                                                                    _vm._v(" "),
+                                                                    _c(
+                                                                      "select",
+                                                                      {
+                                                                        directives: [
+                                                                          {
+                                                                            name:
+                                                                              "model",
+                                                                            rawName:
+                                                                              "v-model",
+                                                                            value:
+                                                                              _vm.id_type_doc_aval,
+                                                                            expression:
+                                                                              "id_type_doc_aval"
+                                                                          }
+                                                                        ],
+                                                                        staticClass:
+                                                                          "form-control",
+                                                                        staticStyle: {
+                                                                          "border-bottom-right-radius":
+                                                                            "3px",
+                                                                          "border-top-right-radius":
+                                                                            "3px"
+                                                                        },
+                                                                        on: {
+                                                                          change: function(
+                                                                            $event
+                                                                          ) {
+                                                                            var $$selectedVal = Array.prototype.filter
+                                                                              .call(
+                                                                                $event
+                                                                                  .target
+                                                                                  .options,
+                                                                                function(
+                                                                                  o
+                                                                                ) {
+                                                                                  return o.selected
+                                                                                }
+                                                                              )
+                                                                              .map(
+                                                                                function(
+                                                                                  o
+                                                                                ) {
+                                                                                  var val =
+                                                                                    "_value" in
+                                                                                    o
+                                                                                      ? o._value
+                                                                                      : o.value
+                                                                                  return val
+                                                                                }
+                                                                              )
+                                                                            _vm.id_type_doc_aval = $event
+                                                                              .target
+                                                                              .multiple
+                                                                              ? $$selectedVal
+                                                                              : $$selectedVal[0]
+                                                                          }
+                                                                        }
                                                                       },
-                                                                      attrs: {
-                                                                        "data-toggle":
-                                                                          "tooltip",
-                                                                        title:
-                                                                          "Buscar en RENIEC",
-                                                                        type:
-                                                                          "submit"
-                                                                      },
-                                                                      on: {
-                                                                        click: function(
-                                                                          $event
-                                                                        ) {
-                                                                          return _vm.getDataAval()
+                                                                      [
+                                                                        _c(
+                                                                          "option",
+                                                                          {
+                                                                            attrs: {
+                                                                              selected:
+                                                                                "selected",
+                                                                              value:
+                                                                                ""
+                                                                            }
+                                                                          },
+                                                                          [
+                                                                            _vm._v(
+                                                                              "Seleccione"
+                                                                            )
+                                                                          ]
+                                                                        ),
+                                                                        _vm._v(
+                                                                          " "
+                                                                        ),
+                                                                        _vm._l(
+                                                                          _vm.array_type_document,
+                                                                          function(
+                                                                            datax
+                                                                          ) {
+                                                                            return _c(
+                                                                              "option",
+                                                                              {
+                                                                                key:
+                                                                                  datax.id,
+                                                                                domProps: {
+                                                                                  value:
+                                                                                    datax.id
+                                                                                }
+                                                                              },
+                                                                              [
+                                                                                _vm._v(
+                                                                                  _vm._s(
+                                                                                    datax.name
+                                                                                  )
+                                                                                )
+                                                                              ]
+                                                                            )
+                                                                          }
+                                                                        )
+                                                                      ],
+                                                                      2
+                                                                    )
+                                                                  ]
+                                                                )
+                                                              ]
+                                                            )
+                                                          ]
+                                                        ),
+                                                        _vm._v(" "),
+                                                        _c(
+                                                          "div",
+                                                          {
+                                                            staticClass:
+                                                              "col-md-3"
+                                                          },
+                                                          [
+                                                            _c(
+                                                              "div",
+                                                              {
+                                                                class:
+                                                                  _vm.errorInputNroDocAval
+                                                              },
+                                                              [
+                                                                _c(
+                                                                  "label",
+                                                                  {
+                                                                    attrs: {
+                                                                      for: "dni"
+                                                                    }
+                                                                  },
+                                                                  [
+                                                                    _vm._v(
+                                                                      "N° de Documento:"
+                                                                    )
+                                                                  ]
+                                                                ),
+                                                                _vm._v(" "),
+                                                                _c(
+                                                                  "div",
+                                                                  {
+                                                                    staticClass:
+                                                                      "input-group"
+                                                                  },
+                                                                  [
+                                                                    _vm._m(29),
+                                                                    _vm._v(" "),
+                                                                    _c(
+                                                                      "input",
+                                                                      {
+                                                                        directives: [
+                                                                          {
+                                                                            name:
+                                                                              "model",
+                                                                            rawName:
+                                                                              "v-model",
+                                                                            value:
+                                                                              _vm.nro_doc_aval,
+                                                                            expression:
+                                                                              "nro_doc_aval"
+                                                                          }
+                                                                        ],
+                                                                        staticClass:
+                                                                          "form-control",
+                                                                        attrs: {
+                                                                          maxlength:
+                                                                            "8",
+                                                                          type:
+                                                                            "text"
+                                                                        },
+                                                                        domProps: {
+                                                                          value:
+                                                                            _vm.nro_doc_aval
+                                                                        },
+                                                                        on: {
+                                                                          keyup: function(
+                                                                            $event
+                                                                          ) {
+                                                                            if (
+                                                                              !$event.type.indexOf(
+                                                                                "key"
+                                                                              ) &&
+                                                                              _vm._k(
+                                                                                $event.keyCode,
+                                                                                "enter",
+                                                                                13,
+                                                                                $event.key,
+                                                                                "Enter"
+                                                                              )
+                                                                            ) {
+                                                                              return null
+                                                                            }
+                                                                            return _vm.getDataAval()
+                                                                          },
+                                                                          input: function(
+                                                                            $event
+                                                                          ) {
+                                                                            if (
+                                                                              $event
+                                                                                .target
+                                                                                .composing
+                                                                            ) {
+                                                                              return
+                                                                            }
+                                                                            _vm.nro_doc_aval =
+                                                                              $event.target.value
+                                                                          }
                                                                         }
                                                                       }
-                                                                    },
-                                                                    [
-                                                                      _c("i", {
-                                                                        class:
-                                                                          _vm.icon_search_dni_aval
-                                                                      }),
-                                                                      _vm._v(
-                                                                        " BUSCAR"
-                                                                      )
-                                                                    ]
-                                                                  )
-                                                                ]
-                                                              )
-                                                            ]
-                                                          )
-                                                        ]
-                                                      )
-                                                    ]
-                                                  ),
-                                                  _vm._v(" "),
-                                                  _c(
-                                                    "div",
-                                                    { staticClass: "col-md-3" },
-                                                    [
-                                                      _c(
-                                                        "div",
-                                                        {
-                                                          class:
-                                                            _vm.errorInputPaternalAval
-                                                        },
-                                                        [
-                                                          _c(
-                                                            "label",
-                                                            {
-                                                              attrs: {
-                                                                for:
-                                                                  "ap_paterno"
-                                                              }
-                                                            },
-                                                            [
-                                                              _vm._v(
-                                                                "Apellido Paterno:"
-                                                              )
-                                                            ]
-                                                          ),
-                                                          _vm._v(" "),
-                                                          _c(
-                                                            "div",
-                                                            {
-                                                              staticClass:
-                                                                "input-group"
-                                                            },
-                                                            [
-                                                              _vm._m(39),
-                                                              _vm._v(" "),
-                                                              _c("input", {
-                                                                directives: [
-                                                                  {
-                                                                    name:
-                                                                      "model",
-                                                                    rawName:
-                                                                      "v-model",
-                                                                    value:
-                                                                      _vm.paternal_last_name_aval,
-                                                                    expression:
-                                                                      "paternal_last_name_aval"
-                                                                  }
-                                                                ],
-                                                                staticClass:
-                                                                  "form-control",
-                                                                staticStyle: {
-                                                                  "border-bottom-right-radius":
-                                                                    "3px",
-                                                                  "border-top-right-radius":
-                                                                    "3px"
-                                                                },
-                                                                attrs: {
-                                                                  type: "text"
-                                                                },
-                                                                domProps: {
-                                                                  value:
-                                                                    _vm.paternal_last_name_aval
-                                                                },
-                                                                on: {
-                                                                  input: function(
-                                                                    $event
-                                                                  ) {
-                                                                    if (
-                                                                      $event
-                                                                        .target
-                                                                        .composing
-                                                                    ) {
-                                                                      return
-                                                                    }
-                                                                    _vm.paternal_last_name_aval =
-                                                                      $event.target.value
-                                                                  }
-                                                                }
-                                                              })
-                                                            ]
-                                                          )
-                                                        ]
-                                                      )
-                                                    ]
-                                                  ),
-                                                  _vm._v(" "),
-                                                  _c(
-                                                    "div",
-                                                    { staticClass: "col-md-3" },
-                                                    [
-                                                      _c(
-                                                        "div",
-                                                        {
-                                                          class:
-                                                            _vm.errorInputMaternalAval
-                                                        },
-                                                        [
-                                                          _c(
-                                                            "label",
-                                                            {
-                                                              attrs: {
-                                                                for:
-                                                                  "ap_materno"
-                                                              }
-                                                            },
-                                                            [
-                                                              _vm._v(
-                                                                "Apellido Materno:"
-                                                              )
-                                                            ]
-                                                          ),
-                                                          _vm._v(" "),
-                                                          _c(
-                                                            "div",
-                                                            {
-                                                              staticClass:
-                                                                "input-group"
-                                                            },
-                                                            [
-                                                              _vm._m(40),
-                                                              _vm._v(" "),
-                                                              _c("input", {
-                                                                directives: [
-                                                                  {
-                                                                    name:
-                                                                      "model",
-                                                                    rawName:
-                                                                      "v-model",
-                                                                    value:
-                                                                      _vm.maternal_last_name_aval,
-                                                                    expression:
-                                                                      "maternal_last_name_aval"
-                                                                  }
-                                                                ],
-                                                                staticClass:
-                                                                  "form-control",
-                                                                staticStyle: {
-                                                                  "border-bottom-right-radius":
-                                                                    "3px",
-                                                                  "border-top-right-radius":
-                                                                    "3px"
-                                                                },
-                                                                attrs: {
-                                                                  type: "text"
-                                                                },
-                                                                domProps: {
-                                                                  value:
-                                                                    _vm.maternal_last_name_aval
-                                                                },
-                                                                on: {
-                                                                  input: function(
-                                                                    $event
-                                                                  ) {
-                                                                    if (
-                                                                      $event
-                                                                        .target
-                                                                        .composing
-                                                                    ) {
-                                                                      return
-                                                                    }
-                                                                    _vm.maternal_last_name_aval =
-                                                                      $event.target.value
-                                                                  }
-                                                                }
-                                                              })
-                                                            ]
-                                                          )
-                                                        ]
-                                                      )
-                                                    ]
-                                                  ),
-                                                  _vm._v(" "),
-                                                  _c(
-                                                    "div",
-                                                    { staticClass: "col-md-3" },
-                                                    [
-                                                      _c(
-                                                        "div",
-                                                        {
-                                                          class:
-                                                            _vm.errorInputNamesAval
-                                                        },
-                                                        [
-                                                          _c(
-                                                            "label",
-                                                            {
-                                                              attrs: {
-                                                                for: "nombres"
-                                                              }
-                                                            },
-                                                            [_vm._v("Nombres:")]
-                                                          ),
-                                                          _vm._v(" "),
-                                                          _c(
-                                                            "div",
-                                                            {
-                                                              staticClass:
-                                                                "input-group"
-                                                            },
-                                                            [
-                                                              _vm._m(41),
-                                                              _vm._v(" "),
-                                                              _c("input", {
-                                                                directives: [
-                                                                  {
-                                                                    name:
-                                                                      "model",
-                                                                    rawName:
-                                                                      "v-model",
-                                                                    value:
-                                                                      _vm.name_aval,
-                                                                    expression:
-                                                                      "name_aval"
-                                                                  }
-                                                                ],
-                                                                staticClass:
-                                                                  "form-control",
-                                                                staticStyle: {
-                                                                  "border-bottom-right-radius":
-                                                                    "3px",
-                                                                  "border-top-right-radius":
-                                                                    "3px"
-                                                                },
-                                                                attrs: {
-                                                                  type: "text"
-                                                                },
-                                                                domProps: {
-                                                                  value:
-                                                                    _vm.name_aval
-                                                                },
-                                                                on: {
-                                                                  input: function(
-                                                                    $event
-                                                                  ) {
-                                                                    if (
-                                                                      $event
-                                                                        .target
-                                                                        .composing
-                                                                    ) {
-                                                                      return
-                                                                    }
-                                                                    _vm.name_aval =
-                                                                      $event.target.value
-                                                                  }
-                                                                }
-                                                              })
-                                                            ]
-                                                          )
-                                                        ]
-                                                      )
-                                                    ]
-                                                  ),
-                                                  _vm._v(" "),
-                                                  _c(
-                                                    "div",
-                                                    { staticClass: "col-md-3" },
-                                                    [
-                                                      _c(
-                                                        "div",
-                                                        {
-                                                          class:
-                                                            _vm.errorInputSexAval
-                                                        },
-                                                        [
-                                                          _c(
-                                                            "label",
-                                                            {
-                                                              attrs: {
-                                                                for: "sexo"
-                                                              }
-                                                            },
-                                                            [_vm._v("Sexo:")]
-                                                          ),
-                                                          _vm._v(" "),
-                                                          _c(
-                                                            "div",
-                                                            {
-                                                              staticClass:
-                                                                "input-group"
-                                                            },
-                                                            [
-                                                              _vm._m(42),
-                                                              _vm._v(" "),
-                                                              _c(
-                                                                "select",
-                                                                {
-                                                                  directives: [
-                                                                    {
-                                                                      name:
-                                                                        "model",
-                                                                      rawName:
-                                                                        "v-model",
-                                                                      value:
-                                                                        _vm.sex_aval,
-                                                                      expression:
-                                                                        "sex_aval"
-                                                                    }
-                                                                  ],
-                                                                  staticClass:
-                                                                    "form-control",
-                                                                  staticStyle: {
-                                                                    "border-bottom-right-radius":
-                                                                      "3px",
-                                                                    "border-top-right-radius":
-                                                                      "3px"
-                                                                  },
-                                                                  on: {
-                                                                    change: function(
-                                                                      $event
-                                                                    ) {
-                                                                      var $$selectedVal = Array.prototype.filter
-                                                                        .call(
-                                                                          $event
-                                                                            .target
-                                                                            .options,
-                                                                          function(
-                                                                            o
-                                                                          ) {
-                                                                            return o.selected
-                                                                          }
-                                                                        )
-                                                                        .map(
-                                                                          function(
-                                                                            o
-                                                                          ) {
-                                                                            var val =
-                                                                              "_value" in
-                                                                              o
-                                                                                ? o._value
-                                                                                : o.value
-                                                                            return val
-                                                                          }
-                                                                        )
-                                                                      _vm.sex_aval = $event
-                                                                        .target
-                                                                        .multiple
-                                                                        ? $$selectedVal
-                                                                        : $$selectedVal[0]
-                                                                    }
-                                                                  }
-                                                                },
-                                                                [
-                                                                  _c(
-                                                                    "option",
-                                                                    {
-                                                                      attrs: {
-                                                                        selected:
-                                                                          "selected",
-                                                                        value:
-                                                                          ""
-                                                                      }
-                                                                    },
-                                                                    [
-                                                                      _vm._v(
-                                                                        "Seleccione"
-                                                                      )
-                                                                    ]
-                                                                  ),
-                                                                  _vm._v(" "),
-                                                                  _c(
-                                                                    "option",
-                                                                    {
-                                                                      attrs: {
-                                                                        value:
-                                                                          "M"
-                                                                      }
-                                                                    },
-                                                                    [
-                                                                      _vm._v(
-                                                                        "Masculino"
-                                                                      )
-                                                                    ]
-                                                                  ),
-                                                                  _vm._v(" "),
-                                                                  _c(
-                                                                    "option",
-                                                                    {
-                                                                      attrs: {
-                                                                        value:
-                                                                          "F"
-                                                                      }
-                                                                    },
-                                                                    [
-                                                                      _vm._v(
-                                                                        "Femenino"
-                                                                      )
-                                                                    ]
-                                                                  )
-                                                                ]
-                                                              )
-                                                            ]
-                                                          )
-                                                        ]
-                                                      )
-                                                    ]
-                                                  ),
-                                                  _vm._v(" "),
-                                                  _c(
-                                                    "div",
-                                                    { staticClass: "col-md-3" },
-                                                    [
-                                                      _c(
-                                                        "div",
-                                                        {
-                                                          staticClass:
-                                                            "form-group"
-                                                        },
-                                                        [
-                                                          _c(
-                                                            "label",
-                                                            {
-                                                              attrs: {
-                                                                for: "edad"
-                                                              }
-                                                            },
-                                                            [
-                                                              _vm._v(
-                                                                "Fecha de Nacimiento:"
-                                                              )
-                                                            ]
-                                                          ),
-                                                          _vm._v(" "),
-                                                          _c(
-                                                            "div",
-                                                            {
-                                                              staticClass:
-                                                                "input-group"
-                                                            },
-                                                            [
-                                                              _vm._m(43),
-                                                              _vm._v(" "),
-                                                              _c(
-                                                                "date-picker",
-                                                                {
-                                                                  staticStyle: {
-                                                                    "border-top-right-radius":
-                                                                      "3px",
-                                                                    "border-bottom-right-radius":
-                                                                      "3px"
-                                                                  },
-                                                                  attrs: {
-                                                                    config:
-                                                                      _vm.options
-                                                                  },
-                                                                  model: {
-                                                                    value:
-                                                                      _vm.birthdate_aval,
-                                                                    callback: function(
-                                                                      $$v
-                                                                    ) {
-                                                                      _vm.birthdate_aval = $$v
-                                                                    },
-                                                                    expression:
-                                                                      "birthdate_aval"
-                                                                  }
-                                                                }
-                                                              )
-                                                            ],
-                                                            1
-                                                          )
-                                                        ]
-                                                      )
-                                                    ]
-                                                  ),
-                                                  _vm._v(" "),
-                                                  _c(
-                                                    "div",
-                                                    { staticClass: "col-md-3" },
-                                                    [
-                                                      _c(
-                                                        "div",
-                                                        {
-                                                          class:
-                                                            _vm.errorInputMaritalStateAval
-                                                        },
-                                                        [
-                                                          _c(
-                                                            "label",
-                                                            {
-                                                              attrs: {
-                                                                for:
-                                                                  "estado_civil"
-                                                              }
-                                                            },
-                                                            [
-                                                              _vm._v(
-                                                                "Estado Civíl:"
-                                                              )
-                                                            ]
-                                                          ),
-                                                          _vm._v(" "),
-                                                          _c(
-                                                            "div",
-                                                            {
-                                                              staticClass:
-                                                                "input-group"
-                                                            },
-                                                            [
-                                                              _vm._m(44),
-                                                              _vm._v(" "),
-                                                              _c(
-                                                                "select",
-                                                                {
-                                                                  directives: [
-                                                                    {
-                                                                      name:
-                                                                        "model",
-                                                                      rawName:
-                                                                        "v-model",
-                                                                      value:
-                                                                        _vm.marital_status_aval,
-                                                                      expression:
-                                                                        "marital_status_aval"
-                                                                    }
-                                                                  ],
-                                                                  staticClass:
-                                                                    "form-control",
-                                                                  staticStyle: {
-                                                                    "border-bottom-right-radius":
-                                                                      "3px",
-                                                                    "border-top-right-radius":
-                                                                      "3px"
-                                                                  },
-                                                                  on: {
-                                                                    change: function(
-                                                                      $event
-                                                                    ) {
-                                                                      var $$selectedVal = Array.prototype.filter
-                                                                        .call(
-                                                                          $event
-                                                                            .target
-                                                                            .options,
-                                                                          function(
-                                                                            o
-                                                                          ) {
-                                                                            return o.selected
-                                                                          }
-                                                                        )
-                                                                        .map(
-                                                                          function(
-                                                                            o
-                                                                          ) {
-                                                                            var val =
-                                                                              "_value" in
-                                                                              o
-                                                                                ? o._value
-                                                                                : o.value
-                                                                            return val
-                                                                          }
-                                                                        )
-                                                                      _vm.marital_status_aval = $event
-                                                                        .target
-                                                                        .multiple
-                                                                        ? $$selectedVal
-                                                                        : $$selectedVal[0]
-                                                                    }
-                                                                  }
-                                                                },
-                                                                [
-                                                                  _c(
-                                                                    "option",
-                                                                    {
-                                                                      attrs: {
-                                                                        selected:
-                                                                          "selected",
-                                                                        value:
-                                                                          ""
-                                                                      }
-                                                                    },
-                                                                    [
-                                                                      _vm._v(
-                                                                        "Seleccione"
-                                                                      )
-                                                                    ]
-                                                                  ),
-                                                                  _vm._v(" "),
-                                                                  _c(
-                                                                    "option",
-                                                                    {
-                                                                      attrs: {
-                                                                        value:
-                                                                          "SOLTERO"
-                                                                      }
-                                                                    },
-                                                                    [
-                                                                      _vm._v(
-                                                                        "Soltero (a)"
-                                                                      )
-                                                                    ]
-                                                                  ),
-                                                                  _vm._v(" "),
-                                                                  _c(
-                                                                    "option",
-                                                                    {
-                                                                      attrs: {
-                                                                        value:
-                                                                          "CASADO"
-                                                                      }
-                                                                    },
-                                                                    [
-                                                                      _vm._v(
-                                                                        "Casado (a)"
-                                                                      )
-                                                                    ]
-                                                                  ),
-                                                                  _vm._v(" "),
-                                                                  _c(
-                                                                    "option",
-                                                                    {
-                                                                      attrs: {
-                                                                        value:
-                                                                          "VIUDO"
-                                                                      }
-                                                                    },
-                                                                    [
-                                                                      _vm._v(
-                                                                        "Viudo (a)"
-                                                                      )
-                                                                    ]
-                                                                  ),
-                                                                  _vm._v(" "),
-                                                                  _c(
-                                                                    "option",
-                                                                    {
-                                                                      attrs: {
-                                                                        value:
-                                                                          "SEPARADO"
-                                                                      }
-                                                                    },
-                                                                    [
-                                                                      _vm._v(
-                                                                        "Separado (a)"
-                                                                      )
-                                                                    ]
-                                                                  )
-                                                                ]
-                                                              )
-                                                            ]
-                                                          )
-                                                        ]
-                                                      )
-                                                    ]
-                                                  ),
-                                                  _vm._v(" "),
-                                                  _c(
-                                                    "div",
-                                                    { staticClass: "col-md-3" },
-                                                    [
-                                                      _c(
-                                                        "div",
-                                                        {
-                                                          staticClass:
-                                                            "form-group"
-                                                        },
-                                                        [
-                                                          _c(
-                                                            "label",
-                                                            {
-                                                              attrs: {
-                                                                for: "celular"
-                                                              }
-                                                            },
-                                                            [_vm._v("Celular:")]
-                                                          ),
-                                                          _vm._v(" "),
-                                                          _c(
-                                                            "div",
-                                                            {
-                                                              staticClass:
-                                                                "input-group"
-                                                            },
-                                                            [
-                                                              _vm._m(45),
-                                                              _vm._v(" "),
-                                                              _c("input", {
-                                                                directives: [
-                                                                  {
-                                                                    name:
-                                                                      "model",
-                                                                    rawName:
-                                                                      "v-model",
-                                                                    value:
-                                                                      _vm.phone_aval,
-                                                                    expression:
-                                                                      "phone_aval"
-                                                                  }
-                                                                ],
-                                                                staticClass:
-                                                                  "form-control",
-                                                                staticStyle: {
-                                                                  "border-bottom-right-radius":
-                                                                    "3px",
-                                                                  "border-top-right-radius":
-                                                                    "3px"
-                                                                },
-                                                                attrs: {
-                                                                  type: "text"
-                                                                },
-                                                                domProps: {
-                                                                  value:
-                                                                    _vm.phone_aval
-                                                                },
-                                                                on: {
-                                                                  input: function(
-                                                                    $event
-                                                                  ) {
-                                                                    if (
-                                                                      $event
-                                                                        .target
-                                                                        .composing
-                                                                    ) {
-                                                                      return
-                                                                    }
-                                                                    _vm.phone_aval =
-                                                                      $event.target.value
-                                                                  }
-                                                                }
-                                                              })
-                                                            ]
-                                                          )
-                                                        ]
-                                                      )
-                                                    ]
-                                                  ),
-                                                  _vm._v(" "),
-                                                  _c(
-                                                    "div",
-                                                    { staticClass: "col-md-3" },
-                                                    [
-                                                      _c(
-                                                        "div",
-                                                        {
-                                                          staticClass:
-                                                            "form-group"
-                                                        },
-                                                        [
-                                                          _c(
-                                                            "label",
-                                                            {
-                                                              attrs: {
-                                                                for: "celular"
-                                                              }
-                                                            },
-                                                            [
-                                                              _vm._v(
-                                                                "Correo electrónico:"
-                                                              )
-                                                            ]
-                                                          ),
-                                                          _vm._v(" "),
-                                                          _c(
-                                                            "div",
-                                                            {
-                                                              staticClass:
-                                                                "input-group"
-                                                            },
-                                                            [
-                                                              _vm._m(46),
-                                                              _vm._v(" "),
-                                                              _c("input", {
-                                                                directives: [
-                                                                  {
-                                                                    name:
-                                                                      "model",
-                                                                    rawName:
-                                                                      "v-model",
-                                                                    value:
-                                                                      _vm.email_aval,
-                                                                    expression:
-                                                                      "email_aval"
-                                                                  }
-                                                                ],
-                                                                staticClass:
-                                                                  "form-control",
-                                                                staticStyle: {
-                                                                  "border-bottom-right-radius":
-                                                                    "3px",
-                                                                  "border-top-right-radius":
-                                                                    "3px"
-                                                                },
-                                                                attrs: {
-                                                                  type: "email",
-                                                                  name: "email"
-                                                                },
-                                                                domProps: {
-                                                                  value:
-                                                                    _vm.email_aval
-                                                                },
-                                                                on: {
-                                                                  input: function(
-                                                                    $event
-                                                                  ) {
-                                                                    if (
-                                                                      $event
-                                                                        .target
-                                                                        .composing
-                                                                    ) {
-                                                                      return
-                                                                    }
-                                                                    _vm.email_aval =
-                                                                      $event.target.value
-                                                                  }
-                                                                }
-                                                              })
-                                                            ]
-                                                          )
-                                                        ]
-                                                      )
-                                                    ]
-                                                  ),
-                                                  _vm._v(" "),
-                                                  _c(
-                                                    "div",
-                                                    { staticClass: "col-md-3" },
-                                                    [
-                                                      _c(
-                                                        "div",
-                                                        {
-                                                          class:
-                                                            _vm.errorInputJobAval
-                                                        },
-                                                        [
-                                                          _c(
-                                                            "label",
-                                                            {
-                                                              attrs: {
-                                                                for:
-                                                                  "type_business"
-                                                              }
-                                                            },
-                                                            [
-                                                              _vm._v(
-                                                                "Ocupación:"
-                                                              )
-                                                            ]
-                                                          ),
-                                                          _vm._v(" "),
-                                                          _c(
-                                                            "div",
-                                                            {
-                                                              staticClass:
-                                                                "input-group"
-                                                            },
-                                                            [
-                                                              _vm._m(47),
-                                                              _vm._v(" "),
-                                                              _c(
-                                                                "select",
-                                                                {
-                                                                  directives: [
-                                                                    {
-                                                                      name:
-                                                                        "model",
-                                                                      rawName:
-                                                                        "v-model",
-                                                                      value:
-                                                                        _vm.id_job_aval,
-                                                                      expression:
-                                                                        "id_job_aval"
-                                                                    }
-                                                                  ],
-                                                                  staticClass:
-                                                                    "form-control",
-                                                                  staticStyle: {
-                                                                    "border-bottom-right-radius":
-                                                                      "3px",
-                                                                    "border-top-right-radius":
-                                                                      "3px"
-                                                                  },
-                                                                  on: {
-                                                                    change: function(
-                                                                      $event
-                                                                    ) {
-                                                                      var $$selectedVal = Array.prototype.filter
-                                                                        .call(
-                                                                          $event
-                                                                            .target
-                                                                            .options,
-                                                                          function(
-                                                                            o
-                                                                          ) {
-                                                                            return o.selected
-                                                                          }
-                                                                        )
-                                                                        .map(
-                                                                          function(
-                                                                            o
-                                                                          ) {
-                                                                            var val =
-                                                                              "_value" in
-                                                                              o
-                                                                                ? o._value
-                                                                                : o.value
-                                                                            return val
-                                                                          }
-                                                                        )
-                                                                      _vm.id_job_aval = $event
-                                                                        .target
-                                                                        .multiple
-                                                                        ? $$selectedVal
-                                                                        : $$selectedVal[0]
-                                                                    }
-                                                                  }
-                                                                },
-                                                                [
-                                                                  _c(
-                                                                    "option",
-                                                                    {
-                                                                      attrs: {
-                                                                        selected:
-                                                                          "selected",
-                                                                        value:
-                                                                          ""
-                                                                      }
-                                                                    },
-                                                                    [
-                                                                      _vm._v(
-                                                                        "Seleccione"
-                                                                      )
-                                                                    ]
-                                                                  ),
-                                                                  _vm._v(" "),
-                                                                  _vm._l(
-                                                                    _vm.array_job,
-                                                                    function(
-                                                                      datax
-                                                                    ) {
-                                                                      return _c(
-                                                                        "option",
-                                                                        {
-                                                                          key:
-                                                                            datax.id,
-                                                                          domProps: {
-                                                                            value:
-                                                                              datax.id
-                                                                          }
-                                                                        },
-                                                                        [
-                                                                          _vm._v(
-                                                                            _vm._s(
-                                                                              datax.names
-                                                                            )
-                                                                          )
-                                                                        ]
-                                                                      )
-                                                                    }
-                                                                  )
-                                                                ],
-                                                                2
-                                                              )
-                                                            ]
-                                                          )
-                                                        ]
-                                                      )
-                                                    ]
-                                                  ),
-                                                  _vm._v(" "),
-                                                  _c(
-                                                    "div",
-                                                    { staticClass: "col-md-3" },
-                                                    [
-                                                      _c(
-                                                        "div",
-                                                        {
-                                                          class:
-                                                            _vm.errorInputTypeBusinessAval
-                                                        },
-                                                        [
-                                                          _c(
-                                                            "label",
-                                                            {
-                                                              attrs: {
-                                                                for:
-                                                                  "type_business"
-                                                              }
-                                                            },
-                                                            [
-                                                              _vm._v(
-                                                                "Tipo de Negocio:"
-                                                              )
-                                                            ]
-                                                          ),
-                                                          _vm._v(" "),
-                                                          _c(
-                                                            "div",
-                                                            {
-                                                              staticClass:
-                                                                "input-group"
-                                                            },
-                                                            [
-                                                              _vm._m(48),
-                                                              _vm._v(" "),
-                                                              _c(
-                                                                "select",
-                                                                {
-                                                                  directives: [
-                                                                    {
-                                                                      name:
-                                                                        "model",
-                                                                      rawName:
-                                                                        "v-model",
-                                                                      value:
-                                                                        _vm.id_type_business_aval,
-                                                                      expression:
-                                                                        "id_type_business_aval"
-                                                                    }
-                                                                  ],
-                                                                  staticClass:
-                                                                    "form-control",
-                                                                  staticStyle: {
-                                                                    "border-bottom-right-radius":
-                                                                      "3px",
-                                                                    "border-top-right-radius":
-                                                                      "3px"
-                                                                  },
-                                                                  on: {
-                                                                    change: function(
-                                                                      $event
-                                                                    ) {
-                                                                      var $$selectedVal = Array.prototype.filter
-                                                                        .call(
-                                                                          $event
-                                                                            .target
-                                                                            .options,
-                                                                          function(
-                                                                            o
-                                                                          ) {
-                                                                            return o.selected
-                                                                          }
-                                                                        )
-                                                                        .map(
-                                                                          function(
-                                                                            o
-                                                                          ) {
-                                                                            var val =
-                                                                              "_value" in
-                                                                              o
-                                                                                ? o._value
-                                                                                : o.value
-                                                                            return val
-                                                                          }
-                                                                        )
-                                                                      _vm.id_type_business_aval = $event
-                                                                        .target
-                                                                        .multiple
-                                                                        ? $$selectedVal
-                                                                        : $$selectedVal[0]
-                                                                    }
-                                                                  }
-                                                                },
-                                                                [
-                                                                  _c(
-                                                                    "option",
-                                                                    {
-                                                                      attrs: {
-                                                                        selected:
-                                                                          "selected",
-                                                                        value:
-                                                                          ""
-                                                                      }
-                                                                    },
-                                                                    [
-                                                                      _vm._v(
-                                                                        "Seleccione"
-                                                                      )
-                                                                    ]
-                                                                  ),
-                                                                  _vm._v(" "),
-                                                                  _vm._l(
-                                                                    _vm.array_type_business,
-                                                                    function(
-                                                                      datax
-                                                                    ) {
-                                                                      return _c(
-                                                                        "option",
-                                                                        {
-                                                                          key:
-                                                                            datax.id,
-                                                                          domProps: {
-                                                                            value:
-                                                                              datax.id
-                                                                          }
-                                                                        },
-                                                                        [
-                                                                          _vm._v(
-                                                                            _vm._s(
-                                                                              datax.name
-                                                                            )
-                                                                          )
-                                                                        ]
-                                                                      )
-                                                                    }
-                                                                  )
-                                                                ],
-                                                                2
-                                                              )
-                                                            ]
-                                                          )
-                                                        ]
-                                                      )
-                                                    ]
-                                                  ),
-                                                  _vm._v(" "),
-                                                  _c(
-                                                    "div",
-                                                    { staticClass: "col-md-3" },
-                                                    [
-                                                      _c(
-                                                        "div",
-                                                        {
-                                                          class:
-                                                            _vm.errorInputDepartmentAval
-                                                        },
-                                                        [
-                                                          _c(
-                                                            "label",
-                                                            {
-                                                              attrs: {
-                                                                for:
-                                                                  "estado_civil"
-                                                              }
-                                                            },
-                                                            [
-                                                              _vm._v(
-                                                                "Departamento:"
-                                                              )
-                                                            ]
-                                                          ),
-                                                          _vm._v(" "),
-                                                          _c(
-                                                            "div",
-                                                            {
-                                                              staticClass:
-                                                                "input-group"
-                                                            },
-                                                            [
-                                                              _vm._m(49),
-                                                              _vm._v(" "),
-                                                              _c(
-                                                                "select",
-                                                                {
-                                                                  directives: [
-                                                                    {
-                                                                      name:
-                                                                        "model",
-                                                                      rawName:
-                                                                        "v-model",
-                                                                      value:
-                                                                        _vm.department_aval,
-                                                                      expression:
-                                                                        "department_aval"
-                                                                    }
-                                                                  ],
-                                                                  staticClass:
-                                                                    "form-control",
-                                                                  staticStyle: {
-                                                                    "border-bottom-right-radius":
-                                                                      "3px",
-                                                                    "border-top-right-radius":
-                                                                      "3px"
-                                                                  },
-                                                                  on: {
-                                                                    change: [
-                                                                      function(
-                                                                        $event
-                                                                      ) {
-                                                                        var $$selectedVal = Array.prototype.filter
-                                                                          .call(
-                                                                            $event
-                                                                              .target
-                                                                              .options,
-                                                                            function(
-                                                                              o
-                                                                            ) {
-                                                                              return o.selected
-                                                                            }
-                                                                          )
-                                                                          .map(
-                                                                            function(
-                                                                              o
-                                                                            ) {
-                                                                              var val =
-                                                                                "_value" in
-                                                                                o
-                                                                                  ? o._value
-                                                                                  : o.value
-                                                                              return val
-                                                                            }
-                                                                          )
-                                                                        _vm.department_aval = $event
-                                                                          .target
-                                                                          .multiple
-                                                                          ? $$selectedVal
-                                                                          : $$selectedVal[0]
+                                                                    ),
+                                                                    _vm._v(" "),
+                                                                    _c(
+                                                                      "span",
+                                                                      {
+                                                                        staticClass:
+                                                                          "input-group-btn"
                                                                       },
-                                                                      function(
-                                                                        $event
-                                                                      ) {
-                                                                        return _vm.getProvince(
-                                                                          $event
-                                                                            .target
-                                                                            .value
+                                                                      [
+                                                                        _c(
+                                                                          "button",
+                                                                          {
+                                                                            staticClass:
+                                                                              "btn btn-search btn-flat",
+                                                                            staticStyle: {
+                                                                              "border-bottom-right-radius":
+                                                                                "3px",
+                                                                              "border-top-right-radius":
+                                                                                "3px"
+                                                                            },
+                                                                            attrs: {
+                                                                              "data-toggle":
+                                                                                "tooltip",
+                                                                              title:
+                                                                                "Buscar en RENIEC",
+                                                                              type:
+                                                                                "submit"
+                                                                            },
+                                                                            on: {
+                                                                              click: function(
+                                                                                $event
+                                                                              ) {
+                                                                                return _vm.getDataAval()
+                                                                              }
+                                                                            }
+                                                                          },
+                                                                          [
+                                                                            _c(
+                                                                              "i",
+                                                                              {
+                                                                                class:
+                                                                                  _vm.icon_search_dni_aval
+                                                                              }
+                                                                            ),
+                                                                            _vm._v(
+                                                                              " BUSCAR"
+                                                                            )
+                                                                          ]
                                                                         )
+                                                                      ]
+                                                                    )
+                                                                  ]
+                                                                )
+                                                              ]
+                                                            )
+                                                          ]
+                                                        ),
+                                                        _vm._v(" "),
+                                                        _c(
+                                                          "div",
+                                                          {
+                                                            staticClass:
+                                                              "col-md-3"
+                                                          },
+                                                          [
+                                                            _c(
+                                                              "div",
+                                                              {
+                                                                class:
+                                                                  _vm.errorInputPaternalAval
+                                                              },
+                                                              [
+                                                                _c(
+                                                                  "label",
+                                                                  {
+                                                                    attrs: {
+                                                                      for:
+                                                                        "ap_paterno"
+                                                                    }
+                                                                  },
+                                                                  [
+                                                                    _vm._v(
+                                                                      "Apellido Paterno:"
+                                                                    )
+                                                                  ]
+                                                                ),
+                                                                _vm._v(" "),
+                                                                _c(
+                                                                  "div",
+                                                                  {
+                                                                    staticClass:
+                                                                      "input-group"
+                                                                  },
+                                                                  [
+                                                                    _vm._m(30),
+                                                                    _vm._v(" "),
+                                                                    _c(
+                                                                      "input",
+                                                                      {
+                                                                        directives: [
+                                                                          {
+                                                                            name:
+                                                                              "model",
+                                                                            rawName:
+                                                                              "v-model",
+                                                                            value:
+                                                                              _vm.paternal_last_name_aval,
+                                                                            expression:
+                                                                              "paternal_last_name_aval"
+                                                                          }
+                                                                        ],
+                                                                        staticClass:
+                                                                          "form-control",
+                                                                        staticStyle: {
+                                                                          "border-bottom-right-radius":
+                                                                            "3px",
+                                                                          "border-top-right-radius":
+                                                                            "3px"
+                                                                        },
+                                                                        attrs: {
+                                                                          type:
+                                                                            "text"
+                                                                        },
+                                                                        domProps: {
+                                                                          value:
+                                                                            _vm.paternal_last_name_aval
+                                                                        },
+                                                                        on: {
+                                                                          input: function(
+                                                                            $event
+                                                                          ) {
+                                                                            if (
+                                                                              $event
+                                                                                .target
+                                                                                .composing
+                                                                            ) {
+                                                                              return
+                                                                            }
+                                                                            _vm.paternal_last_name_aval =
+                                                                              $event.target.value
+                                                                          }
+                                                                        }
                                                                       }
-                                                                    ]
-                                                                  }
-                                                                },
-                                                                [
-                                                                  _c(
-                                                                    "option",
-                                                                    {
-                                                                      attrs: {
-                                                                        selected:
-                                                                          "selected",
-                                                                        value:
-                                                                          ""
+                                                                    )
+                                                                  ]
+                                                                )
+                                                              ]
+                                                            )
+                                                          ]
+                                                        ),
+                                                        _vm._v(" "),
+                                                        _c(
+                                                          "div",
+                                                          {
+                                                            staticClass:
+                                                              "col-md-3"
+                                                          },
+                                                          [
+                                                            _c(
+                                                              "div",
+                                                              {
+                                                                class:
+                                                                  _vm.errorInputMaternalAval
+                                                              },
+                                                              [
+                                                                _c(
+                                                                  "label",
+                                                                  {
+                                                                    attrs: {
+                                                                      for:
+                                                                        "ap_materno"
+                                                                    }
+                                                                  },
+                                                                  [
+                                                                    _vm._v(
+                                                                      "Apellido Materno:"
+                                                                    )
+                                                                  ]
+                                                                ),
+                                                                _vm._v(" "),
+                                                                _c(
+                                                                  "div",
+                                                                  {
+                                                                    staticClass:
+                                                                      "input-group"
+                                                                  },
+                                                                  [
+                                                                    _vm._m(31),
+                                                                    _vm._v(" "),
+                                                                    _c(
+                                                                      "input",
+                                                                      {
+                                                                        directives: [
+                                                                          {
+                                                                            name:
+                                                                              "model",
+                                                                            rawName:
+                                                                              "v-model",
+                                                                            value:
+                                                                              _vm.maternal_last_name_aval,
+                                                                            expression:
+                                                                              "maternal_last_name_aval"
+                                                                          }
+                                                                        ],
+                                                                        staticClass:
+                                                                          "form-control",
+                                                                        staticStyle: {
+                                                                          "border-bottom-right-radius":
+                                                                            "3px",
+                                                                          "border-top-right-radius":
+                                                                            "3px"
+                                                                        },
+                                                                        attrs: {
+                                                                          type:
+                                                                            "text"
+                                                                        },
+                                                                        domProps: {
+                                                                          value:
+                                                                            _vm.maternal_last_name_aval
+                                                                        },
+                                                                        on: {
+                                                                          input: function(
+                                                                            $event
+                                                                          ) {
+                                                                            if (
+                                                                              $event
+                                                                                .target
+                                                                                .composing
+                                                                            ) {
+                                                                              return
+                                                                            }
+                                                                            _vm.maternal_last_name_aval =
+                                                                              $event.target.value
+                                                                          }
+                                                                        }
                                                                       }
-                                                                    },
-                                                                    [
-                                                                      _vm._v(
-                                                                        "Seleccione"
-                                                                      )
-                                                                    ]
-                                                                  ),
-                                                                  _vm._v(" "),
-                                                                  _vm._l(
-                                                                    _vm.array_department,
-                                                                    function(
-                                                                      miselect
-                                                                    ) {
-                                                                      return _c(
-                                                                        "option",
-                                                                        {
-                                                                          key:
-                                                                            miselect.id,
-                                                                          domProps: {
-                                                                            selected:
-                                                                              miselect.id ==
+                                                                    )
+                                                                  ]
+                                                                )
+                                                              ]
+                                                            )
+                                                          ]
+                                                        ),
+                                                        _vm._v(" "),
+                                                        _c(
+                                                          "div",
+                                                          {
+                                                            staticClass:
+                                                              "col-md-3"
+                                                          },
+                                                          [
+                                                            _c(
+                                                              "div",
+                                                              {
+                                                                class:
+                                                                  _vm.errorInputNamesAval
+                                                              },
+                                                              [
+                                                                _c(
+                                                                  "label",
+                                                                  {
+                                                                    attrs: {
+                                                                      for:
+                                                                        "nombres"
+                                                                    }
+                                                                  },
+                                                                  [
+                                                                    _vm._v(
+                                                                      "Nombres:"
+                                                                    )
+                                                                  ]
+                                                                ),
+                                                                _vm._v(" "),
+                                                                _c(
+                                                                  "div",
+                                                                  {
+                                                                    staticClass:
+                                                                      "input-group"
+                                                                  },
+                                                                  [
+                                                                    _vm._m(32),
+                                                                    _vm._v(" "),
+                                                                    _c(
+                                                                      "input",
+                                                                      {
+                                                                        directives: [
+                                                                          {
+                                                                            name:
+                                                                              "model",
+                                                                            rawName:
+                                                                              "v-model",
+                                                                            value:
+                                                                              _vm.name_aval,
+                                                                            expression:
+                                                                              "name_aval"
+                                                                          }
+                                                                        ],
+                                                                        staticClass:
+                                                                          "form-control",
+                                                                        staticStyle: {
+                                                                          "border-bottom-right-radius":
+                                                                            "3px",
+                                                                          "border-top-right-radius":
+                                                                            "3px"
+                                                                        },
+                                                                        attrs: {
+                                                                          type:
+                                                                            "text"
+                                                                        },
+                                                                        domProps: {
+                                                                          value:
+                                                                            _vm.name_aval
+                                                                        },
+                                                                        on: {
+                                                                          input: function(
+                                                                            $event
+                                                                          ) {
+                                                                            if (
+                                                                              $event
+                                                                                .target
+                                                                                .composing
+                                                                            ) {
+                                                                              return
+                                                                            }
+                                                                            _vm.name_aval =
+                                                                              $event.target.value
+                                                                          }
+                                                                        }
+                                                                      }
+                                                                    )
+                                                                  ]
+                                                                )
+                                                              ]
+                                                            )
+                                                          ]
+                                                        ),
+                                                        _vm._v(" "),
+                                                        _c(
+                                                          "div",
+                                                          {
+                                                            staticClass:
+                                                              "col-md-3"
+                                                          },
+                                                          [
+                                                            _c(
+                                                              "div",
+                                                              {
+                                                                class:
+                                                                  _vm.errorInputSexAval
+                                                              },
+                                                              [
+                                                                _c(
+                                                                  "label",
+                                                                  {
+                                                                    attrs: {
+                                                                      for:
+                                                                        "sexo"
+                                                                    }
+                                                                  },
+                                                                  [
+                                                                    _vm._v(
+                                                                      "Sexo:"
+                                                                    )
+                                                                  ]
+                                                                ),
+                                                                _vm._v(" "),
+                                                                _c(
+                                                                  "div",
+                                                                  {
+                                                                    staticClass:
+                                                                      "input-group"
+                                                                  },
+                                                                  [
+                                                                    _vm._m(33),
+                                                                    _vm._v(" "),
+                                                                    _c(
+                                                                      "select",
+                                                                      {
+                                                                        directives: [
+                                                                          {
+                                                                            name:
+                                                                              "model",
+                                                                            rawName:
+                                                                              "v-model",
+                                                                            value:
+                                                                              _vm.sex_aval,
+                                                                            expression:
+                                                                              "sex_aval"
+                                                                          }
+                                                                        ],
+                                                                        staticClass:
+                                                                          "form-control",
+                                                                        staticStyle: {
+                                                                          "border-bottom-right-radius":
+                                                                            "3px",
+                                                                          "border-top-right-radius":
+                                                                            "3px"
+                                                                        },
+                                                                        on: {
+                                                                          change: function(
+                                                                            $event
+                                                                          ) {
+                                                                            var $$selectedVal = Array.prototype.filter
+                                                                              .call(
+                                                                                $event
+                                                                                  .target
+                                                                                  .options,
+                                                                                function(
+                                                                                  o
+                                                                                ) {
+                                                                                  return o.selected
+                                                                                }
+                                                                              )
+                                                                              .map(
+                                                                                function(
+                                                                                  o
+                                                                                ) {
+                                                                                  var val =
+                                                                                    "_value" in
+                                                                                    o
+                                                                                      ? o._value
+                                                                                      : o.value
+                                                                                  return val
+                                                                                }
+                                                                              )
+                                                                            _vm.sex_aval = $event
+                                                                              .target
+                                                                              .multiple
+                                                                              ? $$selectedVal
+                                                                              : $$selectedVal[0]
+                                                                          }
+                                                                        }
+                                                                      },
+                                                                      [
+                                                                        _c(
+                                                                          "option",
+                                                                          {
+                                                                            attrs: {
+                                                                              selected:
+                                                                                "selected",
+                                                                              value:
+                                                                                ""
+                                                                            }
+                                                                          },
+                                                                          [
+                                                                            _vm._v(
+                                                                              "Seleccione"
+                                                                            )
+                                                                          ]
+                                                                        ),
+                                                                        _vm._v(
+                                                                          " "
+                                                                        ),
+                                                                        _c(
+                                                                          "option",
+                                                                          {
+                                                                            attrs: {
+                                                                              value:
+                                                                                "M"
+                                                                            }
+                                                                          },
+                                                                          [
+                                                                            _vm._v(
+                                                                              "Masculino"
+                                                                            )
+                                                                          ]
+                                                                        ),
+                                                                        _vm._v(
+                                                                          " "
+                                                                        ),
+                                                                        _c(
+                                                                          "option",
+                                                                          {
+                                                                            attrs: {
+                                                                              value:
+                                                                                "F"
+                                                                            }
+                                                                          },
+                                                                          [
+                                                                            _vm._v(
+                                                                              "Femenino"
+                                                                            )
+                                                                          ]
+                                                                        )
+                                                                      ]
+                                                                    )
+                                                                  ]
+                                                                )
+                                                              ]
+                                                            )
+                                                          ]
+                                                        ),
+                                                        _vm._v(" "),
+                                                        _c(
+                                                          "div",
+                                                          {
+                                                            staticClass:
+                                                              "col-md-3"
+                                                          },
+                                                          [
+                                                            _c(
+                                                              "div",
+                                                              {
+                                                                staticClass:
+                                                                  "form-group"
+                                                              },
+                                                              [
+                                                                _c(
+                                                                  "label",
+                                                                  {
+                                                                    attrs: {
+                                                                      for:
+                                                                        "edad"
+                                                                    }
+                                                                  },
+                                                                  [
+                                                                    _vm._v(
+                                                                      "Fecha de Nacimiento:"
+                                                                    )
+                                                                  ]
+                                                                ),
+                                                                _vm._v(" "),
+                                                                _c(
+                                                                  "div",
+                                                                  {
+                                                                    staticClass:
+                                                                      "input-group"
+                                                                  },
+                                                                  [
+                                                                    _vm._m(34),
+                                                                    _vm._v(" "),
+                                                                    _c(
+                                                                      "date-picker",
+                                                                      {
+                                                                        staticStyle: {
+                                                                          "border-top-right-radius":
+                                                                            "3px",
+                                                                          "border-bottom-right-radius":
+                                                                            "3px"
+                                                                        },
+                                                                        attrs: {
+                                                                          config:
+                                                                            _vm.options
+                                                                        },
+                                                                        model: {
+                                                                          value:
+                                                                            _vm.birthdate_aval,
+                                                                          callback: function(
+                                                                            $$v
+                                                                          ) {
+                                                                            _vm.birthdate_aval = $$v
+                                                                          },
+                                                                          expression:
+                                                                            "birthdate_aval"
+                                                                        }
+                                                                      }
+                                                                    )
+                                                                  ],
+                                                                  1
+                                                                )
+                                                              ]
+                                                            )
+                                                          ]
+                                                        ),
+                                                        _vm._v(" "),
+                                                        _c(
+                                                          "div",
+                                                          {
+                                                            staticClass:
+                                                              "col-md-3"
+                                                          },
+                                                          [
+                                                            _c(
+                                                              "div",
+                                                              {
+                                                                class:
+                                                                  _vm.errorInputMaritalStateAval
+                                                              },
+                                                              [
+                                                                _c(
+                                                                  "label",
+                                                                  {
+                                                                    attrs: {
+                                                                      for:
+                                                                        "estado_civil"
+                                                                    }
+                                                                  },
+                                                                  [
+                                                                    _vm._v(
+                                                                      "Estado Civíl:"
+                                                                    )
+                                                                  ]
+                                                                ),
+                                                                _vm._v(" "),
+                                                                _c(
+                                                                  "div",
+                                                                  {
+                                                                    staticClass:
+                                                                      "input-group"
+                                                                  },
+                                                                  [
+                                                                    _vm._m(35),
+                                                                    _vm._v(" "),
+                                                                    _c(
+                                                                      "select",
+                                                                      {
+                                                                        directives: [
+                                                                          {
+                                                                            name:
+                                                                              "model",
+                                                                            rawName:
+                                                                              "v-model",
+                                                                            value:
+                                                                              _vm.marital_status_aval,
+                                                                            expression:
+                                                                              "marital_status_aval"
+                                                                          }
+                                                                        ],
+                                                                        staticClass:
+                                                                          "form-control",
+                                                                        staticStyle: {
+                                                                          "border-bottom-right-radius":
+                                                                            "3px",
+                                                                          "border-top-right-radius":
+                                                                            "3px"
+                                                                        },
+                                                                        on: {
+                                                                          change: function(
+                                                                            $event
+                                                                          ) {
+                                                                            var $$selectedVal = Array.prototype.filter
+                                                                              .call(
+                                                                                $event
+                                                                                  .target
+                                                                                  .options,
+                                                                                function(
+                                                                                  o
+                                                                                ) {
+                                                                                  return o.selected
+                                                                                }
+                                                                              )
+                                                                              .map(
+                                                                                function(
+                                                                                  o
+                                                                                ) {
+                                                                                  var val =
+                                                                                    "_value" in
+                                                                                    o
+                                                                                      ? o._value
+                                                                                      : o.value
+                                                                                  return val
+                                                                                }
+                                                                              )
+                                                                            _vm.marital_status_aval = $event
+                                                                              .target
+                                                                              .multiple
+                                                                              ? $$selectedVal
+                                                                              : $$selectedVal[0]
+                                                                          }
+                                                                        }
+                                                                      },
+                                                                      [
+                                                                        _c(
+                                                                          "option",
+                                                                          {
+                                                                            attrs: {
+                                                                              selected:
+                                                                                "selected",
+                                                                              value:
+                                                                                ""
+                                                                            }
+                                                                          },
+                                                                          [
+                                                                            _vm._v(
+                                                                              "Seleccione"
+                                                                            )
+                                                                          ]
+                                                                        ),
+                                                                        _vm._v(
+                                                                          " "
+                                                                        ),
+                                                                        _c(
+                                                                          "option",
+                                                                          {
+                                                                            attrs: {
+                                                                              value:
+                                                                                "SOLTERO"
+                                                                            }
+                                                                          },
+                                                                          [
+                                                                            _vm._v(
+                                                                              "Soltero (a)"
+                                                                            )
+                                                                          ]
+                                                                        ),
+                                                                        _vm._v(
+                                                                          " "
+                                                                        ),
+                                                                        _c(
+                                                                          "option",
+                                                                          {
+                                                                            attrs: {
+                                                                              value:
+                                                                                "CASADO"
+                                                                            }
+                                                                          },
+                                                                          [
+                                                                            _vm._v(
+                                                                              "Casado (a)"
+                                                                            )
+                                                                          ]
+                                                                        ),
+                                                                        _vm._v(
+                                                                          " "
+                                                                        ),
+                                                                        _c(
+                                                                          "option",
+                                                                          {
+                                                                            attrs: {
+                                                                              value:
+                                                                                "VIUDO"
+                                                                            }
+                                                                          },
+                                                                          [
+                                                                            _vm._v(
+                                                                              "Viudo (a)"
+                                                                            )
+                                                                          ]
+                                                                        ),
+                                                                        _vm._v(
+                                                                          " "
+                                                                        ),
+                                                                        _c(
+                                                                          "option",
+                                                                          {
+                                                                            attrs: {
+                                                                              value:
+                                                                                "SEPARADO"
+                                                                            }
+                                                                          },
+                                                                          [
+                                                                            _vm._v(
+                                                                              "Separado (a)"
+                                                                            )
+                                                                          ]
+                                                                        )
+                                                                      ]
+                                                                    )
+                                                                  ]
+                                                                )
+                                                              ]
+                                                            )
+                                                          ]
+                                                        ),
+                                                        _vm._v(" "),
+                                                        _c(
+                                                          "div",
+                                                          {
+                                                            staticClass:
+                                                              "col-md-3"
+                                                          },
+                                                          [
+                                                            _c(
+                                                              "div",
+                                                              {
+                                                                staticClass:
+                                                                  "form-group"
+                                                              },
+                                                              [
+                                                                _c(
+                                                                  "label",
+                                                                  {
+                                                                    attrs: {
+                                                                      for:
+                                                                        "celular"
+                                                                    }
+                                                                  },
+                                                                  [
+                                                                    _vm._v(
+                                                                      "Celular:"
+                                                                    )
+                                                                  ]
+                                                                ),
+                                                                _vm._v(" "),
+                                                                _c(
+                                                                  "div",
+                                                                  {
+                                                                    staticClass:
+                                                                      "input-group"
+                                                                  },
+                                                                  [
+                                                                    _vm._m(36),
+                                                                    _vm._v(" "),
+                                                                    _c(
+                                                                      "input",
+                                                                      {
+                                                                        directives: [
+                                                                          {
+                                                                            name:
+                                                                              "model",
+                                                                            rawName:
+                                                                              "v-model",
+                                                                            value:
+                                                                              _vm.phone_aval,
+                                                                            expression:
+                                                                              "phone_aval"
+                                                                          }
+                                                                        ],
+                                                                        staticClass:
+                                                                          "form-control",
+                                                                        staticStyle: {
+                                                                          "border-bottom-right-radius":
+                                                                            "3px",
+                                                                          "border-top-right-radius":
+                                                                            "3px"
+                                                                        },
+                                                                        attrs: {
+                                                                          type:
+                                                                            "text"
+                                                                        },
+                                                                        domProps: {
+                                                                          value:
+                                                                            _vm.phone_aval
+                                                                        },
+                                                                        on: {
+                                                                          input: function(
+                                                                            $event
+                                                                          ) {
+                                                                            if (
+                                                                              $event
+                                                                                .target
+                                                                                .composing
+                                                                            ) {
+                                                                              return
+                                                                            }
+                                                                            _vm.phone_aval =
+                                                                              $event.target.value
+                                                                          }
+                                                                        }
+                                                                      }
+                                                                    )
+                                                                  ]
+                                                                )
+                                                              ]
+                                                            )
+                                                          ]
+                                                        ),
+                                                        _vm._v(" "),
+                                                        _c(
+                                                          "div",
+                                                          {
+                                                            staticClass:
+                                                              "col-md-3"
+                                                          },
+                                                          [
+                                                            _c(
+                                                              "div",
+                                                              {
+                                                                staticClass:
+                                                                  "form-group"
+                                                              },
+                                                              [
+                                                                _c(
+                                                                  "label",
+                                                                  {
+                                                                    attrs: {
+                                                                      for:
+                                                                        "celular"
+                                                                    }
+                                                                  },
+                                                                  [
+                                                                    _vm._v(
+                                                                      "Correo electrónico:"
+                                                                    )
+                                                                  ]
+                                                                ),
+                                                                _vm._v(" "),
+                                                                _c(
+                                                                  "div",
+                                                                  {
+                                                                    staticClass:
+                                                                      "input-group"
+                                                                  },
+                                                                  [
+                                                                    _vm._m(37),
+                                                                    _vm._v(" "),
+                                                                    _c(
+                                                                      "input",
+                                                                      {
+                                                                        directives: [
+                                                                          {
+                                                                            name:
+                                                                              "model",
+                                                                            rawName:
+                                                                              "v-model",
+                                                                            value:
+                                                                              _vm.email_aval,
+                                                                            expression:
+                                                                              "email_aval"
+                                                                          }
+                                                                        ],
+                                                                        staticClass:
+                                                                          "form-control",
+                                                                        staticStyle: {
+                                                                          "border-bottom-right-radius":
+                                                                            "3px",
+                                                                          "border-top-right-radius":
+                                                                            "3px"
+                                                                        },
+                                                                        attrs: {
+                                                                          type:
+                                                                            "email",
+                                                                          name:
+                                                                            "email"
+                                                                        },
+                                                                        domProps: {
+                                                                          value:
+                                                                            _vm.email_aval
+                                                                        },
+                                                                        on: {
+                                                                          input: function(
+                                                                            $event
+                                                                          ) {
+                                                                            if (
+                                                                              $event
+                                                                                .target
+                                                                                .composing
+                                                                            ) {
+                                                                              return
+                                                                            }
+                                                                            _vm.email_aval =
+                                                                              $event.target.value
+                                                                          }
+                                                                        }
+                                                                      }
+                                                                    )
+                                                                  ]
+                                                                )
+                                                              ]
+                                                            )
+                                                          ]
+                                                        ),
+                                                        _vm._v(" "),
+                                                        _c(
+                                                          "div",
+                                                          {
+                                                            staticClass:
+                                                              "col-md-3"
+                                                          },
+                                                          [
+                                                            _c(
+                                                              "div",
+                                                              {
+                                                                class:
+                                                                  _vm.errorInputJobAval
+                                                              },
+                                                              [
+                                                                _c(
+                                                                  "label",
+                                                                  {
+                                                                    attrs: {
+                                                                      for:
+                                                                        "type_business"
+                                                                    }
+                                                                  },
+                                                                  [
+                                                                    _vm._v(
+                                                                      "Ocupación:"
+                                                                    )
+                                                                  ]
+                                                                ),
+                                                                _vm._v(" "),
+                                                                _c(
+                                                                  "div",
+                                                                  {
+                                                                    staticClass:
+                                                                      "input-group"
+                                                                  },
+                                                                  [
+                                                                    _vm._m(38),
+                                                                    _vm._v(" "),
+                                                                    _c(
+                                                                      "select",
+                                                                      {
+                                                                        directives: [
+                                                                          {
+                                                                            name:
+                                                                              "model",
+                                                                            rawName:
+                                                                              "v-model",
+                                                                            value:
+                                                                              _vm.id_job_aval,
+                                                                            expression:
+                                                                              "id_job_aval"
+                                                                          }
+                                                                        ],
+                                                                        staticClass:
+                                                                          "form-control",
+                                                                        staticStyle: {
+                                                                          "border-bottom-right-radius":
+                                                                            "3px",
+                                                                          "border-top-right-radius":
+                                                                            "3px"
+                                                                        },
+                                                                        on: {
+                                                                          change: function(
+                                                                            $event
+                                                                          ) {
+                                                                            var $$selectedVal = Array.prototype.filter
+                                                                              .call(
+                                                                                $event
+                                                                                  .target
+                                                                                  .options,
+                                                                                function(
+                                                                                  o
+                                                                                ) {
+                                                                                  return o.selected
+                                                                                }
+                                                                              )
+                                                                              .map(
+                                                                                function(
+                                                                                  o
+                                                                                ) {
+                                                                                  var val =
+                                                                                    "_value" in
+                                                                                    o
+                                                                                      ? o._value
+                                                                                      : o.value
+                                                                                  return val
+                                                                                }
+                                                                              )
+                                                                            _vm.id_job_aval = $event
+                                                                              .target
+                                                                              .multiple
+                                                                              ? $$selectedVal
+                                                                              : $$selectedVal[0]
+                                                                          }
+                                                                        }
+                                                                      },
+                                                                      [
+                                                                        _c(
+                                                                          "option",
+                                                                          {
+                                                                            attrs: {
+                                                                              selected:
+                                                                                "selected",
+                                                                              value:
+                                                                                ""
+                                                                            }
+                                                                          },
+                                                                          [
+                                                                            _vm._v(
+                                                                              "Seleccione"
+                                                                            )
+                                                                          ]
+                                                                        ),
+                                                                        _vm._v(
+                                                                          " "
+                                                                        ),
+                                                                        _vm._l(
+                                                                          _vm.array_job,
+                                                                          function(
+                                                                            datax
+                                                                          ) {
+                                                                            return _c(
+                                                                              "option",
+                                                                              {
+                                                                                key:
+                                                                                  datax.id,
+                                                                                domProps: {
+                                                                                  value:
+                                                                                    datax.id
+                                                                                }
+                                                                              },
+                                                                              [
+                                                                                _vm._v(
+                                                                                  _vm._s(
+                                                                                    datax.names
+                                                                                  )
+                                                                                )
+                                                                              ]
+                                                                            )
+                                                                          }
+                                                                        )
+                                                                      ],
+                                                                      2
+                                                                    )
+                                                                  ]
+                                                                )
+                                                              ]
+                                                            )
+                                                          ]
+                                                        ),
+                                                        _vm._v(" "),
+                                                        _c(
+                                                          "div",
+                                                          {
+                                                            staticClass:
+                                                              "col-md-3"
+                                                          },
+                                                          [
+                                                            _c(
+                                                              "div",
+                                                              {
+                                                                class:
+                                                                  _vm.errorInputTypeBusinessAval
+                                                              },
+                                                              [
+                                                                _c(
+                                                                  "label",
+                                                                  {
+                                                                    attrs: {
+                                                                      for:
+                                                                        "type_business"
+                                                                    }
+                                                                  },
+                                                                  [
+                                                                    _vm._v(
+                                                                      "Tipo de Negocio:"
+                                                                    )
+                                                                  ]
+                                                                ),
+                                                                _vm._v(" "),
+                                                                _c(
+                                                                  "div",
+                                                                  {
+                                                                    staticClass:
+                                                                      "input-group"
+                                                                  },
+                                                                  [
+                                                                    _vm._m(39),
+                                                                    _vm._v(" "),
+                                                                    _c(
+                                                                      "select",
+                                                                      {
+                                                                        directives: [
+                                                                          {
+                                                                            name:
+                                                                              "model",
+                                                                            rawName:
+                                                                              "v-model",
+                                                                            value:
+                                                                              _vm.id_type_business_aval,
+                                                                            expression:
+                                                                              "id_type_business_aval"
+                                                                          }
+                                                                        ],
+                                                                        staticClass:
+                                                                          "form-control",
+                                                                        staticStyle: {
+                                                                          "border-bottom-right-radius":
+                                                                            "3px",
+                                                                          "border-top-right-radius":
+                                                                            "3px"
+                                                                        },
+                                                                        on: {
+                                                                          change: function(
+                                                                            $event
+                                                                          ) {
+                                                                            var $$selectedVal = Array.prototype.filter
+                                                                              .call(
+                                                                                $event
+                                                                                  .target
+                                                                                  .options,
+                                                                                function(
+                                                                                  o
+                                                                                ) {
+                                                                                  return o.selected
+                                                                                }
+                                                                              )
+                                                                              .map(
+                                                                                function(
+                                                                                  o
+                                                                                ) {
+                                                                                  var val =
+                                                                                    "_value" in
+                                                                                    o
+                                                                                      ? o._value
+                                                                                      : o.value
+                                                                                  return val
+                                                                                }
+                                                                              )
+                                                                            _vm.id_type_business_aval = $event
+                                                                              .target
+                                                                              .multiple
+                                                                              ? $$selectedVal
+                                                                              : $$selectedVal[0]
+                                                                          }
+                                                                        }
+                                                                      },
+                                                                      [
+                                                                        _c(
+                                                                          "option",
+                                                                          {
+                                                                            attrs: {
+                                                                              selected:
+                                                                                "selected",
+                                                                              value:
+                                                                                ""
+                                                                            }
+                                                                          },
+                                                                          [
+                                                                            _vm._v(
+                                                                              "Seleccione"
+                                                                            )
+                                                                          ]
+                                                                        ),
+                                                                        _vm._v(
+                                                                          " "
+                                                                        ),
+                                                                        _vm._l(
+                                                                          _vm.array_type_business,
+                                                                          function(
+                                                                            datax
+                                                                          ) {
+                                                                            return _c(
+                                                                              "option",
+                                                                              {
+                                                                                key:
+                                                                                  datax.id,
+                                                                                domProps: {
+                                                                                  value:
+                                                                                    datax.id
+                                                                                }
+                                                                              },
+                                                                              [
+                                                                                _vm._v(
+                                                                                  _vm._s(
+                                                                                    datax.name
+                                                                                  )
+                                                                                )
+                                                                              ]
+                                                                            )
+                                                                          }
+                                                                        )
+                                                                      ],
+                                                                      2
+                                                                    )
+                                                                  ]
+                                                                )
+                                                              ]
+                                                            )
+                                                          ]
+                                                        ),
+                                                        _vm._v(" "),
+                                                        _c(
+                                                          "div",
+                                                          {
+                                                            staticClass:
+                                                              "col-md-3"
+                                                          },
+                                                          [
+                                                            _c(
+                                                              "div",
+                                                              {
+                                                                class:
+                                                                  _vm.errorInputDepartmentAval
+                                                              },
+                                                              [
+                                                                _c(
+                                                                  "label",
+                                                                  {
+                                                                    attrs: {
+                                                                      for:
+                                                                        "estado_civil"
+                                                                    }
+                                                                  },
+                                                                  [
+                                                                    _vm._v(
+                                                                      "Departamento:"
+                                                                    )
+                                                                  ]
+                                                                ),
+                                                                _vm._v(" "),
+                                                                _c(
+                                                                  "div",
+                                                                  {
+                                                                    staticClass:
+                                                                      "input-group"
+                                                                  },
+                                                                  [
+                                                                    _vm._m(40),
+                                                                    _vm._v(" "),
+                                                                    _c(
+                                                                      "select",
+                                                                      {
+                                                                        directives: [
+                                                                          {
+                                                                            name:
+                                                                              "model",
+                                                                            rawName:
+                                                                              "v-model",
+                                                                            value:
                                                                               _vm.department_aval,
-                                                                            value:
-                                                                              miselect.id
+                                                                            expression:
+                                                                              "department_aval"
                                                                           }
+                                                                        ],
+                                                                        staticClass:
+                                                                          "form-control",
+                                                                        staticStyle: {
+                                                                          "border-bottom-right-radius":
+                                                                            "3px",
+                                                                          "border-top-right-radius":
+                                                                            "3px"
                                                                         },
-                                                                        [
-                                                                          _vm._v(
-                                                                            _vm._s(
-                                                                              miselect.name
-                                                                            )
-                                                                          )
-                                                                        ]
-                                                                      )
-                                                                    }
-                                                                  )
-                                                                ],
-                                                                2
-                                                              )
-                                                            ]
-                                                          )
-                                                        ]
-                                                      )
-                                                    ]
-                                                  ),
-                                                  _vm._v(" "),
-                                                  _c(
-                                                    "div",
-                                                    { staticClass: "col-md-3" },
-                                                    [
-                                                      _c(
-                                                        "div",
-                                                        {
-                                                          class:
-                                                            _vm.errorInputProvinceAval
-                                                        },
-                                                        [
-                                                          _c(
-                                                            "label",
-                                                            {
-                                                              attrs: {
-                                                                for:
-                                                                  "estado_civil"
-                                                              }
-                                                            },
-                                                            [
-                                                              _vm._v(
-                                                                "Provincia:"
-                                                              )
-                                                            ]
-                                                          ),
-                                                          _vm._v(" "),
-                                                          _c(
-                                                            "div",
-                                                            {
-                                                              staticClass:
-                                                                "input-group"
-                                                            },
-                                                            [
-                                                              _vm._m(50),
-                                                              _vm._v(" "),
-                                                              _c(
-                                                                "select",
-                                                                {
-                                                                  directives: [
-                                                                    {
-                                                                      name:
-                                                                        "model",
-                                                                      rawName:
-                                                                        "v-model",
-                                                                      value:
-                                                                        _vm.province_aval,
-                                                                      expression:
-                                                                        "province_aval"
-                                                                    }
-                                                                  ],
-                                                                  staticClass:
-                                                                    "form-control",
-                                                                  staticStyle: {
-                                                                    "border-bottom-right-radius":
-                                                                      "3px",
-                                                                    "border-top-right-radius":
-                                                                      "3px"
-                                                                  },
-                                                                  on: {
-                                                                    change: [
-                                                                      function(
-                                                                        $event
-                                                                      ) {
-                                                                        var $$selectedVal = Array.prototype.filter
-                                                                          .call(
-                                                                            $event
-                                                                              .target
-                                                                              .options,
+                                                                        on: {
+                                                                          change: [
                                                                             function(
-                                                                              o
+                                                                              $event
                                                                             ) {
-                                                                              return o.selected
-                                                                            }
-                                                                          )
-                                                                          .map(
+                                                                              var $$selectedVal = Array.prototype.filter
+                                                                                .call(
+                                                                                  $event
+                                                                                    .target
+                                                                                    .options,
+                                                                                  function(
+                                                                                    o
+                                                                                  ) {
+                                                                                    return o.selected
+                                                                                  }
+                                                                                )
+                                                                                .map(
+                                                                                  function(
+                                                                                    o
+                                                                                  ) {
+                                                                                    var val =
+                                                                                      "_value" in
+                                                                                      o
+                                                                                        ? o._value
+                                                                                        : o.value
+                                                                                    return val
+                                                                                  }
+                                                                                )
+                                                                              _vm.department_aval = $event
+                                                                                .target
+                                                                                .multiple
+                                                                                ? $$selectedVal
+                                                                                : $$selectedVal[0]
+                                                                            },
                                                                             function(
-                                                                              o
+                                                                              $event
                                                                             ) {
-                                                                              var val =
-                                                                                "_value" in
-                                                                                o
-                                                                                  ? o._value
-                                                                                  : o.value
-                                                                              return val
+                                                                              return _vm.getProvince(
+                                                                                $event
+                                                                                  .target
+                                                                                  .value
+                                                                              )
                                                                             }
-                                                                          )
-                                                                        _vm.province_aval = $event
-                                                                          .target
-                                                                          .multiple
-                                                                          ? $$selectedVal
-                                                                          : $$selectedVal[0]
+                                                                          ]
+                                                                        }
                                                                       },
-                                                                      function(
-                                                                        $event
-                                                                      ) {
-                                                                        return _vm.getDistrict(
-                                                                          $event
-                                                                            .target
-                                                                            .value
+                                                                      [
+                                                                        _c(
+                                                                          "option",
+                                                                          {
+                                                                            attrs: {
+                                                                              selected:
+                                                                                "selected",
+                                                                              value:
+                                                                                ""
+                                                                            }
+                                                                          },
+                                                                          [
+                                                                            _vm._v(
+                                                                              "Seleccione"
+                                                                            )
+                                                                          ]
+                                                                        ),
+                                                                        _vm._v(
+                                                                          " "
+                                                                        ),
+                                                                        _vm._l(
+                                                                          _vm.array_department,
+                                                                          function(
+                                                                            miselect
+                                                                          ) {
+                                                                            return _c(
+                                                                              "option",
+                                                                              {
+                                                                                key:
+                                                                                  miselect.id,
+                                                                                domProps: {
+                                                                                  selected:
+                                                                                    miselect.id ==
+                                                                                    _vm.department_aval,
+                                                                                  value:
+                                                                                    miselect.id
+                                                                                }
+                                                                              },
+                                                                              [
+                                                                                _vm._v(
+                                                                                  _vm._s(
+                                                                                    miselect.name
+                                                                                  )
+                                                                                )
+                                                                              ]
+                                                                            )
+                                                                          }
                                                                         )
-                                                                      }
-                                                                    ]
-                                                                  }
-                                                                },
-                                                                [
-                                                                  _c(
-                                                                    "option",
-                                                                    {
-                                                                      attrs: {
-                                                                        selected:
-                                                                          "selected",
-                                                                        value:
-                                                                          ""
-                                                                      }
-                                                                    },
-                                                                    [
-                                                                      _vm._v(
-                                                                        "Seleccione"
-                                                                      )
-                                                                    ]
-                                                                  ),
-                                                                  _vm._v(" "),
-                                                                  _vm._l(
-                                                                    _vm.array_province,
-                                                                    function(
-                                                                      miselect
-                                                                    ) {
-                                                                      return _c(
-                                                                        "option",
-                                                                        {
-                                                                          key:
-                                                                            miselect.id,
-                                                                          domProps: {
-                                                                            selected:
-                                                                              miselect.id ==
+                                                                      ],
+                                                                      2
+                                                                    )
+                                                                  ]
+                                                                )
+                                                              ]
+                                                            )
+                                                          ]
+                                                        ),
+                                                        _vm._v(" "),
+                                                        _c(
+                                                          "div",
+                                                          {
+                                                            staticClass:
+                                                              "col-md-3"
+                                                          },
+                                                          [
+                                                            _c(
+                                                              "div",
+                                                              {
+                                                                class:
+                                                                  _vm.errorInputProvinceAval
+                                                              },
+                                                              [
+                                                                _c(
+                                                                  "label",
+                                                                  {
+                                                                    attrs: {
+                                                                      for:
+                                                                        "estado_civil"
+                                                                    }
+                                                                  },
+                                                                  [
+                                                                    _vm._v(
+                                                                      "Provincia:"
+                                                                    )
+                                                                  ]
+                                                                ),
+                                                                _vm._v(" "),
+                                                                _c(
+                                                                  "div",
+                                                                  {
+                                                                    staticClass:
+                                                                      "input-group"
+                                                                  },
+                                                                  [
+                                                                    _vm._m(41),
+                                                                    _vm._v(" "),
+                                                                    _c(
+                                                                      "select",
+                                                                      {
+                                                                        directives: [
+                                                                          {
+                                                                            name:
+                                                                              "model",
+                                                                            rawName:
+                                                                              "v-model",
+                                                                            value:
                                                                               _vm.province_aval,
-                                                                            value:
-                                                                              miselect.id
+                                                                            expression:
+                                                                              "province_aval"
                                                                           }
+                                                                        ],
+                                                                        staticClass:
+                                                                          "form-control",
+                                                                        staticStyle: {
+                                                                          "border-bottom-right-radius":
+                                                                            "3px",
+                                                                          "border-top-right-radius":
+                                                                            "3px"
                                                                         },
-                                                                        [
-                                                                          _vm._v(
-                                                                            _vm._s(
-                                                                              miselect.name
+                                                                        on: {
+                                                                          change: [
+                                                                            function(
+                                                                              $event
+                                                                            ) {
+                                                                              var $$selectedVal = Array.prototype.filter
+                                                                                .call(
+                                                                                  $event
+                                                                                    .target
+                                                                                    .options,
+                                                                                  function(
+                                                                                    o
+                                                                                  ) {
+                                                                                    return o.selected
+                                                                                  }
+                                                                                )
+                                                                                .map(
+                                                                                  function(
+                                                                                    o
+                                                                                  ) {
+                                                                                    var val =
+                                                                                      "_value" in
+                                                                                      o
+                                                                                        ? o._value
+                                                                                        : o.value
+                                                                                    return val
+                                                                                  }
+                                                                                )
+                                                                              _vm.province_aval = $event
+                                                                                .target
+                                                                                .multiple
+                                                                                ? $$selectedVal
+                                                                                : $$selectedVal[0]
+                                                                            },
+                                                                            function(
+                                                                              $event
+                                                                            ) {
+                                                                              return _vm.getDistrict(
+                                                                                $event
+                                                                                  .target
+                                                                                  .value
+                                                                              )
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      },
+                                                                      [
+                                                                        _c(
+                                                                          "option",
+                                                                          {
+                                                                            attrs: {
+                                                                              selected:
+                                                                                "selected",
+                                                                              value:
+                                                                                ""
+                                                                            }
+                                                                          },
+                                                                          [
+                                                                            _vm._v(
+                                                                              "Seleccione"
                                                                             )
-                                                                          )
-                                                                        ]
-                                                                      )
+                                                                          ]
+                                                                        ),
+                                                                        _vm._v(
+                                                                          " "
+                                                                        ),
+                                                                        _vm._l(
+                                                                          _vm.array_province,
+                                                                          function(
+                                                                            miselect
+                                                                          ) {
+                                                                            return _c(
+                                                                              "option",
+                                                                              {
+                                                                                key:
+                                                                                  miselect.id,
+                                                                                domProps: {
+                                                                                  selected:
+                                                                                    miselect.id ==
+                                                                                    _vm.province_aval,
+                                                                                  value:
+                                                                                    miselect.id
+                                                                                }
+                                                                              },
+                                                                              [
+                                                                                _vm._v(
+                                                                                  _vm._s(
+                                                                                    miselect.name
+                                                                                  )
+                                                                                )
+                                                                              ]
+                                                                            )
+                                                                          }
+                                                                        )
+                                                                      ],
+                                                                      2
+                                                                    )
+                                                                  ]
+                                                                )
+                                                              ]
+                                                            )
+                                                          ]
+                                                        ),
+                                                        _vm._v(" "),
+                                                        _c(
+                                                          "div",
+                                                          {
+                                                            staticClass:
+                                                              "col-md-3"
+                                                          },
+                                                          [
+                                                            _c(
+                                                              "div",
+                                                              {
+                                                                class:
+                                                                  _vm.errorInputDistrictAval
+                                                              },
+                                                              [
+                                                                _c(
+                                                                  "label",
+                                                                  {
+                                                                    attrs: {
+                                                                      for:
+                                                                        "estado_civil"
                                                                     }
-                                                                  )
-                                                                ],
-                                                                2
-                                                              )
-                                                            ]
-                                                          )
-                                                        ]
-                                                      )
-                                                    ]
-                                                  ),
-                                                  _vm._v(" "),
-                                                  _c(
-                                                    "div",
-                                                    { staticClass: "col-md-3" },
-                                                    [
-                                                      _c(
-                                                        "div",
-                                                        {
-                                                          class:
-                                                            _vm.errorInputDistrictAval
-                                                        },
-                                                        [
-                                                          _c(
-                                                            "label",
-                                                            {
-                                                              attrs: {
-                                                                for:
-                                                                  "estado_civil"
-                                                              }
-                                                            },
-                                                            [
-                                                              _vm._v(
-                                                                "Distrito:"
-                                                              )
-                                                            ]
-                                                          ),
-                                                          _vm._v(" "),
-                                                          _c(
-                                                            "div",
-                                                            {
-                                                              staticClass:
-                                                                "input-group"
-                                                            },
-                                                            [
-                                                              _vm._m(51),
-                                                              _vm._v(" "),
-                                                              _c(
-                                                                "select",
-                                                                {
-                                                                  directives: [
-                                                                    {
-                                                                      name:
-                                                                        "model",
-                                                                      rawName:
-                                                                        "v-model",
-                                                                      value:
-                                                                        _vm.district_aval,
-                                                                      expression:
-                                                                        "district_aval"
-                                                                    }
-                                                                  ],
-                                                                  staticClass:
-                                                                    "form-control",
-                                                                  staticStyle: {
-                                                                    "border-bottom-right-radius":
-                                                                      "3px",
-                                                                    "border-top-right-radius":
-                                                                      "3px"
                                                                   },
-                                                                  on: {
-                                                                    change: function(
-                                                                      $event
-                                                                    ) {
-                                                                      var $$selectedVal = Array.prototype.filter
-                                                                        .call(
-                                                                          $event
-                                                                            .target
-                                                                            .options,
-                                                                          function(
-                                                                            o
-                                                                          ) {
-                                                                            return o.selected
-                                                                          }
-                                                                        )
-                                                                        .map(
-                                                                          function(
-                                                                            o
-                                                                          ) {
-                                                                            var val =
-                                                                              "_value" in
-                                                                              o
-                                                                                ? o._value
-                                                                                : o.value
-                                                                            return val
-                                                                          }
-                                                                        )
-                                                                      _vm.district_aval = $event
-                                                                        .target
-                                                                        .multiple
-                                                                        ? $$selectedVal
-                                                                        : $$selectedVal[0]
-                                                                    }
-                                                                  }
-                                                                },
-                                                                [
-                                                                  _c(
-                                                                    "option",
-                                                                    {
-                                                                      attrs: {
-                                                                        selected:
-                                                                          "selected",
-                                                                        value:
-                                                                          ""
-                                                                      }
-                                                                    },
-                                                                    [
-                                                                      _vm._v(
-                                                                        "Seleccione"
-                                                                      )
-                                                                    ]
-                                                                  ),
-                                                                  _vm._v(" "),
-                                                                  _vm._l(
-                                                                    _vm.array_district,
-                                                                    function(
-                                                                      miselect
-                                                                    ) {
-                                                                      return _c(
-                                                                        "option",
-                                                                        {
-                                                                          key:
-                                                                            miselect.id,
-                                                                          domProps: {
-                                                                            selected:
-                                                                              miselect.id ==
+                                                                  [
+                                                                    _vm._v(
+                                                                      "Distrito:"
+                                                                    )
+                                                                  ]
+                                                                ),
+                                                                _vm._v(" "),
+                                                                _c(
+                                                                  "div",
+                                                                  {
+                                                                    staticClass:
+                                                                      "input-group"
+                                                                  },
+                                                                  [
+                                                                    _vm._m(42),
+                                                                    _vm._v(" "),
+                                                                    _c(
+                                                                      "select",
+                                                                      {
+                                                                        directives: [
+                                                                          {
+                                                                            name:
+                                                                              "model",
+                                                                            rawName:
+                                                                              "v-model",
+                                                                            value:
                                                                               _vm.district_aval,
+                                                                            expression:
+                                                                              "district_aval"
+                                                                          }
+                                                                        ],
+                                                                        staticClass:
+                                                                          "form-control",
+                                                                        staticStyle: {
+                                                                          "border-bottom-right-radius":
+                                                                            "3px",
+                                                                          "border-top-right-radius":
+                                                                            "3px"
+                                                                        },
+                                                                        on: {
+                                                                          change: function(
+                                                                            $event
+                                                                          ) {
+                                                                            var $$selectedVal = Array.prototype.filter
+                                                                              .call(
+                                                                                $event
+                                                                                  .target
+                                                                                  .options,
+                                                                                function(
+                                                                                  o
+                                                                                ) {
+                                                                                  return o.selected
+                                                                                }
+                                                                              )
+                                                                              .map(
+                                                                                function(
+                                                                                  o
+                                                                                ) {
+                                                                                  var val =
+                                                                                    "_value" in
+                                                                                    o
+                                                                                      ? o._value
+                                                                                      : o.value
+                                                                                  return val
+                                                                                }
+                                                                              )
+                                                                            _vm.district_aval = $event
+                                                                              .target
+                                                                              .multiple
+                                                                              ? $$selectedVal
+                                                                              : $$selectedVal[0]
+                                                                          }
+                                                                        }
+                                                                      },
+                                                                      [
+                                                                        _c(
+                                                                          "option",
+                                                                          {
+                                                                            attrs: {
+                                                                              selected:
+                                                                                "selected",
+                                                                              value:
+                                                                                ""
+                                                                            }
+                                                                          },
+                                                                          [
+                                                                            _vm._v(
+                                                                              "Seleccione"
+                                                                            )
+                                                                          ]
+                                                                        ),
+                                                                        _vm._v(
+                                                                          " "
+                                                                        ),
+                                                                        _vm._l(
+                                                                          _vm.array_district,
+                                                                          function(
+                                                                            miselect
+                                                                          ) {
+                                                                            return _c(
+                                                                              "option",
+                                                                              {
+                                                                                key:
+                                                                                  miselect.id,
+                                                                                domProps: {
+                                                                                  selected:
+                                                                                    miselect.id ==
+                                                                                    _vm.district_aval,
+                                                                                  value:
+                                                                                    miselect.id
+                                                                                }
+                                                                              },
+                                                                              [
+                                                                                _vm._v(
+                                                                                  _vm._s(
+                                                                                    miselect.name
+                                                                                  )
+                                                                                )
+                                                                              ]
+                                                                            )
+                                                                          }
+                                                                        )
+                                                                      ],
+                                                                      2
+                                                                    )
+                                                                  ]
+                                                                )
+                                                              ]
+                                                            )
+                                                          ]
+                                                        ),
+                                                        _vm._v(" "),
+                                                        _c(
+                                                          "div",
+                                                          {
+                                                            staticClass:
+                                                              "col-md-3"
+                                                          },
+                                                          [
+                                                            _c(
+                                                              "div",
+                                                              {
+                                                                class:
+                                                                  _vm.errorInputAddressAval
+                                                              },
+                                                              [
+                                                                _c(
+                                                                  "label",
+                                                                  {
+                                                                    attrs: {
+                                                                      for:
+                                                                        "celular"
+                                                                    }
+                                                                  },
+                                                                  [
+                                                                    _vm._v(
+                                                                      "Dirección:"
+                                                                    )
+                                                                  ]
+                                                                ),
+                                                                _vm._v(" "),
+                                                                _c(
+                                                                  "div",
+                                                                  {
+                                                                    staticClass:
+                                                                      "input-group"
+                                                                  },
+                                                                  [
+                                                                    _vm._m(43),
+                                                                    _vm._v(" "),
+                                                                    _c(
+                                                                      "input",
+                                                                      {
+                                                                        directives: [
+                                                                          {
+                                                                            name:
+                                                                              "model",
+                                                                            rawName:
+                                                                              "v-model",
                                                                             value:
-                                                                              miselect.id
+                                                                              _vm.address_aval,
+                                                                            expression:
+                                                                              "address_aval"
                                                                           }
+                                                                        ],
+                                                                        staticClass:
+                                                                          "form-control",
+                                                                        staticStyle: {
+                                                                          "border-bottom-right-radius":
+                                                                            "3px",
+                                                                          "border-top-right-radius":
+                                                                            "3px"
                                                                         },
-                                                                        [
-                                                                          _vm._v(
-                                                                            _vm._s(
-                                                                              miselect.name
-                                                                            )
-                                                                          )
-                                                                        ]
-                                                                      )
-                                                                    }
-                                                                  )
-                                                                ],
-                                                                2
-                                                              )
-                                                            ]
-                                                          )
-                                                        ]
-                                                      )
-                                                    ]
-                                                  ),
-                                                  _vm._v(" "),
-                                                  _c(
-                                                    "div",
-                                                    { staticClass: "col-md-3" },
-                                                    [
-                                                      _c(
-                                                        "div",
-                                                        {
-                                                          class:
-                                                            _vm.errorInputAddressAval
-                                                        },
-                                                        [
-                                                          _c(
-                                                            "label",
-                                                            {
-                                                              attrs: {
-                                                                for: "celular"
-                                                              }
-                                                            },
-                                                            [
-                                                              _vm._v(
-                                                                "Dirección:"
-                                                              )
-                                                            ]
-                                                          ),
-                                                          _vm._v(" "),
-                                                          _c(
-                                                            "div",
-                                                            {
-                                                              staticClass:
-                                                                "input-group"
-                                                            },
-                                                            [
-                                                              _vm._m(52),
-                                                              _vm._v(" "),
-                                                              _c("input", {
-                                                                directives: [
-                                                                  {
-                                                                    name:
-                                                                      "model",
-                                                                    rawName:
-                                                                      "v-model",
-                                                                    value:
-                                                                      _vm.address_aval,
-                                                                    expression:
-                                                                      "address_aval"
-                                                                  }
-                                                                ],
-                                                                staticClass:
-                                                                  "form-control",
-                                                                staticStyle: {
-                                                                  "border-bottom-right-radius":
-                                                                    "3px",
-                                                                  "border-top-right-radius":
-                                                                    "3px"
-                                                                },
-                                                                attrs: {
-                                                                  placeholder:
-                                                                    "Dirección domiciliaria",
-                                                                  type: "text"
-                                                                },
-                                                                domProps: {
-                                                                  value:
-                                                                    _vm.address_aval
-                                                                },
-                                                                on: {
-                                                                  input: function(
-                                                                    $event
-                                                                  ) {
-                                                                    if (
-                                                                      $event
-                                                                        .target
-                                                                        .composing
-                                                                    ) {
-                                                                      return
-                                                                    }
-                                                                    _vm.address_aval =
-                                                                      $event.target.value
-                                                                  }
-                                                                }
-                                                              })
-                                                            ]
-                                                          )
-                                                        ]
-                                                      )
-                                                    ]
-                                                  ),
-                                                  _vm._v(" "),
-                                                  _c(
-                                                    "div",
-                                                    {
-                                                      staticClass: "col-md-12"
-                                                    },
-                                                    [
-                                                      _c(
-                                                        "div",
-                                                        {
-                                                          staticClass:
-                                                            "form-group"
-                                                        },
-                                                        [
-                                                          _c(
-                                                            "label",
-                                                            {
-                                                              attrs: {
-                                                                for: "celular"
-                                                              }
-                                                            },
-                                                            [
-                                                              _vm._v(
-                                                                "Referencias:"
-                                                              )
-                                                            ]
-                                                          ),
-                                                          _vm._v(" "),
-                                                          _c(
-                                                            "div",
-                                                            {
-                                                              staticClass:
-                                                                "input-group"
-                                                            },
-                                                            [
-                                                              _vm._m(53),
-                                                              _vm._v(" "),
-                                                              _c("textarea", {
-                                                                directives: [
-                                                                  {
-                                                                    name:
-                                                                      "model",
-                                                                    rawName:
-                                                                      "v-model",
-                                                                    value:
-                                                                      _vm.reference_aval,
-                                                                    expression:
-                                                                      "reference_aval"
-                                                                  }
-                                                                ],
-                                                                staticClass:
-                                                                  "form-control",
-                                                                staticStyle: {
-                                                                  "border-bottom-right-radius":
-                                                                    "3px",
-                                                                  "border-top-right-radius":
-                                                                    "3px"
-                                                                },
-                                                                attrs: {
-                                                                  placeholder:
-                                                                    "Referencias de la dirección domiciliaria del cliente.",
-                                                                  type: "text"
-                                                                },
-                                                                domProps: {
-                                                                  value:
-                                                                    _vm.reference_aval
-                                                                },
-                                                                on: {
-                                                                  input: function(
-                                                                    $event
-                                                                  ) {
-                                                                    if (
-                                                                      $event
-                                                                        .target
-                                                                        .composing
-                                                                    ) {
-                                                                      return
-                                                                    }
-                                                                    _vm.reference_aval =
-                                                                      $event.target.value
-                                                                  }
-                                                                }
-                                                              })
-                                                            ]
-                                                          )
-                                                        ]
-                                                      )
-                                                    ]
-                                                  )
-                                                ]
-                                              )
-                                            ]
-                                          : _vm._e(),
-                                        _vm._v(" "),
-                                        _vm.listadox == 3
-                                          ? [
-                                              _c(
-                                                "div",
-                                                { staticClass: "row" },
-                                                [
-                                                  _c(
-                                                    "div",
-                                                    {
-                                                      staticClass: "col-md-12"
-                                                    },
-                                                    [
-                                                      _c(
-                                                        "div",
-                                                        {
-                                                          staticClass:
-                                                            "form-group"
-                                                        },
-                                                        [
-                                                          _c(
-                                                            "label",
-                                                            {
-                                                              attrs: {
-                                                                for: "nombres"
-                                                              }
-                                                            },
-                                                            [_vm._v("Cliente:")]
-                                                          ),
-                                                          _vm._v(" "),
-                                                          _c(
-                                                            "div",
-                                                            {
-                                                              staticClass:
-                                                                "input-group"
-                                                            },
-                                                            [
-                                                              _vm._m(54),
-                                                              _vm._v(" "),
-                                                              _c("input", {
-                                                                directives: [
-                                                                  {
-                                                                    name:
-                                                                      "model",
-                                                                    rawName:
-                                                                      "v-model",
-                                                                    value:
-                                                                      _vm.name_customer,
-                                                                    expression:
-                                                                      "name_customer"
-                                                                  }
-                                                                ],
-                                                                staticClass:
-                                                                  "form-control",
-                                                                staticStyle: {
-                                                                  "border-bottom-right-radius":
-                                                                    "3px",
-                                                                  "border-top-right-radius":
-                                                                    "3px"
-                                                                },
-                                                                attrs: {
-                                                                  disabled: "",
-                                                                  type: "text",
-                                                                  placeholder:
-                                                                    "Nombres"
-                                                                },
-                                                                domProps: {
-                                                                  value:
-                                                                    _vm.name_customer
-                                                                },
-                                                                on: {
-                                                                  input: function(
-                                                                    $event
-                                                                  ) {
-                                                                    if (
-                                                                      $event
-                                                                        .target
-                                                                        .composing
-                                                                    ) {
-                                                                      return
-                                                                    }
-                                                                    _vm.name_customer =
-                                                                      $event.target.value
-                                                                  }
-                                                                }
-                                                              })
-                                                            ]
-                                                          )
-                                                        ]
-                                                      )
-                                                    ]
-                                                  )
-                                                ]
-                                              ),
-                                              _vm._v(" "),
-                                              _c(
-                                                "div",
-                                                { staticClass: "row" },
-                                                [
-                                                  _c(
-                                                    "div",
-                                                    { staticClass: "col-md-3" },
-                                                    [
-                                                      _c(
-                                                        "div",
-                                                        {
-                                                          staticClass:
-                                                            "form-group"
-                                                        },
-                                                        [
-                                                          _c(
-                                                            "label",
-                                                            {
-                                                              attrs: {
-                                                                for:
-                                                                  "type_product"
-                                                              }
-                                                            },
-                                                            [
-                                                              _vm._v(
-                                                                "Gastos Administrativos:"
-                                                              )
-                                                            ]
-                                                          ),
-                                                          _vm._v(" "),
-                                                          _c(
-                                                            "div",
-                                                            {
-                                                              staticClass:
-                                                                "input-group"
-                                                            },
-                                                            [
-                                                              _c(
-                                                                "span",
-                                                                {
-                                                                  staticClass:
-                                                                    "input-group-addon",
-                                                                  staticStyle: {
-                                                                    "border-bottom-left-radius":
-                                                                      "3px",
-                                                                    "border-top-left-radius":
-                                                                      "3px"
-                                                                  }
-                                                                },
-                                                                [_vm._v("S/.")]
-                                                              ),
-                                                              _vm._v(" "),
-                                                              _c("input", {
-                                                                directives: [
-                                                                  {
-                                                                    name:
-                                                                      "model",
-                                                                    rawName:
-                                                                      "v-model",
-                                                                    value:
-                                                                      _vm.id_parent,
-                                                                    expression:
-                                                                      "id_parent"
-                                                                  }
-                                                                ],
-                                                                staticClass:
-                                                                  "form-control",
-                                                                staticStyle: {
-                                                                  "border-bottom-right-radius":
-                                                                    "3px",
-                                                                  "border-top-right-radius":
-                                                                    "3px",
-                                                                  "text-transform":
-                                                                    "uppercase"
-                                                                },
-                                                                attrs: {
-                                                                  type: "text"
-                                                                },
-                                                                domProps: {
-                                                                  value:
-                                                                    _vm.id_parent
-                                                                },
-                                                                on: {
-                                                                  input: function(
-                                                                    $event
-                                                                  ) {
-                                                                    if (
-                                                                      $event
-                                                                        .target
-                                                                        .composing
-                                                                    ) {
-                                                                      return
-                                                                    }
-                                                                    _vm.id_parent =
-                                                                      $event.target.value
-                                                                  }
-                                                                }
-                                                              })
-                                                            ]
-                                                          )
-                                                        ]
-                                                      )
-                                                    ]
-                                                  ),
-                                                  _vm._v(" "),
-                                                  _c(
-                                                    "div",
-                                                    { staticClass: "col-md-3" },
-                                                    [
-                                                      _c(
-                                                        "div",
-                                                        {
-                                                          class:
-                                                            _vm.errorFamilyProduct
-                                                        },
-                                                        [
-                                                          _c(
-                                                            "label",
-                                                            {
-                                                              attrs: {
-                                                                for:
-                                                                  "family_produc"
-                                                              }
-                                                            },
-                                                            [
-                                                              _vm._v(
-                                                                "Porcentaje:"
-                                                              )
-                                                            ]
-                                                          ),
-                                                          _vm._v(" "),
-                                                          _c(
-                                                            "div",
-                                                            {
-                                                              staticClass:
-                                                                "input-group"
-                                                            },
-                                                            [
-                                                              _c(
-                                                                "span",
-                                                                {
-                                                                  staticClass:
-                                                                    "input-group-addon",
-                                                                  staticStyle: {
-                                                                    "border-bottom-left-radius":
-                                                                      "3px",
-                                                                    "border-top-left-radius":
-                                                                      "3px"
-                                                                  }
-                                                                },
-                                                                [_vm._v("%")]
-                                                              ),
-                                                              _vm._v(" "),
-                                                              _c("input", {
-                                                                directives: [
-                                                                  {
-                                                                    name:
-                                                                      "model",
-                                                                    rawName:
-                                                                      "v-model",
-                                                                    value:
-                                                                      _vm.id_parent,
-                                                                    expression:
-                                                                      "id_parent"
-                                                                  }
-                                                                ],
-                                                                staticClass:
-                                                                  "form-control",
-                                                                staticStyle: {
-                                                                  "border-bottom-right-radius":
-                                                                    "3px",
-                                                                  "border-top-right-radius":
-                                                                    "3px"
-                                                                },
-                                                                attrs: {
-                                                                  type: "text"
-                                                                },
-                                                                domProps: {
-                                                                  value:
-                                                                    _vm.id_parent
-                                                                },
-                                                                on: {
-                                                                  input: function(
-                                                                    $event
-                                                                  ) {
-                                                                    if (
-                                                                      $event
-                                                                        .target
-                                                                        .composing
-                                                                    ) {
-                                                                      return
-                                                                    }
-                                                                    _vm.id_parent =
-                                                                      $event.target.value
-                                                                  }
-                                                                }
-                                                              })
-                                                            ]
-                                                          )
-                                                        ]
-                                                      )
-                                                    ]
-                                                  ),
-                                                  _vm._v(" "),
-                                                  _c(
-                                                    "div",
-                                                    { staticClass: "col-md-3" },
-                                                    [
-                                                      _c(
-                                                        "div",
-                                                        {
-                                                          class:
-                                                            _vm.errorFamilyProduct
-                                                        },
-                                                        [
-                                                          _c(
-                                                            "label",
-                                                            {
-                                                              attrs: {
-                                                                for:
-                                                                  "family_produc"
-                                                              }
-                                                            },
-                                                            [
-                                                              _vm._v(
-                                                                "Central de Riesgo:"
-                                                              )
-                                                            ]
-                                                          ),
-                                                          _vm._v(" "),
-                                                          _c(
-                                                            "div",
-                                                            {
-                                                              staticClass:
-                                                                "input-group"
-                                                            },
-                                                            [
-                                                              _c(
-                                                                "span",
-                                                                {
-                                                                  staticClass:
-                                                                    "input-group-addon",
-                                                                  staticStyle: {
-                                                                    "border-bottom-left-radius":
-                                                                      "3px",
-                                                                    "border-top-left-radius":
-                                                                      "3px"
-                                                                  }
-                                                                },
-                                                                [_vm._v("S/.")]
-                                                              ),
-                                                              _vm._v(" "),
-                                                              _c("input", {
-                                                                directives: [
-                                                                  {
-                                                                    name:
-                                                                      "model",
-                                                                    rawName:
-                                                                      "v-model",
-                                                                    value:
-                                                                      _vm.id_parent,
-                                                                    expression:
-                                                                      "id_parent"
-                                                                  }
-                                                                ],
-                                                                staticClass:
-                                                                  "form-control",
-                                                                staticStyle: {
-                                                                  "border-bottom-right-radius":
-                                                                    "3px",
-                                                                  "border-top-right-radius":
-                                                                    "3px"
-                                                                },
-                                                                attrs: {
-                                                                  type: "text"
-                                                                },
-                                                                domProps: {
-                                                                  value:
-                                                                    _vm.id_parent
-                                                                },
-                                                                on: {
-                                                                  input: function(
-                                                                    $event
-                                                                  ) {
-                                                                    if (
-                                                                      $event
-                                                                        .target
-                                                                        .composing
-                                                                    ) {
-                                                                      return
-                                                                    }
-                                                                    _vm.id_parent =
-                                                                      $event.target.value
-                                                                  }
-                                                                }
-                                                              })
-                                                            ]
-                                                          )
-                                                        ]
-                                                      )
-                                                    ]
-                                                  ),
-                                                  _vm._v(" "),
-                                                  _c(
-                                                    "div",
-                                                    { staticClass: "col-md-3" },
-                                                    [
-                                                      _c(
-                                                        "div",
-                                                        {
-                                                          class:
-                                                            _vm.errorFamilyProduct
-                                                        },
-                                                        [
-                                                          _c(
-                                                            "label",
-                                                            {
-                                                              attrs: {
-                                                                for:
-                                                                  "family_produc"
-                                                              }
-                                                            },
-                                                            [_vm._v("Monto:")]
-                                                          ),
-                                                          _vm._v(" "),
-                                                          _c(
-                                                            "div",
-                                                            {
-                                                              staticClass:
-                                                                "input-group"
-                                                            },
-                                                            [
-                                                              _c(
-                                                                "span",
-                                                                {
-                                                                  staticClass:
-                                                                    "input-group-addon",
-                                                                  staticStyle: {
-                                                                    "border-bottom-left-radius":
-                                                                      "3px",
-                                                                    "border-top-left-radius":
-                                                                      "3px"
-                                                                  }
-                                                                },
-                                                                [_vm._v("S/.")]
-                                                              ),
-                                                              _vm._v(" "),
-                                                              _c("input", {
-                                                                directives: [
-                                                                  {
-                                                                    name:
-                                                                      "model",
-                                                                    rawName:
-                                                                      "v-model",
-                                                                    value:
-                                                                      _vm.id_parent,
-                                                                    expression:
-                                                                      "id_parent"
-                                                                  }
-                                                                ],
-                                                                staticClass:
-                                                                  "form-control",
-                                                                staticStyle: {
-                                                                  "border-bottom-right-radius":
-                                                                    "3px",
-                                                                  "border-top-right-radius":
-                                                                    "3px"
-                                                                },
-                                                                attrs: {
-                                                                  type: "text"
-                                                                },
-                                                                domProps: {
-                                                                  value:
-                                                                    _vm.id_parent
-                                                                },
-                                                                on: {
-                                                                  input: function(
-                                                                    $event
-                                                                  ) {
-                                                                    if (
-                                                                      $event
-                                                                        .target
-                                                                        .composing
-                                                                    ) {
-                                                                      return
-                                                                    }
-                                                                    _vm.id_parent =
-                                                                      $event.target.value
-                                                                  }
-                                                                }
-                                                              })
-                                                            ]
-                                                          )
-                                                        ]
-                                                      )
-                                                    ]
-                                                  ),
-                                                  _vm._v(" "),
-                                                  _c(
-                                                    "div",
-                                                    { staticClass: "col-md-3" },
-                                                    [
-                                                      _c(
-                                                        "div",
-                                                        {
-                                                          staticClass:
-                                                            "form-group"
-                                                        },
-                                                        [
-                                                          _c(
-                                                            "label",
-                                                            {
-                                                              attrs: {
-                                                                for: "date_init"
-                                                              }
-                                                            },
-                                                            [
-                                                              _vm._v(
-                                                                "Fecha del Préstamo:"
-                                                              )
-                                                            ]
-                                                          ),
-                                                          _vm._v(" "),
-                                                          _c(
-                                                            "div",
-                                                            {
-                                                              staticClass:
-                                                                "input-group"
-                                                            },
-                                                            [
-                                                              _vm._m(55),
-                                                              _vm._v(" "),
-                                                              _c(
-                                                                "date-picker",
-                                                                {
-                                                                  staticStyle: {
-                                                                    "border-top-right-radius":
-                                                                      "3px",
-                                                                    "border-bottom-right-radius":
-                                                                      "3px"
-                                                                  },
-                                                                  attrs: {
-                                                                    config:
-                                                                      _vm.options
-                                                                  },
-                                                                  on: {
-                                                                    "dp-change":
-                                                                      _vm.calculateTeabyTerm
-                                                                  },
-                                                                  model: {
-                                                                    value:
-                                                                      _vm.date_init,
-                                                                    callback: function(
-                                                                      $$v
-                                                                    ) {
-                                                                      _vm.date_init = $$v
-                                                                    },
-                                                                    expression:
-                                                                      "date_init"
-                                                                  }
-                                                                }
-                                                              )
-                                                            ],
-                                                            1
-                                                          )
-                                                        ]
-                                                      )
-                                                    ]
-                                                  ),
-                                                  _vm._v(" "),
-                                                  _c(
-                                                    "div",
-                                                    { staticClass: "col-md-3" },
-                                                    [
-                                                      _c(
-                                                        "div",
-                                                        {
-                                                          class:
-                                                            _vm.errorCharacteristic
-                                                        },
-                                                        [
-                                                          _c(
-                                                            "label",
-                                                            {
-                                                              attrs: {
-                                                                for: "nombres"
-                                                              }
-                                                            },
-                                                            [_vm._v("Taza:")]
-                                                          ),
-                                                          _vm._v(" "),
-                                                          _c(
-                                                            "div",
-                                                            {
-                                                              staticClass:
-                                                                "input-group"
-                                                            },
-                                                            [
-                                                              _c(
-                                                                "span",
-                                                                {
-                                                                  staticClass:
-                                                                    "input-group-addon",
-                                                                  staticStyle: {
-                                                                    "border-bottom-left-radius":
-                                                                      "3px",
-                                                                    "border-top-left-radius":
-                                                                      "3px"
-                                                                  }
-                                                                },
-                                                                [_vm._v("%")]
-                                                              ),
-                                                              _vm._v(" "),
-                                                              _c("input", {
-                                                                directives: [
-                                                                  {
-                                                                    name:
-                                                                      "model",
-                                                                    rawName:
-                                                                      "v-model",
-                                                                    value:
-                                                                      _vm.characteristic,
-                                                                    expression:
-                                                                      "characteristic"
-                                                                  }
-                                                                ],
-                                                                staticClass:
-                                                                  "form-control",
-                                                                staticStyle: {
-                                                                  "border-bottom-right-radius":
-                                                                    "3px",
-                                                                  "border-top-right-radius":
-                                                                    "3px",
-                                                                  "text-transform":
-                                                                    "uppercase"
-                                                                },
-                                                                attrs: {
-                                                                  type: "text"
-                                                                },
-                                                                domProps: {
-                                                                  value:
-                                                                    _vm.characteristic
-                                                                },
-                                                                on: {
-                                                                  input: function(
-                                                                    $event
-                                                                  ) {
-                                                                    if (
-                                                                      $event
-                                                                        .target
-                                                                        .composing
-                                                                    ) {
-                                                                      return
-                                                                    }
-                                                                    _vm.characteristic =
-                                                                      $event.target.value
-                                                                  }
-                                                                }
-                                                              })
-                                                            ]
-                                                          )
-                                                        ]
-                                                      )
-                                                    ]
-                                                  ),
-                                                  _vm._v(" "),
-                                                  _c(
-                                                    "div",
-                                                    { staticClass: "col-md-3" },
-                                                    [
-                                                      _c(
-                                                        "div",
-                                                        {
-                                                          class:
-                                                            _vm.errorCharacteristic
-                                                        },
-                                                        [
-                                                          _c(
-                                                            "label",
-                                                            {
-                                                              attrs: {
-                                                                for: "nombres"
-                                                              }
-                                                            },
-                                                            [_vm._v("Plazo:")]
-                                                          ),
-                                                          _vm._v(" "),
-                                                          _c(
-                                                            "div",
-                                                            {
-                                                              staticClass:
-                                                                "input-group"
-                                                            },
-                                                            [
-                                                              _vm._m(56),
-                                                              _vm._v(" "),
-                                                              _c("input", {
-                                                                directives: [
-                                                                  {
-                                                                    name:
-                                                                      "model",
-                                                                    rawName:
-                                                                      "v-model",
-                                                                    value:
-                                                                      _vm.characteristic,
-                                                                    expression:
-                                                                      "characteristic"
-                                                                  }
-                                                                ],
-                                                                staticClass:
-                                                                  "form-control",
-                                                                staticStyle: {
-                                                                  "border-bottom-right-radius":
-                                                                    "3px",
-                                                                  "border-top-right-radius":
-                                                                    "3px",
-                                                                  "text-transform":
-                                                                    "uppercase"
-                                                                },
-                                                                attrs: {
-                                                                  type: "text"
-                                                                },
-                                                                domProps: {
-                                                                  value:
-                                                                    _vm.characteristic
-                                                                },
-                                                                on: {
-                                                                  input: function(
-                                                                    $event
-                                                                  ) {
-                                                                    if (
-                                                                      $event
-                                                                        .target
-                                                                        .composing
-                                                                    ) {
-                                                                      return
-                                                                    }
-                                                                    _vm.characteristic =
-                                                                      $event.target.value
-                                                                  }
-                                                                }
-                                                              })
-                                                            ]
-                                                          )
-                                                        ]
-                                                      )
-                                                    ]
-                                                  ),
-                                                  _vm._v(" "),
-                                                  _c(
-                                                    "div",
-                                                    { staticClass: "col-md-3" },
-                                                    [
-                                                      _c(
-                                                        "div",
-                                                        {
-                                                          class:
-                                                            _vm.errorWarehouse
-                                                        },
-                                                        [
-                                                          _c(
-                                                            "label",
-                                                            {
-                                                              attrs: {
-                                                                for:
-                                                                  "ap_paterno"
-                                                              }
-                                                            },
-                                                            [_vm._v("Almacen:")]
-                                                          ),
-                                                          _vm._v(" "),
-                                                          _c(
-                                                            "div",
-                                                            {
-                                                              staticClass:
-                                                                "input-group"
-                                                            },
-                                                            [
-                                                              _vm._m(57),
-                                                              _vm._v(" "),
-                                                              _c(
-                                                                "select",
-                                                                {
-                                                                  directives: [
-                                                                    {
-                                                                      name:
-                                                                        "model",
-                                                                      rawName:
-                                                                        "v-model",
-                                                                      value:
-                                                                        _vm.id_warehouse,
-                                                                      expression:
-                                                                        "id_warehouse"
-                                                                    }
-                                                                  ],
-                                                                  staticClass:
-                                                                    "form-control select2",
-                                                                  staticStyle: {
-                                                                    "border-top-right-radius":
-                                                                      "3px",
-                                                                    "border-bottom-right-radius":
-                                                                      "3px"
-                                                                  },
-                                                                  on: {
-                                                                    change: function(
-                                                                      $event
-                                                                    ) {
-                                                                      var $$selectedVal = Array.prototype.filter
-                                                                        .call(
-                                                                          $event
-                                                                            .target
-                                                                            .options,
-                                                                          function(
-                                                                            o
+                                                                        attrs: {
+                                                                          placeholder:
+                                                                            "Dirección domiciliaria",
+                                                                          type:
+                                                                            "text"
+                                                                        },
+                                                                        domProps: {
+                                                                          value:
+                                                                            _vm.address_aval
+                                                                        },
+                                                                        on: {
+                                                                          input: function(
+                                                                            $event
                                                                           ) {
-                                                                            return o.selected
+                                                                            if (
+                                                                              $event
+                                                                                .target
+                                                                                .composing
+                                                                            ) {
+                                                                              return
+                                                                            }
+                                                                            _vm.address_aval =
+                                                                              $event.target.value
                                                                           }
-                                                                        )
-                                                                        .map(
-                                                                          function(
-                                                                            o
-                                                                          ) {
-                                                                            var val =
-                                                                              "_value" in
-                                                                              o
-                                                                                ? o._value
-                                                                                : o.value
-                                                                            return val
-                                                                          }
-                                                                        )
-                                                                      _vm.id_warehouse = $event
-                                                                        .target
-                                                                        .multiple
-                                                                        ? $$selectedVal
-                                                                        : $$selectedVal[0]
-                                                                    }
-                                                                  }
-                                                                },
-                                                                [
-                                                                  _c(
-                                                                    "option",
-                                                                    {
-                                                                      attrs: {
-                                                                        selected:
-                                                                          "selected",
-                                                                        value:
-                                                                          ""
+                                                                        }
                                                                       }
-                                                                    },
-                                                                    [
-                                                                      _vm._v(
-                                                                        "Seleccione"
-                                                                      )
-                                                                    ]
-                                                                  ),
-                                                                  _vm._v(" "),
-                                                                  _vm._l(
-                                                                    _vm.arrayWarehouse,
-                                                                    function(
-                                                                      datax
-                                                                    ) {
-                                                                      return _c(
-                                                                        "option",
-                                                                        {
-                                                                          key:
-                                                                            datax.id,
-                                                                          domProps: {
-                                                                            value: datax
-                                                                          }
-                                                                        },
-                                                                        [
-                                                                          _vm._v(
-                                                                            _vm._s(
-                                                                              datax.name
-                                                                            )
-                                                                          )
-                                                                        ]
-                                                                      )
+                                                                    )
+                                                                  ]
+                                                                )
+                                                              ]
+                                                            )
+                                                          ]
+                                                        ),
+                                                        _vm._v(" "),
+                                                        _c(
+                                                          "div",
+                                                          {
+                                                            staticClass:
+                                                              "col-md-12"
+                                                          },
+                                                          [
+                                                            _c(
+                                                              "div",
+                                                              {
+                                                                staticClass:
+                                                                  "form-group"
+                                                              },
+                                                              [
+                                                                _c(
+                                                                  "label",
+                                                                  {
+                                                                    attrs: {
+                                                                      for:
+                                                                        "celular"
                                                                     }
-                                                                  )
-                                                                ],
-                                                                2
-                                                              )
-                                                            ]
-                                                          )
-                                                        ]
-                                                      )
-                                                    ]
-                                                  )
-                                                ]
-                                              )
-                                            ]
-                                          : _vm._e()
-                                      ],
-                                      2
-                                    )
+                                                                  },
+                                                                  [
+                                                                    _vm._v(
+                                                                      "Referencias:"
+                                                                    )
+                                                                  ]
+                                                                ),
+                                                                _vm._v(" "),
+                                                                _c(
+                                                                  "div",
+                                                                  {
+                                                                    staticClass:
+                                                                      "input-group"
+                                                                  },
+                                                                  [
+                                                                    _vm._m(44),
+                                                                    _vm._v(" "),
+                                                                    _c(
+                                                                      "textarea",
+                                                                      {
+                                                                        directives: [
+                                                                          {
+                                                                            name:
+                                                                              "model",
+                                                                            rawName:
+                                                                              "v-model",
+                                                                            value:
+                                                                              _vm.reference_aval,
+                                                                            expression:
+                                                                              "reference_aval"
+                                                                          }
+                                                                        ],
+                                                                        staticClass:
+                                                                          "form-control",
+                                                                        staticStyle: {
+                                                                          "border-bottom-right-radius":
+                                                                            "3px",
+                                                                          "border-top-right-radius":
+                                                                            "3px"
+                                                                        },
+                                                                        attrs: {
+                                                                          placeholder:
+                                                                            "Referencias de la dirección domiciliaria del cliente.",
+                                                                          type:
+                                                                            "text"
+                                                                        },
+                                                                        domProps: {
+                                                                          value:
+                                                                            _vm.reference_aval
+                                                                        },
+                                                                        on: {
+                                                                          input: function(
+                                                                            $event
+                                                                          ) {
+                                                                            if (
+                                                                              $event
+                                                                                .target
+                                                                                .composing
+                                                                            ) {
+                                                                              return
+                                                                            }
+                                                                            _vm.reference_aval =
+                                                                              $event.target.value
+                                                                          }
+                                                                        }
+                                                                      }
+                                                                    )
+                                                                  ]
+                                                                )
+                                                              ]
+                                                            )
+                                                          ]
+                                                        )
+                                                      ]
+                                                    )
+                                                  ]
+                                                : _vm._e()
+                                            ],
+                                            2
+                                          )
+                                        : _vm._e()
+                                    ]
                                   : _vm._e()
-                              ]
+                              ],
+                              2
                             )
                           ])
                         ])
@@ -35663,7 +34033,7 @@ var render = function() {
                             ]
                           ),
                           _vm._v(" "),
-                          _vm._m(58)
+                          _vm._m(45)
                         ]
                       ),
                       _vm._v(" "),
@@ -35723,7 +34093,7 @@ var render = function() {
                                           attrs: { "ui-view": "" }
                                         },
                                         [
-                                          _vm._m(59),
+                                          _vm._m(46),
                                           _vm._v(" "),
                                           _c(
                                             "div",
@@ -35907,7 +34277,7 @@ var render = function() {
                                             ]
                                           ),
                                           _vm._v(" "),
-                                          _vm._m(60)
+                                          _vm._m(47)
                                         ]
                                       ),
                                       _vm._v(" "),
@@ -35935,7 +34305,7 @@ var render = function() {
             ? [
                 _c("div", { staticClass: "col-md-12" }, [
                   _c("div", { staticClass: "box box-primary" }, [
-                    _vm._m(61),
+                    _vm._m(48),
                     _vm._v(" "),
                     _c(
                       "div",
@@ -35948,7 +34318,7 @@ var render = function() {
                             staticStyle: { "font-size": "12px" }
                           },
                           [
-                            _vm._m(62),
+                            _vm._m(49),
                             _vm._v(" "),
                             _c(
                               "tbody",
@@ -36195,7 +34565,7 @@ var render = function() {
                             ]
                           ),
                           _vm._v(" "),
-                          _vm._m(63)
+                          _vm._m(50)
                         ]),
                         _vm._v(" "),
                         _c("br")
@@ -36584,86 +34954,6 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c(
-      "span",
-      {
-        staticClass: "input-group-addon",
-        staticStyle: {
-          "border-bottom-left-radius": "3px",
-          "border-top-left-radius": "3px"
-        }
-      },
-      [_c("i", { staticClass: "fa fa-th-large" })]
-    )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "span",
-      {
-        staticClass: "input-group-addon",
-        staticStyle: {
-          "border-bottom-left-radius": "3px",
-          "border-top-left-radius": "3px"
-        }
-      },
-      [_c("i", { staticClass: "fa fa-th" })]
-    )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "span",
-      {
-        staticClass: "input-group-addon",
-        staticStyle: {
-          "border-top-left-radius": "3px",
-          "border-bottom-left-radius": "3px"
-        }
-      },
-      [_c("i", { staticClass: "fa fa-archive" })]
-    )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "span",
-      {
-        staticClass: "input-group-addon",
-        staticStyle: {
-          "border-bottom-left-radius": "3px",
-          "border-top-left-radius": "3px"
-        }
-      },
-      [_c("i", { staticClass: "fa fa-list-ul" })]
-    )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      {
-        staticClass: "input-group-addon",
-        staticStyle: {
-          "border-top-left-radius": "3px",
-          "border-bottom-left-radius": "3px"
-        }
-      },
-      [_c("i", { staticClass: "fa fa-calendar" })]
-    )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
       "div",
       {
         staticClass: "input-group-addon",
@@ -36688,7 +34978,7 @@ var staticRenderFns = [
           "border-top-left-radius": "3px"
         }
       },
-      [_c("i", { staticClass: "fa fa-cc-jcb" })]
+      [_c("i", { staticClass: "fa fa-hourglass" })]
     )
   },
   function() {
@@ -36700,92 +34990,39 @@ var staticRenderFns = [
       {
         staticClass: "input-group-addon",
         staticStyle: {
-          "border-bottom-left-radius": "3px",
-          "border-top-left-radius": "3px"
+          "border-top-left-radius": "3px",
+          "border-bottom-left-radius": "3px"
         }
       },
-      [_c("i", { staticClass: "fa fa-barcode" })]
+      [_c("i", { staticClass: "fa fa-calendar-plus-o" })]
     )
   },
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c(
-      "span",
-      {
-        staticClass: "input-group-addon",
-        staticStyle: {
-          "border-bottom-left-radius": "3px",
-          "border-top-left-radius": "3px"
-        }
-      },
-      [_c("i", { staticClass: "fa fa-money" })]
-    )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "span",
-      {
-        staticClass: "input-group-addon",
-        staticStyle: {
-          "border-bottom-left-radius": "3px",
-          "border-top-left-radius": "3px"
-        }
-      },
-      [_c("i", { staticClass: "fa fa-hourglass-start" })]
-    )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "span",
-      {
-        staticClass: "input-group-addon",
-        staticStyle: {
-          "border-bottom-left-radius": "3px",
-          "border-top-left-radius": "3px"
-        }
-      },
-      [_c("i", { staticClass: "fa fa-calendar-o" })]
-    )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "span",
-      {
-        staticClass: "input-group-addon",
-        staticStyle: {
-          "border-bottom-left-radius": "3px",
-          "border-top-left-radius": "3px"
-        }
-      },
-      [_c("i", { staticClass: "fa fa-arrow-up" })]
-    )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "span",
-      {
-        staticClass: "input-group-addon",
-        staticStyle: {
-          "border-bottom-left-radius": "3px",
-          "border-top-left-radius": "3px"
-        }
-      },
-      [_c("i", { staticClass: "fa fa-indent" })]
-    )
+    return _c("div", { staticClass: "col-md-2" }, [
+      _c("div", { staticClass: "form-group" }, [
+        _c(
+          "label",
+          {
+            staticStyle: { visibility: "hidden" },
+            attrs: { for: "ap_paterno" }
+          },
+          [_vm._v("Mora:")]
+        ),
+        _vm._v(" "),
+        _c("div", { staticClass: "checkbox" }, [
+          _c("label", { staticClass: "container" }, [
+            _c("input", { attrs: { type: "checkbox" } }),
+            _vm._v(" "),
+            _c("strong", [_vm._v("Aplicar Mora")]),
+            _vm._v(" "),
+            _c("span", { staticClass: "checkmark" })
+          ])
+        ])
+      ])
+    ])
   },
   function() {
     var _vm = this
@@ -37067,70 +35304,6 @@ var staticRenderFns = [
         }
       },
       [_c("i", { staticClass: "fa fa-file-o" })]
-    )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "span",
-      {
-        staticClass: "input-group-addon",
-        staticStyle: {
-          "border-bottom-left-radius": "3px",
-          "border-top-left-radius": "3px"
-        }
-      },
-      [_c("i", { staticClass: "fa fa-user" })]
-    )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      {
-        staticClass: "input-group-addon",
-        staticStyle: {
-          "border-top-left-radius": "3px",
-          "border-bottom-left-radius": "3px"
-        }
-      },
-      [_c("i", { staticClass: "fa fa-calendar" })]
-    )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "span",
-      {
-        staticClass: "input-group-addon",
-        staticStyle: {
-          "border-bottom-left-radius": "3px",
-          "border-top-left-radius": "3px"
-        }
-      },
-      [_c("i", { staticClass: "fa fa-calendar-check-o" })]
-    )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "span",
-      {
-        staticClass: "input-group-addon",
-        staticStyle: {
-          "border-top-left-radius": "3px",
-          "border-bottom-left-radius": "3px"
-        }
-      },
-      [_c("i", { staticClass: "fa fa-archive" })]
     )
   },
   function() {

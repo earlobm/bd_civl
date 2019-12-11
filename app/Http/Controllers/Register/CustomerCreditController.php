@@ -192,72 +192,86 @@ class CustomerCreditController extends Controller
         $sqlx="";  
         $tipo='';  
         $dni=$request->nro_doc_aval;
-        $sqlx="SELECT CASE WHEN c.id_guarantor is null or c.id_guarantor=0  THEN -1 ELSE c.id_guarantor END id_guarantor,
-        g.id_type_document as id_type_document_aval, g.number_doc as number_doc_aval, g.paternal_last_name as paternal_last_name_aval, g.maternal_last_name as maternal_last_name_aval, g.names as names_aval,        
-        g.phone as phone_aval, g.address as address_aval, g.birthdate as birthdate_aval, g.sex as sex_aval, g.marital_status as marital_status_aval, g.email as email_aval, g.reference as reference_aval,         
-        g.id_district as id_district_aval,di.id_province as id_province_aval, pr.id_department as id_department_aval,
-        g.id_job as id_job_aval,  g.id_type_business as id_type_business_aval
+        $sqlx="SELECT c.id_guarantor
         FROM customer c 
         inner join person g on g.id=c.id_guarantor
         inner join district dg on dg.id=g.id_district
         inner join province pg on pg.id=dg.id_province
         inner join department deg on deg.id=pg.id_department
         where g.number_doc='$dni' ";
-        $miArrayx = DB::select($sqlx);
-        $miArray = json_decode(json_encode($miArrayx), true);
+        $miArray_pg = DB::select($sqlx);
+        $Array_pg = json_decode(json_encode($miArray_pg), true);
 
-        if(count($miArray)==0){
-            $url = 'http://aplicaciones007.jne.gob.pe/srop_publico/Consulta/api/AfiliadoApi/GetNombresCiudadano';
-            $ch = curl_init($url);
-            $data = array( 'CODDNI' => $dni);
-            $json = json_encode($data);
-            curl_setopt($ch, CURLOPT_POSTFIELDS, $json);
-            curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type:application/json','RequestVerificationToken:LGJ_UzYRpe-uIfvAURygyhbasD2M-vngQeRNRk_7USURjBavQZxwmgIAHZ9SpTnjEPjEQcimXcavv4iLbaN5fFvnxqN3ml31qxzJIWpK5Mc1:1N7LY5_JphRxTF7psEYSVcnSx_t5RwzXnyxpYBcsV8-eO_XcFRsip1UOk_C1JjDSAQXwXPZwp6tdZe5bgU2SYHQpml2-1zdS_DV2QyYD2QE1'));
-            curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-            $result = curl_exec($ch);
-            $resultado = json_decode($result);
-            $html=$resultado->data;
-            curl_close($ch);
-            $miArray = explode("|", $html);
-            if(count($miArray)==4){
-                //buscamos en el otro web service
-                libxml_use_internal_errors(true);
-                $htmlContent = file_get_contents('http://clientes.reniec.gob.pe/padronElectoral2012/consulta.htm?hTipo=2&hDni='.$dni.'&hApPat=&hApMat=&hNombre=');
-                $dom = new \DOMDocument();
-                $dom->loadHTML($htmlContent);
-                $dom->preserveWhiteSpace = false;
-                $dom->strictErrorChecking = false;
-                $content = $dom->getElementsByTagname('td');
-                $out = array();
-                foreach ($content as $item){
-                    $out[] = $item->nodeValue;
-                }
-
-                $miArray=array();
-                $miArray = explode(",", $out[7]);
-                $apellidosx=array();
-                $apellidosx = explode(" ", $miArray[0]);
-                $nombre=$miArray[1];
-                if(count($apellidosx)==2){
-                    $miArray[0]=$apellidosx[0] ;
-                    $miArray[2]=$apellidosx[1];
-                    $miArray[1]=$nombre;
-                }
-                
+        if(count($Array_pg)==0){
+            $sql_pg="";  
+            $sql_pg="SELECT g.id as id_guarantor,
+            g.id_type_document as id_type_document_aval, g.number_doc as number_doc_aval, 
+            g.paternal_last_name as paternal_last_name_aval, g.maternal_last_name as maternal_last_name_aval, g.names as names_aval,        
+            g.phone as phone_aval, g.address as address_aval, g.birthdate as birthdate_aval, 
+            g.sex as sex_aval, g.marital_status as marital_status_aval, g.email as email_aval,
+            g.reference as reference_aval,         
+            g.id_district as id_district_aval,di.id_province as id_province_aval, pr.id_department as id_department_aval,
+            g.id_job as id_job_aval,  g.id_type_business as id_type_business_aval
+            FROM person g 
+            inner join district di on di.id=g.id_district
+            inner join province pr on pr.id=di.id_province
+            inner join department de on de.id=pr.id_department
+            where g.number_doc='$dni' ";
+            $miArray_pg = DB::select($sql_pg);
+            $Array_pg = json_decode(json_encode($miArray_pg), true);
+            if(count($Array_pg)==0){
+                $url = 'http://aplicaciones007.jne.gob.pe/srop_publico/Consulta/api/AfiliadoApi/GetNombresCiudadano';
+                $ch = curl_init($url);
+                $data = array( 'CODDNI' => $dni);
+                $json = json_encode($data);
+                curl_setopt($ch, CURLOPT_POSTFIELDS, $json);
+                curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type:application/json','RequestVerificationToken:LGJ_UzYRpe-uIfvAURygyhbasD2M-vngQeRNRk_7USURjBavQZxwmgIAHZ9SpTnjEPjEQcimXcavv4iLbaN5fFvnxqN3ml31qxzJIWpK5Mc1:1N7LY5_JphRxTF7psEYSVcnSx_t5RwzXnyxpYBcsV8-eO_XcFRsip1UOk_C1JjDSAQXwXPZwp6tdZe5bgU2SYHQpml2-1zdS_DV2QyYD2QE1'));
+                curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+                $result = curl_exec($ch);
+                $resultado = json_decode($result);
+                $html=$resultado->data;
+                curl_close($ch);
+                $Array_pg = explode("|", $html);
+                if(count($Array_pg)==4){
+                    //buscamos en el otro web service
+                    libxml_use_internal_errors(true);
+                    $htmlContent = file_get_contents('http://clientes.reniec.gob.pe/padronElectoral2012/consulta.htm?hTipo=2&hDni='.$dni.'&hApPat=&hApMat=&hNombre=');
+                    $dom = new \DOMDocument();
+                    $dom->loadHTML($htmlContent);
+                    $dom->preserveWhiteSpace = false;
+                    $dom->strictErrorChecking = false;
+                    $content = $dom->getElementsByTagname('td');
+                    $out = array();
+                    foreach ($content as $item){
+                        $out[] = $item->nodeValue;
+                    }
+                    $Array_pg=array();
+                    $Array_pg = explode(",", $out[7]);
+                    $apellidosx=array();
+                    $apellidosx = explode(" ", $Array_pg[0]);
+                    $nombre=$Array_pg[1];
+                    if(count($apellidosx)==2){
+                        $Array_pg[0]=$apellidosx[0] ;
+                        $Array_pg[2]=$apellidosx[1];
+                        $Array_pg[1]=$nombre;
+                    }
+                    
                 }else{
-                    $nombre=$miArray[2];
-                // $datos[0]=$datos[0];
-                    $miArray[2]=$miArray[1];
-                    $miArray[1]=$nombre;
+                    $nombre=$Array_pg[2];
+                    // $datos[0]=$datos[0];
+                    $Array_pg[2]=$Array_pg[1];
+                    $Array_pg[1]=$nombre;
                 }
-
                 $tipo='reniec';
+            }else{
+                $tipo='person';
+            }
             
         }else {
             $tipo='bd';
         }
         return [
-            'datax' => $miArray,
+            'datax' => $Array_pg,
             'tipo' => $tipo
         ];
         
@@ -338,8 +352,10 @@ class CustomerCreditController extends Controller
             echo 'hola1';
             if($request->id_guarantor==-1){
                 $clase_guarantor = new Person();
+                echo 'hola21';
             }else{
                 $clase_guarantor = Person::findOrFail($request->id_guarantor);
+                echo 'hola31';
             }
             $clase_guarantor->id_type_document =  $request->id_type_document_aval;
             $clase_guarantor->number_doc = trim($request->nro_doc_aval);
@@ -385,7 +401,7 @@ class CustomerCreditController extends Controller
         $clase_customer->date_inscription=$DateOfRequest;
         $clase_customer->id_person=$clasex->id;
         if($request->nro_doc_aval!=null || $request->nro_doc_aval!=''){
-            $clase_customer->id_guarantor=$clase_guarantor->id_guarantor;
+            $clase_customer->id_guarantor=$clase_guarantor->id;
         }
         $clase_customer->id_promoter =$request->id_employee;        
         $clase_customer->save(); 

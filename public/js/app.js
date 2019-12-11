@@ -14394,7 +14394,7 @@ Vue.component('dailycollection', function () {
 var app = new Vue({
   el: '#app',
   data: {
-    menu: 100,
+    menu: 13,
     idanio: 211,
     ruta: 'http://localhost:81/poi/public'
     // menu : 11
