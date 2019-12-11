@@ -291,24 +291,20 @@ class DailyCollectionController extends Controller
         $phrase=$t[0]['phrase'];
         $url_logo=$t[0]['url_logo'];
         //obteniendo los clientes
-        $sqlx=" call daily_collection('','','','2019-12-08','') ";
+        $id_promoter=$request->id_promoter;
+        $date_register=$request->date_register;
+
+        $sqlx=" call daily_collection_print($id_promoter,'$date_register') ";
         $listCust=DB::select($sqlx);
         $listCustomer = json_decode(json_encode($listCust), true);
+        
 
         $page_format = array(
             'MediaBox' => array ('llx' => 0, 'lly' => 0, 'urx' => 75, 'ury' => 180), 
             'Dur' => 3,  'trans' => array( 'D' => 1.5,  'S' => 'Split','Dm' => 'V','M' => 'O' ), 
             'PZ' => 1, 
         ); 
-       
-
         
-        $type_operation = "RECIBO DE EMPEÑO";
-        $html1="<br>PRÉSTAMO: S/  
-                <br>INTERÉS: S/  
-        ";
-
-         $html1=" <br>MONTO: S/ 0.0 ";
 
         PDF::SetTitle('Comprobante El Tumi');
         PDF::SetFont('helvetica', '', 9);
@@ -316,25 +312,26 @@ class DailyCollectionController extends Controller
         PDF::Write(0, 'Cobranza Diaria', '', 0, 'L', true, 0, false, false, 0);
          // $urlx = url('/img/logo-tumi.png');
           $urlx = storage_path().'/logo-tumi.png';
+          // Storage::put('logo-tumi.png', $contents);
          // Storage::put('logo-tumi.png', $contents);
            $html = '
            <table cellspacing="0" cellpadding="1" border="0">
                 <tr>
-                    <td rowspan="4">Imagen</td>
-                    <td>Represenante:</td>
-                    <td>Sucursal : Tingo Maria</td>
+                    <td rowspan="4"><img  style="width:60px; height:60px;" src="'.$urlx.'" alt="technoserve"  ></td>
+                    <td>Representante: </td>
+                    <td>Sucursal : '.$listCustomer[0]['sucursal'].' </td>
                     <td>Fecha : 09/12/2019</td>
                 </tr>
                 <tr>
-                    <td >Juan Peres</td>
+                    <td >'.$listCustomer[0]['promotor'].'</td>
                     <td>Capital :550</td>
-                    <td>Mercado: Tingo Maria</td>
+                    <td>Mercado: '.$listCustomer[0]['mercado'].'</td>
                     
                 </tr>
                 <tr>
                     <td>Total de prestamos: 51</td>
                     <td>Desembolso :550</td>
-                    <td>Porcentaje de cobro :20%</td>
+                    <td>Porcentaje de cobro :'.round($listCustomer[0]['porcentaje'],0).'%</td>
                 </tr>
             </table>
             ';

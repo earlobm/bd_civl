@@ -365,8 +365,11 @@
                 }) 
             },
            
-            downloadDayliCollection(search){               
-                var url= 'downloadDayliCollection';
+            downloadDayliCollection(){    
+                if(this.id_promoter==''){alert('Seleccione promotor');return;}     
+                var fechax= moment(moment(this.date_register, 'DD/MM/YYYY')).format('YYYY-MM-DD') ;     
+                var url= 'downloadDayliCollection?id_promoter='+this.id_promoter+'&date_register='+fechax;
+              
                 //window.location.href = url;
                 window.open(url, '_blank');  
             },

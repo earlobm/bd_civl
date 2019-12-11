@@ -26792,8 +26792,13 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
                 } else if (result.dismiss === swal.DismissReason.cancel) {}
             });
         },
-        downloadDayliCollection: function downloadDayliCollection(search) {
-            var url = 'downloadDayliCollection';
+        downloadDayliCollection: function downloadDayliCollection() {
+            if (this.id_promoter == '') {
+                alert('Seleccione promotor');return;
+            }
+            var fechax = __WEBPACK_IMPORTED_MODULE_1_moment_timezone___default()(__WEBPACK_IMPORTED_MODULE_1_moment_timezone___default()(this.date_register, 'DD/MM/YYYY')).format('YYYY-MM-DD');
+            var url = 'downloadDayliCollection?id_promoter=' + this.id_promoter + '&date_register=' + fechax;
+
             //window.location.href = url;
             window.open(url, '_blank');
         },
