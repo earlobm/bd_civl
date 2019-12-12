@@ -43,19 +43,7 @@
                                                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">                               
                                                         <div class="box-body">  
                                                             <template v-if="listadox==1">                                                   
-                                                                <div class="row"> 
-                                                                    <div class="col-md-4">
-                                                                        <div v-bind:class="errorInputCode">
-                                                                            <label for="dni">Código:</label>
-                                                                            <div class="input-group">
-                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;  color:#1e2172"><i class="fa fa-barcode"></i></span>
-                                                                                <input maxlength="8" v-model="code" type="text" class="form-control">
-                                                                                <span class="input-group-btn">
-                                                                                    <button data-toggle="tooltip" title="Generar Automáticamente" @click="generate_code()" type="submit" class="btn btn-search btn-flat" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;"><i v-bind:class="icon_generate"></i>  GENERAR</button>
-                                                                                </span>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div> 
+                                                                <div class="row">
                                                                     <div class="col-md-4">
                                                                         <div v-bind:class="errorInputTypeDoc">
                                                                             <label for="estado_civil">Tipo de Documento de Identidad:</label>
@@ -79,7 +67,19 @@
                                                                                 </span>
                                                                             </div>
                                                                         </div>
-                                                                    </div>                                                                            
+                                                                    </div>
+                                                                    <div class="col-md-4">
+                                                                        <div v-bind:class="errorInputCode">
+                                                                            <label for="dni">Código:</label>
+                                                                            <div class="input-group">
+                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;  color:#1e2172"><i class="fa fa-barcode"></i></span>
+                                                                                <input maxlength="8" v-model="code" type="text" class="form-control">
+                                                                                <span class="input-group-btn">
+                                                                                    <button data-toggle="tooltip" title="Generar Automáticamente" @click="generate_code()" type="submit" class="btn btn-search btn-flat" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;"><i v-bind:class="icon_generate"></i>  GENERAR</button>
+                                                                                </span>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>                                                                       
                                                                     <div class="col-md-4">
                                                                         <div v-bind:class="errorInputPaternal">
                                                                             <label for="ap_paterno">Apellido Paterno:</label>
@@ -287,49 +287,59 @@
                                                                 <div class="row">
                                                                     <div class="col-md-3">
                                                                         <div class="form-group">
-                                                                            <label for="type_product">Gastos Administrativos:</label>
-                                                                            <div class="input-group">
-                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;">S/.</span>
-                                                                                <input v-model="id_parent" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;text-transform:uppercase;">  
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-md-3">
-                                                                        <div v-bind:class="errorFamilyProduct">
-                                                                            <label for="family_produc" style="visibility: hidden">Porcentaje:</label>
-                                                                            <div class="input-group">
-                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;">%</span>
-                                                                                <input disabled v-model="id_parent" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">  
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-md-3">
-                                                                        <div v-bind:class="errorFamilyProduct">
-                                                                            <label for="family_produc">Central de Riesgo:</label>
-                                                                            <div class="input-group">
-                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;">S/.</span>
-                                                                                <input v-model="id_parent" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">  
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-md-3">
-                                                                        <div v-bind:class="errorFamilyProduct">
-                                                                            <label for="family_produc">Monto:</label>
-                                                                            <div class="input-group">
-                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;">S/.</span>
-                                                                                <input v-model="id_parent" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">  
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>                                                                  
-                                                                    
-                                                                    <div class="col-md-3">
-                                                                        <div class="form-group">
                                                                             <label for="date_init">Fecha del Préstamo:</label>
                                                                             <div class="input-group">
                                                                                 <div class="input-group-addon" style="border-top-left-radius: 3px;border-bottom-left-radius: 3px;">
                                                                                     <i class="fa fa-calendar"></i>
                                                                                 </div>
-                                                                                <date-picker @dp-change="calculateTeabyTerm" v-model="date_init" :config="options" style="border-top-right-radius: 3px;border-bottom-right-radius: 3px;"></date-picker>
+                                                                                <date-picker v-model="date_credit" :config="options" style="border-top-right-radius: 3px;border-bottom-right-radius: 3px;"></date-picker>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-3">
+                                                                        <div class="form-group">
+                                                                            <label for="date_init">Inicio de Pago:</label>
+                                                                            <div class="input-group">
+                                                                                <div class="input-group-addon" style="border-top-left-radius: 3px;border-bottom-left-radius: 3px;">
+                                                                                    <i class="fa fa-calendar"></i>
+                                                                                </div>
+                                                                                <date-picker v-model="date_init_payment" :config="options" style="border-top-right-radius: 3px;border-bottom-right-radius: 3px;"></date-picker>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-2">
+                                                                        <div v-bind:class="errorFamilyProduct">
+                                                                            <label for="family_produc">Monto:</label>
+                                                                            <div class="input-group">
+                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;">S/.</span>
+                                                                                <input v-model="capital" type="number" step="any"  @keyup="calculateAmount()" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">  
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-2">
+                                                                        <div class="form-group">
+                                                                            <label for="type_product">Gastos Administrativos:</label>
+                                                                            <div class="input-group">
+                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;">%</span>
+                                                                                <input v-model="rate_admin" type="number" class="form-control" @keyup="calculateAmount()" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;text-transform:uppercase;">  
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-2">
+                                                                        <div v-bind:class="errorFamilyProduct">
+                                                                            <label for="family_produc" style="visibility: hidden">Porcentaje:</label>
+                                                                            <div class="input-group">
+                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;">S/.</span>
+                                                                                <input v-model="amount_admin" type="number" class="form-control" @keyup="calculateRate()" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">  
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-2">
+                                                                        <div v-bind:class="errorFamilyProduct">
+                                                                            <label for="family_produc">Central de Riesgo:</label>
+                                                                            <div class="input-group">
+                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;">S/.</span>
+                                                                                <input v-model="risk_center" type="number" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">  
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -338,7 +348,7 @@
                                                                             <label for="nombres">Taza:</label>
                                                                             <div class="input-group">
                                                                                 <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;">%</span>
-                                                                                <input v-model="characteristic" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px; text-transform:uppercase;">  
+                                                                                <input v-model="interest_rate" type="number" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px; text-transform:uppercase;">  
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -347,16 +357,16 @@
                                                                             <label for="nombres">Plazo:</label>
                                                                             <div class="input-group">
                                                                                 <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-hourglass"></i></span>
-                                                                                <input v-model="characteristic" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px; text-transform:uppercase;">  
+                                                                                <input v-model="number_quota" type="number" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px; text-transform:uppercase;">  
                                                                             </div>
                                                                         </div>
                                                                     </div>
-                                                                    <div class="col-md-3">
+                                                                    <div class="col-md-2">
                                                                         <div v-bind:class="errorWarehouse">
-                                                                            <label for="ap_paterno" style="visibility: hidden">Forma de Pago:</label>
+                                                                            <label for="ap_paterno">Periodo:</label>
                                                                             <div class="input-group">
                                                                                 <span class="input-group-addon" style="border-top-left-radius:3px;border-bottom-left-radius:3px"><i class="fa fa-calendar-plus-o"></i></span>
-                                                                                <select   v-model="id_warehouse" class="form-control select2" style="border-top-right-radius:3px;border-bottom-right-radius:3px">
+                                                                                <select   v-model="period_credit" class="form-control select2" style="border-top-right-radius:3px;border-bottom-right-radius:3px">
                                                                                     <option selected="selected" value="" >Seleccione</option>
                                                                                     <option value="DIARIO">Diario</option>
                                                                                     <option value="MENSUAL">Mensual</option>
@@ -371,13 +381,22 @@
                                                                             <label for="ap_paterno" style="visibility: hidden">Mora:</label>
                                                                             <div class="checkbox">
                                                                                 <label class="container">
-                                                                                    <input type="checkbox">
-                                                                                        <strong>Aplicar Mora</strong>
-                                                                                        <span class="checkmark"></span>
+                                                                                    <input type="checkbox" v-model="apply_mora">
+                                                                                    <strong>Aplicar Mora</strong>
+                                                                                    <span class="checkmark"></span>
                                                                                 </label>
                                                                             </div>
                                                                         </div>
                                                                     </div>  
+                                                                    <div class="col-md-2">
+                                                                        <div v-bind:class="errorCharacteristic">
+                                                                            <label for="nombres">Días de Gracia:</label>
+                                                                            <div class="input-group">
+                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-life-ring"></i></span>
+                                                                                <input v-model="grace_day" type="number" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px; text-transform:uppercase;">  
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
                                                                 </div>
                                                             </template>
                                                         </div>
@@ -607,20 +626,20 @@
                                     <button type="button" @click="save_data()" class="btn btn-save-pledge" data-toggle="tooltip" title="Guardar cliente y empeñar">
                                         <i v-bind:class="icon_save_pledge"></i>&nbsp;GUARDAR / DAR CRÉDITO
                                     </button>
-                                </template>  
-                                <template v-if="listadox==3">
+                                </template>                          
+                            </div>
+                            <template v-if="listadox==3">
                                     <button type="button" @click="addPledge()" class="btn btn-save-pledge" data-toggle="tooltip" title="Agregar prenda a empeñar">
                                         <i class="fa fa-legal"></i>&nbsp;OTORGAR PRÉSTAMO
                                     </button>
-                                </template>                           
-                            </div>
+                                </template>   
                             <template v-if="listadox==1">
                                 <button type="button" @click="clean_data()" class="btn btn-new" style="float:right; margin-right: 10px;" data-toggle="tooltip" title="Nuevo cliente">
                                     <i class="fa fa-certificate"></i>&nbsp;NUEVO CLIENTE
                                 </button>
                             </template>
                             <template v-if="listadox==3">
-                                <button type="button" @click="clean_data()" class="btn btn-new" style="float:right; margin-right: 10px;" data-toggle="tooltip" title="Nueva prenda">
+                                <button type="button" @click="calculateCreditoDetail()" class="btn btn-new" style="float:right; margin-right: 10px;" data-toggle="tooltip" title="Nueva prenda">
                                     <i class="fa fa-calculator"></i>&nbsp;CALCULAR
                                 </button>
                             </template>
@@ -676,7 +695,7 @@
                                                                 <div class="field">Prendas</div>
                                                                 <div class="value">
                                                                     <ul class="item-list">
-                                                                        <li v-for="(midata,index) in arrayDetailPledge" :key="index"  class="ng-binding ng-scope" style="">
+                                                                        <li v-for="(midata,index) in arrayCreditDetail" :key="index"  class="ng-binding ng-scope" style="">
                                                                             {{midata.guaranty}}
                                                                         </li>
                                                                     </ul>
@@ -729,9 +748,11 @@
                     <div class="col-md-12">
                         <div class="box box-primary">
                             <div class="box-header with-border">
-                                <h1 class="box-title"><i class="fa fa-list"></i> Lista de Prendas</h1>
+                                <h1 class="box-title"><i class="fa fa-list"></i> Cronograma de Pago</h1>
                                 <div class="box-tools pull-right">
-                                    <!-- <span class="label label-success">TOTAL DE REGISTROS:</span> -->
+                                    <span class="label label-success">TOTAL DE CUOTA:</span>
+                                    <span class="label label-warning">TOTAL DE CAPITAL:</span>
+                                    <span class="label label-danger">TOTAL DE INTERÉS:</span>
                                     <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
                                     </button>
                                     <!-- <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button> -->
@@ -743,87 +764,25 @@
                                     <thead style="background: rgb(32, 32, 32);color: #fff;">                                                                                   
                                         <tr>  
                                             <th style="vertical-align: middle;">#</th>
-                                            <th style="vertical-align: middle;">BIEN DE GARANTÍA</th>
-                                            <th style="vertical-align: middle;">CARACTERÍSTICAS</th>
-                                            <th style="vertical-align: middle;">ALMACEN</th>                                                                                        
-                                            <th style="vertical-align: middle;">PLACA</th>
-                                            <th style="vertical-align: middle;">SERIE</th>
-                                            <th style="vertical-align: middle;">MONTO</th>
-                                            <th style="vertical-align: middle;">INTERES</th>
-                                            <th style="vertical-align: middle;">TOTAL</th>
-                                            <th style="vertical-align: middle;">OBSERVACIONES</th>
-                                            <th style="text-align: center; vertical-align: middle;">ACCIONES</th>
+                                            <th style="vertical-align: middle;">FECHA DE VENCIMIENTO</th>
+                                            <th style="vertical-align: middle;">CUOTA</th>
+                                            <th style="vertical-align: middle;">CAPITAL</th>                                                                                        
+                                            <th style="vertical-align: middle;">INTERÉS</th>
+                                            <th style="vertical-align: middle;">SALDO PROYECTADO</th>
                                         </tr> 
                                     </thead>
                                     <tbody>
-                                        <tr v-for="(midata,index) in arrayDetailPledge" :key="index" >
+                                        <tr v-for="(midata,index) in arrayCreditDetail" :key="index" >
                                             <td style="vertical-align: middle;" >{{(index+1)}}</td>
-                                            <td style="vertical-align: middle;" v-text="midata.guaranty"></td>
-                                            <td style="vertical-align: middle;" v-text="midata.characteristic"></td>                                        
-                                            <td style="vertical-align: middle;" v-text="midata.warehouse"></td>
-                                            <td style="vertical-align: middle;" v-text="midata.licence_plate"></td>
-                                            <td style="vertical-align: middle;" v-text="midata.serie"></td>
-                                            <td style="vertical-align: middle;" v-text="midata.capital"></td>
-                                            <td style="vertical-align: middle;" v-text="midata.interest"></td>
-                                            <td style="vertical-align: middle;" v-text="Number(midata.capital)+Number(midata.interest)"></td>
-                                            <td style="vertical-align: middle;" v-text="midata.note"></td>
-                                            <td style="vertical-align: middle;text-align: center;"> 
-                                            
-                                                <button title="Eliminar" type="button" @click="deletePledge(midata)" class="btn btn-eliminar btn-sm">
-                                                <i class="fa fa-trash"></i>
-                                                </button>                                       
-                                            </td> 
+                                            <td style="vertical-align: middle;" v-text="midata.date_expiration"></td>
+                                            <td style="vertical-align: middle;" v-text="midata.quota"></td>  
+                                            <td style="vertical-align: middle;" v-text="midata.capital"></td>  
+                                            <td style="vertical-align: middle;" v-text="midata.interes"></td>  
+                                            <td style="vertical-align: middle;" v-text="midata.saldo"></td>  
                                         </tr>                       
                                     </tbody>
                                 </table>                                
-                            </div>
-                            
-                            <div class="box-footer">
-                                <div class="row">
-                                    <div class="col-lg-6 col-xs-9">
-                                    </div>
-                                    <div class="col-lg-6 col-xs-9">
-                                        <h3>Detalle del empeño:</h3>
-                                        <div class="table-responsive no-border">
-                                            <table class="table">
-                                                <tbody>
-                                                    <tr id="row_sub_total_ventas">
-                                                        <th>Préstamo:</th>
-                                                        <td class="text-right">
-                                                            <span class="simbolo_moneda">S/.</span>
-                                                            <span id="sub_total_ventas">{{totalcapital}}</span>
-                                                            <input type="hidden" name="txt_sub_total_ventas" id="txt_sub_total_ventas" value="0">
-                                                        </td>
-                                                    </tr>
-                                                        
-                                                    <tr id="row_gravada_documento">                                                        
-                                                        <th>Interés:</th>
-                                                        <td class="text-right">
-                                                            <span class="simbolo_moneda">S/.</span>
-                                                            <span id="gravada_documento">{{totalInterest}}</span>
-                                                            <input type="hidden" name="txt_gravada_comprobante" id="txt_gravada_comprobante" value="0">
-                                                        </td>
-                                                    </tr>
-                                                    <tr id="row_gravada_documento">                                                        
-                                                        <th>Total a cobrar::</th>
-                                                        <td class="text-right">
-                                                            <span class="simbolo_moneda">S/.</span>
-                                                            <span id="gravada_documento">{{Number(totalcapital)+Number(totalInterest)}}</span>
-                                                            <input type="hidden" name="txt_gravada_comprobante" id="txt_gravada_comprobante" value="0">
-                                                        </td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                     
-                                        <button type="button" class="btn btn-save" style="width: 100%;">
-                                            <i class="fa fa-save"></i>&nbsp;GUARDAR EMPEÑO
-                                        </button>
-                                    </div>
-                                    <br>
-                                </div>
-                            </div>
-                            
+                            </div>                            
                         </div>
                     </div>
                 </template>
@@ -853,6 +812,8 @@
                 authUser:1,
                 date_init: ''+new Date().getDate()+'/'+(Number(new Date().getMonth())+1)+'/'+new Date().getFullYear(),
                 birthdate: ''+new Date().getDate()+'/'+(Number(new Date().getMonth())+1)+'/'+new Date().getFullYear(),
+                date_init_payment: ''+new Date().getDate()+'/'+(Number(new Date().getMonth())+1)+'/'+new Date().getFullYear(),
+                date_credit: ''+new Date().getDate()+'/'+(Number(new Date().getMonth())+1)+'/'+new Date().getFullYear(),
                 birthdate_aval: ''+new Date().getDate()+'/'+(Number(new Date().getMonth())+1)+'/'+new Date().getFullYear(),
                 options: {
                 format: 'DD/MM/YYYY',
@@ -906,7 +867,7 @@
                 term:1,
                 total:0,guaranty:'',id_dependence:0,characteristic:'',tea:20,id_warehouse:'',
                 id_person:0,id_pledge:0,quantity:1,licence_plate:'',serie:'',note:'',capital:0,
-                period:'Mensual',arrayDetailPledge:[],licence_plate:'',
+                period:'Mensual',arrayCreditDetail:[],licence_plate:'',
                 errorTotalcapital:'form-group',errorcapital:'form-group',errorTerm:'form-group',
                 errorTea:'form-group',errorInterested:'form-group',errorWarehouse:'form-group',
                 errorFamilyProduct:'form-group',errorCharacteristic:'form-group',
@@ -915,15 +876,14 @@
                 totalcapital:0,totalInterest:0,modalTicket:0,idcustomer:-1,array_requirement : [],array_requirement_true : [], requirements:[],
                 midatax:[], list:[],totalNumber:0, 
                 id_customer_credit:-1, id_guarantor:-1,
-                icon_title:'fa fa-plus', 
-                icon_save:'fa fa-save',
-                icon_save_pledge:'fa fa-save', 
-                icon_edit:'fa fa-pencil',
-                icon_search_dni:'fa fa-search',
-                icon_search_dni_aval:'fa fa-search',
-                icon_search_client:'fa fa-search',
-                icon_generate:'fa fa-rotate-right',
-                title:'Agregar Cliente', add_aval:0
+                icon_title:'fa fa-plus', icon_save:'fa fa-save',
+                icon_save_pledge:'fa fa-save', icon_edit:'fa fa-pencil',
+                icon_search_dni:'fa fa-search', icon_search_dni_aval:'fa fa-search',
+                icon_search_client:'fa fa-search', icon_generate:'fa fa-rotate-right',
+                title:'Agregar Cliente', add_aval:0,
+                capital:500, amount_admin:'', rate_admin:2, risk_center:2,interest_rate:10,
+                grace_day:3, apply_mora:1, period_credit:'DIARIO', number_quota:26, 
+
             }
         },
          components: {
@@ -959,7 +919,16 @@
         created: function(){
             this.init();
         },
-        methods : { 
+        methods : {
+            calculateAmount(){
+                let me = this;
+                me.amount_admin=(me.capital* me.rate_admin)/100;
+            },
+            calculateRate(){
+                let me = this;
+                me.rate_admin="";
+                me.rate_admin=(me.amount_admin* 100)/me.capital;
+            },
             generate_code(){
                 let me = this;
                 me.icon_generate='fa fa-refresh fa-spin';
@@ -1036,18 +1005,19 @@
                         console.log(error);
                     });
             },
-            imprimirElemento(){
-                 /* var ventana = window.open('', 'PRINT', 'height=600,width=800');
-                    ventana.document.write('<html><head><title>' + document.title + '</title>');
-                    ventana.document.write('</head><body >');
-                    ventana.document.write("Hola");
-                    ventana.document.write('</body></html>');
-                    ventana.document.close();
-                    ventana.focus();*/
-                    window.print();
-                   // ventana.close();
-                   // return true;
-                    //ola
+            calculateCreditoDetail(){
+                this.arrayCreditDetail=[];
+                for( var i=0; i<this.number_quota;i++){
+                     this.arrayCreditDetail.push(
+                        {id:i,
+                        date_expiration: '2019-05-12',
+                        quota: '2',
+                        capital: '2',
+                        interes:'2',
+                        saldo:'3'
+                    });
+                    
+                }
             },
             closeModal(){
                 let me=this;
@@ -1064,9 +1034,9 @@
             sumTotal(){
                 this.totalcapital=0;
                 this.totalInterest=0;
-                for(var i=0;i<this.arrayDetailPledge.length;i++){
-                    this.totalcapital =  Number(this.totalcapital)+Number(this.arrayDetailPledge[i].capital);
-                    this.totalInterest =  Number(this.totalInterest)+Number(this.arrayDetailPledge[i].interest);
+                for(var i=0;i<this.arrayCreditDetail.length;i++){
+                    this.totalcapital =  Number(this.totalcapital)+Number(this.arrayCreditDetail[i].capital);
+                    this.totalInterest =  Number(this.totalInterest)+Number(this.arrayCreditDetail[i].interest);
                 }  
             },  
             getFamilyProduct(id_parent){
@@ -1086,7 +1056,7 @@
                     return;
                 }
 
-                this.arrayDetailPledge.push(
+                this.arrayCreditDetail.push(
                     {guaranty:this.guaranty.name,characteristic: this.characteristic,
                     note: this.note,
                     warehouse:this.id_warehouse.name,
@@ -1107,8 +1077,8 @@
                 }).then((result) => {
                 if (result.value) {
                    // this.arrayActivity.push(item);
-                    let index = this.arrayDetailPledge.indexOf(item)
-                    this.arrayDetailPledge.splice(index, 1);
+                    let index = this.arrayCreditDetail.indexOf(item)
+                    this.arrayCreditDetail.splice(index, 1);
                      this.sumTotal();
                 } else if ( result.dismiss === swal.DismissReason.cancel
                 ) {} }) 
@@ -1833,7 +1803,7 @@
                 this.term=1;
                 this.tea=10,
                 this.totalcapital=0; 
-                this.arrayDetailPledge=[];     
+                this.arrayCreditDetail=[];     
                 this.totalcapital=0;
                 this.totalInterest=0;     
                 this.characteristic="";
