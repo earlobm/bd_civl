@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Http\Request;
-
+use poi\Http\Controllers\Util\Curlx;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -18,3 +18,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::get('updateFeatedapi', 'Util\UpdatePledgeController@updateFeated');
+Route::get('getrucapi', 'Register\CustomerCreditController@getDataByRucSunatNew');
+

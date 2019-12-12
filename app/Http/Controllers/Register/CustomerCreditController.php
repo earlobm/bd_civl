@@ -16,6 +16,7 @@ use Illuminate\Support\Facades\Auth;
 use DB;
 use PDF;
 use poi\EntityClass\CustomerTypeDocument; // at the top of the file
+use poi\Http\Controllers\Util\Curlx;
 
 ini_set ('memory_limit', '999999999999M');
 ini_set('max_execution_time', 900000000000);
@@ -75,6 +76,49 @@ class CustomerCreditController extends Controller
        // print $obj->razon_social;
         return [
             'datax' => $obj
+        ];
+    }
+    public function getDataByRucSunatNew(Request $request){
+        $ruc=$request->ruc;
+        $this->cc = new Curlx();
+        $this->cc->setReferer( "http://e-consultaruc.sunat.gob.pe/cl-ti-itmrconsruc/frameCriterioBusqueda.jsp" );
+        $this->cc->useCookie( true );
+        $this->cc->setCookiFileLocation( __DIR__ . "/cookie.txt" );
+        //obteneidendo randows
+        $url = "http://e-consultaruc.sunat.gob.pe/cl-ti-itmrconsruc/captcha?accion=random";
+        $numRand = $this->cc->send($url);
+        //20604720746 de pixel
+        $data = array(
+            "nroRuc" => $ruc,
+            "accion" => "consPorRuc",
+            "numRnd" => $numRand
+        );
+        $url = "http://e-consultaruc.sunat.gob.pe/cl-ti-itmrconsruc/jcrS00Alias";
+        $page = $this->cc->send( $url, $data );
+    
+        //RazonSocial
+        $patron='/<input type="hidden" name="desRuc" value="(.*)">/';
+        $output = preg_match_all($patron, $page, $matches, PREG_SET_ORDER);
+        $RS="";
+        if(isset($matches[0]))
+        {
+            $RS = utf8_encode(str_replace('"','', ($matches[0][1])));
+            $RS=trim($RS);
+        }
+        //direccion
+        $patron='/<td class="bgn"[ ]*colspan=1[ ]*>Direcci&oacute;n del Domicilio Fiscal:[ ]*<\/td>\r\n[\t]*[ ]+<td class="bg" colspan=[1|3]+>(.*)<\/td>/';
+        $output = preg_match_all($patron, $page, $matches, PREG_SET_ORDER);
+        $rtn="";
+        if( isset($matches[0]) )
+        {
+            $rtn = trim($matches[0][1]);
+        }
+        
+        //return $RS.'-dir-'.$rtn;
+       // print $obj->razon_social;
+        return [
+            'nombres' => $RS,
+            'direccion'=>$rtn
         ];
     }
     public function get_customer_by_dni(Request $request){        
