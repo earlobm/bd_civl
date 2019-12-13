@@ -40,8 +40,8 @@
                   </ul>
                 </li>
 
-                <li @click="menu=13"  class="menux" class="treeview">
-                  <a href="#"><i class="fa fa-users" style="color: #FF5100"></i>Historial de creditos
+                <li @click="menu=101"  class="menux" class="treeview">
+                  <a href="#"><i class="fa fa-users" style="color: #FF5100"></i>Historial de clientes
                       <!-- <i class="fa fa-angle-left pull-right"></i> -->
                   </a>
                 </li> 

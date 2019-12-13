@@ -293,6 +293,7 @@ class DailyCollectionController extends Controller
         //obteniendo los clientes
         $id_promoter=$request->id_promoter;
         $date_register=$request->date_register;
+        $date_pretty=$request->date_pretty;
 
         $sqlx=" call daily_collection_print($id_promoter,'$date_register') ";
         $listCust=DB::select($sqlx);
@@ -305,6 +306,14 @@ class DailyCollectionController extends Controller
             'PZ' => 1, 
         ); 
         
+        //sumar desembolso  o monto
+        $sumaMonto=0;
+        $sumaMora=0;
+        foreach ($listCustomer as $key => $value) {
+            $sumaMonto += $value['monto'];
+            $sumaMora += $value['mora'];
+          }
+        //fin de suma
 
         PDF::SetTitle('Comprobante El Tumi');
         PDF::SetFont('helvetica', '', 9);
@@ -321,16 +330,16 @@ class DailyCollectionController extends Controller
                     <td rowspan="4" style="width:80px"><img  style="width:60px; height:60px;" src="'.$urlx.'" alt="technoserve"  ></td>
                     <td style="width:130px"><b>Representante: </b></td>
                     <td><b>Sucursal : </b>'.$listCustomer[0]['sucursal'].' </td>
-                    <td><b>Fecha : </b> 09/12/2019</td>
+                    <td><b>Fecha : </b> '.$date_pretty.'</td>
                 </tr>
                 <tr>
                     <td style="width:130px" >'.$listCustomer[0]['promotor'].'</td>
-                    <td><b>Capital: </b> 550</td>
+                    <td><b>Mora: </b> '.$sumaMora.'</td>
                     <td><b>Mercado: </b> '.$listCustomer[0]['mercado'].'</td>
                 </tr>
                 <tr>
-                    <td><b>Total de prestamos: </b> 51</td>
-                    <td><b>Desembolso : </b> 550</td>
+                    <td><b>Total de prestamos: </b> '.count($listCustomer).'</td>
+                    <td><b>Capital : </b>'.$sumaMonto.'</td>
                     <td><b>Porcentaje de cobro : </b>'.round($listCustomer[0]['porcentaje'],0).'%</td>
                 </tr>
             </table>

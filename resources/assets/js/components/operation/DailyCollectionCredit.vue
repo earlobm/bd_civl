@@ -368,7 +368,8 @@
             downloadDayliCollection(){    
                 if(this.id_promoter==''){alert('Seleccione promotor');return;}     
                 var fechax= moment(moment(this.date_register, 'DD/MM/YYYY')).format('YYYY-MM-DD') ;     
-                var url= 'downloadDayliCollection?id_promoter='+this.id_promoter+'&date_register='+fechax;
+                var date_pretty= moment(moment(this.date_register, 'DD/MM/YYYY')).format('DD/MM/YYYY') ;     
+                var url= 'downloadDayliCollection?id_promoter='+this.id_promoter+'&date_register='+fechax+'&date_pretty='+date_pretty;
               
                 //window.location.href = url;
                 window.open(url, '_blank');  

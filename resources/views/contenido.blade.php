@@ -96,6 +96,9 @@
         <template v-if="menu==100">
             <dailycollection></dailycollection>
         </template>
+        <template v-if="menu==101">
+            <customerhistory></customerhistory>
+        </template>
         
 
         

@@ -26797,7 +26797,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
                 alert('Seleccione promotor');return;
             }
             var fechax = __WEBPACK_IMPORTED_MODULE_1_moment_timezone___default()(__WEBPACK_IMPORTED_MODULE_1_moment_timezone___default()(this.date_register, 'DD/MM/YYYY')).format('YYYY-MM-DD');
-            var url = 'downloadDayliCollection?id_promoter=' + this.id_promoter + '&date_register=' + fechax;
+            var date_pretty = __WEBPACK_IMPORTED_MODULE_1_moment_timezone___default()(__WEBPACK_IMPORTED_MODULE_1_moment_timezone___default()(this.date_register, 'DD/MM/YYYY')).format('DD/MM/YYYY');
+            var url = 'downloadDayliCollection?id_promoter=' + this.id_promoter + '&date_register=' + fechax + '&date_pretty=' + date_pretty;
 
             //window.location.href = url;
             window.open(url, '_blank');
