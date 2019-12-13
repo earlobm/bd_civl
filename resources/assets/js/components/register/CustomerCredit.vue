@@ -6,8 +6,9 @@
               <small>Registro</small>
             </h1>
             <ol class="breadcrumb">
-              <li><a href="#"><i class="fa fa-dashboard"></i> Operaciones</a></li>
-              <li class="active">Clientes</li>
+              <li><a href="#"><i class="fa fa-cogs"></i> Operaciones</a></li>
+              <li>Clientes</li>
+              <li class="active">Agregar Clientes</li>
             </ol>
         </section>
 
@@ -1006,11 +1007,17 @@
             },
             calculateCreditoDetail(){
                 this.arrayCreditDetail=[];
-                var fecha=new Date();
+                var fecha = new Date(moment(moment(this.date_init_payment, 'DD/MM/YYYY')).format('YYYY-MM-DD'));
                 for( var i=0; i<this.number_quota;i++){
-                     this.arrayCreditDetail.push(
-                        {id:i,
-                        date_expiration: fecha.setDate(moment(moment(this.date_init_payment, 'DD/MM/YYYY')).format('DD')+i),
+                    var fechax= fecha.getDay();
+                    if(fechax==6){
+                        fecha.setDate(fecha.getDate() + 2);
+                    }else{
+                        fecha.setDate(fecha.getDate() + 1);
+                    }
+                    var resultado=fecha.getDate() + '/' + (fecha.getMonth() + 1) + '/' + fecha.getFullYear();
+                    this.arrayCreditDetail.push({id:i,
+                        date_expiration: resultado,
                         quota: '2',
                         capital: '2',
                         interes:'2',
@@ -1892,7 +1899,7 @@
         },
         
         mounted() {
-            this.listadox=1;
+            this.listadox=3;
         //    this.lista_add_client();
         //    this.list_data(1);
             this.getDepartment();
