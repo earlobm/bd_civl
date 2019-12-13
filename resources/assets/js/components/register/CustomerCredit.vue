@@ -311,7 +311,7 @@
                                                                             <label for="family_produc">Monto:</label>
                                                                             <div class="input-group">
                                                                                 <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;">S/.</span>
-                                                                                <input v-model="capital" type="number" step="any"  @keyup="calculateAmount()" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">  
+                                                                                <input v-model="capital" type="number" step="any"  @keyup="calculateAmount()" @click="calculateAmount()" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">  
                                                                             </div>
                                                                         </div>
                                                                     </div><div class="col-md-2">
@@ -319,7 +319,7 @@
                                                                             <label for="nombres">Tasa de Interés:</label>
                                                                             <div class="input-group">
                                                                                 <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;">%</span>
-                                                                                <input v-model="interest_rate" type="number" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px; text-transform:uppercase;">  
+                                                                                <input v-model="interest_rate" type="number"  @keyup="calculateInterestRateCash()" @click="calculateInterestRateCash()" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px; text-transform:uppercase;">  
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -346,7 +346,7 @@
                                                                             <label for="type_product">Gastos Adm.:</label>
                                                                             <div class="input-group">
                                                                                 <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;">%</span>
-                                                                                <input v-model="rate_admin" type="number" class="form-control" @keyup="calculateAmount()" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;text-transform:uppercase;">  
+                                                                                <input v-model="rate_admin" type="number" class="form-control" @keyup="calculateAmount()" @click="calculateAmount()" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;text-transform:uppercase;">  
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -355,7 +355,7 @@
                                                                             <label for="family_produc" style="visibility: hidden">Porcentaje:</label>
                                                                             <div class="input-group">
                                                                                 <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;">S/.</span>
-                                                                                <input v-model="amount_admin" type="number" class="form-control" @keyup="calculateRate()" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">  
+                                                                                <input v-model="amount_admin" type="number" class="form-control" @keyup="calculateRate()" @click="calculateRate()" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">  
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -373,7 +373,7 @@
                                                                             <label for="nombres">Plazo:</label>
                                                                             <div class="input-group">
                                                                                 <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-hourglass"></i></span>
-                                                                                <input v-model="number_quota" type="number" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px; text-transform:uppercase;">  
+                                                                                <input v-model="number_quota" type="number" min="1" pattern="^[0-9]+" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px; text-transform:uppercase;">  
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -391,6 +391,15 @@
                                                                                 
                                                                             </div>
                                                                         </div>
+                                                                    </div>                                                                    
+                                                                    <div class="col-md-2">
+                                                                        <div v-bind:class="errorCharacteristic">
+                                                                            <label for="nombres">Días de Gracia:</label>
+                                                                            <div class="input-group">
+                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-life-ring"></i></span>
+                                                                                <input v-model="grace_day" type="number" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px; text-transform:uppercase;">  
+                                                                            </div>
+                                                                        </div>
                                                                     </div>
                                                                     <div  class="col-md-2">
                                                                         <div class="form-group">
@@ -404,15 +413,6 @@
                                                                             </div>
                                                                         </div>
                                                                     </div>  
-                                                                    <div class="col-md-2">
-                                                                        <div v-bind:class="errorCharacteristic">
-                                                                            <label for="nombres">Días de Gracia:</label>
-                                                                            <div class="input-group">
-                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-life-ring"></i></span>
-                                                                                <input v-model="grace_day" type="number" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px; text-transform:uppercase;">  
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
                                                                 </div>
                                                             </template>
                                                         </div>
@@ -898,7 +898,7 @@
                 title:'Agregar Cliente', add_aval:0,
                 capital:500, amount_admin:'', rate_admin:2, risk_center:2,interest_rate:10,
                 grace_day:3, apply_mora:1, period_credit:'DIARIO', number_quota:26, 
-                date_ultimate:''
+                date_ultimate:'',total_cash:'', interest_rate_cash:'',
 
             }
         },
@@ -938,12 +938,22 @@
         methods : {
             calculateAmount(){
                 let me = this;
-                me.amount_admin=(me.capital* me.rate_admin)/100;
+                me.total_cash='';
+                me.interest_rate_cash='';
+                me.amount_admin=(Number(me.capital)* Number(me.rate_admin))/100;
+                me.interest_rate_cash=(Number(me.capital)*Number(me.interest_rate))/100;
+                me.total_cash=Number(me.capital)+ Number(me.interest_rate_cash);
+                
             },
             calculateRate(){
                 let me = this;
                 me.rate_admin="";
-                me.rate_admin=(me.amount_admin* 100)/me.capital;
+                me.rate_admin=(Number(me.amount_admin)* 100)/Number(me.capital);
+            },
+            calculateInterestRateCash(){
+                let me = this;
+                me.interest_rate_cash=(Number(me.capital)*Number(me.interest_rate))/100;
+                me.total_cash=Number(me.capital)+Number(me.interest_rate_cash);
             },
             generate_code(){
                 let me = this;
@@ -1024,7 +1034,7 @@
             calculateCreditoDetail(){
                 this.arrayCreditDetail=[];
                 var date = new Date(moment(moment(this.date_init_payment, 'DD/MM/YYYY')).format('YYYY-MM-DD'));
-                var saldo=(Number(this.capital+(this.capital*this.interest_rate)/100));
+                var saldo=Number(this.capital)+(Number(this.capital)* Number(this.interest_rate))/100;
                 
                 for( var i=0; i<this.number_quota;i++){
                     var date_day= date.getDay();
@@ -1036,25 +1046,28 @@
                     var date_expiration=date.getDate() + '/' + (date.getMonth() + 1) + '/' + date.getFullYear();
                     var date_expiration_t= date.getFullYear()+'-'+ (date.getMonth()+1) + '-' + date.getDate();
 
-                    var capital=(Number(this.capital)/Number(this.number_quota)).toFixed(1);
-                    var result = capital*(this.number_quota-1);
-                    result = Number(this.capital)-Number(result);
-                    
-
-                    var quota=(Number(this.capital+(this.capital*this.interest_rate)/100)/Number(this.number_quota)).toFixed(1);
-                    var result = quota*(this.number_quota-1);
-                    result = (Number(this.capital+(this.capital*this.interest_rate)/100))-Number(result);
-                    
-
-                    var interest=(((this.capital*this.interest_rate)/100)/Number(this.number_quota)).toFixed(1);
-                    var result = interest*(this.number_quota-1);
-                    result = ((this.capital*this.interest_rate)/100)-Number(result);
-                    
-                    saldo=(saldo-quota).toFixed(1);
-                    if(i==(this.number_quota-1)){
-                        capital=result.toFixed(1);
+                    var quota=((Number(this.capital) + (Number(this.capital) * Number(this.interest_rate))/100)/Number(this.number_quota)).toFixed(1);
+                    var result = quota*(Number(this.number_quota)-1);
+                    result = (Number(this.capital) + (Number(this.capital) * Number(this.interest_rate))/100) - result;
+                    if(i==(Number(this.number_quota)-1)){
                         quota=result.toFixed(1);
+                    }
+
+                    var capital=(Number(this.capital)/Number(this.number_quota)).toFixed(1);
+                    var result = capital * (Number(this.number_quota) - 1);
+                    result = Number(this.capital) - result;
+                    if(i==(Number(this.number_quota)-1)){
+                        capital=result.toFixed(1);
+                    }
+
+                    var interest=(((Number(this.capital)*Number(this.interest_rate))/100)/Number(this.number_quota)).toFixed(1);
+                    var result = interest * (Number(this.number_quota) - 1);
+                    result = ((Number(this.capital) * Number(this.interest_rate))/100) - result;
+                    if(i==(Number(this.number_quota)-1)){
                         interest=result.toFixed(1);
+                    }
+                    saldo=saldo-quota;
+                    if(i==(Number(this.number_quota)-1)){
                         saldo=0;
                     }
                     this.date_ultimate=date_expiration_t;
@@ -1064,9 +1077,8 @@
                         quota: quota,
                         capital: capital,
                         interest: interest,
-                        saldo: saldo
-                    });
-                    
+                        saldo: saldo.toFixed(1)
+                    });                    
                 }
             },
             closeModal(){
@@ -1985,6 +1997,7 @@
             this.getProvince(10);
             this.getDistrict(92);
             this.calculateAmount(2);
+            this.calculateInterestRateCash();
          }
          
     }
