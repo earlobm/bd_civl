@@ -1,17 +1,17 @@
-webpackJsonp([33],Array(42).concat([
-/* 42 */
+webpackJsonp([33],Array(44).concat([
+/* 44 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(217)
+  __webpack_require__(225)
 }
 var normalizeComponent = __webpack_require__(191)
 /* script */
-var __vue_script__ = __webpack_require__(219)
+var __vue_script__ = __webpack_require__(227)
 /* template */
-var __vue_template__ = __webpack_require__(220)
+var __vue_template__ = __webpack_require__(228)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -28,7 +28,7 @@ var Component = normalizeComponent(
   __vue_scopeId__,
   __vue_module_identifier__
 )
-Component.options.__file = "resources/assets/js/components/register/PaymentView.vue"
+Component.options.__file = "resources/assets/js/components/register/Market.vue"
 
 /* hot reload */
 if (false) {(function () {
@@ -37,9 +37,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-19302954", Component.options)
+    hotAPI.createRecord("data-v-3f1936fe", Component.options)
   } else {
-    hotAPI.reload("data-v-19302954", Component.options)
+    hotAPI.reload("data-v-3f1936fe", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
@@ -50,8 +50,6 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 43 */,
-/* 44 */,
 /* 45 */,
 /* 46 */,
 /* 47 */,
@@ -26337,23 +26335,31 @@ module.exports = function (css) {
 /* 214 */,
 /* 215 */,
 /* 216 */,
-/* 217 */
+/* 217 */,
+/* 218 */,
+/* 219 */,
+/* 220 */,
+/* 221 */,
+/* 222 */,
+/* 223 */,
+/* 224 */,
+/* 225 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(218);
+var content = __webpack_require__(226);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(192)("0b013030", content, false, {});
+var update = __webpack_require__(192)("a2051540", content, false, {});
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
  if(!content.locals) {
-   module.hot.accept("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-19302954\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./PaymentView.vue", function() {
-     var newContent = require("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-19302954\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./PaymentView.vue");
+   module.hot.accept("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-3f1936fe\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Market.vue", function() {
+     var newContent = require("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-3f1936fe\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Market.vue");
      if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
      update(newContent);
    });
@@ -26363,7 +26369,7 @@ if(false) {
 }
 
 /***/ }),
-/* 218 */
+/* 226 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(63)(false);
@@ -26377,7 +26383,7 @@ exports.push([module.i, "\n.table-bordered th,\r\n.table-bordered td {\r\n  bord
 
 
 /***/ }),
-/* 219 */
+/* 227 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -26390,102 +26396,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_vue_bootstrap_datetimepicker___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_vue_bootstrap_datetimepicker__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_pc_bootstrap4_datetimepicker_build_css_bootstrap_datetimepicker_css__ = __webpack_require__(201);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_pc_bootstrap4_datetimepicker_build_css_bootstrap_datetimepicker_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_pc_bootstrap4_datetimepicker_build_css_bootstrap_datetimepicker_css__);
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 //
 //
 //
@@ -26793,52 +26705,34 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //fecha bot
 /* harmony default export */ __webpack_exports__["default"] = ({
     data: function data() {
-        return {
+        var _ref;
 
-            list: [], idParent: '', year: '',
-            arrayDataDetalle: [],
-            empresa: '', term: 1,
-            listado: 1,
-            authUser: 1,
-            fechaFin: '' + new Date().getDate() + '/' + (Number(new Date().getMonth()) + 1) + '/' + new Date().getFullYear(),
-            options: {
-                format: 'DD/MM/YYYY',
-                useCurrent: false,
-                locale: 'es',
-                showClose: true
-            },
-            pagination: {
-                'total': 0,
-                'current_page': 0,
-                'per_page': 0,
-                'last_page': 0,
-                'from': 0,
-                'to': 0
-            }, offset: 3,
-            name: '', id: -1,
-            errorClase: 0,
-            errors: {},
-            errorInputActivity: 'form-group',
-            errorInputActivity2: 'form-group',
-            errorInputActivity3: 'form-group',
-            errorInputActivity4: 'form-group',
-            errorInputActivity5: 'form-group',
-            errorInputActivity6: 'form-group',
-            errorInputAmount: 'form-group',
-            errorComboTipoProduco: 'form-group',
-            buscar: '', name_customer: '',
-            modePayment: '', amountPayment: 0,
-            dateModePayment: '' + new Date().getDate() + '/' + (Number(new Date().getMonth()) + 1) + '/' + new Date().getFullYear(),
-            dateInit: '' + new Date().getDate() + '/' + (Number(new Date().getMonth()) + 1) + '/' + new Date().getFullYear(),
-            dateEnd: '' + new Date().getDate() + '/' + (Number(new Date().getMonth()) + 1) + '/' + new Date().getFullYear(),
+        return _ref = {
+            array_branch: [],
+            arrayZona: [],
+            list_market: [], idParent: '', year: '',
+            arrayEntrenador: [],
+            arrayDataDetalle: [], califica: '',
+            arrayCohort: [], datosArrayPbg: [], datosArraySunat: [],
+            identrendor: '', idZona: '', authUser: '', datosRepresentante: [],
+            zonactual: 'x', porcent: 50, empresa: '',
 
-            newProgramPayment: 'Mensual', amount: '', tea: '', interest: 0, totalPayment: '', program: '',
-            capital_customer: 0, interest_customer: 0, date_customer: '',
-            errorPorcentage: 'form-group', errorInterest: 'form-group',
-            listDetailMovementPledge: [], id_pledge: 0, id_customer: 0, residue: 0,
-            view_detail: 0, listMovementPledge: []
-
-        };
+            listado: 1, duenio_parcela: '', participante: '',
+            //fechas
+            fechaInicio: '01/01/2018'
+        }, _defineProperty(_ref, 'authUser', 1), _defineProperty(_ref, 'date_creation', '' + new Date().getDate() + '/' + (Number(new Date().getMonth()) + 1) + '/' + new Date().getFullYear()), _defineProperty(_ref, 'options', {
+            format: 'DD/MM/YYYY',
+            useCurrent: false,
+            locale: 'es',
+            showClose: true
+        }), _defineProperty(_ref, 'pagination', {
+            'total': 0,
+            'current_page': 0,
+            'per_page': 0,
+            'last_page': 0,
+            'from': 0,
+            'to': 0
+        }), _defineProperty(_ref, 'offset', 3), _defineProperty(_ref, 'amount', ''), _defineProperty(_ref, 'name', ''), _defineProperty(_ref, 'id', -1), _defineProperty(_ref, 'personal', ''), _defineProperty(_ref, 'code', ''), _defineProperty(_ref, 'number_doc', ''), _defineProperty(_ref, 'errorClase', 0), _defineProperty(_ref, 'errors', {}), _defineProperty(_ref, 'errorInputActivity1', 'form-group'), _defineProperty(_ref, 'errorInputActivity2', 'form-group'), _defineProperty(_ref, 'errorInputActivity3', 'form-group'), _defineProperty(_ref, 'errorInputAmount', 'form-group'), _defineProperty(_ref, 'errorComboTipoProduco', 'form-group'), _defineProperty(_ref, 'errorTotalAmount', 'form-group'), _defineProperty(_ref, 'search_market', ''), _defineProperty(_ref, 'sex', ''), _defineProperty(_ref, 'birthdate', ''), _defineProperty(_ref, 'marital_status', ''), _defineProperty(_ref, 'modal_add', 0), _defineProperty(_ref, 'number_doc_add', ''), _defineProperty(_ref, 'paternal_last_name', ''), _defineProperty(_ref, 'maternal_last_name', ''), _defineProperty(_ref, 'names', ''), _defineProperty(_ref, 'id_person', ''), _defineProperty(_ref, 'id_branch_office', ''), _ref;
     },
 
     components: {
@@ -26871,61 +26765,136 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         }
     },
     methods: {
-        delete_pledge: function delete_pledge(idx) {
-            var _this = this;
-
-            swal({
-                title: '¿Esta seguro de eliminar?',
-                type: 'warning', showCancelButton: true,
-                confirmButtonColor: '#3085d6', cancelButtonColor: '#d33',
-                confirmButtonText: 'Aceptar!', cancelButtonText: 'Cancelar',
-                confirmButtonClass: 'btn btn-success', cancelButtonClass: 'btn btn-danger',
-                buttonsStyling: false, reverseButtons: true
-            }).then(function (result) {
-                if (result.value) {
-                    var me = _this;
-                    axios.post('delete_pledge', {
-                        'id': idx
-
-                    }).then(function (response) {
-                        // me.listado=1;
-                        me.listar(1);
-                    }).catch(function (error) {
-                        console.log(error);
-                    });
-                } else if (result.dismiss === swal.DismissReason.cancel) {}
+        get_branch: function get_branch() {
+            var me = this;
+            var url = 'get_combo_branch_office';
+            axios.get(url).then(function (response) {
+                var respuesta = response.data;
+                me.array_branch = respuesta.datax;
+            }).catch(function (error) {
+                console.log(error);
             });
+        },
+        add_person: function add_person() {
+            var me = this;
+            me.modal_add = 1;
+            me.number_doc_add = this.number_doc;
+        },
+        close_modal: function close_modal() {
+            var me = this;
+            me.modal_add = 0;
+        },
+        get_data_personal: function get_data_personal() {
+            //obteniendo datos de la base de datos
+            if (this.number_doc.length == 8) {
+                var me = this;
+                var url = 'getDatabyNroDocP?nro_doc=' + me.number_doc;
+                axios.get(url).then(function (response) {
+                    var respuesta = response.data;
+                    var tipo = respuesta.tipo;
+                    if (respuesta.datax.length > 0) {
+                        if (tipo == 'bd') {
+                            me.id_person = respuesta.datax[0].id;
+                            me.personal = respuesta.datax[0].paternal_last_name + ' ' + respuesta.datax[0].maternal_last_name + ' ' + respuesta.datax[0].names;
+                            me.validarData();
+                        } else {
+                            me.personal = 'Personal No Encontrado!';
+                            me.validarData();
+                        }
+                    }
+                }).catch(function (error) {
+                    console.log(error);
+                });
+                //obtener datos
+            }
+        },
+        get_data_reniec: function get_data_reniec() {
+            //obteniendo datos de RENIEC
+            if (this.number_doc_add.length == 8) {
+                var me = this;
+                var url = 'getDatabyNroDocP?nro_doc=' + me.number_doc_add;
+                axios.get(url).then(function (response) {
+                    var respuesta = response.data;
+                    var tipo = respuesta.tipo;
+                    if (respuesta.datax.length > 0) {
+                        if (tipo == 'reniec') {
+                            me.paternal_last_name = respuesta.datax[0];
+                            me.names = respuesta.datax[1];
+                            me.maternal_last_name = respuesta.datax[2];
+                            me.validarDataPersonal();
+                        } else {
+                            me.paternal_last_name = 'EL PERSONAL  YA SE ENCUENTRA REGISTRADO';
+                            me.validarDataPersonal();
+                        }
+                    }
+                }).catch(function (error) {
+                    console.log(error);
+                });
+                //obtener datos
+            }
         },
         validarData: function validarData() {
             this.errors = {};
             this.errorClase = 0;
+            this.errors.code = "";
             this.errors.name = "";
-            this.errors.amount = "";
+            this.errors.number_doc = "";
             //input
-            this.errorInputActivity = 'form-group';
-            this.errorInputActivity2 = 'form-group';
-            this.errorInputActivity3 = 'form-group';
-            this.errorInputActivity4 = 'form-group';
-            this.errorInputActivity5 = 'form-group';
-            this.errorInputActivity6 = 'form-group';
-            this.errorInputAmount = 'form-group';
-            this.errorComboTipoProduco = 'form-group';
-            this.errorPorcentage = 'form-group';
-            this.errorInterest = 'form-group';
+            this.errorInputActivity1 = 'form-group has-success';
+            this.errorInputActivity2 = 'form-group has-success';
+            this.errorInputActivity3 = 'form-group has-success';
 
-            if (!this.modePayment) {
-                this.errorInputActivity = 'form-group has-error';
+            if (!this.code) {
+                this.errors.code = "Ingrese o genere el código";
+                this.errorInputActivity1 = 'form-group has-error';
                 this.errorClase = 1;
             }
-            if (!this.amountPayment) {
+            if (!this.name) {
+                this.errors.name = "Ingrese la denominación";
                 this.errorInputActivity2 = 'form-group has-error';
                 this.errorClase = 1;
             }
-            if (!this.dateModePayment) {
+
+            if (!this.number_doc) {
+                this.errors.number_doc = "Ingrese DNI";
                 this.errorInputActivity3 = 'form-group has-error';
                 this.errorClase = 1;
             }
 
+            return this.errorClase;
+        },
+        validarDataPersonal: function validarDataPersonal() {
+            this.errors = {};
+            this.errorClase = 0;
+            this.errors.number_doc_add = "";
+            this.errors.names = "";
+            this.errors.paternal_last_name = "";
+            this.errors.maternal_last_name = "";
+            //input
+            this.errorInputActivity1 = 'form-group has-success';
+            this.errorInputActivity2 = 'form-group has-success';
+            this.errorInputActivity3 = 'form-group has-success';
+            this.errorInputActivity4 = 'form-group has-success';
+            if (!this.number_doc_add) {
+                this.errors.number_doc_add = "Ingrese el DNI.";
+                this.errorInputActivity1 = 'form-group has-error';
+                this.errorClase = 1;
+            }
+            if (!this.names) {
+                this.errors.names = "Ingrese el o los nombres del Personal.";
+                this.errorInputActivity2 = 'form-group has-error';
+                this.errorClase = 1;
+            }
+            if (!this.paternal_last_name) {
+                this.errors.paternal_last_name = "Ingrese el apellido paterno.";
+                this.errorInputActivity3 = 'form-group has-error';
+                this.errorClase = 1;
+            }
+            if (!this.maternal_last_name) {
+                this.errors.maternal_last_name = "Ingrese el apellido materno.";
+                this.errorInputActivity4 = 'form-group has-error';
+                this.errorClase = 1;
+            }
             return this.errorClase;
         },
         paginaActual: function paginaActual() {
@@ -26935,10 +26904,30 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             var me = this;
             me.pagination.current_page = page;
             //me.listado=1;
-            me.listar(page);
+            me.list_data(page);
         },
-        save: function save() {
-            var _this2 = this;
+        editar: function editar(id) {
+            var me = this;
+            me.listado = 2;
+            me.limpiar();
+            me.get_branch();
+            var url = 'editMercado?id=' + id;
+            axios.get(url).then(function (response) {
+                var respuesta = response.data;
+                me.id = respuesta.datax[0].id;
+                me.id_person = respuesta.datax[0].id_person;
+                me.number_doc = respuesta.datax[0].number_doc;
+                me.personal = respuesta.datax[0].paternal_last_name + ' ' + respuesta.datax[0].maternal_last_name + ' ' + respuesta.datax[0].names;
+                me.code = respuesta.datax[0].code;
+                me.name = respuesta.datax[0].name;
+                me.date_creation = respuesta.datax[0].date_creation;
+                me.validarData();
+            }).catch(function (error) {
+                console.log(error);
+            });
+        },
+        save_market: function save_market() {
+            var _this = this;
 
             if (this.validarData()) {
                 return;
@@ -26954,149 +26943,137 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             }).then(function (result) {
                 if (result.value) {
 
-                    var me = _this2;
-                    axios.post('save_payment_pledge', {
-                        'id_pledge': _this2.id_pledge, 'id_customer': _this2.id_customer,
-                        'amountPayment': _this2.amountPayment, 'operation': _this2.modePayment,
-                        'residue': Number(_this2.residue) - Number(_this2.amountPayment), 'interest': 0,
-                        'dateModePayment': __WEBPACK_IMPORTED_MODULE_1_moment_timezone___default()(__WEBPACK_IMPORTED_MODULE_1_moment_timezone___default()(_this2.dateModePayment, 'DD/MM/YYYY')).format('YYYY-MM-DD')
+                    var me = _this;
+                    axios.post('save_market', {
+                        'id': _this.id,
+                        'code': _this.code,
+                        'name': _this.name,
+                        'date_creation': __WEBPACK_IMPORTED_MODULE_1_moment_timezone___default()(__WEBPACK_IMPORTED_MODULE_1_moment_timezone___default()(_this.date_creation, 'DD/MM/YYYY')).format('YYYY-MM-DD'),
+                        'id_person': _this.id_person,
+                        'id_branch_office': _this.id_branch_office
                     }).then(function (response) {
-
-                        //imprimir
-                        var url = 'ticket_plegde?capital=' + me.amountPayment + '&interest=0&name_customer=' + me.name_customer + '&date_movement=' + __WEBPACK_IMPORTED_MODULE_1_moment_timezone___default()(__WEBPACK_IMPORTED_MODULE_1_moment_timezone___default()(me.dateModePayment, 'DD/MM/YYYY')).format('YYYY-MM-DD') + '&type=' + me.modePayment;
-                        window.open(url, '_blank');
-                        swal('Guardado!', 'El registro ha sido guardado con éxito.', 'success');
-                        me.listar(1);
+                        me.limpiar();
                         me.listado = 1;
+                        me.list_data(1);
+                        swal('Guardado!', 'El registro ha sido guardado con éxito.', 'success');
+                    }).catch(function (error) {
+                        console.log(error);
+                    });
+                } else if (
+                // Read more about handling dismissals
+                result.dismiss === swal.DismissReason.cancel) {}
+            });
+        },
+        save_personal: function save_personal() {
+            var _this2 = this;
+
+            if (this.validarDataPersonal()) {
+                return;
+            }
+            swal({
+                title: 'Esta seguro de guardar la informacion?',
+                type: 'warning',
+                showCancelButton: true, confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33', confirmButtonText: 'Aceptar!',
+                cancelButtonText: 'Cancelar', confirmButtonClass: 'btn btn-success',
+                cancelButtonClass: 'btn btn-danger', buttonsStyling: false,
+                reverseButtons: true
+            }).then(function (result) {
+                if (result.value) {
+                    var me = _this2;
+                    axios.post('save_personal', {
+                        'id': _this2.id,
+                        'number_doc': _this2.number_doc_add, 'names': _this2.names,
+                        'paternal_last_name': _this2.paternal_last_name, 'maternal_last_name': _this2.maternal_last_name
+                    }).then(function (response) {
+                        me.limpiar();
+                        me.listado = 1;
+                        me.list_data(1);
+                        close_modal();
+                        swal('Guardado!', 'El registro ha sido guardado con éxito.', 'success');
+                    }).catch(function (error) {
+                        console.log(error);
+                    });
+                } else if (
+                // Read more about handling dismissals
+                result.dismiss === swal.DismissReason.cancel) {}
+            });
+        },
+        eliminar: function eliminar(id) {
+            var _this3 = this;
+
+            swal({
+                title: '¿Esta seguro de eliminar?',
+                type: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Aceptar!',
+                cancelButtonText: 'Cancelar',
+                confirmButtonClass: 'btn btn-success',
+                cancelButtonClass: 'btn btn-danger',
+                buttonsStyling: false,
+                reverseButtons: true
+            }).then(function (result) {
+                if (result.value) {
+                    var me = _this3;
+                    axios.post('deleteMercado', {
+                        'id': id
+
+                    }).then(function (response) {
+                        me.listado = 1;
+                        me.list_data(1);
                     }).catch(function (error) {
                         console.log(error);
                     });
                 } else if (result.dismiss === swal.DismissReason.cancel) {}
             });
         },
-        modePaymentChange: function modePaymentChange() {
-            if (this.modePayment == 'Liquidacion') {
-                this.amountPayment = this.residue;
-                //this.amountPayment=Number(this.interest_customer)+Number(this.capital_customer);
-                this.program = 0;
-            } else if (this.modePayment == 'Interes') {
-                this.amountPayment = this.interest_customer;
-            } else {
-                this.amountPayment = this.residue;
-                //this.amountPayment=Number(this.interest_customer)+Number(this.capital_customer);
-            }
+        emprendar: function emprendar(id) {
+            var me = this;
+            me.listado = 3;
         },
-        addDay: function addDay(day) {
-
-            var fecha = new Date();
-            fecha.setDate(__WEBPACK_IMPORTED_MODULE_1_moment_timezone___default()(__WEBPACK_IMPORTED_MODULE_1_moment_timezone___default()(this.dateInit, 'DD/MM/YYYY')).format('DD'));
-            fecha.setMonth(__WEBPACK_IMPORTED_MODULE_1_moment_timezone___default()(__WEBPACK_IMPORTED_MODULE_1_moment_timezone___default()(this.dateInit, 'DD/MM/YYYY')).format('MM') - 1);
-            fecha.setYear(__WEBPACK_IMPORTED_MODULE_1_moment_timezone___default()(__WEBPACK_IMPORTED_MODULE_1_moment_timezone___default()(this.dateInit, 'DD/MM/YYYY')).format('YYYY'));
-            var fechaoriginal = new Date();
-
-            fechaoriginal.setDate(__WEBPACK_IMPORTED_MODULE_1_moment_timezone___default()(__WEBPACK_IMPORTED_MODULE_1_moment_timezone___default()(this.dateInit, 'DD/MM/YYYY')).format('DD'));
-            fechaoriginal.setMonth(__WEBPACK_IMPORTED_MODULE_1_moment_timezone___default()(__WEBPACK_IMPORTED_MODULE_1_moment_timezone___default()(this.dateInit, 'DD/MM/YYYY')).format('MM') - 1);
-            fechaoriginal.setYear(__WEBPACK_IMPORTED_MODULE_1_moment_timezone___default()(__WEBPACK_IMPORTED_MODULE_1_moment_timezone___default()(this.dateInit, 'DD/MM/YYYY')).format('YYYY'));
-            var contador = 0;
-            var dayoriginal = day;
-            if (this.newProgramPayment == 'Diario') {
-                //var addTime = i * 86400; //Tiempo en segundos
-                fecha.setSeconds(86400); //Añado el tiempo
-                for (var i = 0; i < day; i++) {
-                    if (fecha.getUTCDay() == 0) {
-                        contador++;
-                        day++;
-                    }
-                    fecha.setSeconds(86400);
-                }
-                contador = contador + dayoriginal;
-                fechaoriginal.setSeconds(contador * 86400);
-            }
-            if (this.newProgramPayment == 'Semanal') {
-                day = day * 7;
-                fechaoriginal.setDate(fechaoriginal.getDate() + day);
-            }
-            if (this.newProgramPayment == 'Quincenal') {
-                day = day * 15;
-                fechaoriginal.setDate(fechaoriginal.getDate() + day);
-            }
-            if (this.newProgramPayment == 'Mensual') {
-                fechaoriginal.setMonth(fechaoriginal.getMonth() + day);
-                //comprobando domingo
-                if (fechaoriginal.getUTCDay() == 0) {
-                    fechaoriginal.setSeconds(86400);
-                }
-            }
-
-            var hoy = '' + fechaoriginal.getDate() + '/' + (Number(fechaoriginal.getMonth()) + 1) + '/' + fechaoriginal.getFullYear();
-            return hoy;
-        },
-        calculateTeabyTerm: function calculateTeabyTerm() {
-
-            // this.interest=Number(this.amount)*(Number(this.tea)*Number(this.term))/100;
-            // this.interest=Number((this.interest).toFixed(1));
-            //this.date_end='01-01-01';
-            // var hoy= ''+new Date().getDate()+'/'+(Number(new Date().getMonth())+1)+'/'+new Date().getFullYear();
-            this.dateEnd = this.addDay(Number(this.term));
+        add_branch_office: function add_branch_office() {
+            var me = this;
+            me.listado = 2;
+            me.get_branch();
         },
         volver: function volver() {
             var me = this;
+            me.limpiar();
             me.listado = 1;
         },
         descargar: function descargar(buscar) {
             var url = '/downloadprogram?buscar=' + buscar;
             window.location.href = url;
         },
-        printx: function printx(midata) {
-            var me = this;
-            var url = 'ticket_plegde?capital=' + midata.capital + '&interest=' + midata.interest + '&name_customer=' + this.name_customer + '&date_movement=' + midata.date_movement + '&date_system=' + midata.date_system + '&type=' + midata.operation;
-            window.open(url, '_blank');
-            //  window.location.href = url;
+        limpiar: function limpiar() {
+            this.errorInputActivity = 'form-group';
+            this.errorInputActivity2 = 'form-group';
+            this.errors = {};
+            this.errors.number_doc = "";
+            this.errors.name = "";
+            this.errors.paternal_last_name = "";
+            this.errors.maternal_last_name = "";
+            this.errors.phone = "";
+            this.errors.address = "";
+            this.number_doc = "";
+            this.number_doc_add = "";
+            this.name = "";
+            this.names = "";
+            this.paternal_last_name = "";
+            this.maternal_last_name = "";
+            this.phone = "";
+            this.address = "";
+            this.id = -1;
         },
-        collect: function collect(midata) {
-            var me = this;
-            me.listado = 3;
-            this.name_customer = midata.nombres;
-
-            this.capital_customer = midata.capital;
-            this.amount = midata.capital;
-            this.tea = midata.tea;
-            this.interest_customer = midata.interest;
-            this.date_customer = midata.fecha;
-            this.dateInit = __WEBPACK_IMPORTED_MODULE_1_moment_timezone___default()(midata.date_end).toDate();
-            this.dateEnd = this.addDay(Number(this.term));
-
-            this.id_pledge = midata.id;
-            this.id_customer = midata.id_person;
-            //obteniendo los movimientos o pagos
-            var url = 'get_movement_pledge?id_pledge=' + midata.id;
-            axios.get(url).then(function (response) {
-                var respuesta = response.data;
-                me.listMovementPledge = respuesta.datax;
-            }).catch(function (error) {
-                console.log(error);
-            });
-            //obteniendo el detalle de movimiento o historial del empeño
-            url = 'get_detail_movement_pledge?id_pledge=' + midata.id;
-            axios.get(url).then(function (response) {
-                var respuesta = response.data;
-                me.listDetailMovementPledge = respuesta.datax;
-                for (var i = 0; i < me.listDetailMovementPledge.length; i++) {
-                    me.residue = me.listDetailMovementPledge[i].residue;
-                }
-                //alert(me.residue);
-                me.amountPayment = me.residue;
-            }).catch(function (error) {
-                console.log(error);
-            });
-        },
-        listar: function listar(page) {
+        list_data: function list_data(page) {
             var me = this;
             me.listado = 0;
-            var url = 'get_list_active_pledge?buscar=' + me.buscar + '&page=' + page;
+            var url = 'get_list_market?search_market=' + me.search_market + '&page=' + page;
             axios.get(url).then(function (response) {
                 var respuesta = response.data;
-                me.list = respuesta.datax;
+                me.list_market = respuesta.datax;
                 me.pagination = respuesta.pagination;
                 me.listado = 1;
             }).catch(function (error) {
@@ -27105,12 +27082,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         }
     },
     mounted: function mounted() {
-        this.listar(1);
+        this.list_data(1);
     }
 });
 
 /***/ }),
-/* 220 */
+/* 228 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -27120,162 +27097,413 @@ var render = function() {
   return _c("main", { staticClass: "main" }, [
     _vm._m(0),
     _vm._v(" "),
-    _c("section", { staticClass: "content" }, [
-      _c(
-        "div",
-        { staticClass: "row" },
-        [
-          _c("div", { staticClass: "col-md-12" }, [
-            _c("div", { staticClass: "box box-primary" }, [
-              _c(
-                "div",
-                { staticClass: "box-header with-border" },
-                [
-                  _vm._m(1),
-                  _vm._v(" "),
-                  _vm.listado == 1
-                    ? [
-                        _c("div", { staticClass: "box-tools pull-right" }, [
-                          _c("span", { staticClass: "label label-success" }, [
-                            _vm._v(
-                              "TOTAL DE REGISTROS: " +
-                                _vm._s(_vm.pagination.total)
-                            )
-                          ])
-                        ])
-                      ]
-                    : _vm._e()
-                ],
-                2
-              ),
-              _vm._v(" "),
-              _c("div", { staticClass: "box-body" }, [
+    _c("div", { staticClass: "box-body" }, [
+      _c("div", { staticClass: "row" }, [
+        _c("div", { staticClass: "col-md-12" }, [
+          _c("div", { staticClass: "container-fluid" }, [
+            _c("div", { staticClass: "card" }, [
+              _c("div", { staticClass: "card-body" }, [
                 _c("div", { staticClass: "row" }, [
-                  _c("div", { staticClass: "col-md-12" }, [
-                    _c("div", { staticClass: "container-fluid" }, [
-                      _c("div", { staticClass: "card" }, [
-                        _c("div", { staticClass: "card-body" }, [
-                          _c("div", { staticClass: "row" }, [
-                            _c(
-                              "div",
-                              {
-                                staticClass:
-                                  "col-lg-12 col-md-12 col-sm-12 col-xs-12"
-                              },
-                              [
-                                _c(
-                                  "div",
-                                  { staticClass: "box-body" },
-                                  [
-                                    _vm.listado == 0 ? [_vm._m(2)] : _vm._e(),
-                                    _vm._v(" "),
-                                    _vm.listado == 1
-                                      ? [
+                  _c(
+                    "div",
+                    { staticClass: "col-lg-12 col-md-12 col-sm-12 col-xs-12" },
+                    [
+                      _c(
+                        "div",
+                        { staticClass: "box-body" },
+                        [
+                          _vm.listado == 0 ? [_vm._m(1)] : _vm._e(),
+                          _vm._v(" "),
+                          _vm.listado == 1
+                            ? [
+                                _c("div", { staticClass: "row" }, [
+                                  _c(
+                                    "div",
+                                    {
+                                      staticClass:
+                                        "col-xs-9 col-sm-9 col-md-9 col-lg-9"
+                                    },
+                                    [
+                                      _c(
+                                        "div",
+                                        {
+                                          staticClass: "input-group",
+                                          staticStyle: {
+                                            "margin-bottom": "15px"
+                                          }
+                                        },
+                                        [
+                                          _c("input", {
+                                            directives: [
+                                              {
+                                                name: "model",
+                                                rawName: "v-model",
+                                                value: _vm.search_market,
+                                                expression: "search_market"
+                                              }
+                                            ],
+                                            staticClass: "form-control",
+                                            staticStyle: {
+                                              "border-bottom-left-radius":
+                                                "3px",
+                                              "border-top-left-radius": "3px"
+                                            },
+                                            attrs: {
+                                              type: "text",
+                                              placeholder:
+                                                "Buscar por código o denominación del Mercado y/o datos del Personal."
+                                            },
+                                            domProps: {
+                                              value: _vm.search_market
+                                            },
+                                            on: {
+                                              keyup: function($event) {
+                                                if (
+                                                  !$event.type.indexOf("key") &&
+                                                  _vm._k(
+                                                    $event.keyCode,
+                                                    "enter",
+                                                    13,
+                                                    $event.key,
+                                                    "Enter"
+                                                  )
+                                                ) {
+                                                  return null
+                                                }
+                                                return _vm.list_data(1)
+                                              },
+                                              input: function($event) {
+                                                if ($event.target.composing) {
+                                                  return
+                                                }
+                                                _vm.search_market =
+                                                  $event.target.value
+                                              }
+                                            }
+                                          }),
+                                          _vm._v(" "),
                                           _c(
-                                            "div",
-                                            { staticClass: "row" },
+                                            "span",
+                                            { staticClass: "input-group-btn" },
                                             [
                                               _c(
-                                                "div",
-                                                { staticClass: "col-md-12" },
+                                                "button",
+                                                {
+                                                  staticClass:
+                                                    "btn btn-search btn-flat",
+                                                  staticStyle: {
+                                                    "border-bottom-right-radius":
+                                                      "3px",
+                                                    "border-top-right-radius":
+                                                      "3px"
+                                                  },
+                                                  attrs: { type: "submit" },
+                                                  on: {
+                                                    click: function($event) {
+                                                      return _vm.list_data(1)
+                                                    }
+                                                  }
+                                                },
                                                 [
-                                                  _c(
-                                                    "div",
-                                                    {
-                                                      staticClass:
-                                                        "input-group",
-                                                      staticStyle: {
-                                                        "margin-bottom": "15px"
-                                                      }
-                                                    },
-                                                    [
-                                                      _c("input", {
-                                                        directives: [
-                                                          {
-                                                            name: "model",
-                                                            rawName: "v-model",
-                                                            value: _vm.buscar,
-                                                            expression: "buscar"
-                                                          }
-                                                        ],
-                                                        staticClass:
-                                                          "form-control",
+                                                  _c("i", {
+                                                    staticClass: "fa fa-search"
+                                                  }),
+                                                  _vm._v(" Buscar")
+                                                ]
+                                              )
+                                            ]
+                                          )
+                                        ]
+                                      )
+                                    ]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    {
+                                      staticClass:
+                                        "col-xs-3 col-sm-3 col-md-3 col-lg-3"
+                                    },
+                                    [
+                                      _c(
+                                        "div",
+                                        {
+                                          staticClass: "btn-group",
+                                          staticStyle: {
+                                            float: "right",
+                                            "margin-left": "10px"
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "button",
+                                            {
+                                              staticClass: "btn btn-add",
+                                              attrs: { type: "button" },
+                                              on: {
+                                                click: function($event) {
+                                                  return _vm.add_branch_office()
+                                                }
+                                              }
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: "fa fa-plus"
+                                              }),
+                                              _vm._v(
+                                                " AGREGAR MERCADO\n                                                                "
+                                              )
+                                            ]
+                                          )
+                                        ]
+                                      )
+                                    ]
+                                  )
+                                ]),
+                                _vm._v(" "),
+                                _c("div", { staticClass: "row" }, [
+                                  _c("div", { staticClass: "col-md-12" }, [
+                                    _c(
+                                      "div",
+                                      {
+                                        staticClass:
+                                          "box-body table-responsive no-padding"
+                                      },
+                                      [
+                                        _c(
+                                          "table",
+                                          {
+                                            staticClass: "table table-hover",
+                                            staticStyle: { "font-size": "12px" }
+                                          },
+                                          [
+                                            _vm._m(2),
+                                            _vm._v(" "),
+                                            _c(
+                                              "tbody",
+                                              _vm._l(_vm.list_market, function(
+                                                midata,
+                                                index
+                                              ) {
+                                                return _c(
+                                                  "tr",
+                                                  { key: index },
+                                                  [
+                                                    _c(
+                                                      "td",
+                                                      {
                                                         staticStyle: {
-                                                          "border-bottom-left-radius":
-                                                            "3px",
-                                                          "border-top-left-radius":
-                                                            "3px"
-                                                        },
-                                                        attrs: {
-                                                          type: "text",
-                                                          placeholder:
-                                                            "Buscar por dni o nombres..."
-                                                        },
-                                                        domProps: {
-                                                          value: _vm.buscar
-                                                        },
-                                                        on: {
-                                                          keyup: function(
-                                                            $event
-                                                          ) {
-                                                            if (
-                                                              !$event.type.indexOf(
-                                                                "key"
-                                                              ) &&
-                                                              _vm._k(
-                                                                $event.keyCode,
-                                                                "enter",
-                                                                13,
-                                                                $event.key,
-                                                                "Enter"
-                                                              )
-                                                            ) {
-                                                              return null
-                                                            }
-                                                            return _vm.listar(1)
-                                                          },
-                                                          input: function(
-                                                            $event
-                                                          ) {
-                                                            if (
-                                                              $event.target
-                                                                .composing
-                                                            ) {
-                                                              return
-                                                            }
-                                                            _vm.buscar =
-                                                              $event.target.value
-                                                          }
+                                                          "vertical-align":
+                                                            "middle",
+                                                          "text-align": "center"
                                                         }
-                                                      }),
-                                                      _vm._v(" "),
-                                                      _c(
-                                                        "span",
+                                                      },
+                                                      [
+                                                        _vm._v(
+                                                          _vm._s(
+                                                            index +
+                                                              1 +
+                                                              (Number(
+                                                                _vm.pagination
+                                                                  .current_page
+                                                              ) -
+                                                                1) *
+                                                                8
+                                                          )
+                                                        )
+                                                      ]
+                                                    ),
+                                                    _vm._v(" "),
+                                                    _c("td", {
+                                                      staticStyle: {
+                                                        "vertical-align":
+                                                          "middle",
+                                                        "text-align": "center"
+                                                      },
+                                                      domProps: {
+                                                        textContent: _vm._s(
+                                                          midata.code
+                                                        )
+                                                      }
+                                                    }),
+                                                    _vm._v(" "),
+                                                    _c("td", {
+                                                      staticStyle: {
+                                                        "vertical-align":
+                                                          "middle",
+                                                        "text-align": "center"
+                                                      },
+                                                      domProps: {
+                                                        textContent: _vm._s(
+                                                          midata.personal
+                                                        )
+                                                      }
+                                                    }),
+                                                    _vm._v(" "),
+                                                    _c("td", {
+                                                      staticStyle: {
+                                                        "vertical-align":
+                                                          "middle"
+                                                      },
+                                                      domProps: {
+                                                        textContent: _vm._s(
+                                                          midata.name
+                                                        )
+                                                      }
+                                                    }),
+                                                    _vm._v(" "),
+                                                    _c("td", {
+                                                      staticStyle: {
+                                                        "vertical-align":
+                                                          "middle",
+                                                        "text-align": "center"
+                                                      },
+                                                      domProps: {
+                                                        textContent: _vm._s(
+                                                          midata.date_creation
+                                                        )
+                                                      }
+                                                    }),
+                                                    _vm._v(" "),
+                                                    _c("td", {
+                                                      staticStyle: {
+                                                        "vertical-align":
+                                                          "middle"
+                                                      },
+                                                      domProps: {
+                                                        textContent: _vm._s(
+                                                          midata.name_branch_office
+                                                        )
+                                                      }
+                                                    }),
+                                                    _vm._v(" "),
+                                                    _c(
+                                                      "td",
+                                                      {
+                                                        staticStyle: {
+                                                          "text-align":
+                                                            "center",
+                                                          "vertical-align":
+                                                            "middle"
+                                                        }
+                                                      },
+                                                      [
+                                                        _c(
+                                                          "button",
+                                                          {
+                                                            staticClass:
+                                                              "btn btn-editar btn-sm",
+                                                            attrs: {
+                                                              type: "button",
+                                                              "data-toggle":
+                                                                "tooltip",
+                                                              title: "Editar"
+                                                            },
+                                                            on: {
+                                                              click: function(
+                                                                $event
+                                                              ) {
+                                                                return _vm.editar(
+                                                                  midata.id
+                                                                )
+                                                              }
+                                                            }
+                                                          },
+                                                          [
+                                                            _c("i", {
+                                                              staticClass:
+                                                                "fa fa-edit"
+                                                            })
+                                                          ]
+                                                        ),
+                                                        _vm._v(" "),
+                                                        _c(
+                                                          "button",
+                                                          {
+                                                            staticClass:
+                                                              "btn btn-eliminar btn-sm",
+                                                            attrs: {
+                                                              type: "button",
+                                                              "data-toggle":
+                                                                "tooltip",
+                                                              title: "Eliminar"
+                                                            },
+                                                            on: {
+                                                              click: function(
+                                                                $event
+                                                              ) {
+                                                                return _vm.eliminar(
+                                                                  midata.id
+                                                                )
+                                                              }
+                                                            }
+                                                          },
+                                                          [
+                                                            _c("i", {
+                                                              staticClass:
+                                                                "fa fa-trash"
+                                                            })
+                                                          ]
+                                                        )
+                                                      ]
+                                                    )
+                                                  ]
+                                                )
+                                              }),
+                                              0
+                                            )
+                                          ]
+                                        )
+                                      ]
+                                    ),
+                                    _vm._v(" "),
+                                    _c(
+                                      "div",
+                                      {
+                                        staticClass:
+                                          "dataTables_paginate paging_simple_numbers",
+                                        staticStyle: {
+                                          float: "right !important"
+                                        }
+                                      },
+                                      [
+                                        _c("nav", [
+                                          _c(
+                                            "ul",
+                                            { staticClass: "pagination" },
+                                            [
+                                              _c(
+                                                "ul",
+                                                { staticClass: "pagination" },
+                                                [
+                                                  _vm.pagination.current_page >
+                                                  1
+                                                    ? _c(
+                                                        "li",
                                                         {
                                                           staticClass:
-                                                            "input-group-btn"
+                                                            "page-item"
                                                         },
                                                         [
                                                           _c(
-                                                            "button",
+                                                            "a",
                                                             {
                                                               staticClass:
-                                                                "btn btn-search btn-flat",
-                                                              staticStyle: {
-                                                                "border-bottom-right-radius":
-                                                                  "3px",
-                                                                "border-top-right-radius":
-                                                                  "3px"
-                                                              },
+                                                                "page-link",
                                                               attrs: {
-                                                                type: "submit"
+                                                                href: "#"
                                                               },
                                                               on: {
                                                                 click: function(
                                                                   $event
                                                                 ) {
-                                                                  return _vm.listar(
-                                                                    1
+                                                                  $event.preventDefault()
+                                                                  _vm.cambiarPagina(
+                                                                    Number(
+                                                                      _vm
+                                                                        .pagination
+                                                                        .current_page
+                                                                    ) - 1
                                                                   )
                                                                 }
                                                               }
@@ -27283,2367 +27511,987 @@ var render = function() {
                                                             [
                                                               _c("i", {
                                                                 staticClass:
-                                                                  "fa fa-search"
-                                                              }),
-                                                              _vm._v(" Buscar")
+                                                                  "fa fa-angle-left",
+                                                                staticStyle: {
+                                                                  color:
+                                                                    "#189900",
+                                                                  cursor:
+                                                                    "pointer"
+                                                                }
+                                                              })
                                                             ]
                                                           )
                                                         ]
                                                       )
-                                                    ]
+                                                    : _vm._e(),
+                                                  _vm._v(" "),
+                                                  _vm._l(
+                                                    _vm.pagesNumber,
+                                                    function(page) {
+                                                      return _c(
+                                                        "li",
+                                                        {
+                                                          key: page,
+                                                          staticClass:
+                                                            "page-item",
+                                                          class: [
+                                                            page ==
+                                                            _vm.isActived
+                                                              ? "active"
+                                                              : ""
+                                                          ]
+                                                        },
+                                                        [
+                                                          _c("a", {
+                                                            staticClass:
+                                                              "page-link",
+                                                            attrs: {
+                                                              href: "#"
+                                                            },
+                                                            domProps: {
+                                                              textContent: _vm._s(
+                                                                page
+                                                              )
+                                                            },
+                                                            on: {
+                                                              click: function(
+                                                                $event
+                                                              ) {
+                                                                $event.preventDefault()
+                                                                return _vm.cambiarPagina(
+                                                                  page
+                                                                )
+                                                              }
+                                                            }
+                                                          })
+                                                        ]
+                                                      )
+                                                    }
                                                   ),
                                                   _vm._v(" "),
-                                                  _c("h5", [
-                                                    _vm._v("TODAS LAS PRENDAS")
-                                                  ])
-                                                ]
-                                              ),
-                                              _vm._v(" "),
-                                              _vm._l(_vm.list, function(
-                                                midata,
-                                                index
-                                              ) {
-                                                return _c(
-                                                  "div",
+                                                  _vm.pagination.current_page <
+                                                  _vm.pagination.last_page
+                                                    ? _c(
+                                                        "li",
+                                                        {
+                                                          staticClass:
+                                                            "page-item"
+                                                        },
+                                                        [
+                                                          _c(
+                                                            "a",
+                                                            {
+                                                              staticClass:
+                                                                "page-link",
+                                                              attrs: {
+                                                                href: "#"
+                                                              },
+                                                              on: {
+                                                                click: function(
+                                                                  $event
+                                                                ) {
+                                                                  $event.preventDefault()
+                                                                  _vm.cambiarPagina(
+                                                                    Number(
+                                                                      _vm
+                                                                        .pagination
+                                                                        .current_page
+                                                                    ) + 1
+                                                                  )
+                                                                }
+                                                              }
+                                                            },
+                                                            [
+                                                              _c("i", {
+                                                                staticClass:
+                                                                  "fa fa-angle-right",
+                                                                staticStyle: {
+                                                                  color:
+                                                                    "#189900",
+                                                                  cursor:
+                                                                    "pointer"
+                                                                }
+                                                              })
+                                                            ]
+                                                          )
+                                                        ]
+                                                      )
+                                                    : _vm._e()
+                                                ],
+                                                2
+                                              )
+                                            ]
+                                          )
+                                        ])
+                                      ]
+                                    )
+                                  ])
+                                ])
+                              ]
+                            : _vm._e(),
+                          _vm._v(" "),
+                          _vm.listado == 2
+                            ? [
+                                _c("div", { staticClass: "row" }, [
+                                  _c("div", { staticClass: "col-md-12" }, [
+                                    _c(
+                                      "div",
+                                      {
+                                        staticClass: "btn-group",
+                                        staticStyle: { float: "right" }
+                                      },
+                                      [
+                                        _c(
+                                          "button",
+                                          {
+                                            staticClass: "btn btn-danger",
+                                            attrs: { type: "button" },
+                                            on: {
+                                              click: function($event) {
+                                                return _vm.volver()
+                                              }
+                                            }
+                                          },
+                                          [
+                                            _c("i", {
+                                              staticClass: "fa fa-close "
+                                            }),
+                                            _vm._v(
+                                              " CANCELAR\n                                                                "
+                                            )
+                                          ]
+                                        ),
+                                        _vm._v(" "),
+                                        _c(
+                                          "button",
+                                          {
+                                            staticClass: "btn btn-save",
+                                            attrs: { type: "button" },
+                                            on: {
+                                              click: function($event) {
+                                                return _vm.save_market()
+                                              }
+                                            }
+                                          },
+                                          [
+                                            _c("i", {
+                                              staticClass: "fa fa-save"
+                                            }),
+                                            _vm._v(
+                                              " GUARDAR\n                                                                "
+                                            )
+                                          ]
+                                        )
+                                      ]
+                                    )
+                                  ])
+                                ]),
+                                _vm._v(" "),
+                                _c("div", { staticClass: "row" }, [
+                                  _vm._m(3),
+                                  _vm._v(" "),
+                                  _c("div", { staticClass: "col-md-6" }, [
+                                    _c(
+                                      "div",
+                                      { class: _vm.errorInputActivity1 },
+                                      [
+                                        _c("label", { attrs: { for: "dni" } }, [
+                                          _vm._v("Código:")
+                                        ]),
+                                        _vm._v(" "),
+                                        _c(
+                                          "div",
+                                          {
+                                            staticClass: "input-group",
+                                            staticStyle: {
+                                              "margin-bottom": "15px"
+                                            }
+                                          },
+                                          [
+                                            _vm._m(4),
+                                            _vm._v(" "),
+                                            _c("input", {
+                                              directives: [
+                                                {
+                                                  name: "model",
+                                                  rawName: "v-model",
+                                                  value: _vm.code,
+                                                  expression: "code"
+                                                }
+                                              ],
+                                              staticClass: "form-control",
+                                              attrs: {
+                                                type: "text",
+                                                placeholder: "Código"
+                                              },
+                                              domProps: { value: _vm.code },
+                                              on: {
+                                                keyup: function($event) {
+                                                  if (
+                                                    !$event.type.indexOf(
+                                                      "key"
+                                                    ) &&
+                                                    _vm._k(
+                                                      $event.keyCode,
+                                                      "enter",
+                                                      13,
+                                                      $event.key,
+                                                      "Enter"
+                                                    )
+                                                  ) {
+                                                    return null
+                                                  }
+                                                  return _vm.list_data(1)
+                                                },
+                                                input: function($event) {
+                                                  if ($event.target.composing) {
+                                                    return
+                                                  }
+                                                  _vm.code = $event.target.value
+                                                }
+                                              }
+                                            }),
+                                            _vm._v(" "),
+                                            _c(
+                                              "span",
+                                              {
+                                                staticClass: "input-group-btn"
+                                              },
+                                              [
+                                                _c(
+                                                  "button",
                                                   {
-                                                    key: index,
                                                     staticClass:
-                                                      "col-md-6 col-sm-6 col-xs-12"
+                                                      "btn btn-search btn-flat",
+                                                    staticStyle: {
+                                                      "border-bottom-right-radius":
+                                                        "3px",
+                                                      "border-top-right-radius":
+                                                        "3px"
+                                                    },
+                                                    attrs: { type: "submit" },
+                                                    on: {
+                                                      click: function($event) {
+                                                        return _vm.list_data(1)
+                                                      }
+                                                    }
                                                   },
                                                   [
-                                                    _c(
-                                                      "div",
-                                                      {
-                                                        staticClass: "info-box"
-                                                      },
-                                                      [
-                                                        _vm._m(3, true),
-                                                        _vm._v(" "),
-                                                        _c(
-                                                          "div",
-                                                          {
-                                                            staticClass:
-                                                              "info-box-content",
-                                                            staticStyle: {
-                                                              padding: "0px",
-                                                              "background-color":
-                                                                "#f0f0f0de",
-                                                              "border-top-right-radius":
-                                                                "2px",
-                                                              "border-bottom-right-radius":
-                                                                "2px"
-                                                            }
-                                                          },
-                                                          [
-                                                            _c(
-                                                              "span",
-                                                              {
-                                                                staticClass:
-                                                                  "info-box-number",
-                                                                staticStyle: {
-                                                                  "padding-left":
-                                                                    "10px"
-                                                                }
-                                                              },
-                                                              [
-                                                                _vm._v(
-                                                                  _vm._s(
-                                                                    midata.nombres
-                                                                  )
-                                                                )
-                                                              ]
-                                                            ),
-                                                            _vm._v(" "),
-                                                            _c(
-                                                              "span",
-                                                              {
-                                                                staticClass:
-                                                                  "info-box-text",
-                                                                staticStyle: {
-                                                                  "padding-left":
-                                                                    "10px"
-                                                                }
-                                                              },
-                                                              [
-                                                                _vm._v(
-                                                                  "S/ " +
-                                                                    _vm._s(
-                                                                      midata.totalamount
-                                                                    ) +
-                                                                    " "
-                                                                ),
-                                                                _c("strong", [
-                                                                  _vm._v(
-                                                                    "periodo:"
-                                                                  )
-                                                                ]),
-                                                                _vm._v(
-                                                                  " " +
-                                                                    _vm._s(
-                                                                      midata.fecha
-                                                                    ) +
-                                                                    " "
-                                                                )
-                                                              ]
-                                                            ),
-                                                            _vm._v(" "),
-                                                            _c(
-                                                              "span",
-                                                              {
-                                                                staticClass:
-                                                                  "info-box-text",
-                                                                staticStyle: {
-                                                                  "padding-left":
-                                                                    "10px"
-                                                                }
-                                                              },
-                                                              [
-                                                                _c("strong", [
-                                                                  _vm._v(
-                                                                    "prenda:"
-                                                                  )
-                                                                ]),
-                                                                _vm._v(
-                                                                  " " +
-                                                                    _vm._s(
-                                                                      midata.guaranty
-                                                                    )
-                                                                )
-                                                              ]
-                                                            ),
-                                                            _vm._v(" "),
-                                                            _c(
-                                                              "div",
-                                                              {
-                                                                staticClass:
-                                                                  "small-box bg-green",
-                                                                staticStyle: {
-                                                                  "border-radius":
-                                                                    "0px 0px 2px",
-                                                                  "margin-top":
-                                                                    "2.1px",
-                                                                  "background-color":
-                                                                    "#158400 !important"
-                                                                }
-                                                              },
-                                                              [
-                                                                _c(
-                                                                  "p",
-                                                                  {
-                                                                    attrs: {
-                                                                      align:
-                                                                        "center"
-                                                                    }
-                                                                  },
-                                                                  [
-                                                                    _c(
-                                                                      "a",
-                                                                      {
-                                                                        staticClass:
-                                                                          "small-box-footer",
-                                                                        staticStyle: {
-                                                                          color:
-                                                                            "white"
-                                                                        },
-                                                                        attrs: {
-                                                                          href:
-                                                                            "#"
-                                                                        },
-                                                                        on: {
-                                                                          click: function(
-                                                                            $event
-                                                                          ) {
-                                                                            return _vm.collect(
-                                                                              midata
-                                                                            )
-                                                                          }
-                                                                        }
-                                                                      },
-                                                                      [
-                                                                        _c(
-                                                                          "i",
-                                                                          {
-                                                                            staticClass:
-                                                                              "fa fa-dollar",
-                                                                            staticStyle: {
-                                                                              color:
-                                                                                "yellow"
-                                                                            }
-                                                                          }
-                                                                        ),
-                                                                        _vm._v(
-                                                                          " Cobrar"
-                                                                        )
-                                                                      ]
-                                                                    ),
-                                                                    _vm._v(" "),
-                                                                    _c(
-                                                                      "a",
-                                                                      {
-                                                                        staticClass:
-                                                                          "small-box-footer",
-                                                                        staticStyle: {
-                                                                          color:
-                                                                            "white",
-                                                                          "margin-left":
-                                                                            "15px"
-                                                                        },
-                                                                        attrs: {
-                                                                          href:
-                                                                            "#"
-                                                                        },
-                                                                        on: {
-                                                                          click: function(
-                                                                            $event
-                                                                          ) {
-                                                                            return _vm.delete_pledge(
-                                                                              midata.id
-                                                                            )
-                                                                          }
-                                                                        }
-                                                                      },
-                                                                      [
-                                                                        _c(
-                                                                          "i",
-                                                                          {
-                                                                            staticClass:
-                                                                              "fa fa-trash",
-                                                                            staticStyle: {
-                                                                              color:
-                                                                                "red"
-                                                                            }
-                                                                          }
-                                                                        ),
-                                                                        _vm._v(
-                                                                          " Eliminar"
-                                                                        )
-                                                                      ]
-                                                                    )
-                                                                  ]
-                                                                )
-                                                              ]
-                                                            )
-                                                          ]
-                                                        )
-                                                      ]
-                                                    )
+                                                    _c("i", {
+                                                      staticClass:
+                                                        "fa fa-random"
+                                                    }),
+                                                    _vm._v(" GENERAR")
                                                   ]
+                                                )
+                                              ]
+                                            )
+                                          ]
+                                        )
+                                      ]
+                                    )
+                                  ]),
+                                  _vm._v(" "),
+                                  _c("div", { staticClass: "col-md-6" }, [
+                                    _c(
+                                      "div",
+                                      { class: _vm.errorInputActivity2 },
+                                      [
+                                        _c(
+                                          "label",
+                                          { attrs: { for: "ap_paterno" } },
+                                          [_vm._v("Denominación:")]
+                                        ),
+                                        _vm._v(" "),
+                                        _c(
+                                          "div",
+                                          { staticClass: "input-group" },
+                                          [
+                                            _vm._m(5),
+                                            _vm._v(" "),
+                                            _c("input", {
+                                              directives: [
+                                                {
+                                                  name: "model",
+                                                  rawName: "v-model",
+                                                  value: _vm.name,
+                                                  expression: "name"
+                                                }
+                                              ],
+                                              staticClass: "form-control",
+                                              staticStyle: {
+                                                "border-bottom-right-radius":
+                                                  "3px",
+                                                "border-top-right-radius": "3px"
+                                              },
+                                              attrs: {
+                                                type: "text",
+                                                placeholder: "Apellido Paterno"
+                                              },
+                                              domProps: { value: _vm.name },
+                                              on: {
+                                                input: function($event) {
+                                                  if ($event.target.composing) {
+                                                    return
+                                                  }
+                                                  _vm.name = $event.target.value
+                                                }
+                                              }
+                                            })
+                                          ]
+                                        )
+                                      ]
+                                    )
+                                  ]),
+                                  _vm._v(" "),
+                                  _c("div", { staticClass: "col-md-6" }, [
+                                    _c("div", { staticClass: "form-group" }, [
+                                      _c("label", { attrs: { for: "edad" } }, [
+                                        _vm._v("Fecha de Creación:")
+                                      ]),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        { staticClass: "input-group" },
+                                        [
+                                          _vm._m(6),
+                                          _vm._v(" "),
+                                          _c("date-picker", {
+                                            staticStyle: {
+                                              "border-top-right-radius": "3px",
+                                              "border-bottom-right-radius":
+                                                "3px"
+                                            },
+                                            attrs: { config: _vm.options },
+                                            model: {
+                                              value: _vm.date_creation,
+                                              callback: function($$v) {
+                                                _vm.date_creation = $$v
+                                              },
+                                              expression: "date_creation"
+                                            }
+                                          })
+                                        ],
+                                        1
+                                      )
+                                    ])
+                                  ]),
+                                  _vm._v(" "),
+                                  _c("div", { staticClass: "col-md-6" }, [
+                                    _c("div", { staticClass: "form-group" }, [
+                                      _c(
+                                        "label",
+                                        { attrs: { for: "estado_civil" } },
+                                        [_vm._v("Sucursal:")]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        { staticClass: "input-group" },
+                                        [
+                                          _vm._m(7),
+                                          _vm._v(" "),
+                                          _c(
+                                            "select",
+                                            {
+                                              directives: [
+                                                {
+                                                  name: "model",
+                                                  rawName: "v-model",
+                                                  value: _vm.id_branch_office,
+                                                  expression: "id_branch_office"
+                                                }
+                                              ],
+                                              staticClass:
+                                                "form-control select2",
+                                              staticStyle: {
+                                                "border-top-right-radius":
+                                                  "3px",
+                                                "border-bottom-right-radius":
+                                                  "3px"
+                                              },
+                                              on: {
+                                                change: function($event) {
+                                                  var $$selectedVal = Array.prototype.filter
+                                                    .call(
+                                                      $event.target.options,
+                                                      function(o) {
+                                                        return o.selected
+                                                      }
+                                                    )
+                                                    .map(function(o) {
+                                                      var val =
+                                                        "_value" in o
+                                                          ? o._value
+                                                          : o.value
+                                                      return val
+                                                    })
+                                                  _vm.id_branch_office = $event
+                                                    .target.multiple
+                                                    ? $$selectedVal
+                                                    : $$selectedVal[0]
+                                                }
+                                              }
+                                            },
+                                            [
+                                              _c(
+                                                "option",
+                                                {
+                                                  attrs: {
+                                                    selected: "selected",
+                                                    value: ""
+                                                  }
+                                                },
+                                                [_vm._v("Seleccione")]
+                                              ),
+                                              _vm._v(" "),
+                                              _vm._l(_vm.array_branch, function(
+                                                branch
+                                              ) {
+                                                return _c(
+                                                  "option",
+                                                  {
+                                                    key: branch.id,
+                                                    domProps: {
+                                                      value: branch.id
+                                                    }
+                                                  },
+                                                  [_vm._v(_vm._s(branch.name))]
                                                 )
                                               })
                                             ],
                                             2
                                           )
                                         ]
-                                      : _vm._e(),
-                                    _vm._v(" "),
-                                    _vm.listado == 3
-                                      ? [
-                                          _c("div", { staticClass: "row" }, [
-                                            _c(
-                                              "div",
-                                              { staticClass: "col-md-12" },
-                                              [
-                                                _c(
-                                                  "div",
-                                                  { staticClass: "form-group" },
-                                                  [
-                                                    _c(
-                                                      "label",
-                                                      {
-                                                        attrs: {
-                                                          for: "nombres"
-                                                        }
-                                                      },
-                                                      [_vm._v("Cliente:")]
-                                                    ),
-                                                    _vm._v(" "),
-                                                    _c(
-                                                      "div",
-                                                      {
-                                                        staticClass:
-                                                          "input-group"
-                                                      },
-                                                      [
-                                                        _vm._m(4),
-                                                        _vm._v(" "),
-                                                        _c("input", {
-                                                          directives: [
-                                                            {
-                                                              name: "model",
-                                                              rawName:
-                                                                "v-model",
-                                                              value:
-                                                                _vm.name_customer,
-                                                              expression:
-                                                                "name_customer"
-                                                            }
-                                                          ],
-                                                          staticClass:
-                                                            "form-control",
-                                                          staticStyle: {
-                                                            "border-bottom-right-radius":
-                                                              "3px",
-                                                            "border-top-right-radius":
-                                                              "3px"
-                                                          },
-                                                          attrs: {
-                                                            disabled: "",
-                                                            type: "text",
-                                                            placeholder:
-                                                              "Nombres"
-                                                          },
-                                                          domProps: {
-                                                            value:
-                                                              _vm.name_customer
-                                                          },
-                                                          on: {
-                                                            input: function(
-                                                              $event
-                                                            ) {
-                                                              if (
-                                                                $event.target
-                                                                  .composing
-                                                              ) {
-                                                                return
-                                                              }
-                                                              _vm.name_customer =
-                                                                $event.target.value
-                                                            }
-                                                          }
-                                                        })
-                                                      ]
-                                                    )
-                                                  ]
-                                                )
-                                              ]
-                                            ),
-                                            _vm._v(" "),
-                                            _c(
-                                              "div",
-                                              { staticClass: "col-md-4" },
-                                              [
-                                                _c(
-                                                  "div",
-                                                  { staticClass: "form-group" },
-                                                  [
-                                                    _c(
-                                                      "label",
-                                                      {
-                                                        attrs: {
-                                                          for: "nombres"
-                                                        }
-                                                      },
-                                                      [_vm._v("Préstamo:")]
-                                                    ),
-                                                    _vm._v(" "),
-                                                    _c(
-                                                      "div",
-                                                      {
-                                                        staticClass:
-                                                          "input-group"
-                                                      },
-                                                      [
-                                                        _vm._m(5),
-                                                        _vm._v(" "),
-                                                        _c("input", {
-                                                          directives: [
-                                                            {
-                                                              name: "model",
-                                                              rawName:
-                                                                "v-model",
-                                                              value:
-                                                                _vm.capital_customer,
-                                                              expression:
-                                                                "capital_customer"
-                                                            }
-                                                          ],
-                                                          staticClass:
-                                                            "form-control",
-                                                          staticStyle: {
-                                                            "border-bottom-right-radius":
-                                                              "3px",
-                                                            "border-top-right-radius":
-                                                              "3px"
-                                                          },
-                                                          attrs: {
-                                                            disabled: "",
-                                                            type: "text",
-                                                            placeholder: "200"
-                                                          },
-                                                          domProps: {
-                                                            value:
-                                                              _vm.capital_customer
-                                                          },
-                                                          on: {
-                                                            input: function(
-                                                              $event
-                                                            ) {
-                                                              if (
-                                                                $event.target
-                                                                  .composing
-                                                              ) {
-                                                                return
-                                                              }
-                                                              _vm.capital_customer =
-                                                                $event.target.value
-                                                            }
-                                                          }
-                                                        })
-                                                      ]
-                                                    )
-                                                  ]
-                                                )
-                                              ]
-                                            ),
-                                            _vm._v(" "),
-                                            _c(
-                                              "div",
-                                              { staticClass: "col-md-4" },
-                                              [
-                                                _c(
-                                                  "div",
-                                                  { staticClass: "form-group" },
-                                                  [
-                                                    _c(
-                                                      "label",
-                                                      {
-                                                        attrs: {
-                                                          for: "nombres"
-                                                        }
-                                                      },
-                                                      [_vm._v("Interés:")]
-                                                    ),
-                                                    _vm._v(" "),
-                                                    _c(
-                                                      "div",
-                                                      {
-                                                        staticClass:
-                                                          "input-group"
-                                                      },
-                                                      [
-                                                        _vm._m(6),
-                                                        _vm._v(" "),
-                                                        _c("input", {
-                                                          directives: [
-                                                            {
-                                                              name: "model",
-                                                              rawName:
-                                                                "v-model",
-                                                              value:
-                                                                _vm.interest_customer,
-                                                              expression:
-                                                                "interest_customer"
-                                                            }
-                                                          ],
-                                                          staticClass:
-                                                            "form-control",
-                                                          staticStyle: {
-                                                            "border-bottom-right-radius":
-                                                              "3px",
-                                                            "border-top-right-radius":
-                                                              "3px"
-                                                          },
-                                                          attrs: {
-                                                            disabled: "",
-                                                            type: "text",
-                                                            placeholder: "20"
-                                                          },
-                                                          domProps: {
-                                                            value:
-                                                              _vm.interest_customer
-                                                          },
-                                                          on: {
-                                                            input: function(
-                                                              $event
-                                                            ) {
-                                                              if (
-                                                                $event.target
-                                                                  .composing
-                                                              ) {
-                                                                return
-                                                              }
-                                                              _vm.interest_customer =
-                                                                $event.target.value
-                                                            }
-                                                          }
-                                                        })
-                                                      ]
-                                                    )
-                                                  ]
-                                                )
-                                              ]
-                                            ),
-                                            _vm._v(" "),
-                                            _c(
-                                              "div",
-                                              { staticClass: "col-md-4" },
-                                              [
-                                                _c(
-                                                  "div",
-                                                  { staticClass: "form-group" },
-                                                  [
-                                                    _c(
-                                                      "label",
-                                                      {
-                                                        attrs: {
-                                                          for: "nombres"
-                                                        }
-                                                      },
-                                                      [
-                                                        _vm._v(
-                                                          "Fecha Préstamo:"
-                                                        )
-                                                      ]
-                                                    ),
-                                                    _vm._v(" "),
-                                                    _c(
-                                                      "div",
-                                                      {
-                                                        staticClass:
-                                                          "input-group"
-                                                      },
-                                                      [
-                                                        _vm._m(7),
-                                                        _vm._v(" "),
-                                                        _c("input", {
-                                                          directives: [
-                                                            {
-                                                              name: "model",
-                                                              rawName:
-                                                                "v-model",
-                                                              value:
-                                                                _vm.date_customer,
-                                                              expression:
-                                                                "date_customer"
-                                                            }
-                                                          ],
-                                                          staticClass:
-                                                            "form-control",
-                                                          staticStyle: {
-                                                            "border-bottom-right-radius":
-                                                              "3px",
-                                                            "border-top-right-radius":
-                                                              "3px"
-                                                          },
-                                                          attrs: {
-                                                            disabled: "",
-                                                            type: "text",
-                                                            placeholder: "20"
-                                                          },
-                                                          domProps: {
-                                                            value:
-                                                              _vm.date_customer
-                                                          },
-                                                          on: {
-                                                            input: function(
-                                                              $event
-                                                            ) {
-                                                              if (
-                                                                $event.target
-                                                                  .composing
-                                                              ) {
-                                                                return
-                                                              }
-                                                              _vm.date_customer =
-                                                                $event.target.value
-                                                            }
-                                                          }
-                                                        })
-                                                      ]
-                                                    )
-                                                  ]
-                                                )
-                                              ]
-                                            ),
-                                            _vm._v(" "),
-                                            _c(
-                                              "div",
-                                              { staticClass: "col-md-4" },
-                                              [
-                                                _c(
-                                                  "div",
-                                                  {
-                                                    class:
-                                                      _vm.errorInputActivity
-                                                  },
-                                                  [
-                                                    _c(
-                                                      "label",
-                                                      {
-                                                        attrs: {
-                                                          for: "ap_paterno"
-                                                        }
-                                                      },
-                                                      [_vm._v("Modo de Pago")]
-                                                    ),
-                                                    _vm._v(" "),
-                                                    _c(
-                                                      "div",
-                                                      {
-                                                        staticClass:
-                                                          "input-group"
-                                                      },
-                                                      [
-                                                        _vm._m(8),
-                                                        _vm._v(" "),
-                                                        _c(
-                                                          "select",
-                                                          {
-                                                            directives: [
-                                                              {
-                                                                name: "model",
-                                                                rawName:
-                                                                  "v-model",
-                                                                value:
-                                                                  _vm.modePayment,
-                                                                expression:
-                                                                  "modePayment"
-                                                              }
-                                                            ],
-                                                            staticClass:
-                                                              "form-control select2",
-                                                            staticStyle: {
-                                                              "border-top-right-radius":
-                                                                "3px",
-                                                              "border-bottom-right-radius":
-                                                                "3px"
-                                                            },
-                                                            on: {
-                                                              change: [
-                                                                function(
-                                                                  $event
-                                                                ) {
-                                                                  var $$selectedVal = Array.prototype.filter
-                                                                    .call(
-                                                                      $event
-                                                                        .target
-                                                                        .options,
-                                                                      function(
-                                                                        o
-                                                                      ) {
-                                                                        return o.selected
-                                                                      }
-                                                                    )
-                                                                    .map(
-                                                                      function(
-                                                                        o
-                                                                      ) {
-                                                                        var val =
-                                                                          "_value" in
-                                                                          o
-                                                                            ? o._value
-                                                                            : o.value
-                                                                        return val
-                                                                      }
-                                                                    )
-                                                                  _vm.modePayment = $event
-                                                                    .target
-                                                                    .multiple
-                                                                    ? $$selectedVal
-                                                                    : $$selectedVal[0]
-                                                                },
-                                                                _vm.modePaymentChange
-                                                              ]
-                                                            }
-                                                          },
-                                                          [
-                                                            _c(
-                                                              "option",
-                                                              {
-                                                                attrs: {
-                                                                  selected:
-                                                                    "selected",
-                                                                  value: ""
-                                                                }
-                                                              },
-                                                              [
-                                                                _vm._v(
-                                                                  "Seleccione"
-                                                                )
-                                                              ]
-                                                            ),
-                                                            _vm._v(" "),
-                                                            _c(
-                                                              "option",
-                                                              {
-                                                                attrs: {
-                                                                  value:
-                                                                    "Liquidacion"
-                                                                }
-                                                              },
-                                                              [
-                                                                _vm._v(
-                                                                  "Liquidacion"
-                                                                )
-                                                              ]
-                                                            ),
-                                                            _vm._v(" "),
-                                                            _c(
-                                                              "option",
-                                                              {
-                                                                attrs: {
-                                                                  value:
-                                                                    "Amortizacion"
-                                                                }
-                                                              },
-                                                              [
-                                                                _vm._v(
-                                                                  "Amortizacion"
-                                                                )
-                                                              ]
-                                                            ),
-                                                            _vm._v(" "),
-                                                            _c(
-                                                              "option",
-                                                              {
-                                                                attrs: {
-                                                                  value:
-                                                                    "Interes"
-                                                                }
-                                                              },
-                                                              [
-                                                                _vm._v(
-                                                                  "Interes"
-                                                                )
-                                                              ]
-                                                            )
-                                                          ]
-                                                        )
-                                                      ]
-                                                    )
-                                                  ]
-                                                )
-                                              ]
-                                            ),
-                                            _vm._v(" "),
-                                            _c(
-                                              "div",
-                                              { staticClass: "col-md-4" },
-                                              [
-                                                _c(
-                                                  "div",
-                                                  {
-                                                    class:
-                                                      _vm.errorInputActivity2
-                                                  },
-                                                  [
-                                                    _c(
-                                                      "label",
-                                                      {
-                                                        attrs: {
-                                                          for: "nombres"
-                                                        }
-                                                      },
-                                                      [_vm._v("Monto a Pagar:")]
-                                                    ),
-                                                    _vm._v(" "),
-                                                    _c(
-                                                      "div",
-                                                      {
-                                                        staticClass:
-                                                          "input-group"
-                                                      },
-                                                      [
-                                                        _vm._m(9),
-                                                        _vm._v(" "),
-                                                        _c("input", {
-                                                          directives: [
-                                                            {
-                                                              name: "model",
-                                                              rawName:
-                                                                "v-model",
-                                                              value:
-                                                                _vm.amountPayment,
-                                                              expression:
-                                                                "amountPayment"
-                                                            }
-                                                          ],
-                                                          staticClass:
-                                                            "form-control",
-                                                          staticStyle: {
-                                                            "border-bottom-right-radius":
-                                                              "3px",
-                                                            "border-top-right-radius":
-                                                              "3px"
-                                                          },
-                                                          attrs: {
-                                                            type: "text",
-                                                            placeholder: "$"
-                                                          },
-                                                          domProps: {
-                                                            value:
-                                                              _vm.amountPayment
-                                                          },
-                                                          on: {
-                                                            input: function(
-                                                              $event
-                                                            ) {
-                                                              if (
-                                                                $event.target
-                                                                  .composing
-                                                              ) {
-                                                                return
-                                                              }
-                                                              _vm.amountPayment =
-                                                                $event.target.value
-                                                            }
-                                                          }
-                                                        })
-                                                      ]
-                                                    )
-                                                  ]
-                                                )
-                                              ]
-                                            ),
-                                            _vm._v(" "),
-                                            _c(
-                                              "div",
-                                              { staticClass: "col-md-4" },
-                                              [
-                                                _c(
-                                                  "div",
-                                                  {
-                                                    class:
-                                                      _vm.errorInputActivity3
-                                                  },
-                                                  [
-                                                    _c(
-                                                      "label",
-                                                      {
-                                                        attrs: {
-                                                          for: "ap_paterno"
-                                                        }
-                                                      },
-                                                      [
-                                                        _vm._v(
-                                                          "Fecha Modo de Pago:"
-                                                        )
-                                                      ]
-                                                    ),
-                                                    _vm._v(" "),
-                                                    _c(
-                                                      "div",
-                                                      {
-                                                        staticClass:
-                                                          "input-group"
-                                                      },
-                                                      [
-                                                        _vm._m(10),
-                                                        _vm._v(" "),
-                                                        _c("date-picker", {
-                                                          staticStyle: {
-                                                            "border-top-right-radius":
-                                                              "3px",
-                                                            "border-bottom-right-radius":
-                                                              "3px"
-                                                          },
-                                                          attrs: {
-                                                            config: _vm.options
-                                                          },
-                                                          model: {
-                                                            value:
-                                                              _vm.dateModePayment,
-                                                            callback: function(
-                                                              $$v
-                                                            ) {
-                                                              _vm.dateModePayment = $$v
-                                                            },
-                                                            expression:
-                                                              "dateModePayment"
-                                                          }
-                                                        })
-                                                      ],
-                                                      1
-                                                    )
-                                                  ]
-                                                )
-                                              ]
-                                            )
-                                          ]),
-                                          _vm._v(" "),
-                                          _c("div", { staticClass: "row" }, [
-                                            _c(
-                                              "div",
-                                              { staticClass: "col-md-4" },
-                                              [
-                                                _c(
-                                                  "label",
-                                                  {
-                                                    attrs: {
-                                                      for: "nombres",
-                                                      hidden: ""
-                                                    }
-                                                  },
-                                                  [_vm._v("Programar:")]
-                                                ),
-                                                _vm._v(" "),
-                                                _c(
-                                                  "div",
-                                                  { staticClass: "checkbox" },
-                                                  [
-                                                    _c(
-                                                      "label",
-                                                      {
-                                                        staticClass: "container"
-                                                      },
-                                                      [
-                                                        _c("input", {
-                                                          directives: [
-                                                            {
-                                                              name: "model",
-                                                              rawName:
-                                                                "v-model",
-                                                              value:
-                                                                _vm.program,
-                                                              expression:
-                                                                "program"
-                                                            }
-                                                          ],
-                                                          attrs: {
-                                                            type: "checkbox"
-                                                          },
-                                                          domProps: {
-                                                            checked: Array.isArray(
-                                                              _vm.program
-                                                            )
-                                                              ? _vm._i(
-                                                                  _vm.program,
-                                                                  null
-                                                                ) > -1
-                                                              : _vm.program
-                                                          },
-                                                          on: {
-                                                            change: function(
-                                                              $event
-                                                            ) {
-                                                              var $$a =
-                                                                  _vm.program,
-                                                                $$el =
-                                                                  $event.target,
-                                                                $$c = $$el.checked
-                                                                  ? true
-                                                                  : false
-                                                              if (
-                                                                Array.isArray(
-                                                                  $$a
-                                                                )
-                                                              ) {
-                                                                var $$v = null,
-                                                                  $$i = _vm._i(
-                                                                    $$a,
-                                                                    $$v
-                                                                  )
-                                                                if (
-                                                                  $$el.checked
-                                                                ) {
-                                                                  $$i < 0 &&
-                                                                    (_vm.program = $$a.concat(
-                                                                      [$$v]
-                                                                    ))
-                                                                } else {
-                                                                  $$i > -1 &&
-                                                                    (_vm.program = $$a
-                                                                      .slice(
-                                                                        0,
-                                                                        $$i
-                                                                      )
-                                                                      .concat(
-                                                                        $$a.slice(
-                                                                          $$i +
-                                                                            1
-                                                                        )
-                                                                      ))
-                                                                }
-                                                              } else {
-                                                                _vm.program = $$c
-                                                              }
-                                                            }
-                                                          }
-                                                        }),
-                                                        _vm._v(
-                                                          "¿Desea programar proximo pago?\n                                                                                            "
-                                                        ),
-                                                        _c("span", {
-                                                          staticClass:
-                                                            "checkmark"
-                                                        })
-                                                      ]
-                                                    )
-                                                  ]
-                                                )
-                                              ]
-                                            )
-                                          ]),
-                                          _vm._v(" "),
-                                          _vm.program
-                                            ? _c(
-                                                "div",
-                                                { staticClass: "row" },
-                                                [
-                                                  _c(
-                                                    "div",
-                                                    { staticClass: "col-md-3" },
-                                                    [
-                                                      _c(
-                                                        "label",
-                                                        {
-                                                          attrs: {
-                                                            for: "ap_paterno"
-                                                          }
-                                                        },
-                                                        [
-                                                          _vm._v(
-                                                            "Nuevo Programa de Pago"
-                                                          )
-                                                        ]
-                                                      ),
-                                                      _vm._v(" "),
-                                                      _c(
-                                                        "div",
-                                                        {
-                                                          staticClass:
-                                                            "input-group"
-                                                        },
-                                                        [
-                                                          _vm._m(11),
-                                                          _vm._v(" "),
-                                                          _c(
-                                                            "select",
-                                                            {
-                                                              directives: [
-                                                                {
-                                                                  name: "model",
-                                                                  rawName:
-                                                                    "v-model",
-                                                                  value:
-                                                                    _vm.newProgramPayment,
-                                                                  expression:
-                                                                    "newProgramPayment"
-                                                                }
-                                                              ],
-                                                              staticClass:
-                                                                "form-control select2",
-                                                              staticStyle: {
-                                                                "border-top-right-radius":
-                                                                  "3px",
-                                                                "border-bottom-right-radius":
-                                                                  "3px"
-                                                              },
-                                                              on: {
-                                                                change: [
-                                                                  function(
-                                                                    $event
-                                                                  ) {
-                                                                    var $$selectedVal = Array.prototype.filter
-                                                                      .call(
-                                                                        $event
-                                                                          .target
-                                                                          .options,
-                                                                        function(
-                                                                          o
-                                                                        ) {
-                                                                          return o.selected
-                                                                        }
-                                                                      )
-                                                                      .map(
-                                                                        function(
-                                                                          o
-                                                                        ) {
-                                                                          var val =
-                                                                            "_value" in
-                                                                            o
-                                                                              ? o._value
-                                                                              : o.value
-                                                                          return val
-                                                                        }
-                                                                      )
-                                                                    _vm.newProgramPayment = $event
-                                                                      .target
-                                                                      .multiple
-                                                                      ? $$selectedVal
-                                                                      : $$selectedVal[0]
-                                                                  },
-                                                                  _vm.calculateTeabyTerm
-                                                                ]
-                                                              }
-                                                            },
-                                                            [
-                                                              _c(
-                                                                "option",
-                                                                {
-                                                                  attrs: {
-                                                                    selected:
-                                                                      "selected",
-                                                                    value: ""
-                                                                  }
-                                                                },
-                                                                [
-                                                                  _vm._v(
-                                                                    "Seleccione "
-                                                                  )
-                                                                ]
-                                                              ),
-                                                              _vm._v(" "),
-                                                              _c(
-                                                                "option",
-                                                                {
-                                                                  attrs: {
-                                                                    value:
-                                                                      "Diario"
-                                                                  }
-                                                                },
-                                                                [
-                                                                  _vm._v(
-                                                                    "Diario"
-                                                                  )
-                                                                ]
-                                                              ),
-                                                              _vm._v(" "),
-                                                              _c(
-                                                                "option",
-                                                                {
-                                                                  attrs: {
-                                                                    value:
-                                                                      "Semanal"
-                                                                  }
-                                                                },
-                                                                [
-                                                                  _vm._v(
-                                                                    "Semanal"
-                                                                  )
-                                                                ]
-                                                              ),
-                                                              _vm._v(" "),
-                                                              _c(
-                                                                "option",
-                                                                {
-                                                                  attrs: {
-                                                                    value:
-                                                                      "Quincenal"
-                                                                  }
-                                                                },
-                                                                [
-                                                                  _vm._v(
-                                                                    "Quincenal"
-                                                                  )
-                                                                ]
-                                                              ),
-                                                              _vm._v(" "),
-                                                              _c(
-                                                                "option",
-                                                                {
-                                                                  attrs: {
-                                                                    value:
-                                                                      "Mensual"
-                                                                  }
-                                                                },
-                                                                [
-                                                                  _vm._v(
-                                                                    "Mensual"
-                                                                  )
-                                                                ]
-                                                              )
-                                                            ]
-                                                          )
-                                                        ]
-                                                      )
-                                                    ]
-                                                  ),
-                                                  _vm._v(" "),
-                                                  _c(
-                                                    "div",
-                                                    { staticClass: "col-md-3" },
-                                                    [
-                                                      _c(
-                                                        "div",
-                                                        {
-                                                          class:
-                                                            _vm.errorInputActivity2
-                                                        },
-                                                        [
-                                                          _c(
-                                                            "label",
-                                                            {
-                                                              attrs: {
-                                                                for: "nombres"
-                                                              }
-                                                            },
-                                                            [_vm._v("Plazo:")]
-                                                          ),
-                                                          _vm._v(" "),
-                                                          _c(
-                                                            "div",
-                                                            {
-                                                              staticClass:
-                                                                "input-group"
-                                                            },
-                                                            [
-                                                              _vm._m(12),
-                                                              _vm._v(" "),
-                                                              _c("input", {
-                                                                directives: [
-                                                                  {
-                                                                    name:
-                                                                      "model",
-                                                                    rawName:
-                                                                      "v-model",
-                                                                    value:
-                                                                      _vm.term,
-                                                                    expression:
-                                                                      "term"
-                                                                  }
-                                                                ],
-                                                                staticClass:
-                                                                  "form-control",
-                                                                staticStyle: {
-                                                                  "border-bottom-right-radius":
-                                                                    "3px",
-                                                                  "border-top-right-radius":
-                                                                    "3px"
-                                                                },
-                                                                attrs: {
-                                                                  type:
-                                                                    "number",
-                                                                  placeholder:
-                                                                    "Plazo"
-                                                                },
-                                                                domProps: {
-                                                                  value:
-                                                                    _vm.term
-                                                                },
-                                                                on: {
-                                                                  change:
-                                                                    _vm.calculateTeabyTerm,
-                                                                  keyup:
-                                                                    _vm.calculateTeabyTerm,
-                                                                  input: function(
-                                                                    $event
-                                                                  ) {
-                                                                    if (
-                                                                      $event
-                                                                        .target
-                                                                        .composing
-                                                                    ) {
-                                                                      return
-                                                                    }
-                                                                    _vm.term =
-                                                                      $event.target.value
-                                                                  }
-                                                                }
-                                                              })
-                                                            ]
-                                                          )
-                                                        ]
-                                                      )
-                                                    ]
-                                                  ),
-                                                  _vm._v(" "),
-                                                  _c(
-                                                    "div",
-                                                    { staticClass: "col-md-3" },
-                                                    [
-                                                      _c(
-                                                        "div",
-                                                        {
-                                                          class:
-                                                            _vm.errorInputActivity3
-                                                        },
-                                                        [
-                                                          _c(
-                                                            "label",
-                                                            {
-                                                              attrs: {
-                                                                for:
-                                                                  "ap_paterno"
-                                                              }
-                                                            },
-                                                            [
-                                                              _vm._v(
-                                                                "Fecha Inicio:"
-                                                              )
-                                                            ]
-                                                          ),
-                                                          _vm._v(" "),
-                                                          _c(
-                                                            "div",
-                                                            {
-                                                              staticClass:
-                                                                "input-group"
-                                                            },
-                                                            [
-                                                              _vm._m(13),
-                                                              _vm._v(" "),
-                                                              _c(
-                                                                "date-picker",
-                                                                {
-                                                                  staticStyle: {
-                                                                    "border-top-right-radius":
-                                                                      "3px",
-                                                                    "border-bottom-right-radius":
-                                                                      "3px"
-                                                                  },
-                                                                  attrs: {
-                                                                    config:
-                                                                      _vm.options
-                                                                  },
-                                                                  on: {
-                                                                    "dp-change":
-                                                                      _vm.calculateTeabyTerm
-                                                                  },
-                                                                  model: {
-                                                                    value:
-                                                                      _vm.dateInit,
-                                                                    callback: function(
-                                                                      $$v
-                                                                    ) {
-                                                                      _vm.dateInit = $$v
-                                                                    },
-                                                                    expression:
-                                                                      "dateInit"
-                                                                  }
-                                                                }
-                                                              )
-                                                            ],
-                                                            1
-                                                          )
-                                                        ]
-                                                      )
-                                                    ]
-                                                  ),
-                                                  _vm._v(" "),
-                                                  _c(
-                                                    "div",
-                                                    { staticClass: "col-md-3" },
-                                                    [
-                                                      _c(
-                                                        "div",
-                                                        {
-                                                          class:
-                                                            _vm.errorInputActivity3
-                                                        },
-                                                        [
-                                                          _c(
-                                                            "label",
-                                                            {
-                                                              attrs: {
-                                                                for:
-                                                                  "ap_paterno"
-                                                              }
-                                                            },
-                                                            [
-                                                              _vm._v(
-                                                                "Fecha Fin:"
-                                                              )
-                                                            ]
-                                                          ),
-                                                          _vm._v(" "),
-                                                          _c(
-                                                            "div",
-                                                            {
-                                                              staticClass:
-                                                                "input-group"
-                                                            },
-                                                            [
-                                                              _vm._m(14),
-                                                              _vm._v(" "),
-                                                              _c(
-                                                                "date-picker",
-                                                                {
-                                                                  staticStyle: {
-                                                                    "border-top-right-radius":
-                                                                      "3px",
-                                                                    "border-bottom-right-radius":
-                                                                      "3px"
-                                                                  },
-                                                                  attrs: {
-                                                                    config:
-                                                                      _vm.options
-                                                                  },
-                                                                  model: {
-                                                                    value:
-                                                                      _vm.dateEnd,
-                                                                    callback: function(
-                                                                      $$v
-                                                                    ) {
-                                                                      _vm.dateEnd = $$v
-                                                                    },
-                                                                    expression:
-                                                                      "dateEnd"
-                                                                  }
-                                                                }
-                                                              )
-                                                            ],
-                                                            1
-                                                          )
-                                                        ]
-                                                      )
-                                                    ]
-                                                  ),
-                                                  _vm._v(" "),
-                                                  _c(
-                                                    "div",
-                                                    { staticClass: "col-md-3" },
-                                                    [
-                                                      _c(
-                                                        "div",
-                                                        {
-                                                          class:
-                                                            _vm.errorInputActivity2
-                                                        },
-                                                        [
-                                                          _c(
-                                                            "label",
-                                                            {
-                                                              attrs: {
-                                                                for: "nombres"
-                                                              }
-                                                            },
-                                                            [_vm._v("Monto:")]
-                                                          ),
-                                                          _vm._v(" "),
-                                                          _c(
-                                                            "div",
-                                                            {
-                                                              staticClass:
-                                                                "input-group"
-                                                            },
-                                                            [
-                                                              _vm._m(15),
-                                                              _vm._v(" "),
-                                                              _c("input", {
-                                                                directives: [
-                                                                  {
-                                                                    name:
-                                                                      "model",
-                                                                    rawName:
-                                                                      "v-model",
-                                                                    value:
-                                                                      _vm.amount,
-                                                                    expression:
-                                                                      "amount"
-                                                                  }
-                                                                ],
-                                                                staticClass:
-                                                                  "form-control",
-                                                                staticStyle: {
-                                                                  "border-bottom-right-radius":
-                                                                    "3px",
-                                                                  "border-top-right-radius":
-                                                                    "3px"
-                                                                },
-                                                                attrs: {
-                                                                  type: "text",
-                                                                  placeholder:
-                                                                    "Monto"
-                                                                },
-                                                                domProps: {
-                                                                  value:
-                                                                    _vm.amount
-                                                                },
-                                                                on: {
-                                                                  input: function(
-                                                                    $event
-                                                                  ) {
-                                                                    if (
-                                                                      $event
-                                                                        .target
-                                                                        .composing
-                                                                    ) {
-                                                                      return
-                                                                    }
-                                                                    _vm.amount =
-                                                                      $event.target.value
-                                                                  }
-                                                                }
-                                                              })
-                                                            ]
-                                                          )
-                                                        ]
-                                                      )
-                                                    ]
-                                                  ),
-                                                  _vm._v(" "),
-                                                  _c(
-                                                    "div",
-                                                    { staticClass: "col-md-3" },
-                                                    [
-                                                      _c(
-                                                        "div",
-                                                        {
-                                                          class:
-                                                            _vm.errorPorcentage
-                                                        },
-                                                        [
-                                                          _c(
-                                                            "label",
-                                                            {
-                                                              attrs: {
-                                                                for: "nombres"
-                                                              }
-                                                            },
-                                                            [_vm._v("%:")]
-                                                          ),
-                                                          _vm._v(" "),
-                                                          _c(
-                                                            "div",
-                                                            {
-                                                              staticClass:
-                                                                "input-group"
-                                                            },
-                                                            [
-                                                              _vm._m(16),
-                                                              _vm._v(" "),
-                                                              _c("input", {
-                                                                directives: [
-                                                                  {
-                                                                    name:
-                                                                      "model",
-                                                                    rawName:
-                                                                      "v-model",
-                                                                    value:
-                                                                      _vm.tea,
-                                                                    expression:
-                                                                      "tea"
-                                                                  }
-                                                                ],
-                                                                staticClass:
-                                                                  "form-control",
-                                                                staticStyle: {
-                                                                  "border-bottom-right-radius":
-                                                                    "3px",
-                                                                  "border-top-right-radius":
-                                                                    "3px"
-                                                                },
-                                                                attrs: {
-                                                                  type: "text",
-                                                                  placeholder:
-                                                                    "Porcentaje"
-                                                                },
-                                                                domProps: {
-                                                                  value: _vm.tea
-                                                                },
-                                                                on: {
-                                                                  input: function(
-                                                                    $event
-                                                                  ) {
-                                                                    if (
-                                                                      $event
-                                                                        .target
-                                                                        .composing
-                                                                    ) {
-                                                                      return
-                                                                    }
-                                                                    _vm.tea =
-                                                                      $event.target.value
-                                                                  }
-                                                                }
-                                                              })
-                                                            ]
-                                                          )
-                                                        ]
-                                                      )
-                                                    ]
-                                                  ),
-                                                  _vm._v(" "),
-                                                  _c(
-                                                    "div",
-                                                    { staticClass: "col-md-3" },
-                                                    [
-                                                      _c(
-                                                        "div",
-                                                        {
-                                                          class:
-                                                            _vm.errorInterest
-                                                        },
-                                                        [
-                                                          _c(
-                                                            "label",
-                                                            {
-                                                              attrs: {
-                                                                for: "nombres"
-                                                              }
-                                                            },
-                                                            [_vm._v("Interes:")]
-                                                          ),
-                                                          _vm._v(" "),
-                                                          _c(
-                                                            "div",
-                                                            {
-                                                              staticClass:
-                                                                "input-group"
-                                                            },
-                                                            [
-                                                              _vm._m(17),
-                                                              _vm._v(" "),
-                                                              _c("input", {
-                                                                directives: [
-                                                                  {
-                                                                    name:
-                                                                      "model",
-                                                                    rawName:
-                                                                      "v-model",
-                                                                    value:
-                                                                      _vm.interest,
-                                                                    expression:
-                                                                      "interest"
-                                                                  }
-                                                                ],
-                                                                staticClass:
-                                                                  "form-control",
-                                                                staticStyle: {
-                                                                  "border-bottom-right-radius":
-                                                                    "3px",
-                                                                  "border-top-right-radius":
-                                                                    "3px"
-                                                                },
-                                                                attrs: {
-                                                                  type: "text",
-                                                                  placeholder:
-                                                                    "Interes"
-                                                                },
-                                                                domProps: {
-                                                                  value:
-                                                                    _vm.interest
-                                                                },
-                                                                on: {
-                                                                  input: function(
-                                                                    $event
-                                                                  ) {
-                                                                    if (
-                                                                      $event
-                                                                        .target
-                                                                        .composing
-                                                                    ) {
-                                                                      return
-                                                                    }
-                                                                    _vm.interest =
-                                                                      $event.target.value
-                                                                  }
-                                                                }
-                                                              })
-                                                            ]
-                                                          )
-                                                        ]
-                                                      )
-                                                    ]
-                                                  ),
-                                                  _vm._v(" "),
-                                                  _c(
-                                                    "div",
-                                                    { staticClass: "col-md-3" },
-                                                    [
-                                                      _c(
-                                                        "div",
-                                                        {
-                                                          class:
-                                                            _vm.errorInterest
-                                                        },
-                                                        [
-                                                          _c(
-                                                            "label",
-                                                            {
-                                                              attrs: {
-                                                                for: "nombres"
-                                                              }
-                                                            },
-                                                            [
-                                                              _vm._v(
-                                                                "Total a Pagar:"
-                                                              )
-                                                            ]
-                                                          ),
-                                                          _vm._v(" "),
-                                                          _c(
-                                                            "div",
-                                                            {
-                                                              staticClass:
-                                                                "input-group"
-                                                            },
-                                                            [
-                                                              _vm._m(18),
-                                                              _vm._v(" "),
-                                                              _c("input", {
-                                                                directives: [
-                                                                  {
-                                                                    name:
-                                                                      "model",
-                                                                    rawName:
-                                                                      "v-model",
-                                                                    value:
-                                                                      _vm.totalPayment,
-                                                                    expression:
-                                                                      "totalPayment"
-                                                                  }
-                                                                ],
-                                                                staticClass:
-                                                                  "form-control",
-                                                                staticStyle: {
-                                                                  "border-bottom-right-radius":
-                                                                    "3px",
-                                                                  "border-top-right-radius":
-                                                                    "3px"
-                                                                },
-                                                                attrs: {
-                                                                  type: "text",
-                                                                  placeholder:
-                                                                    "Interes"
-                                                                },
-                                                                domProps: {
-                                                                  value:
-                                                                    _vm.totalPayment
-                                                                },
-                                                                on: {
-                                                                  input: function(
-                                                                    $event
-                                                                  ) {
-                                                                    if (
-                                                                      $event
-                                                                        .target
-                                                                        .composing
-                                                                    ) {
-                                                                      return
-                                                                    }
-                                                                    _vm.totalPayment =
-                                                                      $event.target.value
-                                                                  }
-                                                                }
-                                                              })
-                                                            ]
-                                                          )
-                                                        ]
-                                                      )
-                                                    ]
-                                                  )
-                                                ]
-                                              )
-                                            : _vm._e(),
-                                          _vm._v(" "),
-                                          _c(
-                                            "div",
-                                            {
-                                              staticClass:
-                                                "box-body table-responsive no-padding"
-                                            },
-                                            [
-                                              _c(
-                                                "table",
-                                                {
-                                                  staticClass:
-                                                    "table table-hover",
-                                                  staticStyle: {
-                                                    "font-size": "12px"
-                                                  }
-                                                },
-                                                [
-                                                  _vm._m(19),
-                                                  _vm._v(" "),
-                                                  _c(
-                                                    "tbody",
-                                                    _vm._l(
-                                                      _vm.listMovementPledge,
-                                                      function(midata, index) {
-                                                        return _c(
-                                                          "tr",
-                                                          { key: index },
-                                                          [
-                                                            _c(
-                                                              "td",
-                                                              {
-                                                                staticStyle: {
-                                                                  "vertical-align":
-                                                                    "middle"
-                                                                }
-                                                              },
-                                                              [
-                                                                _vm._v(
-                                                                  _vm._s(
-                                                                    index + 1
-                                                                  )
-                                                                )
-                                                              ]
-                                                            ),
-                                                            _vm._v(" "),
-                                                            _c("td", {
-                                                              staticStyle: {
-                                                                "vertical-align":
-                                                                  "middle"
-                                                              },
-                                                              domProps: {
-                                                                textContent: _vm._s(
-                                                                  midata.date_movement
-                                                                )
-                                                              }
-                                                            }),
-                                                            _vm._v(" "),
-                                                            _c("td", {
-                                                              staticStyle: {
-                                                                "vertical-align":
-                                                                  "middle"
-                                                              },
-                                                              domProps: {
-                                                                textContent: _vm._s(
-                                                                  midata.operation
-                                                                )
-                                                              }
-                                                            }),
-                                                            _vm._v(" "),
-                                                            _c("td", {
-                                                              staticStyle: {
-                                                                "vertical-align":
-                                                                  "middle"
-                                                              },
-                                                              domProps: {
-                                                                textContent: _vm._s(
-                                                                  midata.capital
-                                                                )
-                                                              }
-                                                            }),
-                                                            _vm._v(" "),
-                                                            _c(
-                                                              "td",
-                                                              {
-                                                                staticStyle: {
-                                                                  "text-align":
-                                                                    "center",
-                                                                  "vertical-align":
-                                                                    "middle"
-                                                                }
-                                                              },
-                                                              [
-                                                                _c(
-                                                                  "button",
-                                                                  {
-                                                                    staticClass:
-                                                                      "btn btn-print btn-sm",
-                                                                    attrs: {
-                                                                      type:
-                                                                        "button",
-                                                                      "data-toggle":
-                                                                        "tooltip",
-                                                                      title:
-                                                                        "Imprimir"
-                                                                    },
-                                                                    on: {
-                                                                      click: function(
-                                                                        $event
-                                                                      ) {
-                                                                        return _vm.printx(
-                                                                          midata
-                                                                        )
-                                                                      }
-                                                                    }
-                                                                  },
-                                                                  [
-                                                                    _c("i", {
-                                                                      staticClass:
-                                                                        "fa fa-print"
-                                                                    })
-                                                                  ]
-                                                                ),
-                                                                _vm._v(" "),
-                                                                _c(
-                                                                  "button",
-                                                                  {
-                                                                    staticClass:
-                                                                      "btn btn-eliminar btn-sm",
-                                                                    attrs: {
-                                                                      type:
-                                                                        "button",
-                                                                      "data-toggle":
-                                                                        "tooltip",
-                                                                      title:
-                                                                        "Eliminar"
-                                                                    },
-                                                                    on: {
-                                                                      click: function(
-                                                                        $event
-                                                                      ) {
-                                                                        return _vm.eliminar(
-                                                                          midata.id
-                                                                        )
-                                                                      }
-                                                                    }
-                                                                  },
-                                                                  [
-                                                                    _c("i", {
-                                                                      staticClass:
-                                                                        "fa fa-trash"
-                                                                    })
-                                                                  ]
-                                                                )
-                                                              ]
-                                                            )
-                                                          ]
-                                                        )
-                                                      }
-                                                    ),
-                                                    0
-                                                  )
-                                                ]
-                                              )
-                                            ]
-                                          )
-                                        ]
-                                      : _vm._e()
-                                  ],
-                                  2
-                                )
-                              ]
-                            )
-                          ])
-                        ])
-                      ])
-                    ])
-                  ])
-                ])
-              ]),
-              _vm._v(" "),
-              _c(
-                "div",
-                { staticClass: "box-footer" },
-                [
-                  _vm.listado == 1
-                    ? [
-                        _c("div", { staticClass: "col-md-6" }),
-                        _vm._v(" "),
-                        _c(
-                          "div",
-                          {
-                            staticClass: "col-md-6",
-                            staticStyle: {
-                              "margin-top": "-20px",
-                              "margin-bottom": "-25px"
-                            }
-                          },
-                          [
-                            _c(
-                              "div",
-                              {
-                                staticClass:
-                                  "dataTables_paginate paging_simple_numbers",
-                                staticStyle: { float: "right !important" }
-                              },
-                              [
-                                _c("nav", [
-                                  _c(
-                                    "ul",
-                                    { staticClass: "pagination" },
-                                    [
-                                      _vm.pagination.current_page > 1
-                                        ? _c(
-                                            "li",
-                                            { staticClass: "page-item" },
-                                            [
-                                              _c(
-                                                "a",
-                                                {
-                                                  staticClass: "page-link",
-                                                  attrs: { href: "#" },
-                                                  on: {
-                                                    click: function($event) {
-                                                      $event.preventDefault()
-                                                      _vm.cambiarPagina(
-                                                        Number(
-                                                          _vm.pagination
-                                                            .current_page
-                                                        ) - 1
-                                                      )
-                                                    }
-                                                  }
-                                                },
-                                                [
-                                                  _c("i", {
-                                                    staticClass:
-                                                      "fa fa-angle-left",
-                                                    staticStyle: {
-                                                      color: "#189900",
-                                                      cursor: "pointer"
-                                                    }
-                                                  })
-                                                ]
-                                              )
-                                            ]
-                                          )
-                                        : _vm._e(),
-                                      _vm._v(" "),
-                                      _vm._l(_vm.pagesNumber, function(page) {
-                                        return _c(
-                                          "li",
-                                          {
-                                            key: page,
-                                            staticClass: "page-item",
-                                            class: [
-                                              page == _vm.isActived
-                                                ? "active"
-                                                : ""
-                                            ]
-                                          },
+                                      )
+                                    ])
+                                  ]),
+                                  _vm._v(" "),
+                                  _c("div", { staticClass: "col-md-6" }, [
+                                    _c(
+                                      "div",
+                                      { class: _vm.errorInputActivity3 },
+                                      [
+                                        _c("label", { attrs: { for: "dni" } }, [
+                                          _vm._v("DNI:")
+                                        ]),
+                                        _vm._v(" "),
+                                        _c(
+                                          "div",
+                                          { staticClass: "input-group" },
                                           [
-                                            _c("a", {
-                                              staticClass: "page-link",
-                                              attrs: { href: "#" },
+                                            _vm._m(8),
+                                            _vm._v(" "),
+                                            _c("input", {
+                                              directives: [
+                                                {
+                                                  name: "model",
+                                                  rawName: "v-model",
+                                                  value: _vm.number_doc,
+                                                  expression: "number_doc"
+                                                }
+                                              ],
+                                              staticClass: "form-control",
+                                              attrs: {
+                                                maxlength: "8",
+                                                type: "text",
+                                                placeholder: "DNI"
+                                              },
                                               domProps: {
-                                                textContent: _vm._s(page)
+                                                value: _vm.number_doc
                                               },
                                               on: {
-                                                click: function($event) {
-                                                  $event.preventDefault()
-                                                  return _vm.cambiarPagina(page)
+                                                keyup: function($event) {
+                                                  if (
+                                                    !$event.type.indexOf(
+                                                      "key"
+                                                    ) &&
+                                                    _vm._k(
+                                                      $event.keyCode,
+                                                      "enter",
+                                                      13,
+                                                      $event.key,
+                                                      "Enter"
+                                                    )
+                                                  ) {
+                                                    return null
+                                                  }
+                                                  return _vm.get_data_personal()
+                                                },
+                                                input: function($event) {
+                                                  if ($event.target.composing) {
+                                                    return
+                                                  }
+                                                  _vm.number_doc =
+                                                    $event.target.value
                                                 }
                                               }
-                                            })
+                                            }),
+                                            _vm._v(" "),
+                                            _c(
+                                              "span",
+                                              {
+                                                staticClass: "input-group-btn"
+                                              },
+                                              [
+                                                _c(
+                                                  "button",
+                                                  {
+                                                    staticClass:
+                                                      "btn btn-search btn-flat",
+                                                    staticStyle: {
+                                                      "border-bottom-right-radius":
+                                                        "3px",
+                                                      "border-top-right-radius":
+                                                        "3px"
+                                                    },
+                                                    attrs: {
+                                                      "data-toggle": "tooltip",
+                                                      title: "Buscar",
+                                                      type: "submit"
+                                                    },
+                                                    on: {
+                                                      click: function($event) {
+                                                        return _vm.get_data_personal()
+                                                      }
+                                                    }
+                                                  },
+                                                  [
+                                                    _c("i", {
+                                                      staticClass:
+                                                        "fa fa-search"
+                                                    }),
+                                                    _vm._v(" BUSCAR")
+                                                  ]
+                                                )
+                                              ]
+                                            )
                                           ]
                                         )
-                                      }),
+                                      ]
+                                    )
+                                  ]),
+                                  _vm._v(" "),
+                                  _c("div", { staticClass: "col-md-6" }, [
+                                    _c("div", { staticClass: "form-group" }, [
+                                      _c(
+                                        "label",
+                                        { attrs: { for: "ap_materno" } },
+                                        [_vm._v("Personal:")]
+                                      ),
                                       _vm._v(" "),
-                                      _vm.pagination.current_page <
-                                      _vm.pagination.last_page
-                                        ? _c(
-                                            "li",
-                                            { staticClass: "page-item" },
+                                      _c(
+                                        "div",
+                                        { staticClass: "input-group" },
+                                        [
+                                          _vm._m(9),
+                                          _vm._v(" "),
+                                          _c("input", {
+                                            directives: [
+                                              {
+                                                name: "model",
+                                                rawName: "v-model",
+                                                value: _vm.personal,
+                                                expression: "personal"
+                                              }
+                                            ],
+                                            staticClass: "form-control",
+                                            attrs: {
+                                              disabled: "",
+                                              type: "text",
+                                              placeholder: "Apellido Materno"
+                                            },
+                                            domProps: { value: _vm.personal },
+                                            on: {
+                                              input: function($event) {
+                                                if ($event.target.composing) {
+                                                  return
+                                                }
+                                                _vm.personal =
+                                                  $event.target.value
+                                              }
+                                            }
+                                          }),
+                                          _vm._v(" "),
+                                          _c(
+                                            "span",
+                                            { staticClass: "input-group-btn" },
                                             [
                                               _c(
-                                                "a",
+                                                "button",
                                                 {
-                                                  staticClass: "page-link",
-                                                  attrs: { href: "#" },
+                                                  staticClass:
+                                                    "btn btn-excel btn-flat",
+                                                  staticStyle: {
+                                                    "border-bottom-right-radius":
+                                                      "3px",
+                                                    "border-top-right-radius":
+                                                      "3px"
+                                                  },
+                                                  attrs: {
+                                                    "data-toggle": "tooltip",
+                                                    title: "Agregar",
+                                                    type: "submit"
+                                                  },
                                                   on: {
                                                     click: function($event) {
-                                                      $event.preventDefault()
-                                                      _vm.cambiarPagina(
-                                                        Number(
-                                                          _vm.pagination
-                                                            .current_page
-                                                        ) + 1
-                                                      )
+                                                      return _vm.add_person()
                                                     }
                                                   }
                                                 },
                                                 [
                                                   _c("i", {
-                                                    staticClass:
-                                                      "fa fa-angle-right",
-                                                    staticStyle: {
-                                                      color: "#189900",
-                                                      cursor: "pointer"
-                                                    }
-                                                  })
+                                                    staticClass: "fa fa-plus"
+                                                  }),
+                                                  _vm._v(" AGREGAR")
                                                 ]
                                               )
-                                            ]
-                                          )
-                                        : _vm._e()
-                                    ],
-                                    2
-                                  )
-                                ])
-                              ]
-                            )
-                          ]
-                        )
-                      ]
-                    : _vm._e(),
-                  _vm._v(" "),
-                  _vm.listado == 3
-                    ? [
-                        _c(
-                          "div",
-                          {
-                            staticClass: "btn-group",
-                            staticStyle: { float: "right" }
-                          },
-                          [
-                            _c(
-                              "button",
-                              {
-                                staticClass: "btn btn-danger",
-                                attrs: { type: "button" },
-                                on: {
-                                  click: function($event) {
-                                    return _vm.volver()
-                                  }
-                                }
-                              },
-                              [
-                                _c("i", { staticClass: "fa fa-close" }),
-                                _vm._v(
-                                  " CANCELAR\n                                    "
-                                )
-                              ]
-                            ),
-                            _vm._v(" "),
-                            _c(
-                              "button",
-                              {
-                                staticClass: "btn btn-primary",
-                                attrs: { type: "button" },
-                                on: {
-                                  click: function($event) {
-                                    return _vm.save()
-                                  }
-                                }
-                              },
-                              [
-                                _c("i", { staticClass: "fa fa-save" }),
-                                _vm._v(
-                                  " GUARDAR PAGO\n                                    "
-                                )
-                              ]
-                            )
-                          ]
-                        )
-                      ]
-                    : _vm._e()
-                ],
-                2
-              )
-            ])
-          ]),
-          _vm._v(" "),
-          _vm.listado == 3
-            ? [
-                _c("div", { staticClass: "col-md-12" }, [
-                  _c("div", { staticClass: "box box-primary" }, [
-                    _c("div", { staticClass: "box-header with-border" }, [
-                      _c("h1", { staticClass: "box-title" }),
-                      _vm._v(" "),
-                      _c(
-                        "div",
-                        {
-                          staticClass: "box-tools pull-right",
-                          staticStyle: { right: "-15px" }
-                        },
-                        [
-                          _c(
-                            "div",
-                            {
-                              staticClass: "col-md-12",
-                              staticStyle: { "margin-top": "6px" }
-                            },
-                            [
-                              _c(
-                                "label",
-                                { staticClass: "col-md-8 control-label" },
-                                [_vm._v("Ver más detalles:")]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "div",
-                                {
-                                  staticClass: "col-md-4",
-                                  staticStyle: { "margin-top": "-10px" }
-                                },
-                                [
-                                  _c("div", { staticClass: "checkbox" }, [
-                                    _c(
-                                      "label",
-                                      {
-                                        staticClass: "switch",
-                                        staticStyle: {
-                                          width: "62px",
-                                          height: "18px"
-                                        }
-                                      },
-                                      [
-                                        _c("input", {
-                                          directives: [
-                                            {
-                                              name: "model",
-                                              rawName: "v-model",
-                                              value: _vm.view_detail,
-                                              expression: "view_detail"
-                                            }
-                                          ],
-                                          attrs: { type: "checkbox" },
-                                          domProps: {
-                                            checked: Array.isArray(
-                                              _vm.view_detail
-                                            )
-                                              ? _vm._i(_vm.view_detail, null) >
-                                                -1
-                                              : _vm.view_detail
-                                          },
-                                          on: {
-                                            change: function($event) {
-                                              var $$a = _vm.view_detail,
-                                                $$el = $event.target,
-                                                $$c = $$el.checked
-                                                  ? true
-                                                  : false
-                                              if (Array.isArray($$a)) {
-                                                var $$v = null,
-                                                  $$i = _vm._i($$a, $$v)
-                                                if ($$el.checked) {
-                                                  $$i < 0 &&
-                                                    (_vm.view_detail = $$a.concat(
-                                                      [$$v]
-                                                    ))
-                                                } else {
-                                                  $$i > -1 &&
-                                                    (_vm.view_detail = $$a
-                                                      .slice(0, $$i)
-                                                      .concat(
-                                                        $$a.slice($$i + 1)
-                                                      ))
-                                                }
-                                              } else {
-                                                _vm.view_detail = $$c
-                                              }
-                                            }
-                                          }
-                                        }),
-                                        _vm._v(" "),
-                                        _c("span", {
-                                          staticClass: "slider round"
-                                        })
-                                      ]
-                                    )
-                                  ])
-                                ]
-                              )
-                            ]
-                          )
-                        ]
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _vm.view_detail
-                      ? _c(
-                          "div",
-                          {
-                            staticClass: "box-body table-responsive no-padding"
-                          },
-                          [
-                            _c(
-                              "table",
-                              {
-                                staticClass: "table table-hover",
-                                staticStyle: { "font-size": "12px" }
-                              },
-                              [
-                                _vm._m(20),
-                                _vm._v(" "),
-                                _c(
-                                  "tbody",
-                                  _vm._l(_vm.listDetailMovementPledge, function(
-                                    midata,
-                                    index
-                                  ) {
-                                    return _c("tr", { key: index }, [
-                                      _c(
-                                        "td",
-                                        {
-                                          staticStyle: {
-                                            "vertical-align": "middle"
-                                          }
-                                        },
-                                        [_vm._v(_vm._s(index + 1))]
-                                      ),
-                                      _vm._v(" "),
-                                      _c("td", {
-                                        staticStyle: {
-                                          "vertical-align": "middle"
-                                        },
-                                        domProps: {
-                                          textContent: _vm._s(midata.date_init)
-                                        }
-                                      }),
-                                      _vm._v(" "),
-                                      _c("td", {
-                                        staticStyle: {
-                                          "vertical-align": "middle"
-                                        },
-                                        domProps: {
-                                          textContent: _vm._s(midata.date_end)
-                                        }
-                                      }),
-                                      _vm._v(" "),
-                                      _c("td", {
-                                        staticStyle: {
-                                          "vertical-align": "middle"
-                                        },
-                                        domProps: {
-                                          textContent: _vm._s(midata.operation)
-                                        }
-                                      }),
-                                      _vm._v(" "),
-                                      _c("td", {
-                                        staticStyle: {
-                                          "vertical-align": "middle"
-                                        },
-                                        domProps: {
-                                          textContent: _vm._s(midata.charge)
-                                        }
-                                      }),
-                                      _vm._v(" "),
-                                      _c("td", {
-                                        staticStyle: {
-                                          "vertical-align": "middle"
-                                        },
-                                        domProps: {
-                                          textContent: _vm._s(midata.payment)
-                                        }
-                                      }),
-                                      _vm._v(" "),
-                                      _c("td", {
-                                        staticStyle: {
-                                          "vertical-align": "middle"
-                                        },
-                                        domProps: {
-                                          textContent: _vm._s(midata.residue)
-                                        }
-                                      }),
-                                      _vm._v(" "),
-                                      _c(
-                                        "td",
-                                        {
-                                          staticStyle: {
-                                            "text-align": "center",
-                                            "vertical-align": "middle"
-                                          }
-                                        },
-                                        [
-                                          _c(
-                                            "button",
-                                            {
-                                              staticClass:
-                                                "btn btn-eliminar btn-sm",
-                                              attrs: {
-                                                type: "button",
-                                                "data-toggle": "tooltip",
-                                                title: "Eliminar"
-                                              },
-                                              on: {
-                                                click: function($event) {
-                                                  return _vm.eliminar(midata.id)
-                                                }
-                                              }
-                                            },
-                                            [
-                                              _c("i", {
-                                                staticClass: "fa fa-trash"
-                                              })
                                             ]
                                           )
                                         ]
                                       )
                                     ])
-                                  }),
-                                  0
-                                )
+                                  ])
+                                ])
                               ]
-                            )
-                          ]
-                        )
-                      : _vm._e()
-                  ])
+                            : _vm._e()
+                        ],
+                        2
+                      )
+                    ]
+                  )
                 ])
-              ]
-            : _vm._e()
-        ],
-        2
-      )
-    ])
+              ])
+            ])
+          ])
+        ])
+      ])
+    ]),
+    _vm._v(" "),
+    _c(
+      "div",
+      {
+        staticClass: "modal fade",
+        class: { mostrar: _vm.modal_add },
+        staticStyle: { display: "none" },
+        attrs: {
+          tabindex: "-1",
+          role: "dialog",
+          "aria-labelledby": "myModalLabel",
+          "aria-hidden": "true"
+        }
+      },
+      [
+        _c(
+          "div",
+          { staticClass: "modal-dialog modal-lg", attrs: { role: "document" } },
+          [
+            _c("div", { staticClass: "modal-content" }, [
+              _c(
+                "div",
+                {
+                  staticClass: "modal-header",
+                  staticStyle: { background: "#012D74" }
+                },
+                [
+                  _c(
+                    "button",
+                    {
+                      staticClass: "close",
+                      attrs: { type: "button", "aria-label": "Close" },
+                      on: {
+                        click: function($event) {
+                          return _vm.close_modal(1)
+                        }
+                      }
+                    },
+                    [
+                      _c("span", { attrs: { "aria-hidden": "true" } }, [
+                        _vm._v("×")
+                      ])
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _vm._m(10)
+                ]
+              ),
+              _vm._v(" "),
+              _c("div", { staticClass: "modal-body" }, [
+                _c("div", { staticClass: "row" }, [
+                  _c(
+                    "div",
+                    { staticClass: "col-lg-12 col-md-12 col-sm-12 col-xs-12" },
+                    [
+                      _c("div", { staticClass: "box-body" }, [
+                        _c("div", { staticClass: "row" }, [
+                          _c("div", { staticClass: "col-md-12" }, [
+                            _c("div", { staticClass: "form-horizontal" }, [
+                              _c("div", { staticClass: "form-group" }, [
+                                _c(
+                                  "label",
+                                  { staticClass: "col-md-2 control-label" },
+                                  [_vm._v("DNI:")]
+                                ),
+                                _vm._v(" "),
+                                _c("div", { staticClass: "col-md-10" }, [
+                                  _c("div", { staticClass: "input-group" }, [
+                                    _vm._m(11),
+                                    _vm._v(" "),
+                                    _c("input", {
+                                      directives: [
+                                        {
+                                          name: "model",
+                                          rawName: "v-model",
+                                          value: _vm.number_doc_add,
+                                          expression: "number_doc_add"
+                                        }
+                                      ],
+                                      staticClass: "form-control",
+                                      attrs: { maxlength: "8", type: "text" },
+                                      domProps: { value: _vm.number_doc_add },
+                                      on: {
+                                        keyup: function($event) {
+                                          if (
+                                            !$event.type.indexOf("key") &&
+                                            _vm._k(
+                                              $event.keyCode,
+                                              "enter",
+                                              13,
+                                              $event.key,
+                                              "Enter"
+                                            )
+                                          ) {
+                                            return null
+                                          }
+                                          return _vm.get_data_reniec()
+                                        },
+                                        input: function($event) {
+                                          if ($event.target.composing) {
+                                            return
+                                          }
+                                          _vm.number_doc_add =
+                                            $event.target.value
+                                        }
+                                      }
+                                    }),
+                                    _vm._v(" "),
+                                    _c(
+                                      "span",
+                                      { staticClass: "input-group-btn" },
+                                      [
+                                        _c(
+                                          "button",
+                                          {
+                                            staticClass:
+                                              "btn btn-search btn-flat",
+                                            staticStyle: {
+                                              "border-bottom-right-radius":
+                                                "3px",
+                                              "border-top-right-radius": "3px"
+                                            },
+                                            attrs: {
+                                              "data-toggle": "tooltip",
+                                              title: "Buscar",
+                                              type: "submit"
+                                            },
+                                            on: {
+                                              click: function($event) {
+                                                return _vm.get_data_reniec()
+                                              }
+                                            }
+                                          },
+                                          [
+                                            _c("i", {
+                                              staticClass: "fa fa-check"
+                                            }),
+                                            _vm._v(" VALIDAR")
+                                          ]
+                                        )
+                                      ]
+                                    )
+                                  ])
+                                ])
+                              ]),
+                              _vm._v(" "),
+                              _c("div", { staticClass: "form-group" }, [
+                                _c(
+                                  "label",
+                                  { staticClass: "col-md-2 control-label" },
+                                  [_vm._v("Apellido Paterno:")]
+                                ),
+                                _vm._v(" "),
+                                _c("div", { staticClass: "col-md-10" }, [
+                                  _c("div", { staticClass: "input-group" }, [
+                                    _vm._m(12),
+                                    _vm._v(" "),
+                                    _c("input", {
+                                      directives: [
+                                        {
+                                          name: "model",
+                                          rawName: "v-model",
+                                          value: _vm.paternal_last_name,
+                                          expression: "paternal_last_name"
+                                        }
+                                      ],
+                                      staticClass: "form-control",
+                                      staticStyle: {
+                                        "border-top-right-radius": "3px"
+                                      },
+                                      attrs: { type: "text" },
+                                      domProps: {
+                                        value: _vm.paternal_last_name
+                                      },
+                                      on: {
+                                        keyup: function($event) {
+                                          return _vm.validarDataPersonal()
+                                        },
+                                        input: function($event) {
+                                          if ($event.target.composing) {
+                                            return
+                                          }
+                                          _vm.paternal_last_name =
+                                            $event.target.value
+                                        }
+                                      }
+                                    })
+                                  ])
+                                ])
+                              ]),
+                              _vm._v(" "),
+                              _c("div", { staticClass: "form-group" }, [
+                                _c(
+                                  "label",
+                                  { staticClass: "col-md-2 control-label" },
+                                  [_vm._v("Apellido Materno:")]
+                                ),
+                                _vm._v(" "),
+                                _c("div", { staticClass: "col-md-10" }, [
+                                  _c("div", { staticClass: "input-group" }, [
+                                    _vm._m(13),
+                                    _vm._v(" "),
+                                    _c("input", {
+                                      directives: [
+                                        {
+                                          name: "model",
+                                          rawName: "v-model",
+                                          value: _vm.maternal_last_name,
+                                          expression: "maternal_last_name"
+                                        }
+                                      ],
+                                      staticClass: "form-control",
+                                      staticStyle: {
+                                        "border-bottom-right-radius": "3px",
+                                        "border-top-right-radius": "3px"
+                                      },
+                                      attrs: { type: "text" },
+                                      domProps: {
+                                        value: _vm.maternal_last_name
+                                      },
+                                      on: {
+                                        keyup: function($event) {
+                                          return _vm.validarDataPersonal()
+                                        },
+                                        input: function($event) {
+                                          if ($event.target.composing) {
+                                            return
+                                          }
+                                          _vm.maternal_last_name =
+                                            $event.target.value
+                                        }
+                                      }
+                                    })
+                                  ])
+                                ])
+                              ]),
+                              _vm._v(" "),
+                              _c("div", { staticClass: "form-group" }, [
+                                _c(
+                                  "label",
+                                  { staticClass: "col-md-2 control-label" },
+                                  [_vm._v("Nombres:")]
+                                ),
+                                _vm._v(" "),
+                                _c("div", { staticClass: "col-md-10" }, [
+                                  _c("div", { staticClass: "input-group" }, [
+                                    _vm._m(14),
+                                    _vm._v(" "),
+                                    _c("input", {
+                                      directives: [
+                                        {
+                                          name: "model",
+                                          rawName: "v-model",
+                                          value: _vm.names,
+                                          expression: "names"
+                                        }
+                                      ],
+                                      staticClass: "form-control",
+                                      staticStyle: {
+                                        "border-bottom-right-radius": "3px",
+                                        "border-top-right-radius": "3px"
+                                      },
+                                      attrs: { maxlength: "8", type: "text" },
+                                      domProps: { value: _vm.names },
+                                      on: {
+                                        keyup: function($event) {
+                                          return _vm.validarDataPersonal()
+                                        },
+                                        input: function($event) {
+                                          if ($event.target.composing) {
+                                            return
+                                          }
+                                          _vm.names = $event.target.value
+                                        }
+                                      }
+                                    })
+                                  ])
+                                ])
+                              ])
+                            ])
+                          ])
+                        ])
+                      ])
+                    ]
+                  )
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "modal-footer" }, [
+                _c(
+                  "button",
+                  {
+                    staticClass: "btn btn-danger",
+                    attrs: { type: "button" },
+                    on: {
+                      click: function($event) {
+                        return _vm.close_modal(1)
+                      }
+                    }
+                  },
+                  [_c("i", { staticClass: "fa fa-times" }), _vm._v(" CERRAR")]
+                ),
+                _vm._v(" "),
+                _c(
+                  "button",
+                  {
+                    staticClass: "btn btn-save",
+                    attrs: { type: "button" },
+                    on: {
+                      click: function($event) {
+                        return _vm.save_personal()
+                      }
+                    }
+                  },
+                  [
+                    _c("i", { staticClass: "fa fa-save" }),
+                    _vm._v(" GUARDAR PERSONAL")
+                  ]
+                )
+              ])
+            ])
+          ]
+        )
+      ]
+    )
   ])
 }
 var staticRenderFns = [
@@ -29651,31 +28499,25 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("section", { staticClass: "content-header" }, [
-      _c("h1", [
-        _vm._v("\n              Empeñados\n              "),
-        _c("small", [_vm._v("Cobranza")])
-      ]),
-      _vm._v(" "),
-      _c("ol", { staticClass: "breadcrumb" }, [
-        _c("li", [
-          _c("a", { attrs: { href: "#" } }, [
-            _c("i", { staticClass: "fa fa-dashboard" }),
-            _vm._v(" Operaciones")
-          ])
+    return _c("div", { staticClass: "box-header with-border" }, [
+      _c("section", { staticClass: "content-header" }, [
+        _c("h3", { staticClass: "box-title" }, [
+          _c("strong", [_vm._v(" \n                GESTIÓN DE MERCADOS")])
         ]),
         _vm._v(" "),
-        _c("li", { staticClass: "active" }, [_vm._v("Préstamos")])
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("h1", { staticClass: "box-title" }, [
-      _c("i", { staticClass: "fa fa-edit" }),
-      _vm._v(" Cobranza de Empeños\n                            ")
+        _c("ol", { staticClass: "breadcrumb" }, [
+          _c("li", [
+            _c("a", { attrs: { href: "#" } }, [
+              _c("i", { staticClass: "fa fa-database" }),
+              _vm._v("Registro")
+            ])
+          ]),
+          _vm._v(" "),
+          _c("li", { staticClass: "active" }, [_vm._v("Mercado")])
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "box-tools pull-right" })
     ])
   },
   function() {
@@ -29694,9 +28536,103 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("span", { staticClass: "info-box-icon bg-green" }, [
-      _c("i", { staticClass: "fa fa-archive" })
+    return _c(
+      "thead",
+      { staticStyle: { background: "rgb(32, 32, 32)", color: "#fff" } },
+      [
+        _c("tr", [
+          _c(
+            "th",
+            {
+              staticStyle: {
+                "vertical-align": "middle",
+                "text-align": "center"
+              }
+            },
+            [_vm._v("#")]
+          ),
+          _vm._v(" "),
+          _c(
+            "th",
+            {
+              staticStyle: {
+                "vertical-align": "middle",
+                "text-align": "center"
+              }
+            },
+            [_vm._v("CÓDIGO")]
+          ),
+          _vm._v(" "),
+          _c(
+            "th",
+            {
+              staticStyle: {
+                "vertical-align": "middle",
+                "text-align": "center"
+              }
+            },
+            [_vm._v("ASESOR FINANCIERO")]
+          ),
+          _vm._v(" "),
+          _c("th", { staticStyle: { "vertical-align": "middle" } }, [
+            _vm._v("MERCADO")
+          ]),
+          _vm._v(" "),
+          _c(
+            "th",
+            {
+              staticStyle: {
+                "vertical-align": "middle",
+                "text-align": "center"
+              }
+            },
+            [_vm._v("FECHA DE CREACIÓN")]
+          ),
+          _vm._v(" "),
+          _c("th", { staticStyle: { "vertical-align": "middle" } }, [
+            _vm._v("SUCURSAL")
+          ]),
+          _vm._v(" "),
+          _c(
+            "th",
+            {
+              staticStyle: {
+                "text-align": "center",
+                "vertical-align": "middle"
+              }
+            },
+            [_vm._v("ACCIONES")]
+          )
+        ])
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "col-md-12" }, [
+      _c("legend", { staticStyle: { "font-size": "16px" } }, [
+        _c("i", { staticClass: "ion ion-edit" }),
+        _c("strong", [_vm._v(" DATOS DE MERCADO")])
+      ])
     ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "span",
+      {
+        staticClass: "input-group-addon",
+        staticStyle: {
+          "border-bottom-left-radius": "3px",
+          "border-top-left-radius": "3px"
+        }
+      },
+      [_c("i", { staticClass: "fa fa-qrcode" })]
+    )
   },
   function() {
     var _vm = this
@@ -29727,7 +28663,7 @@ var staticRenderFns = [
           "border-top-left-radius": "3px"
         }
       },
-      [_c("i", { staticClass: "fa fa-chevron-right" })]
+      [_c("i", { staticClass: "fa fa-calendar " })]
     )
   },
   function() {
@@ -29743,7 +28679,7 @@ var staticRenderFns = [
           "border-top-left-radius": "3px"
         }
       },
-      [_c("i", { staticClass: "fa fa-chevron-right" })]
+      [_c("i", { staticClass: "fa fa-magic" })]
     )
   },
   function() {
@@ -29756,58 +28692,11 @@ var staticRenderFns = [
         staticClass: "input-group-addon",
         staticStyle: {
           "border-bottom-left-radius": "3px",
-          "border-top-left-radius": "3px"
-        }
-      },
-      [_c("i", { staticClass: "fa fa-calendar" })]
-    )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "span",
-      {
-        staticClass: "input-group-addon",
-        staticStyle: {
-          "border-bottom-left-radius": "3px",
-          "border-top-left-radius": "3px"
-        }
-      },
-      [_c("i", { staticClass: "fa fa-chevron-right" })]
-    )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "span",
-      {
-        staticClass: "input-group-addon",
-        staticStyle: {
-          "border-bottom-left-radius": "3px",
-          "border-top-left-radius": "3px"
-        }
-      },
-      [_c("i", { staticClass: "fa fa-chevron-right" })]
-    )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      {
-        staticClass: "input-group-addon",
-        staticStyle: {
           "border-top-left-radius": "3px",
-          "border-bottom-left-radius": "3px"
+          color: "#1e2172"
         }
       },
-      [_c("i", { staticClass: "fa fa-calendar" })]
+      [_c("i", { staticClass: "fa fa-database" })]
     )
   },
   function() {
@@ -29823,7 +28712,17 @@ var staticRenderFns = [
           "border-top-left-radius": "3px"
         }
       },
-      [_c("i", { staticClass: "fa fa-chevron-right" })]
+      [_c("i", { staticClass: "fa fa-user" })]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "h4",
+      { staticClass: "modal-title", staticStyle: { color: "#FFFFFF" } },
+      [_c("i", { staticClass: "fa fa-plus" }), _vm._v(" AGREGAR PERSONAL")]
     )
   },
   function() {
@@ -29836,26 +28735,11 @@ var staticRenderFns = [
         staticClass: "input-group-addon",
         staticStyle: {
           "border-bottom-left-radius": "3px",
-          "border-top-left-radius": "3px"
-        }
-      },
-      [_c("i", { staticClass: "fa fa-chevron-right" })]
-    )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      {
-        staticClass: "input-group-addon",
-        staticStyle: {
           "border-top-left-radius": "3px",
-          "border-bottom-left-radius": "3px"
+          color: "#1e2172"
         }
       },
-      [_c("i", { staticClass: "fa fa-calendar" })]
+      [_c("i", { staticClass: "fa fa-indent" })]
     )
   },
   function() {
@@ -29863,15 +28747,16 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c(
-      "div",
+      "span",
       {
         staticClass: "input-group-addon",
         staticStyle: {
+          "border-bottom-left-radius": "3px",
           "border-top-left-radius": "3px",
-          "border-bottom-left-radius": "3px"
+          color: "#1e2172"
         }
       },
-      [_c("i", { staticClass: "fa fa-calendar" })]
+      [_c("i", { staticClass: "fa fa-indent" })]
     )
   },
   function() {
@@ -29884,10 +28769,11 @@ var staticRenderFns = [
         staticClass: "input-group-addon",
         staticStyle: {
           "border-bottom-left-radius": "3px",
-          "border-top-left-radius": "3px"
+          "border-top-left-radius": "3px",
+          color: "#1e2172"
         }
       },
-      [_c("i", { staticClass: "fa fa-chevron-right" })]
+      [_c("i", { staticClass: "fa fa-indent" })]
     )
   },
   function() {
@@ -29900,132 +28786,11 @@ var staticRenderFns = [
         staticClass: "input-group-addon",
         staticStyle: {
           "border-bottom-left-radius": "3px",
-          "border-top-left-radius": "3px"
+          "border-top-left-radius": "3px",
+          color: "#1e2172"
         }
       },
-      [_c("i", { staticClass: "fa fa-chevron-right" })]
-    )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "span",
-      {
-        staticClass: "input-group-addon",
-        staticStyle: {
-          "border-bottom-left-radius": "3px",
-          "border-top-left-radius": "3px"
-        }
-      },
-      [_c("i", { staticClass: "fa fa-chevron-right" })]
-    )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "span",
-      {
-        staticClass: "input-group-addon",
-        staticStyle: {
-          "border-bottom-left-radius": "3px",
-          "border-top-left-radius": "3px"
-        }
-      },
-      [_c("i", { staticClass: "fa fa-chevron-right" })]
-    )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "thead",
-      { staticStyle: { background: "rgb(32, 32, 32)", color: "#fff" } },
-      [
-        _c("tr", [
-          _c("th", { staticStyle: { "vertical-align": "middle" } }, [
-            _vm._v("#")
-          ]),
-          _vm._v(" "),
-          _c("th", { staticStyle: { "vertical-align": "middle" } }, [
-            _vm._v("FECHA")
-          ]),
-          _vm._v(" "),
-          _c("th", { staticStyle: { "vertical-align": "middle" } }, [
-            _vm._v("OPERACIÓN")
-          ]),
-          _vm._v(" "),
-          _c("th", { staticStyle: { "vertical-align": "middle" } }, [
-            _vm._v("MONTO")
-          ]),
-          _vm._v(" "),
-          _c(
-            "th",
-            {
-              staticStyle: {
-                "text-align": "center",
-                "vertical-align": "middle"
-              }
-            },
-            [_vm._v("OPCIONES")]
-          )
-        ])
-      ]
-    )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "thead",
-      { staticStyle: { background: "rgb(32, 32, 32)", color: "#fff" } },
-      [
-        _c("tr", [
-          _c("th", { staticStyle: { "vertical-align": "middle" } }, [
-            _vm._v("#")
-          ]),
-          _vm._v(" "),
-          _c("th", { staticStyle: { "vertical-align": "middle" } }, [
-            _vm._v("FECHA INICIO")
-          ]),
-          _vm._v(" "),
-          _c("th", { staticStyle: { "vertical-align": "middle" } }, [
-            _vm._v("FECHA FIN")
-          ]),
-          _vm._v(" "),
-          _c("th", { staticStyle: { "vertical-align": "middle" } }, [
-            _vm._v("OPERACIÓN")
-          ]),
-          _vm._v(" "),
-          _c("th", { staticStyle: { "vertical-align": "middle" } }, [
-            _vm._v("CARGO")
-          ]),
-          _vm._v(" "),
-          _c("th", { staticStyle: { "vertical-align": "middle" } }, [
-            _vm._v("ABONO")
-          ]),
-          _vm._v(" "),
-          _c("th", { staticStyle: { "vertical-align": "middle" } }, [
-            _vm._v("SALDO")
-          ]),
-          _vm._v(" "),
-          _c(
-            "th",
-            {
-              staticStyle: {
-                "text-align": "center",
-                "vertical-align": "middle"
-              }
-            },
-            [_vm._v("OPCIÓN")]
-          )
-        ])
-      ]
+      [_c("i", { staticClass: "fa fa-indent" })]
     )
   }
 ]
@@ -30034,7 +28799,7 @@ module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-19302954", module.exports)
+    require("vue-hot-reload-api")      .rerender("data-v-3f1936fe", module.exports)
   }
 }
 

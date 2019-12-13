@@ -1,17 +1,17 @@
-webpackJsonp([29],Array(46).concat([
-/* 46 */
+webpackJsonp([29],Array(58).concat([
+/* 58 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(233)
+  __webpack_require__(277)
 }
 var normalizeComponent = __webpack_require__(191)
 /* script */
-var __vue_script__ = __webpack_require__(235)
+var __vue_script__ = __webpack_require__(279)
 /* template */
-var __vue_template__ = __webpack_require__(236)
+var __vue_template__ = __webpack_require__(280)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -28,7 +28,7 @@ var Component = normalizeComponent(
   __vue_scopeId__,
   __vue_module_identifier__
 )
-Component.options.__file = "resources/assets/js/components/setting/ContratoBoleta.vue"
+Component.options.__file = "resources/assets/js/components/security/Role.vue"
 
 /* hot reload */
 if (false) {(function () {
@@ -37,9 +37,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-31cc7976", Component.options)
+    hotAPI.createRecord("data-v-7db9c2fe", Component.options)
   } else {
-    hotAPI.reload("data-v-31cc7976", Component.options)
+    hotAPI.reload("data-v-7db9c2fe", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
@@ -50,18 +50,6 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 47 */,
-/* 48 */,
-/* 49 */,
-/* 50 */,
-/* 51 */,
-/* 52 */,
-/* 53 */,
-/* 54 */,
-/* 55 */,
-/* 56 */,
-/* 57 */,
-/* 58 */,
 /* 59 */,
 /* 60 */,
 /* 61 */,
@@ -26349,23 +26337,67 @@ module.exports = function (css) {
 /* 230 */,
 /* 231 */,
 /* 232 */,
-/* 233 */
+/* 233 */,
+/* 234 */,
+/* 235 */,
+/* 236 */,
+/* 237 */,
+/* 238 */,
+/* 239 */,
+/* 240 */,
+/* 241 */,
+/* 242 */,
+/* 243 */,
+/* 244 */,
+/* 245 */,
+/* 246 */,
+/* 247 */,
+/* 248 */,
+/* 249 */,
+/* 250 */,
+/* 251 */,
+/* 252 */,
+/* 253 */,
+/* 254 */,
+/* 255 */,
+/* 256 */,
+/* 257 */,
+/* 258 */,
+/* 259 */,
+/* 260 */,
+/* 261 */,
+/* 262 */,
+/* 263 */,
+/* 264 */,
+/* 265 */,
+/* 266 */,
+/* 267 */,
+/* 268 */,
+/* 269 */,
+/* 270 */,
+/* 271 */,
+/* 272 */,
+/* 273 */,
+/* 274 */,
+/* 275 */,
+/* 276 */,
+/* 277 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(234);
+var content = __webpack_require__(278);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(192)("33645991", content, false, {});
+var update = __webpack_require__(192)("2584c0d0", content, false, {});
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
  if(!content.locals) {
-   module.hot.accept("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-31cc7976\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./ContratoBoleta.vue", function() {
-     var newContent = require("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-31cc7976\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./ContratoBoleta.vue");
+   module.hot.accept("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-7db9c2fe\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Role.vue", function() {
+     var newContent = require("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-7db9c2fe\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Role.vue");
      if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
      update(newContent);
    });
@@ -26375,7 +26407,7 @@ if(false) {
 }
 
 /***/ }),
-/* 234 */
+/* 278 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(63)(false);
@@ -26383,13 +26415,13 @@ exports = module.exports = __webpack_require__(63)(false);
 
 
 // module
-exports.push([module.i, "\n.table-bordered th,\r\n.table-bordered td {\r\n  border: 1px solid rgb(204, 198, 198) !important;\n}\r\n\r\n", ""]);
+exports.push([module.i, "\n.table-bordered th,\r\n.table-bordered td {\r\n  border: 1px solid rgb(204, 198, 198) !important;\n}\r\n", ""]);
 
 // exports
 
 
 /***/ }),
-/* 235 */
+/* 279 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -26402,6 +26434,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_vue_bootstrap_datetimepicker___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_vue_bootstrap_datetimepicker__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_pc_bootstrap4_datetimepicker_build_css_bootstrap_datetimepicker_css__ = __webpack_require__(201);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_pc_bootstrap4_datetimepicker_build_css_bootstrap_datetimepicker_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_pc_bootstrap4_datetimepicker_build_css_bootstrap_datetimepicker_css__);
+var _methods;
+
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 //
@@ -26582,44 +26616,175 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
 
 
-//fecha bot
+
 /* harmony default export */ __webpack_exports__["default"] = ({
     data: function data() {
         var _ref;
 
         return _ref = {
-
+            clastab1: 'active', clastab2: '', clastab3: '', clastab4: '',
+            clastabdetalle1: 'tab-pane active', clastabdetalle2: 'tab-pane', clastabdetalle3: 'tab-pane', clastabdetalle4: 'tab-pane',
             arrayZona: [],
-            list: [], id_parent: -1, year: '',
+            listStrategicPlan: [],
             arrayEntrenador: [],
             arrayDataDetalle: [], califica: '',
             arrayCohort: [], datosArrayPbg: [], datosArraySunat: [],
             identrendor: '', idZona: '', authUser: '', datosRepresentante: [],
-
-            listado: 1, estado: '',
-            //fechas
-            fechaInicio: '01/01/2018'
-        }, _defineProperty(_ref, 'authUser', 1), _defineProperty(_ref, 'fechaFin', '' + new Date().getDate() + '/' + (Number(new Date().getMonth()) + 1) + '/' + new Date().getFullYear()), _defineProperty(_ref, 'options', {
+            zonactual: 'x', porcent: 50, empresa: '',
+            listado: 1, duenio_parcela: '', participante: '',
+            id_asesor_edit: '', localidad_edit: '', denominacion_edit: '',
+            dni_dirigente_edit: '', dirigente_edit: '',
+            comentario_edit: '', id_asesoramiento: '', id_pbg: '', estado_as: '',
+            estado_plan: '', estado: ''
+        }, _defineProperty(_ref, 'authUser', 1), _defineProperty(_ref, 'year', '' + new Date().getFullYear()), _defineProperty(_ref, 'options', {
             format: 'DD/MM/YYYY',
             useCurrent: false,
             locale: 'es',
             showClose: true
-        }), _defineProperty(_ref, 'pagination', {
+        }), _defineProperty(_ref, 'fechaRegistro', ''), _defineProperty(_ref, 'verzona', false), _defineProperty(_ref, 'puede_editar', false), _defineProperty(_ref, 'verentrenador', false), _defineProperty(_ref, 'pagination', {
             'total': 0,
             'current_page': 0,
             'per_page': 0,
             'last_page': 0,
             'from': 0,
             'to': 0
-        }), _defineProperty(_ref, 'offset', 3), _defineProperty(_ref, 'item', {
-            value: '',
-            text: ''
-        }), _defineProperty(_ref, 'amount', ''), _defineProperty(_ref, 'nameProductType', ''), _defineProperty(_ref, 'buscarProductType', ''), _defineProperty(_ref, 'productFamily', ''), _defineProperty(_ref, 'name', ''), _defineProperty(_ref, 'id', -1), _defineProperty(_ref, 'paternal_last_name', ''), _defineProperty(_ref, 'maternal_last_name', ''), _defineProperty(_ref, 'phone', ''), _defineProperty(_ref, 'address', ''), _defineProperty(_ref, 'nro_doc', ''), _defineProperty(_ref, 'errorClase', 0), _defineProperty(_ref, 'errors', {}), _defineProperty(_ref, 'errornameProductType', 'form-group'), _defineProperty(_ref, 'errorInputName', 'form-group'), _defineProperty(_ref, 'errorInputActivity3', 'form-group'), _defineProperty(_ref, 'errorInputActivity4', 'form-group'), _defineProperty(_ref, 'errorInputActivity5', 'form-group'), _defineProperty(_ref, 'errorInputActivity6', 'form-group'), _defineProperty(_ref, 'errorInputAmount', 'form-group'), _defineProperty(_ref, 'errorComboTipoProduco', 'form-group'), _defineProperty(_ref, 'arrayTypeProduct', []), _defineProperty(_ref, 'arrayFamilyProduct', []), _defineProperty(_ref, 'arrayDependenceTable', []), _defineProperty(_ref, 'listTypeProduct', []), _defineProperty(_ref, 'buscar', ''), _defineProperty(_ref, 'sex', ''), _defineProperty(_ref, 'birthdate', ''), _defineProperty(_ref, 'marital_status', ''), _defineProperty(_ref, 'id_type_product', -1), _defineProperty(_ref, 'id_family_product', -1), _ref;
+        }), _defineProperty(_ref, 'offset', 3), _defineProperty(_ref, 'datosmapa', ''), _defineProperty(_ref, 'markers', []), _defineProperty(_ref, 'modal', 0), _defineProperty(_ref, 'center', { lat: 45.508, lng: -73.587 }), _defineProperty(_ref, 'eliminar', '1'), _defineProperty(_ref, 'agregar', '1'), _defineProperty(_ref, 'id', -1), _defineProperty(_ref, 'descripcion', ''), _defineProperty(_ref, 'editar', '1'), _defineProperty(_ref, 'name', ''), _defineProperty(_ref, 'adit', ''), _defineProperty(_ref, 'errorClase', 0), _defineProperty(_ref, 'errors', {}), _defineProperty(_ref, 'listRol', []), _defineProperty(_ref, 'listPermisosNo', []), _defineProperty(_ref, 'listPermisossi', []), _defineProperty(_ref, 'errorname', 'form-group'), _defineProperty(_ref, 'errordescripcion', 'form-group'), _defineProperty(_ref, 'buscar', ''), _ref;
     },
 
     components: {
@@ -26639,10 +26804,12 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
             if (from < 1) {
                 from = 1;
             }
+
             var to = from + this.offset * 2;
             if (to >= this.pagination.last_page) {
                 to = this.pagination.last_page;
             }
+
             var pagesArray = [];
             while (from <= to) {
                 pagesArray.push(from);
@@ -26651,56 +26818,81 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
             return pagesArray;
         }
     },
-    methods: {
+    methods: (_methods = {
+        validarDataRol: function validarDataRol() {
+            this.errors = {};
+            this.errorClase = 0;
+            this.errors.name = "";
+            this.errors.descripcion = "";
+            //input
+            this.errorname = 'form-group has-success';
+            this.errordescripcion = 'form-group has-success';
+            if (!this.name) {
+                this.errors.name = "Ingrese nombre";
+                this.errorname = 'form-group has-error';
+                this.errorClase = 1;
+            }
+            if (!this.descripcion) {
+                this.errors.descripcion = "Ingrese descripcion";
+                this.errordescripcion = 'form-group has-error';
+                this.errorClase = 1;
+            }
+            return this.errorClase;
+        },
         paginaActual: function paginaActual() {
             this.listado = 1;
         },
-        cambiarPagina: function cambiarPagina(page) {
+        cambiarPagina: function cambiarPagina(page, identrendor, idZona, empresa, estado, fechaInicio, fechaFin) {
             var me = this;
             me.pagination.current_page = page;
             //me.listado=1;
-            me.listar(page);
+            //me.listar(page,identrendor,idZona,empresa,estado, fechaInicio, fechaFin);
         },
-        getFamilyProduct: function getFamilyProduct(id_parent) {
+        editarRol: function editarRol(id) {
             var me = this;
-            // me.listado=0;
-            var url = 'getDependenceParent?id_parent=' + id_parent;
+            me.listado = 2;
+            // me.limpiarRol();
+            // this.nombre= '';
+            var url = 'getEditRol?id=' + id;
             axios.get(url).then(function (response) {
                 var respuesta = response.data;
-                me.listTypeProduct = respuesta.datax;
+                me.name = respuesta.datax[0].name;
+                me.descripcion = respuesta.datax[0].descripcion;
+                me.eliminar = respuesta.datax[0].delete_role;
+                me.editar = respuesta.datax[0].edit;
+                me.agregar = respuesta.datax[0].add_role;
+                me.id = respuesta.datax[0].id;
             }).catch(function (error) {
                 console.log(error);
             });
+            //return;
         },
-        validateTypeProduct: function validateTypeProduct() {
-            this.errorClase = 0;
-            this.errors = {};
-            //input
-            this.errornameProductType = 'form-group';
-
-            if (!this.nameProductType) {
-                this.errornameProductType = 'form-group has-error';
-                this.errorClase = 1;
-            }
-
-            return this.errorClase;
+        rolPermiso: function rolPermiso() {
+            var me = this;
+            me.listarPermisos();
+            me.listado = 2;
+            // me.limpiarRol();
+            // this.nombre= '';
+            /*var url= 'getEditRol?id='+id;
+            axios.get(url).then(function (response) {
+            var respuesta= response.data;
+                me.name=respuesta.datax[0].name;
+                me.descripcion=respuesta.datax[0].descripcion;
+                me.eliminar=respuesta.datax[0].delete_role;
+                me.editar=respuesta.datax[0].edit;
+                me.agregar=respuesta.datax[0].add_role;
+                me.id=respuesta.datax[0].id;
+                
+            }) 
+            .catch(function (error) {
+            console.log(error);
+            });*/
+            //return;
         },
-        validateFamilyProduct: function validateFamilyProduct() {
-            this.errorClase = 0;
-            this.errors = {};
-            //input
-            this.errorInputName = 'form-group';
-            if (!this.name) {
-                this.errorInputName = 'form-group has-error';
-                this.errorClase = 1;
-            }
-
-            return this.errorClase;
-        },
-        addFamilyProduct: function addFamilyProduct() {
+        guardarRol: function guardarRol() {
             var _this = this;
 
-            if (this.validateFamilyProduct()) {
+            if (this.validarDataRol()) {
                 return;
             }
             swal({
@@ -26715,19 +26907,18 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
                 if (result.value) {
 
                     var me = _this;
-                    axios.post('saveDependenceFamily', {
+                    axios.post('saveRole', {
                         'name': _this.name,
-                        'id_parent': _this.id_parent,
-                        'id': _this.id_family_product
+                        'descripcion': _this.descripcion,
+                        'edit': _this.editar,
+                        'delete_role': _this.eliminar,
+                        'add_role': _this.agregar,
+                        'id': _this.id
 
                     }).then(function (response) {
-
-                        me.getFamilyProduct(me.id_parent);
-                        me.limpiarFamilyProduct();
-                        // me.limpiar();
-                        // me.listado=1; 
-                        // me.listar(1);                
-                        swal('Guardado!', 'El registro ha sido guardado con éxito.', 'success');
+                        me.limpiarRol();
+                        me.listarRol();
+                        swal('¡Actualizado!', 'El registro ha sido guardado con éxito.', 'success');
                     }).catch(function (error) {
                         console.log(error);
                     });
@@ -26735,31 +26926,12 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
                 // Read more about handling dismissals
                 result.dismiss === swal.DismissReason.cancel) {}
             });
-
-            /*this.list.push(
-            {name:this.nameProductType,
-            });*/
         },
-        editarfamilyProduct: function editarfamilyProduct(id) {
-            var me = this;
-            me.listado == 1;
-            me.limpiarFamilyProduct();
-            var url = 'getEditDependenceFamilyProduct?id=' + id;
-            axios.get(url).then(function (response) {
-                var respuesta = response.data;
-                me.id_family_product = respuesta.datax[0].id;
-                me.id_parent = respuesta.datax[0].id_parent;
-                me.name = respuesta.datax[0].name;
-                me.validateFamilyProduct();
-            }).catch(function (error) {
-                console.log(error);
-            });
-        },
-        deleteDataFamily: function deleteDataFamily(id) {
+        eliminarTypeEgress: function eliminarTypeEgress(id) {
             var _this2 = this;
 
             swal({
-                title: '¿Esta seguro de eliminar?',
+                title: '¿Esta seguro de eliminar este asistente?',
                 type: 'warning',
                 showCancelButton: true,
                 confirmButtonColor: '#3085d6',
@@ -26772,47 +26944,15 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
                 reverseButtons: true
             }).then(function (result) {
                 if (result.value) {
+
                     var me = _this2;
-                    axios.post('delete_FamilyProduct', {
+                    axios.post('delete_EgressType', {
                         'id': id
-                        //'id_parent':this.id_parent
 
                     }).then(function (response) {
-                        //me.listado=1;
-                        //me.listar(1);
-                        me.getFamilyProduct(me.id_parent);
-                    }).catch(function (error) {
-                        console.log(error);
-                    });
-                } else if (result.dismiss === swal.DismissReason.cancel) {}
-            });
-        },
-        addTypeProduct: function addTypeProduct() {
-            var _this3 = this;
-
-            if (this.validateTypeProduct()) {
-                return;
-            }
-            swal({
-                title: 'Esta seguro de guardar la informacion?',
-                type: 'warning',
-                showCancelButton: true, confirmButtonColor: '#3085d6',
-                cancelButtonColor: '#d33', confirmButtonText: 'Aceptar!',
-                cancelButtonText: 'Cancelar', confirmButtonClass: 'btn btn-success',
-                cancelButtonClass: 'btn btn-danger', buttonsStyling: false,
-                reverseButtons: true
-            }).then(function (result) {
-                if (result.value) {
-
-                    var me = _this3;
-                    axios.post('saveDependence', {
-                        'name': _this3.nameProductType,
-                        'id': _this3.id_type_product
-                    }).then(function (response) {
-                        me.limpiarTypeProduct();
-                        me.listado = 1;
-                        me.listar(1);
-                        swal('Guardado!', 'El registro ha sido guardado con éxito.', 'success');
+                        me.limpiarTypeEgress();
+                        me.listado = 2;
+                        me.listarTypeEgress();
                     }).catch(function (error) {
                         console.log(error);
                     });
@@ -26820,112 +26960,82 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
                 // Read more about handling dismissals
                 result.dismiss === swal.DismissReason.cancel) {}
             });
-
-            /*this.list.push(
-            {name:this.nameProductType,
-            });*/
         },
-        editartypeProduct: function editartypeProduct(id) {
-            var me = this;
-            me.listado == 1;
-            me.limpiarTypeProduct();
-            var url = 'getEditDependenceTypeProduct?id=' + id;
-            axios.get(url).then(function (response) {
-                var respuesta = response.data;
-                me.id_type_product = respuesta.datax[0].id;
-                me.nameProductType = respuesta.datax[0].name;
-                me.validateTypeProduct();
-            }).catch(function (error) {
-                console.log(error);
-            });
-        },
-        deleteDataTipo: function deleteDataTipo(id) {
-            var _this4 = this;
-
-            swal({
-                title: '¿Esta seguro de eliminar?',
-                type: 'warning',
-                showCancelButton: true,
-                confirmButtonColor: '#3085d6',
-                cancelButtonColor: '#d33',
-                confirmButtonText: 'Aceptar!',
-                cancelButtonText: 'Cancelar',
-                confirmButtonClass: 'btn btn-success',
-                cancelButtonClass: 'btn btn-danger',
-                buttonsStyling: false,
-                reverseButtons: true
-            }).then(function (result) {
-                if (result.value) {
-                    var me = _this4;
-                    axios.post('delete_typeProduct', {
-                        'id': id
-
-                    }).then(function (response) {
-                        me.listado = 1;
-                        me.listar(1);
-                    }).catch(function (error) {
-                        console.log(error);
-                    });
-                } else if (result.dismiss === swal.DismissReason.cancel) {}
-            });
-        },
-        cobrar: function cobrar(id) {
-            var me = this;
-            me.listado = 3;
+        descargar: function descargar(buscar) {
+            var url = '/download_strategic_plan?buscar=' + buscar;;
+            window.location.href = url;
         },
         agregar: function agregar() {
             var me = this;
             me.listado = 2;
+            //listarTypeIncome();
         },
         volver: function volver() {
             var me = this;
-            me.limpiar();
+            // me.limpiarTypeEgress();
+            //me.getComboEgress(1);
             me.listado = 1;
         },
-        descargar: function descargar(buscar) {
-            var url = '/downloadprogram?buscar=' + buscar;
-            window.location.href = url;
-        },
-        limpiarTypeProduct: function limpiarTypeProduct() {
-            this.errornameProductType = 'form-group';
+        limpiarRol: function limpiarRol() {
+            this.errordescripcion = 'form-group';
+            this.errorname = 'form-group';
             this.errors = {};
-            this.errors.nameProductType = "";
-            this.nameProductType = "";
-            this.id_type_product = -1;
-        },
-        limpiarFamilyProduct: function limpiarFamilyProduct() {
-            this.errorInputName = 'form-group';
-            this.errors = {};
-            this.errors.name = "";
-            this.name = "";
-            this.id_parent = -1;
-        },
-        listar: function listar(page) {
-            var me = this;
-            me.listado = 0;
-            //dependencia superior
-            var url = 'getDependenceParent';
-            axios.get(url).then(function (response) {
-                var respuesta = response.data;
-                me.list = respuesta.datax;
-                me.arrayTypeProduct = respuesta.datax;
-                //me.pagination= respuesta.pagination; 
-                me.listado = 1;
-            }).catch(function (error) {
-                console.log(error);
-            });
-
-            //para listar las dependencias en la tabla
-            //me.listarTabla(1);
+            this.errors.descripcion = " ";
+            this.errors.name = " ";
+            this.descripcion = " ";
+            this.name = " ";
+            this.eliminar = " ";
+            this.agregar = " ";
+            this.editar = " ";
+            this.id = -1;
         }
-    },
+    }, _defineProperty(_methods, 'descargar', function descargar(buscar) {
+        var url = '/downloadprogram?buscar=' + buscar;
+        window.location.href = url;
+    }), _defineProperty(_methods, 'listarRol', function listarRol() {
+        var me = this;
+        //me.listado=0;             
+        var url = 'getListRol';
+        axios.get(url).then(function (response) {
+            var respuesta = response.data;
+            me.listRol = respuesta.datax;
+            // me.listado=2;
+
+        }).catch(function (error) {
+            console.log(error);
+        });
+    }), _defineProperty(_methods, 'listarPermisos', function listarPermisos() {
+        var me = this;
+        //me.listado=2;             
+        var url = 'getListPermission';
+        axios.get(url).then(function (response) {
+            var respuesta = response.data;
+            me.listPermisosNo = respuesta.datax;
+            me.listado = 2;
+        }).catch(function (error) {
+            console.log(error);
+        });
+    }), _defineProperty(_methods, 'listar', function listar(year, buscar) {
+        var me = this;
+        var url = 'get_strategicplan?buscar=' + me.buscar + '&year_init=' + year;
+        axios.get(url).then(function (response) {
+            var respuesta = response.data;
+            me.listStrategicPlan = respuesta.datax;
+        }).catch(function (error) {
+            console.log(error);
+        });
+    }), _methods),
     mounted: function mounted() {
-        this.listar(1);
+        this.listar(this.year, this.buscar);
+        this.listarRol();
+        this.getComboEgress(1);
+        this.listarEgress();
+        this.listarPermisos();
     }
 });
 
 /***/ }),
-/* 236 */
+/* 280 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -26950,13 +27060,969 @@ var render = function() {
                         "div",
                         { staticClass: "box-body" },
                         [
-                          _vm.listado == 0 ? [_vm._m(1)] : _vm._e(),
-                          _vm._v(" "),
                           _vm.listado == 1
                             ? [
                                 _c("div", { staticClass: "row" }, [
+                                  _c("div", { staticClass: "col-md-10" }, [
+                                    _c(
+                                      "div",
+                                      {
+                                        staticClass: "input-group",
+                                        staticStyle: { "margin-bottom": "15px" }
+                                      },
+                                      [
+                                        _c("input", {
+                                          directives: [
+                                            {
+                                              name: "model",
+                                              rawName: "v-model",
+                                              value: _vm.buscar,
+                                              expression: "buscar"
+                                            }
+                                          ],
+                                          staticClass: "form-control",
+                                          staticStyle: {
+                                            "border-bottom-left-radius": "3px",
+                                            "border-top-left-radius": "3px"
+                                          },
+                                          attrs: {
+                                            type: "text",
+                                            placeholder:
+                                              "Buscar por código o nombre..."
+                                          },
+                                          domProps: { value: _vm.buscar },
+                                          on: {
+                                            keyup: function($event) {
+                                              if (
+                                                !$event.type.indexOf("key") &&
+                                                _vm._k(
+                                                  $event.keyCode,
+                                                  "enter",
+                                                  13,
+                                                  $event.key,
+                                                  "Enter"
+                                                )
+                                              ) {
+                                                return null
+                                              }
+                                              return _vm.listar(
+                                                _vm.year,
+                                                _vm.buscar
+                                              )
+                                            },
+                                            input: function($event) {
+                                              if ($event.target.composing) {
+                                                return
+                                              }
+                                              _vm.buscar = $event.target.value
+                                            }
+                                          }
+                                        }),
+                                        _vm._v(" "),
+                                        _c(
+                                          "span",
+                                          { staticClass: "input-group-btn" },
+                                          [
+                                            _c(
+                                              "button",
+                                              {
+                                                staticClass:
+                                                  "btn btn-search btn-flat",
+                                                staticStyle: {
+                                                  "border-bottom-right-radius":
+                                                    "3px",
+                                                  "border-top-right-radius":
+                                                    "3px"
+                                                },
+                                                attrs: { type: "submit" },
+                                                on: {
+                                                  click: function($event) {
+                                                    return _vm.listar(
+                                                      _vm.year,
+                                                      _vm.buscar
+                                                    )
+                                                  }
+                                                }
+                                              },
+                                              [
+                                                _c("i", {
+                                                  staticClass: "fa fa-search"
+                                                }),
+                                                _vm._v(" Buscar")
+                                              ]
+                                            )
+                                          ]
+                                        )
+                                      ]
+                                    )
+                                  ]),
+                                  _vm._v(" "),
+                                  _c("div", { staticClass: "col-md-2" }, [
+                                    _c(
+                                      "div",
+                                      {
+                                        staticClass: "btn-group",
+                                        staticStyle: {
+                                          float: "right",
+                                          "margin-left": "10px"
+                                        }
+                                      },
+                                      [
+                                        _c(
+                                          "button",
+                                          {
+                                            staticClass: "btn btn-save",
+                                            attrs: { type: "button" },
+                                            on: {
+                                              click: function($event) {
+                                                return _vm.guardarRol()
+                                              }
+                                            }
+                                          },
+                                          [
+                                            _c("i", {
+                                              staticClass: "fa fa-save"
+                                            }),
+                                            _vm._v(
+                                              " Guardar Rol\n                                                            "
+                                            )
+                                          ]
+                                        )
+                                      ]
+                                    )
+                                  ])
+                                ]),
+                                _vm._v(" "),
+                                _c("div", { staticClass: "row" }, [
                                   _c("div", { staticClass: "col-md-6" }, [
-                                    _vm._m(2),
+                                    _c("div", { class: _vm.errorname }, [
+                                      _c(
+                                        "label",
+                                        { attrs: { for: "nombres" } },
+                                        [_vm._v("nombre:")]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        { staticClass: "input-group" },
+                                        [
+                                          _vm._m(1),
+                                          _vm._v(" "),
+                                          _c("input", {
+                                            directives: [
+                                              {
+                                                name: "model",
+                                                rawName: "v-model",
+                                                value: _vm.name,
+                                                expression: "name"
+                                              }
+                                            ],
+                                            staticClass: "form-control",
+                                            staticStyle: {
+                                              "border-bottom-right-radius":
+                                                "3px",
+                                              "border-top-right-radius": "3px"
+                                            },
+                                            attrs: {
+                                              type: "text",
+                                              placeholder: "nombre"
+                                            },
+                                            domProps: { value: _vm.name },
+                                            on: {
+                                              input: function($event) {
+                                                if ($event.target.composing) {
+                                                  return
+                                                }
+                                                _vm.name = $event.target.value
+                                              }
+                                            }
+                                          })
+                                        ]
+                                      )
+                                    ])
+                                  ]),
+                                  _vm._v(" "),
+                                  _c("div", { staticClass: "col-md-6" }, [
+                                    _c("div", { class: _vm.errordescripcion }, [
+                                      _c(
+                                        "label",
+                                        { attrs: { for: "nombres" } },
+                                        [_vm._v("descripcion:")]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        { staticClass: "input-group" },
+                                        [
+                                          _vm._m(2),
+                                          _vm._v(" "),
+                                          _c("input", {
+                                            directives: [
+                                              {
+                                                name: "model",
+                                                rawName: "v-model",
+                                                value: _vm.descripcion,
+                                                expression: "descripcion"
+                                              }
+                                            ],
+                                            staticClass: "form-control",
+                                            staticStyle: {
+                                              "border-bottom-right-radius":
+                                                "3px",
+                                              "border-top-right-radius": "3px"
+                                            },
+                                            attrs: {
+                                              type: "text",
+                                              placeholder: "descripcion"
+                                            },
+                                            domProps: {
+                                              value: _vm.descripcion
+                                            },
+                                            on: {
+                                              input: function($event) {
+                                                if ($event.target.composing) {
+                                                  return
+                                                }
+                                                _vm.descripcion =
+                                                  $event.target.value
+                                              }
+                                            }
+                                          })
+                                        ]
+                                      )
+                                    ])
+                                  ])
+                                ]),
+                                _vm._v(" "),
+                                _c("div", { staticClass: "row" }, [
+                                  _c("div", { staticClass: "col-md-12" }, [
+                                    _c("div", { staticClass: "form-group" }, [
+                                      _c(
+                                        "label",
+                                        { attrs: { for: "nombres" } },
+                                        [_vm._v("SELECCIONE:")]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        { staticClass: "input-group" },
+                                        [
+                                          _c(
+                                            "div",
+                                            { staticClass: "col-md-4" },
+                                            [
+                                              _c(
+                                                "label",
+                                                { attrs: { for: "nombres" } },
+                                                [_vm._v("ELIMINAR:")]
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "div",
+                                                { staticClass: "checkbox" },
+                                                [
+                                                  _c(
+                                                    "label",
+                                                    {
+                                                      staticClass: "container"
+                                                    },
+                                                    [
+                                                      _c("input", {
+                                                        directives: [
+                                                          {
+                                                            name: "model",
+                                                            rawName: "v-model",
+                                                            value: _vm.eliminar,
+                                                            expression:
+                                                              "eliminar"
+                                                          }
+                                                        ],
+                                                        attrs: {
+                                                          type: "checkbox"
+                                                        },
+                                                        domProps: {
+                                                          checked: Array.isArray(
+                                                            _vm.eliminar
+                                                          )
+                                                            ? _vm._i(
+                                                                _vm.eliminar,
+                                                                null
+                                                              ) > -1
+                                                            : _vm.eliminar
+                                                        },
+                                                        on: {
+                                                          change: function(
+                                                            $event
+                                                          ) {
+                                                            var $$a =
+                                                                _vm.eliminar,
+                                                              $$el =
+                                                                $event.target,
+                                                              $$c = $$el.checked
+                                                                ? true
+                                                                : false
+                                                            if (
+                                                              Array.isArray($$a)
+                                                            ) {
+                                                              var $$v = null,
+                                                                $$i = _vm._i(
+                                                                  $$a,
+                                                                  $$v
+                                                                )
+                                                              if (
+                                                                $$el.checked
+                                                              ) {
+                                                                $$i < 0 &&
+                                                                  (_vm.eliminar = $$a.concat(
+                                                                    [$$v]
+                                                                  ))
+                                                              } else {
+                                                                $$i > -1 &&
+                                                                  (_vm.eliminar = $$a
+                                                                    .slice(
+                                                                      0,
+                                                                      $$i
+                                                                    )
+                                                                    .concat(
+                                                                      $$a.slice(
+                                                                        $$i + 1
+                                                                      )
+                                                                    ))
+                                                              }
+                                                            } else {
+                                                              _vm.eliminar = $$c
+                                                            }
+                                                          }
+                                                        }
+                                                      }),
+                                                      _vm._v(" "),
+                                                      _c("span", {
+                                                        staticClass: "checkmark"
+                                                      })
+                                                    ]
+                                                  )
+                                                ]
+                                              )
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "div",
+                                            { staticClass: "col-md-4" },
+                                            [
+                                              _c(
+                                                "label",
+                                                { attrs: { for: "nombres" } },
+                                                [_vm._v("EDITAR:")]
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "div",
+                                                { staticClass: "checkbox" },
+                                                [
+                                                  _c(
+                                                    "label",
+                                                    {
+                                                      staticClass: "container"
+                                                    },
+                                                    [
+                                                      _c("input", {
+                                                        directives: [
+                                                          {
+                                                            name: "model",
+                                                            rawName: "v-model",
+                                                            value: _vm.editar,
+                                                            expression: "editar"
+                                                          }
+                                                        ],
+                                                        attrs: {
+                                                          type: "checkbox"
+                                                        },
+                                                        domProps: {
+                                                          checked: Array.isArray(
+                                                            _vm.editar
+                                                          )
+                                                            ? _vm._i(
+                                                                _vm.editar,
+                                                                null
+                                                              ) > -1
+                                                            : _vm.editar
+                                                        },
+                                                        on: {
+                                                          change: function(
+                                                            $event
+                                                          ) {
+                                                            var $$a =
+                                                                _vm.editar,
+                                                              $$el =
+                                                                $event.target,
+                                                              $$c = $$el.checked
+                                                                ? true
+                                                                : false
+                                                            if (
+                                                              Array.isArray($$a)
+                                                            ) {
+                                                              var $$v = null,
+                                                                $$i = _vm._i(
+                                                                  $$a,
+                                                                  $$v
+                                                                )
+                                                              if (
+                                                                $$el.checked
+                                                              ) {
+                                                                $$i < 0 &&
+                                                                  (_vm.editar = $$a.concat(
+                                                                    [$$v]
+                                                                  ))
+                                                              } else {
+                                                                $$i > -1 &&
+                                                                  (_vm.editar = $$a
+                                                                    .slice(
+                                                                      0,
+                                                                      $$i
+                                                                    )
+                                                                    .concat(
+                                                                      $$a.slice(
+                                                                        $$i + 1
+                                                                      )
+                                                                    ))
+                                                              }
+                                                            } else {
+                                                              _vm.editar = $$c
+                                                            }
+                                                          }
+                                                        }
+                                                      }),
+                                                      _vm._v(" "),
+                                                      _c("span", {
+                                                        staticClass: "checkmark"
+                                                      })
+                                                    ]
+                                                  )
+                                                ]
+                                              )
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "div",
+                                            { staticClass: "col-md-4" },
+                                            [
+                                              _c(
+                                                "label",
+                                                { attrs: { for: "nombres" } },
+                                                [_vm._v("AGREGAR:")]
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "div",
+                                                { staticClass: "checkbox" },
+                                                [
+                                                  _c(
+                                                    "label",
+                                                    {
+                                                      staticClass: "container"
+                                                    },
+                                                    [
+                                                      _c("input", {
+                                                        directives: [
+                                                          {
+                                                            name: "model",
+                                                            rawName: "v-model",
+                                                            value: _vm.agregar,
+                                                            expression:
+                                                              "agregar"
+                                                          }
+                                                        ],
+                                                        attrs: {
+                                                          type: "checkbox"
+                                                        },
+                                                        domProps: {
+                                                          checked: Array.isArray(
+                                                            _vm.agregar
+                                                          )
+                                                            ? _vm._i(
+                                                                _vm.agregar,
+                                                                null
+                                                              ) > -1
+                                                            : _vm.agregar
+                                                        },
+                                                        on: {
+                                                          change: function(
+                                                            $event
+                                                          ) {
+                                                            var $$a =
+                                                                _vm.agregar,
+                                                              $$el =
+                                                                $event.target,
+                                                              $$c = $$el.checked
+                                                                ? true
+                                                                : false
+                                                            if (
+                                                              Array.isArray($$a)
+                                                            ) {
+                                                              var $$v = null,
+                                                                $$i = _vm._i(
+                                                                  $$a,
+                                                                  $$v
+                                                                )
+                                                              if (
+                                                                $$el.checked
+                                                              ) {
+                                                                $$i < 0 &&
+                                                                  (_vm.agregar = $$a.concat(
+                                                                    [$$v]
+                                                                  ))
+                                                              } else {
+                                                                $$i > -1 &&
+                                                                  (_vm.agregar = $$a
+                                                                    .slice(
+                                                                      0,
+                                                                      $$i
+                                                                    )
+                                                                    .concat(
+                                                                      $$a.slice(
+                                                                        $$i + 1
+                                                                      )
+                                                                    ))
+                                                              }
+                                                            } else {
+                                                              _vm.agregar = $$c
+                                                            }
+                                                          }
+                                                        }
+                                                      }),
+                                                      _vm._v(" "),
+                                                      _c("span", {
+                                                        staticClass: "checkmark"
+                                                      })
+                                                    ]
+                                                  )
+                                                ]
+                                              )
+                                            ]
+                                          )
+                                        ]
+                                      )
+                                    ])
+                                  ])
+                                ]),
+                                _vm._v(" "),
+                                _c("div", { staticClass: "row" }, [
+                                  _c("div", { staticClass: "col-md-12" }, [
+                                    _c("div", [
+                                      _c(
+                                        "div",
+                                        {
+                                          staticClass:
+                                            "box-body table-responsive no-padding"
+                                        },
+                                        [
+                                          _c(
+                                            "table",
+                                            {
+                                              staticClass: "table table-hover",
+                                              staticStyle: {
+                                                "font-size": "12px"
+                                              }
+                                            },
+                                            [
+                                              _vm._m(3),
+                                              _vm._v(" "),
+                                              _c(
+                                                "tbody",
+                                                _vm._l(_vm.listRol, function(
+                                                  midata,
+                                                  index
+                                                ) {
+                                                  return _c(
+                                                    "tr",
+                                                    { key: index },
+                                                    [
+                                                      _c(
+                                                        "td",
+                                                        {
+                                                          staticStyle: {
+                                                            "vertical-align":
+                                                              "middle"
+                                                          }
+                                                        },
+                                                        [
+                                                          _vm._v(
+                                                            _vm._s(index + 1)
+                                                          )
+                                                        ]
+                                                      ),
+                                                      _vm._v(" "),
+                                                      _c("td", {
+                                                        staticStyle: {
+                                                          "vertical-align":
+                                                            "middle"
+                                                        },
+                                                        domProps: {
+                                                          textContent: _vm._s(
+                                                            midata.name
+                                                          )
+                                                        }
+                                                      }),
+                                                      _vm._v(" "),
+                                                      _c("td", {
+                                                        staticStyle: {
+                                                          "vertical-align":
+                                                            "middle"
+                                                        },
+                                                        domProps: {
+                                                          textContent: _vm._s(
+                                                            midata.descripcion
+                                                          )
+                                                        }
+                                                      }),
+                                                      _vm._v(" "),
+                                                      _c("td", {
+                                                        staticStyle: {
+                                                          "vertical-align":
+                                                            "middle"
+                                                        },
+                                                        domProps: {
+                                                          textContent: _vm._s(
+                                                            midata.edit
+                                                          )
+                                                        }
+                                                      }),
+                                                      _vm._v(" "),
+                                                      _c("td", {
+                                                        staticStyle: {
+                                                          "vertical-align":
+                                                            "middle"
+                                                        },
+                                                        domProps: {
+                                                          textContent: _vm._s(
+                                                            midata.delete_role
+                                                          )
+                                                        }
+                                                      }),
+                                                      _vm._v(" "),
+                                                      _c("td", {
+                                                        staticStyle: {
+                                                          "vertical-align":
+                                                            "middle"
+                                                        },
+                                                        domProps: {
+                                                          textContent: _vm._s(
+                                                            midata.add_role
+                                                          )
+                                                        }
+                                                      }),
+                                                      _vm._v(" "),
+                                                      _c(
+                                                        "td",
+                                                        {
+                                                          staticStyle: {
+                                                            "vertical-align":
+                                                              "middle",
+                                                            "text-align":
+                                                              "center"
+                                                          }
+                                                        },
+                                                        [
+                                                          _c(
+                                                            "button",
+                                                            {
+                                                              staticClass:
+                                                                "btn btn-eliminar btn-sm",
+                                                              attrs: {
+                                                                title:
+                                                                  "Rol Permiso",
+                                                                type: "button"
+                                                              },
+                                                              on: {
+                                                                click: function(
+                                                                  $event
+                                                                ) {
+                                                                  return _vm.rolPermiso()
+                                                                }
+                                                              }
+                                                            },
+                                                            [
+                                                              _c("i", {
+                                                                staticClass:
+                                                                  "fa fa-expeditedssl"
+                                                              })
+                                                            ]
+                                                          ),
+                                                          _vm._v(" "),
+                                                          _c(
+                                                            "button",
+                                                            {
+                                                              staticClass:
+                                                                "btn btn-editar btn-sm",
+                                                              attrs: {
+                                                                type: "button"
+                                                              },
+                                                              on: {
+                                                                click: function(
+                                                                  $event
+                                                                ) {
+                                                                  return _vm.editarRol(
+                                                                    midata.id
+                                                                  )
+                                                                }
+                                                              }
+                                                            },
+                                                            [
+                                                              _c("i", {
+                                                                staticClass:
+                                                                  "fa fa-edit"
+                                                              })
+                                                            ]
+                                                          ),
+                                                          _vm._v(" "),
+                                                          _c(
+                                                            "button",
+                                                            {
+                                                              staticClass:
+                                                                "btn btn-eliminar btn-sm",
+                                                              attrs: {
+                                                                title:
+                                                                  "Eliminar",
+                                                                type: "button"
+                                                              },
+                                                              on: {
+                                                                click: function(
+                                                                  $event
+                                                                ) {
+                                                                  return _vm.eliminarRol(
+                                                                    midata.id
+                                                                  )
+                                                                }
+                                                              }
+                                                            },
+                                                            [
+                                                              _c("i", {
+                                                                staticClass:
+                                                                  "fa fa-trash"
+                                                              })
+                                                            ]
+                                                          )
+                                                        ]
+                                                      )
+                                                    ]
+                                                  )
+                                                }),
+                                                0
+                                              )
+                                            ]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        {
+                                          staticClass:
+                                            "dataTables_paginate paging_simple_numbers",
+                                          staticStyle: {
+                                            float: "right !important"
+                                          }
+                                        },
+                                        [
+                                          _c("nav", [
+                                            _c(
+                                              "ul",
+                                              { staticClass: "pagination" },
+                                              [
+                                                _vm.pagination.current_page > 1
+                                                  ? _c(
+                                                      "li",
+                                                      {
+                                                        staticClass: "page-item"
+                                                      },
+                                                      [
+                                                        _c(
+                                                          "a",
+                                                          {
+                                                            staticClass:
+                                                              "page-link",
+                                                            attrs: {
+                                                              href: "#"
+                                                            },
+                                                            on: {
+                                                              click: function(
+                                                                $event
+                                                              ) {
+                                                                $event.preventDefault()
+                                                                _vm.cambiarPagina(
+                                                                  Number(
+                                                                    _vm
+                                                                      .pagination
+                                                                      .current_page
+                                                                  ) - 1,
+                                                                  _vm.identrendor,
+                                                                  _vm.idZona,
+                                                                  _vm.empresa,
+                                                                  _vm.estado,
+                                                                  _vm.fechaInicio,
+                                                                  _vm.fechaFin
+                                                                )
+                                                              }
+                                                            }
+                                                          },
+                                                          [_vm._v("Ant")]
+                                                        )
+                                                      ]
+                                                    )
+                                                  : _vm._e(),
+                                                _vm._v(" "),
+                                                _vm._l(
+                                                  _vm.pagesNumber,
+                                                  function(page) {
+                                                    return _c(
+                                                      "li",
+                                                      {
+                                                        key: page,
+                                                        staticClass:
+                                                          "page-item",
+                                                        class: [
+                                                          page == _vm.isActived
+                                                            ? "active"
+                                                            : ""
+                                                        ]
+                                                      },
+                                                      [
+                                                        _c("a", {
+                                                          staticClass:
+                                                            "page-link",
+                                                          attrs: { href: "#" },
+                                                          domProps: {
+                                                            textContent: _vm._s(
+                                                              page
+                                                            )
+                                                          },
+                                                          on: {
+                                                            click: function(
+                                                              $event
+                                                            ) {
+                                                              $event.preventDefault()
+                                                              return _vm.cambiarPagina(
+                                                                page,
+                                                                _vm.identrendor,
+                                                                _vm.idZona,
+                                                                _vm.empresa,
+                                                                _vm.estado,
+                                                                _vm.fechaInicio,
+                                                                _vm.fechaFin
+                                                              )
+                                                            }
+                                                          }
+                                                        })
+                                                      ]
+                                                    )
+                                                  }
+                                                ),
+                                                _vm._v(" "),
+                                                _vm.pagination.current_page <
+                                                _vm.pagination.last_page
+                                                  ? _c(
+                                                      "li",
+                                                      {
+                                                        staticClass: "page-item"
+                                                      },
+                                                      [
+                                                        _c(
+                                                          "a",
+                                                          {
+                                                            staticClass:
+                                                              "page-link",
+                                                            attrs: {
+                                                              href: "#"
+                                                            },
+                                                            on: {
+                                                              click: function(
+                                                                $event
+                                                              ) {
+                                                                $event.preventDefault()
+                                                                _vm.cambiarPagina(
+                                                                  Number(
+                                                                    _vm
+                                                                      .pagination
+                                                                      .current_page
+                                                                  ) + 1,
+                                                                  _vm.identrendor,
+                                                                  _vm.idZona,
+                                                                  _vm.empresa,
+                                                                  _vm.estado,
+                                                                  _vm.fechaInicio,
+                                                                  _vm.fechaFin
+                                                                )
+                                                              }
+                                                            }
+                                                          },
+                                                          [_vm._v("Sig")]
+                                                        )
+                                                      ]
+                                                    )
+                                                  : _vm._e()
+                                              ],
+                                              2
+                                            )
+                                          ])
+                                        ]
+                                      )
+                                    ])
+                                  ])
+                                ])
+                              ]
+                            : _vm._e(),
+                          _vm._v(" "),
+                          _vm.listado == 2
+                            ? [
+                                _c("div", { staticClass: "row" }, [
+                                  _c("div", { staticClass: "col-md-6" }, [
+                                    _c(
+                                      "div",
+                                      { staticClass: "box-header with-border" },
+                                      [
+                                        _c(
+                                          "div",
+                                          {
+                                            staticClass: "col-md-6",
+                                            staticStyle: { float: "left" }
+                                          },
+                                          [
+                                            _c(
+                                              "div",
+                                              {
+                                                staticClass: "btn-group",
+                                                staticStyle: { float: "left" }
+                                              },
+                                              [
+                                                _c("i", {
+                                                  staticClass:
+                                                    "fa  fa-chevron-circle-left",
+                                                  staticStyle: {
+                                                    float: "left"
+                                                  },
+                                                  on: {
+                                                    click: function($event) {
+                                                      return _vm.volver()
+                                                    }
+                                                  }
+                                                }),
+                                                _vm._v(
+                                                  " \n                                                                                    \n                                                                                    \n                    "
+                                                )
+                                              ]
+                                            ),
+                                            _vm._v(" "),
+                                            _c(
+                                              "h3",
+                                              { staticClass: "box-title" },
+                                              [_vm._v("Cargo:")]
+                                            )
+                                          ]
+                                        )
+                                      ]
+                                    ),
                                     _vm._v(" "),
                                     _c("div", { staticClass: "row" }, [
                                       _c("div", { staticClass: "col-md-10" }, [
@@ -26967,97 +28033,14 @@ var render = function() {
                                             _c(
                                               "label",
                                               { attrs: { for: "nombres" } },
-                                              [_vm._v("CONFIGURE:")]
-                                            ),
-                                            _vm._v(" "),
-                                            _c(
-                                              "div",
-                                              { staticClass: "input-group" },
                                               [
-                                                _vm._m(3),
-                                                _vm._v(" "),
-                                                _c("input", {
-                                                  directives: [
-                                                    {
-                                                      name: "model",
-                                                      rawName: "v-model",
-                                                      value:
-                                                        _vm.nameProductType,
-                                                      expression:
-                                                        "nameProductType"
-                                                    }
-                                                  ],
-                                                  staticClass: "form-control",
-                                                  staticStyle: {
-                                                    "border-bottom-right-radius":
-                                                      "3px",
-                                                    "border-top-right-radius":
-                                                      "3px"
-                                                  },
-                                                  attrs: {
-                                                    type: "text",
-                                                    placeholder: "Nombres"
-                                                  },
-                                                  domProps: {
-                                                    value: _vm.nameProductType
-                                                  },
-                                                  on: {
-                                                    input: function($event) {
-                                                      if (
-                                                        $event.target.composing
-                                                      ) {
-                                                        return
-                                                      }
-                                                      _vm.nameProductType =
-                                                        $event.target.value
-                                                    }
-                                                  }
-                                                })
+                                                _vm._v(
+                                                  "PERMISOS ASIGNADOS AL CARGO"
+                                                )
                                               ]
                                             )
                                           ]
                                         )
-                                      ]),
-                                      _vm._v(" "),
-                                      _c("div", { staticClass: "col-md-2" }, [
-                                        _c("div", [
-                                          _c(
-                                            "label",
-                                            { attrs: { for: "nombres" } },
-                                            [_vm._v("Agregar:")]
-                                          ),
-                                          _vm._v(" "),
-                                          _c(
-                                            "div",
-                                            { staticClass: "input-group" },
-                                            [
-                                              _c(
-                                                "button",
-                                                {
-                                                  staticClass:
-                                                    "btn btn-mostrar btn-flat",
-                                                  staticStyle: {
-                                                    "border-top-right-radius":
-                                                      "3px",
-                                                    "border-bottom-right-radius":
-                                                      "3px"
-                                                  },
-                                                  attrs: { type: "submit" },
-                                                  on: {
-                                                    click: function($event) {
-                                                      return _vm.addTypeProduct()
-                                                    }
-                                                  }
-                                                },
-                                                [
-                                                  _c("i", {
-                                                    staticClass: "fa fa-plus"
-                                                  })
-                                                ]
-                                              )
-                                            ]
-                                          )
-                                        ])
                                       ])
                                     ]),
                                     _vm._v(" "),
@@ -27084,110 +28067,120 @@ var render = function() {
                                                 _vm._v(" "),
                                                 _c(
                                                   "tbody",
-                                                  _vm._l(_vm.list, function(
-                                                    midata,
-                                                    index
-                                                  ) {
-                                                    return _c(
-                                                      "tr",
-                                                      { key: index },
-                                                      [
-                                                        _c(
-                                                          "td",
-                                                          {
-                                                            staticStyle: {
-                                                              "vertical-align":
-                                                                "middle"
-                                                            }
-                                                          },
-                                                          [
-                                                            _vm._v(
-                                                              _vm._s(index + 1)
-                                                            )
-                                                          ]
-                                                        ),
-                                                        _vm._v(" "),
-                                                        _c("td", {
-                                                          staticStyle: {
-                                                            "vertical-align":
-                                                              "middle"
-                                                          },
-                                                          domProps: {
-                                                            textContent: _vm._s(
-                                                              midata.name
-                                                            )
-                                                          }
-                                                        }),
-                                                        _vm._v(" "),
-                                                        _c(
-                                                          "td",
-                                                          {
+                                                  _vm._l(
+                                                    _vm.listPermisosSi,
+                                                    function(midata, index) {
+                                                      return _c(
+                                                        "tr",
+                                                        { key: index },
+                                                        [
+                                                          _c(
+                                                            "td",
+                                                            {
+                                                              staticStyle: {
+                                                                "vertical-align":
+                                                                  "middle",
+                                                                background:
+                                                                  "#FFFFFF"
+                                                              }
+                                                            },
+                                                            [
+                                                              _vm._v(
+                                                                _vm._s(
+                                                                  index + 1
+                                                                )
+                                                              )
+                                                            ]
+                                                          ),
+                                                          _vm._v(" "),
+                                                          _c("td", {
                                                             staticStyle: {
                                                               "vertical-align":
                                                                 "middle",
-                                                              "text-align":
-                                                                "center"
+                                                              background:
+                                                                "#FFFFFF"
+                                                            },
+                                                            domProps: {
+                                                              textContent: _vm._s(
+                                                                midata.name
+                                                              )
                                                             }
-                                                          },
-                                                          [
-                                                            _c(
-                                                              "button",
-                                                              {
-                                                                staticClass:
-                                                                  "btn btn-editar btn-sm",
-                                                                attrs: {
-                                                                  type: "button"
-                                                                },
-                                                                on: {
-                                                                  click: function(
-                                                                    $event
-                                                                  ) {
-                                                                    return _vm.editartypeProduct(
-                                                                      midata.id
-                                                                    )
-                                                                  }
-                                                                }
-                                                              },
-                                                              [
-                                                                _c("i", {
+                                                          }),
+                                                          _vm._v(" "),
+                                                          _c(
+                                                            "td",
+                                                            {
+                                                              staticStyle: {
+                                                                "vertical-align":
+                                                                  "middle",
+                                                                "text-align":
+                                                                  "center",
+                                                                background:
+                                                                  "#FFFFFF"
+                                                              }
+                                                            },
+                                                            [
+                                                              _c(
+                                                                "button",
+                                                                {
                                                                   staticClass:
-                                                                    "fa fa-pencil"
-                                                                })
-                                                              ]
-                                                            ),
-                                                            _vm._v(" "),
-                                                            _c(
-                                                              "button",
-                                                              {
-                                                                staticClass:
-                                                                  "btn btn-eliminar btn-sm",
-                                                                attrs: {
-                                                                  title:
-                                                                    "Eliminar",
-                                                                  type: "button"
-                                                                },
-                                                                on: {
-                                                                  click: function(
-                                                                    $event
-                                                                  ) {
-                                                                    return _vm.deleteDataTipo(
-                                                                      midata.id
-                                                                    )
+                                                                    "btn btn-editar btn-sm",
+                                                                  attrs: {
+                                                                    type:
+                                                                      "button"
+                                                                  },
+                                                                  on: {
+                                                                    click: function(
+                                                                      $event
+                                                                    ) {
+                                                                      return _vm.editartypeProduct(
+                                                                        midata.id
+                                                                      )
+                                                                    }
                                                                   }
-                                                                }
-                                                              },
-                                                              [
-                                                                _c("i", {
+                                                                },
+                                                                [
+                                                                  _c("i", {
+                                                                    staticClass:
+                                                                      "fa fa-pencil"
+                                                                  })
+                                                                ]
+                                                              ),
+                                                              _vm._v(" "),
+                                                              _c(
+                                                                "button",
+                                                                {
                                                                   staticClass:
-                                                                    "fa fa-trash"
-                                                                })
-                                                              ]
-                                                            )
-                                                          ]
-                                                        )
-                                                      ]
-                                                    )
-                                                  }),
+                                                                    "btn btn-eliminar btn-sm",
+                                                                  attrs: {
+                                                                    title:
+                                                                      "Eliminar",
+                                                                    type:
+                                                                      "button"
+                                                                  },
+                                                                  on: {
+                                                                    click: function(
+                                                                      $event
+                                                                    ) {
+                                                                      return _vm.deleteDataTipo(
+                                                                        midata.id
+                                                                      )
+                                                                    }
+                                                                  }
+                                                                },
+                                                                [
+                                                                  _c("i", {
+                                                                    staticClass:
+                                                                      "fa fa-trash"
+                                                                  })
+                                                                ]
+                                                              )
+                                                            ]
+                                                          )
+                                                        ]
+                                                      )
+                                                    }
+                                                  ),
                                                   0
                                                 )
                                               ]
@@ -27201,106 +28194,25 @@ var render = function() {
                                   _c("div", { staticClass: "col-md-6" }, [
                                     _vm._m(5),
                                     _vm._v(" "),
+                                    _c("div", { staticClass: "row" }),
+                                    _vm._v(" "),
                                     _c("div", { staticClass: "row" }, [
                                       _c("div", { staticClass: "col-md-10" }, [
                                         _c(
                                           "div",
-                                          { class: _vm.errornameProductType },
+                                          { class: _vm.errorInputName },
                                           [
                                             _c(
                                               "label",
                                               { attrs: { for: "nombres" } },
-                                              [_vm._v("CONFIGURE:")]
-                                            ),
-                                            _vm._v(" "),
-                                            _c(
-                                              "div",
-                                              { staticClass: "input-group" },
                                               [
-                                                _vm._m(6),
-                                                _vm._v(" "),
-                                                _c("input", {
-                                                  directives: [
-                                                    {
-                                                      name: "model",
-                                                      rawName: "v-model",
-                                                      value:
-                                                        _vm.nameProductType,
-                                                      expression:
-                                                        "nameProductType"
-                                                    }
-                                                  ],
-                                                  staticClass: "form-control",
-                                                  staticStyle: {
-                                                    "border-bottom-right-radius":
-                                                      "3px",
-                                                    "border-top-right-radius":
-                                                      "3px"
-                                                  },
-                                                  attrs: {
-                                                    type: "text",
-                                                    placeholder: "Nombres"
-                                                  },
-                                                  domProps: {
-                                                    value: _vm.nameProductType
-                                                  },
-                                                  on: {
-                                                    input: function($event) {
-                                                      if (
-                                                        $event.target.composing
-                                                      ) {
-                                                        return
-                                                      }
-                                                      _vm.nameProductType =
-                                                        $event.target.value
-                                                    }
-                                                  }
-                                                })
+                                                _vm._v(
+                                                  "PERMISOS NO ASIGNADOS AL CARGO:"
+                                                )
                                               ]
                                             )
                                           ]
                                         )
-                                      ]),
-                                      _vm._v(" "),
-                                      _c("div", { staticClass: "col-md-2" }, [
-                                        _c("div", [
-                                          _c(
-                                            "label",
-                                            { attrs: { for: "nombres" } },
-                                            [_vm._v("Agregar:")]
-                                          ),
-                                          _vm._v(" "),
-                                          _c(
-                                            "div",
-                                            { staticClass: "input-group" },
-                                            [
-                                              _c(
-                                                "button",
-                                                {
-                                                  staticClass:
-                                                    "btn btn-mostrar btn-flat",
-                                                  staticStyle: {
-                                                    "border-top-right-radius":
-                                                      "3px",
-                                                    "border-bottom-right-radius":
-                                                      "3px"
-                                                  },
-                                                  attrs: { type: "submit" },
-                                                  on: {
-                                                    click: function($event) {
-                                                      return _vm.addTypeProduct()
-                                                    }
-                                                  }
-                                                },
-                                                [
-                                                  _c("i", {
-                                                    staticClass: "fa fa-plus"
-                                                  })
-                                                ]
-                                              )
-                                            ]
-                                          )
-                                        ])
                                       ])
                                     ]),
                                     _vm._v(" "),
@@ -27323,115 +28235,105 @@ var render = function() {
                                                 }
                                               },
                                               [
-                                                _vm._m(7),
+                                                _vm._m(6),
                                                 _vm._v(" "),
                                                 _c(
                                                   "tbody",
-                                                  _vm._l(_vm.list, function(
-                                                    midata,
-                                                    index
-                                                  ) {
-                                                    return _c(
-                                                      "tr",
-                                                      { key: index },
-                                                      [
-                                                        _c(
-                                                          "td",
-                                                          {
-                                                            staticStyle: {
-                                                              "vertical-align":
-                                                                "middle"
-                                                            }
-                                                          },
-                                                          [
-                                                            _vm._v(
-                                                              _vm._s(index + 1)
-                                                            )
-                                                          ]
-                                                        ),
-                                                        _vm._v(" "),
-                                                        _c("td", {
-                                                          staticStyle: {
-                                                            "vertical-align":
-                                                              "middle"
-                                                          },
-                                                          domProps: {
-                                                            textContent: _vm._s(
-                                                              midata.name
-                                                            )
-                                                          }
-                                                        }),
-                                                        _vm._v(" "),
-                                                        _c(
-                                                          "td",
-                                                          {
-                                                            staticStyle: {
-                                                              "vertical-align":
-                                                                "middle",
-                                                              "text-align":
-                                                                "center"
-                                                            }
-                                                          },
+                                                  [
+                                                    _vm._l(
+                                                      _vm.listPermisosNo,
+                                                      function(midata, index) {
+                                                        return _c(
+                                                          "tr",
+                                                          { key: index },
                                                           [
                                                             _c(
-                                                              "button",
+                                                              "td",
                                                               {
-                                                                staticClass:
-                                                                  "btn btn-editar btn-sm",
-                                                                attrs: {
-                                                                  type: "button"
-                                                                },
-                                                                on: {
-                                                                  click: function(
-                                                                    $event
-                                                                  ) {
-                                                                    return _vm.editartypeProduct(
-                                                                      midata.id
-                                                                    )
-                                                                  }
+                                                                staticStyle: {
+                                                                  "vertical-align":
+                                                                    "middle",
+                                                                  background:
+                                                                    "#FFFFFF"
                                                                 }
                                                               },
                                                               [
-                                                                _c("i", {
-                                                                  staticClass:
-                                                                    "fa fa-pencil"
-                                                                })
+                                                                _vm._v(
+                                                                  _vm._s(
+                                                                    index + 1
+                                                                  )
+                                                                )
                                                               ]
                                                             ),
                                                             _vm._v(" "),
+                                                            _c("td", {
+                                                              staticStyle: {
+                                                                "vertical-align":
+                                                                  "middle",
+                                                                background:
+                                                                  "#FFFFFF"
+                                                              },
+                                                              domProps: {
+                                                                textContent: _vm._s(
+                                                                  midata.name
+                                                                )
+                                                              }
+                                                            }),
+                                                            _vm._v(" "),
                                                             _c(
-                                                              "button",
+                                                              "td",
                                                               {
-                                                                staticClass:
-                                                                  "btn btn-eliminar btn-sm",
-                                                                attrs: {
-                                                                  title:
-                                                                    "Eliminar",
-                                                                  type: "button"
-                                                                },
-                                                                on: {
-                                                                  click: function(
-                                                                    $event
-                                                                  ) {
-                                                                    return _vm.deleteDataTipo(
-                                                                      midata.id
-                                                                    )
-                                                                  }
+                                                                staticStyle: {
+                                                                  "vertical-align":
+                                                                    "middle",
+                                                                  "text-align":
+                                                                    "center",
+                                                                  background:
+                                                                    "#FFFFFF"
                                                                 }
                                                               },
                                                               [
-                                                                _c("i", {
-                                                                  staticClass:
-                                                                    "fa fa-trash"
-                                                                })
+                                                                _c(
+                                                                  "button",
+                                                                  {
+                                                                    staticClass:
+                                                                      "btn btn-editar btn-sm",
+                                                                    attrs: {
+                                                                      type:
+                                                                        "button"
+                                                                    },
+                                                                    on: {
+                                                                      click: function(
+                                                                        $event
+                                                                      ) {
+                                                                        return _vm.editarfamilyProduct(
+                                                                          midata.id
+                                                                        )
+                                                                      }
+                                                                    }
+                                                                  },
+                                                                  [
+                                                                    _c("i", {
+                                                                      staticClass:
+                                                                        "fa fa-plus-circle"
+                                                                    })
+                                                                  ]
+                                                                )
                                                               ]
                                                             )
                                                           ]
                                                         )
-                                                      ]
-                                                    )
-                                                  }),
-                                                  0
+                                                      }
+                                                    ),
+                                                    _c("td", {
+                                                      staticStyle: {
+                                                        "text-align": "center",
+                                                        "vertical-align":
+                                                          "middle"
+                                                      }
+                                                    })
+                                                  ],
+                                                  2
                                                 )
                                               ]
                                             )
@@ -27466,10 +28368,21 @@ var staticRenderFns = [
       _c("section", { staticClass: "content-header" }, [
         _c("h3", { staticClass: "box-title" }, [
           _c("strong", [
-            _vm._v(
-              " \n                    NUMERO DE CONTRATO / NUMERO DE BOLETA "
-            )
+            _vm._v(" \n                    GESTION ROLES Y PERMISOS")
           ])
+        ]),
+        _vm._v(" "),
+        _c("ol", { staticClass: "breadcrumb" }, [
+          _c("li", [
+            _c("a", { attrs: { href: "#" } }, [
+              _c("i", { staticClass: "fa fa-database" }),
+              _vm._v("Registros")
+            ])
+          ]),
+          _vm._v(" "),
+          _c("li", [_c("a", { attrs: { href: "#" } }, [_vm._v("SEGURITY")])]),
+          _vm._v(" "),
+          _c("li", { staticClass: "active" }, [_vm._v("ROL")])
         ])
       ]),
       _vm._v(" "),
@@ -27480,21 +28393,17 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { attrs: { align: "center" } }, [
-      _c("img", {
-        attrs: { src: "img/loadx.gif", alt: "technoserve", align: "middle" }
-      }),
-      _vm._v(" "),
-      _c("p", [_vm._v("Cargando...")])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "box-header with-border" }, [
-      _c("h3", { staticClass: "box-title" }, [_vm._v("NUMERO DE CONTRATO")])
-    ])
+    return _c(
+      "span",
+      {
+        staticClass: "input-group-addon",
+        staticStyle: {
+          "border-bottom-left-radius": "3px",
+          "border-top-left-radius": "3px"
+        }
+      },
+      [_c("i", { staticClass: "fa fa-user" })]
+    )
   },
   function() {
     var _vm = this
@@ -27520,13 +28429,30 @@ var staticRenderFns = [
       "thead",
       { staticStyle: { background: "rgb(32, 32, 32)", color: "#fff" } },
       [
+        _c("tr"),
         _c("tr", [
           _c("th", { staticStyle: { "vertical-align": "middle" } }, [
             _vm._v("#")
           ]),
           _vm._v(" "),
           _c("th", { staticStyle: { "vertical-align": "middle" } }, [
-            _vm._v("NOMBRE")
+            _vm._v("CARGO")
+          ]),
+          _vm._v(" "),
+          _c("th", { staticStyle: { "vertical-align": "middle" } }, [
+            _vm._v("DESCRIPCION")
+          ]),
+          _vm._v(" "),
+          _c("th", { staticStyle: { "vertical-align": "middle" } }, [
+            _vm._v("EDITAR")
+          ]),
+          _vm._v(" "),
+          _c("th", { staticStyle: { "vertical-align": "middle" } }, [
+            _vm._v("ELIMINAR")
+          ]),
+          _vm._v(" "),
+          _c("th", { staticStyle: { "vertical-align": "middle" } }, [
+            _vm._v("AGREGAR")
           ]),
           _vm._v(" "),
           _c(
@@ -27548,33 +28474,9 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "box-header with-border" }, [
-      _c("h3", { staticClass: "box-title" }, [_vm._v("NUMERO DE BOLETA")])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "span",
-      {
-        staticClass: "input-group-addon",
-        staticStyle: {
-          "border-bottom-left-radius": "3px",
-          "border-top-left-radius": "3px"
-        }
-      },
-      [_c("i", { staticClass: "fa fa-user" })]
-    )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
     return _c(
       "thead",
-      { staticStyle: { background: "rgb(32, 32, 32)", color: "#fff" } },
+      { staticStyle: { background: "#FFFFFF", color: "#060006" } },
       [
         _c("tr", [
           _c("th", { staticStyle: { "vertical-align": "middle" } }, [
@@ -27582,7 +28484,7 @@ var staticRenderFns = [
           ]),
           _vm._v(" "),
           _c("th", { staticStyle: { "vertical-align": "middle" } }, [
-            _vm._v("NOMBRE")
+            _vm._v("Modulo")
           ]),
           _vm._v(" "),
           _c(
@@ -27594,7 +28496,46 @@ var staticRenderFns = [
               },
               attrs: { colspan: "2" }
             },
-            [_vm._v("ACCIONES")]
+            [_vm._v("Eliminar")]
+          )
+        ])
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "box-header with-border" }, [
+      _c("h3", { staticClass: "box-title" })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "thead",
+      { staticStyle: { background: "#FFFFFF", color: "#060006" } },
+      [
+        _c("tr", [
+          _c("th", { staticStyle: { "vertical-align": "middle" } }, [
+            _vm._v("#")
+          ]),
+          _vm._v(" "),
+          _c("th", { staticStyle: { "vertical-align": "middle" } }, [
+            _vm._v("Modulo")
+          ]),
+          _vm._v(" "),
+          _c(
+            "th",
+            {
+              staticStyle: {
+                "text-align": "center",
+                "vertical-align": "middle"
+              }
+            },
+            [_vm._v("Agregar")]
           )
         ])
       ]
@@ -27606,7 +28547,7 @@ module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-31cc7976", module.exports)
+    require("vue-hot-reload-api")      .rerender("data-v-7db9c2fe", module.exports)
   }
 }
 
