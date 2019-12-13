@@ -14313,7 +14313,7 @@ __webpack_provided_window_dot_Vue = __webpack_require__(3);
 
 // Registers
 Vue.component('customercredit', function () {
-  return __webpack_require__.e/* import() */(21).then(__webpack_require__.bind(null, 39));
+  return __webpack_require__.e/* import() */(13).then(__webpack_require__.bind(null, 39));
 });
 Vue.component('customerlist', function () {
   return __webpack_require__.e/* import() */(12).then(__webpack_require__.bind(null, 40));
@@ -14325,7 +14325,7 @@ Vue.component('payment', function () {
   return __webpack_require__.e/* import() */(8).then(__webpack_require__.bind(null, 42));
 });
 Vue.component('branchoffice', function () {
-  return __webpack_require__.e/* import() */(13).then(__webpack_require__.bind(null, 43));
+  return __webpack_require__.e/* import() */(14).then(__webpack_require__.bind(null, 43));
 });
 Vue.component('market', function () {
   return __webpack_require__.e/* import() */(9).then(__webpack_require__.bind(null, 44));
@@ -14337,7 +14337,7 @@ Vue.component('contrato', function () {
   return __webpack_require__.e/* import() */(4).then(__webpack_require__.bind(null, 46));
 });
 Vue.component('montodia', function () {
-  return __webpack_require__.e/* import() */(14).then(__webpack_require__.bind(null, 47));
+  return __webpack_require__.e/* import() */(15).then(__webpack_require__.bind(null, 47));
 });
 // RegistersCustomer
 Vue.component('document', function () {
@@ -14358,13 +14358,13 @@ Vue.component('garmenttype', function () {
   return __webpack_require__.e/* import() */(3).then(__webpack_require__.bind(null, 52));
 });
 Vue.component('carhregister', function () {
-  return __webpack_require__.e/* import() */(19).then(__webpack_require__.bind(null, 53));
+  return __webpack_require__.e/* import() */(20).then(__webpack_require__.bind(null, 53));
 });
 Vue.component('income', function () {
-  return __webpack_require__.e/* import() */(17).then(__webpack_require__.bind(null, 54));
+  return __webpack_require__.e/* import() */(18).then(__webpack_require__.bind(null, 54));
 });
 Vue.component('egress', function () {
-  return __webpack_require__.e/* import() */(18).then(__webpack_require__.bind(null, 55));
+  return __webpack_require__.e/* import() */(19).then(__webpack_require__.bind(null, 55));
 });
 
 //Vue.component('example-component', require('./components/ExampleComponent.vue'));
@@ -14384,14 +14384,14 @@ Vue.component('user', function () {
   return __webpack_require__.e/* import() */(0).then(__webpack_require__.bind(null, 59));
 });
 Vue.component('profile', function () {
-  return __webpack_require__.e/* import() */(20).then(__webpack_require__.bind(null, 60));
+  return __webpack_require__.e/* import() */(21).then(__webpack_require__.bind(null, 60));
 });
 //para creditos
 Vue.component('dailycollection', function () {
-  return __webpack_require__.e/* import() */(15).then(__webpack_require__.bind(null, 61));
+  return __webpack_require__.e/* import() */(16).then(__webpack_require__.bind(null, 61));
 });
 Vue.component('customerhistory', function () {
-  return __webpack_require__.e/* import() */(16).then(__webpack_require__.bind(null, 62));
+  return __webpack_require__.e/* import() */(17).then(__webpack_require__.bind(null, 62));
 });
 
 var app = new Vue({

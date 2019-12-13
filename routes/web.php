@@ -43,7 +43,8 @@ Route::get('/get_type_requirement', 'Register\CustomerCreditController@list_type
 Route::get('/get_type_business', 'Register\CustomerCreditController@list_type_business');
 Route::get('/get_job', 'Register\CustomerCreditController@list_job');
 Route::get('/get_employee', 'Register\EmployeeController@list_employee');
-Route::post('/saveCustomerCredit', 'Register\CustomerCreditController@save_data'); 
+Route::post('/save_customer_credit', 'Register\CustomerCreditController@save_data'); 
+Route::post('/save_detail_credit', 'Register\CustomerCreditController@save_detail_credit'); 
 Route::get('/generate_code', 'Register\CustomerCreditController@generate_code');  
 Route::get('/get_customer_by_dni', 'Register\CustomerCreditController@get_customer_by_dni'); 
 Route::get('/get_aval_by_dni', 'Register\CustomerCreditController@get_aval_by_dni'); 

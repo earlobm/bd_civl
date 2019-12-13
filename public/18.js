@@ -1,17 +1,17 @@
-webpackJsonp([18],Array(55).concat([
-/* 55 */
+webpackJsonp([18],Array(54).concat([
+/* 54 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(270)
+  __webpack_require__(266)
 }
 var normalizeComponent = __webpack_require__(192)
 /* script */
-var __vue_script__ = __webpack_require__(272)
+var __vue_script__ = __webpack_require__(268)
 /* template */
-var __vue_template__ = __webpack_require__(273)
+var __vue_template__ = __webpack_require__(269)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -28,7 +28,7 @@ var Component = normalizeComponent(
   __vue_scopeId__,
   __vue_module_identifier__
 )
-Component.options.__file = "resources/assets/js/components/box/EgressView.vue"
+Component.options.__file = "resources/assets/js/components/box/IncomeView.vue"
 
 /* hot reload */
 if (false) {(function () {
@@ -37,9 +37,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-3fadf175", Component.options)
+    hotAPI.createRecord("data-v-566c50ae", Component.options)
   } else {
-    hotAPI.reload("data-v-3fadf175", Component.options)
+    hotAPI.reload("data-v-566c50ae", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
@@ -50,6 +50,7 @@ module.exports = Component.exports
 
 
 /***/ }),
+/* 55 */,
 /* 56 */,
 /* 57 */,
 /* 58 */,
@@ -26373,27 +26374,23 @@ module.exports = function (css) {
 /* 263 */,
 /* 264 */,
 /* 265 */,
-/* 266 */,
-/* 267 */,
-/* 268 */,
-/* 269 */,
-/* 270 */
+/* 266 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(271);
+var content = __webpack_require__(267);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(193)("1ee670ac", content, false, {});
+var update = __webpack_require__(193)("f2828fb4", content, false, {});
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
  if(!content.locals) {
-   module.hot.accept("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-3fadf175\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./EgressView.vue", function() {
-     var newContent = require("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-3fadf175\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./EgressView.vue");
+   module.hot.accept("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-566c50ae\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./IncomeView.vue", function() {
+     var newContent = require("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-566c50ae\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./IncomeView.vue");
      if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
      update(newContent);
    });
@@ -26403,7 +26400,7 @@ if(false) {
 }
 
 /***/ }),
-/* 271 */
+/* 267 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(64)(false);
@@ -26417,7 +26414,7 @@ exports.push([module.i, "\n.table-bordered th,\r\n.table-bordered td {\r\n  bord
 
 
 /***/ }),
-/* 272 */
+/* 268 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -26711,15 +26708,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 
@@ -26733,7 +26721,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         return _ref = {
             clastab1: 'active', clastab2: '', clastab3: '', clastab4: '',
             clastabdetalle1: 'tab-pane active', clastabdetalle2: 'tab-pane', clastabdetalle3: 'tab-pane', clastabdetalle4: 'tab-pane',
-            array_market: [], modal_add: 0,
+            array_market: [], modal_add: 0, market: '',
             listStrategicPlan: [],
             arrayEntrenador: [],
             arrayDataDetalle: [], califica: '',
@@ -26757,7 +26745,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
             'last_page': 0,
             'from': 0,
             'to': 0
-        }), _defineProperty(_ref, 'offset', 3), _defineProperty(_ref, 'datosmapa', ''), _defineProperty(_ref, 'markers', []), _defineProperty(_ref, 'modal', 0), _defineProperty(_ref, 'center', { lat: 45.508, lng: -73.587 }), _defineProperty(_ref, 'name_type_egress', ''), _defineProperty(_ref, 'id', -1), _defineProperty(_ref, 'description', ''), _defineProperty(_ref, 'amount', ''), _defineProperty(_ref, 'name', ''), _defineProperty(_ref, 'id_type_egress', ''), _defineProperty(_ref, 'birthdate', ''), _defineProperty(_ref, 'names', ''), _defineProperty(_ref, 'id', -1), _defineProperty(_ref, 'code', ''), _defineProperty(_ref, 'category', 'EGRESO'), _defineProperty(_ref, 'errorClase', 0), _defineProperty(_ref, 'errors', {}), _defineProperty(_ref, 'listEgress', []), _defineProperty(_ref, 'array_egress', []), _defineProperty(_ref, 'listTypeEgress', []), _defineProperty(_ref, 'errorInputname_type_egress', 'form-group'), _defineProperty(_ref, 'errordescription', 'form-group'), _defineProperty(_ref, 'erroramount', 'form-group'), _defineProperty(_ref, 'buscar', ''), _defineProperty(_ref, 'market', ''), _ref;
+        }), _defineProperty(_ref, 'offset', 3), _defineProperty(_ref, 'datosmapa', ''), _defineProperty(_ref, 'markers', []), _defineProperty(_ref, 'modal', 0), _defineProperty(_ref, 'center', { lat: 45.508, lng: -73.587 }), _defineProperty(_ref, 'name_type_income', ''), _defineProperty(_ref, 'id', -1), _defineProperty(_ref, 'description', ''), _defineProperty(_ref, 'amount', ''), _defineProperty(_ref, 'TypeIncome', ''), _defineProperty(_ref, 'id_type_income', ''), _defineProperty(_ref, 'birthdate', ''), _defineProperty(_ref, 'names', ''), _defineProperty(_ref, 'id', -1), _defineProperty(_ref, 'code', ''), _defineProperty(_ref, 'category', 'INGRESO'), _defineProperty(_ref, 'errorClase', 0), _defineProperty(_ref, 'errors', {}), _defineProperty(_ref, 'listIncome', []), _defineProperty(_ref, 'array_income', []), _defineProperty(_ref, 'listTypeIncome', []), _defineProperty(_ref, 'errorInputname_type_income', 'form-group'), _defineProperty(_ref, 'errordescription', 'form-group'), _defineProperty(_ref, 'erroramount', 'form-group'), _defineProperty(_ref, 'buscar', ''), _ref;
     },
 
     components: {
@@ -26806,32 +26794,31 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
             var me = this;
             me.modal_add = 0;
         },
-        getComboEgress: function getComboEgress(page) {
+        getComboIncome: function getComboIncome(page) {
             var me = this;
             //me.listado=0;             
-            var url = 'comboTypeEgress_list?page=' + page;
+            var url = 'comboTypeIncome_list?page=' + page;
             axios.get(url).then(function (response) {
                 var respuesta = response.data;
-                me.array_egress = respuesta.datax;
-                // me.listado=1;
+                me.array_income = respuesta.datax;
             }).catch(function (error) {
                 console.log(error);
             });
         },
-        validarDataTypeEgress: function validarDataTypeEgress() {
+        validarDataTypeIncome: function validarDataTypeIncome() {
             this.errors = {};
             this.errorClase = 0;
-            this.errors.name_type_egress = "";
+            this.errors.name_type_income = "";
             //input
-            this.errorInputname_type_egress = 'form-group has-success';
-            if (!this.name_type_egress) {
-                this.errors.name_type_egress = "Ingrese nombre";
-                this.errorInputname_type_egress = 'form-group has-error';
+            this.errorInputname_type_income = 'form-group has-success';
+            if (!this.name_type_income) {
+                this.errors.name_type_income = "Ingrese nombre";
+                this.errorInputname_type_income = 'form-group has-error';
                 this.errorClase = 1;
             }
             return this.errorClase;
         },
-        validarDataEgress: function validarDataEgress() {
+        validarDataIncome: function validarDataIncome() {
             this.errors = {};
             this.errorClase = 0;
             this.errors.description = "";
@@ -26860,27 +26847,27 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
             //me.listado=1;
             //me.listar(page,identrendor,idZona,empresa,estado, fechaInicio, fechaFin);
         },
-        edit_type_egress: function edit_type_egress(id) {
+        edit_type_income: function edit_type_income(id) {
             var me = this;
             //me.listado=2;
-            me.limpiarTypeEgress();
+            me.limpiarTypeIncome();
             // this.nombre= '';
-            var url = 'getEditEgressType?id=' + id;
+            var url = 'getEditIncomeType?id=' + id;
             axios.get(url).then(function (response) {
                 var respuesta = response.data;
-                me.name_type_egress = respuesta.datax[0].name;
+                me.name_type_income = respuesta.datax[0].name;
                 me.id = respuesta.datax[0].id;
             }).catch(function (error) {
                 console.log(error);
             });
             //return;
         },
-        editarEgress: function editarEgress(id) {
+        edit_data: function edit_data(id) {
             var me = this;
             me.listado = 1;
             //me.limpiar();
-            // this.nombre= '';
-            var url = 'getEditEgress?id=' + id;
+            // this.nombre= '';                
+            var url = 'getEditIncome?id=' + id;
             axios.get(url).then(function (response) {
                 var respuesta = response.data;
                 //me.name=respuesta.datax[0].name;
@@ -26888,14 +26875,14 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
                 me.amount = respuesta.datax[0].amount;
                 me.id = respuesta.datax[0].id;
                 me.birthdate = __WEBPACK_IMPORTED_MODULE_1_moment_timezone___default()(respuesta.datax[0].date).toDate();
-                me.id_type_egress = respuesta.datax[0].account_book_id;
+                me.id_type_income = respuesta.datax[0].account_book_id;
                 me.market = respuesta.datax[0].id_market;
             }).catch(function (error) {
                 console.log(error);
             });
             //return;
         },
-        guardarTypeEgress: function guardarTypeEgress() {
+        guardarTypeIncome: function guardarTypeIncome() {
             var _this = this;
 
             swal({
@@ -26908,19 +26895,19 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
                 reverseButtons: true
             }).then(function (result) {
                 if (result.value) {
-
                     var me = _this;
-                    axios.post('saveEgressType', {
+                    axios.post('saveIncomeType', {
                         'names': _this.names,
                         'code': _this.code,
                         'category': _this.category,
                         'id': _this.id
 
                     }).then(function (response) {
-                        // me.limpiarTypeEgress();
-                        me.getComboEgress(1);
-                        me.close_modal(0);
+                        me.limpiarTypeIncome();
+
+                        me.getComboIncome();
                         swal('¡Guardado!', 'El registro ha sido guardado con éxito.', 'success');
+                        me.close_modal(1);
                     }).catch(function (error) {
                         console.log(error);
                     });
@@ -26932,7 +26919,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         save_data: function save_data() {
             var _this2 = this;
 
-            if (this.validarDataEgress()) {
+            if (this.validarDataIncome()) {
                 return;
             }
             swal({
@@ -26947,24 +26934,24 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
                 if (result.value) {
 
                     var me = _this2;
-                    axios.post('saveEgress', {
+                    axios.post('saveIncome', {
                         //'name':this.name,
                         'description': _this2.description,
                         'amount': _this2.amount,
                         'date': __WEBPACK_IMPORTED_MODULE_1_moment_timezone___default()(__WEBPACK_IMPORTED_MODULE_1_moment_timezone___default()(_this2.birthdate, 'DD/MM/YYYY')).format('YYYY-MM-DD'),
-                        'account_book_id': _this2.id_type_egress,
+                        'account_book_id': _this2.id_type_income,
                         'id_market': _this2.market,
                         'id': _this2.id
 
                     }).then(function (response) {
-                        me.limpiarEgress();
+                        me.limpiarIncome();
                         me.list_data(me.buscar);
                         //me.limpiar();
                         //me.listado=1;
                         //me.listar(me.year, me.buscar);
                         // me.listar(1,me.micohort);
 
-                        swal('¡Guardado!', 'El registro ha sido guardado con éxito.', 'success');
+                        swal('¡Actualizado!', 'El registro ha sido guardado con éxito.', 'success');
                     }).catch(function (error) {
                         console.log(error);
                     });
@@ -26973,7 +26960,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
                 result.dismiss === swal.DismissReason.cancel) {}
             });
         },
-        eliminarTypeEgress: function eliminarTypeEgress(id) {
+        eliminarTypeIncome: function eliminarTypeIncome(id) {
             var _this3 = this;
 
             swal({
@@ -26992,13 +26979,12 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
                 if (result.value) {
 
                     var me = _this3;
-                    axios.post('delete_EgressType', {
+                    axios.post('delete_IncomeType', {
                         'id': id
 
                     }).then(function (response) {
-                        me.limpiarTypeEgress();
+                        me.limpiarTypeIncome();
                         me.listado = 2;
-                        me.listarTypeEgress();
                     }).catch(function (error) {
                         console.log(error);
                     });
@@ -27007,7 +26993,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
                 result.dismiss === swal.DismissReason.cancel) {}
             });
         },
-        eliminarEgress: function eliminarEgress(id_type_egress) {
+        eliminarIncome: function eliminarIncome(id_type_income) {
             var _this4 = this;
 
             swal({
@@ -27026,8 +27012,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
                 if (result.value) {
 
                     var me = _this4;
-                    axios.post('delete_Egress', {
-                        'id': id_type_egress
+                    axios.post('delete_Income', {
+                        'id': id_type_income
 
                     }).then(function (response) {
                         //me.limpiarIncome();
@@ -27042,10 +27028,10 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
             });
         },
         descargar: function descargar(buscar) {
-            var url = '/download_strategic_plan?buscar=' + buscar;
+            var url = '/download_strategic_plan?buscar=' + buscar;;
             window.location.href = url;
         },
-        add_type_egress: function add_type_egress() {
+        add_type_income: function add_type_income() {
             var me = this;
             //me.listado=2;
             me.modal_add = 1;
@@ -27053,18 +27039,18 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         },
         volver: function volver() {
             var me = this;
-            me.limpiarTypeEgress();
-            me.getComboEgress(1);
+            me.limpiarTypeIncome();
+            me.getComboIncome(1);
             me.listado = 1;
         },
-        limpiarTypeEgress: function limpiarTypeEgress() {
-            this.errorInputname_type_egress = 'form-group';
+        limpiarTypeIncome: function limpiarTypeIncome() {
+            this.errorInputname_type_income = 'form-group';
             this.errors = {};
-            this.errors.name_type_egress = " ";
-            this.name_type_egress = " ";
+            this.errors.name_type_income = " ";
+            this.name_type_income = '';
             this.id = -1;
         },
-        limpiarEgress: function limpiarEgress() {
+        limpiarIncome: function limpiarIncome() {
             this.errordescription = 'form-group';
             this.erroramount = 'form-group';
             this.errors = {};
@@ -27083,45 +27069,38 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         var me = this;
         me.listado = 0;
         me.listMarket();
-        var url = 'getListEgress?buscar=' + buscar;
+        var url = 'getListIncome?buscar=' + buscar;
         axios.get(url).then(function (response) {
             var respuesta = response.data;
-            me.listEgress = respuesta.datax;
+            me.listIncome = respuesta.datax;
             me.listado = 2;
         }).catch(function (error) {
             console.log(error);
         });
-    }), _defineProperty(_methods, 'listarTypeEgress', function listarTypeEgress() {
+    }), _defineProperty(_methods, 'listarTypeIncome', function listarTypeIncome() {
         var me = this;
         //me.listado=0;             
-        var url = 'getListEgressType';
+        var url = 'getListIncomeType';
         axios.get(url).then(function (response) {
             var respuesta = response.data;
-            me.listTypeEgress = respuesta.datax;
+            me.listTypeIncome = respuesta.datax;
             // me.listado=2;
-
-        }).catch(function (error) {
-            console.log(error);
-        });
-    }), _defineProperty(_methods, 'listar', function listar(year, buscar) {
-        var me = this;
-        var url = 'get_strategicplan?buscar=' + me.buscar + '&year_init=' + year;
-        axios.get(url).then(function (response) {
-            var respuesta = response.data;
-            me.listStrategicPlan = respuesta.datax;
+            me.limpiarTypeIncome();
         }).catch(function (error) {
             console.log(error);
         });
     }), _methods),
     mounted: function mounted() {
         this.list_data(this.buscar);
-        this.listarTypeEgress();
-        this.getComboEgress(1);
+        this.getComboIncome(1);
+        this.listMarket();
+
+        //this.get_incomeType();
     }
 });
 
 /***/ }),
-/* 273 */
+/* 269 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -27251,7 +27230,7 @@ var render = function() {
                                       _c(
                                         "label",
                                         { attrs: { for: "estado_civil" } },
-                                        [_vm._v("Tipo de Egreso:")]
+                                        [_vm._v("Tipo de Ingreso:")]
                                       ),
                                       _vm._v(" "),
                                       _c(
@@ -27267,18 +27246,12 @@ var render = function() {
                                                 {
                                                   name: "model",
                                                   rawName: "v-model",
-                                                  value: _vm.id_type_egress,
-                                                  expression: "id_type_egress"
+                                                  value: _vm.id_type_income,
+                                                  expression: "id_type_income"
                                                 }
                                               ],
                                               staticClass:
                                                 "form-control select2",
-                                              staticStyle: {
-                                                "border-top-right-radius":
-                                                  "3px",
-                                                "border-bottom-right-radius":
-                                                  "3px"
-                                              },
                                               on: {
                                                 change: [
                                                   function($event) {
@@ -27296,13 +27269,13 @@ var render = function() {
                                                             : o.value
                                                         return val
                                                       })
-                                                    _vm.id_type_egress = $event
+                                                    _vm.id_type_income = $event
                                                       .target.multiple
                                                       ? $$selectedVal
                                                       : $$selectedVal[0]
                                                   },
                                                   function($event) {
-                                                    return _vm.getComboEgress(
+                                                    return _vm.getComboIncome(
                                                       $event.target.value
                                                     )
                                                   }
@@ -27321,7 +27294,7 @@ var render = function() {
                                                 [_vm._v("Seleccione")]
                                               ),
                                               _vm._v(" "),
-                                              _vm._l(_vm.array_egress, function(
+                                              _vm._l(_vm.array_income, function(
                                                 datax
                                               ) {
                                                 return _c(
@@ -27362,7 +27335,7 @@ var render = function() {
                                                   },
                                                   on: {
                                                     click: function($event) {
-                                                      return _vm.add_type_egress()
+                                                      return _vm.add_type_income()
                                                     }
                                                   }
                                                 },
@@ -27533,7 +27506,7 @@ var render = function() {
                     [
                       _c("i", { staticClass: "fa fa-save" }),
                       _vm._v(
-                        " GUARDAR EGRESO DIVERSO\n                            "
+                        " GUARDAR INGRESO DIVERSO\n                                "
                       )
                     ]
                   )
@@ -27650,7 +27623,7 @@ var render = function() {
                             _vm._v(" "),
                             _c(
                               "tbody",
-                              _vm._l(_vm.listEgress, function(midata, index) {
+                              _vm._l(_vm.listIncome, function(midata, index) {
                                 return _c("tr", { key: index }, [
                                   _c(
                                     "td",
@@ -27706,7 +27679,7 @@ var render = function() {
                                           attrs: { type: "button" },
                                           on: {
                                             click: function($event) {
-                                              return _vm.editarEgress(midata.id)
+                                              return _vm.edit_data(midata.id)
                                             }
                                           }
                                         },
@@ -27724,7 +27697,7 @@ var render = function() {
                                           },
                                           on: {
                                             click: function($event) {
-                                              return _vm.eliminarEgress(
+                                              return _vm.eliminarIncome(
                                                 midata.id
                                               )
                                             }
@@ -28027,13 +28000,13 @@ var render = function() {
                     attrs: { type: "button" },
                     on: {
                       click: function($event) {
-                        return _vm.guardarTypeEgress()
+                        return _vm.guardarTypeIncome()
                       }
                     }
                   },
                   [
                     _c("i", { staticClass: "fa fa-save" }),
-                    _vm._v(" GUARDAR TIPO DE EGRESO")
+                    _vm._v(" GUARDAR TIPO DE INGRESO")
                   ]
                 )
               ])
@@ -28051,8 +28024,8 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("section", { staticClass: "content-header" }, [
       _c("h1", [
-        _vm._v("\n          Egresos\n          "),
-        _c("small", [_vm._v("Partida de descargo")])
+        _vm._v("Ingresos\n              "),
+        _c("small", [_vm._v("Ganancias")])
       ]),
       _vm._v(" "),
       _c("ol", { staticClass: "breadcrumb" }, [
@@ -28065,7 +28038,7 @@ var staticRenderFns = [
         _vm._v(" "),
         _c("li", [_c("a", { attrs: { href: "#" } }, [_vm._v(" Caja")])]),
         _vm._v(" "),
-        _c("li", { staticClass: "active" }, [_vm._v("Egresos")])
+        _c("li", { staticClass: "active" }, [_vm._v("Ingresos")])
       ])
     ])
   },
@@ -28077,11 +28050,9 @@ var staticRenderFns = [
       _c("h1", { staticClass: "box-title" }, [
         _c("i", { staticClass: "fa fa-edit" }),
         _vm._v(
-          " Agregar Engreso                                \n                        "
+          " Agregar Ingreso                                \n                            "
         )
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "box-tools pull-right" })
+      ])
     ])
   },
   function() {
@@ -28169,7 +28140,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "box-header with-border" }, [
-      _c("h1", { staticClass: "box-title" }, [_vm._v("Lista de Egresos")]),
+      _c("h1", { staticClass: "box-title" }, [_vm._v("Lista de Ingresos")]),
       _vm._v(" "),
       _c("div", { staticClass: "box-tools pull-right" }, [
         _c(
@@ -28212,7 +28183,7 @@ var staticRenderFns = [
           ]),
           _vm._v(" "),
           _c("th", { staticStyle: { "vertical-align": "middle" } }, [
-            _vm._v("DESCRIPCIÓN")
+            _vm._v("DESCRIPCION")
           ]),
           _vm._v(" "),
           _c("th", { staticStyle: { "vertical-align": "middle" } }, [
@@ -28247,7 +28218,7 @@ var staticRenderFns = [
       { staticClass: "modal-title", staticStyle: { color: "#FFFFFF" } },
       [
         _c("i", { staticClass: "fa fa-plus" }),
-        _vm._v(" Agregar Tipo de Egreso")
+        _vm._v(" Agregar Tipo de Ingreso")
       ]
     )
   },
@@ -28289,7 +28260,7 @@ module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-3fadf175", module.exports)
+    require("vue-hot-reload-api")      .rerender("data-v-566c50ae", module.exports)
   }
 }
 

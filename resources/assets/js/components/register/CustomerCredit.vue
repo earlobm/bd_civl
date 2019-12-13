@@ -275,7 +275,7 @@
                                                                 <!-- Dar Crédito -->
                                                             <template v-if="listadox==3">
                                                                 <div class="row">  
-                                                                    <div class="col-md-12">
+                                                                    <div class="col-md-6">
                                                                         <div class="form-group">
                                                                             <label for="nombres">Cliente:</label>
                                                                             <div class="input-group">
@@ -284,8 +284,6 @@
                                                                             </div>
                                                                         </div>
                                                                     </div>
-                                                                </div> 
-                                                                <div class="row">
                                                                     <div class="col-md-3">
                                                                         <div class="form-group">
                                                                             <label for="date_init">Fecha del Préstamo:</label>
@@ -316,6 +314,32 @@
                                                                                 <input v-model="capital" type="number" step="any"  @keyup="calculateAmount()" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">  
                                                                             </div>
                                                                         </div>
+                                                                    </div><div class="col-md-2">
+                                                                        <div v-bind:class="errorCharacteristic">
+                                                                            <label for="nombres">Tasa de Interés:</label>
+                                                                            <div class="input-group">
+                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;">%</span>
+                                                                                <input v-model="interest_rate" type="number" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px; text-transform:uppercase;">  
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-2">
+                                                                        <div v-bind:class="errorCharacteristic">
+                                                                            <label for="nombres" style="visibility:hidden">Tasa:</label>
+                                                                            <div class="input-group">
+                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;">S/.</span>
+                                                                                <input v-model="interest_rate_cash" type="number" disabled class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px; text-transform:uppercase;">  
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-2">
+                                                                        <div v-bind:class="errorCharacteristic">
+                                                                            <label for="nombres">Total:</label>
+                                                                            <div class="input-group">
+                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;">S/.</span>
+                                                                                <input v-model="total_cash" type="number" disabled class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px; text-transform:uppercase;">  
+                                                                            </div>
+                                                                        </div>
                                                                     </div>
                                                                     <div class="col-md-2">
                                                                         <div class="form-group">
@@ -341,15 +365,6 @@
                                                                             <div class="input-group">
                                                                                 <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;">S/.</span>
                                                                                 <input v-model="risk_center" type="number" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">  
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-md-2">
-                                                                        <div v-bind:class="errorCharacteristic">
-                                                                            <label for="nombres">Taza:</label>
-                                                                            <div class="input-group">
-                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;">%</span>
-                                                                                <input v-model="interest_rate" type="number" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px; text-transform:uppercase;">  
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -621,10 +636,10 @@
                         <div class="box-footer">
                             <div class="btn-group" style="float:right">
                                 <template v-if="listadox==1">
-                                    <button type="button" @click="save_data_only_client()" class="btn btn-save" data-toggle="tooltip" title="Guardar solo cliente">
+                                    <button type="button" @click="saveDataOnlyCustomer()" class="btn btn-save" data-toggle="tooltip" title="Guardar solo cliente">
                                         <i v-bind:class="icon_save"></i>&nbsp;GUARDAR CLIENTE
                                     </button>
-                                    <button type="button" @click="save_data()" class="btn btn-save-pledge" data-toggle="tooltip" title="Guardar cliente y empeñar">
+                                    <button type="button" @click="saveData()" class="btn btn-save-pledge" data-toggle="tooltip" title="Guardar cliente y empeñar">
                                         <i v-bind:class="icon_save_pledge"></i>&nbsp;GUARDAR / DAR CRÉDITO
                                     </button>
                                 </template>                          
@@ -636,7 +651,7 @@
                                 </button>
                             </template>
                             <template v-if="listadox==3">
-                                <button type="button" @click="addPledge()" class="btn btn-save-pledge" style="float:right; margin-right: 10px;" data-toggle="tooltip" title="Agregar prenda a empeñar">
+                                <button type="button" @click="saveDetailCredit()" class="btn btn-save-pledge" style="float:right; margin-right: 10px;" data-toggle="tooltip" title="Agregar prenda a empeñar">
                                     <i class="fa fa-legal"></i>&nbsp;OTORGAR PRÉSTAMO
                                 </button>
                                 <button type="button" @click="calculateCreditoDetail()" class="btn btn-new" style="float:right; margin-right: 10px;" data-toggle="tooltip" title="Nueva prenda">
@@ -764,21 +779,21 @@
                                     <thead style="background: rgb(32, 32, 32);color: #fff;">                                                                                   
                                         <tr>  
                                             <th style="vertical-align: middle;">#</th>
-                                            <th style="vertical-align: middle;">FECHA DE VENCIMIENTO</th>
-                                            <th style="vertical-align: middle;">CUOTA</th>
-                                            <th style="vertical-align: middle;">CAPITAL</th>                                                                                        
-                                            <th style="vertical-align: middle;">INTERÉS</th>
-                                            <th style="vertical-align: middle;">SALDO PROYECTADO</th>
+                                            <th style="vertical-align: middle; text-align: center;">FECHA DE VENCIMIENTO</th>
+                                            <th style="vertical-align: middle; text-align: center;">CUOTA</th>
+                                            <th style="vertical-align: middle; text-align: center;">CAPITAL</th>                                                                                        
+                                            <th style="vertical-align: middle; text-align: center;">INTERÉS</th>
+                                            <th style="vertical-align: middle; text-align: center;">SALDO PROYECTADO</th>
                                         </tr> 
                                     </thead>
                                     <tbody>
                                         <tr v-for="(midata,index) in arrayCreditDetail" :key="index" >
                                             <td style="vertical-align: middle;" >{{(index+1)}}</td>
-                                            <td style="vertical-align: middle;" v-text="midata.date_expiration"></td>
-                                            <td style="vertical-align: middle;" v-text="midata.quota"></td>  
-                                            <td style="vertical-align: middle;" v-text="midata.capital"></td>  
-                                            <td style="vertical-align: middle;" v-text="midata.interes"></td>  
-                                            <td style="vertical-align: middle;" v-text="midata.saldo"></td>  
+                                            <td style="vertical-align: middle; text-align: center;" v-text="midata.date_expiration"></td>
+                                            <td style="vertical-align: middle; text-align: center;" v-text="midata.quota"></td>  
+                                            <td style="vertical-align: middle; text-align: center;" v-text="midata.capital"></td>  
+                                            <td style="vertical-align: middle; text-align: center;" v-text="midata.interest"></td>  
+                                            <td style="vertical-align: middle; text-align: center;" v-text="midata.saldo"></td>  
                                         </tr>                       
                                     </tbody>
                                 </table>                                
@@ -883,6 +898,7 @@
                 title:'Agregar Cliente', add_aval:0,
                 capital:500, amount_admin:'', rate_admin:2, risk_center:2,interest_rate:10,
                 grace_day:3, apply_mora:1, period_credit:'DIARIO', number_quota:26, 
+                date_ultimate:''
 
             }
         },
@@ -1007,21 +1023,48 @@
             },
             calculateCreditoDetail(){
                 this.arrayCreditDetail=[];
-                var fecha = new Date(moment(moment(this.date_init_payment, 'DD/MM/YYYY')).format('YYYY-MM-DD'));
+                var date = new Date(moment(moment(this.date_init_payment, 'DD/MM/YYYY')).format('YYYY-MM-DD'));
+                var saldo=(Number(this.capital+(this.capital*this.interest_rate)/100));
+                
                 for( var i=0; i<this.number_quota;i++){
-                    var fechax= fecha.getDay();
-                    if(fechax==6){
-                        fecha.setDate(fecha.getDate() + 2);
+                    var date_day= date.getDay();
+                    if(date_day==6){
+                        date.setDate(date.getDate() + 2);
                     }else{
-                        fecha.setDate(fecha.getDate() + 1);
+                        date.setDate(date.getDate() + 1);
                     }
-                    var resultado=fecha.getDate() + '/' + (fecha.getMonth() + 1) + '/' + fecha.getFullYear();
-                    this.arrayCreditDetail.push({id:i,
-                        date_expiration: resultado,
-                        quota: '2',
-                        capital: '2',
-                        interes:'2',
-                        saldo:'3'
+                    var date_expiration=date.getDate() + '/' + (date.getMonth() + 1) + '/' + date.getFullYear();
+                    var date_expiration_t= date.getFullYear()+'-'+ (date.getMonth()+1) + '-' + date.getDate();
+
+                    var capital=(Number(this.capital)/Number(this.number_quota)).toFixed(1);
+                    var result = capital*(this.number_quota-1);
+                    result = Number(this.capital)-Number(result);
+                    
+
+                    var quota=(Number(this.capital+(this.capital*this.interest_rate)/100)/Number(this.number_quota)).toFixed(1);
+                    var result = quota*(this.number_quota-1);
+                    result = (Number(this.capital+(this.capital*this.interest_rate)/100))-Number(result);
+                    
+
+                    var interest=(((this.capital*this.interest_rate)/100)/Number(this.number_quota)).toFixed(1);
+                    var result = interest*(this.number_quota-1);
+                    result = ((this.capital*this.interest_rate)/100)-Number(result);
+                    
+                    saldo=(saldo-quota).toFixed(1);
+                    if(i==(this.number_quota-1)){
+                        capital=result.toFixed(1);
+                        quota=result.toFixed(1);
+                        interest=result.toFixed(1);
+                        saldo=0;
+                    }
+                    this.date_ultimate=date_expiration_t;
+                    this.arrayCreditDetail.push({
+                        id:i,
+                        date_expiration: date_expiration,
+                        quota: quota,
+                        capital: capital,
+                        interest: interest,
+                        saldo: saldo
                     });
                     
                 }
@@ -1072,6 +1115,36 @@
                     id_guaranty:this.guaranty.id,id_warehouse:this.id_warehouse.id
                     });
                 this.sumTotal();
+            },
+            saveDetailCredit(){
+                swal({
+                    title: 'Esta seguro de guardar la informacion?',
+                    type: 'warning',
+                    showCancelButton: true,confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',confirmButtonText: 'Aceptar!',
+                    cancelButtonText: 'Cancelar',confirmButtonClass: 'btn btn-success',
+                    cancelButtonClass: 'btn btn-danger',buttonsStyling: false,
+                    reverseButtons: true
+                }).then((result) =>{
+                    if (result.value){                
+                        axios.post('save_detail_credit',{     
+                            'date_credit': this.date_credit,                      
+                            'date_init_payment': this.date_init_payment, 
+                            'date_expiration':this.date_ultimate,
+                            'capital':this.capital,
+                            'rate_admin':this.rate_admin,
+                            'array_credit_detail':this.arrayCreditDetail
+                        }).then(function (response) {
+                                // me.clean_data();                                
+                                // me.list_data(1);  
+                                // me.icon_save='fa fa-save';
+                                swal( 'Guardado!', 'El registro ha sido guardado con éxito.', 'success' ); 
+                        }).catch(function (error) {
+                            console.log(error);
+                        });                        
+                    }else if(result.dismiss === swal.DismissReason.cancel) { 
+                    }
+                }) 
             },
             deletePledge : function (item) {
                 swal({
@@ -1594,7 +1667,7 @@
             //     });
                               
             // },
-            save_data_only_client(){
+            saveDataOnlyCustomer(){
                 //val =1 guardar y empeñar
                 //val = 0 solo registrar cliente
                 let me = this;
@@ -1617,7 +1690,7 @@
                     reverseButtons: true
                 }).then((result) =>{
                     if (result.value){                
-                        axios.post('saveCustomerCredit',{
+                        axios.post('save_customer_credit',{
                             'nro_doc':this.nro_doc,'name':this.name,
                             'paternal_last_name':this.paternal_last_name,
                             'maternal_last_name':this.maternal_last_name,
@@ -1656,7 +1729,7 @@
                     }
                 }) 
             },
-            save_data(){
+            saveData(){
                 //val =1 guardar y empeñar
                 //val = 0 solo registrar cliente  
                 this.visible=0;
@@ -1676,7 +1749,7 @@
                     reverseButtons: true
                 }).then((result) =>{
                     if (result.value){                
-                        axios.post('saveCustomerCredit',{
+                        axios.post('save_customer_credit',{
                             'nro_doc':this.nro_doc,'name':this.name,
                             'paternal_last_name':this.paternal_last_name,
                             'maternal_last_name':this.maternal_last_name,
@@ -1911,6 +1984,7 @@
             this.calculateTeabyTerm();
             this.getProvince(10);
             this.getDistrict(92);
+            this.calculateAmount(2);
          }
          
     }

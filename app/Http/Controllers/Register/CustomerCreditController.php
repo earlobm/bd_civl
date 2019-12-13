@@ -17,6 +17,8 @@ use DB;
 use PDF;
 use poi\EntityClass\CustomerTypeDocument; // at the top of the file
 use poi\Http\Controllers\Util\Curlx;
+use poi\EntityClass\DetailCredit;
+use poi\EntityClass\Credit;
 
 ini_set ('memory_limit', '999999999999M');
 ini_set('max_execution_time', 900000000000);
@@ -484,7 +486,12 @@ class CustomerCreditController extends Controller
         /* $DateOfRequest= date("Y-m-d H:i:s");
             $clasex->modificado ='Modificado por '.Auth::user()->nick.' '. $DateOfRequest;*/
           return  $clasex->id; 
-        }
+    }
+    public function save_detail_credit(Request $request){
+        $clase_credit = new Credit();
+        $clase_credit->date_credit = $request->date_credit;
+
+    }
     public function downloadProgram(Request $request){    
         
         $sqlx="";
