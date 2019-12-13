@@ -318,7 +318,7 @@
                                                                     </div>
                                                                     <div class="col-md-2">
                                                                         <div class="form-group">
-                                                                            <label for="type_product">Gastos Administrativos:</label>
+                                                                            <label for="type_product">Gastos Adm.:</label>
                                                                             <div class="input-group">
                                                                                 <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;">%</span>
                                                                                 <input v-model="rate_admin" type="number" class="form-control" @keyup="calculateAmount()" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;text-transform:uppercase;">  
@@ -628,17 +628,16 @@
                                     </button>
                                 </template>                          
                             </div>
-                            <template v-if="listadox==3">
-                                    <button type="button" @click="addPledge()" class="btn btn-save-pledge" data-toggle="tooltip" title="Agregar prenda a empeñar">
-                                        <i class="fa fa-legal"></i>&nbsp;OTORGAR PRÉSTAMO
-                                    </button>
-                                </template>   
+                             
                             <template v-if="listadox==1">
                                 <button type="button" @click="clean_data()" class="btn btn-new" style="float:right; margin-right: 10px;" data-toggle="tooltip" title="Nuevo cliente">
                                     <i class="fa fa-certificate"></i>&nbsp;NUEVO CLIENTE
                                 </button>
                             </template>
                             <template v-if="listadox==3">
+                                <button type="button" @click="addPledge()" class="btn btn-save-pledge" style="float:right; margin-right: 10px;" data-toggle="tooltip" title="Agregar prenda a empeñar">
+                                    <i class="fa fa-legal"></i>&nbsp;OTORGAR PRÉSTAMO
+                                </button>
                                 <button type="button" @click="calculateCreditoDetail()" class="btn btn-new" style="float:right; margin-right: 10px;" data-toggle="tooltip" title="Nueva prenda">
                                     <i class="fa fa-calculator"></i>&nbsp;CALCULAR
                                 </button>

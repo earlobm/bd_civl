@@ -27175,7 +27175,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
-//
 
 
 
@@ -30923,11 +30922,7 @@ var render = function() {
                                                           for: "type_product"
                                                         }
                                                       },
-                                                      [
-                                                        _vm._v(
-                                                          "Gastos Administrativos:"
-                                                        )
-                                                      ]
+                                                      [_vm._v("Gastos Adm.:")]
                                                     ),
                                                     _vm._v(" "),
                                                     _c(
@@ -34142,33 +34137,6 @@ var render = function() {
                     2
                   ),
                   _vm._v(" "),
-                  _vm.listadox == 3
-                    ? [
-                        _c(
-                          "button",
-                          {
-                            staticClass: "btn btn-save-pledge",
-                            attrs: {
-                              type: "button",
-                              "data-toggle": "tooltip",
-                              title: "Agregar prenda a empeñar"
-                            },
-                            on: {
-                              click: function($event) {
-                                return _vm.addPledge()
-                              }
-                            }
-                          },
-                          [
-                            _c("i", { staticClass: "fa fa-legal" }),
-                            _vm._v(
-                              " OTORGAR PRÉSTAMO\n                                    "
-                            )
-                          ]
-                        )
-                      ]
-                    : _vm._e(),
-                  _vm._v(" "),
                   _vm.listadox == 1
                     ? [
                         _c(
@@ -34202,6 +34170,33 @@ var render = function() {
                   _vm._v(" "),
                   _vm.listadox == 3
                     ? [
+                        _c(
+                          "button",
+                          {
+                            staticClass: "btn btn-save-pledge",
+                            staticStyle: {
+                              float: "right",
+                              "margin-right": "10px"
+                            },
+                            attrs: {
+                              type: "button",
+                              "data-toggle": "tooltip",
+                              title: "Agregar prenda a empeñar"
+                            },
+                            on: {
+                              click: function($event) {
+                                return _vm.addPledge()
+                              }
+                            }
+                          },
+                          [
+                            _c("i", { staticClass: "fa fa-legal" }),
+                            _vm._v(
+                              " OTORGAR PRÉSTAMO\n                                "
+                            )
+                          ]
+                        ),
+                        _vm._v(" "),
                         _c(
                           "button",
                           {
