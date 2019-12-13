@@ -1006,10 +1006,11 @@
             },
             calculateCreditoDetail(){
                 this.arrayCreditDetail=[];
+                var fecha=new Date();
                 for( var i=0; i<this.number_quota;i++){
                      this.arrayCreditDetail.push(
                         {id:i,
-                        date_expiration: '2019-05-12',
+                        date_expiration: fecha.setDate(moment(moment(this.date_init_payment, 'DD/MM/YYYY')).format('DD')+i),
                         quota: '2',
                         capital: '2',
                         interes:'2',
