@@ -27452,7 +27452,12 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
                         'date_init_payment': _this.date_init_payment,
                         'date_expiration': _this.date_ultimate,
                         'capital': _this.capital,
+                        'interest': _this.interest_rate_cash,
+                        'total': _this.total_cash,
                         'rate_admin': _this.rate_admin,
+                        'amount_admin': _this.amount_admin,
+                        'number_quota': _this.number_quota,
+                        'period_credit': _this.period_credit,
                         'array_credit_detail': _this.arrayCreditDetail
                     }).then(function (response) {
                         // me.clean_data();                                

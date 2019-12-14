@@ -1144,7 +1144,12 @@
                             'date_init_payment': this.date_init_payment, 
                             'date_expiration':this.date_ultimate,
                             'capital':this.capital,
+                            'interest':this.interest_rate_cash,
+                            'total':this.total_cash,
                             'rate_admin':this.rate_admin,
+                            'amount_admin':this.amount_admin,
+                            'number_quota':this.number_quota,
+                            'period_credit':this.period_credit,
                             'array_credit_detail':this.arrayCreditDetail
                         }).then(function (response) {
                                 // me.clean_data();                                

@@ -402,7 +402,7 @@ class CustomerCreditController extends Controller
             }else{
                 $clase_guarantor = Person::findOrFail($request->id_guarantor);
                 echo 'hola31';
-            }
+            } 
             $clase_guarantor->id_type_document =  $request->id_type_document_aval;
             $clase_guarantor->number_doc = trim($request->nro_doc_aval);
             $clase_guarantor->paternal_last_name = trim($request->paternal_last_name_aval);
@@ -488,8 +488,26 @@ class CustomerCreditController extends Controller
           return  $clasex->id; 
     }
     public function save_detail_credit(Request $request){
+        $sqlx = "SELECT CONCAT('CRE',right(CONCAT('000', (COUNT(id) + 1)),3)) as code
+        FROM credit";
+        $miArrayx=DB::select($sqlx);
+        $miArray = json_decode(json_encode($miArrayx), true);
+        $code_credit = $miArray[0]['code'];    
+        
         $clase_credit = new Credit();
+        $clase_credit->code_credit = $code_credit;
         $clase_credit->date_credit = $request->date_credit;
+        $clase_credit->date_init_payment = $request->date_init_payment;
+        $clase_credit->date_expiration = $request->date_expiration;
+        $clase_credit->capital = $request->capital;
+        $clase_credit->interest = $request->interest;
+        $clase_credit->total = $request->total;
+        $clase_credit->rate_admin = $request->rate_admin;
+        $clase_credit->amount_admin = $request->amount_admin;
+
+        $clase_credit->number_quota = $request->number_quota;
+        $clase_credit->period_credit = $request->period_credit;
+        $clase_credit->save(); 
 
     }
     public function downloadProgram(Request $request){    
