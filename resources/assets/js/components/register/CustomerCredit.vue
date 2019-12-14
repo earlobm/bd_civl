@@ -898,7 +898,7 @@
                 title:'Agregar Cliente', add_aval:0,
                 capital:500, amount_admin:'', rate_admin:2, risk_center:2,interest_rate:10,
                 grace_day:3, apply_mora:1, period_credit:'DIARIO', number_quota:26, 
-                date_ultimate:'',total_cash:'', interest_rate_cash:'',
+                date_ultimate:'',total_cash:'', interest_rate_cash:'', quota:'',
 
             }
         },
@@ -1049,6 +1049,10 @@
                     var quota=((Number(this.capital) + (Number(this.capital) * Number(this.interest_rate))/100)/Number(this.number_quota)).toFixed(1);
                     var result = quota*(Number(this.number_quota)-1);
                     result = (Number(this.capital) + (Number(this.capital) * Number(this.interest_rate))/100) - result;
+                    if(i==1){
+                        this.quota=quota;
+                        console.log(this.quota);
+                    }
                     if(i==(Number(this.number_quota)-1)){
                         quota=result.toFixed(1);
                     }
@@ -1069,8 +1073,9 @@
                     saldo=saldo-quota;
                     if(i==(Number(this.number_quota)-1)){
                         saldo=0;
+                        this.date_ultimate=date_expiration_t;
                     }
-                    this.date_ultimate=date_expiration_t;
+                    
                     this.arrayCreditDetail.push({
                         id:i,
                         date_expiration: date_expiration,
@@ -1117,7 +1122,6 @@
                 if(this.validateDataPledge()){
                     return;
                 }
-
                 this.arrayCreditDetail.push(
                     {guaranty:this.guaranty.name,characteristic: this.characteristic,
                     note: this.note,
@@ -1129,6 +1133,7 @@
                 this.sumTotal();
             },
             saveDetailCredit(){
+                this.calculateCreditoDetail();
                 swal({
                     title: 'Esta seguro de guardar la informacion?',
                     type: 'warning',
@@ -1140,16 +1145,22 @@
                 }).then((result) =>{
                     if (result.value){                
                         axios.post('save_detail_credit',{     
-                            'date_credit': this.date_credit,                      
-                            'date_init_payment': this.date_init_payment, 
-                            'date_expiration':this.date_ultimate,
+                            'date_credit': moment(moment(this.date_credit, 'DD/MM/YYYY')).format('YYYY-MM-DD'),
+                            'date_init_payment': moment(moment(this.date_init_payment, 'DD/MM/YYYY')).format('YYYY-MM-DD'),
+                            'date_expiration': this.date_ultimate,
                             'capital':this.capital,
                             'interest':this.interest_rate_cash,
                             'total':this.total_cash,
                             'rate_admin':this.rate_admin,
                             'amount_admin':this.amount_admin,
+                            'quota':this.quota,
                             'number_quota':this.number_quota,
                             'period_credit':this.period_credit,
+                            'grace_day':this.grace_day,
+                            'risk_center':this.risk_center,
+                            'apply_mora':this.apply_mora,
+                            'id_customer':this.id_customer_credit,
+                            'id_promoter':this.id_employee,
                             'array_credit_detail':this.arrayCreditDetail
                         }).then(function (response) {
                                 // me.clean_data();                                
@@ -1794,8 +1805,8 @@
                             'id_job_aval':this.id_job_aval, 'id_type_business_aval':this.id_type_business_aval,                            
                             'requirements':this.requirements                    
                         }).then(function (response) {
-                                me.midatax=[];
-                                me.midatax.push({id:response.data,names: me.name,paternal_last_name: me.paternal_last_name, maternal_last_name:me.maternal_last_name });
+                                me.midatax=[];                             
+                                me.midatax.push({id:response.data, names: me.name, paternal_last_name: me.paternal_last_name, maternal_last_name:me.maternal_last_name});       
                                 me.give_credit(me.midatax[0]);
                                 me.icon_save_pledge='fa fa-save';
                                 swal( 'Guardado!', 'El registro ha sido guardado con éxito.', 'success' ); 
@@ -1842,7 +1853,7 @@
                 let me=this;
                 me.listadox=3;
                 this.visible=0;
-                this.id_customer_credit=midata.id_customer_credit;
+                this.id_customer_credit=midata.id;
                 this.name_customer=midata.names+' '+midata.paternal_last_name+' '+midata.maternal_last_name;
                 this.nro_doc=midata.number_doc;
             },
@@ -1989,7 +2000,7 @@
         },
         
         mounted() {
-            this.listadox=3;
+            this.listadox=1;
         //    this.lista_add_client();
         //    this.list_data(1);
             this.getDepartment();

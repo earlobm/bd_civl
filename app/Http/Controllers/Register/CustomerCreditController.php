@@ -379,13 +379,14 @@ class CustomerCreditController extends Controller
     }
 
     public function save_data(Request $request){
-        
+        $DateOfRequest= date("Y-m-d H:i:s");
         //preguntamos si el cliente ya existe
         if($request->id_customer_credit==-1){
             $clase_customer = new CustomerCredit();
             $clase_customer->code = $request->code;
         }else{
             $clase_customer = CustomerCredit::findOrFail($request->id_customer_credit);
+            $clase_customer->date_inscription=$DateOfRequest;
         }
         ///Preguntamos si la persona existe
         if($request->id==-1){
@@ -395,13 +396,11 @@ class CustomerCreditController extends Controller
         }  
         ///Preguntamos si el aval existe
         if($request->nro_doc_aval!=null || $request->nro_doc_aval!=''){
-            echo 'hola1';
             if($request->id_guarantor==-1){
                 $clase_guarantor = new Person();
-                echo 'hola21';
             }else{
                 $clase_guarantor = Person::findOrFail($request->id_guarantor);
-                echo 'hola31';
+                
             } 
             $clase_guarantor->id_type_document =  $request->id_type_document_aval;
             $clase_guarantor->number_doc = trim($request->nro_doc_aval);
@@ -442,9 +441,8 @@ class CustomerCreditController extends Controller
 
          
         //registrando en la tabla de cliente empeño
-        $DateOfRequest= date("Y-m-d H:i:s");
-        $clase_customer->state=1;        
-        $clase_customer->date_inscription=$DateOfRequest;
+        
+        $clase_customer->state=1; 
         $clase_customer->id_person=$clasex->id;
         if($request->nro_doc_aval!=null || $request->nro_doc_aval!=''){
             $clase_customer->id_guarantor=$clase_guarantor->id;
@@ -485,9 +483,11 @@ class CustomerCreditController extends Controller
         }
         /* $DateOfRequest= date("Y-m-d H:i:s");
             $clasex->modificado ='Modificado por '.Auth::user()->nick.' '. $DateOfRequest;*/
-          return  $clasex->id; 
+          return  $clase_customer->id; 
     }
     public function save_detail_credit(Request $request){
+        $date_system = date("Y-m-d H:i:s");
+
         $sqlx = "SELECT CONCAT('CRE',right(CONCAT('000', (COUNT(id) + 1)),3)) as code
         FROM credit";
         $miArrayx=DB::select($sqlx);
@@ -505,9 +505,35 @@ class CustomerCreditController extends Controller
         $clase_credit->rate_admin = $request->rate_admin;
         $clase_credit->amount_admin = $request->amount_admin;
 
+        $clase_credit->quota = $request->quota;
         $clase_credit->number_quota = $request->number_quota;
-        $clase_credit->period_credit = $request->period_credit;
+        $clase_credit->period = $request->period_credit;
+        $clase_credit->mora = 0;
+        $clase_credit->saldo = $request->total;
+        $clase_credit->state = 1;
+        
+        $clase_credit->date_system = $date_system;
+        $clase_credit->date_expired_original = $request->date_expiration;
+        $clase_credit->risk_center = $request->risk_center;
+        $clase_credit->grace_day = $request->grace_day;
+        $clase_credit->apply_mora = $request->apply_mora;
+        $clase_credit->id_customer = $request->id_customer;
+        $clase_credit->id_promoter = $request->id_promoter;
         $clase_credit->save(); 
+
+        $t = json_decode(json_encode($request->array_credit_detail), true);
+        foreach ($t as $key => $value) {
+            $controller = new DetailCredit();
+            $controller->date_expired = $value['date_expiration'];
+            $controller->number_quota = $value['quota'];
+            $controller->capital = $value['capital'];
+            $controller->interest = $value['interest'];
+            $controller->saldo_projected  = $value['saldo'];
+            $controller->id_credit = $clase_credit->id;
+            $controller->deposit  =0;
+            $controller->state =1;
+            $controller->save();             
+        }
 
     }
     public function downloadProgram(Request $request){    
