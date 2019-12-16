@@ -487,7 +487,7 @@ class CustomerCreditController extends Controller
     }
     public function save_detail_credit(Request $request){
         $date_system = date("Y-m-d H:i:s");
-
+        
         $sqlx = "SELECT CONCAT('CRE',right(CONCAT('000', (COUNT(id) + 1)),3)) as code
         FROM credit";
         $miArrayx=DB::select($sqlx);
@@ -522,10 +522,11 @@ class CustomerCreditController extends Controller
         $clase_credit->save(); 
 
         $t = json_decode(json_encode($request->array_credit_detail), true);
-        foreach ($t as $key => $value) {
+        foreach ($t as $key => $value) {        
             $controller = new DetailCredit();
-            $controller->date_expired = $value['date_expiration'];
-            $controller->number_quota = $value['quota'];
+            $controller->date_expired = $value['date_expiration_detail'];
+            $controller->number_quota = $value['id'];
+            $controller->quota = $value['quota'];
             $controller->capital = $value['capital'];
             $controller->interest = $value['interest'];
             $controller->saldo_projected  = $value['saldo'];

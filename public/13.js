@@ -27203,7 +27203,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         var _ref;
 
         return _ref = {
-
             id_parent: '', visible: 1,
             array_job: [], id_job: '' }, _defineProperty(_ref, 'array_job', []), _defineProperty(_ref, 'id_job_aval', ''), _defineProperty(_ref, 'array_type_business', []), _defineProperty(_ref, 'array_employee', []), _defineProperty(_ref, 'id_employee', ''), _defineProperty(_ref, 'authUser', ''), _defineProperty(_ref, 'porcent', 50), _defineProperty(_ref, 'listadox', 1), _defineProperty(_ref, 'listado', 2), _defineProperty(_ref, 'authUser', 1), _defineProperty(_ref, 'date_init', '' + new Date().getDate() + '/' + (Number(new Date().getMonth()) + 1) + '/' + new Date().getFullYear()), _defineProperty(_ref, 'birthdate', '' + new Date().getDate() + '/' + (Number(new Date().getMonth()) + 1) + '/' + new Date().getFullYear()), _defineProperty(_ref, 'date_init_payment', '' + new Date().getDate() + '/' + (Number(new Date().getMonth()) + 1) + '/' + new Date().getFullYear()), _defineProperty(_ref, 'date_credit', '' + new Date().getDate() + '/' + (Number(new Date().getMonth()) + 1) + '/' + new Date().getFullYear()), _defineProperty(_ref, 'birthdate_aval', '' + new Date().getDate() + '/' + (Number(new Date().getMonth()) + 1) + '/' + new Date().getFullYear()), _defineProperty(_ref, 'options', {
             format: 'DD/MM/YYYY',
@@ -27354,6 +27353,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
                     date.setDate(date.getDate() + 1);
                 }
                 var date_expiration = date.getDate() + '/' + (date.getMonth() + 1) + '/' + date.getFullYear();
+                var date_expiration_detail = date.getFullYear() + '-' + (date.getMonth() + 1) + '-' + date.getDate();
                 var date_expiration_t = date.getFullYear() + '-' + (date.getMonth() + 1) + '-' + date.getDate();
 
                 var quota = ((Number(this.capital) + Number(this.capital) * Number(this.interest_rate) / 100) / Number(this.number_quota)).toFixed(1);
@@ -27383,12 +27383,12 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
                 saldo = saldo - quota;
                 if (i == Number(this.number_quota) - 1) {
                     saldo = 0;
-                    this.date_ultimate = date_expiration_t;
                 }
-
+                this.date_ultimate = date_expiration_t;
                 this.arrayCreditDetail.push({
-                    id: i,
+                    id: i + 1,
                     date_expiration: date_expiration,
+                    date_expiration_detail: date_expiration_detail,
                     quota: quota,
                     capital: capital,
                     interest: interest,
@@ -27445,9 +27445,9 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
             swal({
                 title: 'Esta seguro de guardar la informacion?',
                 type: 'warning',
-                showCancelButton: true, confirmButtonColor: '#3085d6',
-                cancelButtonColor: '#d33', confirmButtonText: 'Aceptar!',
-                cancelButtonText: 'Cancelar', confirmButtonClass: 'btn btn-success',
+                showCancelButton: true,
+                confirmButtonText: 'ACEPTAR',
+                cancelButtonText: 'CANCELAR', confirmButtonClass: 'btn btn-success',
                 cancelButtonClass: 'btn btn-danger', buttonsStyling: false,
                 reverseButtons: true
             }).then(function (result) {
@@ -27455,7 +27455,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
                     axios.post('save_detail_credit', {
                         'date_credit': __WEBPACK_IMPORTED_MODULE_1_moment_timezone___default()(__WEBPACK_IMPORTED_MODULE_1_moment_timezone___default()(_this.date_credit, 'DD/MM/YYYY')).format('YYYY-MM-DD'),
                         'date_init_payment': __WEBPACK_IMPORTED_MODULE_1_moment_timezone___default()(__WEBPACK_IMPORTED_MODULE_1_moment_timezone___default()(_this.date_init_payment, 'DD/MM/YYYY')).format('YYYY-MM-DD'),
-                        'date_expiration': _this.date_ultimate,
+                        'date_expiration': __WEBPACK_IMPORTED_MODULE_1_moment_timezone___default()(_this.date_ultimate).format('YYYY-MM-DD'),
                         'capital': _this.capital,
                         'interest': _this.interest_rate_cash,
                         'total': _this.total_cash,
@@ -27474,7 +27474,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
                         // me.clean_data();                                
                         // me.list_data(1);  
                         // me.icon_save='fa fa-save';
-                        swal('Guardado!', 'El registro ha sido guardado con éxito.', 'success');
+                        swal('Guardado!', 'El crédito ha sido otorgado con éxito.', 'success');
                     }).catch(function (error) {
                         console.log(error);
                     });
@@ -27488,8 +27488,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
             swal({
                 title: '¿Esta seguro de eliminar?',
                 type: 'warning', showCancelButton: true,
-                confirmButtonColor: '#3085d6', cancelButtonColor: '#d33',
-                confirmButtonText: 'Aceptar!', cancelButtonText: 'Cancelar',
+
+                confirmButtonText: 'ACEPTAR', cancelButtonText: 'CANCELAR',
                 confirmButtonClass: 'btn btn-success', cancelButtonClass: 'btn btn-danger',
                 buttonsStyling: false, reverseButtons: true
             }).then(function (result) {
@@ -27997,9 +27997,9 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
             swal({
                 title: 'Esta seguro de guardar la informacion?',
                 type: 'warning',
-                showCancelButton: true, confirmButtonColor: '#3085d6',
-                cancelButtonColor: '#d33', confirmButtonText: 'Aceptar!',
-                cancelButtonText: 'Cancelar', confirmButtonClass: 'btn btn-success',
+                showCancelButton: true,
+                confirmButtonText: 'ACEPTAR',
+                cancelButtonText: 'CANCELAR', confirmButtonClass: 'btn btn-success',
                 cancelButtonClass: 'btn btn-danger', buttonsStyling: false,
                 reverseButtons: true
             }).then(function (result) {
@@ -28057,9 +28057,9 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
             swal({
                 title: 'Esta seguro de guardar la informacion?',
                 type: 'warning',
-                showCancelButton: true, confirmButtonColor: '#3085d6',
-                cancelButtonColor: '#d33', confirmButtonText: 'Aceptar!',
-                cancelButtonText: 'Cancelar', confirmButtonClass: 'btn btn-success',
+                showCancelButton: true,
+                confirmButtonText: 'ACEPTAR',
+                cancelButtonText: 'CANCELAR', confirmButtonClass: 'btn btn-success',
                 cancelButtonClass: 'btn btn-danger', buttonsStyling: false,
                 reverseButtons: true
             }).then(function (result) {
@@ -28111,10 +28111,9 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
                 text: '¡No podrás revertir esto!',
                 type: 'warning',
                 showCancelButton: true,
-                confirmButtonColor: '#3085d6',
-                cancelButtonColor: '#d33',
-                confirmButtonText: 'Aceptar',
-                cancelButtonText: 'Cancelar',
+
+                confirmButtonText: 'ACEPTAR',
+                cancelButtonText: 'CANCELAR',
                 confirmButtonClass: 'btn btn-success',
                 cancelButtonClass: 'btn btn-danger',
                 buttonsStyling: false,
@@ -32111,7 +32110,7 @@ var render = function() {
                                                             staticClass:
                                                               "switch",
                                                             staticStyle: {
-                                                              width: "62px",
+                                                              width: "70px",
                                                               height: "18px"
                                                             }
                                                           },
@@ -34450,7 +34449,7 @@ var render = function() {
                                 attrs: {
                                   type: "button",
                                   "data-toggle": "tooltip",
-                                  title: "Guardar cliente y empeñar"
+                                  title: "Guardar cliente y otorgar crédito"
                                 },
                                 on: {
                                   click: function($event) {
@@ -34461,7 +34460,7 @@ var render = function() {
                               [
                                 _c("i", { class: _vm.icon_save_pledge }),
                                 _vm._v(
-                                  " GUARDAR / DAR CRÉDITO\n                                    "
+                                  " GUARDAR / OTORGAR CRÉDITO\n                                    "
                                 )
                               ]
                             )

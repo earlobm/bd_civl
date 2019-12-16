@@ -423,7 +423,7 @@
                                                                         <label  class="col-md-8 control-label"><i class="fa fa-user-plus"></i> Agregar Aval</label>
                                                                         <div class="col-md-4" style="margin-top: -10px;">
                                                                             <div class="checkbox">
-                                                                                <label class="switch" style="width: 62px;height: 18px;">
+                                                                                <label class="switch" style="width: 70px;height: 18px;">
                                                                                     <input type="checkbox" v-model="add_aval">
                                                                                     <span class="slider round"></span>
                                                                                 </label>
@@ -639,8 +639,8 @@
                                     <button type="button" @click="saveDataOnlyCustomer()" class="btn btn-save" data-toggle="tooltip" title="Guardar solo cliente">
                                         <i v-bind:class="icon_save"></i>&nbsp;GUARDAR CLIENTE
                                     </button>
-                                    <button type="button" @click="saveData()" class="btn btn-save-pledge" data-toggle="tooltip" title="Guardar cliente y empeñar">
-                                        <i v-bind:class="icon_save_pledge"></i>&nbsp;GUARDAR / DAR CRÉDITO
+                                    <button type="button" @click="saveData()" class="btn btn-save-pledge" data-toggle="tooltip" title="Guardar cliente y otorgar crédito">
+                                        <i v-bind:class="icon_save_pledge"></i>&nbsp;GUARDAR / OTORGAR CRÉDITO
                                     </button>
                                 </template>                          
                             </div>
@@ -814,8 +814,7 @@
     //fecha bot
     export default {
         data (){
-            return {
-                
+            return {                
                 id_parent:'',visible:1,
                 array_job:[], id_job:'',array_job:[], id_job_aval:'',
                 array_type_business:[],array_employee:[],
@@ -1044,6 +1043,7 @@
                         date.setDate(date.getDate() + 1);
                     }
                     var date_expiration=date.getDate() + '/' + (date.getMonth() + 1) + '/' + date.getFullYear();
+                    var date_expiration_detail= date.getFullYear()+'-'+ (date.getMonth()+1) + '-' + date.getDate();
                     var date_expiration_t= date.getFullYear()+'-'+ (date.getMonth()+1) + '-' + date.getDate();
 
                     var quota=((Number(this.capital) + (Number(this.capital) * Number(this.interest_rate))/100)/Number(this.number_quota)).toFixed(1);
@@ -1072,13 +1072,13 @@
                     }
                     saldo=saldo-quota;
                     if(i==(Number(this.number_quota)-1)){
-                        saldo=0;
-                        this.date_ultimate=date_expiration_t;
+                        saldo=0;                        
                     }
-                    
+                    this.date_ultimate=date_expiration_t;
                     this.arrayCreditDetail.push({
-                        id:i,
+                        id:i+1,
                         date_expiration: date_expiration,
+                        date_expiration_detail: date_expiration_detail,
                         quota: quota,
                         capital: capital,
                         interest: interest,
@@ -1137,9 +1137,9 @@
                 swal({
                     title: 'Esta seguro de guardar la informacion?',
                     type: 'warning',
-                    showCancelButton: true,confirmButtonColor: '#3085d6',
-                    cancelButtonColor: '#d33',confirmButtonText: 'Aceptar!',
-                    cancelButtonText: 'Cancelar',confirmButtonClass: 'btn btn-success',
+                    showCancelButton: true,
+                    confirmButtonText: 'ACEPTAR',
+                    cancelButtonText: 'CANCELAR',confirmButtonClass: 'btn btn-success',
                     cancelButtonClass: 'btn btn-danger',buttonsStyling: false,
                     reverseButtons: true
                 }).then((result) =>{
@@ -1147,7 +1147,7 @@
                         axios.post('save_detail_credit',{     
                             'date_credit': moment(moment(this.date_credit, 'DD/MM/YYYY')).format('YYYY-MM-DD'),
                             'date_init_payment': moment(moment(this.date_init_payment, 'DD/MM/YYYY')).format('YYYY-MM-DD'),
-                            'date_expiration': this.date_ultimate,
+                            'date_expiration': moment(this.date_ultimate).format('YYYY-MM-DD'),
                             'capital':this.capital,
                             'interest':this.interest_rate_cash,
                             'total':this.total_cash,
@@ -1166,7 +1166,7 @@
                                 // me.clean_data();                                
                                 // me.list_data(1);  
                                 // me.icon_save='fa fa-save';
-                                swal( 'Guardado!', 'El registro ha sido guardado con éxito.', 'success' ); 
+                                swal( 'Guardado!', 'El crédito ha sido otorgado con éxito.', 'success' ); 
                         }).catch(function (error) {
                             console.log(error);
                         });                        
@@ -1178,8 +1178,8 @@
                 swal({
                 title: '¿Esta seguro de eliminar?',
                 type: 'warning',showCancelButton: true,
-                confirmButtonColor: '#3085d6', cancelButtonColor: '#d33',
-                confirmButtonText: 'Aceptar!',cancelButtonText: 'Cancelar',
+                 
+                confirmButtonText: 'ACEPTAR',cancelButtonText: 'CANCELAR',
                 confirmButtonClass: 'btn btn-success',cancelButtonClass: 'btn btn-danger',
                 buttonsStyling: false,reverseButtons: true
                 }).then((result) => {
@@ -1711,9 +1711,9 @@
                 swal({
                     title: 'Esta seguro de guardar la informacion?',
                     type: 'warning',
-                    showCancelButton: true,confirmButtonColor: '#3085d6',
-                    cancelButtonColor: '#d33',confirmButtonText: 'Aceptar!',
-                    cancelButtonText: 'Cancelar',confirmButtonClass: 'btn btn-success',
+                    showCancelButton: true,
+                    confirmButtonText: 'ACEPTAR',
+                    cancelButtonText: 'CANCELAR',confirmButtonClass: 'btn btn-success',
                     cancelButtonClass: 'btn btn-danger',buttonsStyling: false,
                     reverseButtons: true
                 }).then((result) =>{
@@ -1770,9 +1770,9 @@
                 swal({
                     title: 'Esta seguro de guardar la informacion?',
                     type: 'warning',
-                    showCancelButton: true,confirmButtonColor: '#3085d6',
-                    cancelButtonColor: '#d33',confirmButtonText: 'Aceptar!',
-                    cancelButtonText: 'Cancelar',confirmButtonClass: 'btn btn-success',
+                    showCancelButton: true,
+                   confirmButtonText: 'ACEPTAR',
+                    cancelButtonText: 'CANCELAR',confirmButtonClass: 'btn btn-success',
                     cancelButtonClass: 'btn btn-danger',buttonsStyling: false,
                     reverseButtons: true
                 }).then((result) =>{
@@ -1824,10 +1824,10 @@
                 text: '¡No podrás revertir esto!',
                 type: 'warning',
                 showCancelButton: true,
-                confirmButtonColor: '#3085d6',
-                cancelButtonColor: '#d33',
-                confirmButtonText: 'Aceptar',
-                cancelButtonText: 'Cancelar',
+                
+                
+                confirmButtonText: 'ACEPTAR',
+                cancelButtonText: 'CANCELAR',
                 confirmButtonClass: 'btn btn-success',
                 cancelButtonClass: 'btn btn-danger',
                 buttonsStyling: false,
