@@ -48,6 +48,7 @@ Route::post('/save_detail_credit', 'Register\CustomerCreditController@save_detai
 Route::get('/generate_code', 'Register\CustomerCreditController@generate_code');  
 Route::get('/get_customer_by_dni', 'Register\CustomerCreditController@get_customer_by_dni'); 
 Route::get('/get_aval_by_dni', 'Register\CustomerCreditController@get_aval_by_dni'); 
+Route::get('/download_detail_credit', 'Register\CustomerCreditController@download_detail_credit'); 
 //DOCUMENT
 Route::post('/save_Document', 'Register\DocumentCustomerController@save_Document'); 
 Route::get('/getlistDocument', 'Register\DocumentCustomerController@getlistDocument');

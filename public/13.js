@@ -27190,8 +27190,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
-//
-//
 
 
 
@@ -27216,7 +27214,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
             'last_page': 0,
             'from': 0,
             'to': 0
-        }), _defineProperty(_ref, 'offset', 3), _defineProperty(_ref, 'id', -1), _defineProperty(_ref, 'code', ''), _defineProperty(_ref, 'name', ''), _defineProperty(_ref, 'paternal_last_name', ''), _defineProperty(_ref, 'maternal_last_name', ''), _defineProperty(_ref, 'phone', ''), _defineProperty(_ref, 'address', ''), _defineProperty(_ref, 'nro_doc', ''), _defineProperty(_ref, 'id_type_doc', ''), _defineProperty(_ref, 'email', ''), _defineProperty(_ref, 'department', '10'), _defineProperty(_ref, 'province', '92'), _defineProperty(_ref, 'district', ''), _defineProperty(_ref, 'id_type_business', ''), _defineProperty(_ref, 'reference', ''), _defineProperty(_ref, 'sex', ''), _defineProperty(_ref, 'marital_status', ''), _defineProperty(_ref, 'code_aval', ''), _defineProperty(_ref, 'name_aval', ''), _defineProperty(_ref, 'paternal_last_name_aval', ''), _defineProperty(_ref, 'maternal_last_name_aval', ''), _defineProperty(_ref, 'phone_aval', ''), _defineProperty(_ref, 'address_aval', ''), _defineProperty(_ref, 'nro_doc_aval', ''), _defineProperty(_ref, 'id_type_doc_aval', ''), _defineProperty(_ref, 'email_aval', ''), _defineProperty(_ref, 'department_aval', '10'), _defineProperty(_ref, 'province_aval', '92'), _defineProperty(_ref, 'district_aval', ''), _defineProperty(_ref, 'id_type_business_aval', ''), _defineProperty(_ref, 'reference_aval', ''), _defineProperty(_ref, 'sex_aval', ''), _defineProperty(_ref, 'marital_status_aval', ''), _defineProperty(_ref, 'errorClase', 0), _defineProperty(_ref, 'errors', {}), _defineProperty(_ref, 'errorInputCode', 'form-group'), _defineProperty(_ref, 'errorInputTypeDoc', 'form-group'), _defineProperty(_ref, 'errorInputNroDoc', 'form-group'), _defineProperty(_ref, 'errorInputNames', 'form-group'), _defineProperty(_ref, 'errorInputPaternal', 'form-group'), _defineProperty(_ref, 'errorInputMaternal', 'form-group'), _defineProperty(_ref, 'errorInputSex', 'form-group'), _defineProperty(_ref, 'errorInputMaritalState', 'form-group'), _defineProperty(_ref, 'errorInputAddress', 'form-group'), _defineProperty(_ref, 'errorInputJob', 'form-group'), _defineProperty(_ref, 'errorInputTypeBusiness', 'form-group'), _defineProperty(_ref, 'errorInputEmployee', 'form-group'), _defineProperty(_ref, 'errorInputDepartment', 'form-group'), _defineProperty(_ref, 'errorInputProvince', 'form-group'), _defineProperty(_ref, 'errorInputDistrict', 'form-group'), _defineProperty(_ref, 'errorInputTypeDocAval', 'form-group'), _defineProperty(_ref, 'errorInputNroDocAval', 'form-group'), _defineProperty(_ref, 'errorInputNamesAval', 'form-group'), _defineProperty(_ref, 'errorInputPaternalAval', 'form-group'), _defineProperty(_ref, 'errorInputMaternalAval', 'form-group'), _defineProperty(_ref, 'errorInputSexAval', 'form-group'), _defineProperty(_ref, 'errorInputMaritalStateAval', 'form-group'), _defineProperty(_ref, 'errorInputAddressAval', 'form-group'), _defineProperty(_ref, 'errorInputJobAval', 'form-group'), _defineProperty(_ref, 'errorInputTypeBusinessAval', 'form-group'), _defineProperty(_ref, 'errorInputDepartmentAval', 'form-group'), _defineProperty(_ref, 'errorInputProvinceAval', 'form-group'), _defineProperty(_ref, 'errorInputDistrictAval', 'form-group'), _defineProperty(_ref, 'errorInputcapital', 'form-group'), _defineProperty(_ref, 'errorComboTipoProduco', 'form-group'), _defineProperty(_ref, 'buscar', ''), _defineProperty(_ref, 'name_customer', ''), _defineProperty(_ref, 'capital', 0), _defineProperty(_ref, 'date_end', ''), _defineProperty(_ref, 'interest', 0), _defineProperty(_ref, 'term', 1), _defineProperty(_ref, 'total', 0), _defineProperty(_ref, 'guaranty', ''), _defineProperty(_ref, 'id_dependence', 0), _defineProperty(_ref, 'characteristic', ''), _defineProperty(_ref, 'tea', 20), _defineProperty(_ref, 'id_warehouse', ''), _defineProperty(_ref, 'id_person', 0), _defineProperty(_ref, 'id_pledge', 0), _defineProperty(_ref, 'quantity', 1), _defineProperty(_ref, 'licence_plate', ''), _defineProperty(_ref, 'serie', ''), _defineProperty(_ref, 'note', ''), _defineProperty(_ref, 'capital', 0), _defineProperty(_ref, 'period', 'Mensual'), _defineProperty(_ref, 'arrayCreditDetail', []), _defineProperty(_ref, 'licence_plate', ''), _defineProperty(_ref, 'errorTotalcapital', 'form-group'), _defineProperty(_ref, 'errorcapital', 'form-group'), _defineProperty(_ref, 'errorTerm', 'form-group'), _defineProperty(_ref, 'errorTea', 'form-group'), _defineProperty(_ref, 'errorInterested', 'form-group'), _defineProperty(_ref, 'errorWarehouse', 'form-group'), _defineProperty(_ref, 'errorFamilyProduct', 'form-group'), _defineProperty(_ref, 'errorCharacteristic', 'form-group'), _defineProperty(_ref, 'arrayFamilyProduct', []), _defineProperty(_ref, 'array_department', []), _defineProperty(_ref, 'array_province', []), _defineProperty(_ref, 'array_district', []), _defineProperty(_ref, 'array_type_document', []), _defineProperty(_ref, 'array_code', []), _defineProperty(_ref, 'totalcapital', 0), _defineProperty(_ref, 'totalInterest', 0), _defineProperty(_ref, 'modalTicket', 0), _defineProperty(_ref, 'idcustomer', -1), _defineProperty(_ref, 'array_requirement', []), _defineProperty(_ref, 'array_requirement_true', []), _defineProperty(_ref, 'requirements', []), _defineProperty(_ref, 'midatax', []), _defineProperty(_ref, 'list', []), _defineProperty(_ref, 'totalNumber', 0), _defineProperty(_ref, 'id_customer_credit', -1), _defineProperty(_ref, 'id_guarantor', -1), _defineProperty(_ref, 'icon_title', 'fa fa-plus'), _defineProperty(_ref, 'icon_save', 'fa fa-save'), _defineProperty(_ref, 'icon_save_pledge', 'fa fa-save'), _defineProperty(_ref, 'icon_edit', 'fa fa-pencil'), _defineProperty(_ref, 'icon_search_dni', 'fa fa-search'), _defineProperty(_ref, 'icon_search_dni_aval', 'fa fa-search'), _defineProperty(_ref, 'icon_search_client', 'fa fa-search'), _defineProperty(_ref, 'icon_generate', 'fa fa-rotate-right'), _defineProperty(_ref, 'title', 'Agregar Cliente'), _defineProperty(_ref, 'add_aval', 0), _defineProperty(_ref, 'capital', 500), _defineProperty(_ref, 'amount_admin', ''), _defineProperty(_ref, 'rate_admin', 2), _defineProperty(_ref, 'risk_center', 2), _defineProperty(_ref, 'interest_rate', 10), _defineProperty(_ref, 'grace_day', 3), _defineProperty(_ref, 'apply_mora', 1), _defineProperty(_ref, 'period_credit', 'DIARIO'), _defineProperty(_ref, 'number_quota', 26), _defineProperty(_ref, 'date_ultimate', ''), _defineProperty(_ref, 'total_cash', ''), _defineProperty(_ref, 'interest_rate_cash', ''), _defineProperty(_ref, 'quota', ''), _ref;
+        }), _defineProperty(_ref, 'offset', 3), _defineProperty(_ref, 'id', -1), _defineProperty(_ref, 'code', ''), _defineProperty(_ref, 'name', ''), _defineProperty(_ref, 'paternal_last_name', ''), _defineProperty(_ref, 'maternal_last_name', ''), _defineProperty(_ref, 'phone', ''), _defineProperty(_ref, 'address', ''), _defineProperty(_ref, 'nro_doc', ''), _defineProperty(_ref, 'id_type_doc', ''), _defineProperty(_ref, 'email', ''), _defineProperty(_ref, 'department', '10'), _defineProperty(_ref, 'province', '92'), _defineProperty(_ref, 'district', ''), _defineProperty(_ref, 'id_type_business', ''), _defineProperty(_ref, 'reference', ''), _defineProperty(_ref, 'sex', ''), _defineProperty(_ref, 'marital_status', ''), _defineProperty(_ref, 'code_aval', ''), _defineProperty(_ref, 'name_aval', ''), _defineProperty(_ref, 'paternal_last_name_aval', ''), _defineProperty(_ref, 'maternal_last_name_aval', ''), _defineProperty(_ref, 'phone_aval', ''), _defineProperty(_ref, 'address_aval', ''), _defineProperty(_ref, 'nro_doc_aval', ''), _defineProperty(_ref, 'id_type_doc_aval', ''), _defineProperty(_ref, 'email_aval', ''), _defineProperty(_ref, 'department_aval', '10'), _defineProperty(_ref, 'province_aval', '92'), _defineProperty(_ref, 'district_aval', ''), _defineProperty(_ref, 'id_type_business_aval', ''), _defineProperty(_ref, 'reference_aval', ''), _defineProperty(_ref, 'sex_aval', ''), _defineProperty(_ref, 'marital_status_aval', ''), _defineProperty(_ref, 'errorClase', 0), _defineProperty(_ref, 'errors', {}), _defineProperty(_ref, 'errorInputCode', 'form-group'), _defineProperty(_ref, 'errorInputTypeDoc', 'form-group'), _defineProperty(_ref, 'errorInputNroDoc', 'form-group'), _defineProperty(_ref, 'errorInputNames', 'form-group'), _defineProperty(_ref, 'errorInputPaternal', 'form-group'), _defineProperty(_ref, 'errorInputMaternal', 'form-group'), _defineProperty(_ref, 'errorInputSex', 'form-group'), _defineProperty(_ref, 'errorInputMaritalState', 'form-group'), _defineProperty(_ref, 'errorInputAddress', 'form-group'), _defineProperty(_ref, 'errorInputJob', 'form-group'), _defineProperty(_ref, 'errorInputTypeBusiness', 'form-group'), _defineProperty(_ref, 'errorInputEmployee', 'form-group'), _defineProperty(_ref, 'errorInputDepartment', 'form-group'), _defineProperty(_ref, 'errorInputProvince', 'form-group'), _defineProperty(_ref, 'errorInputDistrict', 'form-group'), _defineProperty(_ref, 'errorInputTypeDocAval', 'form-group'), _defineProperty(_ref, 'errorInputNroDocAval', 'form-group'), _defineProperty(_ref, 'errorInputNamesAval', 'form-group'), _defineProperty(_ref, 'errorInputPaternalAval', 'form-group'), _defineProperty(_ref, 'errorInputMaternalAval', 'form-group'), _defineProperty(_ref, 'errorInputSexAval', 'form-group'), _defineProperty(_ref, 'errorInputMaritalStateAval', 'form-group'), _defineProperty(_ref, 'errorInputAddressAval', 'form-group'), _defineProperty(_ref, 'errorInputJobAval', 'form-group'), _defineProperty(_ref, 'errorInputTypeBusinessAval', 'form-group'), _defineProperty(_ref, 'errorInputDepartmentAval', 'form-group'), _defineProperty(_ref, 'errorInputProvinceAval', 'form-group'), _defineProperty(_ref, 'errorInputDistrictAval', 'form-group'), _defineProperty(_ref, 'errorInputcapital', 'form-group'), _defineProperty(_ref, 'errorComboTipoProduco', 'form-group'), _defineProperty(_ref, 'buscar', ''), _defineProperty(_ref, 'name_customer', ''), _defineProperty(_ref, 'capital', 0), _defineProperty(_ref, 'date_end', ''), _defineProperty(_ref, 'interest', 0), _defineProperty(_ref, 'term', 1), _defineProperty(_ref, 'total', 0), _defineProperty(_ref, 'guaranty', ''), _defineProperty(_ref, 'id_dependence', 0), _defineProperty(_ref, 'characteristic', ''), _defineProperty(_ref, 'tea', 20), _defineProperty(_ref, 'id_warehouse', ''), _defineProperty(_ref, 'id_person', 0), _defineProperty(_ref, 'id_pledge', 0), _defineProperty(_ref, 'quantity', 1), _defineProperty(_ref, 'licence_plate', ''), _defineProperty(_ref, 'serie', ''), _defineProperty(_ref, 'note', ''), _defineProperty(_ref, 'capital', 0), _defineProperty(_ref, 'period', 'Mensual'), _defineProperty(_ref, 'arrayCreditDetail', []), _defineProperty(_ref, 'licence_plate', ''), _defineProperty(_ref, 'errorTotalcapital', 'form-group'), _defineProperty(_ref, 'errorcapital', 'form-group'), _defineProperty(_ref, 'errorTerm', 'form-group'), _defineProperty(_ref, 'errorTea', 'form-group'), _defineProperty(_ref, 'errorInterested', 'form-group'), _defineProperty(_ref, 'errorWarehouse', 'form-group'), _defineProperty(_ref, 'errorFamilyProduct', 'form-group'), _defineProperty(_ref, 'errorCharacteristic', 'form-group'), _defineProperty(_ref, 'arrayFamilyProduct', []), _defineProperty(_ref, 'array_department', []), _defineProperty(_ref, 'array_province', []), _defineProperty(_ref, 'array_district', []), _defineProperty(_ref, 'array_type_document', []), _defineProperty(_ref, 'array_code', []), _defineProperty(_ref, 'totalcapital', 0), _defineProperty(_ref, 'totalInterest', 0), _defineProperty(_ref, 'modalTicket', 0), _defineProperty(_ref, 'idcustomer', -1), _defineProperty(_ref, 'array_requirement', []), _defineProperty(_ref, 'array_requirement_true', []), _defineProperty(_ref, 'requirements', []), _defineProperty(_ref, 'midatax', []), _defineProperty(_ref, 'list', []), _defineProperty(_ref, 'totalNumber', 0), _defineProperty(_ref, 'id_customer_credit', -1), _defineProperty(_ref, 'id_guarantor', -1), _defineProperty(_ref, 'icon_title', 'fa fa-plus'), _defineProperty(_ref, 'icon_save', 'fa fa-save'), _defineProperty(_ref, 'icon_save_pledge', 'fa fa-save'), _defineProperty(_ref, 'icon_edit', 'fa fa-pencil'), _defineProperty(_ref, 'icon_search_dni', 'fa fa-search'), _defineProperty(_ref, 'icon_search_dni_aval', 'fa fa-search'), _defineProperty(_ref, 'icon_search_client', 'fa fa-search'), _defineProperty(_ref, 'icon_generate', 'fa fa-rotate-right'), _defineProperty(_ref, 'title', 'Agregar Cliente'), _defineProperty(_ref, 'add_aval', 0), _defineProperty(_ref, 'capital', 500), _defineProperty(_ref, 'amount_admin', ''), _defineProperty(_ref, 'rate_admin', 2), _defineProperty(_ref, 'risk_center', 2), _defineProperty(_ref, 'interest_rate', 10), _defineProperty(_ref, 'grace_day', 3), _defineProperty(_ref, 'apply_mora', 1), _defineProperty(_ref, 'period_credit', 'DIARIO'), _defineProperty(_ref, 'number_quota', 26), _defineProperty(_ref, 'date_ultimate', ''), _defineProperty(_ref, 'total_cash', ''), _defineProperty(_ref, 'interest_rate_cash', ''), _defineProperty(_ref, 'quota', ''), _defineProperty(_ref, 'total_quota', ''), _defineProperty(_ref, 'total_amount', ''), _defineProperty(_ref, 'total_interest', ''), _ref;
     },
 
     components: {
@@ -27252,6 +27250,11 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         this.init();
     },
     methods: {
+        print: function print(id) {
+            var url = 'download_detail_credit?id=' + id;
+            //window.location.href = url;
+            window.open(url, '_blank');
+        },
         calculateAmount: function calculateAmount() {
             var me = this;
             me.total_cash = '';
@@ -27395,6 +27398,9 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
                     saldo: saldo.toFixed(1)
                 });
             }
+            this.total_quota = this.total_cash;
+            this.total_amount = this.capital;
+            this.total_interest = this.interest_rate_cash;
         },
         closeModal: function closeModal() {
             var me = this;
@@ -27441,6 +27447,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         saveDetailCredit: function saveDetailCredit() {
             var _this = this;
 
+            var me = this;
             this.calculateCreditoDetail();
             swal({
                 title: 'Esta seguro de guardar la informacion?',
@@ -27471,6 +27478,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
                         'id_promoter': _this.id_employee,
                         'array_credit_detail': _this.arrayCreditDetail
                     }).then(function (response) {
+                        me.print(response.data);
                         // me.clean_data();                                
                         // me.list_data(1);  
                         // me.icon_save='fa fa-save';
@@ -28275,7 +28283,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     },
 
     mounted: function mounted() {
-        this.listadox = 1;
+        this.listadox = 3;
         //    this.lista_add_client();
         //    this.list_data(1);
         this.getDepartment();
@@ -29409,7 +29417,7 @@ var render = function() {
                                                               "3px"
                                                           },
                                                           attrs: {
-                                                            type: "text"
+                                                            type: "tel"
                                                           },
                                                           domProps: {
                                                             value: _vm.phone
@@ -30985,7 +30993,9 @@ var render = function() {
                                                           },
                                                           attrs: {
                                                             type: "number",
-                                                            step: "any"
+                                                            min: "1",
+                                                            step: "any",
+                                                            lang: "en"
                                                           },
                                                           domProps: {
                                                             value: _vm.capital
@@ -31091,7 +31101,8 @@ var render = function() {
                                                               "uppercase"
                                                           },
                                                           attrs: {
-                                                            type: "number"
+                                                            type: "number",
+                                                            min: "1"
                                                           },
                                                           domProps: {
                                                             value:
@@ -31385,7 +31396,8 @@ var render = function() {
                                                               "uppercase"
                                                           },
                                                           attrs: {
-                                                            type: "number"
+                                                            type: "number",
+                                                            min: "0"
                                                           },
                                                           domProps: {
                                                             value:
@@ -31444,7 +31456,11 @@ var render = function() {
                                                           for: "family_produc"
                                                         }
                                                       },
-                                                      [_vm._v("Porcentaje:")]
+                                                      [
+                                                        _vm._v(
+                                                          "Monto gastos adm.:"
+                                                        )
+                                                      ]
                                                     ),
                                                     _vm._v(" "),
                                                     _c(
@@ -31596,7 +31612,8 @@ var render = function() {
                                                               "3px"
                                                           },
                                                           attrs: {
-                                                            type: "number"
+                                                            type: "number",
+                                                            min: "0"
                                                           },
                                                           domProps: {
                                                             value:
@@ -31678,7 +31695,7 @@ var render = function() {
                                                           },
                                                           attrs: {
                                                             type: "number",
-                                                            min: "1",
+                                                            min: "0",
                                                             pattern: "^[0-9]+"
                                                           },
                                                           domProps: {
@@ -31907,7 +31924,8 @@ var render = function() {
                                                               "uppercase"
                                                           },
                                                           attrs: {
-                                                            type: "number"
+                                                            type: "number",
+                                                            min: "0"
                                                           },
                                                           domProps: {
                                                             value: _vm.grace_day
@@ -34410,15 +34428,15 @@ var render = function() {
                 "div",
                 { staticClass: "box-footer" },
                 [
-                  _c(
-                    "div",
-                    {
-                      staticClass: "btn-group",
-                      staticStyle: { float: "right" }
-                    },
-                    [
-                      _vm.listadox == 1
-                        ? [
+                  _vm.listadox == 1
+                    ? [
+                        _c(
+                          "div",
+                          {
+                            staticClass: "btn-group",
+                            staticStyle: { float: "right" }
+                          },
+                          [
                             _c(
                               "button",
                               {
@@ -34465,13 +34483,8 @@ var render = function() {
                               ]
                             )
                           ]
-                        : _vm._e()
-                    ],
-                    2
-                  ),
-                  _vm._v(" "),
-                  _vm.listadox == 1
-                    ? [
+                        ),
+                        _vm._v(" "),
                         _c(
                           "button",
                           {
@@ -34882,7 +34895,41 @@ var render = function() {
             ? [
                 _c("div", { staticClass: "col-md-12" }, [
                   _c("div", { staticClass: "box box-primary" }, [
-                    _vm._m(49),
+                    _c("div", { staticClass: "box-header with-border" }, [
+                      _vm._m(49),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "box-tools pull-right" }, [
+                        _c(
+                          "span",
+                          {
+                            staticClass: "label label-success",
+                            staticStyle: { "margin-right": "10px" }
+                          },
+                          [_vm._v("TOTAL DE CUOTA: " + _vm._s(_vm.total_quota))]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "span",
+                          {
+                            staticClass: "label label-warning",
+                            staticStyle: { "margin-right": "10px" }
+                          },
+                          [
+                            _vm._v(
+                              "TOTAL DE CAPITAL: " + _vm._s(_vm.total_amount)
+                            )
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c("span", { staticClass: "label label-danger" }, [
+                          _vm._v(
+                            "TOTAL DE INTERÉS: " + _vm._s(_vm.total_interest)
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _vm._m(50)
+                      ])
+                    ]),
                     _vm._v(" "),
                     _c(
                       "div",
@@ -34895,7 +34942,7 @@ var render = function() {
                             staticStyle: { "font-size": "12px" }
                           },
                           [
-                            _vm._m(50),
+                            _vm._m(51),
                             _vm._v(" "),
                             _c(
                               "tbody",
@@ -35801,35 +35848,23 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "box-header with-border" }, [
-      _c("h1", { staticClass: "box-title" }, [
-        _c("i", { staticClass: "fa fa-list" }),
-        _vm._v(" Cronograma de Pago")
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "box-tools pull-right" }, [
-        _c("span", { staticClass: "label label-success" }, [
-          _vm._v("TOTAL DE CUOTA:")
-        ]),
-        _vm._v(" "),
-        _c("span", { staticClass: "label label-warning" }, [
-          _vm._v("TOTAL DE CAPITAL:")
-        ]),
-        _vm._v(" "),
-        _c("span", { staticClass: "label label-danger" }, [
-          _vm._v("TOTAL DE INTERÉS:")
-        ]),
-        _vm._v(" "),
-        _c(
-          "button",
-          {
-            staticClass: "btn btn-box-tool",
-            attrs: { type: "button", "data-widget": "collapse" }
-          },
-          [_c("i", { staticClass: "fa fa-minus" })]
-        )
-      ])
+    return _c("h1", { staticClass: "box-title" }, [
+      _c("i", { staticClass: "fa fa-list" }),
+      _vm._v(" Cronograma de Pago")
     ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "button",
+      {
+        staticClass: "btn btn-box-tool",
+        attrs: { type: "button", "data-widget": "collapse" }
+      },
+      [_c("i", { staticClass: "fa fa-minus" })]
+    )
   },
   function() {
     var _vm = this

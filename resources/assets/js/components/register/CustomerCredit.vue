@@ -151,7 +151,7 @@
                                                                             <label for="celular">Celular:</label>
                                                                             <div class="input-group">
                                                                                 <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-mobile-phone"></i></span>
-                                                                                <input v-model="phone" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">  
+                                                                                <input v-model="phone" type="tel" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">  
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -311,7 +311,7 @@
                                                                             <label for="family_produc">Monto:</label>
                                                                             <div class="input-group">
                                                                                 <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;">S/.</span>
-                                                                                <input v-model="capital" type="number" step="any"  @keyup="calculateAmount()" @click="calculateAmount()" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">  
+                                                                                <input v-model="capital" type="number" min="1" step="any" lang="en" @keyup="calculateAmount()" @click="calculateAmount()" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">  
                                                                             </div>
                                                                         </div>
                                                                     </div><div class="col-md-2">
@@ -319,7 +319,7 @@
                                                                             <label for="nombres">Tasa de Interés:</label>
                                                                             <div class="input-group">
                                                                                 <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;">%</span>
-                                                                                <input v-model="interest_rate" type="number"  @keyup="calculateInterestRateCash()" @click="calculateInterestRateCash()" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px; text-transform:uppercase;">  
+                                                                                <input v-model="interest_rate" type="number" min="1" @keyup="calculateInterestRateCash()" @click="calculateInterestRateCash()" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px; text-transform:uppercase;">  
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -346,13 +346,13 @@
                                                                             <label for="type_product">Gastos Adm.:</label>
                                                                             <div class="input-group">
                                                                                 <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;">%</span>
-                                                                                <input v-model="rate_admin" type="number" class="form-control" @keyup="calculateAmount()" @click="calculateAmount()" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;text-transform:uppercase;">  
+                                                                                <input v-model="rate_admin" type="number" min="0" class="form-control" @keyup="calculateAmount()" @click="calculateAmount()" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;text-transform:uppercase;">  
                                                                             </div>
                                                                         </div>
                                                                     </div>
                                                                     <div class="col-md-2">
                                                                         <div v-bind:class="errorFamilyProduct">
-                                                                            <label for="family_produc" style="visibility: hidden">Porcentaje:</label>
+                                                                            <label for="family_produc" style="visibility: hidden">Monto gastos adm.:</label>
                                                                             <div class="input-group">
                                                                                 <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;">S/.</span>
                                                                                 <input v-model="amount_admin" type="number" class="form-control" @keyup="calculateRate()" @click="calculateRate()" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">  
@@ -364,7 +364,7 @@
                                                                             <label for="family_produc">Central de Riesgo:</label>
                                                                             <div class="input-group">
                                                                                 <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;">S/.</span>
-                                                                                <input v-model="risk_center" type="number" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">  
+                                                                                <input v-model="risk_center" type="number" min="0" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">  
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -373,7 +373,7 @@
                                                                             <label for="nombres">Plazo:</label>
                                                                             <div class="input-group">
                                                                                 <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-hourglass"></i></span>
-                                                                                <input v-model="number_quota" type="number" min="1" pattern="^[0-9]+" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px; text-transform:uppercase;">  
+                                                                                <input v-model="number_quota" type="number" min="0" pattern="^[0-9]+" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px; text-transform:uppercase;">  
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -397,7 +397,7 @@
                                                                             <label for="nombres">Días de Gracia:</label>
                                                                             <div class="input-group">
                                                                                 <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-life-ring"></i></span>
-                                                                                <input v-model="grace_day" type="number" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px; text-transform:uppercase;">  
+                                                                                <input v-model="grace_day" type="number" min="0" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px; text-transform:uppercase;">  
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -633,19 +633,17 @@
                                 </div>
                             </div>
                         </div>    
-                        <div class="box-footer">
-                            <div class="btn-group" style="float:right">
-                                <template v-if="listadox==1">
+                        <div class="box-footer">                            
+                            <template v-if="listadox==1">
+                                <div class="btn-group" style="float:right">
                                     <button type="button" @click="saveDataOnlyCustomer()" class="btn btn-save" data-toggle="tooltip" title="Guardar solo cliente">
                                         <i v-bind:class="icon_save"></i>&nbsp;GUARDAR CLIENTE
                                     </button>
                                     <button type="button" @click="saveData()" class="btn btn-save-pledge" data-toggle="tooltip" title="Guardar cliente y otorgar crédito">
                                         <i v-bind:class="icon_save_pledge"></i>&nbsp;GUARDAR / OTORGAR CRÉDITO
                                     </button>
-                                </template>                          
-                            </div>
-                             
-                            <template v-if="listadox==1">
+                                </div>
+                                                         
                                 <button type="button" @click="clean_data()" class="btn btn-new" style="float:right; margin-right: 10px;" data-toggle="tooltip" title="Nuevo cliente">
                                     <i class="fa fa-certificate"></i>&nbsp;NUEVO CLIENTE
                                 </button>
@@ -765,9 +763,9 @@
                             <div class="box-header with-border">
                                 <h1 class="box-title"><i class="fa fa-list"></i> Cronograma de Pago</h1>
                                 <div class="box-tools pull-right">
-                                    <span class="label label-success">TOTAL DE CUOTA:</span>
-                                    <span class="label label-warning">TOTAL DE CAPITAL:</span>
-                                    <span class="label label-danger">TOTAL DE INTERÉS:</span>
+                                    <span class="label label-success" style="margin-right:10px">TOTAL DE CUOTA: {{total_quota}}</span>
+                                    <span class="label label-warning" style="margin-right:10px">TOTAL DE CAPITAL: {{total_amount}}</span>
+                                    <span class="label label-danger">TOTAL DE INTERÉS: {{total_interest}}</span>
                                     <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
                                     </button>
                                     <!-- <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button> -->
@@ -898,6 +896,7 @@
                 capital:500, amount_admin:'', rate_admin:2, risk_center:2,interest_rate:10,
                 grace_day:3, apply_mora:1, period_credit:'DIARIO', number_quota:26, 
                 date_ultimate:'',total_cash:'', interest_rate_cash:'', quota:'',
+                total_quota:'',total_amount:'',total_interest:'',
 
             }
         },
@@ -935,6 +934,12 @@
             this.init();
         },
         methods : {
+            
+            print(id){
+                var url='download_detail_credit?id='+id;
+                //window.location.href = url;
+                window.open(url, '_blank');  
+            },
             calculateAmount(){
                 let me = this;
                 me.total_cash='';
@@ -1085,6 +1090,9 @@
                         saldo: saldo.toFixed(1)
                     });                    
                 }
+                this.total_quota=this.total_cash;
+                this.total_amount=this.capital;
+                this.total_interest=this.interest_rate_cash;
             },
             closeModal(){
                 let me=this;
@@ -1133,6 +1141,7 @@
                 this.sumTotal();
             },
             saveDetailCredit(){
+                let me =this;
                 this.calculateCreditoDetail();
                 swal({
                     title: 'Esta seguro de guardar la informacion?',
@@ -1163,6 +1172,7 @@
                             'id_promoter':this.id_employee,
                             'array_credit_detail':this.arrayCreditDetail
                         }).then(function (response) {
+                                me.print(response.data);
                                 // me.clean_data();                                
                                 // me.list_data(1);  
                                 // me.icon_save='fa fa-save';
@@ -2000,7 +2010,7 @@
         },
         
         mounted() {
-            this.listadox=1;
+            this.listadox=3;
         //    this.lista_add_client();
         //    this.list_data(1);
             this.getDepartment();

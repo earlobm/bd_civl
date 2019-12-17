@@ -74,7 +74,7 @@
                                                                             <label for="family_produc">Monto:</label>
                                                                             <div class="input-group">
                                                                                 <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;">S/.</span>
-                                                                                <input v-model="capital" type="number" step="any"  @keyup="calculateAmount()" @click="calculateAmount()" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">  
+                                                                                <input v-model="capital" type="number" step="any"  min="1" @keyup="calculateAmount()" @click="calculateAmount()" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">  
                                                                             </div>
                                                                         </div>
                                                                     </div><div class="col-md-2">
@@ -82,7 +82,7 @@
                                                                             <label for="nombres">Tasa de Interés:</label>
                                                                             <div class="input-group">
                                                                                 <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;">%</span>
-                                                                                <input v-model="interest_rate" type="number"  @keyup="calculateInterestRateCash()" @click="calculateInterestRateCash()" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px; text-transform:uppercase;">  
+                                                                                <input v-model="interest_rate" type="number"  min="1"  @keyup="calculateInterestRateCash()" @click="calculateInterestRateCash()" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px; text-transform:uppercase;">  
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -109,7 +109,7 @@
                                                                             <label for="type_product">Gastos Adm.:</label>
                                                                             <div class="input-group">
                                                                                 <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;">%</span>
-                                                                                <input v-model="rate_admin" type="number" class="form-control" @keyup="calculateAmount()" @click="calculateAmount()" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;text-transform:uppercase;">  
+                                                                                <input v-model="rate_admin" type="number" min="0" class="form-control" @keyup="calculateAmount()" @click="calculateAmount()" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;text-transform:uppercase;">  
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -127,7 +127,7 @@
                                                                             <label for="family_produc">Central de Riesgo:</label>
                                                                             <div class="input-group">
                                                                                 <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;">S/.</span>
-                                                                                <input v-model="risk_center" type="number" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">  
+                                                                                <input v-model="risk_center" type="number" min="0" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">  
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -136,7 +136,7 @@
                                                                             <label for="nombres">Plazo:</label>
                                                                             <div class="input-group">
                                                                                 <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-hourglass"></i></span>
-                                                                                <input v-model="number_quota" type="number" min="1" pattern="^[0-9]+" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px; text-transform:uppercase;">  
+                                                                                <input v-model="number_quota" type="number" min="0" pattern="^[0-9]+" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px; text-transform:uppercase;">  
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -160,7 +160,7 @@
                                                                             <label for="nombres">Días de Gracia:</label>
                                                                             <div class="input-group">
                                                                                 <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-life-ring"></i></span>
-                                                                                <input v-model="grace_day" type="number" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px; text-transform:uppercase;">  
+                                                                                <input v-model="grace_day" type="number" min="0" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px; text-transform:uppercase;">  
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -391,9 +391,9 @@
                             <div class="box-header with-border">
                                 <h1 class="box-title"><i class="fa fa-list"></i> Cronograma de Pago</h1>
                                 <div class="box-tools pull-right">
-                                    <span class="label label-success">TOTAL DE CUOTA:</span>
-                                    <span class="label label-warning">TOTAL DE CAPITAL:</span>
-                                    <span class="label label-danger">TOTAL DE INTERÉS:</span>
+                                    <span class="label label-success" style="margin-right:10px">TOTAL DE CUOTA: {{total_quota}}</span>
+                                    <span class="label label-warning" style="margin-right:10px">TOTAL DE CAPITAL: {{total_amount}}</span>
+                                    <span class="label label-danger">TOTAL DE INTERÉS: {{total_interest}}</span>
                                     <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
                                     </button>
                                     <!-- <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button> -->
@@ -524,6 +524,7 @@
                 capital:500, amount_admin:'', rate_admin:2, risk_center:2,interest_rate:10,
                 grace_day:3, apply_mora:1, period_credit:'DIARIO', number_quota:26, 
                 date_ultimate:'',total_cash:'', interest_rate_cash:'', quota:'',
+                total_quota:'',total_amount:'',total_interest:'',
             }
         },
          components: {
@@ -565,6 +566,7 @@
                 me.total_cash='';
                 me.interest_rate_cash='';
                 me.amount_admin=(Number(me.capital)* Number(me.rate_admin))/100;
+                console.log(me.amount_admin);
                 me.interest_rate_cash=(Number(me.capital)*Number(me.interest_rate))/100;
                 me.total_cash=Number(me.capital)+ Number(me.interest_rate_cash);
                 
@@ -698,6 +700,9 @@
                         saldo: saldo.toFixed(1)
                     });                    
                 }
+                this.total_quota=this.total_cash;
+                this.total_amount=this.capital;
+                this.total_interest=this.interest_rate_cash;
             },
             saveDetailCredit(){
                 this.calculateCreditoDetail();

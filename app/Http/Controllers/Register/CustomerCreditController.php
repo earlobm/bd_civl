@@ -535,6 +535,7 @@ class CustomerCreditController extends Controller
             $controller->state =1;
             $controller->save();             
         }
+        return  $clase_credit->id; 
 
     }
     public function downloadProgram(Request $request){    
@@ -661,6 +662,99 @@ class CustomerCreditController extends Controller
         return [
             'datax' => $miLista
         ];
+    }
+    public function download_detail_credit(Request $request){
+        //obteniendo los clientes
+        $id_credit=$request->id;
+
+        $sqlz="SELECT concat(names,' ', paternal_last_name,' ', maternal_last_name) as customer,
+        number_doc, cr.number_quota, cr.period, cr.amount_admin,
+        cr.capital, cr.interest_rate, cr.date_Credit
+         from credit cr
+        inner join customer cu on cu.id=cr.id_customer
+        inner join person p on p.id=cu.id_person
+        where cr.id=$id_credit";
+        $listCustomer=DB::select($sqlz);
+        $listCustomerCredit = json_decode(json_encode($listCustomer), true);
+        
+        $sqlx="SELECT * from detail_credit where id_credit=$id_credit";
+        $listSchedule=DB::select($sqlx);
+        $listScheduleCredit = json_decode(json_encode($listSchedule), true);
+
+        $page_format = array(
+            'MediaBox' => array ('llx' => 0, 'lly' => 0, 'urx' => 75, 'ury' => 180), 
+            'Dur' => 3,  'trans' => array( 'D' => 1.5,  'S' => 'Split','Dm' => 'V','M' => 'O' ), 
+            'PZ' => 1, 
+        ); 
+        PDF::SetTitle('Cronograma de Pagos');
+        PDF::SetFont('helvetica', '', 9);
+        PDF::AddPage('P', 'A4', false, false); 
+        //PDF::Write(0, 'COBRANZA DIARIA', '', 0, 'C', true, 0, false, false, 0);
+         // $urlx = url('/img/logo-tumi.png');
+          $urlx = storage_path().'/logo-tumi.png';
+          // Storage::put('logo-tumi.png', $contents);
+         // Storage::put('logo-tumi.png', $contents);
+           $html = '
+           <h3 style="text-align:center"><u>CRONOGRAMA DE PAGOS</u></h3>
+           <table cellspacing="0" cellpadding="1" border="0">
+                <tr>
+                    <td rowspan="4" style="width:80px">
+                        <img  style="width:60px; height:60px;" src="'.$urlx.'" alt="technoserve"  >
+                    </td>
+                    <td>
+                        <b>CLIENTE : </b>'.$listCustomerCredit[0]['customer'].' 
+                    </td>
+                    <td>
+                        <b>DNI : </b> '.$listCustomerCredit[0]['number_doc'].' 
+                    </td>
+                </tr>
+                <tr>
+                    
+                    <td><b>MONTO: </b> '.$listCustomerCredit[0]['capital'].'</td>
+                    <td><b>TASA DE INTERÉS: </b> '.$listCustomerCredit[0]['interest_rate'].'%</td>
+                    <td><b>GASTO ADM.: </b> '.$listCustomerCredit[0]['amount_admin'].'</td>
+                </tr>
+                <tr>
+                    <td><b>PLAZO: </b> '.$listCustomerCredit[0]['number_quota'].' '.$listCustomerCredit[0]['period'].'</td>
+                    <td><b>FECHA DE DESEMBOLSO : </b>'.$listCustomerCredit[0]['date_Credit'].'</td>
+                </tr>
+            </table>
+            ';
+        $html .= '<br /><br /><br /><br />
+            <font size="7" face="Courier New" >  
+                <table cellspacing="0" cellpadding="2" border="1" >
+                    <thead >                                   
+                        <tr style="background-color:#F4F2F1;color:#2A2828;">
+                            <th style="vertical-align: middle;">N°</th>
+                            <th style="vertical-align: middle;width:100px">FECHA DE VENC.</th>
+                            <th style="vertical-align: middle;">CUOTA</th>
+                            <th style="vertical-align: middle;">CAPITAL</th>
+                            <th style="vertical-align: middle;width:35px">INTERES</th>
+                            <th style="vertical-align: middle;width:40px">ABONO</th>
+                            <th style="vertical-align: middle;">SALDO PROYECTADO</th>
+                        </tr> 
+                    </thead>
+                    <tbody>
+                    
+                ';
+                $rows="";
+                foreach ($listScheduleCredit as $key => $value) {
+                         $html .= '<tr>';
+                         $html .= '<td style="vertical-align: middle;" >'.$value['number_quota'].'</td>';
+                         $html .= '<td style="vertical-align: middle;width:100px" >'.$value['date_expired'].'</td>';
+                         $html .= '<td style="vertical-align: middle;" >'.$value['quota'].'</td>';
+                         $html .= '<td style="vertical-align: middle;" >'.$value['capital'].'</td>';
+                         $html .= '<td style="vertical-align: middle;width:35px;text-align:center" >'.$value['interest'].'</td>';
+                         $html .= '<td style="vertical-align: middle;width:40px;text-align:right" >'.''.'</td>';
+                         $html .= '<td style="vertical-align: middle;text-align:right" >'.$value['saldo_projected'].'</td>';                         
+                         $html .= '</tr>';
+                }
+              $html .='                    
+                            </tbody>
+                        </table>';  
+        PDF::writeHTML($html, true, 0, true, 0);
+        PDF::Output('hello_world.pdf');
+         
     }
 
 }
