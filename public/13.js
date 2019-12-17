@@ -28283,7 +28283,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     },
 
     mounted: function mounted() {
-        this.listadox = 3;
         //    this.lista_add_client();
         //    this.list_data(1);
         this.getDepartment();

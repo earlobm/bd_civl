@@ -2010,7 +2010,6 @@
         },
         
         mounted() {
-            this.listadox=3;
         //    this.lista_add_client();
         //    this.list_data(1);
             this.getDepartment();
