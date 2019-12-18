@@ -26639,9 +26639,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
-//
-//
-//
 
 
 
@@ -27327,334 +27324,327 @@ var render = function() {
                                         1
                                       )
                                     ])
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("div", { staticClass: "row" }, [
-                                    _c("div", { staticClass: "col-md-12" }, [
-                                      _c(
-                                        "div",
-                                        {
-                                          staticClass:
-                                            "box-body table-responsive no-padding"
-                                        },
-                                        [
-                                          _c(
-                                            "table",
-                                            {
-                                              staticClass: "table table-hover",
-                                              staticStyle: {
-                                                "font-size": "12px"
-                                              }
-                                            },
-                                            [
-                                              _vm._m(5),
-                                              _vm._v(" "),
-                                              _c(
-                                                "tbody",
-                                                _vm._l(
-                                                  _vm.list_resumenday,
-                                                  function(midata, index) {
-                                                    return _c(
-                                                      "tr",
-                                                      { key: index },
-                                                      [
-                                                        _c(
-                                                          "td",
-                                                          {
-                                                            staticStyle: {
-                                                              "vertical-align":
-                                                                "middle",
-                                                              "text-align":
-                                                                "center"
-                                                            }
-                                                          },
-                                                          [
-                                                            _vm._v(
-                                                              _vm._s(index + 1)
-                                                            )
-                                                          ]
-                                                        ),
-                                                        _vm._v(" "),
-                                                        _c("td", {
-                                                          staticStyle: {
-                                                            "vertical-align":
-                                                              "middle",
-                                                            "text-align":
-                                                              "center"
-                                                          },
-                                                          domProps: {
-                                                            textContent: _vm._s(
-                                                              midata.amount_delivered
-                                                            )
-                                                          }
-                                                        }),
-                                                        _vm._v(" "),
-                                                        _c("td", {
-                                                          staticStyle: {
-                                                            "vertical-align":
-                                                              "middle",
-                                                            "text-align":
-                                                              "center"
-                                                          },
-                                                          domProps: {
-                                                            textContent: _vm._s(
-                                                              midata.names +
-                                                                " " +
-                                                                midata.paternal_last_name +
-                                                                " " +
-                                                                midata.maternal_last_name
-                                                            )
-                                                          }
-                                                        }),
-                                                        _vm._v(" "),
-                                                        _c("td", {
-                                                          staticStyle: {
-                                                            "vertical-align":
-                                                              "middle"
-                                                          },
-                                                          domProps: {
-                                                            textContent: _vm._s(
-                                                              midata.name_sucursal
-                                                            )
-                                                          }
-                                                        }),
-                                                        _vm._v(" "),
-                                                        _c("td", {
-                                                          staticStyle: {
-                                                            "vertical-align":
-                                                              "middle"
-                                                          },
-                                                          domProps: {
-                                                            textContent: _vm._s(
-                                                              midata.name_mercado
-                                                            )
-                                                          }
-                                                        }),
-                                                        _vm._v(" "),
-                                                        _c(
-                                                          "td",
-                                                          {
-                                                            staticStyle: {
-                                                              "text-align":
-                                                                "center",
-                                                              "vertical-align":
-                                                                "middle"
-                                                            }
-                                                          },
-                                                          [
-                                                            _c(
-                                                              "button",
-                                                              {
-                                                                staticClass:
-                                                                  "btn btn-editar btn-sm",
-                                                                attrs: {
-                                                                  type:
-                                                                    "button",
-                                                                  "data-toggle":
-                                                                    "tooltip",
-                                                                  title:
-                                                                    "Editar"
-                                                                },
-                                                                on: {
-                                                                  click: function(
-                                                                    $event
-                                                                  ) {
-                                                                    return _vm.operation(
-                                                                      midata.id
-                                                                    )
-                                                                  }
-                                                                }
-                                                              },
-                                                              [
-                                                                _c("i", {
-                                                                  staticClass:
-                                                                    "fa fa-chrome"
-                                                                })
-                                                              ]
-                                                            )
-                                                          ]
-                                                        )
-                                                      ]
-                                                    )
-                                                  }
-                                                ),
-                                                0
-                                              )
-                                            ]
-                                          )
-                                        ]
-                                      ),
-                                      _vm._v(" "),
-                                      _c(
-                                        "div",
-                                        {
-                                          staticClass:
-                                            "dataTables_paginate paging_simple_numbers",
-                                          staticStyle: {
-                                            float: "right !important"
-                                          }
-                                        },
-                                        [
-                                          _c("nav", [
+                                  ])
+                                ]),
+                                _vm._v(" "),
+                                _c("div", { staticClass: "row" }, [
+                                  _c("div", { staticClass: "col-md-12" }, [
+                                    _c(
+                                      "div",
+                                      {
+                                        staticClass:
+                                          "box-body table-responsive no-padding"
+                                      },
+                                      [
+                                        _c(
+                                          "table",
+                                          {
+                                            staticClass: "table table-hover",
+                                            staticStyle: { "font-size": "12px" }
+                                          },
+                                          [
+                                            _vm._m(5),
+                                            _vm._v(" "),
                                             _c(
-                                              "ul",
-                                              { staticClass: "pagination" },
-                                              [
-                                                _c(
-                                                  "ul",
-                                                  { staticClass: "pagination" },
-                                                  [
-                                                    _vm.pagination
-                                                      .current_page > 1
-                                                      ? _c(
-                                                          "li",
-                                                          {
-                                                            staticClass:
-                                                              "page-item"
-                                                          },
-                                                          [
-                                                            _c(
-                                                              "a",
-                                                              {
-                                                                staticClass:
-                                                                  "page-link",
-                                                                attrs: {
-                                                                  href: "#"
-                                                                },
-                                                                on: {
-                                                                  click: function(
-                                                                    $event
-                                                                  ) {
-                                                                    $event.preventDefault()
-                                                                    _vm.cambiarPagina(
-                                                                      Number(
-                                                                        _vm
-                                                                          .pagination
-                                                                          .current_page
-                                                                      ) - 1
-                                                                    )
-                                                                  }
-                                                                }
+                                              "tbody",
+                                              _vm._l(
+                                                _vm.list_resumenday,
+                                                function(midata, index) {
+                                                  return _c(
+                                                    "tr",
+                                                    { key: index },
+                                                    [
+                                                      _c(
+                                                        "td",
+                                                        {
+                                                          staticStyle: {
+                                                            "vertical-align":
+                                                              "middle",
+                                                            "text-align":
+                                                              "center"
+                                                          }
+                                                        },
+                                                        [
+                                                          _vm._v(
+                                                            _vm._s(index + 1)
+                                                          )
+                                                        ]
+                                                      ),
+                                                      _vm._v(" "),
+                                                      _c("td", {
+                                                        staticStyle: {
+                                                          "vertical-align":
+                                                            "middle",
+                                                          "text-align": "center"
+                                                        },
+                                                        domProps: {
+                                                          textContent: _vm._s(
+                                                            midata.amount_delivered
+                                                          )
+                                                        }
+                                                      }),
+                                                      _vm._v(" "),
+                                                      _c("td", {
+                                                        staticStyle: {
+                                                          "vertical-align":
+                                                            "middle",
+                                                          "text-align": "center"
+                                                        },
+                                                        domProps: {
+                                                          textContent: _vm._s(
+                                                            midata.names +
+                                                              " " +
+                                                              midata.paternal_last_name +
+                                                              " " +
+                                                              midata.maternal_last_name
+                                                          )
+                                                        }
+                                                      }),
+                                                      _vm._v(" "),
+                                                      _c("td", {
+                                                        staticStyle: {
+                                                          "vertical-align":
+                                                            "middle"
+                                                        },
+                                                        domProps: {
+                                                          textContent: _vm._s(
+                                                            midata.name_sucursal
+                                                          )
+                                                        }
+                                                      }),
+                                                      _vm._v(" "),
+                                                      _c("td", {
+                                                        staticStyle: {
+                                                          "vertical-align":
+                                                            "middle"
+                                                        },
+                                                        domProps: {
+                                                          textContent: _vm._s(
+                                                            midata.name_mercado
+                                                          )
+                                                        }
+                                                      }),
+                                                      _vm._v(" "),
+                                                      _c(
+                                                        "td",
+                                                        {
+                                                          staticStyle: {
+                                                            "text-align":
+                                                              "center",
+                                                            "vertical-align":
+                                                              "middle"
+                                                          }
+                                                        },
+                                                        [
+                                                          _c(
+                                                            "button",
+                                                            {
+                                                              staticClass:
+                                                                "btn btn-editar btn-sm",
+                                                              attrs: {
+                                                                type: "button",
+                                                                "data-toggle":
+                                                                  "tooltip",
+                                                                title: "Editar"
                                                               },
-                                                              [
-                                                                _c("i", {
-                                                                  staticClass:
-                                                                    "fa fa-angle-left",
-                                                                  staticStyle: {
-                                                                    color:
-                                                                      "#189900",
-                                                                    cursor:
-                                                                      "pointer"
-                                                                  }
-                                                                })
-                                                              ]
-                                                            )
-                                                          ]
-                                                        )
-                                                      : _vm._e(),
-                                                    _vm._v(" "),
-                                                    _vm._l(
-                                                      _vm.pagesNumber,
-                                                      function(page) {
-                                                        return _c(
-                                                          "li",
-                                                          {
-                                                            key: page,
-                                                            staticClass:
-                                                              "page-item",
-                                                            class: [
-                                                              page ==
-                                                              _vm.isActived
-                                                                ? "active"
-                                                                : ""
+                                                              on: {
+                                                                click: function(
+                                                                  $event
+                                                                ) {
+                                                                  return _vm.operation(
+                                                                    midata.id
+                                                                  )
+                                                                }
+                                                              }
+                                                            },
+                                                            [
+                                                              _c("i", {
+                                                                staticClass:
+                                                                  "fa fa-chrome"
+                                                              })
                                                             ]
-                                                          },
-                                                          [
-                                                            _c("a", {
+                                                          )
+                                                        ]
+                                                      )
+                                                    ]
+                                                  )
+                                                }
+                                              ),
+                                              0
+                                            )
+                                          ]
+                                        )
+                                      ]
+                                    ),
+                                    _vm._v(" "),
+                                    _c(
+                                      "div",
+                                      {
+                                        staticClass:
+                                          "dataTables_paginate paging_simple_numbers",
+                                        staticStyle: {
+                                          float: "right !important"
+                                        }
+                                      },
+                                      [
+                                        _c("nav", [
+                                          _c(
+                                            "ul",
+                                            { staticClass: "pagination" },
+                                            [
+                                              _c(
+                                                "ul",
+                                                { staticClass: "pagination" },
+                                                [
+                                                  _vm.pagination.current_page >
+                                                  1
+                                                    ? _c(
+                                                        "li",
+                                                        {
+                                                          staticClass:
+                                                            "page-item"
+                                                        },
+                                                        [
+                                                          _c(
+                                                            "a",
+                                                            {
                                                               staticClass:
                                                                 "page-link",
                                                               attrs: {
                                                                 href: "#"
-                                                              },
-                                                              domProps: {
-                                                                textContent: _vm._s(
-                                                                  page
-                                                                )
                                                               },
                                                               on: {
                                                                 click: function(
                                                                   $event
                                                                 ) {
                                                                   $event.preventDefault()
-                                                                  return _vm.cambiarPagina(
-                                                                    page
+                                                                  _vm.cambiarPagina(
+                                                                    Number(
+                                                                      _vm
+                                                                        .pagination
+                                                                        .current_page
+                                                                    ) - 1
                                                                   )
                                                                 }
                                                               }
-                                                            })
-                                                          ]
-                                                        )
-                                                      }
-                                                    ),
-                                                    _vm._v(" "),
-                                                    _vm.pagination
-                                                      .current_page <
-                                                    _vm.pagination.last_page
-                                                      ? _c(
-                                                          "li",
-                                                          {
-                                                            staticClass:
-                                                              "page-item"
-                                                          },
-                                                          [
-                                                            _c(
-                                                              "a",
-                                                              {
+                                                            },
+                                                            [
+                                                              _c("i", {
                                                                 staticClass:
-                                                                  "page-link",
-                                                                attrs: {
-                                                                  href: "#"
-                                                                },
-                                                                on: {
-                                                                  click: function(
-                                                                    $event
-                                                                  ) {
-                                                                    $event.preventDefault()
-                                                                    _vm.cambiarPagina(
-                                                                      Number(
-                                                                        _vm
-                                                                          .pagination
-                                                                          .current_page
-                                                                      ) + 1
-                                                                    )
-                                                                  }
+                                                                  "fa fa-angle-left",
+                                                                staticStyle: {
+                                                                  color:
+                                                                    "#189900",
+                                                                  cursor:
+                                                                    "pointer"
                                                                 }
-                                                              },
-                                                              [
-                                                                _c("i", {
-                                                                  staticClass:
-                                                                    "fa fa-angle-right",
-                                                                  staticStyle: {
-                                                                    color:
-                                                                      "#189900",
-                                                                    cursor:
-                                                                      "pointer"
-                                                                  }
-                                                                })
-                                                              ]
-                                                            )
+                                                              })
+                                                            ]
+                                                          )
+                                                        ]
+                                                      )
+                                                    : _vm._e(),
+                                                  _vm._v(" "),
+                                                  _vm._l(
+                                                    _vm.pagesNumber,
+                                                    function(page) {
+                                                      return _c(
+                                                        "li",
+                                                        {
+                                                          key: page,
+                                                          staticClass:
+                                                            "page-item",
+                                                          class: [
+                                                            page ==
+                                                            _vm.isActived
+                                                              ? "active"
+                                                              : ""
                                                           ]
-                                                        )
-                                                      : _vm._e()
-                                                  ],
-                                                  2
-                                                )
-                                              ]
-                                            )
-                                          ])
-                                        ]
-                                      )
-                                    ])
+                                                        },
+                                                        [
+                                                          _c("a", {
+                                                            staticClass:
+                                                              "page-link",
+                                                            attrs: {
+                                                              href: "#"
+                                                            },
+                                                            domProps: {
+                                                              textContent: _vm._s(
+                                                                page
+                                                              )
+                                                            },
+                                                            on: {
+                                                              click: function(
+                                                                $event
+                                                              ) {
+                                                                $event.preventDefault()
+                                                                return _vm.cambiarPagina(
+                                                                  page
+                                                                )
+                                                              }
+                                                            }
+                                                          })
+                                                        ]
+                                                      )
+                                                    }
+                                                  ),
+                                                  _vm._v(" "),
+                                                  _vm.pagination.current_page <
+                                                  _vm.pagination.last_page
+                                                    ? _c(
+                                                        "li",
+                                                        {
+                                                          staticClass:
+                                                            "page-item"
+                                                        },
+                                                        [
+                                                          _c(
+                                                            "a",
+                                                            {
+                                                              staticClass:
+                                                                "page-link",
+                                                              attrs: {
+                                                                href: "#"
+                                                              },
+                                                              on: {
+                                                                click: function(
+                                                                  $event
+                                                                ) {
+                                                                  $event.preventDefault()
+                                                                  _vm.cambiarPagina(
+                                                                    Number(
+                                                                      _vm
+                                                                        .pagination
+                                                                        .current_page
+                                                                    ) + 1
+                                                                  )
+                                                                }
+                                                              }
+                                                            },
+                                                            [
+                                                              _c("i", {
+                                                                staticClass:
+                                                                  "fa fa-angle-right",
+                                                                staticStyle: {
+                                                                  color:
+                                                                    "#189900",
+                                                                  cursor:
+                                                                    "pointer"
+                                                                }
+                                                              })
+                                                            ]
+                                                          )
+                                                        ]
+                                                      )
+                                                    : _vm._e()
+                                                ],
+                                                2
+                                              )
+                                            ]
+                                          )
+                                        ])
+                                      ]
+                                    )
                                   ])
                                 ])
                               ]

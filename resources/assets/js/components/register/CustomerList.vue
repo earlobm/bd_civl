@@ -190,7 +190,7 @@
                         <div class="box-footer">
                             <template v-if="listadox==3">
                                 <button type="button" @click="saveDetailCredit()" class="btn btn-save-pledge" style="float:right; margin-right: 10px;" data-toggle="tooltip" title="Agregar prenda a empeñar">
-                                    <i class="fa fa-legal"></i>&nbsp;OTORGAR PRÉSTAMO
+                                    <i class="fa fa-legal"></i>&nbsp;OTORGAR CRÉDITO
                                 </button>
                                 <button type="button" @click="calculateCreditoDetail()" class="btn btn-new" style="float:right; margin-right: 10px;" data-toggle="tooltip" title="Nueva prenda">
                                     <i class="fa fa-calculator"></i>&nbsp;CALCULAR
@@ -198,103 +198,6 @@
                             </template>
                         </div>             
                     </div> 
-                    
-                    <div class="modal fade" tabindex="-1" :class="{'mostrar' : modalTicket}" role="dialog" aria-labelledby="myModalLabel" style="display: none;" aria-hidden="true">
-                        <div class="modal-dialog modal-lg" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header" style="background: #012D74;">
-                                    <button type="button" class="close" @click="close_modal(1)" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
-                                        <h4 class="modal-title" style="color: #FFFFFF"><i class="fa fa-plus"></i> AGREGAR PERSONAL</h4>
-                                </div>
-                                <div class="modal-body">
-                                    <div class="row">    
-                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"> 
-                                            <div class="col-md-12">
-                                                <div class="sheet letter receipt">
-                                                    <div class="content">
-                                                        <h3 class="company-name ng-binding">TUMI DE ORO</h3>
-                                                        <h4 class="branch-name ng-binding">Tingo María</h4>
-                                                        <h5 class="long-date ng-binding">domingo, 20 de octubre de 2019</h5>
-                                                        <p class="receipt-header ng-binding ng-hide" ng-show="template.header"></p>
-                                                        <hr>
-                                                        <div ui-view="" class="ng-scope">
-                                                            <div class="info-group ng-scope">
-                                                                <div class="field">Contrato No. 1</div>
-                                                            </div>
-                                                            <div class="info-group ng-scope">
-                                                                <div class="field">Cliente : {{name_customer}}</div>
-                                                            </div>
-                                                            <div class="info-group ng-scope">
-                                                                <div class="field">Monto : S/ {{totalcapital}}</div>
-                                                            </div>
-                                                            <div class="info-group ng-scope">
-                                                                <div class="field">Fecha de préstamo : {{date_init}}</div>
-                                                            </div>
-                                                            <div class="info-group ng-scope">
-                                                                <div class="field">Fecha de vencimiento : {{date_end}}</div>
-                                                            </div>
-                                                            <div class="info-group ng-scope">
-                                                                <div class="field">Interés : S/ {{totalInterest}}</div>
-                                                            </div>
-                                                            <div class="info-group ng-scope">
-                                                                <div class="field">Periodo : {{period}}</div>
-                                                            </div>
-                                                            <div class="info-group ng-scope">
-                                                                <div class="field">Plazo: {{term}}</div>
-                                                            </div>
-                                                            <div class="info-group ng-scope">
-                                                                <div class="field">Prendas</div>
-                                                                <div class="value">
-                                                                    <ul class="item-list">
-                                                                        <li v-for="(midata,index) in arrayDetailPledge" :key="index"  class="ng-binding ng-scope" style="">
-                                                                            {{midata.guaranty}}
-                                                                        </li>
-                                                                    </ul>
-                                                                </div>
-                                                            </div>
-
-                                                            <div class="balance ng-scope" ng-hide="isLoadingDetails">
-                                                                <!--<h6 class="query-label">Historial</h6>-->
-                                                                <table class="table table-condensed">
-                                                                    <thead>
-                                                                        <tr>
-                                                                            <th class="date">Fecha</th>								
-                                                                            <th>Monto</th>
-                                                                            <th>Interés</th>
-                                                                            <th class="text-right">Subtotal</th>
-                                                                        </tr>
-                                                                    </thead>
-                                                                    <tbody>
-                                                                        <!-- ngRepeat: operation in vm.operations --><tr ng-repeat="operation in vm.operations" class="ng-scope" style="">
-                                                                        <td class="center date ng-binding">19/10/19 12:09</td>
-                                                                        <td class="ng-binding">S/ 200</td>
-                                                                        <td class="ng-binding">S/ 20</td>
-                                                                        <td class="text-right ng-binding">S/ 2</td>
-                                                                        </tr><!-- end ngRepeat: operation in vm.operations -->
-                                                                    </tbody>
-                                                                    <tfoot>
-                                                                        <tr>
-                                                                            <td class="date"></td>
-                                                                            <td  ></td>
-                                                                            <td><h4>Total</h4></td>
-                                                                            <td class="text-right"> <h4 class="ng-binding">S/220</h4> </td>
-                                                                        </tr>
-                                                                    </tfoot>
-                                                                </table>
-                                                            </div>
-                                                        </div>
-                                                        <p class="receipt-footer ng-binding ng-hide" ng-show="template.footer"></p>
-                                                    </div>
-                                                </div>			
-                                            </div>                                
-                                        </div>
-                                    </div>                       
-                                </div>                    
-                            </div>
-                        </div>
-                    </div>
                 </div>
                 </template>
                 <!-- Lista de Clientes -->
@@ -347,7 +250,7 @@
                                             <td style="vertical-align: middle;" v-text="midata.address"></td>
                                             <td style="vertical-align: middle;" v-text="midata.phone"></td>
                                             <td style="text-align: center; vertical-align: middle;"> 
-                                                <button type="button" @click="pledge(midata)" class="btn btn-emprendar btn-sm" data-toggle="tooltip" title="Otorgar Crédito">
+                                                <button type="button" @click="giveCredit(midata)" class="btn btn-emprendar btn-sm" data-toggle="tooltip" title="Otorgar Crédito">
                                                     <i class="fa fa-money"></i>
                                                 </button>                                                                                                                 
                                             
@@ -566,7 +469,7 @@
                 me.total_cash='';
                 me.interest_rate_cash='';
                 me.amount_admin=(Number(me.capital)* Number(me.rate_admin))/100;
-                console.log(me.amount_admin);
+                
                 me.interest_rate_cash=(Number(me.capital)*Number(me.interest_rate))/100;
                 me.total_cash=Number(me.capital)+ Number(me.interest_rate_cash);
                 
@@ -666,7 +569,6 @@
                     result = (Number(this.capital) + (Number(this.capital) * Number(this.interest_rate))/100) - result;
                     if(i==1){
                         this.quota=quota;
-                        console.log(this.quota);
                     }
                     if(i==(Number(this.number_quota)-1)){
                         quota=result.toFixed(1);
@@ -704,7 +606,13 @@
                 this.total_amount=this.capital;
                 this.total_interest=this.interest_rate_cash;
             },
+            print_schedule_credit(id){
+                var url='download_detail_credit?id='+id;
+                //window.location.href = url;
+                window.open(url, '_blank');  
+            },
             saveDetailCredit(){
+                let me =this;
                 this.calculateCreditoDetail();
                 swal({
                     title: 'Esta seguro de guardar la informacion?',
@@ -736,13 +644,15 @@
                             'array_credit_detail':this.arrayCreditDetail
                         }).then(function (response) {
                                 // me.clean_data();                                
-                                // me.list_data(1);  
-                                // me.icon_save='fa fa-save';
+                                // me.list_data(1); 
                                 swal( 'Guardado!', 'El crédito ha sido otorgado con éxito.', 'success' ); 
+                                me.icon_save='fa fa-save';
+                                me.print_schedule_credit(response.data);
                         }).catch(function (error) {
                             console.log(error);
                         });                        
                     }else if(result.dismiss === swal.DismissReason.cancel) { 
+                        me.icon_save='fa fa-save';
                     }
                 }) 
             },
@@ -763,57 +673,6 @@
                 let me=this;
                 me.modalTicket=0;
             },
-            savePledge() {
-                if(this.arrayDetailPledge.length<1){
-                    return;
-                }
-                swal({
-                title: '¿Esta seguro?',
-                type: 'warning',showCancelButton: true,
-                confirmButtonColor: '#3085d6', cancelButtonColor: '#d33',
-                confirmButtonText: 'Aceptar!',cancelButtonText: 'Cancelar',
-                confirmButtonClass: 'btn btn-success',cancelButtonClass: 'btn btn-danger',
-                buttonsStyling: false,reverseButtons: true
-                }).then((result) => {
-                if (result.value) {
-                      let me = this;
-                        axios.post('save_pledge',{
-                            'idcustomerpledge':this.id_customer_credit,
-                            'date_init':moment(moment(this.date_init, 'DD/MM/YYYY')).format('YYYY-MM-DD') ,
-                            'date_end':moment(moment(this.date_end, 'DD/MM/YYYY')).format('YYYY-MM-DD') ,
-                            'period':this.period,'licence_plate':this.licence_plate,
-                            'serie':this.serie,
-                            'term': this.term,'tea': this.tea,'interest': this.totalInterest,
-                            'capital':this.totalcapital,'total':Number(this.totalcapital)+Number(this.totalInterest),
-                            'detail_pledge':this.arrayDetailPledge,
-                            'id_warehouse':this.id_warehouse.id               
-                        }).then(function (response) {
-
-                             swal(
-                                'Guardado!',
-                                'El registro ha sido guardado con éxito.',
-                                'success'
-                                )
-                           me.dowloadContract();     
-
-                           var url= 'ticket_plegde?capital='+me.totalcapital+'&interest='+me.totalInterest+'&name_customer='+me.name_customer
-                            +'&date_movement='+moment(moment(me.date_init, 'DD/MM/YYYY')).format('YYYY-MM-DD')+
-                            '&type=Empenio';
-                            window.open(url, '_blank');  
-
-                             
-                             me.volver();
-                             me.list_data(1); 
-                        }).catch(function (error) {
-                            console.log(error);
-                        });
-
-                  //  this.modalTicket=1;
-                   
-                } else if ( result.dismiss === swal.DismissReason.cancel
-                ) {} }) 
-                
-            },
             dowloadContract(){
 				  //var entre = document.getElementById("entre");
 				  //var nombreentre = entre.options[entre.selectedIndex].text;
@@ -821,18 +680,7 @@
                 '&dateinit='+moment(moment(this.date_init, 'DD/MM/YYYY')).format('DD-MM-YYYY')+
                 '&dateend='+moment(moment(this.date_end, 'DD/MM/YYYY')).format('DD-MM-YYYY');
             	window.location.href = url;
-			 },
-            sumTotal(){
-                      this.totalcapital=0;
-                      this.totalInterest=0;
-                       for(var i=0;i<this.arrayDetailPledge.length;i++) 
-                        {
-                            this.totalcapital =  Number(this.totalcapital)+Number(this.arrayDetailPledge[i].capital);
-                            this.totalInterest =  Number(this.totalInterest)+Number(this.arrayDetailPledge[i].interest);
-                            
-                        }
-                   
-            },  
+			 }, 
             getFamilyProduct(id_parent){
                 let me=this;
                // me.listado=0;
@@ -844,40 +692,6 @@
                     .catch(function (error) {
                         console.log(error);
                     });
-            },
-            addPledge(){
-                if(this.validateDataPledge()){
-                    return;
-                }
-
-                this.arrayDetailPledge.push(
-                    {guaranty:this.guaranty.name,characteristic: this.characteristic,
-                    note: this.note,
-                    warehouse:this.id_warehouse.name,
-                    licence_plate:this.licence_plate,serie:this.serie
-                    ,capital:this.capital,interest:this.interest,
-                    id_guaranty:this.guaranty.id,id_warehouse:this.id_warehouse.id
-                    });
-                this.sumTotal();
-            },
-            deletePledge : function (item) {
-                swal({
-                title: '¿Esta seguro de eliminar?',
-                type: 'warning',showCancelButton: true,
-                confirmButtonColor: '#3085d6', cancelButtonColor: '#d33',
-                confirmButtonText: 'Aceptar!',cancelButtonText: 'Cancelar',
-                confirmButtonClass: 'btn btn-success',cancelButtonClass: 'btn btn-danger',
-                buttonsStyling: false,reverseButtons: true
-                }).then((result) => {
-                if (result.value) {
-                   // this.arrayActivity.push(item);
-                    let index = this.arrayDetailPledge.indexOf(item)
-                    this.arrayDetailPledge.splice(index, 1);
-                     this.sumTotal();
-                } else if ( result.dismiss === swal.DismissReason.cancel
-                ) {} }) 
-               
-                
             },
             addDay(day){
                    
@@ -1148,133 +962,6 @@
 				me.list_data(page);
                 
             },
-            edit_data(id){
-                let me=this;
-                me.listado=2;
-                me.clean_data();
-                me.get_type_document();
-                me.icon_edit='fa fa-spinner fa-spin';
-                var url= 'edit_data?id='+id;
-                me.id_customer_credit=id;
-                axios.get(url).then(function (response) {
-                    var respuesta= response.data;
-                    me.id=respuesta.datax[0].id;
-                    me.nro_doc = respuesta.datax[0].number_doc;
-                    me.name = respuesta.datax[0].names;
-                    me.paternal_last_name = respuesta.datax[0].paternal_last_name;
-                    me.maternal_last_name = respuesta.datax[0].maternal_last_name;
-                    me.phone = respuesta.datax[0].phone;
-                    me.address =respuesta.datax[0].address;
-                    me.sex =respuesta.datax[0].sex;
-                    me.reference =respuesta.datax[0].reference;
-                    me.code =respuesta.datax[0].code;
-                    me.email =respuesta.datax[0].email;
-                    me.district =respuesta.datax[0].id_district;
-                    me.province =respuesta.datax[0].id_province;
-                    me.department =respuesta.datax[0].id_department;
-                    me.id_type_doc =respuesta.datax[0].id_type_document;
-                    me.marital_status =respuesta.datax[0].marital_status;
-                    me.birthdate=moment(respuesta.datax[0].birthdate).toDate();
-                    me.validarData();         
-                    me.icon_edit='fa fa-pencil';       
-                })
-                .catch(function (error) {
-                    console.log(error);
-                });
-                              
-            },
-            save_data_only_client(){
-                //val =1 guardar y empeñar
-                //val = 0 solo registrar cliente  
-                this.visible=0;
-                let me = this;
-                me.icon_save='fa fa-spinner fa-spin';
-                if (this.validarData()){
-                    return;
-                }
-                
-                swal({
-                    title: 'Esta seguro de guardar la informacion?',
-                    type: 'warning',
-                    showCancelButton: true,confirmButtonColor: '#3085d6',
-                    cancelButtonColor: '#d33',confirmButtonText: 'Aceptar!',
-                    cancelButtonText: 'Cancelar',confirmButtonClass: 'btn btn-success',
-                    cancelButtonClass: 'btn btn-danger',buttonsStyling: false,
-                    reverseButtons: true
-                }).then((result) =>{
-                    if (result.value){                
-                        axios.post('saveCustomerCredit',{
-                            'nro_doc':this.nro_doc,'name':this.name,
-                            'paternal_last_name':this.paternal_last_name,
-                            'maternal_last_name':this.maternal_last_name,
-                            'phone':this.phone,'address':this.address, 
-                            'id': this.id,'sex': this.sex,
-                            'code': this.code,'id_type_document': this.id_type_doc,
-                            'marital_status': this.marital_status,
-                            'email': this.email,'reference': this.reference,
-                            'id_district': this.district,
-                            'birthdate' : moment(moment(this.birthdate, 'DD/MM/YYYY')).format('YYYY-MM-DD'),
-                            'id_customer_credit':this.id_customer_credit                    
-                        }).then(function (response) {
-                                me.clean_data();                                
-                                me.list_data(1);  
-                                me.visible=1;
-                                me.icon_save='fa fa-save';
-                                swal( 'Guardado!', 'El registro ha sido guardado con éxito.', 'success' ); 
-                        }).catch(function (error) {
-                            console.log(error);
-                        });
-
-                    }else if(result.dismiss === swal.DismissReason.cancel) {                    
-                    }
-                }) 
-            },
-            save_data(){
-                //val =1 guardar y empeñar
-                //val = 0 solo registrar cliente  
-                this.visible=0;
-                let me = this;
-                me.icon_save_pledge='fa fa-spinner fa-spin';
-                if (this.validarData()){
-                    return;
-                }
-                
-                swal({
-                    title: 'Esta seguro de guardar la informacion?',
-                    type: 'warning',
-                    showCancelButton: true,confirmButtonColor: '#3085d6',
-                    cancelButtonColor: '#d33',confirmButtonText: 'Aceptar!',
-                    cancelButtonText: 'Cancelar',confirmButtonClass: 'btn btn-success',
-                    cancelButtonClass: 'btn btn-danger',buttonsStyling: false,
-                    reverseButtons: true
-                }).then((result) =>{
-                    if (result.value){                
-                        axios.post('save_customer',{
-                            'nro_doc':this.nro_doc,'name':this.name,
-                            'paternal_last_name':this.paternal_last_name,
-                            'maternal_last_name':this.maternal_last_name,
-                            'phone':this.phone,'address':this.address, 
-                            'id': this.id,'sex': this.sex,
-                            'code': this.code,'id_type_document': this.id_type_doc,
-                            'marital_status': this.marital_status,
-                            'email': this.email,'reference': this.reference,
-                            'id_district': this.district,
-                            'birthdate' : moment(moment(this.birthdate, 'DD/MM/YYYY')).format('YYYY-MM-DD'),
-                            'idcustomerpledge':this.id_customer_credit                    
-                        }).then(function (response) {
-                                me.midatax=[];
-                                me.midatax.push({id:response.data,names: me.name,paternal_last_name: me.paternal_last_name, maternal_last_name:me.maternal_last_name });
-                                me.pledge(me.midatax[0]);
-                                me.icon_save_pledge='fa fa-save';
-                                swal( 'Guardado!', 'El registro ha sido guardado con éxito.', 'success' ); 
-                        }).catch(function (error) {
-                            console.log(error);
-                        });
-
-                    }else if(result.dismiss === swal.DismissReason.cancel) {                    
-                    }
-                }) 
-            },
             eliminar(id){
                 swal({
                 title: '¿Estas seguro de eliminar?',
@@ -1306,30 +993,14 @@
                     }else if (result.dismiss === swal.DismissReason.cancel) {}
                 }) 
             },
-            pledge(midata){
+            giveCredit(midata){
                 let me=this;
                 me.listadox=3;
                 this.visible=0;
                 this.id_customer_credit=midata.id_customer_credit;
                 this.name_customer=midata.names+' '+midata.paternal_last_name+' '+midata.maternal_last_name;
                 this.nro_doc=midata.number_doc;
-                var url= 'getDependenceParent';
-                axios.get(url).then(function (response){
-                    var respuesta= response.data;
-                    me.arrayTypeProduct=respuesta.datax;
-                })
-                .catch(function (error) {
-                    console.log(error);
-                });
-
-                url= 'getWarehouse';
-                axios.get(url).then(function (response){
-                    var respuesta= response.data;
-                    me.arrayWarehouse=respuesta.datax;
-                })
-                .catch(function (error) {
-                    console.log(error);
-                });
+                
             },
             addCustomer(){
                 let me=this;
@@ -1384,15 +1055,23 @@
                 this.serie="";
                 this.term=1;
                 this.tea=10,
-                this.totalcapital=0; 
-                this.arrayDetailPledge=[];     
-                this.totalcapital=0;
+                this.totalcapital=0;    
+                this.arrayCreditDetail=[];   
                 this.totalInterest=0;     
                 this.characteristic="";
                 this.serie="";
                 this.licence_plate="";
                 this.mounted=0;
-                this.capital=0;
+
+                this.capital=500;
+                this.grace_day=3;
+                this.amount_admin="", 
+                this.rate_admin=2,
+                this.risk_center=2,
+                this.interest_rate=10,
+                this.apply_mora=1,
+                this.period_credit="DIARIO",
+                this.number_quota=26,
                 this.term=1;
                 this.interest=0;
                 
@@ -1424,45 +1103,8 @@
                 });
                 
             },
-            get_type_business(){
-                var url= 'get_product_program?id_customer=' + id_product;
-                axios.get(url).then(function (response) {
-                    me.obtenerProgramas();
-                    var respuesta= response.data;
-                    var listactual=respuesta.datax;
-                    for(var i=0; i < me.listProgramx.length; i++){
-                        for(var j=0; j < listactual.length; j++){
-                            if(me.listProgramx[i].id_program==listactual[j].id_program){
-                                me.listProgramx[i].check=true;   
-                                                             
-                            }
-                        }
-                    }
-                    
-                })
-                .catch(function (error) {
-                    console.log(error);
-                });    
-            },
 
             init: function() {
-            //cargar actividades
-                let me=this;  
-                me.listProgramx=[];        
-                var url= 'getTypeDocument';
-                axios.get(url).then(function (response) {
-                    var respuesta= response.data;
-                    var lista=respuesta.datax;
-                    for(var i=0; i < lista.length; i++){
-                       me.listProgramx.push({ check:false,id_type_document: lista[i].id_type_document, id_product:''});
-                       console.log(me.listProgramx);
-                      
-                    }
-                   
-                })
-                .catch(function (error) {
-                    console.log(error);
-                });
             },
            
         },

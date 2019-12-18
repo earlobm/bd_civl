@@ -7,7 +7,7 @@
             </h1>
             <ol class="breadcrumb">
               <li><a href="#"><i class="fa fa-dashboard"></i> Administración</a></li>
-              <li class="active">Sucursales</li>
+              <li class="active">Sucursal</li>
             </ol>
         </section>
 
@@ -91,14 +91,12 @@
                             </div>
                         </div>
                         <div class="box-footer">
-                            <div class="btn-group" style="float:right">   
-                                <button type="button" @click="volver()" class="btn btn-danger">
-                                    <i class="fa fa-close "></i>&nbsp;CANCELAR
-                                </button>
-                                <button type="button" @click="save_data()" class="btn btn-save">
-                                    <i class="fa fa-save"></i>&nbsp;GUARDAR
-                                </button>                                                                                          
-                            </div>
+                            <button type="button" @click="save_data()" class="btn btn-save" style="float:right; margin-right: 10px;">
+                                <i class="fa fa-save"></i>&nbsp;GUARDAR
+                            </button>
+                            <button type="button" @click="volver()" class="btn btn-danger" style="float:right; margin-right: 10px;">
+                                <i class="fa fa-close "></i>&nbsp;CANCELAR
+                            </button>                            
                         </div> 
                     </div>
                 </div>
@@ -163,8 +161,8 @@
                                             <td style="vertical-align: middle;" v-text="midata.notes"></td>
                                             <td style="text-align: center; vertical-align: middle;"> 
                                                 
-                                                <button type="button" @click="edit_data(midata.id)" class="btn btn-editar btn-sm" data-toggle="tooltip" title="Editar">
-                                                    <i class="fa fa-edit"></i>
+                                                <button type="button" @click="editData(midata.id)" class="btn btn-editar btn-sm" data-toggle="tooltip" title="Editar">
+                                                    <i class="fa fa-pencil"></i>
                                                 </button>                                                                                                                   
                                             
                                                 <button type="button" @click="delete_data(midata.id)" class="btn btn-eliminar btn-sm" data-toggle="tooltip" title="Eliminar">
@@ -394,7 +392,7 @@
                 
             },
            
-            edit_data(id){
+            editData(id){
                 let me=this;
                 me.listado=1;
                 me.limpiar();

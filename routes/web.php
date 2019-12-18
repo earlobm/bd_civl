@@ -78,7 +78,7 @@ Route::post('/delete_PersonalEmploye', 'Register\EmployeeController@delete_Perso
 Route::post('/save_personal', 'Register\PersonalController@save'); 
 Route::post('/save_market', 'Register\MarketController@save'); 
 Route::get('/get_list_market', 'Register\MarketController@list'); 
-Route::get('/editMercado', 'Register\MarketController@editMercado'); 
+Route::get('/edit_market', 'Register\MarketController@edit_market'); 
 Route::post('/deleteMercado', 'Register\MarketController@deleteMercado'); 
 
 //pledge

@@ -650,7 +650,7 @@
                             </template>
                             <template v-if="listadox==3">
                                 <button type="button" @click="saveDetailCredit()" class="btn btn-save-pledge" style="float:right; margin-right: 10px;" data-toggle="tooltip" title="Agregar prenda a empeñar">
-                                    <i class="fa fa-legal"></i>&nbsp;OTORGAR PRÉSTAMO
+                                    <i class="fa fa-legal"></i>&nbsp;OTORGAR CRÉDITO
                                 </button>
                                 <button type="button" @click="calculateCreditoDetail()" class="btn btn-new" style="float:right; margin-right: 10px;" data-toggle="tooltip" title="Nueva prenda">
                                     <i class="fa fa-calculator"></i>&nbsp;CALCULAR
@@ -893,6 +893,7 @@
                 icon_search_dni:'fa fa-search', icon_search_dni_aval:'fa fa-search',
                 icon_search_client:'fa fa-search', icon_generate:'fa fa-rotate-right',
                 title:'Agregar Cliente', add_aval:0,
+                
                 capital:500, amount_admin:'', rate_admin:2, risk_center:2,interest_rate:10,
                 grace_day:3, apply_mora:1, period_credit:'DIARIO', number_quota:26, 
                 date_ultimate:'',total_cash:'', interest_rate_cash:'', quota:'',
@@ -935,7 +936,7 @@
         },
         methods : {
             
-            print(id){
+            print_schedule_credit(id){
                 var url='download_detail_credit?id='+id;
                 //window.location.href = url;
                 window.open(url, '_blank');  
@@ -1174,8 +1175,8 @@
                             'array_credit_detail':this.arrayCreditDetail
                         }).then(function (response) {
                             swal( 'Guardado!', 'El crédito ha sido otorgado con éxito.', 'success' ); 
-                            // me.icon_save='fa fa-save';
-                            me.print(response.data);
+                            me.icon_save='fa fa-save';
+                            me.print_schedule_credit(response.data);
                             // me.clean_data();                                
                             // me.list_data(1);  
                             
@@ -1183,7 +1184,7 @@
                             console.log(error);
                         });                        
                     }else if(result.dismiss === swal.DismissReason.cancel) { 
-                        // me.icon_save='fa fa-save';
+                        me.icon_save='fa fa-save';
                     }
                 }) 
             },
@@ -1821,7 +1822,7 @@
                         }).then(function (response) {
                                 me.midatax=[];                             
                                 me.midatax.push({id:response.data, names: me.name, paternal_last_name: me.paternal_last_name, maternal_last_name:me.maternal_last_name});       
-                                me.give_credit(me.midatax[0]);
+                                me.giveCredit(me.midatax[0]);
                                 me.icon_save_pledge='fa fa-save';
                                 swal( 'Guardado!', 'El registro ha sido guardado con éxito.', 'success' ); 
                         }).catch(function (error) {
@@ -1864,7 +1865,7 @@
                     }else if (result.dismiss === swal.DismissReason.cancel) {}
                 }) 
             },
-            give_credit(midata){
+            giveCredit(midata){
                 let me=this;
                 me.listadox=3;
                 this.visible=0;
@@ -1926,8 +1927,7 @@
                 this.term=1;
                 this.tea=10,
                 this.totalcapital=0; 
-                this.arrayCreditDetail=[];     
-                this.totalcapital=0;
+                this.arrayCreditDetail=[];  
                 this.totalInterest=0;     
                 this.characteristic="";
                 this.serie="";
