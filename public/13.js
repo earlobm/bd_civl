@@ -27464,6 +27464,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
                         'date_init_payment': __WEBPACK_IMPORTED_MODULE_1_moment_timezone___default()(__WEBPACK_IMPORTED_MODULE_1_moment_timezone___default()(_this.date_init_payment, 'DD/MM/YYYY')).format('YYYY-MM-DD'),
                         'date_expiration': __WEBPACK_IMPORTED_MODULE_1_moment_timezone___default()(_this.date_ultimate).format('YYYY-MM-DD'),
                         'capital': _this.capital,
+                        'interest_rate': _this.interest_rate,
                         'interest': _this.interest_rate_cash,
                         'total': _this.total_cash,
                         'rate_admin': _this.rate_admin,
@@ -27478,15 +27479,17 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
                         'id_promoter': _this.id_employee,
                         'array_credit_detail': _this.arrayCreditDetail
                     }).then(function (response) {
+                        swal('Guardado!', 'El crédito ha sido otorgado con éxito.', 'success');
+                        // me.icon_save='fa fa-save';
                         me.print(response.data);
                         // me.clean_data();                                
                         // me.list_data(1);  
-                        // me.icon_save='fa fa-save';
-                        swal('Guardado!', 'El crédito ha sido otorgado con éxito.', 'success');
                     }).catch(function (error) {
                         console.log(error);
                     });
-                } else if (result.dismiss === swal.DismissReason.cancel) {}
+                } else if (result.dismiss === swal.DismissReason.cancel) {
+                    // me.icon_save='fa fa-save';
+                }
             });
         },
 
@@ -28047,7 +28050,9 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
                     }).catch(function (error) {
                         console.log(error);
                     });
-                } else if (result.dismiss === swal.DismissReason.cancel) {}
+                } else if (result.dismiss === swal.DismissReason.cancel) {
+                    me.icon_save = 'fa fa-save';
+                }
             });
         },
         saveData: function saveData() {
@@ -28108,7 +28113,9 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
                     }).catch(function (error) {
                         console.log(error);
                     });
-                } else if (result.dismiss === swal.DismissReason.cancel) {}
+                } else if (result.dismiss === swal.DismissReason.cancel) {
+                    me.icon_save = 'fa fa-save';
+                }
             });
         },
         eliminar: function eliminar(id) {

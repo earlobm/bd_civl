@@ -1158,6 +1158,7 @@
                             'date_init_payment': moment(moment(this.date_init_payment, 'DD/MM/YYYY')).format('YYYY-MM-DD'),
                             'date_expiration': moment(this.date_ultimate).format('YYYY-MM-DD'),
                             'capital':this.capital,
+                            'interest_rate':this.interest_rate,
                             'interest':this.interest_rate_cash,
                             'total':this.total_cash,
                             'rate_admin':this.rate_admin,
@@ -1172,15 +1173,17 @@
                             'id_promoter':this.id_employee,
                             'array_credit_detail':this.arrayCreditDetail
                         }).then(function (response) {
-                                me.print(response.data);
-                                // me.clean_data();                                
-                                // me.list_data(1);  
-                                // me.icon_save='fa fa-save';
-                                swal( 'Guardado!', 'El crédito ha sido otorgado con éxito.', 'success' ); 
+                            swal( 'Guardado!', 'El crédito ha sido otorgado con éxito.', 'success' ); 
+                            // me.icon_save='fa fa-save';
+                            me.print(response.data);
+                            // me.clean_data();                                
+                            // me.list_data(1);  
+                            
                         }).catch(function (error) {
                             console.log(error);
                         });                        
                     }else if(result.dismiss === swal.DismissReason.cancel) { 
+                        // me.icon_save='fa fa-save';
                     }
                 }) 
             },
@@ -1764,6 +1767,7 @@
                             console.log(error);
                         });                        
                     }else if(result.dismiss === swal.DismissReason.cancel) { 
+                        me.icon_save='fa fa-save';
                     }
                 }) 
             },
@@ -1824,7 +1828,8 @@
                             console.log(error);
                         });
 
-                    }else if(result.dismiss === swal.DismissReason.cancel) {                    
+                    }else if(result.dismiss === swal.DismissReason.cancel) {       
+                        me.icon_save='fa fa-save';             
                     }
                 }) 
             },
