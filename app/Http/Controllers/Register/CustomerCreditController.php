@@ -678,7 +678,8 @@ class CustomerCreditController extends Controller
         $listCustomer=DB::select($sqlz);
         $listCustomerCredit = json_decode(json_encode($listCustomer), true);
         
-        $sqlx="SELECT * from detail_credit where id_credit=$id_credit";
+        $sqlx="SELECT number_quota, DATE_FORMAT(date_expired,'%d/%m/%Y') as date_expired, quota, capital, interest,
+        saldo_projected  from detail_credit where id_credit=$id_credit";
         $listSchedule=DB::select($sqlx);
         $listScheduleCredit = json_decode(json_encode($listSchedule), true);
 
