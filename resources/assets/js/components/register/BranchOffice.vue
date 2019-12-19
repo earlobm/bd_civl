@@ -405,7 +405,6 @@
                     me.phone = respuesta.datax[0].phone;
                     me.notes =respuesta.datax[0].notes;
                     me.date_init=moment(respuesta.datax[0].date_init).toDate();
-                    me.validarData();
                 })
                 .catch(function (error) {
                     console.log(error);

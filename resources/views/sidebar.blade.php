@@ -113,7 +113,7 @@
             </li>  
             <li class="treeview">
               <a href="#">
-                <i class="fa fa-shield" style="color: #FFB400 !important;"></i>
+                <i class="fa fa-edit" style="color: #FFB400 !important;"></i>
                 <span>MANTENIMIENTO</span>
                 <i class="fa fa-angle-left pull-right"></i>
               </a>               
@@ -131,7 +131,7 @@
                 </li>
               
                 <li @click="menu=23"  class="menux" class="treeview">
-                  <a href="#"><i class="fa fa-users" style="color: #00AE01 !important;"></i>Tipo de Negocio
+                  <a href="#"><i class="fa fa-shopping-cart" style="color: #00AE01 !important;"></i>Tipo de Negocio
                       <!-- <i class="fa fa-angle-left pull-right"></i> -->
                   </a>
                 </li>

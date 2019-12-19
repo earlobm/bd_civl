@@ -26923,7 +26923,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
                 me.name = respuesta.datax[0].name_mercado;
                 me.id_branch_office = respuesta.datax[0].id_branch_office;
                 me.date_creation = respuesta.datax[0].date_creation;
-                me.validarData();
             }).catch(function (error) {
                 console.log(error);
             });

@@ -58,6 +58,7 @@ Route::post('/delete_Document', 'Register\DocumentCustomerController@delete_Docu
 //Business
 Route::post('/save_business', 'Register\TypeBusinessController@saveBusiness'); 
 Route::get('/getlistBusiness', 'Register\TypeBusinessController@getlistBusiness');
+Route::get('/list_data', 'Register\TypeBusinessController@list');
 Route::get('/getEditListbusiness', 'Register\TypeBusinessController@getEditListBusiness');
 Route::post('/deleteBusiness', 'Register\TypeBusinessController@deleteBusiness'); 
 

@@ -3,7 +3,7 @@
         <section class="content-header">
             <h1>
               Cobranza Diaria
-              <small>Registro de cobros</small>
+              <small>Registro de Cobros</small>
             </h1>
             <ol class="breadcrumb">
               <li><a href="#"><i class="fa fa-dashboard"></i> Operaciones</a></li>
@@ -16,17 +16,6 @@
                 <!-- Lista de Clientes -->
                 <div class="col-md-12"  v-if="visible">
                     <div class="box box-primary">
-                        <div class="box-header with-border">
-                            <h1 class="box-title"><i class="fa fa-filter"></i> Filtros
-                            </h1>
-                        
-                            <!-- <h1 class="box-title"><i class="fa fa-list"></i> Lista de Clientes</h1> -->
-                            <div class="box-tools pull-right">
-                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
-                                </button>
-                                <!-- <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button> -->
-                            </div>
-                        </div>
                         <template v-if="listado==0">
                             <div align="center">
                                 <img src="img/loadx.gif" alt="technoserve" align="middle">
@@ -35,7 +24,20 @@
                         </template>
                         <template v-if="listado==2">
                             <div class="box-body">
-                                <div class="row">
+                                <div class="box-tools pull-right" style="right: -15px;">
+                                    <div class="col-md-12" style="margin-top: 6px;">
+                                        <p  class="col-md-8" style="text-align:right"><i class="fa fa-filter"></i> Ver Opciones Avanzadas:</p>
+                                        <div class="col-md-4" style="margin-top: -10px;">
+                                            <div class="checkbox">
+                                                <label class="switch" style="width: 70px; height: 18px;">
+                                                    <input type="checkbox" v-model="filter">
+                                                    <span class="slider round"></span>
+                                                </label>
+                                            </div> 
+                                        </div> 
+                                    </div> 
+                                </div>
+                                <div class="row" v-if="filter==1">
                                     <div class="col-md-12">
                                         <div class="container-fluid">
                                             <!-- Ejemplo de tabla Listado -->
@@ -45,7 +47,7 @@
                                                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">                               
                                                             <div class="box-body">
                                                                 <div class="row">
-                                                                    <div class="col-md-3">
+                                                                    <div class="col-md-2">
                                                                         <div class="form-group">
                                                                             <label for="sexo">Sucursal:</label>
                                                                             <div class="input-group">
@@ -58,7 +60,7 @@
                                                                         </div>
                                                                     </div>
 
-                                                                    <div class="col-md-3">
+                                                                    <div class="col-md-2">
                                                                         <div class="form-group">
                                                                             <label for="sexo">Mercado:</label>
                                                                             <div class="input-group">
@@ -95,6 +97,16 @@
                                                                             </div>
                                                                         </div>
                                                                     </div>
+                                                                    <div class="col-md-2">
+                                                                        <div class="form-group" style="float:right">
+                                                                            <label for="date_register" style="visibility:hidden">Fecha:</label>
+                                                                            <div class="input-group">
+                                                                                <button type="button" @click="list_data(1)" class="btn btn-save" style="float:right; margin-right: 10px;"  data-toggle="tooltip" title="Guardar los pagos">
+                                                                                    <i class="fa fa-filter "></i>&nbsp;FILTRAR
+                                                                                </button>  
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
                                                                 </div>  
                                                             </div>  
                                                         </div>  
@@ -104,11 +116,6 @@
                                         </div>  
                                     </div>  
                                 </div>                                  
-                            </div>
-                            <div class="box-footer">
-                                <button type="button" @click="list_data(1)" class="btn btn-save" style="float:right; margin-right: 10px;"  data-toggle="tooltip" title="Guardar los pagos">
-                                    <i class="fa fa-filter "></i>&nbsp;FILTRAR
-                                </button>                           
                             </div>
                         </template>
                         
@@ -239,7 +246,8 @@
                 midatax:[], listCredit:[],totalNumber:0,
 
                 arraySucursal:[],arrayMercado:[],id_branch_office:'',id_market_edit:'',
-                arrayEmployee:[],id_promoter:''
+                arrayEmployee:[],id_promoter:'',
+                filter:1
             }
         },
          components: {

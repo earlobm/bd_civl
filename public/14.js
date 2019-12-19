@@ -26774,7 +26774,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
                 me.phone = respuesta.datax[0].phone;
                 me.notes = respuesta.datax[0].notes;
                 me.date_init = __WEBPACK_IMPORTED_MODULE_1_moment_timezone___default()(respuesta.datax[0].date_init).toDate();
-                me.validarData();
             }).catch(function (error) {
                 console.log(error);
             });
