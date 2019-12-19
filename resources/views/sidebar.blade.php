@@ -58,7 +58,7 @@
                   </a>
                 </li>
 
-                <li @click="menu=22"  class="menux" class="treeview">
+                <li @click="menu=102"  class="menux" class="treeview">
                   <a href="#"><i class="fa fa-tags" style="color: #FF5100"></i>Balance diario
                       <!-- <i class="fa fa-angle-left pull-right"></i> -->
                   </a>

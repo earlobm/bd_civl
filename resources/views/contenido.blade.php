@@ -99,6 +99,10 @@
         <template v-if="menu==101">
             <customerhistory></customerhistory>
         </template>
+        <template v-if="menu==102">
+            <dailybalance></dailybalance>
+        </template>
+        
         
 
         

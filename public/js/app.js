@@ -29,7 +29,7 @@
 /******/
 /******/ 	// objects to store loaded and loading chunks
 /******/ 	var installedChunks = {
-/******/ 		24: 0
+/******/ 		25: 0
 /******/ 	};
 /******/
 /******/ 	// The require function
@@ -14358,22 +14358,22 @@ Vue.component('garmenttype', function () {
   return __webpack_require__.e/* import() */(3).then(__webpack_require__.bind(null, 52));
 });
 Vue.component('carhregister', function () {
-  return __webpack_require__.e/* import() */(20).then(__webpack_require__.bind(null, 53));
+  return __webpack_require__.e/* import() */(21).then(__webpack_require__.bind(null, 53));
 });
 Vue.component('income', function () {
-  return __webpack_require__.e/* import() */(18).then(__webpack_require__.bind(null, 54));
+  return __webpack_require__.e/* import() */(19).then(__webpack_require__.bind(null, 54));
 });
 Vue.component('egress', function () {
-  return __webpack_require__.e/* import() */(19).then(__webpack_require__.bind(null, 55));
+  return __webpack_require__.e/* import() */(20).then(__webpack_require__.bind(null, 55));
 });
 
 //Vue.component('example-component', require('./components/ExampleComponent.vue'));
 Vue.component('dashboardmain', function () {
-  return __webpack_require__.e/* import() */(22).then(__webpack_require__.bind(null, 56));
+  return __webpack_require__.e/* import() */(23).then(__webpack_require__.bind(null, 56));
 });
 //plan operativo 
 Vue.component('comboanio', function () {
-  return __webpack_require__.e/* import() */(23).then(__webpack_require__.bind(null, 57));
+  return __webpack_require__.e/* import() */(24).then(__webpack_require__.bind(null, 57));
 });
 
 //Security 11
@@ -14384,20 +14384,23 @@ Vue.component('user', function () {
   return __webpack_require__.e/* import() */(0).then(__webpack_require__.bind(null, 59));
 });
 Vue.component('profile', function () {
-  return __webpack_require__.e/* import() */(21).then(__webpack_require__.bind(null, 60));
+  return __webpack_require__.e/* import() */(22).then(__webpack_require__.bind(null, 60));
 });
 //para creditos
 Vue.component('dailycollection', function () {
   return __webpack_require__.e/* import() */(16).then(__webpack_require__.bind(null, 61));
 });
 Vue.component('customerhistory', function () {
-  return __webpack_require__.e/* import() */(17).then(__webpack_require__.bind(null, 62));
+  return __webpack_require__.e/* import() */(18).then(__webpack_require__.bind(null, 62));
+});
+Vue.component('dailybalance', function () {
+  return __webpack_require__.e/* import() */(17).then(__webpack_require__.bind(null, 63));
 });
 
 var app = new Vue({
   el: '#app',
   data: {
-    menu: 101,
+    menu: 100,
     idanio: 211,
     ruta: 'http://localhost:81/poi/public'
     // menu : 11

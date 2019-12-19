@@ -52,11 +52,12 @@ Vue.component('profile',() => System.import('./components/security/Profile.vue')
 //para creditos
 Vue.component('dailycollection',() => System.import('./components/operation/DailyCollectionCredit.vue'));
 Vue.component('customerhistory',() => System.import('./components/operation/CustomerHistory.vue'));
+Vue.component('dailybalance',() => System.import('./components/operation/DailyBalance.vue'));
 
 const app = new Vue({
     el: '#app',
     data :{
-        menu : 101,
+        menu : 100,
         idanio:211,
         ruta:'http://localhost:81/poi/public'
        // menu : 11

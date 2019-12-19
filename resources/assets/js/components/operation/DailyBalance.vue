@@ -2,12 +2,12 @@
     <main class="main">
         <section class="content-header">
             <h1>
-              Cobranza Diaria
-              <small>Registre los cobros</small>
+              Operación
+              <small>Balance Diario</small>
             </h1>
             <ol class="breadcrumb">
               <li><a href="#"><i class="fa fa-dashboard"></i> Operaciones</a></li>
-              <li class="active">Clientes</li>
+              <li class="active">Balance</li>
             </ol>
         </section>
 
@@ -17,7 +17,7 @@
                 <div class="col-md-12"  v-if="visible">
                     <div class="box box-primary">
                         <div class="box-header with-border">
-                            <h1 class="box-title"><i class="fa fa-list"></i>Clientes con préstamos actuales
+                            <h1 class="box-title"><i class="fa fa-list"></i>Balance
                             </h1>
                         
                             <!-- <h1 class="box-title"><i class="fa fa-list"></i> Lista de Clientes</h1> -->
@@ -105,56 +105,40 @@
                                 <table  class="table table-hover" style="font-size:12px">
                                     <thead style="background: rgb(32, 32, 32);color: #fff;">                                                                                   
                                         <tr>  
-                                            <th style="vertical-align: middle;">#</th>
-                                            <th style="vertical-align: middle;">CODIGO</th>
-                                            <th style="vertical-align: middle;">N° PRÉSTAMOS</th>
+                                            <th style="vertical-align: middle;">MERCADO</th>
                                             <th style="vertical-align: middle;">NOMBRES</th>
-                                            <th style="vertical-align: middle;">F. PRÉSTAMO</th>
-                                            <th style="vertical-align: middle;">F. VENCE</th>
-                                            <th style="vertical-align: middle;">DIAS X COBRAR</th>
-                                            <th style="vertical-align: middle;">MONTO</th>
-                                            <th style="vertical-align: middle;">MONTO TOTAL</th>
-                                            <th style="vertical-align: middle;">TASA</th>
+                                            <th style="vertical-align: middle;">TOTAL</th>
+                                            <th style="vertical-align: middle;">PRESTAMO</th>
+                                            <th style="vertical-align: middle;">COBRO</th>
+                                            <th style="vertical-align: middle;">GASTOS ADMIN</th>
+                                            <th style="vertical-align: middle;">CENTRAL DE RIESGO</th>
                                             <th style="vertical-align: middle;">MORA</th>
-                                            <th style="vertical-align: middle;">SALDO</th>
-                                            <th style="vertical-align: middle;">CUOTA</th>
-                                            <th style="vertical-align: middle;">PAGO</th>
+                                            <th style="vertical-align: middle;">SOBRANTE</th>
+                                            <th style="vertical-align: middle;">FALTANTE</th>
+                                            <th style="vertical-align: middle;">ADELANTO FALTANTE</th>
+                                            <th style="vertical-align: middle;">T. ENTREGADO</th>
+                                            <th style="vertical-align: middle;">PANDERO</th>
                                         </tr> 
                                     </thead>
                                     <tbody>
                                         <tr v-for="(midata,index) in listCredit" :key="index" >
-                                            <td style="vertical-align: middle;" >{{(index+1)}}</td>
-                                            <td style="vertical-align: middle;" v-text="midata.code"></td>
-                                            <td style="vertical-align: middle;" v-text="midata.nro_prestamo"></td>
+                                            <td style="vertical-align: middle;" v-text="midata.mercado"></td>
                                             <td style="vertical-align: middle;" v-text="midata.nombres"></td>
-                                            <td style="vertical-align: middle;" v-text="midata.fecha_prestamo"></td>
-                                            <td style="vertical-align: middle;" v-text="midata.fecha_vencimiento"></td>
-                                            <td style="vertical-align: middle;" v-text="midata.dias_x_cobrar"></td>
-                                            <td style="vertical-align: middle;" v-text="midata.monto"></td>
-                                            <td style="vertical-align: middle;" v-text="midata.monto_total"></td>
-                                            <td style="vertical-align: middle;" v-text="midata.tasa"></td>
-                                            <td style="vertical-align: middle;" >
-                                                 <div v-if="midata.mora>0">
-                                                    <span class="label label-danger">{{midata.mora}}</span> 
-                                                </div>
-                                                <div v-else>
-                                                    <span >{{midata.mora}}</span> 
-                                                </div>
-                                            </td>
-                                            <td style="vertical-align: middle;" v-text="midata.saldo"></td>
-                                            <td style="vertical-align: middle;" v-text="midata.cuota"></td>
-                                            <td ><input type="text" style="border: none;border-bottom: 1px solid #ccc;" v-model="midata.pago" placeholder="0.0"></td>
+                                            <td style="vertical-align: middle;" v-text="midata.total"></td>
+                                            <td style="vertical-align: middle;" v-text="midata.total_prestamo"></td>
+                                            <td style="vertical-align: middle;" v-text="midata.total_cobro"></td>
+                                            <td style="vertical-align: middle;" v-text="midata.total_gasto_admin"></td>
+                                            <td style="vertical-align: middle;" v-text="midata.central_riesgo"></td>
+                                            <td style="vertical-align: middle;" v-text="midata.total_mora"></td>
+                                            <td style="vertical-align: middle;" v-text="midata.total_sobrante"></td>
+                                            <td style="vertical-align: middle;" v-text="midata.total_faltante"></td>
+                                            <td style="vertical-align: middle;" v-text="midata.adelanto_faltante"></td>
+                                            <td style="vertical-align: middle;" v-text="midata.total_entregado"></td>
+                                            <td style="vertical-align: middle;" v-text="midata.pandero"></td>
 
                                         </tr>                       
                                     </tbody>
                                 </table> 
-                                 <div class="box-footer" >
-                                       <div class="btn-group" style="float:right;" >
-                                                <button  type="button" @click="save()" class="btn btn-save" data-toggle="tooltip" title="Registrar los pagos">
-                                                    <i class="fa fa-save"></i>&nbsp;REGISTRAR
-                                                </button>              
-                                        </div>
-                                </div>  
                                                                
                             </div>
                         </template>
@@ -162,20 +146,8 @@
                     </div>
                 </div>
                
-
-            </div>
-            <div class="row">
-                <div class="col-md-9">
-                Aqui hay tanto contenido que el scrollbar se va hasta China
-                </div>
-                <div class="col-md-3">
-                    <div style="position:fixed;left:79.1%;"> 
-                Este debe mantenerse flotando a la derecha de manera fija, asi el scroll llegue al piso.
-                    </div>  
-                </div>
             </div>       
 		</section>
-        
     </main>
 </template>
 
@@ -319,63 +291,7 @@
 				me.list_data(page);
                 
             },
-            
-            save(val){
-               
-               // this.visible=0;
-                let me = this;
-                swal({
-                    title: 'Esta seguro de guardar la informacion?',
-                    type: 'warning',
-                    showCancelButton: true,confirmButtonColor: '#3085d6',
-                    cancelButtonColor: '#d33',confirmButtonText: 'Aceptar!',
-                    cancelButtonText: 'Cancelar',confirmButtonClass: 'btn btn-success',
-                    cancelButtonClass: 'btn btn-danger',buttonsStyling: false,
-                    reverseButtons: true
-                }).then((result) =>{
-                    if (result.value){            
-                        //recorriendo la lista
-                        for (var i=0;i<me.listCredit.length;i++){
-
-                                var monto = me.listCredit[i].pago;
-                                if(monto==null)
-                                {
-                                   monto = -1; 
-                                }else if(monto=='')
-                                {
-                                   monto = -1;
-                                }
-
-                                var idCredito = me.listCredit[i].id;
-                                var idpromotor = me.listCredit[i].idpromotor;
-                                var idCliente = me.listCredit[i].idcliente;
-                                var fecha_vence = me.listCredit[i].fecha_vence;
-                                var saldo = me.listCredit[i].saldo;
-                                var mora = me.listCredit[i].mora;
-                                var cliente = me.listCredit[i].nombres;
-
-                                if (monto >= 0){
-                                      me.listado=0;  
-                                      axios.post('save_payment',{
-                                                'idCredito':idCredito,'monto':monto,
-                                                'fecha_vence' :fecha_vence,'cliente':cliente,
-                                                'idCliente' :idCliente,'saldo':saldo,
-                                                'mora' :mora,'idpromotor':idpromotor,
-                                                'fecha_registro' : moment(moment(this.date_register, 'DD/MM/YYYY')).format('YYYY-MM-DD')                             
-                                            }).then(function (response) {
-                                                me.list_data(1);
-                                            }).catch(function (error) {
-                                                console.log(error);
-                                            });
-                                }
-                                
-                        }
-                        //fin de recorrido    
-                        
-                    }else if(result.dismiss === swal.DismissReason.cancel) {                    
-                    }
-                }) 
-            },
+           
            
             downloadDayliCollection(){    
                 if(this.id_promoter==''){alert('Seleccione promotor');return;}     
@@ -395,7 +311,7 @@
             list_data(page){
                 let me=this;                      
                 me.listado=0; 
-                var url= 'getListDailyCollection?search='+me.search+'&id_branch_office='+me.id_branch_office+
+                var url= 'getListDailyBalance?search='+me.search+'&id_branch_office='+me.id_branch_office+
                 '&market='+me.id_market_edit+'&id_promoter='+me.id_promoter+'&date_now='+
                 moment(moment(me.date_register, 'DD/MM/YYYY')).format('YYYY-MM-DD');
                 axios.get(url).then(function (response) {
@@ -427,13 +343,23 @@
   border: 1px solid rgb(204, 198, 198) !important;
   }
 
-.floating-btn {
-    position: fixed;
-    /* Footer height */
-    bottom: 65px;
-    cursor: pointer;
-    border-radius: 50%;
-    z-index: 1000;
+
+.example-print {
+    display: none;
+}
+@media print {
+   .example-screen {
+       display: none;
+    }
+    .example-print {
+       display: block;
+    }
+}
+@page {
+    margin-top: 2cm;
+    margin-bottom: 2cm;
+    margin-left: 2cm;
+    margin-right: 2cm;
 }
 
 </style>
