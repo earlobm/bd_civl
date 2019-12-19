@@ -27251,7 +27251,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         this.init();
     },
     methods: {
-        print: function print(id) {
+        print_schedule_credit: function print_schedule_credit(id) {
             var url = 'download_detail_credit?id=' + id;
             //window.location.href = url;
             window.open(url, '_blank');
@@ -27481,15 +27481,15 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
                         'array_credit_detail': _this.arrayCreditDetail
                     }).then(function (response) {
                         swal('Guardado!', 'El crédito ha sido otorgado con éxito.', 'success');
-                        // me.icon_save='fa fa-save';
-                        me.print(response.data);
+                        me.icon_save = 'fa fa-save';
+                        me.print_schedule_credit(response.data);
                         // me.clean_data();                                
                         // me.list_data(1);  
                     }).catch(function (error) {
                         console.log(error);
                     });
                 } else if (result.dismiss === swal.DismissReason.cancel) {
-                    // me.icon_save='fa fa-save';
+                    me.icon_save = 'fa fa-save';
                 }
             });
         },
@@ -28108,7 +28108,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
                     }).then(function (response) {
                         me.midatax = [];
                         me.midatax.push({ id: response.data, names: me.name, paternal_last_name: me.paternal_last_name, maternal_last_name: me.maternal_last_name });
-                        me.give_credit(me.midatax[0]);
+                        me.giveCredit(me.midatax[0]);
                         me.icon_save_pledge = 'fa fa-save';
                         swal('Guardado!', 'El registro ha sido guardado con éxito.', 'success');
                     }).catch(function (error) {
@@ -28150,7 +28150,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
                 } else if (result.dismiss === swal.DismissReason.cancel) {}
             });
         },
-        give_credit: function give_credit(midata) {
+        giveCredit: function giveCredit(midata) {
             var me = this;
             me.listadox = 3;
             this.visible = 0;
@@ -28211,7 +28211,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
             this.term = 1;
             this.tea = 10, this.totalcapital = 0;
             this.arrayCreditDetail = [];
-            this.totalcapital = 0;
             this.totalInterest = 0;
             this.characteristic = "";
             this.serie = "";
@@ -34545,7 +34544,7 @@ var render = function() {
                           [
                             _c("i", { staticClass: "fa fa-legal" }),
                             _vm._v(
-                              " OTORGAR PRÉSTAMO\n                                "
+                              " OTORGAR CRÉDITO\n                                "
                             )
                           ]
                         ),

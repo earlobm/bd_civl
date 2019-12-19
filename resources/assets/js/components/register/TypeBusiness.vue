@@ -1,152 +1,151 @@
 <template>
     <main class="main">
-        <div class="box-header with-border">
-            <section class="content-header">
-                <h3 class="box-title"><strong> 
-                    TIPO DE NEGOCIO</strong>                            
-                </h3>
-                <ol class="breadcrumb">
-                    <li><a href="#"><i class="fa fa-database"></i>Registro</a></li>
-                    <li class="active">Negocio</li>
-                </ol>
-            </section>
-            <!--Hola-->
-            <div class="box-tools pull-right">
-            <!--<button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button> hola hola-->
-            <!-- <button class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>-->
-            </div>
-        </div>
-        <div class="box-body">
+        <section class="content-header">
+            <h1>
+              Tipo de Negocio
+              <small>Registro</small>
+            </h1>
+            <ol class="breadcrumb">
+              <li><a href="#"><i class="fa fa-dashboard"></i> Mantenimiento</a></li>
+              <li class="active">Tipo de Negocio</li>
+            </ol>
+        </section>
+        <section class="content">
             <div class="row">
                 <div class="col-md-12">
-                    <div class="container-fluid">
-                        <!-- Ejemplo de tabla Listado -->
-                            <div class="card">                            
-                                <div class="card-body">    
-                                    <div class="row">
-                                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">                               
-                                                <div class="box-body">
-                                                    <template v-if="listado==0">
-                                                            <div align="center">
-                                                                <img src="img/loadx.gif" alt="technoserve" align="middle">
-                                                                <p>Cargando...</p>
-                                                            </div>
-                                                    </template>
-                                                    <template v-if="listado==1">
-                                                        <div class="row">
-                                                            <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
-                                                                <div class="input-group" style="margin-bottom: 15px;">
-                                                                    <input type="text"  v-model="search_market" @keyup.enter="list_data(1)"  class="form-control" placeholder="Buscar por código o denominación del Mercado y/o datos del Personal." style="border-bottom-left-radius: 3px; border-top-left-radius: 3px;">
-                                                                    <span class="input-group-btn">
-                                                                        <button type="submit" @click="list_data(1)"  class="btn btn-search btn-flat" style="border-bottom-right-radius: 3px; border-top-right-radius: 3px;"><i class="fa fa-search"></i> Buscar</button>
-                                                                    </span>
-                                                                </div>                                               
-                                                            </div>
-                                                            <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
-                                                                <div class="btn-group" style="float:right;margin-left: 10px;">   
-                                                                    <button type="button" @click="add_branch_office()" class="btn btn-add">
-                                                                        <i class="fa fa-plus"></i>&nbsp;AGREGAR TIPO DE NEGOCIO
-                                                                    </button>
-                                                                </div>
-                                                                
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="row">
-                                                            <div class="col-md-12">
-                                                                <div class="box-body table-responsive no-padding">
-                                                                    <table  class="table table-hover" style="font-size:12px">
-                                                                        <thead style="background: rgb(32, 32, 32);color: #fff;">                                                                                   
-                                                                            <tr>
-                                                                                <th style="vertical-align: middle; text-align: center;">#</th>
-                                                                                <th style="vertical-align: middle; text-align: center;">NOMBRE DE NEGOCIO</th>
-                                                                                <th style="text-align: center; vertical-align: middle;">ACCIONES</th>
-                                                                            </tr> 
-                                                                        </thead>
-                                                                        <tbody>
-                                                                            <tr v-for="(midata,index) in list_business" :key="index" >
-                                                                                <td style="vertical-align: middle; text-align: center;" >{{(index+1)}}</td>
-                                                                                <td style="vertical-align: middle; text-align: center;" v-text="midata.name"></td>
-                                                                                <td style="text-align: center; vertical-align: middle;">                                                                                    
-                                                                                    <button type="button" @click="editar(midata.id)" class="btn btn-editar btn-sm" data-toggle="tooltip" title="Editar">
-                                                                                        <i class="fa fa-edit"></i>
-                                                                                    </button>                                                                                                                   
-                                                                                
-                                                                                    <button type="button" @click="eliminar(midata.id)" class="btn btn-eliminar btn-sm" data-toggle="tooltip" title="Eliminar">
-                                                                                        <i class="fa fa-trash"></i>
-                                                                                    </button>
-                                                                                </td> 
-                                                                            </tr>                       
-                                                                        </tbody>
-                                                                    </table>
-                                                                </div>
-                                                                <div class="dataTables_paginate paging_simple_numbers" style=" float: right !important;">
-                                                                    <nav>
-                                                                        <ul class="pagination">
-                                                                            <ul class="pagination">
-                                                                                <li class="page-item" v-if="pagination.current_page > 1">
-                                                                                    <a class="page-link" href="#" @click.prevent="cambiarPagina(Number(pagination.current_page) - 1)"><i class="fa fa-angle-left" style="color:#189900;cursor: pointer"></i></a>
-                                                                                </li>
-                                                                                <li class="page-item" v-for="page in pagesNumber" :key="page" :class="[page == isActived ? 'active' : '']">
-                                                                                    <a class="page-link" href="#" @click.prevent="cambiarPagina(page)" v-text="page"></a>
-                                                                                </li>
-                                                                                <li class="page-item" v-if="pagination.current_page < pagination.last_page">
-                                                                                    <a class="page-link" href="#" @click.prevent="cambiarPagina(Number(pagination.current_page) + 1)"><i class="fa fa-angle-right" style="color:#189900;cursor: pointer"></i></a>
-                                                                                </li>
-                                                                            </ul> 
-                                                                        </ul>                        
-                                                                    </nav>
-                                                                </div>
-                                                            </div>                                               
-                                                            
-                                                        </div>
-                                                    </template>
-                                                    <template v-if="listado==2">
-                                                        <div class="row">                                                    
-                                                            <div class="col-md-12">
-                                                                <div class="btn-group" style="float:right;">
-                                                                    <button type="button" @click="volver()" class="btn btn-danger">
-                                                                        <i class="fa fa-close "></i>&nbsp;CANCELAR
-                                                                    </button>
-                                                                    <button type="button" @click="save_typebusiness()" class="btn btn-save">
-                                                                        <i class="fa fa-save"></i>&nbsp;GUARDAR
-                                                                    </button>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="row">                                                                            
-                                                            <div class="col-md-12">
-                                                                <legend style="font-size:16px;"><i class="ion ion-edit"></i><strong>&nbsp;DATOS DEL TIPO DE NEGOCIO</strong></legend>
-                                                            </div>   
-
-                                                            <div class="col-md-12">
-                                                                <div v-bind:class="errorInputActivity2">
-                                                                    <label for="ap_paterno">Tipo de Negocio:</label>
-                                                                    <div class="input-group">
-                                                                        <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-user"></i></span>
-                                                                        <input v-model="name" type="text" class="form-control" placeholder="Apellido Paterno" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">                                                                            
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <h1 class="box-title"><i class="fa fa-plus"></i> Gestión de Tipo de Negocio
+                            </h1>
+                        </div>
+                        <div class="box-body">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="container-fluid">
+                                        <!-- Ejemplo de tabla Listado -->
+                                            <div class="card">                            
+                                                <div class="card-body">    
+                                                    <div class="row">
+                                                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">                               
+                                                                <div class="box-body">
+                                                                    <div class="row"> 
+                                                                        <div class="col-md-12">
+                                                                            <div v-bind:class="errorInputActivity2">
+                                                                                <label for="ap_paterno">Tipo de Negocio:</label>
+                                                                                <div class="input-group">
+                                                                                    <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-shopping-cart"></i></span>
+                                                                                    <input v-model="name" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">                                                                            
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>                                                                                                                                 
                                                                     </div>
-                                                                </div>
-                                                            </div>  
-
-
-                                                                                                                                                                      
-                                                        </div>
-                                                    </template>
-                                                </div>  
+                                                                </div>  
+                                                            </div>
+                                                        
+                                                    </div>     
+                                                </div>
                                             </div>
-                                        
-                                    </div>     
+                                            
+                                    </div>
+                                    
                                 </div>
+                                
                             </div>
                             
+                        </div>
+                        <div class="box-footer">
+                            <button type="button" @click="save_typebusiness()" class="btn btn-save" style="float:right; margin-right: 10px;">
+                                <i class="fa fa-save"></i>&nbsp;GUARDAR
+                            </button>
+                            <button type="button" @click="volver()" class="btn btn-danger" style="float:right; margin-right: 10px;">
+                                <i class="fa fa-close "></i>&nbsp;CANCELAR
+                            </button>                            
+                        </div> 
                     </div>
-                    
                 </div>
-                
+                <div class="col-md-12">
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <h1 class="box-title"><i class="fa fa-list"></i> Lista de Clientes
+                            </h1>
+                        
+                            <!-- <h1 class="box-title"><i class="fa fa-list"></i> Lista de Clientes</h1> -->
+                            <div class="box-tools pull-right">
+                                <span class="label label-success">TOTAL DE REGISTROS: {{pagination.total}}</span>
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                                </button>
+                                <!-- <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button> -->
+                            </div>
+                        </div>
+                        <template v-if="listado==0">
+                            <div align="center">
+                                <img src="img/loadx.gif" alt="technoserve" align="middle">
+                                <!-- <p>Cargando...</p> -->
+                            </div>
+                        </template>
+                        <template v-if="listado==1">
+                            <div class="box-body table-responsive no-padding">
+                                <div class="col-md-12">
+                                    <div class="input-group" style="margin-bottom: 10px;margin-top: 10px;">
+                                        <input type="text"  v-model="search_market" @keyup.enter="ListData(1)"  class="form-control" placeholder="Buscar por código o denominación del Mercado y/o datos del Personal..." style="border-bottom-left-radius: 3px; border-top-left-radius: 3px;">
+                                        <span class="input-group-btn">
+                                            <button type="submit" @click="ListData(1)"  class="btn btn-search btn-flat" style="border-bottom-right-radius: 3px; border-top-right-radius: 3px;"><i class="fa fa-search"></i> Buscar</button>
+                                        </span>
+                                    </div>                                               
+                                </div>
+                                <table  class="table table-hover" style="font-size:12px">
+                                    <thead style="background: rgb(32, 32, 32);color: #fff;">                                                                                   
+                                        <tr>
+                                            <th style="vertical-align: middle; text-align: center;">#</th>
+                                            <th style="vertical-align: middle; text-align: center;">NOMBRE DE NEGOCIO</th>
+                                            <th style="text-align: center; vertical-align: middle;">ACCIONES</th>
+                                        </tr> 
+                                    </thead>
+                                    <tbody>
+                                        <tr v-for="(midata,index) in list_business" :key="index" >
+                                            <td style="vertical-align: middle; text-align: center;" >{{(index+1)}}</td>
+                                            <td style="vertical-align: middle; text-align: center;" v-text="midata.name"></td>
+                                            <td style="text-align: center; vertical-align: middle;">                                                                                    
+                                                <button type="button" @click="editData(midata.id)" class="btn btn-editar btn-sm" data-toggle="tooltip" title="Editar">
+                                                    <i class="fa fa-pencil"></i>
+                                                </button>                                                                                                                   
+                                            
+                                                <button type="button" @click="eliminar(midata.id)" class="btn btn-eliminar btn-sm" data-toggle="tooltip" title="Eliminar">
+                                                    <i class="fa fa-trash"></i>
+                                                </button>
+                                            </td> 
+                                        </tr>                       
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="box-footer">
+                                <div class="col-md-6">                                                                                       
+                                </div>
+                                <div class="col-md-6" style="margin-top: -40px; margin-bottom: -45px;">
+                                    <div class="dataTables_paginate paging_simple_numbers" style=" float: right !important;">
+                                        <nav>
+                                            <ul class="pagination">
+                                                <ul class="pagination">
+                                                    <li class="page-item" v-if="pagination.current_page > 1">
+                                                        <a class="page-link" href="#" @click.prevent="cambiarPagina(Number(pagination.current_page) - 1)"><i class="fa fa-angle-left" style="color:#189900;cursor: pointer"></i></a>
+                                                    </li>
+                                                    <li class="page-item" v-for="page in pagesNumber" :key="page" :class="[page == isActived ? 'active' : '']">
+                                                        <a class="page-link" href="#" @click.prevent="cambiarPagina(page)" v-text="page"></a>
+                                                    </li>
+                                                    <li class="page-item" v-if="pagination.current_page < pagination.last_page">
+                                                        <a class="page-link" href="#" @click.prevent="cambiarPagina(Number(pagination.current_page) + 1)"><i class="fa fa-angle-right" style="color:#189900;cursor: pointer"></i></a>
+                                                    </li>
+                                                </ul> 
+                                            </ul>                        
+                                        </nav>
+                                    </div>
+                                </div>
+                            </div>
+                        </template>
+                    </div>
+                </div>
             </div>
-            
-        </div>
+        </section>
     </main>
 </template>
 
@@ -296,21 +295,20 @@
 				let me = this;				
 				me.pagination.current_page = page;
                 //me.listado=1;
-				me.list_data(page);
+				me.ListData(page);
                 
             },
            
-            editar(id){
+            editData(id){
                 let me=this;
-                me.listado=2;
-                //me.limpiar();
+                me.listado=1;
+                me.limpiar();
                 //me.get_branch();
                 var url= 'getEditListbusiness?id='+id;
                 axios.get(url).then(function (response) {
                     var respuesta= response.data;
                     me.id=respuesta.datax[0].id;
                     me.name=respuesta.datax[0].name;
-                    me.validarData();
                 })
                 .catch(function (error) {
                     console.log(error);
@@ -339,7 +337,7 @@
                 }).then(function (response) {
                      me.limpiar();
                     me.listado=1; 
-                    me.list_data(1);                  
+                    me.ListData(1);                  
                     swal(
                         'Guardado!',
                         'El registro ha sido guardado con éxito.',
@@ -379,7 +377,7 @@
 
                     }).then(function (response) {
                     me.listado=1;
-                    me.list_data(1);
+                    me.ListData(1);
                     }).catch(function (error) {
                         console.log(error);
                     });
@@ -398,7 +396,7 @@
                 me.limpiar();
                 me.listado=1;
             },
-        limpiar(){
+            limpiar(){
                this.errorInputActivity='form-group';
                 this.errorInputActivity2='form-group';
                 this.errors = {};
@@ -407,15 +405,15 @@
                 this.names="";
                 this.id=-1;
             },
-            list_data(page){
+            ListData(page){
                 let me=this;      
                 me.listado=0;        
-                var url= 'getlistBusiness';
+                var url= 'list_data?search='+me.search_market+'&page='+page;
                 axios.get(url).then(function (response) {
                     var respuesta= response.data;
-                     me.list_business=respuesta.datax;
-                     //me.pagination= respuesta.pagination; 
-                     me.listado=1;
+                    me.list_business=respuesta.datax;
+                    me.pagination= respuesta.pagination; 
+                    me.listado=1;
                 })
                 .catch(function (error) {
                     console.log(error);
@@ -425,8 +423,8 @@
            
         },
         mounted() {
-           this.list_data(1);
-         }
+           this.ListData(1);
+        }
          
     }
    

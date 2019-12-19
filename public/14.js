@@ -26604,8 +26604,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
-//
-//
 
 
 
@@ -26764,7 +26762,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
             //me.listado=1;
             me.list_data(page);
         },
-        edit_data: function edit_data(id) {
+        editData: function editData(id) {
             var me = this;
             me.listado = 1;
             me.limpiar();
@@ -26777,7 +26775,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
                 me.phone = respuesta.datax[0].phone;
                 me.notes = respuesta.datax[0].notes;
                 me.date_init = __WEBPACK_IMPORTED_MODULE_1_moment_timezone___default()(respuesta.datax[0].date_init).toDate();
-                me.validarData();
             }).catch(function (error) {
                 console.log(error);
             });
@@ -27187,42 +27184,38 @@ var render = function() {
             _vm._v(" "),
             _c("div", { staticClass: "box-footer" }, [
               _c(
-                "div",
-                { staticClass: "btn-group", staticStyle: { float: "right" } },
+                "button",
+                {
+                  staticClass: "btn btn-save",
+                  staticStyle: { float: "right", "margin-right": "10px" },
+                  attrs: { type: "button" },
+                  on: {
+                    click: function($event) {
+                      return _vm.save_data()
+                    }
+                  }
+                },
                 [
-                  _c(
-                    "button",
-                    {
-                      staticClass: "btn btn-danger",
-                      attrs: { type: "button" },
-                      on: {
-                        click: function($event) {
-                          return _vm.volver()
-                        }
-                      }
-                    },
-                    [
-                      _c("i", { staticClass: "fa fa-close " }),
-                      _vm._v(" CANCELAR\n                                ")
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "button",
-                    {
-                      staticClass: "btn btn-save",
-                      attrs: { type: "button" },
-                      on: {
-                        click: function($event) {
-                          return _vm.save_data()
-                        }
-                      }
-                    },
-                    [
-                      _c("i", { staticClass: "fa fa-save" }),
-                      _vm._v(" GUARDAR\n                                ")
-                    ]
-                  )
+                  _c("i", { staticClass: "fa fa-save" }),
+                  _vm._v(" GUARDAR\n                            ")
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "button",
+                {
+                  staticClass: "btn btn-danger",
+                  staticStyle: { float: "right", "margin-right": "10px" },
+                  attrs: { type: "button" },
+                  on: {
+                    click: function($event) {
+                      return _vm.volver()
+                    }
+                  }
+                },
+                [
+                  _c("i", { staticClass: "fa fa-close " }),
+                  _vm._v(" CANCELAR\n                            ")
                 ]
               )
             ])
@@ -27472,11 +27465,15 @@ var render = function() {
                                           },
                                           on: {
                                             click: function($event) {
-                                              return _vm.edit_data(midata.id)
+                                              return _vm.editData(midata.id)
                                             }
                                           }
                                         },
-                                        [_c("i", { staticClass: "fa fa-edit" })]
+                                        [
+                                          _c("i", {
+                                            staticClass: "fa fa-pencil"
+                                          })
+                                        ]
                                       ),
                                       _vm._v(" "),
                                       _c(
@@ -27682,7 +27679,7 @@ var staticRenderFns = [
           ])
         ]),
         _vm._v(" "),
-        _c("li", { staticClass: "active" }, [_vm._v("Sucursales")])
+        _c("li", { staticClass: "active" }, [_vm._v("Sucursal")])
       ])
     ])
   },

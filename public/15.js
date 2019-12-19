@@ -26632,6 +26632,54 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -26916,6 +26964,331 @@ var render = function() {
                           _vm.listado == 1
                             ? [
                                 _c("div", { staticClass: "row" }, [
+                                  _c("div", { staticClass: "col-md-3" }, [
+                                    _c("div", { staticClass: "form-group" }, [
+                                      _c("label", { attrs: { for: "sexo" } }, [
+                                        _vm._v("Sucursal:")
+                                      ]),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        { staticClass: "input-group" },
+                                        [
+                                          _vm._m(3),
+                                          _vm._v(" "),
+                                          _c(
+                                            "select",
+                                            {
+                                              directives: [
+                                                {
+                                                  name: "model",
+                                                  rawName: "v-model",
+                                                  value: _vm.id_sucursal_edit,
+                                                  expression: "id_sucursal_edit"
+                                                }
+                                              ],
+                                              staticClass: "form-control",
+                                              staticStyle: {
+                                                "border-bottom-right-radius":
+                                                  "3px",
+                                                "border-top-right-radius": "3px"
+                                              },
+                                              on: {
+                                                change: [
+                                                  function($event) {
+                                                    var $$selectedVal = Array.prototype.filter
+                                                      .call(
+                                                        $event.target.options,
+                                                        function(o) {
+                                                          return o.selected
+                                                        }
+                                                      )
+                                                      .map(function(o) {
+                                                        var val =
+                                                          "_value" in o
+                                                            ? o._value
+                                                            : o.value
+                                                        return val
+                                                      })
+                                                    _vm.id_sucursal_edit = $event
+                                                      .target.multiple
+                                                      ? $$selectedVal
+                                                      : $$selectedVal[0]
+                                                  },
+                                                  function($event) {
+                                                    return _vm.getMercado(
+                                                      $event.target.value
+                                                    )
+                                                  }
+                                                ]
+                                              }
+                                            },
+                                            [
+                                              _c(
+                                                "option",
+                                                {
+                                                  attrs: {
+                                                    selected: "selected",
+                                                    value: ""
+                                                  }
+                                                },
+                                                [_vm._v("Seleccione")]
+                                              ),
+                                              _vm._v(" "),
+                                              _vm._l(
+                                                _vm.arraySucursal,
+                                                function(miselect) {
+                                                  return _c(
+                                                    "option",
+                                                    {
+                                                      key: miselect.id,
+                                                      domProps: {
+                                                        selected:
+                                                          miselect.id ==
+                                                          _vm.id_sucursal_edit,
+                                                        value: miselect.id
+                                                      }
+                                                    },
+                                                    [
+                                                      _vm._v(
+                                                        _vm._s(miselect.name)
+                                                      )
+                                                    ]
+                                                  )
+                                                }
+                                              )
+                                            ],
+                                            2
+                                          )
+                                        ]
+                                      )
+                                    ])
+                                  ]),
+                                  _vm._v(" "),
+                                  _c("div", { staticClass: "col-md-3" }, [
+                                    _c("div", { staticClass: "form-group" }, [
+                                      _c("label", { attrs: { for: "sexo" } }, [
+                                        _vm._v("Mercado:")
+                                      ]),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        { staticClass: "input-group" },
+                                        [
+                                          _vm._m(4),
+                                          _vm._v(" "),
+                                          _c(
+                                            "select",
+                                            {
+                                              directives: [
+                                                {
+                                                  name: "model",
+                                                  rawName: "v-model",
+                                                  value: _vm.id_mercado_edit,
+                                                  expression: "id_mercado_edit"
+                                                }
+                                              ],
+                                              staticClass: "form-control",
+                                              staticStyle: {
+                                                "border-bottom-right-radius":
+                                                  "3px",
+                                                "border-top-right-radius": "3px"
+                                              },
+                                              on: {
+                                                change: function($event) {
+                                                  var $$selectedVal = Array.prototype.filter
+                                                    .call(
+                                                      $event.target.options,
+                                                      function(o) {
+                                                        return o.selected
+                                                      }
+                                                    )
+                                                    .map(function(o) {
+                                                      var val =
+                                                        "_value" in o
+                                                          ? o._value
+                                                          : o.value
+                                                      return val
+                                                    })
+                                                  _vm.id_mercado_edit = $event
+                                                    .target.multiple
+                                                    ? $$selectedVal
+                                                    : $$selectedVal[0]
+                                                }
+                                              }
+                                            },
+                                            [
+                                              _c(
+                                                "option",
+                                                {
+                                                  attrs: {
+                                                    selected: "selected",
+                                                    value: ""
+                                                  }
+                                                },
+                                                [_vm._v("Seleccione")]
+                                              ),
+                                              _vm._v(" "),
+                                              _vm._l(_vm.arrayMercado, function(
+                                                miselect
+                                              ) {
+                                                return _c(
+                                                  "option",
+                                                  {
+                                                    key: miselect.id,
+                                                    domProps: {
+                                                      selected:
+                                                        miselect.id ==
+                                                        _vm.id_mercado_edit,
+                                                      value: miselect.id
+                                                    }
+                                                  },
+                                                  [
+                                                    _vm._v(
+                                                      _vm._s(miselect.name)
+                                                    )
+                                                  ]
+                                                )
+                                              })
+                                            ],
+                                            2
+                                          )
+                                        ]
+                                      )
+                                    ])
+                                  ]),
+                                  _vm._v(" "),
+                                  _c("div", { staticClass: "col-md-3" }, [
+                                    _c("div", { staticClass: "form-group" }, [
+                                      _c("label", { attrs: { for: "sexo" } }, [
+                                        _vm._v("Promotor:")
+                                      ]),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        { staticClass: "input-group" },
+                                        [
+                                          _vm._m(5),
+                                          _vm._v(" "),
+                                          _c(
+                                            "select",
+                                            {
+                                              directives: [
+                                                {
+                                                  name: "model",
+                                                  rawName: "v-model",
+                                                  value: _vm.id_mercado_edit,
+                                                  expression: "id_mercado_edit"
+                                                }
+                                              ],
+                                              staticClass: "form-control",
+                                              staticStyle: {
+                                                "border-bottom-right-radius":
+                                                  "3px",
+                                                "border-top-right-radius": "3px"
+                                              },
+                                              on: {
+                                                change: function($event) {
+                                                  var $$selectedVal = Array.prototype.filter
+                                                    .call(
+                                                      $event.target.options,
+                                                      function(o) {
+                                                        return o.selected
+                                                      }
+                                                    )
+                                                    .map(function(o) {
+                                                      var val =
+                                                        "_value" in o
+                                                          ? o._value
+                                                          : o.value
+                                                      return val
+                                                    })
+                                                  _vm.id_mercado_edit = $event
+                                                    .target.multiple
+                                                    ? $$selectedVal
+                                                    : $$selectedVal[0]
+                                                }
+                                              }
+                                            },
+                                            [
+                                              _c(
+                                                "option",
+                                                {
+                                                  attrs: {
+                                                    selected: "selected",
+                                                    value: ""
+                                                  }
+                                                },
+                                                [_vm._v("Seleccione")]
+                                              ),
+                                              _vm._v(" "),
+                                              _vm._l(_vm.arrayMercado, function(
+                                                miselect
+                                              ) {
+                                                return _c(
+                                                  "option",
+                                                  {
+                                                    key: miselect.id,
+                                                    domProps: {
+                                                      selected:
+                                                        miselect.id ==
+                                                        _vm.id_mercado_edit,
+                                                      value: miselect.id
+                                                    }
+                                                  },
+                                                  [
+                                                    _vm._v(
+                                                      _vm._s(miselect.name)
+                                                    )
+                                                  ]
+                                                )
+                                              })
+                                            ],
+                                            2
+                                          )
+                                        ]
+                                      )
+                                    ])
+                                  ]),
+                                  _vm._v(" "),
+                                  _c("div", { staticClass: "col-md-3" }, [
+                                    _c("div", { staticClass: "form-group" }, [
+                                      _c("label", { attrs: { for: "edad" } }, [
+                                        _vm._v("FECHA DEL DIA:")
+                                      ]),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        { staticClass: "input-group" },
+                                        [
+                                          _vm._m(6),
+                                          _vm._v(" "),
+                                          _c("date-picker", {
+                                            staticStyle: {
+                                              "border-top-right-radius": "3px",
+                                              "border-bottom-right-radius":
+                                                "3px"
+                                            },
+                                            attrs: { config: _vm.options },
+                                            on: {
+                                              "dp-change": _vm.getResumenDia
+                                            },
+                                            model: {
+                                              value: _vm.date_creation,
+                                              callback: function($$v) {
+                                                _vm.date_creation = $$v
+                                              },
+                                              expression: "date_creation"
+                                            }
+                                          })
+                                        ],
+                                        1
+                                      )
+                                    ])
+                                  ])
+                                ]),
+                                _vm._v(" "),
+                                _c("div", { staticClass: "row" }, [
                                   _c(
                                     "div",
                                     {
@@ -27073,7 +27446,7 @@ var render = function() {
                                             staticStyle: { "font-size": "12px" }
                                           },
                                           [
-                                            _vm._m(3),
+                                            _vm._m(7),
                                             _vm._v(" "),
                                             _c(
                                               "tbody",
@@ -27529,7 +27902,7 @@ var render = function() {
                                 ]),
                                 _vm._v(" "),
                                 _c("div", { staticClass: "row" }, [
-                                  _vm._m(4),
+                                  _vm._m(8),
                                   _vm._v(" "),
                                   _c("div", { staticClass: "col-md-4" }, [
                                     _c("div", { staticClass: "form-group" }, [
@@ -27541,7 +27914,7 @@ var render = function() {
                                         "div",
                                         { staticClass: "input-group" },
                                         [
-                                          _vm._m(5),
+                                          _vm._m(9),
                                           _vm._v(" "),
                                           _c(
                                             "select",
@@ -27642,7 +28015,7 @@ var render = function() {
                                         "div",
                                         { staticClass: "input-group" },
                                         [
-                                          _vm._m(6),
+                                          _vm._m(10),
                                           _vm._v(" "),
                                           _c(
                                             "select",
@@ -27725,7 +28098,7 @@ var render = function() {
                                         "div",
                                         { staticClass: "input-group" },
                                         [
-                                          _vm._m(7),
+                                          _vm._m(11),
                                           _vm._v(" "),
                                           _c(
                                             "select",
@@ -27818,7 +28191,7 @@ var render = function() {
                                           "div",
                                           { staticClass: "input-group" },
                                           [
-                                            _vm._m(8),
+                                            _vm._m(12),
                                             _vm._v(" "),
                                             _c("input", {
                                               directives: [
@@ -27873,7 +28246,7 @@ var render = function() {
                                           "div",
                                           { staticClass: "input-group" },
                                           [
-                                            _vm._m(9),
+                                            _vm._m(13),
                                             _vm._v(" "),
                                             _c("input", {
                                               directives: [
@@ -27923,7 +28296,7 @@ var render = function() {
                                         "div",
                                         { staticClass: "input-group" },
                                         [
-                                          _vm._m(10),
+                                          _vm._m(14),
                                           _vm._v(" "),
                                           _c("date-picker", {
                                             staticStyle: {
@@ -28008,6 +28381,70 @@ var staticRenderFns = [
       _vm._v(" "),
       _c("p", [_vm._v("Cargando...")])
     ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "span",
+      {
+        staticClass: "input-group-addon",
+        staticStyle: {
+          "border-bottom-left-radius": "3px",
+          "border-top-left-radius": "3px"
+        }
+      },
+      [_c("i", { staticClass: "fa fa-map-signs" })]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "span",
+      {
+        staticClass: "input-group-addon",
+        staticStyle: {
+          "border-bottom-left-radius": "3px",
+          "border-top-left-radius": "3px"
+        }
+      },
+      [_c("i", { staticClass: "fa fa-map-signs" })]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "span",
+      {
+        staticClass: "input-group-addon",
+        staticStyle: {
+          "border-bottom-left-radius": "3px",
+          "border-top-left-radius": "3px"
+        }
+      },
+      [_c("i", { staticClass: "fa fa-map-signs" })]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "span",
+      {
+        staticClass: "input-group-addon",
+        staticStyle: {
+          "border-bottom-left-radius": "3px",
+          "border-top-left-radius": "3px"
+        }
+      },
+      [_c("i", { staticClass: "fa fa-calendar " })]
+    )
   },
   function() {
     var _vm = this

@@ -26727,103 +26727,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 
@@ -26889,7 +26792,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
             me.total_cash = '';
             me.interest_rate_cash = '';
             me.amount_admin = Number(me.capital) * Number(me.rate_admin) / 100;
-            console.log(me.amount_admin);
+
             me.interest_rate_cash = Number(me.capital) * Number(me.interest_rate) / 100;
             me.total_cash = Number(me.capital) + Number(me.interest_rate_cash);
         },
@@ -26983,7 +26886,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
                 result = Number(this.capital) + Number(this.capital) * Number(this.interest_rate) / 100 - result;
                 if (i == 1) {
                     this.quota = quota;
-                    console.log(this.quota);
                 }
                 if (i == Number(this.number_quota) - 1) {
                     quota = result.toFixed(1);
@@ -27021,9 +26923,15 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
             this.total_amount = this.capital;
             this.total_interest = this.interest_rate_cash;
         },
+        print_schedule_credit: function print_schedule_credit(id) {
+            var url = 'download_detail_credit?id=' + id;
+            //window.location.href = url;
+            window.open(url, '_blank');
+        },
         saveDetailCredit: function saveDetailCredit() {
             var _this = this;
 
+            var me = this;
             this.calculateCreditoDetail();
             swal({
                 title: 'Esta seguro de guardar la informacion?',
@@ -27055,13 +26963,16 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
                         'array_credit_detail': _this.arrayCreditDetail
                     }).then(function (response) {
                         // me.clean_data();                                
-                        // me.list_data(1);  
-                        // me.icon_save='fa fa-save';
+                        // me.list_data(1); 
                         swal('Guardado!', 'El crédito ha sido otorgado con éxito.', 'success');
+                        me.icon_save = 'fa fa-save';
+                        me.print_schedule_credit(response.data);
                     }).catch(function (error) {
                         console.log(error);
                     });
-                } else if (result.dismiss === swal.DismissReason.cancel) {}
+                } else if (result.dismiss === swal.DismissReason.cancel) {
+                    me.icon_save = 'fa fa-save';
+                }
             });
         },
         imprimirElemento: function imprimirElemento() {
@@ -27081,63 +26992,11 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
             var me = this;
             me.modalTicket = 0;
         },
-        savePledge: function savePledge() {
-            var _this2 = this;
-
-            if (this.arrayDetailPledge.length < 1) {
-                return;
-            }
-            swal({
-                title: '¿Esta seguro?',
-                type: 'warning', showCancelButton: true,
-                confirmButtonColor: '#3085d6', cancelButtonColor: '#d33',
-                confirmButtonText: 'Aceptar!', cancelButtonText: 'Cancelar',
-                confirmButtonClass: 'btn btn-success', cancelButtonClass: 'btn btn-danger',
-                buttonsStyling: false, reverseButtons: true
-            }).then(function (result) {
-                if (result.value) {
-                    var _me = _this2;
-                    axios.post('save_pledge', {
-                        'idcustomerpledge': _this2.id_customer_credit,
-                        'date_init': __WEBPACK_IMPORTED_MODULE_1_moment_timezone___default()(__WEBPACK_IMPORTED_MODULE_1_moment_timezone___default()(_this2.date_init, 'DD/MM/YYYY')).format('YYYY-MM-DD'),
-                        'date_end': __WEBPACK_IMPORTED_MODULE_1_moment_timezone___default()(__WEBPACK_IMPORTED_MODULE_1_moment_timezone___default()(_this2.date_end, 'DD/MM/YYYY')).format('YYYY-MM-DD'),
-                        'period': _this2.period, 'licence_plate': _this2.licence_plate,
-                        'serie': _this2.serie,
-                        'term': _this2.term, 'tea': _this2.tea, 'interest': _this2.totalInterest,
-                        'capital': _this2.totalcapital, 'total': Number(_this2.totalcapital) + Number(_this2.totalInterest),
-                        'detail_pledge': _this2.arrayDetailPledge,
-                        'id_warehouse': _this2.id_warehouse.id
-                    }).then(function (response) {
-
-                        swal('Guardado!', 'El registro ha sido guardado con éxito.', 'success');
-                        _me.dowloadContract();
-
-                        var url = 'ticket_plegde?capital=' + _me.totalcapital + '&interest=' + _me.totalInterest + '&name_customer=' + _me.name_customer + '&date_movement=' + __WEBPACK_IMPORTED_MODULE_1_moment_timezone___default()(__WEBPACK_IMPORTED_MODULE_1_moment_timezone___default()(_me.date_init, 'DD/MM/YYYY')).format('YYYY-MM-DD') + '&type=Empenio';
-                        window.open(url, '_blank');
-
-                        _me.volver();
-                        _me.list_data(1);
-                    }).catch(function (error) {
-                        console.log(error);
-                    });
-
-                    //  this.modalTicket=1;
-                } else if (result.dismiss === swal.DismissReason.cancel) {}
-            });
-        },
         dowloadContract: function dowloadContract() {
             //var entre = document.getElementById("entre");
             //var nombreentre = entre.options[entre.selectedIndex].text;
             var url = 'dowloadContract?name_customer=' + this.name_customer + '&nro_doc=' + this.nro_doc + '&dateinit=' + __WEBPACK_IMPORTED_MODULE_1_moment_timezone___default()(__WEBPACK_IMPORTED_MODULE_1_moment_timezone___default()(this.date_init, 'DD/MM/YYYY')).format('DD-MM-YYYY') + '&dateend=' + __WEBPACK_IMPORTED_MODULE_1_moment_timezone___default()(__WEBPACK_IMPORTED_MODULE_1_moment_timezone___default()(this.date_end, 'DD/MM/YYYY')).format('DD-MM-YYYY');
             window.location.href = url;
-        },
-        sumTotal: function sumTotal() {
-            this.totalcapital = 0;
-            this.totalInterest = 0;
-            for (var i = 0; i < this.arrayDetailPledge.length; i++) {
-                this.totalcapital = Number(this.totalcapital) + Number(this.arrayDetailPledge[i].capital);
-                this.totalInterest = Number(this.totalInterest) + Number(this.arrayDetailPledge[i].interest);
-            }
         },
         getFamilyProduct: function getFamilyProduct(id_parent) {
             var me = this;
@@ -27148,40 +27007,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
                 me.arrayFamilyProduct = respuesta.datax;
             }).catch(function (error) {
                 console.log(error);
-            });
-        },
-        addPledge: function addPledge() {
-            if (this.validateDataPledge()) {
-                return;
-            }
-
-            this.arrayDetailPledge.push({ guaranty: this.guaranty.name, characteristic: this.characteristic,
-                note: this.note,
-                warehouse: this.id_warehouse.name,
-                licence_plate: this.licence_plate, serie: this.serie,
-                capital: this.capital, interest: this.interest,
-                id_guaranty: this.guaranty.id, id_warehouse: this.id_warehouse.id
-            });
-            this.sumTotal();
-        },
-
-        deletePledge: function deletePledge(item) {
-            var _this3 = this;
-
-            swal({
-                title: '¿Esta seguro de eliminar?',
-                type: 'warning', showCancelButton: true,
-                confirmButtonColor: '#3085d6', cancelButtonColor: '#d33',
-                confirmButtonText: 'Aceptar!', cancelButtonText: 'Cancelar',
-                confirmButtonClass: 'btn btn-success', cancelButtonClass: 'btn btn-danger',
-                buttonsStyling: false, reverseButtons: true
-            }).then(function (result) {
-                if (result.value) {
-                    // this.arrayActivity.push(item);
-                    var index = _this3.arrayDetailPledge.indexOf(item);
-                    _this3.arrayDetailPledge.splice(index, 1);
-                    _this3.sumTotal();
-                } else if (result.dismiss === swal.DismissReason.cancel) {}
             });
         },
         addDay: function addDay(day) {
@@ -27280,32 +27105,32 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         getData: function getData() {
             //obteniendo datos de reniec
             if (this.nro_doc.length == 8) {
-                var _me2 = this;
-                _me2.icon_search_dni = 'fa fa-spinner fa-spin';
-                var url = 'getDataCustomerBynro_doc?nro_doc=' + _me2.nro_doc;
+                var me = this;
+                me.icon_search_dni = 'fa fa-spinner fa-spin';
+                var url = 'getDataCustomerBynro_doc?nro_doc=' + me.nro_doc;
                 axios.get(url).then(function (response) {
                     var respuesta = response.data;
                     var tipo = respuesta.tipo;
                     if (respuesta.datax.length > 0) {
                         if (tipo == 'bd') {
-                            _me2.id = respuesta.datax[0].id;
-                            _me2.name = respuesta.datax[0].names;
-                            _me2.paternal_last_name = respuesta.datax[0].paternal_last_name;
-                            _me2.maternal_last_name = respuesta.datax[0].maternal_last_name;
-                            _me2.phone = respuesta.datax[0].phone;
-                            _me2.address = respuesta.datax[0].address;
-                            _me2.sex = respuesta.datax[0].sex;
-                            _me2.marital_status = respuesta.datax[0].marital_status;
-                            _me2.birthdate = __WEBPACK_IMPORTED_MODULE_1_moment_timezone___default()(respuesta.datax[0].birthdate).toDate();
-                            _me2.validarData();
+                            me.id = respuesta.datax[0].id;
+                            me.name = respuesta.datax[0].names;
+                            me.paternal_last_name = respuesta.datax[0].paternal_last_name;
+                            me.maternal_last_name = respuesta.datax[0].maternal_last_name;
+                            me.phone = respuesta.datax[0].phone;
+                            me.address = respuesta.datax[0].address;
+                            me.sex = respuesta.datax[0].sex;
+                            me.marital_status = respuesta.datax[0].marital_status;
+                            me.birthdate = __WEBPACK_IMPORTED_MODULE_1_moment_timezone___default()(respuesta.datax[0].birthdate).toDate();
+                            me.validarData();
                         } else {
-                            _me2.paternal_last_name = respuesta.datax[0];
-                            _me2.name = respuesta.datax[1];
+                            me.paternal_last_name = respuesta.datax[0];
+                            me.name = respuesta.datax[1];
 
-                            _me2.maternal_last_name = respuesta.datax[2];
-                            _me2.validarData();
+                            me.maternal_last_name = respuesta.datax[2];
+                            me.validarData();
                         }
-                        _me2.icon_search_dni = 'fa fa-search';
+                        me.icon_search_dni = 'fa fa-search';
                     }
                 }).catch(function (error) {
                     console.log(error);
@@ -27316,15 +27141,15 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         validarReniec: function validarReniec() {
             //obteniendo datos de reniec
             if (this.nro_doc.length == 8) {
-                var _me3 = this;
-                var url = 'getDataCustomerBynro_doc?nro_doc=' + _me3.nro_doc;
+                var me = this;
+                var url = 'getDataCustomerBynro_doc?nro_doc=' + me.nro_doc;
                 axios.get(url).then(function (response) {
                     var respuesta = response.data;
                     var tipo = respuesta.tipo;
                     if (respuesta.datax.length > 0) {
-                        _me3.paternal_last_name = respuesta.datax[0];
-                        _me3.name = respuesta.datax[1];
-                        _me3.maternal_last_name = respuesta.datax[2];
+                        me.paternal_last_name = respuesta.datax[0];
+                        me.name = respuesta.datax[1];
+                        me.maternal_last_name = respuesta.datax[2];
                     }
                 }).catch(function (error) {
                     console.log(error);
@@ -27421,133 +27246,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
             //me.listado=1;
             me.list_data(page);
         },
-        edit_data: function edit_data(id) {
-            var me = this;
-            me.listado = 2;
-            me.clean_data();
-            me.get_type_document();
-            me.icon_edit = 'fa fa-spinner fa-spin';
-            var url = 'edit_data?id=' + id;
-            me.id_customer_credit = id;
-            axios.get(url).then(function (response) {
-                var respuesta = response.data;
-                me.id = respuesta.datax[0].id;
-                me.nro_doc = respuesta.datax[0].number_doc;
-                me.name = respuesta.datax[0].names;
-                me.paternal_last_name = respuesta.datax[0].paternal_last_name;
-                me.maternal_last_name = respuesta.datax[0].maternal_last_name;
-                me.phone = respuesta.datax[0].phone;
-                me.address = respuesta.datax[0].address;
-                me.sex = respuesta.datax[0].sex;
-                me.reference = respuesta.datax[0].reference;
-                me.code = respuesta.datax[0].code;
-                me.email = respuesta.datax[0].email;
-                me.district = respuesta.datax[0].id_district;
-                me.province = respuesta.datax[0].id_province;
-                me.department = respuesta.datax[0].id_department;
-                me.id_type_doc = respuesta.datax[0].id_type_document;
-                me.marital_status = respuesta.datax[0].marital_status;
-                me.birthdate = __WEBPACK_IMPORTED_MODULE_1_moment_timezone___default()(respuesta.datax[0].birthdate).toDate();
-                me.validarData();
-                me.icon_edit = 'fa fa-pencil';
-            }).catch(function (error) {
-                console.log(error);
-            });
-        },
-        save_data_only_client: function save_data_only_client() {
-            var _this4 = this;
-
-            //val =1 guardar y empeñar
-            //val = 0 solo registrar cliente  
-            this.visible = 0;
-            var me = this;
-            me.icon_save = 'fa fa-spinner fa-spin';
-            if (this.validarData()) {
-                return;
-            }
-
-            swal({
-                title: 'Esta seguro de guardar la informacion?',
-                type: 'warning',
-                showCancelButton: true, confirmButtonColor: '#3085d6',
-                cancelButtonColor: '#d33', confirmButtonText: 'Aceptar!',
-                cancelButtonText: 'Cancelar', confirmButtonClass: 'btn btn-success',
-                cancelButtonClass: 'btn btn-danger', buttonsStyling: false,
-                reverseButtons: true
-            }).then(function (result) {
-                if (result.value) {
-                    axios.post('saveCustomerCredit', {
-                        'nro_doc': _this4.nro_doc, 'name': _this4.name,
-                        'paternal_last_name': _this4.paternal_last_name,
-                        'maternal_last_name': _this4.maternal_last_name,
-                        'phone': _this4.phone, 'address': _this4.address,
-                        'id': _this4.id, 'sex': _this4.sex,
-                        'code': _this4.code, 'id_type_document': _this4.id_type_doc,
-                        'marital_status': _this4.marital_status,
-                        'email': _this4.email, 'reference': _this4.reference,
-                        'id_district': _this4.district,
-                        'birthdate': __WEBPACK_IMPORTED_MODULE_1_moment_timezone___default()(__WEBPACK_IMPORTED_MODULE_1_moment_timezone___default()(_this4.birthdate, 'DD/MM/YYYY')).format('YYYY-MM-DD'),
-                        'id_customer_credit': _this4.id_customer_credit
-                    }).then(function (response) {
-                        me.clean_data();
-                        me.list_data(1);
-                        me.visible = 1;
-                        me.icon_save = 'fa fa-save';
-                        swal('Guardado!', 'El registro ha sido guardado con éxito.', 'success');
-                    }).catch(function (error) {
-                        console.log(error);
-                    });
-                } else if (result.dismiss === swal.DismissReason.cancel) {}
-            });
-        },
-        save_data: function save_data() {
-            var _this5 = this;
-
-            //val =1 guardar y empeñar
-            //val = 0 solo registrar cliente  
-            this.visible = 0;
-            var me = this;
-            me.icon_save_pledge = 'fa fa-spinner fa-spin';
-            if (this.validarData()) {
-                return;
-            }
-
-            swal({
-                title: 'Esta seguro de guardar la informacion?',
-                type: 'warning',
-                showCancelButton: true, confirmButtonColor: '#3085d6',
-                cancelButtonColor: '#d33', confirmButtonText: 'Aceptar!',
-                cancelButtonText: 'Cancelar', confirmButtonClass: 'btn btn-success',
-                cancelButtonClass: 'btn btn-danger', buttonsStyling: false,
-                reverseButtons: true
-            }).then(function (result) {
-                if (result.value) {
-                    axios.post('save_customer', {
-                        'nro_doc': _this5.nro_doc, 'name': _this5.name,
-                        'paternal_last_name': _this5.paternal_last_name,
-                        'maternal_last_name': _this5.maternal_last_name,
-                        'phone': _this5.phone, 'address': _this5.address,
-                        'id': _this5.id, 'sex': _this5.sex,
-                        'code': _this5.code, 'id_type_document': _this5.id_type_doc,
-                        'marital_status': _this5.marital_status,
-                        'email': _this5.email, 'reference': _this5.reference,
-                        'id_district': _this5.district,
-                        'birthdate': __WEBPACK_IMPORTED_MODULE_1_moment_timezone___default()(__WEBPACK_IMPORTED_MODULE_1_moment_timezone___default()(_this5.birthdate, 'DD/MM/YYYY')).format('YYYY-MM-DD'),
-                        'idcustomerpledge': _this5.id_customer_credit
-                    }).then(function (response) {
-                        me.midatax = [];
-                        me.midatax.push({ id: response.data, names: me.name, paternal_last_name: me.paternal_last_name, maternal_last_name: me.maternal_last_name });
-                        me.pledge(me.midatax[0]);
-                        me.icon_save_pledge = 'fa fa-save';
-                        swal('Guardado!', 'El registro ha sido guardado con éxito.', 'success');
-                    }).catch(function (error) {
-                        console.log(error);
-                    });
-                } else if (result.dismiss === swal.DismissReason.cancel) {}
-            });
-        },
         eliminar: function eliminar(id) {
-            var _this6 = this;
+            var _this2 = this;
 
             swal({
                 title: '¿Estas seguro de eliminar?',
@@ -27564,13 +27264,13 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
                 reverseButtons: true
             }).then(function (result) {
                 if (result.value) {
-                    var _me4 = _this6;
+                    var me = _this2;
                     axios.post('deleteCustomerCredit', {
                         'id': id
 
                     }).then(function (response) {
-                        _me4.listado = 1;
-                        _me4.list_data(1);
+                        me.listado = 1;
+                        me.list_data(1);
                         swal('Eliminado!', 'Su cliente ha sido eliminado.', 'success');
                     }).catch(function (error) {
                         console.log(error);
@@ -27578,28 +27278,13 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
                 } else if (result.dismiss === swal.DismissReason.cancel) {}
             });
         },
-        pledge: function pledge(midata) {
+        giveCredit: function giveCredit(midata) {
             var me = this;
             me.listadox = 3;
             this.visible = 0;
             this.id_customer_credit = midata.id_customer_credit;
             this.name_customer = midata.names + ' ' + midata.paternal_last_name + ' ' + midata.maternal_last_name;
             this.nro_doc = midata.number_doc;
-            var url = 'getDependenceParent';
-            axios.get(url).then(function (response) {
-                var respuesta = response.data;
-                me.arrayTypeProduct = respuesta.datax;
-            }).catch(function (error) {
-                console.log(error);
-            });
-
-            url = 'getWarehouse';
-            axios.get(url).then(function (response) {
-                var respuesta = response.data;
-                me.arrayWarehouse = respuesta.datax;
-            }).catch(function (error) {
-                console.log(error);
-            });
         },
         addCustomer: function addCustomer() {
             var me = this;
@@ -27653,15 +27338,16 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
             this.serie = "";
             this.term = 1;
             this.tea = 10, this.totalcapital = 0;
-            this.arrayDetailPledge = [];
-            this.totalcapital = 0;
+            this.arrayCreditDetail = [];
             this.totalInterest = 0;
             this.characteristic = "";
             this.serie = "";
             this.licence_plate = "";
             this.mounted = 0;
-            this.capital = 0;
-            this.term = 1;
+
+            this.capital = 500;
+            this.grace_day = 3;
+            this.amount_admin = "", this.rate_admin = 2, this.risk_center = 2, this.interest_rate = 10, this.apply_mora = 1, this.period_credit = "DIARIO", this.number_quota = 26, this.term = 1;
             this.interest = 0;
         },
         list_data: function list_data(page) {
@@ -27686,38 +27372,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         }).catch(function (error) {
             console.log(error);
         });
-    }), _defineProperty(_methods, 'get_type_business', function get_type_business() {
-        var url = 'get_product_program?id_customer=' + id_product;
-        axios.get(url).then(function (response) {
-            me.obtenerProgramas();
-            var respuesta = response.data;
-            var listactual = respuesta.datax;
-            for (var i = 0; i < me.listProgramx.length; i++) {
-                for (var j = 0; j < listactual.length; j++) {
-                    if (me.listProgramx[i].id_program == listactual[j].id_program) {
-                        me.listProgramx[i].check = true;
-                    }
-                }
-            }
-        }).catch(function (error) {
-            console.log(error);
-        });
-    }), _defineProperty(_methods, 'init', function init() {
-        //cargar actividades
-        var me = this;
-        me.listProgramx = [];
-        var url = 'getTypeDocument';
-        axios.get(url).then(function (response) {
-            var respuesta = response.data;
-            var lista = respuesta.datax;
-            for (var i = 0; i < lista.length; i++) {
-                me.listProgramx.push({ check: false, id_type_document: lista[i].id_type_document, id_product: '' });
-                console.log(me.listProgramx);
-            }
-        }).catch(function (error) {
-            console.log(error);
-        });
-    }), _methods),
+    }), _defineProperty(_methods, 'init', function init() {}), _methods),
 
     mounted: function mounted() {
         //    this.lista_add_client();
@@ -29351,7 +29006,7 @@ var render = function() {
                                 [
                                   _c("i", { staticClass: "fa fa-legal" }),
                                   _vm._v(
-                                    " OTORGAR PRÉSTAMO\n                                "
+                                    " OTORGAR CRÉDITO\n                                "
                                   )
                                 ]
                               ),
@@ -29387,380 +29042,7 @@ var render = function() {
                       ],
                       2
                     )
-                  ]),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    {
-                      staticClass: "modal fade",
-                      class: { mostrar: _vm.modalTicket },
-                      staticStyle: { display: "none" },
-                      attrs: {
-                        tabindex: "-1",
-                        role: "dialog",
-                        "aria-labelledby": "myModalLabel",
-                        "aria-hidden": "true"
-                      }
-                    },
-                    [
-                      _c(
-                        "div",
-                        {
-                          staticClass: "modal-dialog modal-lg",
-                          attrs: { role: "document" }
-                        },
-                        [
-                          _c("div", { staticClass: "modal-content" }, [
-                            _c(
-                              "div",
-                              {
-                                staticClass: "modal-header",
-                                staticStyle: { background: "#012D74" }
-                              },
-                              [
-                                _c(
-                                  "button",
-                                  {
-                                    staticClass: "close",
-                                    attrs: {
-                                      type: "button",
-                                      "aria-label": "Close"
-                                    },
-                                    on: {
-                                      click: function($event) {
-                                        return _vm.close_modal(1)
-                                      }
-                                    }
-                                  },
-                                  [
-                                    _c(
-                                      "span",
-                                      { attrs: { "aria-hidden": "true" } },
-                                      [_vm._v("×")]
-                                    )
-                                  ]
-                                ),
-                                _vm._v(" "),
-                                _vm._m(8)
-                              ]
-                            ),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "modal-body" }, [
-                              _c("div", { staticClass: "row" }, [
-                                _c(
-                                  "div",
-                                  {
-                                    staticClass:
-                                      "col-lg-12 col-md-12 col-sm-12 col-xs-12"
-                                  },
-                                  [
-                                    _c("div", { staticClass: "col-md-12" }, [
-                                      _c(
-                                        "div",
-                                        { staticClass: "sheet letter receipt" },
-                                        [
-                                          _c(
-                                            "div",
-                                            { staticClass: "content" },
-                                            [
-                                              _c(
-                                                "h3",
-                                                {
-                                                  staticClass:
-                                                    "company-name ng-binding"
-                                                },
-                                                [_vm._v("TUMI DE ORO")]
-                                              ),
-                                              _vm._v(" "),
-                                              _c(
-                                                "h4",
-                                                {
-                                                  staticClass:
-                                                    "branch-name ng-binding"
-                                                },
-                                                [_vm._v("Tingo María")]
-                                              ),
-                                              _vm._v(" "),
-                                              _c(
-                                                "h5",
-                                                {
-                                                  staticClass:
-                                                    "long-date ng-binding"
-                                                },
-                                                [
-                                                  _vm._v(
-                                                    "domingo, 20 de octubre de 2019"
-                                                  )
-                                                ]
-                                              ),
-                                              _vm._v(" "),
-                                              _c("p", {
-                                                staticClass:
-                                                  "receipt-header ng-binding ng-hide",
-                                                attrs: {
-                                                  "ng-show": "template.header"
-                                                }
-                                              }),
-                                              _vm._v(" "),
-                                              _c("hr"),
-                                              _vm._v(" "),
-                                              _c(
-                                                "div",
-                                                {
-                                                  staticClass: "ng-scope",
-                                                  attrs: { "ui-view": "" }
-                                                },
-                                                [
-                                                  _vm._m(9),
-                                                  _vm._v(" "),
-                                                  _c(
-                                                    "div",
-                                                    {
-                                                      staticClass:
-                                                        "info-group ng-scope"
-                                                    },
-                                                    [
-                                                      _c(
-                                                        "div",
-                                                        {
-                                                          staticClass: "field"
-                                                        },
-                                                        [
-                                                          _vm._v(
-                                                            "Cliente : " +
-                                                              _vm._s(
-                                                                _vm.name_customer
-                                                              )
-                                                          )
-                                                        ]
-                                                      )
-                                                    ]
-                                                  ),
-                                                  _vm._v(" "),
-                                                  _c(
-                                                    "div",
-                                                    {
-                                                      staticClass:
-                                                        "info-group ng-scope"
-                                                    },
-                                                    [
-                                                      _c(
-                                                        "div",
-                                                        {
-                                                          staticClass: "field"
-                                                        },
-                                                        [
-                                                          _vm._v(
-                                                            "Monto : S/ " +
-                                                              _vm._s(
-                                                                _vm.totalcapital
-                                                              )
-                                                          )
-                                                        ]
-                                                      )
-                                                    ]
-                                                  ),
-                                                  _vm._v(" "),
-                                                  _c(
-                                                    "div",
-                                                    {
-                                                      staticClass:
-                                                        "info-group ng-scope"
-                                                    },
-                                                    [
-                                                      _c(
-                                                        "div",
-                                                        {
-                                                          staticClass: "field"
-                                                        },
-                                                        [
-                                                          _vm._v(
-                                                            "Fecha de préstamo : " +
-                                                              _vm._s(
-                                                                _vm.date_init
-                                                              )
-                                                          )
-                                                        ]
-                                                      )
-                                                    ]
-                                                  ),
-                                                  _vm._v(" "),
-                                                  _c(
-                                                    "div",
-                                                    {
-                                                      staticClass:
-                                                        "info-group ng-scope"
-                                                    },
-                                                    [
-                                                      _c(
-                                                        "div",
-                                                        {
-                                                          staticClass: "field"
-                                                        },
-                                                        [
-                                                          _vm._v(
-                                                            "Fecha de vencimiento : " +
-                                                              _vm._s(
-                                                                _vm.date_end
-                                                              )
-                                                          )
-                                                        ]
-                                                      )
-                                                    ]
-                                                  ),
-                                                  _vm._v(" "),
-                                                  _c(
-                                                    "div",
-                                                    {
-                                                      staticClass:
-                                                        "info-group ng-scope"
-                                                    },
-                                                    [
-                                                      _c(
-                                                        "div",
-                                                        {
-                                                          staticClass: "field"
-                                                        },
-                                                        [
-                                                          _vm._v(
-                                                            "Interés : S/ " +
-                                                              _vm._s(
-                                                                _vm.totalInterest
-                                                              )
-                                                          )
-                                                        ]
-                                                      )
-                                                    ]
-                                                  ),
-                                                  _vm._v(" "),
-                                                  _c(
-                                                    "div",
-                                                    {
-                                                      staticClass:
-                                                        "info-group ng-scope"
-                                                    },
-                                                    [
-                                                      _c(
-                                                        "div",
-                                                        {
-                                                          staticClass: "field"
-                                                        },
-                                                        [
-                                                          _vm._v(
-                                                            "Periodo : " +
-                                                              _vm._s(_vm.period)
-                                                          )
-                                                        ]
-                                                      )
-                                                    ]
-                                                  ),
-                                                  _vm._v(" "),
-                                                  _c(
-                                                    "div",
-                                                    {
-                                                      staticClass:
-                                                        "info-group ng-scope"
-                                                    },
-                                                    [
-                                                      _c(
-                                                        "div",
-                                                        {
-                                                          staticClass: "field"
-                                                        },
-                                                        [
-                                                          _vm._v(
-                                                            "Plazo: " +
-                                                              _vm._s(_vm.term)
-                                                          )
-                                                        ]
-                                                      )
-                                                    ]
-                                                  ),
-                                                  _vm._v(" "),
-                                                  _c(
-                                                    "div",
-                                                    {
-                                                      staticClass:
-                                                        "info-group ng-scope"
-                                                    },
-                                                    [
-                                                      _c(
-                                                        "div",
-                                                        {
-                                                          staticClass: "field"
-                                                        },
-                                                        [_vm._v("Prendas")]
-                                                      ),
-                                                      _vm._v(" "),
-                                                      _c(
-                                                        "div",
-                                                        {
-                                                          staticClass: "value"
-                                                        },
-                                                        [
-                                                          _c(
-                                                            "ul",
-                                                            {
-                                                              staticClass:
-                                                                "item-list"
-                                                            },
-                                                            _vm._l(
-                                                              _vm.arrayDetailPledge,
-                                                              function(
-                                                                midata,
-                                                                index
-                                                              ) {
-                                                                return _c(
-                                                                  "li",
-                                                                  {
-                                                                    key: index,
-                                                                    staticClass:
-                                                                      "ng-binding ng-scope"
-                                                                  },
-                                                                  [
-                                                                    _vm._v(
-                                                                      "\n                                                                            " +
-                                                                        _vm._s(
-                                                                          midata.guaranty
-                                                                        ) +
-                                                                        "\n                                                                        "
-                                                                    )
-                                                                  ]
-                                                                )
-                                                              }
-                                                            ),
-                                                            0
-                                                          )
-                                                        ]
-                                                      )
-                                                    ]
-                                                  ),
-                                                  _vm._v(" "),
-                                                  _vm._m(10)
-                                                ]
-                                              ),
-                                              _vm._v(" "),
-                                              _c("p", {
-                                                staticClass:
-                                                  "receipt-footer ng-binding ng-hide",
-                                                attrs: {
-                                                  "ng-show": "template.footer"
-                                                }
-                                              })
-                                            ]
-                                          )
-                                        ]
-                                      )
-                                    ])
-                                  ]
-                                )
-                              ])
-                            ])
-                          ])
-                        ]
-                      )
-                    ]
-                  )
+                  ])
                 ])
               ]
             : _vm._e(),
@@ -29772,7 +29054,7 @@ var render = function() {
                   { staticClass: "box box-primary" },
                   [
                     _c("div", { staticClass: "box-header with-border" }, [
-                      _vm._m(11),
+                      _vm._m(8),
                       _vm._v(" "),
                       _c("div", { staticClass: "box-tools pull-right" }, [
                         _c("span", { staticClass: "label label-success" }, [
@@ -29782,11 +29064,11 @@ var render = function() {
                           )
                         ]),
                         _vm._v(" "),
-                        _vm._m(12)
+                        _vm._m(9)
                       ])
                     ]),
                     _vm._v(" "),
-                    _vm.listado == 0 ? [_vm._m(13)] : _vm._e(),
+                    _vm.listado == 0 ? [_vm._m(10)] : _vm._e(),
                     _vm._v(" "),
                     _vm.listado == 2
                       ? [
@@ -29894,7 +29176,7 @@ var render = function() {
                                   staticStyle: { "font-size": "12px" }
                                 },
                                 [
-                                  _vm._m(14),
+                                  _vm._m(11),
                                   _vm._v(" "),
                                   _c(
                                     "tbody",
@@ -29987,7 +29269,9 @@ var render = function() {
                                                 },
                                                 on: {
                                                   click: function($event) {
-                                                    return _vm.pledge(midata)
+                                                    return _vm.giveCredit(
+                                                      midata
+                                                    )
                                                   }
                                                 }
                                               },
@@ -30193,7 +29477,7 @@ var render = function() {
                 _c("div", { staticClass: "col-md-12" }, [
                   _c("div", { staticClass: "box box-primary" }, [
                     _c("div", { staticClass: "box-header with-border" }, [
-                      _vm._m(15),
+                      _vm._m(12),
                       _vm._v(" "),
                       _c("div", { staticClass: "box-tools pull-right" }, [
                         _c(
@@ -30224,7 +29508,7 @@ var render = function() {
                           )
                         ]),
                         _vm._v(" "),
-                        _vm._m(16)
+                        _vm._m(13)
                       ])
                     ]),
                     _vm._v(" "),
@@ -30239,7 +29523,7 @@ var render = function() {
                             staticStyle: { "font-size": "12px" }
                           },
                           [
-                            _vm._m(17),
+                            _vm._m(14),
                             _vm._v(" "),
                             _c(
                               "tbody",
@@ -30461,88 +29745,6 @@ var staticRenderFns = [
         }
       },
       [_c("i", { staticClass: "fa fa-life-ring" })]
-    )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "h4",
-      { staticClass: "modal-title", staticStyle: { color: "#FFFFFF" } },
-      [_c("i", { staticClass: "fa fa-plus" }), _vm._v(" AGREGAR PERSONAL")]
-    )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "info-group ng-scope" }, [
-      _c("div", { staticClass: "field" }, [_vm._v("Contrato No. 1")])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      {
-        staticClass: "balance ng-scope",
-        attrs: { "ng-hide": "isLoadingDetails" }
-      },
-      [
-        _c("table", { staticClass: "table table-condensed" }, [
-          _c("thead", [
-            _c("tr", [
-              _c("th", { staticClass: "date" }, [_vm._v("Fecha")]),
-              _vm._v(" "),
-              _c("th", [_vm._v("Monto")]),
-              _vm._v(" "),
-              _c("th", [_vm._v("Interés")]),
-              _vm._v(" "),
-              _c("th", { staticClass: "text-right" }, [_vm._v("Subtotal")])
-            ])
-          ]),
-          _vm._v(" "),
-          _c("tbody", [
-            _c(
-              "tr",
-              {
-                staticClass: "ng-scope",
-                attrs: { "ng-repeat": "operation in vm.operations" }
-              },
-              [
-                _c("td", { staticClass: "center date ng-binding" }, [
-                  _vm._v("19/10/19 12:09")
-                ]),
-                _vm._v(" "),
-                _c("td", { staticClass: "ng-binding" }, [_vm._v("S/ 200")]),
-                _vm._v(" "),
-                _c("td", { staticClass: "ng-binding" }, [_vm._v("S/ 20")]),
-                _vm._v(" "),
-                _c("td", { staticClass: "text-right ng-binding" }, [
-                  _vm._v("S/ 2")
-                ])
-              ]
-            )
-          ]),
-          _vm._v(" "),
-          _c("tfoot", [
-            _c("tr", [
-              _c("td", { staticClass: "date" }),
-              _vm._v(" "),
-              _c("td"),
-              _vm._v(" "),
-              _c("td", [_c("h4", [_vm._v("Total")])]),
-              _vm._v(" "),
-              _c("td", { staticClass: "text-right" }, [
-                _c("h4", { staticClass: "ng-binding" }, [_vm._v("S/220")])
-              ])
-            ])
-          ])
-        ])
-      ]
     )
   },
   function() {

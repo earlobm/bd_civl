@@ -31,6 +31,54 @@
                                                             </div>
                                                     </template>
                                                     <template v-if="listado==1">
+                                                        <div class="row">                                                            
+                                                            <div class="col-md-3">
+                                                                <div class="form-group">
+                                                                    <label for="sexo">Sucursal:</label>
+                                                                    <div class="input-group">
+                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-map-signs"></i></span>                                                                             
+                                                                                <select @change="getMercado($event.target.value)" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;" v-model="id_sucursal_edit">
+                                                                                    <option selected="selected" value="" >Seleccione</option>
+                                                                                    <option v-for="miselect in arraySucursal" :selected="miselect.id == id_sucursal_edit" :key="miselect.id" :value="miselect.id">{{ miselect.name}}</option>
+                                                                                </select>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <div class="form-group">
+                                                                    <label for="sexo">Mercado:</label>
+                                                                    <div class="input-group">
+                                                                        <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-map-signs"></i></span>                                                                              
+                                                                        <select class="form-control"  style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;" v-model="id_mercado_edit">
+                                                                            <option selected="selected" value="" >Seleccione</option>
+                                                                            <option v-for="miselect in arrayMercado" :selected="miselect.id == id_mercado_edit" :key="miselect.id" :value="miselect.id">{{ miselect.name}}</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <div class="form-group">
+                                                                    <label for="sexo">Promotor:</label>
+                                                                    <div class="input-group">
+                                                                        <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-map-signs"></i></span>                                                                              
+                                                                        <select class="form-control"  style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;" v-model="id_mercado_edit">
+                                                                            <option selected="selected" value="" >Seleccione</option>
+                                                                            <option v-for="miselect in arrayMercado" :selected="miselect.id == id_mercado_edit" :key="miselect.id" :value="miselect.id">{{ miselect.name}}</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <div class="form-group">
+                                                                    <label for="edad">FECHA DEL DIA:</label>
+                                                                    <div class="input-group">
+                                                                        <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-calendar "></i></span>
+                                                                        <date-picker v-model="date_creation" @dp-change="getResumenDia" :config="options" style="border-top-right-radius: 3px;border-bottom-right-radius: 3px;"></date-picker>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            
+                                                           </div> 
                                                         <div class="row">
                                                             <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
                                                                 <div class="input-group" style="margin-bottom: 15px;">

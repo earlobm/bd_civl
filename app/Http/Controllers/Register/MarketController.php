@@ -46,7 +46,7 @@ class MarketController extends Controller
             
     }
 
-    public function editMercado(Request $request){
+    public function edit_market(Request $request){
         $queyListEmploye="select mer.id_person,mer.date_creation,mer.id_branch_office,mer.id,mer.code,per.names, per.paternal_last_name,per.maternal_last_name, per.number_doc,su.name as name_sucursal,mer.name as name_mercado
         from tumi.branch_office su 
         inner join tumi.market mer on su.id=mer.id_branch_office 

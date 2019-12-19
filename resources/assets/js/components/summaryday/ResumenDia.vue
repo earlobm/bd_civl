@@ -33,8 +33,7 @@
                                                             </div>
                                                     </template>
                                                     <template v-if="listado==1">
-                                                        <div class="row"> 
-                                                            
+                                                        <div class="row">                                                            
                                                             <div class="col-md-4">
                                                                 <div class="form-group">
                                                                     <label for="sexo">Sucursal:</label>
@@ -47,20 +46,18 @@
                                                                     </div>
                                                                 </div>
                                                             </div>
-
                                                             <div class="col-md-4">
                                                                 <div class="form-group">
                                                                     <label for="sexo">Mercado:</label>
                                                                     <div class="input-group">
-                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-map-signs"></i></span>                                                                              
-                                                                                <select class="form-control"  style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;" v-model="id_mercado_edit">
-                                                                                    <option selected="selected" value="" >Seleccione</option>
-                                                                                    <option v-for="miselect in arrayMercado" :selected="miselect.id == id_mercado_edit" :key="miselect.id" :value="miselect.id">{{ miselect.name}}</option>
-                                                                                </select>
+                                                                        <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-map-signs"></i></span>                                                                              
+                                                                        <select class="form-control"  style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;" v-model="id_mercado_edit">
+                                                                            <option selected="selected" value="" >Seleccione</option>
+                                                                            <option v-for="miselect in arrayMercado" :selected="miselect.id == id_mercado_edit" :key="miselect.id" :value="miselect.id">{{ miselect.name}}</option>
+                                                                        </select>
                                                                     </div>
                                                                 </div>
-                                                            </div>       
- 
+                                                            </div>
                                                             <div class="col-md-4">
                                                                 <div class="form-group">
                                                                     <label for="edad">FECHA DEL DIA:</label>
@@ -71,7 +68,7 @@
                                                                 </div>
                                                             </div>
                                                             
-                                                            
+                                                           </div> 
                                                         <div class="row">
                                                             <div class="col-md-12">
                                                                 <div class="box-body table-responsive no-padding">
@@ -124,7 +121,7 @@
                                                         </div>
 
                                                                                                                                                                       
-                                                        </div>
+                                                        
                                                     </template>
                                                 </div>  
                                             </div>

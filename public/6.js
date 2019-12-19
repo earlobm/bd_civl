@@ -26566,7 +26566,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
-//
 
 
 
@@ -26693,19 +26692,18 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
             var me = this;
             me.pagination.current_page = page;
             //me.listado=1;
-            me.list_data(page);
+            me.ListData(page);
         },
-        editar: function editar(id) {
+        editData: function editData(id) {
             var me = this;
-            me.listado = 2;
-            //me.limpiar();
+            me.listado = 1;
+            me.limpiar();
             //me.get_branch();
             var url = 'getEditListbusiness?id=' + id;
             axios.get(url).then(function (response) {
                 var respuesta = response.data;
                 me.id = respuesta.datax[0].id;
                 me.name = respuesta.datax[0].name;
-                me.validarData();
             }).catch(function (error) {
                 console.log(error);
             });
@@ -26734,7 +26732,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
                     }).then(function (response) {
                         me.limpiar();
                         me.listado = 1;
-                        me.list_data(1);
+                        me.ListData(1);
                         swal('Guardado!', 'El registro ha sido guardado con éxito.', 'success');
                     }).catch(function (error) {
                         console.log(error);
@@ -26767,7 +26765,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
                     }).then(function (response) {
                         me.listado = 1;
-                        me.list_data(1);
+                        me.ListData(1);
                     }).catch(function (error) {
                         console.log(error);
                     });
@@ -26793,14 +26791,14 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
             this.names = "";
             this.id = -1;
         },
-        list_data: function list_data(page) {
+        ListData: function ListData(page) {
             var me = this;
             me.listado = 0;
-            var url = 'getlistBusiness';
+            var url = 'list_data?search=' + me.search_market + '&page=' + page;
             axios.get(url).then(function (response) {
                 var respuesta = response.data;
                 me.list_business = respuesta.datax;
-                //me.pagination= respuesta.pagination; 
+                me.pagination = respuesta.pagination;
                 me.listado = 1;
             }).catch(function (error) {
                 console.log(error);
@@ -26808,7 +26806,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         }
     },
     mounted: function mounted() {
-        this.list_data(1);
+        this.ListData(1);
     }
 });
 
@@ -26823,542 +26821,28 @@ var render = function() {
   return _c("main", { staticClass: "main" }, [
     _vm._m(0),
     _vm._v(" "),
-    _c("div", { staticClass: "box-body" }, [
+    _c("section", { staticClass: "content" }, [
       _c("div", { staticClass: "row" }, [
         _c("div", { staticClass: "col-md-12" }, [
-          _c("div", { staticClass: "container-fluid" }, [
-            _c("div", { staticClass: "card" }, [
-              _c("div", { staticClass: "card-body" }, [
-                _c("div", { staticClass: "row" }, [
-                  _c(
-                    "div",
-                    { staticClass: "col-lg-12 col-md-12 col-sm-12 col-xs-12" },
-                    [
-                      _c(
-                        "div",
-                        { staticClass: "box-body" },
-                        [
-                          _vm.listado == 0 ? [_vm._m(1)] : _vm._e(),
-                          _vm._v(" "),
-                          _vm.listado == 1
-                            ? [
+          _c("div", { staticClass: "box box-primary" }, [
+            _vm._m(1),
+            _vm._v(" "),
+            _c("div", { staticClass: "box-body" }, [
+              _c("div", { staticClass: "row" }, [
+                _c("div", { staticClass: "col-md-12" }, [
+                  _c("div", { staticClass: "container-fluid" }, [
+                    _c("div", { staticClass: "card" }, [
+                      _c("div", { staticClass: "card-body" }, [
+                        _c("div", { staticClass: "row" }, [
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "col-lg-12 col-md-12 col-sm-12 col-xs-12"
+                            },
+                            [
+                              _c("div", { staticClass: "box-body" }, [
                                 _c("div", { staticClass: "row" }, [
-                                  _c(
-                                    "div",
-                                    {
-                                      staticClass:
-                                        "col-xs-9 col-sm-9 col-md-9 col-lg-9"
-                                    },
-                                    [
-                                      _c(
-                                        "div",
-                                        {
-                                          staticClass: "input-group",
-                                          staticStyle: {
-                                            "margin-bottom": "15px"
-                                          }
-                                        },
-                                        [
-                                          _c("input", {
-                                            directives: [
-                                              {
-                                                name: "model",
-                                                rawName: "v-model",
-                                                value: _vm.search_market,
-                                                expression: "search_market"
-                                              }
-                                            ],
-                                            staticClass: "form-control",
-                                            staticStyle: {
-                                              "border-bottom-left-radius":
-                                                "3px",
-                                              "border-top-left-radius": "3px"
-                                            },
-                                            attrs: {
-                                              type: "text",
-                                              placeholder:
-                                                "Buscar por código o denominación del Mercado y/o datos del Personal."
-                                            },
-                                            domProps: {
-                                              value: _vm.search_market
-                                            },
-                                            on: {
-                                              keyup: function($event) {
-                                                if (
-                                                  !$event.type.indexOf("key") &&
-                                                  _vm._k(
-                                                    $event.keyCode,
-                                                    "enter",
-                                                    13,
-                                                    $event.key,
-                                                    "Enter"
-                                                  )
-                                                ) {
-                                                  return null
-                                                }
-                                                return _vm.list_data(1)
-                                              },
-                                              input: function($event) {
-                                                if ($event.target.composing) {
-                                                  return
-                                                }
-                                                _vm.search_market =
-                                                  $event.target.value
-                                              }
-                                            }
-                                          }),
-                                          _vm._v(" "),
-                                          _c(
-                                            "span",
-                                            { staticClass: "input-group-btn" },
-                                            [
-                                              _c(
-                                                "button",
-                                                {
-                                                  staticClass:
-                                                    "btn btn-search btn-flat",
-                                                  staticStyle: {
-                                                    "border-bottom-right-radius":
-                                                      "3px",
-                                                    "border-top-right-radius":
-                                                      "3px"
-                                                  },
-                                                  attrs: { type: "submit" },
-                                                  on: {
-                                                    click: function($event) {
-                                                      return _vm.list_data(1)
-                                                    }
-                                                  }
-                                                },
-                                                [
-                                                  _c("i", {
-                                                    staticClass: "fa fa-search"
-                                                  }),
-                                                  _vm._v(" Buscar")
-                                                ]
-                                              )
-                                            ]
-                                          )
-                                        ]
-                                      )
-                                    ]
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "div",
-                                    {
-                                      staticClass:
-                                        "col-xs-3 col-sm-3 col-md-3 col-lg-3"
-                                    },
-                                    [
-                                      _c(
-                                        "div",
-                                        {
-                                          staticClass: "btn-group",
-                                          staticStyle: {
-                                            float: "right",
-                                            "margin-left": "10px"
-                                          }
-                                        },
-                                        [
-                                          _c(
-                                            "button",
-                                            {
-                                              staticClass: "btn btn-add",
-                                              attrs: { type: "button" },
-                                              on: {
-                                                click: function($event) {
-                                                  return _vm.add_branch_office()
-                                                }
-                                              }
-                                            },
-                                            [
-                                              _c("i", {
-                                                staticClass: "fa fa-plus"
-                                              }),
-                                              _vm._v(
-                                                " AGREGAR TIPO DE NEGOCIO\n                                                                "
-                                              )
-                                            ]
-                                          )
-                                        ]
-                                      )
-                                    ]
-                                  )
-                                ]),
-                                _vm._v(" "),
-                                _c("div", { staticClass: "row" }, [
-                                  _c("div", { staticClass: "col-md-12" }, [
-                                    _c(
-                                      "div",
-                                      {
-                                        staticClass:
-                                          "box-body table-responsive no-padding"
-                                      },
-                                      [
-                                        _c(
-                                          "table",
-                                          {
-                                            staticClass: "table table-hover",
-                                            staticStyle: { "font-size": "12px" }
-                                          },
-                                          [
-                                            _vm._m(2),
-                                            _vm._v(" "),
-                                            _c(
-                                              "tbody",
-                                              _vm._l(
-                                                _vm.list_business,
-                                                function(midata, index) {
-                                                  return _c(
-                                                    "tr",
-                                                    { key: index },
-                                                    [
-                                                      _c(
-                                                        "td",
-                                                        {
-                                                          staticStyle: {
-                                                            "vertical-align":
-                                                              "middle",
-                                                            "text-align":
-                                                              "center"
-                                                          }
-                                                        },
-                                                        [
-                                                          _vm._v(
-                                                            _vm._s(index + 1)
-                                                          )
-                                                        ]
-                                                      ),
-                                                      _vm._v(" "),
-                                                      _c("td", {
-                                                        staticStyle: {
-                                                          "vertical-align":
-                                                            "middle",
-                                                          "text-align": "center"
-                                                        },
-                                                        domProps: {
-                                                          textContent: _vm._s(
-                                                            midata.name
-                                                          )
-                                                        }
-                                                      }),
-                                                      _vm._v(" "),
-                                                      _c(
-                                                        "td",
-                                                        {
-                                                          staticStyle: {
-                                                            "text-align":
-                                                              "center",
-                                                            "vertical-align":
-                                                              "middle"
-                                                          }
-                                                        },
-                                                        [
-                                                          _c(
-                                                            "button",
-                                                            {
-                                                              staticClass:
-                                                                "btn btn-editar btn-sm",
-                                                              attrs: {
-                                                                type: "button",
-                                                                "data-toggle":
-                                                                  "tooltip",
-                                                                title: "Editar"
-                                                              },
-                                                              on: {
-                                                                click: function(
-                                                                  $event
-                                                                ) {
-                                                                  return _vm.editar(
-                                                                    midata.id
-                                                                  )
-                                                                }
-                                                              }
-                                                            },
-                                                            [
-                                                              _c("i", {
-                                                                staticClass:
-                                                                  "fa fa-edit"
-                                                              })
-                                                            ]
-                                                          ),
-                                                          _vm._v(" "),
-                                                          _c(
-                                                            "button",
-                                                            {
-                                                              staticClass:
-                                                                "btn btn-eliminar btn-sm",
-                                                              attrs: {
-                                                                type: "button",
-                                                                "data-toggle":
-                                                                  "tooltip",
-                                                                title:
-                                                                  "Eliminar"
-                                                              },
-                                                              on: {
-                                                                click: function(
-                                                                  $event
-                                                                ) {
-                                                                  return _vm.eliminar(
-                                                                    midata.id
-                                                                  )
-                                                                }
-                                                              }
-                                                            },
-                                                            [
-                                                              _c("i", {
-                                                                staticClass:
-                                                                  "fa fa-trash"
-                                                              })
-                                                            ]
-                                                          )
-                                                        ]
-                                                      )
-                                                    ]
-                                                  )
-                                                }
-                                              ),
-                                              0
-                                            )
-                                          ]
-                                        )
-                                      ]
-                                    ),
-                                    _vm._v(" "),
-                                    _c(
-                                      "div",
-                                      {
-                                        staticClass:
-                                          "dataTables_paginate paging_simple_numbers",
-                                        staticStyle: {
-                                          float: "right !important"
-                                        }
-                                      },
-                                      [
-                                        _c("nav", [
-                                          _c(
-                                            "ul",
-                                            { staticClass: "pagination" },
-                                            [
-                                              _c(
-                                                "ul",
-                                                { staticClass: "pagination" },
-                                                [
-                                                  _vm.pagination.current_page >
-                                                  1
-                                                    ? _c(
-                                                        "li",
-                                                        {
-                                                          staticClass:
-                                                            "page-item"
-                                                        },
-                                                        [
-                                                          _c(
-                                                            "a",
-                                                            {
-                                                              staticClass:
-                                                                "page-link",
-                                                              attrs: {
-                                                                href: "#"
-                                                              },
-                                                              on: {
-                                                                click: function(
-                                                                  $event
-                                                                ) {
-                                                                  $event.preventDefault()
-                                                                  _vm.cambiarPagina(
-                                                                    Number(
-                                                                      _vm
-                                                                        .pagination
-                                                                        .current_page
-                                                                    ) - 1
-                                                                  )
-                                                                }
-                                                              }
-                                                            },
-                                                            [
-                                                              _c("i", {
-                                                                staticClass:
-                                                                  "fa fa-angle-left",
-                                                                staticStyle: {
-                                                                  color:
-                                                                    "#189900",
-                                                                  cursor:
-                                                                    "pointer"
-                                                                }
-                                                              })
-                                                            ]
-                                                          )
-                                                        ]
-                                                      )
-                                                    : _vm._e(),
-                                                  _vm._v(" "),
-                                                  _vm._l(
-                                                    _vm.pagesNumber,
-                                                    function(page) {
-                                                      return _c(
-                                                        "li",
-                                                        {
-                                                          key: page,
-                                                          staticClass:
-                                                            "page-item",
-                                                          class: [
-                                                            page ==
-                                                            _vm.isActived
-                                                              ? "active"
-                                                              : ""
-                                                          ]
-                                                        },
-                                                        [
-                                                          _c("a", {
-                                                            staticClass:
-                                                              "page-link",
-                                                            attrs: {
-                                                              href: "#"
-                                                            },
-                                                            domProps: {
-                                                              textContent: _vm._s(
-                                                                page
-                                                              )
-                                                            },
-                                                            on: {
-                                                              click: function(
-                                                                $event
-                                                              ) {
-                                                                $event.preventDefault()
-                                                                return _vm.cambiarPagina(
-                                                                  page
-                                                                )
-                                                              }
-                                                            }
-                                                          })
-                                                        ]
-                                                      )
-                                                    }
-                                                  ),
-                                                  _vm._v(" "),
-                                                  _vm.pagination.current_page <
-                                                  _vm.pagination.last_page
-                                                    ? _c(
-                                                        "li",
-                                                        {
-                                                          staticClass:
-                                                            "page-item"
-                                                        },
-                                                        [
-                                                          _c(
-                                                            "a",
-                                                            {
-                                                              staticClass:
-                                                                "page-link",
-                                                              attrs: {
-                                                                href: "#"
-                                                              },
-                                                              on: {
-                                                                click: function(
-                                                                  $event
-                                                                ) {
-                                                                  $event.preventDefault()
-                                                                  _vm.cambiarPagina(
-                                                                    Number(
-                                                                      _vm
-                                                                        .pagination
-                                                                        .current_page
-                                                                    ) + 1
-                                                                  )
-                                                                }
-                                                              }
-                                                            },
-                                                            [
-                                                              _c("i", {
-                                                                staticClass:
-                                                                  "fa fa-angle-right",
-                                                                staticStyle: {
-                                                                  color:
-                                                                    "#189900",
-                                                                  cursor:
-                                                                    "pointer"
-                                                                }
-                                                              })
-                                                            ]
-                                                          )
-                                                        ]
-                                                      )
-                                                    : _vm._e()
-                                                ],
-                                                2
-                                              )
-                                            ]
-                                          )
-                                        ])
-                                      ]
-                                    )
-                                  ])
-                                ])
-                              ]
-                            : _vm._e(),
-                          _vm._v(" "),
-                          _vm.listado == 2
-                            ? [
-                                _c("div", { staticClass: "row" }, [
-                                  _c("div", { staticClass: "col-md-12" }, [
-                                    _c(
-                                      "div",
-                                      {
-                                        staticClass: "btn-group",
-                                        staticStyle: { float: "right" }
-                                      },
-                                      [
-                                        _c(
-                                          "button",
-                                          {
-                                            staticClass: "btn btn-danger",
-                                            attrs: { type: "button" },
-                                            on: {
-                                              click: function($event) {
-                                                return _vm.volver()
-                                              }
-                                            }
-                                          },
-                                          [
-                                            _c("i", {
-                                              staticClass: "fa fa-close "
-                                            }),
-                                            _vm._v(
-                                              " CANCELAR\n                                                                "
-                                            )
-                                          ]
-                                        ),
-                                        _vm._v(" "),
-                                        _c(
-                                          "button",
-                                          {
-                                            staticClass: "btn btn-save",
-                                            attrs: { type: "button" },
-                                            on: {
-                                              click: function($event) {
-                                                return _vm.save_typebusiness()
-                                              }
-                                            }
-                                          },
-                                          [
-                                            _c("i", {
-                                              staticClass: "fa fa-save"
-                                            }),
-                                            _vm._v(
-                                              " GUARDAR\n                                                                "
-                                            )
-                                          ]
-                                        )
-                                      ]
-                                    )
-                                  ])
-                                ]),
-                                _vm._v(" "),
-                                _c("div", { staticClass: "row" }, [
-                                  _vm._m(3),
-                                  _vm._v(" "),
                                   _c("div", { staticClass: "col-md-12" }, [
                                     _c(
                                       "div",
@@ -27374,7 +26858,7 @@ var render = function() {
                                           "div",
                                           { staticClass: "input-group" },
                                           [
-                                            _vm._m(4),
+                                            _vm._m(2),
                                             _vm._v(" "),
                                             _c("input", {
                                               directives: [
@@ -27391,10 +26875,7 @@ var render = function() {
                                                   "3px",
                                                 "border-top-right-radius": "3px"
                                               },
-                                              attrs: {
-                                                type: "text",
-                                                placeholder: "Apellido Paterno"
-                                              },
+                                              attrs: { type: "text" },
                                               domProps: { value: _vm.name },
                                               on: {
                                                 input: function($event) {
@@ -27411,17 +26892,413 @@ var render = function() {
                                     )
                                   ])
                                 ])
-                              ]
-                            : _vm._e()
-                        ],
-                        2
-                      )
-                    ]
-                  )
+                              ])
+                            ]
+                          )
+                        ])
+                      ])
+                    ])
+                  ])
                 ])
               ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "box-footer" }, [
+              _c(
+                "button",
+                {
+                  staticClass: "btn btn-save",
+                  staticStyle: { float: "right", "margin-right": "10px" },
+                  attrs: { type: "button" },
+                  on: {
+                    click: function($event) {
+                      return _vm.save_typebusiness()
+                    }
+                  }
+                },
+                [
+                  _c("i", { staticClass: "fa fa-save" }),
+                  _vm._v(" GUARDAR\n                        ")
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "button",
+                {
+                  staticClass: "btn btn-danger",
+                  staticStyle: { float: "right", "margin-right": "10px" },
+                  attrs: { type: "button" },
+                  on: {
+                    click: function($event) {
+                      return _vm.volver()
+                    }
+                  }
+                },
+                [
+                  _c("i", { staticClass: "fa fa-close " }),
+                  _vm._v(" CANCELAR\n                        ")
+                ]
+              )
             ])
           ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "col-md-12" }, [
+          _c(
+            "div",
+            { staticClass: "box box-primary" },
+            [
+              _c("div", { staticClass: "box-header with-border" }, [
+                _vm._m(3),
+                _vm._v(" "),
+                _c("div", { staticClass: "box-tools pull-right" }, [
+                  _c("span", { staticClass: "label label-success" }, [
+                    _vm._v(
+                      "TOTAL DE REGISTROS: " + _vm._s(_vm.pagination.total)
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _vm._m(4)
+                ])
+              ]),
+              _vm._v(" "),
+              _vm.listado == 0 ? [_vm._m(5)] : _vm._e(),
+              _vm._v(" "),
+              _vm.listado == 1
+                ? [
+                    _c(
+                      "div",
+                      { staticClass: "box-body table-responsive no-padding" },
+                      [
+                        _c("div", { staticClass: "col-md-12" }, [
+                          _c(
+                            "div",
+                            {
+                              staticClass: "input-group",
+                              staticStyle: {
+                                "margin-bottom": "10px",
+                                "margin-top": "10px"
+                              }
+                            },
+                            [
+                              _c("input", {
+                                directives: [
+                                  {
+                                    name: "model",
+                                    rawName: "v-model",
+                                    value: _vm.search_market,
+                                    expression: "search_market"
+                                  }
+                                ],
+                                staticClass: "form-control",
+                                staticStyle: {
+                                  "border-bottom-left-radius": "3px",
+                                  "border-top-left-radius": "3px"
+                                },
+                                attrs: {
+                                  type: "text",
+                                  placeholder:
+                                    "Buscar por código o denominación del Mercado y/o datos del Personal..."
+                                },
+                                domProps: { value: _vm.search_market },
+                                on: {
+                                  keyup: function($event) {
+                                    if (
+                                      !$event.type.indexOf("key") &&
+                                      _vm._k(
+                                        $event.keyCode,
+                                        "enter",
+                                        13,
+                                        $event.key,
+                                        "Enter"
+                                      )
+                                    ) {
+                                      return null
+                                    }
+                                    return _vm.ListData(1)
+                                  },
+                                  input: function($event) {
+                                    if ($event.target.composing) {
+                                      return
+                                    }
+                                    _vm.search_market = $event.target.value
+                                  }
+                                }
+                              }),
+                              _vm._v(" "),
+                              _c("span", { staticClass: "input-group-btn" }, [
+                                _c(
+                                  "button",
+                                  {
+                                    staticClass: "btn btn-search btn-flat",
+                                    staticStyle: {
+                                      "border-bottom-right-radius": "3px",
+                                      "border-top-right-radius": "3px"
+                                    },
+                                    attrs: { type: "submit" },
+                                    on: {
+                                      click: function($event) {
+                                        return _vm.ListData(1)
+                                      }
+                                    }
+                                  },
+                                  [
+                                    _c("i", { staticClass: "fa fa-search" }),
+                                    _vm._v(" Buscar")
+                                  ]
+                                )
+                              ])
+                            ]
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c(
+                          "table",
+                          {
+                            staticClass: "table table-hover",
+                            staticStyle: { "font-size": "12px" }
+                          },
+                          [
+                            _vm._m(6),
+                            _vm._v(" "),
+                            _c(
+                              "tbody",
+                              _vm._l(_vm.list_business, function(
+                                midata,
+                                index
+                              ) {
+                                return _c("tr", { key: index }, [
+                                  _c(
+                                    "td",
+                                    {
+                                      staticStyle: {
+                                        "vertical-align": "middle",
+                                        "text-align": "center"
+                                      }
+                                    },
+                                    [_vm._v(_vm._s(index + 1))]
+                                  ),
+                                  _vm._v(" "),
+                                  _c("td", {
+                                    staticStyle: {
+                                      "vertical-align": "middle",
+                                      "text-align": "center"
+                                    },
+                                    domProps: {
+                                      textContent: _vm._s(midata.name)
+                                    }
+                                  }),
+                                  _vm._v(" "),
+                                  _c(
+                                    "td",
+                                    {
+                                      staticStyle: {
+                                        "text-align": "center",
+                                        "vertical-align": "middle"
+                                      }
+                                    },
+                                    [
+                                      _c(
+                                        "button",
+                                        {
+                                          staticClass: "btn btn-editar btn-sm",
+                                          attrs: {
+                                            type: "button",
+                                            "data-toggle": "tooltip",
+                                            title: "Editar"
+                                          },
+                                          on: {
+                                            click: function($event) {
+                                              return _vm.editData(midata.id)
+                                            }
+                                          }
+                                        },
+                                        [
+                                          _c("i", {
+                                            staticClass: "fa fa-pencil"
+                                          })
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "button",
+                                        {
+                                          staticClass:
+                                            "btn btn-eliminar btn-sm",
+                                          attrs: {
+                                            type: "button",
+                                            "data-toggle": "tooltip",
+                                            title: "Eliminar"
+                                          },
+                                          on: {
+                                            click: function($event) {
+                                              return _vm.eliminar(midata.id)
+                                            }
+                                          }
+                                        },
+                                        [
+                                          _c("i", {
+                                            staticClass: "fa fa-trash"
+                                          })
+                                        ]
+                                      )
+                                    ]
+                                  )
+                                ])
+                              }),
+                              0
+                            )
+                          ]
+                        )
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "box-footer" }, [
+                      _c("div", { staticClass: "col-md-6" }),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        {
+                          staticClass: "col-md-6",
+                          staticStyle: {
+                            "margin-top": "-40px",
+                            "margin-bottom": "-45px"
+                          }
+                        },
+                        [
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "dataTables_paginate paging_simple_numbers",
+                              staticStyle: { float: "right !important" }
+                            },
+                            [
+                              _c("nav", [
+                                _c("ul", { staticClass: "pagination" }, [
+                                  _c(
+                                    "ul",
+                                    { staticClass: "pagination" },
+                                    [
+                                      _vm.pagination.current_page > 1
+                                        ? _c(
+                                            "li",
+                                            { staticClass: "page-item" },
+                                            [
+                                              _c(
+                                                "a",
+                                                {
+                                                  staticClass: "page-link",
+                                                  attrs: { href: "#" },
+                                                  on: {
+                                                    click: function($event) {
+                                                      $event.preventDefault()
+                                                      _vm.cambiarPagina(
+                                                        Number(
+                                                          _vm.pagination
+                                                            .current_page
+                                                        ) - 1
+                                                      )
+                                                    }
+                                                  }
+                                                },
+                                                [
+                                                  _c("i", {
+                                                    staticClass:
+                                                      "fa fa-angle-left",
+                                                    staticStyle: {
+                                                      color: "#189900",
+                                                      cursor: "pointer"
+                                                    }
+                                                  })
+                                                ]
+                                              )
+                                            ]
+                                          )
+                                        : _vm._e(),
+                                      _vm._v(" "),
+                                      _vm._l(_vm.pagesNumber, function(page) {
+                                        return _c(
+                                          "li",
+                                          {
+                                            key: page,
+                                            staticClass: "page-item",
+                                            class: [
+                                              page == _vm.isActived
+                                                ? "active"
+                                                : ""
+                                            ]
+                                          },
+                                          [
+                                            _c("a", {
+                                              staticClass: "page-link",
+                                              attrs: { href: "#" },
+                                              domProps: {
+                                                textContent: _vm._s(page)
+                                              },
+                                              on: {
+                                                click: function($event) {
+                                                  $event.preventDefault()
+                                                  return _vm.cambiarPagina(page)
+                                                }
+                                              }
+                                            })
+                                          ]
+                                        )
+                                      }),
+                                      _vm._v(" "),
+                                      _vm.pagination.current_page <
+                                      _vm.pagination.last_page
+                                        ? _c(
+                                            "li",
+                                            { staticClass: "page-item" },
+                                            [
+                                              _c(
+                                                "a",
+                                                {
+                                                  staticClass: "page-link",
+                                                  attrs: { href: "#" },
+                                                  on: {
+                                                    click: function($event) {
+                                                      $event.preventDefault()
+                                                      _vm.cambiarPagina(
+                                                        Number(
+                                                          _vm.pagination
+                                                            .current_page
+                                                        ) + 1
+                                                      )
+                                                    }
+                                                  }
+                                                },
+                                                [
+                                                  _c("i", {
+                                                    staticClass:
+                                                      "fa fa-angle-right",
+                                                    staticStyle: {
+                                                      color: "#189900",
+                                                      cursor: "pointer"
+                                                    }
+                                                  })
+                                                ]
+                                              )
+                                            ]
+                                          )
+                                        : _vm._e()
+                                    ],
+                                    2
+                                  )
+                                ])
+                              ])
+                            ]
+                          )
+                        ]
+                      )
+                    ])
+                  ]
+                : _vm._e()
+            ],
+            2
+          )
         ])
       ])
     ])
@@ -27432,26 +27309,72 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "box-header with-border" }, [
-      _c("section", { staticClass: "content-header" }, [
-        _c("h3", { staticClass: "box-title" }, [
-          _c("strong", [_vm._v(" \n                TIPO DE NEGOCIO")])
-        ]),
-        _vm._v(" "),
-        _c("ol", { staticClass: "breadcrumb" }, [
-          _c("li", [
-            _c("a", { attrs: { href: "#" } }, [
-              _c("i", { staticClass: "fa fa-database" }),
-              _vm._v("Registro")
-            ])
-          ]),
-          _vm._v(" "),
-          _c("li", { staticClass: "active" }, [_vm._v("Negocio")])
-        ])
+    return _c("section", { staticClass: "content-header" }, [
+      _c("h1", [
+        _vm._v("\n          Tipo de Negocio\n          "),
+        _c("small", [_vm._v("Registro")])
       ]),
       _vm._v(" "),
-      _c("div", { staticClass: "box-tools pull-right" })
+      _c("ol", { staticClass: "breadcrumb" }, [
+        _c("li", [
+          _c("a", { attrs: { href: "#" } }, [
+            _c("i", { staticClass: "fa fa-dashboard" }),
+            _vm._v(" Mantenimiento")
+          ])
+        ]),
+        _vm._v(" "),
+        _c("li", { staticClass: "active" }, [_vm._v("Tipo de Negocio")])
+      ])
     ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "box-header with-border" }, [
+      _c("h1", { staticClass: "box-title" }, [
+        _c("i", { staticClass: "fa fa-plus" }),
+        _vm._v(" Gestión de Tipo de Negocio\n                        ")
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "span",
+      {
+        staticClass: "input-group-addon",
+        staticStyle: {
+          "border-bottom-left-radius": "3px",
+          "border-top-left-radius": "3px"
+        }
+      },
+      [_c("i", { staticClass: "fa fa-shopping-cart" })]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("h1", { staticClass: "box-title" }, [
+      _c("i", { staticClass: "fa fa-list" }),
+      _vm._v(" Lista de Clientes\n                        ")
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "button",
+      {
+        staticClass: "btn btn-box-tool",
+        attrs: { type: "button", "data-widget": "collapse" }
+      },
+      [_c("i", { staticClass: "fa fa-minus" })]
+    )
   },
   function() {
     var _vm = this
@@ -27460,9 +27383,7 @@ var staticRenderFns = [
     return _c("div", { attrs: { align: "center" } }, [
       _c("img", {
         attrs: { src: "img/loadx.gif", alt: "technoserve", align: "middle" }
-      }),
-      _vm._v(" "),
-      _c("p", [_vm._v("Cargando...")])
+      })
     ])
   },
   function() {
@@ -27508,33 +27429,6 @@ var staticRenderFns = [
           )
         ])
       ]
-    )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-md-12" }, [
-      _c("legend", { staticStyle: { "font-size": "16px" } }, [
-        _c("i", { staticClass: "ion ion-edit" }),
-        _c("strong", [_vm._v(" DATOS DEL TIPO DE NEGOCIO")])
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "span",
-      {
-        staticClass: "input-group-addon",
-        staticStyle: {
-          "border-bottom-left-radius": "3px",
-          "border-top-left-radius": "3px"
-        }
-      },
-      [_c("i", { staticClass: "fa fa-user" })]
     )
   }
 ]
