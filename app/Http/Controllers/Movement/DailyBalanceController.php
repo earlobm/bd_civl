@@ -30,14 +30,14 @@ class DailyBalanceController extends Controller
     }
 
     public function getListDailyBalance(Request $request){
-       
-        //$id_pledge=$request->id_pledge;
-        //$myfecha="2019-11-24";
-      
+
+        $id_branch_office=$request->id_branch_office;
         $marketx=$request->market;
+        $id_promoter=$request->id_promoter;
         $myfecha=$request->date_now;
-        $sqlx=" call daily_balance('$myfecha') ";
-        //$sqlx=" call daily_balance('$id_branch_office','$marketx','$id_promoter','$myfecha','$namex') ";
+        $namex=$request->search;
+      
+        $sqlx=" call daily_balance('$id_branch_office','$marketx','$id_promoter','$namex','$myfecha') ";
         $datax=DB::select($sqlx);
           return [
               'datax'=>$datax,
@@ -47,71 +47,45 @@ class DailyBalanceController extends Controller
     }
  
  
-    public function downloadDayliCollection(Request $request){
+    public function downloadPdf(Request $request){
         //obteniendo los datos de la compañia
         
-        $sqltotal="select * from company";
-        $total=DB::select($sqltotal);
-        $t = json_decode(json_encode($total), true);
-        $name_company=$t[0]['name_company'];
-        $name_company1=$t[0]['name_company1'];
-        $ruc=$t[0]['ruc'];
-        $address=$t[0]['address'];
-        $phone=$t[0]['phone'];
-        $phrase=$t[0]['phrase'];
-        $url_logo=$t[0]['url_logo'];
-        //obteniendo los clientes
+        $id_branch_office=$request->id_branch_office;
+        $marketx=$request->market;
         $id_promoter=$request->id_promoter;
-        $date_register=$request->date_register;
-        $date_pretty=$request->date_pretty;
+        $myfecha=$request->date_now;
+        $namex=$request->search;
 
-        $sqlx=" call daily_collection_print($id_promoter,'$date_register') ";
+        $date_pretty=$request->date_pretty;
+        
+      
+        $sqlx=" call daily_balance('$id_branch_office','$marketx','$id_promoter','$namex','$myfecha') ";
+        
         $listCust=DB::select($sqlx);
         $listCustomer = json_decode(json_encode($listCust), true);
         
-
-        $page_format = array(
-            'MediaBox' => array ('llx' => 0, 'lly' => 0, 'urx' => 75, 'ury' => 180), 
-            'Dur' => 3,  'trans' => array( 'D' => 1.5,  'S' => 'Split','Dm' => 'V','M' => 'O' ), 
-            'PZ' => 1, 
-        ); 
-        
-        //sumar desembolso  o monto
-        $sumaMonto=0;
-        $sumaMora=0;
-        foreach ($listCustomer as $key => $value) {
-            $sumaMonto += $value['monto'];
-            $sumaMora += $value['mora'];
-          }
         //fin de suma
 
-        PDF::SetTitle('Comprobante El Tumi');
+        PDF::SetTitle('Balance Diario');
         PDF::SetFont('helvetica', '', 9);
-        PDF::AddPage('P', 'A4', false, false); 
+        PDF::AddPage('L', 'A4', false, false); 
         //PDF::Write(0, 'COBRANZA DIARIA', '', 0, 'C', true, 0, false, false, 0);
          // $urlx = url('/img/logo-tumi.png');
           $urlx = storage_path().'/logo-tumi.png';
           // Storage::put('logo-tumi.png', $contents);
          // Storage::put('logo-tumi.png', $contents);
            $html = '
-           <h3 style="text-align:center"><u>COBRANZA DIARIA</u></h3>
            <table cellspacing="0" cellpadding="1" border="0">
                 <tr>
                     <td rowspan="4" style="width:80px"><img  style="width:60px; height:60px;" src="'.$urlx.'" alt="technoserve"  ></td>
-                    <td style="width:130px"><b>Representante: </b></td>
-                    <td><b>Sucursal : </b>'.$listCustomer[0]['sucursal'].' </td>
-                    <td><b>Fecha : </b> '.$date_pretty.'</td>
+                    <td style="width:130px"><b>BALANCE DIARIO </b></td>
+                    <td style="width:130px"><b> </b></td>
                 </tr>
-                <tr>
-                    <td style="width:130px" >'.$listCustomer[0]['promotor'].'</td>
-                    <td><b>Mora: </b> '.$sumaMora.'</td>
-                    <td><b>Mercado: </b> '.$listCustomer[0]['mercado'].'</td>
+                 <tr>
+                    <td style="width:130px" >Fecha: '.$date_pretty.' </td>
+                    <td><b> </b> </td>
                 </tr>
-                <tr>
-                    <td><b>Total de prestamos: </b> '.count($listCustomer).'</td>
-                    <td><b>Capital : </b>'.$sumaMonto.'</td>
-                    <td><b>Porcentaje de cobro : </b>'.round($listCustomer[0]['porcentaje'],0).'%</td>
-                </tr>
+             
             </table>
             ';
         $html .= '<br /><br /><br /><br />
@@ -119,18 +93,19 @@ class DailyBalanceController extends Controller
                 <table cellspacing="0" cellpadding="2" border="1" >
                     <thead >                                   
                         <tr style="background-color:#F4F2F1;color:#2A2828;">
-                            <th style="vertical-align: middle;">CODIGO</th>
-                            <th style="vertical-align: middle;width:100px">NOMBRES</th>
-                            <th style="vertical-align: middle;">FECHA DE PRÉSTAMO</th>
-                            <th style="vertical-align: middle;">FECHA VENCE</th>
-                            <th style="vertical-align: middle;width:35px">DIAS POR &nbsp;&nbsp;COBRAR</th>
-                            <th style="vertical-align: middle;width:40px">MONTO</th>
-                            <th style="vertical-align: middle;">MONTO TOTAL</th>
-                            <th style="vertical-align: middle;width:40px">TASA</th>
+                            <th style="vertical-align: middle;">MERCADO</th>
+                            <th style="vertical-align: middle;width:130px">PROMOTOR</th>
+                            <th style="vertical-align: middle;">TOTAL</th>
+                            <th style="vertical-align: middle;">PRESTAMO</th>
+                            <th style="vertical-align: middle;width:35px">COBRO</th>
+                            <th style="vertical-align: middle;width:40px">GASTOS ADMIN</th>
+                            <th style="vertical-align: middle;">CENTRAL DE RIESGO</th>
                             <th style="vertical-align: middle;width:40px">MORA</th>
-                            <th style="vertical-align: middle;">SALDO</th>
-                            <th style="vertical-align: middle;width:35px">CUOTA</th>
-                            <th style="vertical-align: middle;width:35px">PAGO</th>
+                            <th style="vertical-align: middle;width:60px">SOBRANTE</th>
+                            <th style="vertical-align: middle;">FALTANTE</th>
+                            <th style="vertical-align: middle;width:60px">ADELANTO FALTANTE</th>
+                            <th style="vertical-align: middle;width:60px">T.ENTREGADO</th>
+                            <th style="vertical-align: middle;width:60px">PANDERO</th>
                         </tr> 
                     </thead>
                     <tbody>
@@ -138,29 +113,27 @@ class DailyBalanceController extends Controller
                 ';
                 $rows="";
                 foreach ($listCustomer as $key => $value) {
-                         $code=$value['code'];
-                         $html .= '<tr  >';
-
-                         $html .= '<td style="vertical-align: middle;" >'.$value['code'].'</td>';
-                         $html .= '<td style="vertical-align: middle;width:100px" >'.$value['nombres'].'</td>';
-                         $html .= '<td style="vertical-align: middle;" >'.$value['fecha_prestamo'].'</td>';
-                         $html .= '<td style="vertical-align: middle;" >'.$value['fecha_vencimiento'].'</td>';
-                         $html .= '<td style="vertical-align: middle;width:35px;text-align:center" >'.$value['dias_x_cobrar'].'</td>';
-                         $html .= '<td style="vertical-align: middle;width:40px;text-align:right" >'.$value['monto'].'</td>';
-                         $html .= '<td style="vertical-align: middle;text-align:right" >'.$value['monto_total'].'</td>';
-                         $html .= '<td style="vertical-align: middle;width:40px" >'.$value['tasa'].'</td>';
-                         $html .= '<td style="vertical-align: middle;width:40px;text-align:right" >'.$value['mora'].'</td>';
-                         $html .= '<td style="vertical-align: middle;text-align:right" >'.$value['saldo'].'</td>';
-                         $html .= '<td style="vertical-align: middle;width:35px;text-align:right" >'.$value['cuota'].'</td>';
-                         $html .= '<td style="vertical-align: middle;width:35px;text-align:right" >'.$value['pago'].'</td>';
-                         
+                        
+                         $html .= '<tr>';
+                         $html .= '<td style="vertical-align: middle;" >'.$value['mercado'].'</td>';
+                         $html .= '<td style="vertical-align: middle;width:130px" >'.$value['nombres'].'</td>';
+                         $html .= '<td style="vertical-align: middle;text-align:right" >'.$value['total'].'</td>';
+                         $html .= '<td style="vertical-align: middle;text-align:right" >'.$value['total_prestamo'].'</td>';
+                         $html .= '<td style="vertical-align: middle;width:35px;text-align:right" >'.$value['total_cobro'].'</td>';
+                         $html .= '<td style="vertical-align: middle;width:40px;text-align:right" >'.$value['total_gasto_admin'].'</td>';
+                         $html .= '<td style="vertical-align: middle;text-align:right" >'.$value['central_riesgo'].'</td>';
+                         $html .= '<td style="vertical-align: middle;text-align:right;width:40px" >'.$value['total_mora'].'</td>';
+                         $html .= '<td style="vertical-align: middle;width:60px;text-align:right" >'.$value['total_sobrante'].'</td>';
+                         $html .= '<td style="vertical-align: middle;text-align:right" >'.$value['total_faltante'].'</td>';
+                         $html .= '<td style="vertical-align: middle;width:60px;text-align:right" >'.$value['adelanto_faltante'].'</td>';
+                         $html .= '<td style="vertical-align: middle;width:60px;text-align:right" >'.$value['total_entregado'].'</td>';
+                         $html .= '<td style="vertical-align: middle;width:60px;text-align:right" >'.$value['pandero'].'</td>';
                          $html .= '</tr>';
                 }
-              $html .='                    
-                            </tbody>
-                        </table>';  
+              $html .='</tbody>
+                    </table>';  
         PDF::writeHTML($html, true, 0, true, 0);
-        PDF::Output('hello_world.pdf');
+        PDF::Output('Balance_Diario.pdf');
          
     }
   

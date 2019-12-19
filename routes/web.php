@@ -69,6 +69,7 @@ Route::get('/getListaEmpleadoList', 'Register\EmployeeController@list_employee')
 //credit
 Route::get('/getListDailyCollection', 'Movement\DailyCollectionController@getListDailyCollection'); 
 Route::get('/getListDailyBalance', 'Movement\DailyBalanceController@getListDailyBalance'); 
+Route::get('/downloadDayliBalance', 'Movement\DailyBalanceController@downloadPdf'); 
 
 //resumenDay
 Route::get('/getListaResumenDay', 'Register\AmountDayController@getListaResumenDay');

@@ -57,7 +57,7 @@ Vue.component('dailybalance',() => System.import('./components/operation/DailyBa
 const app = new Vue({
     el: '#app',
     data :{
-        menu : 100,
+        menu : 102,
         idanio:211,
         ruta:'http://localhost:81/poi/public'
        // menu : 11

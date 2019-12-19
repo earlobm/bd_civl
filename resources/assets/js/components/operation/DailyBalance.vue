@@ -89,7 +89,7 @@
                                  
                                 <div class="col-md-10">
                                         <div class="input-group" style="margin-bottom: 10px;margin-top: 10px;">
-                                            <input type="text"  v-model="search" @keyup.enter="list_data(1)"  class="form-control" placeholder="buscar por dni o nombres..." style="border-bottom-left-radius: 3px; border-top-left-radius: 3px;">
+                                            <input type="text"  v-model="search" @keyup.enter="list_data(1)"  class="form-control" placeholder="Buscar por nombres de promotor..." style="border-bottom-left-radius: 3px; border-top-left-radius: 3px;">
                                             <span class="input-group-btn">
                                                 <button type="submit" @click="list_data(1)"  class="btn btn-search btn-flat" style="border-bottom-right-radius: 3px; border-top-right-radius: 3px;"><i class="fa fa-search"></i> BUSCAR</button>
                                             </span>
@@ -98,7 +98,7 @@
                                 <div class="col-md-2">
                                         <div class="input-group" style="margin-bottom: 10px;margin-top: 10px;">
                                             <span class="input-group-btn">
-                                                <button type="submit" @click="downloadDayliCollection(1)"  class="btn btn-block btn-danger" data-toggle="tooltip" title="Descargue en formato PDF" style="border-bottom-right-radius: 3px; border-top-right-radius: 3px;"><i class="fa fa-file-pdf-o"></i> DESCARGAR</button>
+                                                <button type="submit" @click="downloadPdf()"  class="btn btn-block btn-danger" data-toggle="tooltip" title="Descargue en formato PDF" style="border-bottom-right-radius: 3px; border-top-right-radius: 3px;"><i class="fa fa-file-pdf-o"></i> DESCARGAR</button>
                                             </span>
                                         </div>                                               
                                 </div>
@@ -106,7 +106,7 @@
                                     <thead style="background: rgb(32, 32, 32);color: #fff;">                                                                                   
                                         <tr>  
                                             <th style="vertical-align: middle;">MERCADO</th>
-                                            <th style="vertical-align: middle;">NOMBRES</th>
+                                            <th style="vertical-align: middle;">PROMOTOR</th>
                                             <th style="vertical-align: middle;">TOTAL</th>
                                             <th style="vertical-align: middle;">PRESTAMO</th>
                                             <th style="vertical-align: middle;">COBRO</th>
@@ -197,33 +197,7 @@
          components: {
             datePicker,moment
         },
-        computed:{
-            isActived: function(){
-				return this.pagination.current_page;
-			},
-			//Calcula los elementos de la paginación
-			pagesNumber: function() {
-				if(!this.pagination.to) {
-					return [];
-				}
-
-				var from = this.pagination.current_page - this.offset; 
-				if(from < 1) {
-					from = 1;
-				}
-				var to = from + (this.offset * 2); 
-				if(to >= this.pagination.last_page){
-					to = this.pagination.last_page;
-				}  
-				var pagesArray = [];
-				while(from <= to) {
-					pagesArray.push(from);
-					from++;
-				}
-				return pagesArray;             
-
-			}
-        },
+       
         methods : { 
             getEmployee(id){
                 let me=this;
@@ -274,40 +248,28 @@
                 });
             },
             sumTotal(){
-                      this.totalcapital=0;
-                      this.totalInterest=0;
-                       for(var i=0;i<this.arrayDetailPledge.length;i++) 
-                        {
-                            this.totalcapital =  Number(this.totalcapital)+Number(this.arrayDetailPledge[i].capital);
-                            this.totalInterest =  Number(this.totalInterest)+Number(this.arrayDetailPledge[i].interest);
-                            
-                        }
+                this.totalcapital=0;
+                this.totalInterest=0;
+                for(var i=0;i<this.arrayDetailPledge.length;i++) 
+                {
+                    this.totalcapital =  Number(this.totalcapital)+Number(this.arrayDetailPledge[i].capital);
+                    this.totalInterest =  Number(this.totalInterest)+Number(this.arrayDetailPledge[i].interest);
+                    
+                }
                    
             },  
-            cambiarPagina(page){
-				let me = this;				
-				me.pagination.current_page = page;
-                //me.listado=1;
-				me.list_data(page);
+            downloadPdf(){    
+                //if(this.id_promoter==''){alert('Seleccione promotor');return;}     
+               let me=this;
+               var date_pretty= moment(moment(this.date_register, 'DD/MM/YYYY')).format('DD/MM/YYYY') ;     
                 
-            },
-           
-           
-            downloadDayliCollection(){    
-                if(this.id_promoter==''){alert('Seleccione promotor');return;}     
-                var fechax= moment(moment(this.date_register, 'DD/MM/YYYY')).format('YYYY-MM-DD') ;     
-                var date_pretty= moment(moment(this.date_register, 'DD/MM/YYYY')).format('DD/MM/YYYY') ;     
-                var url= 'downloadDayliCollection?id_promoter='+this.id_promoter+'&date_register='+fechax+'&date_pretty='+date_pretty;
-              
+                var url= 'downloadDayliBalance?search='+me.search+'&id_branch_office='+me.id_branch_office+
+                '&market='+me.id_market_edit+'&id_promoter='+me.id_promoter+'&date_now='+
+                moment(moment(me.date_register, 'DD/MM/YYYY')).format('YYYY-MM-DD')+'&date_pretty='+date_pretty;
                 //window.location.href = url;
                 window.open(url, '_blank');  
             },
-            limpiar(){
-                this.errorInputActivity='form-group';
-                this.errorInputActivity2='form-group';
-                this.errors = {};
-                this.id=-1;
-            },
+           
             list_data(page){
                 let me=this;                      
                 me.listado=0; 

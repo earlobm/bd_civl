@@ -26647,32 +26647,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     components: {
         datePicker: __WEBPACK_IMPORTED_MODULE_2_vue_bootstrap_datetimepicker___default.a, moment: __WEBPACK_IMPORTED_MODULE_1_moment_timezone___default.a
     },
-    computed: {
-        isActived: function isActived() {
-            return this.pagination.current_page;
-        },
-        //Calcula los elementos de la paginación
-        pagesNumber: function pagesNumber() {
-            if (!this.pagination.to) {
-                return [];
-            }
 
-            var from = this.pagination.current_page - this.offset;
-            if (from < 1) {
-                from = 1;
-            }
-            var to = from + this.offset * 2;
-            if (to >= this.pagination.last_page) {
-                to = this.pagination.last_page;
-            }
-            var pagesArray = [];
-            while (from <= to) {
-                pagesArray.push(from);
-                from++;
-            }
-            return pagesArray;
-        }
-    },
     methods: {
         getEmployee: function getEmployee(id) {
             var me = this;
@@ -26726,28 +26701,14 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
                 this.totalInterest = Number(this.totalInterest) + Number(this.arrayDetailPledge[i].interest);
             }
         },
-        cambiarPagina: function cambiarPagina(page) {
+        downloadPdf: function downloadPdf() {
+            //if(this.id_promoter==''){alert('Seleccione promotor');return;}     
             var me = this;
-            me.pagination.current_page = page;
-            //me.listado=1;
-            me.list_data(page);
-        },
-        downloadDayliCollection: function downloadDayliCollection() {
-            if (this.id_promoter == '') {
-                alert('Seleccione promotor');return;
-            }
-            var fechax = __WEBPACK_IMPORTED_MODULE_1_moment_timezone___default()(__WEBPACK_IMPORTED_MODULE_1_moment_timezone___default()(this.date_register, 'DD/MM/YYYY')).format('YYYY-MM-DD');
             var date_pretty = __WEBPACK_IMPORTED_MODULE_1_moment_timezone___default()(__WEBPACK_IMPORTED_MODULE_1_moment_timezone___default()(this.date_register, 'DD/MM/YYYY')).format('DD/MM/YYYY');
-            var url = 'downloadDayliCollection?id_promoter=' + this.id_promoter + '&date_register=' + fechax + '&date_pretty=' + date_pretty;
 
+            var url = 'downloadDayliBalance?search=' + me.search + '&id_branch_office=' + me.id_branch_office + '&market=' + me.id_market_edit + '&id_promoter=' + me.id_promoter + '&date_now=' + __WEBPACK_IMPORTED_MODULE_1_moment_timezone___default()(__WEBPACK_IMPORTED_MODULE_1_moment_timezone___default()(me.date_register, 'DD/MM/YYYY')).format('YYYY-MM-DD') + '&date_pretty=' + date_pretty;
             //window.location.href = url;
             window.open(url, '_blank');
-        },
-        limpiar: function limpiar() {
-            this.errorInputActivity = 'form-group';
-            this.errorInputActivity2 = 'form-group';
-            this.errors = {};
-            this.id = -1;
         },
         list_data: function list_data(page) {
             var me = this;
@@ -27128,7 +27089,8 @@ var render = function() {
                                     },
                                     attrs: {
                                       type: "text",
-                                      placeholder: "buscar por dni o nombres..."
+                                      placeholder:
+                                        "Buscar por nombres de promotor..."
                                     },
                                     domProps: { value: _vm.search },
                                     on: {
@@ -27220,9 +27182,7 @@ var render = function() {
                                           },
                                           on: {
                                             click: function($event) {
-                                              return _vm.downloadDayliCollection(
-                                                1
-                                              )
+                                              return _vm.downloadPdf()
                                             }
                                           }
                                         },
@@ -27539,7 +27499,7 @@ var staticRenderFns = [
           ]),
           _vm._v(" "),
           _c("th", { staticStyle: { "vertical-align": "middle" } }, [
-            _vm._v("NOMBRES")
+            _vm._v("PROMOTOR")
           ]),
           _vm._v(" "),
           _c("th", { staticStyle: { "vertical-align": "middle" } }, [

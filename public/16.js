@@ -26637,8 +26637,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
-<<<<<<< HEAD
-=======
 //
 //
 //
@@ -26661,12 +26659,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
-//
-//
-//
-//
-//
->>>>>>> 415d03eae436d9728c4cb358a231349ae9a87bba
 
 
 
@@ -26893,7 +26885,6 @@ var render = function() {
                 "div",
                 { staticClass: "box box-primary" },
                 [
-<<<<<<< HEAD
                   _c("div", { staticClass: "box-header with-border" }, [
                     _vm._m(1),
                     _vm._v(" "),
@@ -26909,9 +26900,6 @@ var render = function() {
                   ]),
                   _vm._v(" "),
                   _vm.listado == 0 ? [_vm._m(3)] : _vm._e(),
-=======
-                  _vm.listado == 0 ? [_vm._m(1)] : _vm._e(),
->>>>>>> 415d03eae436d9728c4cb358a231349ae9a87bba
                   _vm._v(" "),
                   _vm.listado == 2
                     ? [
@@ -26930,7 +26918,7 @@ var render = function() {
                                   staticStyle: { "margin-top": "6px" }
                                 },
                                 [
-                                  _vm._m(2),
+                                  _vm._m(4),
                                   _vm._v(" "),
                                   _c(
                                     "div",
@@ -27075,7 +27063,7 @@ var render = function() {
                                                                         "input-group"
                                                                     },
                                                                     [
-                                                                      _vm._m(3),
+                                                                      _vm._m(5),
                                                                       _vm._v(
                                                                         " "
                                                                       ),
@@ -27240,7 +27228,7 @@ var render = function() {
                                                                         "input-group"
                                                                     },
                                                                     [
-                                                                      _vm._m(4),
+                                                                      _vm._m(6),
                                                                       _vm._v(
                                                                         " "
                                                                       ),
@@ -27405,7 +27393,7 @@ var render = function() {
                                                                         "input-group"
                                                                     },
                                                                     [
-                                                                      _vm._m(5),
+                                                                      _vm._m(7),
                                                                       _vm._v(
                                                                         " "
                                                                       ),
@@ -27531,7 +27519,7 @@ var render = function() {
                                                             "div",
                                                             {
                                                               staticClass:
-                                                                "col-md-2"
+                                                                "col-md-3"
                                                             },
                                                             [
                                                               _c(
@@ -27563,7 +27551,7 @@ var render = function() {
                                                                         "input-group"
                                                                     },
                                                                     [
-                                                                      _vm._m(6),
+                                                                      _vm._m(8),
                                                                       _vm._v(
                                                                         " "
                                                                       ),
@@ -27605,64 +27593,112 @@ var render = function() {
                                                             "div",
                                                             {
                                                               staticClass:
-                                                                "col-md-2"
+                                                                "col-md-10"
                                                             },
                                                             [
                                                               _c(
                                                                 "div",
                                                                 {
                                                                   staticClass:
-                                                                    "form-group",
+                                                                    "input-group",
                                                                   staticStyle: {
-                                                                    float:
-                                                                      "right"
+                                                                    "margin-bottom":
+                                                                      "10px",
+                                                                    "margin-top":
+                                                                      "10px"
                                                                   }
                                                                 },
                                                                 [
-                                                                  _c(
-                                                                    "label",
-                                                                    {
-                                                                      staticStyle: {
-                                                                        visibility:
-                                                                          "hidden"
-                                                                      },
-                                                                      attrs: {
-                                                                        for:
-                                                                          "date_register"
+                                                                  _c("input", {
+                                                                    directives: [
+                                                                      {
+                                                                        name:
+                                                                          "model",
+                                                                        rawName:
+                                                                          "v-model",
+                                                                        value:
+                                                                          _vm.search,
+                                                                        expression:
+                                                                          "search"
                                                                       }
+                                                                    ],
+                                                                    staticClass:
+                                                                      "form-control",
+                                                                    staticStyle: {
+                                                                      "border-bottom-left-radius":
+                                                                        "3px",
+                                                                      "border-top-left-radius":
+                                                                        "3px"
                                                                     },
-                                                                    [
-                                                                      _vm._v(
-                                                                        "Fecha:"
-                                                                      )
-                                                                    ]
-                                                                  ),
+                                                                    attrs: {
+                                                                      type:
+                                                                        "text",
+                                                                      placeholder:
+                                                                        "Buscar por dni o nombres..."
+                                                                    },
+                                                                    domProps: {
+                                                                      value:
+                                                                        _vm.search
+                                                                    },
+                                                                    on: {
+                                                                      keyup: function(
+                                                                        $event
+                                                                      ) {
+                                                                        if (
+                                                                          !$event.type.indexOf(
+                                                                            "key"
+                                                                          ) &&
+                                                                          _vm._k(
+                                                                            $event.keyCode,
+                                                                            "enter",
+                                                                            13,
+                                                                            $event.key,
+                                                                            "Enter"
+                                                                          )
+                                                                        ) {
+                                                                          return null
+                                                                        }
+                                                                        return _vm.list_data(
+                                                                          1
+                                                                        )
+                                                                      },
+                                                                      input: function(
+                                                                        $event
+                                                                      ) {
+                                                                        if (
+                                                                          $event
+                                                                            .target
+                                                                            .composing
+                                                                        ) {
+                                                                          return
+                                                                        }
+                                                                        _vm.search =
+                                                                          $event.target.value
+                                                                      }
+                                                                    }
+                                                                  }),
                                                                   _vm._v(" "),
                                                                   _c(
-                                                                    "div",
+                                                                    "span",
                                                                     {
                                                                       staticClass:
-                                                                        "input-group"
+                                                                        "input-group-btn"
                                                                     },
                                                                     [
                                                                       _c(
                                                                         "button",
                                                                         {
                                                                           staticClass:
-                                                                            "btn btn-save",
+                                                                            "btn btn-search btn-flat",
                                                                           staticStyle: {
-                                                                            float:
-                                                                              "right",
-                                                                            "margin-right":
-                                                                              "10px"
+                                                                            "border-bottom-right-radius":
+                                                                              "3px",
+                                                                            "border-top-right-radius":
+                                                                              "3px"
                                                                           },
                                                                           attrs: {
                                                                             type:
-                                                                              "button",
-                                                                            "data-toggle":
-                                                                              "tooltip",
-                                                                            title:
-                                                                              "Guardar los pagos"
+                                                                              "submit"
                                                                           },
                                                                           on: {
                                                                             click: function(
@@ -27679,13 +27715,494 @@ var render = function() {
                                                                             "i",
                                                                             {
                                                                               staticClass:
-                                                                                "fa fa-filter "
+                                                                                "fa fa-search"
                                                                             }
                                                                           ),
                                                                           _vm._v(
-                                                                            " FILTRAR\n                                                                                "
+                                                                            " BUSCAR"
                                                                           )
                                                                         ]
+                                                                      )
+                                                                    ]
+                                                                  )
+                                                                ]
+                                                              )
+                                                            ]
+                                                          ),
+                                                          _vm._v(" "),
+                                                          _c(
+                                                            "div",
+                                                            {
+                                                              staticClass:
+                                                                "col-md-2"
+                                                            },
+                                                            [
+                                                              _c(
+                                                                "div",
+                                                                {
+                                                                  staticClass:
+                                                                    "input-group",
+                                                                  staticStyle: {
+                                                                    "margin-bottom":
+                                                                      "10px",
+                                                                    "margin-top":
+                                                                      "10px"
+                                                                  }
+                                                                },
+                                                                [
+                                                                  _c(
+                                                                    "span",
+                                                                    {
+                                                                      staticClass:
+                                                                        "input-group-btn"
+                                                                    },
+                                                                    [
+                                                                      _c(
+                                                                        "button",
+                                                                        {
+                                                                          staticClass:
+                                                                            "btn btn-block btn-danger",
+                                                                          staticStyle: {
+                                                                            "border-bottom-right-radius":
+                                                                              "3px",
+                                                                            "border-top-right-radius":
+                                                                              "3px"
+                                                                          },
+                                                                          attrs: {
+                                                                            type:
+                                                                              "submit",
+                                                                            "data-toggle":
+                                                                              "tooltip",
+                                                                            title:
+                                                                              "Descargue en formato PDF"
+                                                                          },
+                                                                          on: {
+                                                                            click: function(
+                                                                              $event
+                                                                            ) {
+                                                                              return _vm.downloadDayliCollection(
+                                                                                1
+                                                                              )
+                                                                            }
+                                                                          }
+                                                                        },
+                                                                        [
+                                                                          _c(
+                                                                            "i",
+                                                                            {
+                                                                              staticClass:
+                                                                                "fa fa-file-pdf-o"
+                                                                            }
+                                                                          ),
+                                                                          _vm._v(
+                                                                            " DESCARGAR"
+                                                                          )
+                                                                        ]
+                                                                      )
+                                                                    ]
+                                                                  )
+                                                                ]
+                                                              )
+                                                            ]
+                                                          ),
+                                                          _vm._v(" "),
+                                                          _c(
+                                                            "table",
+                                                            {
+                                                              staticClass:
+                                                                "table table-hover",
+                                                              staticStyle: {
+                                                                "font-size":
+                                                                  "12px"
+                                                              }
+                                                            },
+                                                            [
+                                                              _vm._m(9),
+                                                              _vm._v(" "),
+                                                              _c(
+                                                                "tbody",
+                                                                _vm._l(
+                                                                  _vm.listCredit,
+                                                                  function(
+                                                                    midata,
+                                                                    index
+                                                                  ) {
+                                                                    return _c(
+                                                                      "tr",
+                                                                      {
+                                                                        key: index
+                                                                      },
+                                                                      [
+                                                                        _c(
+                                                                          "td",
+                                                                          {
+                                                                            staticStyle: {
+                                                                              "vertical-align":
+                                                                                "middle"
+                                                                            }
+                                                                          },
+                                                                          [
+                                                                            _vm._v(
+                                                                              _vm._s(
+                                                                                index +
+                                                                                  1
+                                                                              )
+                                                                            )
+                                                                          ]
+                                                                        ),
+                                                                        _vm._v(
+                                                                          " "
+                                                                        ),
+                                                                        _c(
+                                                                          "td",
+                                                                          {
+                                                                            staticStyle: {
+                                                                              "vertical-align":
+                                                                                "middle"
+                                                                            },
+                                                                            domProps: {
+                                                                              textContent: _vm._s(
+                                                                                midata.code
+                                                                              )
+                                                                            }
+                                                                          }
+                                                                        ),
+                                                                        _vm._v(
+                                                                          " "
+                                                                        ),
+                                                                        _c(
+                                                                          "td",
+                                                                          {
+                                                                            staticStyle: {
+                                                                              "vertical-align":
+                                                                                "middle"
+                                                                            },
+                                                                            domProps: {
+                                                                              textContent: _vm._s(
+                                                                                midata.nro_prestamo
+                                                                              )
+                                                                            }
+                                                                          }
+                                                                        ),
+                                                                        _vm._v(
+                                                                          " "
+                                                                        ),
+                                                                        _c(
+                                                                          "td",
+                                                                          {
+                                                                            staticStyle: {
+                                                                              "vertical-align":
+                                                                                "middle"
+                                                                            },
+                                                                            domProps: {
+                                                                              textContent: _vm._s(
+                                                                                midata.nombres
+                                                                              )
+                                                                            }
+                                                                          }
+                                                                        ),
+                                                                        _vm._v(
+                                                                          " "
+                                                                        ),
+                                                                        _c(
+                                                                          "td",
+                                                                          {
+                                                                            staticStyle: {
+                                                                              "vertical-align":
+                                                                                "middle"
+                                                                            },
+                                                                            domProps: {
+                                                                              textContent: _vm._s(
+                                                                                midata.fecha_prestamo
+                                                                              )
+                                                                            }
+                                                                          }
+                                                                        ),
+                                                                        _vm._v(
+                                                                          " "
+                                                                        ),
+                                                                        _c(
+                                                                          "td",
+                                                                          {
+                                                                            staticStyle: {
+                                                                              "vertical-align":
+                                                                                "middle"
+                                                                            },
+                                                                            domProps: {
+                                                                              textContent: _vm._s(
+                                                                                midata.fecha_vencimiento
+                                                                              )
+                                                                            }
+                                                                          }
+                                                                        ),
+                                                                        _vm._v(
+                                                                          " "
+                                                                        ),
+                                                                        _c(
+                                                                          "td",
+                                                                          {
+                                                                            staticStyle: {
+                                                                              "vertical-align":
+                                                                                "middle"
+                                                                            },
+                                                                            domProps: {
+                                                                              textContent: _vm._s(
+                                                                                midata.dias_x_cobrar
+                                                                              )
+                                                                            }
+                                                                          }
+                                                                        ),
+                                                                        _vm._v(
+                                                                          " "
+                                                                        ),
+                                                                        _c(
+                                                                          "td",
+                                                                          {
+                                                                            staticStyle: {
+                                                                              "vertical-align":
+                                                                                "middle"
+                                                                            },
+                                                                            domProps: {
+                                                                              textContent: _vm._s(
+                                                                                midata.monto
+                                                                              )
+                                                                            }
+                                                                          }
+                                                                        ),
+                                                                        _vm._v(
+                                                                          " "
+                                                                        ),
+                                                                        _c(
+                                                                          "td",
+                                                                          {
+                                                                            staticStyle: {
+                                                                              "vertical-align":
+                                                                                "middle"
+                                                                            },
+                                                                            domProps: {
+                                                                              textContent: _vm._s(
+                                                                                midata.monto_total
+                                                                              )
+                                                                            }
+                                                                          }
+                                                                        ),
+                                                                        _vm._v(
+                                                                          " "
+                                                                        ),
+                                                                        _c(
+                                                                          "td",
+                                                                          {
+                                                                            staticStyle: {
+                                                                              "vertical-align":
+                                                                                "middle"
+                                                                            },
+                                                                            domProps: {
+                                                                              textContent: _vm._s(
+                                                                                midata.tasa
+                                                                              )
+                                                                            }
+                                                                          }
+                                                                        ),
+                                                                        _vm._v(
+                                                                          " "
+                                                                        ),
+                                                                        _c(
+                                                                          "td",
+                                                                          {
+                                                                            staticStyle: {
+                                                                              "vertical-align":
+                                                                                "middle"
+                                                                            }
+                                                                          },
+                                                                          [
+                                                                            midata.mora >
+                                                                            0
+                                                                              ? _c(
+                                                                                  "div",
+                                                                                  [
+                                                                                    _c(
+                                                                                      "span",
+                                                                                      {
+                                                                                        staticClass:
+                                                                                          "label label-danger"
+                                                                                      },
+                                                                                      [
+                                                                                        _vm._v(
+                                                                                          _vm._s(
+                                                                                            midata.mora
+                                                                                          )
+                                                                                        )
+                                                                                      ]
+                                                                                    )
+                                                                                  ]
+                                                                                )
+                                                                              : _c(
+                                                                                  "div",
+                                                                                  [
+                                                                                    _c(
+                                                                                      "span",
+                                                                                      [
+                                                                                        _vm._v(
+                                                                                          _vm._s(
+                                                                                            midata.mora
+                                                                                          )
+                                                                                        )
+                                                                                      ]
+                                                                                    )
+                                                                                  ]
+                                                                                )
+                                                                          ]
+                                                                        ),
+                                                                        _vm._v(
+                                                                          " "
+                                                                        ),
+                                                                        _c(
+                                                                          "td",
+                                                                          {
+                                                                            staticStyle: {
+                                                                              "vertical-align":
+                                                                                "middle"
+                                                                            },
+                                                                            domProps: {
+                                                                              textContent: _vm._s(
+                                                                                midata.saldo
+                                                                              )
+                                                                            }
+                                                                          }
+                                                                        ),
+                                                                        _vm._v(
+                                                                          " "
+                                                                        ),
+                                                                        _c(
+                                                                          "td",
+                                                                          {
+                                                                            staticStyle: {
+                                                                              "vertical-align":
+                                                                                "middle"
+                                                                            },
+                                                                            domProps: {
+                                                                              textContent: _vm._s(
+                                                                                midata.cuota
+                                                                              )
+                                                                            }
+                                                                          }
+                                                                        ),
+                                                                        _vm._v(
+                                                                          " "
+                                                                        ),
+                                                                        _c(
+                                                                          "td",
+                                                                          [
+                                                                            _c(
+                                                                              "input",
+                                                                              {
+                                                                                directives: [
+                                                                                  {
+                                                                                    name:
+                                                                                      "model",
+                                                                                    rawName:
+                                                                                      "v-model",
+                                                                                    value:
+                                                                                      midata.pago,
+                                                                                    expression:
+                                                                                      "midata.pago"
+                                                                                  }
+                                                                                ],
+                                                                                staticStyle: {
+                                                                                  border:
+                                                                                    "none",
+                                                                                  "border-bottom":
+                                                                                    "1px solid #ccc"
+                                                                                },
+                                                                                attrs: {
+                                                                                  type:
+                                                                                    "text",
+                                                                                  placeholder:
+                                                                                    "0.0"
+                                                                                },
+                                                                                domProps: {
+                                                                                  value:
+                                                                                    midata.pago
+                                                                                },
+                                                                                on: {
+                                                                                  input: function(
+                                                                                    $event
+                                                                                  ) {
+                                                                                    if (
+                                                                                      $event
+                                                                                        .target
+                                                                                        .composing
+                                                                                    ) {
+                                                                                      return
+                                                                                    }
+                                                                                    _vm.$set(
+                                                                                      midata,
+                                                                                      "pago",
+                                                                                      $event
+                                                                                        .target
+                                                                                        .value
+                                                                                    )
+                                                                                  }
+                                                                                }
+                                                                              }
+                                                                            )
+                                                                          ]
+                                                                        )
+                                                                      ]
+                                                                    )
+                                                                  }
+                                                                ),
+                                                                0
+                                                              )
+                                                            ]
+                                                          ),
+                                                          _vm._v(" "),
+                                                          _c(
+                                                            "div",
+                                                            {
+                                                              staticClass:
+                                                                "box-footer"
+                                                            },
+                                                            [
+                                                              _c(
+                                                                "div",
+                                                                {
+                                                                  staticClass:
+                                                                    "btn-group",
+                                                                  staticStyle: {
+                                                                    float:
+                                                                      "right"
+                                                                  }
+                                                                },
+                                                                [
+                                                                  _c(
+                                                                    "button",
+                                                                    {
+                                                                      staticClass:
+                                                                        "btn btn-save",
+                                                                      attrs: {
+                                                                        type:
+                                                                          "button",
+                                                                        "data-toggle":
+                                                                          "tooltip",
+                                                                        title:
+                                                                          "Registrar los pagos"
+                                                                      },
+                                                                      on: {
+                                                                        click: function(
+                                                                          $event
+                                                                        ) {
+                                                                          return _vm.save()
+                                                                        }
+                                                                      }
+                                                                    },
+                                                                    [
+                                                                      _c("i", {
+                                                                        staticClass:
+                                                                          "fa fa-save"
+                                                                      }),
+                                                                      _vm._v(
+                                                                        " REGISTRAR\n                                                                                    "
                                                                       )
                                                                     ]
                                                                   )
@@ -27715,287 +28232,8 @@ var render = function() {
                 2
               )
             ])
-<<<<<<< HEAD
           : _vm._e()
-      ]),
-      _vm._v(" "),
-      _vm._m(9)
-=======
-          : _vm._e(),
-        _vm._v(" "),
-        _c("div", { staticClass: "col-md-12" }, [
-          _c("div", { staticClass: "box box-primary" }, [
-            _c("div", { staticClass: "box-header with-border" }, [
-              _vm._m(7),
-              _vm._v(" "),
-              _c("div", { staticClass: "box-tools pull-right" }, [
-                _c("span", { staticClass: "label label-success" }, [
-                  _vm._v("TOTAL DE REGISTROS: " + _vm._s(_vm.pagination.total))
-                ]),
-                _vm._v(" "),
-                _vm._m(8)
-              ])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "box-body table-responsive no-padding" }, [
-              _c("div", { staticClass: "col-md-12" }, [
-                _c(
-                  "div",
-                  {
-                    staticClass: "input-group",
-                    staticStyle: {
-                      "margin-bottom": "10px",
-                      "margin-top": "10px"
-                    }
-                  },
-                  [
-                    _c("input", {
-                      directives: [
-                        {
-                          name: "model",
-                          rawName: "v-model",
-                          value: _vm.search,
-                          expression: "search"
-                        }
-                      ],
-                      staticClass: "form-control",
-                      staticStyle: {
-                        "border-bottom-left-radius": "3px",
-                        "border-top-left-radius": "3px"
-                      },
-                      attrs: {
-                        type: "text",
-                        placeholder: "Buscar por dni o nombres..."
-                      },
-                      domProps: { value: _vm.search },
-                      on: {
-                        keyup: function($event) {
-                          if (
-                            !$event.type.indexOf("key") &&
-                            _vm._k(
-                              $event.keyCode,
-                              "enter",
-                              13,
-                              $event.key,
-                              "Enter"
-                            )
-                          ) {
-                            return null
-                          }
-                          return _vm.list_data(1)
-                        },
-                        input: function($event) {
-                          if ($event.target.composing) {
-                            return
-                          }
-                          _vm.search = $event.target.value
-                        }
-                      }
-                    }),
-                    _vm._v(" "),
-                    _c("span", { staticClass: "input-group-btn" }, [
-                      _c(
-                        "button",
-                        {
-                          staticClass: "btn btn-search btn-flat",
-                          staticStyle: {
-                            "border-bottom-right-radius": "3px",
-                            "border-top-right-radius": "3px"
-                          },
-                          attrs: { type: "submit" },
-                          on: {
-                            click: function($event) {
-                              return _vm.list_data(1)
-                            }
-                          }
-                        },
-                        [
-                          _c("i", { staticClass: "fa fa-search" }),
-                          _vm._v(" Buscar")
-                        ]
-                      )
-                    ])
-                  ]
-                )
-              ]),
-              _vm._v(" "),
-              _c(
-                "table",
-                {
-                  staticClass: "table table-hover",
-                  staticStyle: { "font-size": "12px" }
-                },
-                [
-                  _vm._m(9),
-                  _vm._v(" "),
-                  _c(
-                    "tbody",
-                    _vm._l(_vm.listCredit, function(midata, index) {
-                      return _c("tr", { key: index }, [
-                        _c(
-                          "td",
-                          { staticStyle: { "vertical-align": "middle" } },
-                          [_vm._v(_vm._s(index + 1))]
-                        ),
-                        _vm._v(" "),
-                        _c("td", {
-                          staticStyle: { "vertical-align": "middle" },
-                          domProps: { textContent: _vm._s(midata.code) }
-                        }),
-                        _vm._v(" "),
-                        _c("td", {
-                          staticStyle: { "vertical-align": "middle" },
-                          domProps: { textContent: _vm._s(midata.nro_prestamo) }
-                        }),
-                        _vm._v(" "),
-                        _c("td", {
-                          staticStyle: { "vertical-align": "middle" },
-                          domProps: { textContent: _vm._s(midata.nombres) }
-                        }),
-                        _vm._v(" "),
-                        _c("td", {
-                          staticStyle: { "vertical-align": "middle" },
-                          domProps: {
-                            textContent: _vm._s(midata.fecha_prestamo)
-                          }
-                        }),
-                        _vm._v(" "),
-                        _c("td", {
-                          staticStyle: { "vertical-align": "middle" },
-                          domProps: {
-                            textContent: _vm._s(midata.fecha_vencimiento)
-                          }
-                        }),
-                        _vm._v(" "),
-                        _c("td", {
-                          staticStyle: { "vertical-align": "middle" },
-                          domProps: {
-                            textContent: _vm._s(midata.dias_x_cobrar)
-                          }
-                        }),
-                        _vm._v(" "),
-                        _c("td", {
-                          staticStyle: { "vertical-align": "middle" },
-                          domProps: { textContent: _vm._s(midata.monto) }
-                        }),
-                        _vm._v(" "),
-                        _c("td", {
-                          staticStyle: { "vertical-align": "middle" },
-                          domProps: { textContent: _vm._s(midata.monto_total) }
-                        }),
-                        _vm._v(" "),
-                        _c("td", {
-                          staticStyle: { "vertical-align": "middle" },
-                          domProps: { textContent: _vm._s(midata.tasa) }
-                        }),
-                        _vm._v(" "),
-                        _c(
-                          "td",
-                          { staticStyle: { "vertical-align": "middle" } },
-                          [
-                            midata.mora > 0
-                              ? _c("div", [
-                                  _c(
-                                    "span",
-                                    { staticClass: "label label-danger" },
-                                    [_vm._v(_vm._s(midata.mora))]
-                                  )
-                                ])
-                              : _c("div", [
-                                  _c("span", [_vm._v(_vm._s(midata.mora))])
-                                ])
-                          ]
-                        ),
-                        _vm._v(" "),
-                        _c("td", {
-                          staticStyle: { "vertical-align": "middle" },
-                          domProps: { textContent: _vm._s(midata.saldo) }
-                        }),
-                        _vm._v(" "),
-                        _c("td", {
-                          staticStyle: { "vertical-align": "middle" },
-                          domProps: { textContent: _vm._s(midata.cuota) }
-                        }),
-                        _vm._v(" "),
-                        _c("td", [
-                          _c("input", {
-                            directives: [
-                              {
-                                name: "model",
-                                rawName: "v-model",
-                                value: midata.pago,
-                                expression: "midata.pago"
-                              }
-                            ],
-                            staticStyle: {
-                              border: "none",
-                              "border-bottom": "1px solid #ccc"
-                            },
-                            attrs: { type: "text", placeholder: "0.0" },
-                            domProps: { value: midata.pago },
-                            on: {
-                              input: function($event) {
-                                if ($event.target.composing) {
-                                  return
-                                }
-                                _vm.$set(midata, "pago", $event.target.value)
-                              }
-                            }
-                          })
-                        ])
-                      ])
-                    }),
-                    0
-                  )
-                ]
-              )
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "box-footer" }, [
-              _c(
-                "button",
-                {
-                  staticClass: "btn btn-save",
-                  staticStyle: { float: "right", "margin-right": "10px" },
-                  attrs: {
-                    type: "button",
-                    "data-toggle": "tooltip",
-                    title: "Guardar los pagos"
-                  },
-                  on: {
-                    click: function($event) {
-                      return _vm.save()
-                    }
-                  }
-                },
-                [
-                  _c("i", { staticClass: "fa fa-save " }),
-                  _vm._v(" GUARDAR\n                            ")
-                ]
-              ),
-              _vm._v(" "),
-              _c(
-                "button",
-                {
-                  staticClass: "btn btn-danger",
-                  staticStyle: { float: "right", "margin-right": "10px" },
-                  attrs: { type: "button" },
-                  on: {
-                    click: function($event) {
-                      return _vm.downloadDayliCollection(1)
-                    }
-                  }
-                },
-                [
-                  _c("i", { staticClass: "fa fa-file-pdf-o" }),
-                  _vm._v(" DESCARGAR\n                            ")
-                ]
-              )
-            ])
-          ])
-        ])
       ])
->>>>>>> 415d03eae436d9728c4cb358a231349ae9a87bba
     ])
   ])
 }
@@ -28021,6 +28259,28 @@ var staticRenderFns = [
         _c("li", { staticClass: "active" }, [_vm._v("Clientes")])
       ])
     ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("h1", { staticClass: "box-title" }, [
+      _c("i", { staticClass: "fa fa-list" }),
+      _vm._v("Clientes con préstamos actuales\n                            ")
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "button",
+      {
+        staticClass: "btn btn-box-tool",
+        attrs: { type: "button", "data-widget": "collapse" }
+      },
+      [_c("i", { staticClass: "fa fa-minus" })]
+    )
   },
   function() {
     var _vm = this
@@ -28113,28 +28373,6 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("h1", { staticClass: "box-title" }, [
-      _c("i", { staticClass: "fa fa-list" }),
-      _vm._v(" Lista de Cobranza\n                            ")
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "button",
-      {
-        staticClass: "btn btn-box-tool",
-        attrs: { type: "button", "data-widget": "collapse" }
-      },
-      [_c("i", { staticClass: "fa fa-minus" })]
-    )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
     return _c(
       "thead",
       { staticStyle: { background: "rgb(32, 32, 32)", color: "#fff" } },
@@ -28198,26 +28436,6 @@ var staticRenderFns = [
         ])
       ]
     )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "row" }, [
-      _c("div", { staticClass: "col-md-9" }, [
-        _vm._v(
-          "\n                Aqui hay tanto contenido que el scrollbar se va hasta China\n                "
-        )
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "col-md-3" }, [
-        _c("div", { staticStyle: { position: "fixed", left: "79.1%" } }, [
-          _vm._v(
-            " \n                Este debe mantenerse flotando a la derecha de manera fija, asi el scroll llegue al piso.\n                    "
-          )
-        ])
-      ])
-    ])
   }
 ]
 render._withStripped = true
