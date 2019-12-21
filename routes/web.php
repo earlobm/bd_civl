@@ -43,10 +43,12 @@ Route::get('/get_type_requirement', 'Register\CustomerCreditController@list_type
 Route::get('/get_type_business', 'Register\CustomerCreditController@list_type_business');
 Route::get('/get_job', 'Register\CustomerCreditController@list_job');
 Route::get('/get_employee', 'Register\EmployeeController@list_employee');
-Route::post('/saveCustomerCredit', 'Register\CustomerCreditController@save_data'); 
+Route::post('/save_customer_credit', 'Register\CustomerCreditController@save_data'); 
+Route::post('/save_detail_credit', 'Register\CustomerCreditController@save_detail_credit'); 
 Route::get('/generate_code', 'Register\CustomerCreditController@generate_code');  
 Route::get('/get_customer_by_dni', 'Register\CustomerCreditController@get_customer_by_dni'); 
 Route::get('/get_aval_by_dni', 'Register\CustomerCreditController@get_aval_by_dni'); 
+Route::get('/download_detail_credit', 'Register\CustomerCreditController@download_detail_credit'); 
 //DOCUMENT
 Route::post('/save_Document', 'Register\DocumentCustomerController@save_Document'); 
 Route::get('/getlistDocument', 'Register\DocumentCustomerController@getlistDocument');
@@ -56,6 +58,7 @@ Route::post('/delete_Document', 'Register\DocumentCustomerController@delete_Docu
 //Business
 Route::post('/save_business', 'Register\TypeBusinessController@saveBusiness'); 
 Route::get('/getlistBusiness', 'Register\TypeBusinessController@getlistBusiness');
+Route::get('/list_data', 'Register\TypeBusinessController@list');
 Route::get('/getEditListbusiness', 'Register\TypeBusinessController@getEditListBusiness');
 Route::post('/deleteBusiness', 'Register\TypeBusinessController@deleteBusiness'); 
 
@@ -64,7 +67,12 @@ Route::get('/getDatabyNroDocP', 'Register\PersonalController@getDatabyNroDocP');
 Route::post('/saveEmployee', 'Register\EmployeeController@saveEmployee');
 Route::get('/getListaEmpleadoList', 'Register\EmployeeController@list_employee');
 //credit
-Route::get('/getListDailyCollection', 'Movement\DailyCollectionController@getListDailyCollection'); 
+Route::get('/getListDailyCollection', 'Operation\DailyCollectionController@getListDailyCollection'); 
+Route::get('/getListDailyBalance', 'Operation\DailyBalanceController@getListDailyBalance'); 
+Route::get('/downloadDayliBalance', 'Operation\DailyBalanceController@downloadPdf'); 
+//histotial
+Route::get('/creditByCustomer', 'Operation\CustomerHistoryController@creditByCustomer'); 
+
 
 //resumenDay
 Route::get('/getListaResumenDay', 'Register\AmountDayController@getListaResumenDay');
@@ -76,25 +84,16 @@ Route::post('/delete_PersonalEmploye', 'Register\EmployeeController@delete_Perso
 Route::post('/save_personal', 'Register\PersonalController@save'); 
 Route::post('/save_market', 'Register\MarketController@save'); 
 Route::get('/get_list_market', 'Register\MarketController@list'); 
-Route::get('/editMercado', 'Register\MarketController@editMercado'); 
+Route::get('/edit_market', 'Register\MarketController@edit_market'); 
 Route::post('/deleteMercado', 'Register\MarketController@deleteMercado'); 
 
-//pledge
-Route::post('/save_pledge', 'Register\PledgeController@save'); 
-Route::post('/delete_pledge', 'Register\PledgeController@delete'); 
-Route::get('/get_list_active_pledge', 'Register\PledgeController@getListActive'); 
-Route::get('/dowloadContract','Register\PledgeController@dowloadContract');
-Route::get('/getSuggestedPrice','Register\PledgeController@send_to_sales');
-Route::get('/getProductSales','Register\PledgeController@product_sales');
-Route::post('/save_suggested_price','Register\PledgeController@save_suggested_price');
-Route::post('/save_final_price','Register\PledgeController@save_final_price');
 
-//movement Payment
-Route::post('/save_payment','Movement\DailyCollectionController@save');
-Route::get('/downloadDayliCollection','Movement\DailyCollectionController@downloadDayliCollection');
+//Operation Payment
+Route::post('/save_payment','Operation\DailyCollectionController@save');
+Route::get('/downloadDayliCollection','Operation\DailyCollectionController@downloadDayliCollection');
 
 //guardando pagos de empeño
-Route::post('/save_payment_pledge','Movement\PaymentPledgeController@save');
+Route::post('/save_payment_pledge','Operation\PaymentPledgeController@save');
 
 //garmentType
 Route::get('/getDependenceParent', 'Register\DependenceController@getDependenceParent');

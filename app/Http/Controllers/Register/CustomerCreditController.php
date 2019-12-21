@@ -16,6 +16,9 @@ use Illuminate\Support\Facades\Auth;
 use DB;
 use PDF;
 use poi\EntityClass\CustomerTypeDocument; // at the top of the file
+use poi\Http\Controllers\Util\Curlx;
+use poi\EntityClass\DetailCredit;
+use poi\EntityClass\Credit;
 
 ini_set ('memory_limit', '999999999999M');
 ini_set('max_execution_time', 900000000000);
@@ -75,6 +78,49 @@ class CustomerCreditController extends Controller
        // print $obj->razon_social;
         return [
             'datax' => $obj
+        ];
+    }
+    public function getDataByRucSunatNew(Request $request){
+        $ruc=$request->ruc;
+        $this->cc = new Curlx();
+        $this->cc->setReferer( "http://e-consultaruc.sunat.gob.pe/cl-ti-itmrconsruc/frameCriterioBusqueda.jsp" );
+        $this->cc->useCookie( true );
+        $this->cc->setCookiFileLocation( __DIR__ . "/cookie.txt" );
+        //obteneidendo randows
+        $url = "http://e-consultaruc.sunat.gob.pe/cl-ti-itmrconsruc/captcha?accion=random";
+        $numRand = $this->cc->send($url);
+        //20604720746 de pixel
+        $data = array(
+            "nroRuc" => $ruc,
+            "accion" => "consPorRuc",
+            "numRnd" => $numRand
+        );
+        $url = "http://e-consultaruc.sunat.gob.pe/cl-ti-itmrconsruc/jcrS00Alias";
+        $page = $this->cc->send( $url, $data );
+    
+        //RazonSocial
+        $patron='/<input type="hidden" name="desRuc" value="(.*)">/';
+        $output = preg_match_all($patron, $page, $matches, PREG_SET_ORDER);
+        $RS="";
+        if(isset($matches[0]))
+        {
+            $RS = utf8_encode(str_replace('"','', ($matches[0][1])));
+            $RS=trim($RS);
+        }
+        //direccion
+        $patron='/<td class="bgn"[ ]*colspan=1[ ]*>Direcci&oacute;n del Domicilio Fiscal:[ ]*<\/td>\r\n[\t]*[ ]+<td class="bg" colspan=[1|3]+>(.*)<\/td>/';
+        $output = preg_match_all($patron, $page, $matches, PREG_SET_ORDER);
+        $rtn="";
+        if( isset($matches[0]) )
+        {
+            $rtn = trim($matches[0][1]);
+        }
+        
+        //return $RS.'-dir-'.$rtn;
+       // print $obj->razon_social;
+        return [
+            'nombres' => $RS,
+            'direccion'=>$rtn
         ];
     }
     public function get_customer_by_dni(Request $request){        
@@ -291,6 +337,12 @@ class CustomerCreditController extends Controller
             p.maternal_last_name, p.email,
             p.address,p.phone,p.id_district, p.reference,
             c.id as id_customer_credit,
+            (select count(id) from credit 
+                where id_customer=c.id
+                and state=1) as cred_active, 
+            (select count(id) from credit 
+                where id_customer=c.id
+                and state=2) as cred_cancel,
             (select count(p.id) 
             from person p inner join customer c on c.id_person=p.id 
             where c.state=1 and  concat(p.number_doc,' ',p.names,' ',p.paternal_last_name,' ',p.maternal_last_name) like '%$buscar%') AS total 
@@ -333,13 +385,14 @@ class CustomerCreditController extends Controller
     }
 
     public function save_data(Request $request){
-        
+        $DateOfRequest= date("Y-m-d H:i:s");
         //preguntamos si el cliente ya existe
         if($request->id_customer_credit==-1){
             $clase_customer = new CustomerCredit();
             $clase_customer->code = $request->code;
         }else{
             $clase_customer = CustomerCredit::findOrFail($request->id_customer_credit);
+            $clase_customer->date_inscription=$DateOfRequest;
         }
         ///Preguntamos si la persona existe
         if($request->id==-1){
@@ -349,14 +402,12 @@ class CustomerCreditController extends Controller
         }  
         ///Preguntamos si el aval existe
         if($request->nro_doc_aval!=null || $request->nro_doc_aval!=''){
-            echo 'hola1';
             if($request->id_guarantor==-1){
                 $clase_guarantor = new Person();
-                echo 'hola21';
             }else{
                 $clase_guarantor = Person::findOrFail($request->id_guarantor);
-                echo 'hola31';
-            }
+                
+            } 
             $clase_guarantor->id_type_document =  $request->id_type_document_aval;
             $clase_guarantor->number_doc = trim($request->nro_doc_aval);
             $clase_guarantor->paternal_last_name = trim($request->paternal_last_name_aval);
@@ -396,9 +447,8 @@ class CustomerCreditController extends Controller
 
          
         //registrando en la tabla de cliente empeño
-        $DateOfRequest= date("Y-m-d H:i:s");
-        $clase_customer->state=1;        
-        $clase_customer->date_inscription=$DateOfRequest;
+        
+        $clase_customer->state=1; 
         $clase_customer->id_person=$clasex->id;
         if($request->nro_doc_aval!=null || $request->nro_doc_aval!=''){
             $clase_customer->id_guarantor=$clase_guarantor->id;
@@ -439,8 +489,62 @@ class CustomerCreditController extends Controller
         }
         /* $DateOfRequest= date("Y-m-d H:i:s");
             $clasex->modificado ='Modificado por '.Auth::user()->nick.' '. $DateOfRequest;*/
-          return  $clasex->id; 
+          return  $clase_customer->id; 
+    }
+    public function save_detail_credit(Request $request){
+        $date_system = date("Y-m-d H:i:s");
+        
+        $sqlx = "SELECT CONCAT('CRE',right(CONCAT('000', (COUNT(id) + 1)),3)) as code
+        FROM credit";
+        $miArrayx=DB::select($sqlx);
+        $miArray = json_decode(json_encode($miArrayx), true);
+        $code_credit = $miArray[0]['code'];    
+        
+        $clase_credit = new Credit();
+        $clase_credit->code_credit = $code_credit;
+        $clase_credit->date_credit = $request->date_credit;
+        $clase_credit->date_init_payment = $request->date_init_payment;
+        $clase_credit->date_expiration = $request->date_expiration;
+        $clase_credit->capital = $request->capital;
+        $clase_credit->interest = $request->interest;
+        $clase_credit->total = $request->total;
+        $clase_credit->interest_rate = $request->interest_rate;
+        $clase_credit->rate_admin = $request->rate_admin;
+        $clase_credit->amount_admin = $request->amount_admin;
+
+        $clase_credit->quota = $request->quota;
+        $clase_credit->number_quota = $request->number_quota;
+        $clase_credit->period = $request->period_credit;
+        $clase_credit->mora = 0;
+        $clase_credit->saldo = $request->total;
+        $clase_credit->state = 1;
+        
+        $clase_credit->date_system = $date_system;
+        $clase_credit->date_expired_original = $request->date_expiration;
+        $clase_credit->risk_center = $request->risk_center;
+        $clase_credit->grace_day = $request->grace_day;
+        $clase_credit->apply_mora = $request->apply_mora;
+        $clase_credit->id_customer = $request->id_customer;
+        $clase_credit->id_promoter = $request->id_promoter;
+        $clase_credit->save(); 
+
+        $t = json_decode(json_encode($request->array_credit_detail), true);
+        foreach ($t as $key => $value) {        
+            $controller = new DetailCredit();
+            $controller->date_expired = $value['date_expiration_detail'];
+            $controller->number_quota = $value['id'];
+            $controller->quota = $value['quota'];
+            $controller->capital = $value['capital'];
+            $controller->interest = $value['interest'];
+            $controller->saldo_projected  = $value['saldo'];
+            $controller->id_credit = $clase_credit->id;
+            $controller->deposit  =0;
+            $controller->state =1;
+            $controller->save();             
         }
+        return  $clase_credit->id; 
+
+    }
     public function downloadProgram(Request $request){    
         
         $sqlx="";
@@ -565,6 +669,120 @@ class CustomerCreditController extends Controller
         return [
             'datax' => $miLista
         ];
+    }
+    public function download_detail_credit(Request $request){
+        //obteniendo los clientes
+        $id_credit=$request->id;
+
+        $sqlz="SELECT concat(names,' ', paternal_last_name,' ', maternal_last_name) as customer,
+        number_doc, cr.number_quota, cr.period, cr.amount_admin,
+        cr.capital, cr.interest_rate, DATE_FORMAT(cr.date_credit,'%d/%m/%Y') as date_credit
+         from credit cr
+        inner join customer cu on cu.id=cr.id_customer
+        inner join person p on p.id=cu.id_person
+        where cr.id=$id_credit";
+        $listCustomer=DB::select($sqlz);
+        $listCustomerCredit = json_decode(json_encode($listCustomer), true);
+        
+        $sqlx="SELECT number_quota, DATE_FORMAT(date_expired,'%d/%m/%Y') as date_expired, quota, capital, interest,
+        saldo_projected  from detail_credit where id_credit=$id_credit";
+        $listSchedule=DB::select($sqlx);
+        $listScheduleCredit = json_decode(json_encode($listSchedule), true);
+
+        PDF::SetTitle('Cronograma de Pagos');
+        PDF::SetFont('helvetica', '', 9);
+        PDF::AddPage('P', 'A4', false, false); 
+        //PDF::Write(0, 'COBRANZA DIARIA', '', 0, 'C', true, 0, false, false, 0);
+        //$urlx = url('/img/logo-tumi.png');
+        $urlx = storage_path().'/logo-tumi.png';
+        // Storage::put('logo-tumi.png', $contents);
+        // Storage::put('logo-tumi.png', $contents);
+        $html = '
+        <h3 style="text-align:center"><u>CRONOGRAMA DE PAGOS</u></h3>
+        <table cellspacing="0" cellpadding="1" border="0">
+            <tr>
+                <td rowspan="4" style="width:80px">
+                    <img  style="width:60px; height:60px;" src="'.$urlx.'" alt="technoserve" >
+                </td>
+                <td colspan="2">
+                    <b>DNI : </b> '.$listCustomerCredit[0]['number_doc'].' 
+                </td>
+                <td colspan="3">
+                    <b>CLIENTE : </b>'.$listCustomerCredit[0]['customer'].' 
+                </td>
+            </tr>
+            <tr>                
+                <td colspan="2">
+                    <b>MONTO: </b> S/ '.$listCustomerCredit[0]['capital'].'</td>
+                <td colspan="2">
+                    <b>TASA DE INTERÉS: </b> '.$listCustomerCredit[0]['interest_rate'].' %
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <b>GASTO ADMINISTRATIVO: </b> '.$listCustomerCredit[0]['amount_admin'].'
+                </td>
+                <td>
+                    <b>PLAZO: </b> '.round($listCustomerCredit[0]['number_quota'],0).' '.$listCustomerCredit[0]['period'].'
+                </td>
+            </tr>
+            <tr>
+                
+                <td colspan="3">
+                    <b>FECHA DE DESEMBOLSO : </b>'.$listCustomerCredit[0]['date_credit'].'
+                </td>
+            </tr>
+        </table>
+        ';
+        $html .= '<br/><br/>
+            <font size="7" face="Courier New" >  
+                <table cellspacing="0" cellpadding="2" border="1" >
+                    <thead >                                   
+                        <tr style="background-color:#EEE; color:#000;">
+                            <th style="text-align: center;vertical-align: middle;">N°</th>
+                            <th style="text-align: center;vertical-align: middle;">FECHA DE VENCIMIENTO</th>
+                            <th style="text-align: center;vertical-align: middle;">CUOTA</th>
+                            <th style="text-align: center;vertical-align: middle;">CAPITAL</th>
+                            <th style="text-align: center;vertical-align: middle;">INTERES</th>
+                            <th style="text-align: center;vertical-align: middle;">ABONO</th>
+                            <th style="text-align: center;vertical-align: middle;">SALDO PROYECTADO</th>
+                        </tr> 
+                    </thead>
+                    <tbody>
+                    
+                ';
+                $rows="";
+                $total_quota=0;
+                $total_capital=0;
+                $total_interest=0;
+                foreach ($listScheduleCredit as $key => $value) {
+                         $html .= '<tr>';
+                         $html .= '<td style="text-align: center;vertical-align: middle;">'.$value['number_quota'].'</td>';
+                         $html .= '<td style="text-align: center;vertical-align: middle;">'.$value['date_expired'].'</td>';
+                         $html .= '<td style="text-align: right;vertical-align: middle;">'.$value['quota'].'</td>';
+                         $html .= '<td style="text-align: right;vertical-align: middle;">'.$value['capital'].'</td>';
+                         $html .= '<td style="text-align: right;vertical-align: middle;">'.$value['interest'].'</td>';
+                         $html .= '<td style="text-align: center;vertical-align: middle;"></td>';
+                         $html .= '<td style="text-align: right;vertical-align: middle;">'.$value['saldo_projected'].'</td>';                         
+                         $html .= '</tr>';
+                        $total_quota += ($value['quota']);
+                        $total_capital += ($value['capital']);
+                        $total_interest += ($value['interest']);
+
+                }
+                $html .= '<tr>';
+                $html .= '<td colspan="2" style="text-align: right;vertical-align: middle; background-color:#EEE; color:#000;">TOTAL</td>';
+                $html .= '<td style="text-align: right;vertical-align: middle;">'.$total_quota.'</td>';
+                $html .= '<td style="text-align: right;vertical-align: middle;">'.$total_capital.'</td>';
+                $html .= '<td style="text-align: right;vertical-align: middle;">'.$total_interest.'</td>';
+                $html .= '<td colspan="2" style="text-align: center;vertical-align: middle;background-color:#EEE; color:#000;"></td>';
+                $html .= '</tr>';
+              $html .='                    
+            </tbody>
+        </table>';  
+        PDF::writeHTML($html, true, 0, true, 0);
+        PDF::Output('hello_world.pdf');
+         
     }
 
 }

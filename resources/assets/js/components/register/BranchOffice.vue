@@ -3,11 +3,11 @@
         <section class="content-header">
             <h1>
               Sucursales
-              <small>Preview sample</small>
+              <small>Registro</small>
             </h1>
             <ol class="breadcrumb">
               <li><a href="#"><i class="fa fa-dashboard"></i> Administración</a></li>
-              <li class="active">Sucursales</li>
+              <li class="active">Sucursal</li>
             </ol>
         </section>
 
@@ -16,215 +16,190 @@
                 <div class="col-md-12">
                     <div class="box box-primary">
                         <div class="box-header with-border">
-                            <section class="content-header">
-                                <h3 class="box-title"><strong> 
-                                    GESTIÓN DE SUCURSALES</strong>                            
-                                </h3>
-                                <ol class="breadcrumb">
-                                    <li><a href="#"><i class="fa fa-database"></i>Registro</a></li>
-                                    <li class="active">Sucursal</li>
-                                </ol>
-                            </section>
-                            <!--Hola-->
-                            <div class="box-tools pull-right">
-                            <!--<button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button> hola hola-->
-                            <!-- <button class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>-->
-                            </div>
+                            <h1 class="box-title"><i class="fa fa-plus"></i> Gestión de Sucursales
+                            </h1>
                         </div>
                         <div class="box-body">
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="container-fluid">
-                                        <!-- Ejemplo de tabla Listado -->
-                                            <div class="card">                            
-                                                <div class="card-body">    
-                                                    <div class="row">
-                                                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">                               
-                                                                <div class="box-body">
-                                                                    <template v-if="listado==0">
-                                                                            <div align="center">
-                                                                                <img src="img/loadx.gif" alt="technoserve" align="middle">
-                                                                                <p>Cargando...</p>
-                                                                            </div>
-                                                                    </template>
-                                                                    <template v-if="listado==1">
-                                                                        <div class="row">
-                                                                            <div class="col-xs-11 col-sm-4 col-md-5 col-lg-7">
-                                                                                <div class="input-group" style="margin-bottom: 15px;">
-                                                                                    <input type="text"  v-model="search" @keyup.enter="list_data(1)"  class="form-control" placeholder="Buscar por dni o nombres..." style="border-bottom-left-radius: 3px; border-top-left-radius: 3px;">
-                                                                                    <span class="input-group-btn">
-                                                                                        <button type="submit" @click="list_data(1)"  class="btn btn-search btn-flat" style="border-bottom-right-radius: 3px; border-top-right-radius: 3px;"><i class="fa fa-search"></i> Buscar</button>
-                                                                                    </span>
-                                                                                </div>                                               
-                                                                            </div>
-                                                                            <div class="col-xs-12 col-sm-6 col-md-7 col-lg-5">
-                                                                                <div class="btn-group" style="float:right;margin-left: 10px;">   
-                                                                                    <button type="button" @click="agregar()" class="btn btn-add">
-                                                                                        <i class="fa fa-plus"></i>&nbsp;AGREGAR SUCURSAL
-                                                                                    </button>
-                                                                                </div>
-                                                                                
-                                                                            </div>
+                                        <div class="card">                            
+                                            <div class="card-body">    
+                                                <div class="row">
+                                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">                               
+                                                        <div class="box-body">
+                                                            <div class="row">
+                                                                <div class="col-md-6">
+                                                                    <div v-bind:class="errorInputActivity1">
+                                                                        <label for="ap_paterno">Denominación:</label>
+                                                                        <div class="input-group">
+                                                                            <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-building"></i></span>
+                                                                            <input v-model="name" type="text" class="form-control" placeholder="Denominación de la sucursal" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">                                                                            
                                                                         </div>
+                                                                    </div>
+                                                                </div>
 
-                                                                        <div class="row">
-                                                                            <div class="col-md-12">
-                                                                                <div class="box-body table-responsive no-padding">
-                                                                                    <table  class="table table-hover" style="font-size:12px">
-                                                                                        <thead style="background: rgb(32, 32, 32);color: #fff;">                                                                                   
-                                                                                            <tr>
-                                                                                                <th style="text-align: center;vertical-align: middle;">#</th>
-                                                                                                <th style="vertical-align: middle;">DENOMINACIÓN</th>
-                                                                                                <th style="text-align: center;vertical-align: middle;">FECHA DE INICIO</th>
-                                                                                                <th style="vertical-align: middle;">DIRECCIÓN</th>
-                                                                                                <th style="text-align: center;vertical-align: middle;">TELF. / CELULAR</th>                                                                                
-                                                                                                <th style="text-align: center;vertical-align: middle;">ESTADO</th>                                                                                
-                                                                                                <th style="vertical-align: middle;">INFO. ADICIONAL</th>                                                                                
-                                                                                                <th style="text-align: center; vertical-align: middle;">ACCIONES</th>
-                                                                                            </tr> 
-                                                                                        </thead>
-                                                                                        <tbody>
-                                                                                            <tr v-for="(midata,index) in array_list" :key="index" >
-                                                                                                <td style="vertical-align: middle;" >{{(index+1)+((Number(pagination.current_page)-1)*8)}}</td>
-                                                                                                <td style="vertical-align: middle;" v-text="midata.name"></td>
-                                                                                                <td style="text-align: center;vertical-align: middle;" v-text="midata.date_init"></td>
-                                                                                                <td style="vertical-align: middle;" v-text="midata.address"></td>                                                                                
-                                                                                                <td style="text-align: center;vertical-align: middle;" v-text="midata.phone"></td>
-                                                                                                <td style="text-align: center;vertical-align: middle;" >
-                                                                                                    <div v-if="midata.state=='1'">
-                                                                                                        <span class="label label-success" style="font-size:11px;">ACTIVO</span>
-                                                                                                    </div>
-                                                                                                    <div v-else>
-                                                                                                        <span class="label label-danger" style="font-size:11px;">INACTIVO</span>
-                                                                                                    </div>
-                                                                                                </td>
-                                                                                                <td style="vertical-align: middle;" v-text="midata.notes"></td>
-                                                                                                <td style="text-align: center; vertical-align: middle;"> 
-                                                                                                    
-                                                                                                    <button type="button" @click="edit_data(midata.id)" class="btn btn-editar btn-sm" data-toggle="tooltip" title="Editar">
-                                                                                                        <i class="fa fa-edit"></i>
-                                                                                                    </button>                                                                                                                   
-                                                                                                
-                                                                                                    <button type="button" @click="delete_data(midata.id)" class="btn btn-eliminar btn-sm" data-toggle="tooltip" title="Eliminar">
-                                                                                                        <i class="fa fa-trash"></i>
-                                                                                                    </button>
-                                                                                                </td> 
-                                                                                            </tr>                       
-                                                                                        </tbody>
-                                                                                    </table>
-                                                                                </div>
-                                                                                <div class="dataTables_paginate paging_simple_numbers" style=" float: right !important;">
-                                                                                    <nav>
-                                                                                        <ul class="pagination">
-                                                                                            <ul class="pagination">
-                                                                                                <li class="page-item" v-if="pagination.current_page > 1">
-                                                                                                    <a class="page-link" href="#" @click.prevent="cambiarPagina(Number(pagination.current_page) - 1)"><i class="fa fa-angle-left" style="color:#189900;cursor: pointer"></i></a>
-                                                                                                </li>
-                                                                                                <li class="page-item" v-for="page in pagesNumber" :key="page" :class="[page == isActived ? 'active' : '']">
-                                                                                                    <a class="page-link" href="#" @click.prevent="cambiarPagina(page)" v-text="page"></a>
-                                                                                                </li>
-                                                                                                <li class="page-item" v-if="pagination.current_page < pagination.last_page">
-                                                                                                    <a class="page-link" href="#" @click.prevent="cambiarPagina(Number(pagination.current_page) + 1)"><i class="fa fa-angle-right" style="color:#189900;cursor: pointer"></i></a>
-                                                                                                </li>
-                                                                                            </ul> 
-                                                                                        </ul>                        
-                                                                                    </nav>
-                                                                                </div>
-                                                                            </div>                                               
+                                                                <div class="col-md-6">
+                                                                    <div v-bind:class="errorInputActivity2">
+                                                                        <label for="ap_materno">Dirección:</label>
+                                                                        <div class="input-group">
+                                                                            <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-map-signs"></i></span>
+                                                                            <input v-model="address" type="text" class="form-control"  placeholder="Dirección física" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">  
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="col-md-6">
+                                                                    <div class="form-group">
+                                                                        <label for="edad">Inicio de Labores:</label>
+                                                                        <div class="input-group">
+                                                                            <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-calendar "></i></span>
+                                                                        <date-picker v-model="date_init" :config="options" style="border-top-right-radius: 3px;border-bottom-right-radius: 3px;"></date-picker>
                                                                             
                                                                         </div>
-                                                                    </template>
-                                                                    <template v-if="listado==2">
-                                                                        <div class="row">                                                    
-                                                                            <div class="col-md-12">
-                                                                                <div class="btn-group" style="float:right;">
-                                                                                    <button type="button" @click="volver()" class="btn btn-danger">
-                                                                                        <i class="fa fa-close "></i>&nbsp;CANCELAR
-                                                                                    </button>
-                                                                                    <button type="button" @click="save_data()" class="btn btn-save">
-                                                                                        <i class="fa fa-save"></i>&nbsp;GUARDAR
-                                                                                    </button>
-                                                                                </div>
-                                                                            </div>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="col-md-6">
+                                                                    <div v-bind:class="errorInputActivity3">
+                                                                        <label for="celular">Teléfono / Celular:</label>
+                                                                        <div class="input-group">
+                                                                            <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-mobile-phone"></i></span>
+                                                                        <input placeholder="Teléfono o celular" v-model="phone" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">  
                                                                         </div>
-                                                                        <div class="row"> 
-                                                                                            
-                                                                            <div class="col-md-12">
-                                                                                <legend style="font-size:16px;"><i class="ion ion-edit"></i><strong>&nbsp;AGREGAR SUCURSAL</strong></legend>
-                                                                            </div>                                                           
-                                                                            
-                                                                            <div class="col-md-6">
-                                                                                <div v-bind:class="errorInputActivity1">
-                                                                                    <label for="ap_paterno">Denominación:</label>
-                                                                                    <div class="input-group">
-                                                                                        <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-building"></i></span>
-                                                                                        <input v-model="name" type="text" class="form-control" placeholder="Denominación de la sucursal" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">                                                                            
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
+                                                                    </div>
+                                                                </div>
 
-                                                                            <div class="col-md-6">
-                                                                                <div v-bind:class="errorInputActivity2">
-                                                                                    <label for="ap_materno">Dirección:</label>
-                                                                                    <div class="input-group">
-                                                                                        <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-map-signs"></i></span>
-                                                                                        <input v-model="address" type="text" class="form-control"  placeholder="Dirección física" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">  
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-
-                                                                            <div class="col-md-6">
-                                                                                <div class="form-group">
-                                                                                    <label for="edad">Inicio de Labores:</label>
-                                                                                    <div class="input-group">
-                                                                                        <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-calendar "></i></span>
-                                                                                    <date-picker v-model="date_init" :config="options" style="border-top-right-radius: 3px;border-bottom-right-radius: 3px;"></date-picker>
-                                                                                        
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-
-                                                                            
-
-                                                                            <div class="col-md-6">
-                                                                                <div v-bind:class="errorInputActivity3">
-                                                                                    <label for="celular">Teléfono / Celular:</label>
-                                                                                    <div class="input-group">
-                                                                                        <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-mobile-phone"></i></span>
-                                                                                    <input placeholder="Teléfono o celular" v-model="phone" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">  
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-
-                                                                            <div class="col-md-12">
-                                                                                <div v-bind:class="errorInputActivity4">
-                                                                                    <label for="celular">Información Adicional:</label>
-                                                                                    <div class="input-group">
-                                                                                        <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-edit"></i></span>
-                                                                                    <textarea placeholder="Ingrese información adicional que cree necesario recordar." v-model="notes" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;"></textarea> 
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                                                                                                                                                                    
+                                                                <div class="col-md-12">
+                                                                    <div v-bind:class="errorInputActivity4">
+                                                                        <label for="celular">Información Adicional:</label>
+                                                                        <div class="input-group">
+                                                                            <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-edit"></i></span>
+                                                                        <textarea placeholder="Ingrese información adicional que cree necesario recordar." v-model="notes" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;"></textarea> 
                                                                         </div>
-
-                                                                        
-                                                                        
-                                                                    </template>
-                                                                    
-                                                                </div>  
+                                                                    </div>
+                                                                </div>
                                                             </div>
-                                                        
-                                                    </div>     
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        <div class="box-footer">
+                            <button type="button" @click="save_data()" class="btn btn-save" style="float:right; margin-right: 10px;">
+                                <i class="fa fa-save"></i>&nbsp;GUARDAR
+                            </button>
+                            <button type="button" @click="volver()" class="btn btn-danger" style="float:right; margin-right: 10px;">
+                                <i class="fa fa-close "></i>&nbsp;CANCELAR
+                            </button>                            
+                        </div> 
                     </div>
                 </div>
-            </div>
+                <div class="col-md-12">
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <h1 class="box-title"><i class="fa fa-list"></i> Lista de Clientes
+                            </h1>
+                        
+                            <!-- <h1 class="box-title"><i class="fa fa-list"></i> Lista de Clientes</h1> -->
+                            <div class="box-tools pull-right">
+                                <span class="label label-success">TOTAL DE REGISTROS: {{pagination.total}}</span>
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                                </button>
+                                <!-- <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button> -->
+                            </div>
+                        </div>
+                        <template v-if="listado==0">
+                            <div align="center">
+                                <img src="img/loadx.gif" alt="technoserve" align="middle">
+                                <!-- <p>Cargando...</p> -->
+                            </div>
+                        </template>
+                        <template v-if="listado==1">
+                            <div class="box-body table-responsive no-padding">
+                                <div class="col-md-12">
+                                    <div class="input-group" style="margin-bottom: 10px;margin-top: 10px;">
+                                        <input type="text"  v-model="search" @keyup.enter="list_data(1)"  class="form-control" placeholder="Buscar por dni o nombres..." style="border-bottom-left-radius: 3px; border-top-left-radius: 3px;">
+                                        <span class="input-group-btn">
+                                            <button type="submit" @click="list_data(1)"  class="btn btn-search btn-flat" style="border-bottom-right-radius: 3px; border-top-right-radius: 3px;"><i class="fa fa-search"></i> Buscar</button>
+                                        </span>
+                                    </div>                                               
+                                </div>
+                                <table  class="table table-hover" style="font-size:12px">
+                                    <thead style="background: rgb(32, 32, 32);color: #fff;">                                                                                   
+                                        <tr>
+                                            <th style="text-align: center;vertical-align: middle;">#</th>
+                                            <th style="vertical-align: middle;">DENOMINACIÓN</th>
+                                            <th style="text-align: center;vertical-align: middle;">FECHA DE INICIO</th>
+                                            <th style="vertical-align: middle;">DIRECCIÓN</th>
+                                            <th style="text-align: center;vertical-align: middle;">TELF. / CELULAR</th>                                                                                
+                                            <th style="text-align: center;vertical-align: middle;">ESTADO</th>                                                                                
+                                            <th style="vertical-align: middle;">INFO. ADICIONAL</th>                                                                                
+                                            <th style="text-align: center; vertical-align: middle;">ACCIONES</th>
+                                        </tr> 
+                                    </thead>
+                                    <tbody>
+                                        <tr v-for="(midata,index) in array_list" :key="index" >
+                                            <td style="vertical-align: middle;" >{{(index+1)+((Number(pagination.current_page)-1)*8)}}</td>
+                                            <td style="vertical-align: middle;" v-text="midata.name"></td>
+                                            <td style="text-align: center;vertical-align: middle;" v-text="midata.date_init"></td>
+                                            <td style="vertical-align: middle;" v-text="midata.address"></td>                                                                                
+                                            <td style="text-align: center;vertical-align: middle;" v-text="midata.phone"></td>
+                                            <td style="text-align: center;vertical-align: middle;" >
+                                                <div v-if="midata.state=='1'">
+                                                    <span class="label label-success" style="font-size:11px;">ACTIVO</span>
+                                                </div>
+                                                <div v-else>
+                                                    <span class="label label-danger" style="font-size:11px;">INACTIVO</span>
+                                                </div>
+                                            </td>
+                                            <td style="vertical-align: middle;" v-text="midata.notes"></td>
+                                            <td style="text-align: center; vertical-align: middle;"> 
+                                                
+                                                <button type="button" @click="editData(midata.id)" class="btn btn-editar btn-sm" data-toggle="tooltip" title="Editar">
+                                                    <i class="fa fa-pencil"></i>
+                                                </button>                                                                                                                   
+                                            
+                                                <button type="button" @click="delete_data(midata.id)" class="btn btn-eliminar btn-sm" data-toggle="tooltip" title="Eliminar">
+                                                    <i class="fa fa-trash"></i>
+                                                </button>
+                                            </td> 
+                                        </tr>                       
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="box-footer">
+                                <div class="col-md-6">                                                                                       
+                                </div>
+                                <div class="col-md-6" style="margin-top: -40px; margin-bottom: -45px;">
+                                    <div class="dataTables_paginate paging_simple_numbers" style=" float: right !important;">
+                                        <nav>
+                                            <ul class="pagination">
+                                                <ul class="pagination">
+                                                    <li class="page-item" v-if="pagination.current_page > 1">
+                                                        <a class="page-link" href="#" @click.prevent="cambiarPagina(Number(pagination.current_page) - 1)"><i class="fa fa-angle-left" style="color:#189900;cursor: pointer"></i></a>
+                                                    </li>
+                                                    <li class="page-item" v-for="page in pagesNumber" :key="page" :class="[page == isActived ? 'active' : '']">
+                                                        <a class="page-link" href="#" @click.prevent="cambiarPagina(page)" v-text="page"></a>
+                                                    </li>
+                                                    <li class="page-item" v-if="pagination.current_page < pagination.last_page">
+                                                        <a class="page-link" href="#" @click.prevent="cambiarPagina(Number(pagination.current_page) + 1)"><i class="fa fa-angle-right" style="color:#189900;cursor: pointer"></i></a>
+                                                    </li>
+                                                </ul> 
+                                            </ul>                        
+                                        </nav>
+                                    </div>
+                                </div>
+                            </div>
+                        </template>
+                    </div>
+                    
+                </div>
+            </div>                                  
 		</section>
     </main>
 </template>
@@ -416,9 +391,9 @@
                 
             },
            
-            edit_data(id){
+            editData(id){
                 let me=this;
-                me.listado=2;
+                me.listado=1;
                 me.limpiar();
                 var url= 'get_branch_office?id='+id;
                 axios.get(url).then(function (response) {
@@ -429,7 +404,6 @@
                     me.phone = respuesta.datax[0].phone;
                     me.notes =respuesta.datax[0].notes;
                     me.date_init=moment(respuesta.datax[0].date_init).toDate();
-                    me.validarData();
                 })
                 .catch(function (error) {
                     console.log(error);
@@ -512,24 +486,11 @@
                     }else if (result.dismiss === swal.DismissReason.cancel) {}
                 }) 
             },
-            emprendar(id){
-                let me=this;
-                me.listado=3;
-                 
-            },
-            agregar(){
-                let me=this;
-                me.listado=2;
-            },
             
             volver(){
                 let me=this;
                 me.limpiar();
                 me.listado=1;
-            },
-            descargar(search){               
-                var url= '/downloadprogram?search='+search;
-                window.location.href = url;
             },
             
             limpiar(){

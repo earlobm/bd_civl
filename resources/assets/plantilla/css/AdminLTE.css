@@ -2284,17 +2284,15 @@ a:focus {
 .btn-success {
   display: inline-block;
   background-color: rgb(48, 133, 214);
-  border-left-color:rgb(48, 133, 214);
-  border-right-color:rgb(48, 133, 214);
   border-color:rgb(48, 133, 214);
   margin-left: 10px;
 }
 .btn-success:hover,
 .btn-success:active,
 .btn-success.hover {
-  background-color: #2672ec;
-  border-left-color: #2672ec;
-  border-right-color: #2672ec;
+  background-color: #ffffff;
+  border-color:rgb(48, 133, 214);
+  color:rgb(48, 133, 214);
 }
 .btn-import {
   background-color: rgb(113, 112, 115);
@@ -2352,8 +2350,6 @@ a:focus {
   background-color:white;
   color: #03a9f4;
   border-color: #03a9f4;
-  border-top-right-radius: 3px;
-  border-bottom-right-radius: 3px
 }
 .btn-download {
   background-color: #189900; 
