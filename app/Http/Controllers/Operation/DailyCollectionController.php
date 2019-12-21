@@ -1,5 +1,5 @@
 <?php
-namespace poi\Http\Controllers\Movement;
+namespace poi\Http\Controllers\Operation;
 
 use Illuminate\Http\Request;
 use poi\Http\Controllers\Controller;

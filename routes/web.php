@@ -67,9 +67,12 @@ Route::get('/getDatabyNroDocP', 'Register\PersonalController@getDatabyNroDocP');
 Route::post('/saveEmployee', 'Register\EmployeeController@saveEmployee');
 Route::get('/getListaEmpleadoList', 'Register\EmployeeController@list_employee');
 //credit
-Route::get('/getListDailyCollection', 'Movement\DailyCollectionController@getListDailyCollection'); 
-Route::get('/getListDailyBalance', 'Movement\DailyBalanceController@getListDailyBalance'); 
-Route::get('/downloadDayliBalance', 'Movement\DailyBalanceController@downloadPdf'); 
+Route::get('/getListDailyCollection', 'Operation\DailyCollectionController@getListDailyCollection'); 
+Route::get('/getListDailyBalance', 'Operation\DailyBalanceController@getListDailyBalance'); 
+Route::get('/downloadDayliBalance', 'Operation\DailyBalanceController@downloadPdf'); 
+//histotial
+Route::get('/creditByCustomer', 'Operation\CustomerHistoryController@creditByCustomer'); 
+
 
 //resumenDay
 Route::get('/getListaResumenDay', 'Register\AmountDayController@getListaResumenDay');
@@ -84,15 +87,6 @@ Route::get('/get_list_market', 'Register\MarketController@list');
 Route::get('/edit_market', 'Register\MarketController@edit_market'); 
 Route::post('/deleteMercado', 'Register\MarketController@deleteMercado'); 
 
-//pledge
-Route::post('/save_pledge', 'Register\PledgeController@save'); 
-Route::post('/delete_pledge', 'Register\PledgeController@delete'); 
-Route::get('/get_list_active_pledge', 'Register\PledgeController@getListActive'); 
-Route::get('/dowloadContract','Register\PledgeController@dowloadContract');
-Route::get('/getSuggestedPrice','Register\PledgeController@send_to_sales');
-Route::get('/getProductSales','Register\PledgeController@product_sales');
-Route::post('/save_suggested_price','Register\PledgeController@save_suggested_price');
-Route::post('/save_final_price','Register\PledgeController@save_final_price');
 
 //movement Payment
 Route::post('/save_payment','Movement\DailyCollectionController@save');

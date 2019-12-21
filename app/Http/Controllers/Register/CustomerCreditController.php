@@ -337,6 +337,12 @@ class CustomerCreditController extends Controller
             p.maternal_last_name, p.email,
             p.address,p.phone,p.id_district, p.reference,
             c.id as id_customer_credit,
+            (select count(id) from credit 
+                where id_customer=c.id
+                and state=1) as cred_active, 
+            (select count(id) from credit 
+                where id_customer=c.id
+                and state=2) as cred_cancel,
             (select count(p.id) 
             from person p inner join customer c on c.id_person=p.id 
             where c.state=1 and  concat(p.number_doc,' ',p.names,' ',p.paternal_last_name,' ',p.maternal_last_name) like '%$buscar%') AS total 

@@ -37,7 +37,7 @@
                                         <div class="input-group" style="margin-bottom: 10px;margin-top: 10px;">
                                             <input type="text"  v-model="buscar" @keyup.enter="list_data(1)"  class="form-control" placeholder="Buscar por dni o nombres..." style="border-bottom-left-radius: 3px; border-top-left-radius: 3px;">
                                             <span class="input-group-btn">
-                                                <button type="submit" @click="list_data(1)"  class="btn btn-search btn-flat" style="border-bottom-right-radius: 3px; border-top-right-radius: 3px;"><i v-bind:class="icon_search_client"></i> BUSCAR</button>
+                                                <button type="submit" @click="list_data(1)"  class="btn btn-search btn-flat" style="border-bottom-right-radius: 3px; border-top-right-radius: 3px;"><i class="fa fa-search"></i> BUSCAR</button>
                                             </span>
                                         </div>                                               
                                 </div>
@@ -49,6 +49,8 @@
                                             <th style="vertical-align: middle;">NOMBRE</th>
                                             <th style="vertical-align: middle;">DIRECCIÓN</th>
                                             <th style="vertical-align: middle;">CELULAR</th>
+                                            <th style="vertical-align: middle;">CRED ACTIVOS</th>
+                                            <th style="vertical-align: middle;">CRED CANCELADO</th>
                                             <th style="text-align: center; vertical-align: middle;">HISTORIAL</th>
                                         </tr> 
                                     </thead>
@@ -59,8 +61,10 @@
                                             <td style="vertical-align: middle;" v-text="midata.names+' '+midata.paternal_last_name+' '+midata.maternal_last_name"></td>
                                             <td style="vertical-align: middle;" v-text="midata.address"></td>
                                             <td style="vertical-align: middle;" v-text="midata.phone"></td>
+                                            <td style="vertical-align: middle;" v-text="midata.cred_active"></td>
+                                            <td style="vertical-align: middle;" v-text="midata.cred_cancel"></td>
                                             <td style="text-align: center; vertical-align: middle;"> 
-                                                <button type="button" @click="detailCredit(midata)" class="btn btn-emprendar btn-sm" data-toggle="tooltip" title="Historial crediticio">
+                                                <button type="button" @click="detailCustomer(midata)" class="btn btn-emprendar btn-sm" data-toggle="tooltip" title="Historial crediticio">
                                                     <i class="fa fa-line-chart"></i>
                                                 </button>                           
                                             </td> 
@@ -117,7 +121,7 @@
                         </template>
                         <template v-if="listado==2">
                             <div class="box-body table-responsive no-padding">
-                                <div class="col-md-3">
+                                <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="nombres">Cliente:</label>
                                         <div class="input-group">
@@ -126,43 +130,48 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-3">
+                                <div class="col-md-2">
                                     <div class="form-group">
-                                        <label for="nombres">Código Crédito:</label>
+                                        <label for="nombres">Cód Crédito:</label>
                                         <div class="input-group">
                                             <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-user"></i></span>
-                                            <select class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;" v-model="id_type_doc">
+                                            <select @change="getCredit($event.target.value)" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;" v-model="cod_credit">
                                                 <option selected="selected" value="">Seleccione</option>
-                                                <option v-for="datax in array_type_document" :key="datax.id" :value="datax.id">{{ datax.name }}</option>
+                                                <option v-for="datax in array_cod_credit" :key="datax.id" :value="datax.id">{{ datax.code_credit }}</option>
                                             </select> 
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-3">
+                                <div class="col-md-2">
                                     <div class="form-group">
                                         <label for="nombres">Estado:</label>
                                         <div class="input-group">
                                             <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-user"></i></span>
-                                            <input disabled v-model="name" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">  
+                                            <input disabled v-model="state_credit" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">  
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-3">
+                                <div  class="col-md-2">
                                     <div class="form-group">
-                                        <label for="nombres">Activar:</label>
-                                        <div class="input-group">
-                                            <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-user"></i></span>
-                                            <input   type="checkbox"  >  
+                                        <label for="ap_paterno" style="visibility: hidden">Activar:</label>
+                                        <div class="checkbox">
+                                            <label class="container">
+                                                <input type="checkbox" v-model="active_credit">
+                                                <strong>Activar</strong>
+                                                <span class="checkmark"></span>
+                                            </label>
                                         </div>
                                     </div>
                                 </div>
 
+                                
+
                                 <div class="col-md-3">
                                     <div class="form-group">
-                                        <label for="nombres">Fecha desembolso:</label>
+                                        <label for="nombres">F. desembolso:</label>
                                         <div class="input-group">
                                             <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-user"></i></span>
-                                            <input disabled v-model="name" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">  
+                                            <input disabled v-model="date_credit" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">  
                                         </div>
                                     </div>
                                 </div>
@@ -171,7 +180,7 @@
                                         <label for="nombres">Plazo:</label>
                                         <div class="input-group">
                                             <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-user"></i></span>
-                                            <input disabled v-model="name" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">  
+                                            <input disabled v-model="number_quota" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">  
                                         </div>
                                     </div>
                                 </div>
@@ -180,7 +189,7 @@
                                         <label for="nombres">Periodo:</label>
                                         <div class="input-group">
                                             <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-user"></i></span>
-                                            <input disabled v-model="name" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">  
+                                            <input disabled v-model="period" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">  
                                         </div>
                                     </div>
                                 </div>
@@ -189,7 +198,7 @@
                                         <label for="nombres">Tasa de Interés:</label>
                                         <div class="input-group">
                                             <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-user"></i></span>
-                                            <input disabled v-model="name" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">  
+                                            <input disabled v-model="interest_rate" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">  
                                         </div>
                                     </div>
                                 </div>
@@ -199,7 +208,7 @@
                                         <label for="nombres">Capital:</label>
                                         <div class="input-group">
                                             <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-user"></i></span>
-                                            <input disabled v-model="name" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">  
+                                            <input disabled v-model="capital" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">  
                                         </div>
                                     </div>
                                 </div>
@@ -208,7 +217,7 @@
                                         <label for="nombres">Interés:</label>
                                         <div class="input-group">
                                             <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-user"></i></span>
-                                            <input disabled v-model="name" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">  
+                                            <input disabled v-model="interest" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">  
                                         </div>
                                     </div>
                                 </div>
@@ -217,7 +226,7 @@
                                         <label for="nombres">Mora:</label>
                                         <div class="input-group">
                                             <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-user"></i></span>
-                                            <input disabled v-model="name" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">  
+                                            <input disabled v-model="mora" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">  
                                         </div>
                                     </div>
                                 </div>
@@ -226,7 +235,7 @@
                                         <label for="nombres">Dias Mora:</label>
                                         <div class="input-group">
                                             <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-user"></i></span>
-                                            <input disabled v-model="name" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">  
+                                            <input disabled v-model="day_mora" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">  
                                         </div>
                                     </div>
                                 </div>
@@ -295,12 +304,17 @@
                 historyCustomerToogle:'box box-primary ',
                 historyCustomerIconToogle:'fa fa-minus ',
                 detailCreditToogle:'box box-primary collapsed-box',
-                detailCreditIconToogle:'fa fa-plus'
+                detailCreditIconToogle:'fa fa-plus',
+                array_cod_credit:[],state_credit:'',name:'',cod_credit:'',
+                list:[],array_data_credit:[],
+                date_credit:'',number_quota:'',period:'',interest_rate:'',
+                capital:'',interest:'',mora:'',day_mora:'',active_credit:1
             }
         },
          components: {
             datePicker,moment
         },
+        
         computed:{
             isActived: function(){
 				return this.pagination.current_page;
@@ -334,6 +348,37 @@
             closeModal(){
                 let me=this;
                 me.modalTicket=0;
+            },
+            getCredit(id){
+                let me=this;
+                 var url= 'creditByCustomer?id_credit='+id;
+                    axios.get(url).then(function (response){
+                        var respuesta= response.data;
+                        me.array_data_credit=respuesta.datax;
+                        //me.date_credit=me.array_data_credit[0].date_credit;
+                        me.date_credit=moment(moment(moment(me.array_data_credit[0].date_credit).toDate(), 'DD/MM/YYYY')).format('DD/MM/YYYY') ;
+                        // moment(moment(this.birthdate, 'DD/MM/YYYY')).format('YYYY-MM-DD'),
+                        me.number_quota=me.array_data_credit[0].number_quota;
+                        me.period=me.array_data_credit[0].period;
+                        me.interest_rate=me.array_data_credit[0].interest_rate;
+                        me.capital=me.array_data_credit[0].capital;
+                        me.interest=me.array_data_credit[0].interest;
+                        me.mora=me.array_data_credit[0].mora;
+                        me.day_mora=me.array_data_credit[0].day_mora;
+                        if(me.array_data_credit[0].state==1){
+                            me.state_credit="ACTIVO";
+                              me.active_credit=1;
+                        }else if (me.array_data_credit[0].state==2)
+                        {
+                            me.state_credit="CANCELADO";
+                            me.active_credit=0;
+                        }
+                  
+
+                    })
+                    .catch(function (error) {
+                        console.log(error);
+                    });
             },
            
             dowloadContract(){
@@ -371,31 +416,32 @@
                 this.detailCreditIconToogle='fa fa-plus';
 
             },
-            detailCredit(midata){
-
+            detailCustomer(midata){
+                let me=this;
                 this.historyCustomerToogle='box box-primary collapsed-box';
                 this.detailCreditToogle='box box-primary';
 
                 this.historyCustomerIconToogle='fa fa-plus ';
                 this.detailCreditIconToogle='fa fa-minus';
-
+                //id_customer_credit
                 this.nameCustomer=midata.names+' '+midata.paternal_last_name+' '+midata.maternal_last_name;
-
+                //obtieniendo los codigos de creditos
+                    var url= 'creditByCustomer?id_customer='+midata.id_customer_credit;
+                    axios.get(url).then(function (response){
+                        var respuesta= response.data;
+                        me.array_cod_credit=respuesta.datax;
+                    })
+                    .catch(function (error) {
+                        console.log(error);
+                    });
                 return;
-                let me=this;
+                
                 me.listadox=3;
                 this.visible=0;
                 this.id_customer_credit=midata.id_customer_credit;
                 this.name_customer=midata.names+' '+midata.paternal_last_name+' '+midata.maternal_last_name;
                 this.nro_doc=midata.number_doc;
-                var url= 'getDependenceParent';
-                axios.get(url).then(function (response){
-                    var respuesta= response.data;
-                    me.arrayTypeProduct=respuesta.datax;
-                })
-                .catch(function (error) {
-                    console.log(error);
-                });
+              
 
                 url= 'getWarehouse';
                 axios.get(url).then(function (response){
@@ -412,10 +458,7 @@
                 var url= '/downloadprogram?buscar='+buscar;
                 window.location.href = url;
             },
-            clean_data(){
-                this.errors.address="";
-                this.nro_doc="";
-            },
+            
             list_data(page){
                 let me=this;                      
                 me.listado=0;
@@ -431,7 +474,6 @@
                 });
                
             },
-           
 
         },
         

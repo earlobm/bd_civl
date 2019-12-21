@@ -26719,6 +26719,15 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -26747,12 +26756,13 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
             'last_page': 0,
             'from': 0,
             'to': 0
-        }), _defineProperty(_ref, 'offset', 3), _defineProperty(_ref, 'buscar', ''), _defineProperty(_ref, 'nameCustomer', ''), _defineProperty(_ref, 'historyCustomerToogle', 'box box-primary '), _defineProperty(_ref, 'historyCustomerIconToogle', 'fa fa-minus '), _defineProperty(_ref, 'detailCreditToogle', 'box box-primary collapsed-box'), _defineProperty(_ref, 'detailCreditIconToogle', 'fa fa-plus'), _ref;
+        }), _defineProperty(_ref, 'offset', 3), _defineProperty(_ref, 'buscar', ''), _defineProperty(_ref, 'nameCustomer', ''), _defineProperty(_ref, 'historyCustomerToogle', 'box box-primary '), _defineProperty(_ref, 'historyCustomerIconToogle', 'fa fa-minus '), _defineProperty(_ref, 'detailCreditToogle', 'box box-primary collapsed-box'), _defineProperty(_ref, 'detailCreditIconToogle', 'fa fa-plus'), _defineProperty(_ref, 'array_cod_credit', []), _defineProperty(_ref, 'state_credit', ''), _defineProperty(_ref, 'name', ''), _defineProperty(_ref, 'cod_credit', ''), _defineProperty(_ref, 'list', []), _defineProperty(_ref, 'array_data_credit', []), _defineProperty(_ref, 'date_credit', ''), _defineProperty(_ref, 'number_quota', ''), _defineProperty(_ref, 'period', ''), _defineProperty(_ref, 'interest_rate', ''), _defineProperty(_ref, 'capital', ''), _defineProperty(_ref, 'interest', ''), _defineProperty(_ref, 'mora', ''), _defineProperty(_ref, 'day_mora', ''), _defineProperty(_ref, 'active_credit', 1), _ref;
     },
 
     components: {
         datePicker: __WEBPACK_IMPORTED_MODULE_2_vue_bootstrap_datetimepicker___default.a, moment: __WEBPACK_IMPORTED_MODULE_1_moment_timezone___default.a
     },
+
     computed: {
         isActived: function isActived() {
             return this.pagination.current_page;
@@ -26785,6 +26795,33 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
             var me = this;
             me.modalTicket = 0;
         },
+        getCredit: function getCredit(id) {
+            var me = this;
+            var url = 'creditByCustomer?id_credit=' + id;
+            axios.get(url).then(function (response) {
+                var respuesta = response.data;
+                me.array_data_credit = respuesta.datax;
+                //me.date_credit=me.array_data_credit[0].date_credit;
+                me.date_credit = __WEBPACK_IMPORTED_MODULE_1_moment_timezone___default()(__WEBPACK_IMPORTED_MODULE_1_moment_timezone___default()(__WEBPACK_IMPORTED_MODULE_1_moment_timezone___default()(me.array_data_credit[0].date_credit).toDate(), 'DD/MM/YYYY')).format('DD/MM/YYYY');
+                // moment(moment(this.birthdate, 'DD/MM/YYYY')).format('YYYY-MM-DD'),
+                me.number_quota = me.array_data_credit[0].number_quota;
+                me.period = me.array_data_credit[0].period;
+                me.interest_rate = me.array_data_credit[0].interest_rate;
+                me.capital = me.array_data_credit[0].capital;
+                me.interest = me.array_data_credit[0].interest;
+                me.mora = me.array_data_credit[0].mora;
+                me.day_mora = me.array_data_credit[0].day_mora;
+                if (me.array_data_credit[0].state == 1) {
+                    me.state_credit = "ACTIVO";
+                    me.active_credit = 1;
+                } else if (me.array_data_credit[0].state == 2) {
+                    me.state_credit = "CANCELADO";
+                    me.active_credit = 0;
+                }
+            }).catch(function (error) {
+                console.log(error);
+            });
+        },
         dowloadContract: function dowloadContract() {
             //var entre = document.getElementById("entre");
             //var nombreentre = entre.options[entre.selectedIndex].text;
@@ -26812,30 +26849,30 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
             this.historyCustomerIconToogle = 'fa fa-minus ';
             this.detailCreditIconToogle = 'fa fa-plus';
         },
-        detailCredit: function detailCredit(midata) {
-
+        detailCustomer: function detailCustomer(midata) {
+            var me = this;
             this.historyCustomerToogle = 'box box-primary collapsed-box';
             this.detailCreditToogle = 'box box-primary';
 
             this.historyCustomerIconToogle = 'fa fa-plus ';
             this.detailCreditIconToogle = 'fa fa-minus';
-
+            //id_customer_credit
             this.nameCustomer = midata.names + ' ' + midata.paternal_last_name + ' ' + midata.maternal_last_name;
-
+            //obtieniendo los codigos de creditos
+            var url = 'creditByCustomer?id_customer=' + midata.id_customer_credit;
+            axios.get(url).then(function (response) {
+                var respuesta = response.data;
+                me.array_cod_credit = respuesta.datax;
+            }).catch(function (error) {
+                console.log(error);
+            });
             return;
-            var me = this;
+
             me.listadox = 3;
             this.visible = 0;
             this.id_customer_credit = midata.id_customer_credit;
             this.name_customer = midata.names + ' ' + midata.paternal_last_name + ' ' + midata.maternal_last_name;
             this.nro_doc = midata.number_doc;
-            var url = 'getDependenceParent';
-            axios.get(url).then(function (response) {
-                var respuesta = response.data;
-                me.arrayTypeProduct = respuesta.datax;
-            }).catch(function (error) {
-                console.log(error);
-            });
 
             url = 'getWarehouse';
             axios.get(url).then(function (response) {
@@ -26848,10 +26885,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         descargar: function descargar(buscar) {
             var url = '/downloadprogram?buscar=' + buscar;
             window.location.href = url;
-        },
-        clean_data: function clean_data() {
-            this.errors.address = "";
-            this.nro_doc = "";
         },
         list_data: function list_data(page) {
             var me = this;
@@ -26992,7 +27025,7 @@ var render = function() {
                                         },
                                         [
                                           _c("i", {
-                                            class: _vm.icon_search_client
+                                            staticClass: "fa fa-search"
                                           }),
                                           _vm._v(" BUSCAR")
                                         ]
@@ -27080,6 +27113,28 @@ var render = function() {
                                         }
                                       }),
                                       _vm._v(" "),
+                                      _c("td", {
+                                        staticStyle: {
+                                          "vertical-align": "middle"
+                                        },
+                                        domProps: {
+                                          textContent: _vm._s(
+                                            midata.cred_active
+                                          )
+                                        }
+                                      }),
+                                      _vm._v(" "),
+                                      _c("td", {
+                                        staticStyle: {
+                                          "vertical-align": "middle"
+                                        },
+                                        domProps: {
+                                          textContent: _vm._s(
+                                            midata.cred_cancel
+                                          )
+                                        }
+                                      }),
+                                      _vm._v(" "),
                                       _c(
                                         "td",
                                         {
@@ -27101,7 +27156,7 @@ var render = function() {
                                               },
                                               on: {
                                                 click: function($event) {
-                                                  return _vm.detailCredit(
+                                                  return _vm.detailCustomer(
                                                     midata
                                                   )
                                                 }
@@ -27319,7 +27374,7 @@ var render = function() {
                             staticClass: "box-body table-responsive no-padding"
                           },
                           [
-                            _c("div", { staticClass: "col-md-3" }, [
+                            _c("div", { staticClass: "col-md-6" }, [
                               _c("div", { staticClass: "form-group" }, [
                                 _c("label", { attrs: { for: "nombres" } }, [
                                   _vm._v("Cliente:")
@@ -27357,10 +27412,10 @@ var render = function() {
                               ])
                             ]),
                             _vm._v(" "),
-                            _c("div", { staticClass: "col-md-3" }, [
+                            _c("div", { staticClass: "col-md-2" }, [
                               _c("div", { staticClass: "form-group" }, [
                                 _c("label", { attrs: { for: "nombres" } }, [
-                                  _vm._v("Código Crédito:")
+                                  _vm._v("Cód Crédito:")
                                 ]),
                                 _vm._v(" "),
                                 _c("div", { staticClass: "input-group" }, [
@@ -27373,8 +27428,8 @@ var render = function() {
                                         {
                                           name: "model",
                                           rawName: "v-model",
-                                          value: _vm.id_type_doc,
-                                          expression: "id_type_doc"
+                                          value: _vm.cod_credit,
+                                          expression: "cod_credit"
                                         }
                                       ],
                                       staticClass: "form-control",
@@ -27383,26 +27438,33 @@ var render = function() {
                                         "border-top-right-radius": "3px"
                                       },
                                       on: {
-                                        change: function($event) {
-                                          var $$selectedVal = Array.prototype.filter
-                                            .call(
-                                              $event.target.options,
-                                              function(o) {
-                                                return o.selected
-                                              }
+                                        change: [
+                                          function($event) {
+                                            var $$selectedVal = Array.prototype.filter
+                                              .call(
+                                                $event.target.options,
+                                                function(o) {
+                                                  return o.selected
+                                                }
+                                              )
+                                              .map(function(o) {
+                                                var val =
+                                                  "_value" in o
+                                                    ? o._value
+                                                    : o.value
+                                                return val
+                                              })
+                                            _vm.cod_credit = $event.target
+                                              .multiple
+                                              ? $$selectedVal
+                                              : $$selectedVal[0]
+                                          },
+                                          function($event) {
+                                            return _vm.getCredit(
+                                              $event.target.value
                                             )
-                                            .map(function(o) {
-                                              var val =
-                                                "_value" in o
-                                                  ? o._value
-                                                  : o.value
-                                              return val
-                                            })
-                                          _vm.id_type_doc = $event.target
-                                            .multiple
-                                            ? $$selectedVal
-                                            : $$selectedVal[0]
-                                        }
+                                          }
+                                        ]
                                       }
                                     },
                                     [
@@ -27417,7 +27479,7 @@ var render = function() {
                                         [_vm._v("Seleccione")]
                                       ),
                                       _vm._v(" "),
-                                      _vm._l(_vm.array_type_document, function(
+                                      _vm._l(_vm.array_cod_credit, function(
                                         datax
                                       ) {
                                         return _c(
@@ -27426,7 +27488,7 @@ var render = function() {
                                             key: datax.id,
                                             domProps: { value: datax.id }
                                           },
-                                          [_vm._v(_vm._s(datax.name))]
+                                          [_vm._v(_vm._s(datax.code_credit))]
                                         )
                                       })
                                     ],
@@ -27436,7 +27498,7 @@ var render = function() {
                               ])
                             ]),
                             _vm._v(" "),
-                            _c("div", { staticClass: "col-md-3" }, [
+                            _c("div", { staticClass: "col-md-2" }, [
                               _c("div", { staticClass: "form-group" }, [
                                 _c("label", { attrs: { for: "nombres" } }, [
                                   _vm._v("Estado:")
@@ -27450,8 +27512,8 @@ var render = function() {
                                       {
                                         name: "model",
                                         rawName: "v-model",
-                                        value: _vm.name,
-                                        expression: "name"
+                                        value: _vm.state_credit,
+                                        expression: "state_credit"
                                       }
                                     ],
                                     staticClass: "form-control",
@@ -27460,13 +27522,13 @@ var render = function() {
                                       "border-top-right-radius": "3px"
                                     },
                                     attrs: { disabled: "", type: "text" },
-                                    domProps: { value: _vm.name },
+                                    domProps: { value: _vm.state_credit },
                                     on: {
                                       input: function($event) {
                                         if ($event.target.composing) {
                                           return
                                         }
-                                        _vm.name = $event.target.value
+                                        _vm.state_credit = $event.target.value
                                       }
                                     }
                                   })
@@ -27474,24 +27536,86 @@ var render = function() {
                               ])
                             ]),
                             _vm._v(" "),
-                            _vm._m(8),
+                            _c("div", { staticClass: "col-md-2" }, [
+                              _c("div", { staticClass: "form-group" }, [
+                                _c(
+                                  "label",
+                                  {
+                                    staticStyle: { visibility: "hidden" },
+                                    attrs: { for: "ap_paterno" }
+                                  },
+                                  [_vm._v("Activar:")]
+                                ),
+                                _vm._v(" "),
+                                _c("div", { staticClass: "checkbox" }, [
+                                  _c("label", { staticClass: "container" }, [
+                                    _c("input", {
+                                      directives: [
+                                        {
+                                          name: "model",
+                                          rawName: "v-model",
+                                          value: _vm.active_credit,
+                                          expression: "active_credit"
+                                        }
+                                      ],
+                                      attrs: { type: "checkbox" },
+                                      domProps: {
+                                        checked: Array.isArray(
+                                          _vm.active_credit
+                                        )
+                                          ? _vm._i(_vm.active_credit, null) > -1
+                                          : _vm.active_credit
+                                      },
+                                      on: {
+                                        change: function($event) {
+                                          var $$a = _vm.active_credit,
+                                            $$el = $event.target,
+                                            $$c = $$el.checked ? true : false
+                                          if (Array.isArray($$a)) {
+                                            var $$v = null,
+                                              $$i = _vm._i($$a, $$v)
+                                            if ($$el.checked) {
+                                              $$i < 0 &&
+                                                (_vm.active_credit = $$a.concat(
+                                                  [$$v]
+                                                ))
+                                            } else {
+                                              $$i > -1 &&
+                                                (_vm.active_credit = $$a
+                                                  .slice(0, $$i)
+                                                  .concat($$a.slice($$i + 1)))
+                                            }
+                                          } else {
+                                            _vm.active_credit = $$c
+                                          }
+                                        }
+                                      }
+                                    }),
+                                    _vm._v(" "),
+                                    _c("strong", [_vm._v("Activar")]),
+                                    _vm._v(" "),
+                                    _c("span", { staticClass: "checkmark" })
+                                  ])
+                                ])
+                              ])
+                            ]),
                             _vm._v(" "),
                             _c("div", { staticClass: "col-md-3" }, [
                               _c("div", { staticClass: "form-group" }, [
                                 _c("label", { attrs: { for: "nombres" } }, [
-                                  _vm._v("Fecha desembolso:")
+                                  _vm._v("F. desembolso:")
                                 ]),
                                 _vm._v(" "),
                                 _c("div", { staticClass: "input-group" }, [
-                                  _vm._m(9),
+                                  _vm._m(8),
                                   _vm._v(" "),
                                   _c("input", {
                                     directives: [
                                       {
                                         name: "model",
                                         rawName: "v-model",
-                                        value: _vm.name,
-                                        expression: "name"
+                                        value: _vm.date_credit,
+                                        expression: "date_credit"
                                       }
                                     ],
                                     staticClass: "form-control",
@@ -27500,13 +27624,13 @@ var render = function() {
                                       "border-top-right-radius": "3px"
                                     },
                                     attrs: { disabled: "", type: "text" },
-                                    domProps: { value: _vm.name },
+                                    domProps: { value: _vm.date_credit },
                                     on: {
                                       input: function($event) {
                                         if ($event.target.composing) {
                                           return
                                         }
-                                        _vm.name = $event.target.value
+                                        _vm.date_credit = $event.target.value
                                       }
                                     }
                                   })
@@ -27521,15 +27645,15 @@ var render = function() {
                                 ]),
                                 _vm._v(" "),
                                 _c("div", { staticClass: "input-group" }, [
-                                  _vm._m(10),
+                                  _vm._m(9),
                                   _vm._v(" "),
                                   _c("input", {
                                     directives: [
                                       {
                                         name: "model",
                                         rawName: "v-model",
-                                        value: _vm.name,
-                                        expression: "name"
+                                        value: _vm.number_quota,
+                                        expression: "number_quota"
                                       }
                                     ],
                                     staticClass: "form-control",
@@ -27538,13 +27662,13 @@ var render = function() {
                                       "border-top-right-radius": "3px"
                                     },
                                     attrs: { disabled: "", type: "text" },
-                                    domProps: { value: _vm.name },
+                                    domProps: { value: _vm.number_quota },
                                     on: {
                                       input: function($event) {
                                         if ($event.target.composing) {
                                           return
                                         }
-                                        _vm.name = $event.target.value
+                                        _vm.number_quota = $event.target.value
                                       }
                                     }
                                   })
@@ -27559,15 +27683,15 @@ var render = function() {
                                 ]),
                                 _vm._v(" "),
                                 _c("div", { staticClass: "input-group" }, [
-                                  _vm._m(11),
+                                  _vm._m(10),
                                   _vm._v(" "),
                                   _c("input", {
                                     directives: [
                                       {
                                         name: "model",
                                         rawName: "v-model",
-                                        value: _vm.name,
-                                        expression: "name"
+                                        value: _vm.period,
+                                        expression: "period"
                                       }
                                     ],
                                     staticClass: "form-control",
@@ -27576,13 +27700,13 @@ var render = function() {
                                       "border-top-right-radius": "3px"
                                     },
                                     attrs: { disabled: "", type: "text" },
-                                    domProps: { value: _vm.name },
+                                    domProps: { value: _vm.period },
                                     on: {
                                       input: function($event) {
                                         if ($event.target.composing) {
                                           return
                                         }
-                                        _vm.name = $event.target.value
+                                        _vm.period = $event.target.value
                                       }
                                     }
                                   })
@@ -27597,15 +27721,15 @@ var render = function() {
                                 ]),
                                 _vm._v(" "),
                                 _c("div", { staticClass: "input-group" }, [
-                                  _vm._m(12),
+                                  _vm._m(11),
                                   _vm._v(" "),
                                   _c("input", {
                                     directives: [
                                       {
                                         name: "model",
                                         rawName: "v-model",
-                                        value: _vm.name,
-                                        expression: "name"
+                                        value: _vm.interest_rate,
+                                        expression: "interest_rate"
                                       }
                                     ],
                                     staticClass: "form-control",
@@ -27614,13 +27738,13 @@ var render = function() {
                                       "border-top-right-radius": "3px"
                                     },
                                     attrs: { disabled: "", type: "text" },
-                                    domProps: { value: _vm.name },
+                                    domProps: { value: _vm.interest_rate },
                                     on: {
                                       input: function($event) {
                                         if ($event.target.composing) {
                                           return
                                         }
-                                        _vm.name = $event.target.value
+                                        _vm.interest_rate = $event.target.value
                                       }
                                     }
                                   })
@@ -27635,15 +27759,15 @@ var render = function() {
                                 ]),
                                 _vm._v(" "),
                                 _c("div", { staticClass: "input-group" }, [
-                                  _vm._m(13),
+                                  _vm._m(12),
                                   _vm._v(" "),
                                   _c("input", {
                                     directives: [
                                       {
                                         name: "model",
                                         rawName: "v-model",
-                                        value: _vm.name,
-                                        expression: "name"
+                                        value: _vm.capital,
+                                        expression: "capital"
                                       }
                                     ],
                                     staticClass: "form-control",
@@ -27652,13 +27776,13 @@ var render = function() {
                                       "border-top-right-radius": "3px"
                                     },
                                     attrs: { disabled: "", type: "text" },
-                                    domProps: { value: _vm.name },
+                                    domProps: { value: _vm.capital },
                                     on: {
                                       input: function($event) {
                                         if ($event.target.composing) {
                                           return
                                         }
-                                        _vm.name = $event.target.value
+                                        _vm.capital = $event.target.value
                                       }
                                     }
                                   })
@@ -27673,15 +27797,15 @@ var render = function() {
                                 ]),
                                 _vm._v(" "),
                                 _c("div", { staticClass: "input-group" }, [
-                                  _vm._m(14),
+                                  _vm._m(13),
                                   _vm._v(" "),
                                   _c("input", {
                                     directives: [
                                       {
                                         name: "model",
                                         rawName: "v-model",
-                                        value: _vm.name,
-                                        expression: "name"
+                                        value: _vm.interest,
+                                        expression: "interest"
                                       }
                                     ],
                                     staticClass: "form-control",
@@ -27690,13 +27814,13 @@ var render = function() {
                                       "border-top-right-radius": "3px"
                                     },
                                     attrs: { disabled: "", type: "text" },
-                                    domProps: { value: _vm.name },
+                                    domProps: { value: _vm.interest },
                                     on: {
                                       input: function($event) {
                                         if ($event.target.composing) {
                                           return
                                         }
-                                        _vm.name = $event.target.value
+                                        _vm.interest = $event.target.value
                                       }
                                     }
                                   })
@@ -27711,15 +27835,15 @@ var render = function() {
                                 ]),
                                 _vm._v(" "),
                                 _c("div", { staticClass: "input-group" }, [
-                                  _vm._m(15),
+                                  _vm._m(14),
                                   _vm._v(" "),
                                   _c("input", {
                                     directives: [
                                       {
                                         name: "model",
                                         rawName: "v-model",
-                                        value: _vm.name,
-                                        expression: "name"
+                                        value: _vm.mora,
+                                        expression: "mora"
                                       }
                                     ],
                                     staticClass: "form-control",
@@ -27728,13 +27852,13 @@ var render = function() {
                                       "border-top-right-radius": "3px"
                                     },
                                     attrs: { disabled: "", type: "text" },
-                                    domProps: { value: _vm.name },
+                                    domProps: { value: _vm.mora },
                                     on: {
                                       input: function($event) {
                                         if ($event.target.composing) {
                                           return
                                         }
-                                        _vm.name = $event.target.value
+                                        _vm.mora = $event.target.value
                                       }
                                     }
                                   })
@@ -27749,15 +27873,15 @@ var render = function() {
                                 ]),
                                 _vm._v(" "),
                                 _c("div", { staticClass: "input-group" }, [
-                                  _vm._m(16),
+                                  _vm._m(15),
                                   _vm._v(" "),
                                   _c("input", {
                                     directives: [
                                       {
                                         name: "model",
                                         rawName: "v-model",
-                                        value: _vm.name,
-                                        expression: "name"
+                                        value: _vm.day_mora,
+                                        expression: "day_mora"
                                       }
                                     ],
                                     staticClass: "form-control",
@@ -27766,13 +27890,13 @@ var render = function() {
                                       "border-top-right-radius": "3px"
                                     },
                                     attrs: { disabled: "", type: "text" },
-                                    domProps: { value: _vm.name },
+                                    domProps: { value: _vm.day_mora },
                                     on: {
                                       input: function($event) {
                                         if ($event.target.composing) {
                                           return
                                         }
-                                        _vm.name = $event.target.value
+                                        _vm.day_mora = $event.target.value
                                       }
                                     }
                                   })
@@ -27780,7 +27904,7 @@ var render = function() {
                               ])
                             ]),
                             _vm._v(" "),
-                            _vm._m(17)
+                            _vm._m(16)
                           ]
                         )
                       ]
@@ -27865,6 +27989,14 @@ var staticRenderFns = [
             _vm._v("CELULAR")
           ]),
           _vm._v(" "),
+          _c("th", { staticStyle: { "vertical-align": "middle" } }, [
+            _vm._v("CRED ACTIVOS")
+          ]),
+          _vm._v(" "),
+          _c("th", { staticStyle: { "vertical-align": "middle" } }, [
+            _vm._v("CRED CANCELADO")
+          ]),
+          _vm._v(" "),
           _c(
             "th",
             {
@@ -27936,32 +28068,6 @@ var staticRenderFns = [
       },
       [_c("i", { staticClass: "fa fa-user" })]
     )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-md-3" }, [
-      _c("div", { staticClass: "form-group" }, [
-        _c("label", { attrs: { for: "nombres" } }, [_vm._v("Activar:")]),
-        _vm._v(" "),
-        _c("div", { staticClass: "input-group" }, [
-          _c(
-            "span",
-            {
-              staticClass: "input-group-addon",
-              staticStyle: {
-                "border-bottom-left-radius": "3px",
-                "border-top-left-radius": "3px"
-              }
-            },
-            [_c("i", { staticClass: "fa fa-user" })]
-          ),
-          _vm._v(" "),
-          _c("input", { attrs: { type: "checkbox" } })
-        ])
-      ])
-    ])
   },
   function() {
     var _vm = this
