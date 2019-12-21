@@ -88,12 +88,12 @@ Route::get('/edit_market', 'Register\MarketController@edit_market');
 Route::post('/deleteMercado', 'Register\MarketController@deleteMercado'); 
 
 
-//movement Payment
-Route::post('/save_payment','Movement\DailyCollectionController@save');
-Route::get('/downloadDayliCollection','Movement\DailyCollectionController@downloadDayliCollection');
+//Operation Payment
+Route::post('/save_payment','Operation\DailyCollectionController@save');
+Route::get('/downloadDayliCollection','Operation\DailyCollectionController@downloadDayliCollection');
 
 //guardando pagos de empeño
-Route::post('/save_payment_pledge','Movement\PaymentPledgeController@save');
+Route::post('/save_payment_pledge','Operation\PaymentPledgeController@save');
 
 //garmentType
 Route::get('/getDependenceParent', 'Register\DependenceController@getDependenceParent');

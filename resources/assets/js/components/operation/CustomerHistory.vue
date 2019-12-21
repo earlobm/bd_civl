@@ -120,140 +120,215 @@
                             </div>
                         </template>
                         <template v-if="listado==2">
-                            <div class="box-body table-responsive no-padding">
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="nombres">Cliente:</label>
-                                        <div class="input-group">
-                                            <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-user"></i></span>
-                                            <input disabled v-model="nameCustomer" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">  
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-2">
-                                    <div class="form-group">
-                                        <label for="nombres">Cód Crédito:</label>
-                                        <div class="input-group">
-                                            <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-user"></i></span>
-                                            <select @change="getCredit($event.target.value)" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;" v-model="cod_credit">
-                                                <option selected="selected" value="">Seleccione</option>
-                                                <option v-for="datax in array_cod_credit" :key="datax.id" :value="datax.id">{{ datax.code_credit }}</option>
-                                            </select> 
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-2">
-                                    <div class="form-group">
-                                        <label for="nombres">Estado:</label>
-                                        <div class="input-group">
-                                            <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-user"></i></span>
-                                            <input disabled v-model="state_credit" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">  
-                                        </div>
-                                    </div>
-                                </div>
-                                <div  class="col-md-2">
-                                    <div class="form-group">
-                                        <label for="ap_paterno" style="visibility: hidden">Activar:</label>
-                                        <div class="checkbox">
-                                            <label class="container">
-                                                <input type="checkbox" v-model="active_credit">
-                                                <strong>Activar</strong>
-                                                <span class="checkmark"></span>
-                                            </label>
-                                        </div>
-                                    </div>
-                                </div>
+                            <div class="box-body">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="container-fluid">
+                                            <!-- Ejemplo de tabla Listado -->
+                                            <div class="card">                            
+                                                <div class="card-body">    
+                                                    <div class="row">
+                                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">                               
+                                                            <div class="box-body">
+                                                                <div class="row">
+                                                                    <div class="col-md-6">
+                                                                        <div class="form-group">
+                                                                            <label for="nombres">Cliente:</label>
+                                                                            <div class="input-group">
+                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-user"></i></span>
+                                                                                <input disabled v-model="nameCustomer" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">  
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-2">
+                                                                        <div class="form-group">
+                                                                            <label for="nombres">Cód Crédito:</label>
+                                                                            <div class="input-group">
+                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-user"></i></span>
+                                                                                <select @change="getCredit($event.target.value)" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;" v-model="cod_credit">
+                                                                                    <option selected="selected" value="">Seleccione</option>
+                                                                                    <option v-for="datax in array_cod_credit" :key="datax.id" :value="datax.id">{{ datax.code_credit }}</option>
+                                                                                </select> 
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-2">
+                                                                        <div class="form-group">
+                                                                            <label for="nombres">Estado:</label>
+                                                                            <div class="input-group">
+                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-user"></i></span>
+                                                                                <input disabled v-model="state_credit" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">  
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div v-if="view_credit" class="col-md-2">
+                                                                        <div class="form-group">
+                                                                            <label for="ap_paterno" >Activar:</label>
+                                                                            <div class="checkbox">
+                                                                                <label class="container">
+                                                                                    <button type="button" title="Activar credito" @click="active()" class="btn btn-atras btn-sm"><i class="fa fa-check"></i></button> 
+                                                                                </label>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row">
 
-                                
+                                                                    <div class="col-md-2">
+                                                                        <div class="form-group">
+                                                                            <label for="nombres">F. desembolso:</label>
+                                                                            <div class="input-group">
+                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-user"></i></span>
+                                                                                <input disabled v-model="date_credit" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">  
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-2">
+                                                                        <div class="form-group">
+                                                                            <label for="nombres">Plazo:</label>
+                                                                            <div class="input-group">
+                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-user"></i></span>
+                                                                                <input disabled v-model="number_quota" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">  
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-2">
+                                                                        <div class="form-group">
+                                                                            <label for="nombres">Periodo:</label>
+                                                                            <div class="input-group">
+                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-user"></i></span>
+                                                                                <input disabled v-model="period" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">  
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-2">
+                                                                        <div class="form-group">
+                                                                            <label for="nombres">F. Vence:</label>
+                                                                            <div class="input-group">
+                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-user"></i></span>
+                                                                                <input disabled v-model="date_expiration" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">  
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-2">
+                                                                        <div class="form-group">
+                                                                            <label for="nombres">F. Ultimo Pago:</label>
+                                                                            <div class="input-group">
+                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-user"></i></span>
+                                                                                <input disabled v-model="ultimate_pay" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">  
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-2">
+                                                                        <div class="form-group">
+                                                                            <label for="nombres">Tasa de Interés:</label>
+                                                                            <div class="input-group">
+                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-user"></i></span>
+                                                                                <input disabled v-model="interest_rate" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">  
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row">
+                                                                    <div class="col-md-3">
+                                                                        <div class="form-group">
+                                                                            <label for="nombres">Capital:</label>
+                                                                            <div class="input-group">
+                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-user"></i></span>
+                                                                                <input disabled v-model="capital" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">  
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-3">
+                                                                        <div class="form-group">
+                                                                            <label for="nombres">Interés:</label>
+                                                                            <div class="input-group">
+                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-user"></i></span>
+                                                                                <input disabled v-model="interest" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">  
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-3">
+                                                                        <div class="form-group">
+                                                                            <label for="nombres">Mora:</label>
+                                                                            <div class="input-group">
+                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-user"></i></span>
+                                                                                <input disabled v-model="mora" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">  
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-3">
+                                                                        <div class="form-group">
+                                                                            <label for="nombres">Dias Mora:</label>
+                                                                            <div class="input-group">
+                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-user"></i></span>
+                                                                                <input disabled v-model="day_mora" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">  
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
 
-                                <div class="col-md-3">
-                                    <div class="form-group">
-                                        <label for="nombres">F. desembolso:</label>
-                                        <div class="input-group">
-                                            <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-user"></i></span>
-                                            <input disabled v-model="date_credit" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">  
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="form-group">
-                                        <label for="nombres">Plazo:</label>
-                                        <div class="input-group">
-                                            <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-user"></i></span>
-                                            <input disabled v-model="number_quota" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">  
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="form-group">
-                                        <label for="nombres">Periodo:</label>
-                                        <div class="input-group">
-                                            <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-user"></i></span>
-                                            <input disabled v-model="period" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">  
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="form-group">
-                                        <label for="nombres">Tasa de Interés:</label>
-                                        <div class="input-group">
-                                            <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-user"></i></span>
-                                            <input disabled v-model="interest_rate" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">  
-                                        </div>
-                                    </div>
-                                </div>
+                                                                <div class="row">
+                                                                    <div style="visibility:hidden"  class="col-md-7">
+                                                                            <div class="input-group" style="margin-bottom: 10px;margin-top: 10px;">
+                                                                                <input type="text"  v-model="search" @keyup.enter="list_data(1)"  class="form-control" placeholder="Buscar por nombres de promotor..." style="border-bottom-left-radius: 3px; border-top-left-radius: 3px;">
+                                                                                <span class="input-group-btn">
+                                                                                    <button type="submit" @click="list_data(1)"  class="btn btn-search btn-flat" style="border-bottom-right-radius: 3px; border-top-right-radius: 3px;"><i class="fa fa-search"></i> BUSCAR</button>
+                                                                                </span>
+                                                                            </div>                                               
+                                                                    </div>
+                                                                    <div class="col-md-2">
+                                                                            <div class="input-group" style="margin-bottom: 10px;margin-top: 10px;">
+                                                                                <span class="input-group-btn">
+                                                                                    <button type="submit" @click="downloadPdf()"  class="btn btn-block btn-danger" data-toggle="tooltip" title="Descargue en formato PDF" style="border-bottom-right-radius: 3px; border-top-right-radius: 3px;"><i class="fa fa-file-pdf-o"></i> CRONOGRAMA DE PAGOS</button>
+                                                                                </span>
+                                                                            </div>                                               
+                                                                    </div>
+                                                                    <div style="visibility:hidden" class="col-md-1">
+                                                                            <div class="input-group" style="margin-bottom: 10px;margin-top: 10px;">
+                                                                                <span class="input-group-btn">
+                                                                                    <button type="submit" @click="downloadPdf()"  class="btn btn-block btn-danger" data-toggle="tooltip" title="Descargue en formato PDF" style="border-bottom-right-radius: 3px; border-top-right-radius: 3px;"><i class="fa fa-file-pdf-o"></i> CRONOGRAMA DE PAGOS</button>
+                                                                                </span>
+                                                                            </div>                                               
+                                                                    </div>
+                                                                    <div class="col-md-2">
+                                                                            <div class="input-group" style="margin-bottom: 10px;margin-top: 10px;">
+                                                                                <span class="input-group-btn">
+                                                                                    <button type="submit" @click="downloadPdf()"  class="btn btn-block btn-danger" data-toggle="tooltip" title="Descargue en formato PDF" style="border-bottom-right-radius: 3px; border-top-right-radius: 3px;"><i class="fa fa-file-pdf-o"></i> PAGOS</button>
+                                                                                </span>
+                                                                            </div>                                               
+                                                                    </div>
+                                                                </div>
 
-                                <div class="col-md-3">
-                                    <div class="form-group">
-                                        <label for="nombres">Capital:</label>
-                                        <div class="input-group">
-                                            <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-user"></i></span>
-                                            <input disabled v-model="capital" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">  
+                                                                <div class="box-body table-responsive no-padding">
+                                                                    <table  class="table table-hover" style="font-size:12px">
+                                                                        <thead style="background: rgb(32, 32, 32);color: #fff;">                                                                                   
+                                                                            <tr>  
+                                                                                <th style="vertical-align: middle;">#</th>
+                                                                                <th style="vertical-align: middle;">FECHA</th>
+                                                                                <th style="vertical-align: middle;">CUOTA</th>
+                                                                                <th style="vertical-align: middle;">ABONO</th>
+                                                                            </tr> 
+                                                                        </thead>
+                                                                        <tbody>
+                                                                             <tr v-for="(midata,index) in list_detail_credit" :key="index" >
+                                                                                <td style="vertical-align: middle;" >{{(index+1)}}</td>
+                                                                                <td style="vertical-align: middle;" v-text="midata.date_expired"></td>
+                                                                                <td style="vertical-align: middle;" v-text="midata.quota"></td>
+                                                                                <td style="vertical-align: middle;" v-text="midata.deposit"></td>
+                                                                               
+                                                                            </tr>                     
+                                                                        </tbody>
+                                                                    </table>                                
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-3">
-                                    <div class="form-group">
-                                        <label for="nombres">Interés:</label>
-                                        <div class="input-group">
-                                            <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-user"></i></span>
-                                            <input disabled v-model="interest" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">  
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="form-group">
-                                        <label for="nombres">Mora:</label>
-                                        <div class="input-group">
-                                            <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-user"></i></span>
-                                            <input disabled v-model="mora" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">  
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="form-group">
-                                        <label for="nombres">Dias Mora:</label>
-                                        <div class="input-group">
-                                            <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-user"></i></span>
-                                            <input disabled v-model="day_mora" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">  
-                                        </div>
-                                    </div>
-                                </div>
-                            
-                                <table  class="table table-hover" style="font-size:12px">
-                                    <thead style="background: rgb(32, 32, 32);color: #fff;">                                                                                   
-                                        <tr>  
-                                            <th style="vertical-align: middle;">#</th>
-                                            <th style="vertical-align: middle;">FECHA</th>
-                                            <th style="vertical-align: middle;">MONTO</th>
-                                            <th style="vertical-align: middle;">MODALIDAD</th>
-                                            <th style="vertical-align: middle;">ELIMINAR</th>
-                                        </tr> 
-                                    </thead>
-                                    <tbody>
-                                                            
-                                    </tbody>
-                                </table>                                
                             </div>
                           
                         </template>
@@ -308,7 +383,9 @@
                 array_cod_credit:[],state_credit:'',name:'',cod_credit:'',
                 list:[],array_data_credit:[],
                 date_credit:'',number_quota:'',period:'',interest_rate:'',
-                capital:'',interest:'',mora:'',day_mora:'',active_credit:1
+                capital:'',interest:'',mora:'',day_mora:'',active_credit:1,
+                view_credit:0,date_expiration:'',ultimate_pay:'',
+                list_detail_credit:[]
             }
         },
          components: {
@@ -344,7 +421,23 @@
         },
       
         methods : { 
-          
+           active(){
+               swal({
+                    title: 'Esta seguro de activar el crédito?',
+                    type: 'warning',showCancelButton: true,
+                    confirmButtonText: 'ACEPTAR',
+                    cancelButtonText: 'CANCELAR',confirmButtonClass: 'btn btn-success',
+                    cancelButtonClass: 'btn btn-danger',buttonsStyling: false,
+                    reverseButtons: true
+                }).then((result) =>{
+                    if (result.value){   
+                        alert('implentando...');
+                   }else if(result.dismiss === swal.DismissReason.cancel) { 
+                        me.icon_save='fa fa-save';
+                    }
+                }) 
+               
+           },
             closeModal(){
                 let me=this;
                 me.modalTicket=0;
@@ -365,14 +458,23 @@
                         me.interest=me.array_data_credit[0].interest;
                         me.mora=me.array_data_credit[0].mora;
                         me.day_mora=me.array_data_credit[0].day_mora;
+
+                        me.date_expiration=moment(moment(moment(me.array_data_credit[0].date_expiration).toDate(), 'DD/MM/YYYY')).format('DD/MM/YYYY') ;
+
+                        me.ultimate_pay=me.array_data_credit[0].date_payment;
+
                         if(me.array_data_credit[0].state==1){
                             me.state_credit="ACTIVO";
                               me.active_credit=1;
+                              me.view_credit=0;
                         }else if (me.array_data_credit[0].state==2)
                         {
                             me.state_credit="CANCELADO";
                             me.active_credit=0;
+                            me.view_credit=1;
                         }
+                         me.list_detail_credit=respuesta.detailCredit; 
+                        //lista de detalles de los creditos
                   
 
                     })
@@ -389,17 +491,6 @@
                 '&dateend='+moment(moment(this.date_end, 'DD/MM/YYYY')).format('DD-MM-YYYY');
             	window.location.href = url;
 			 },
-            sumTotal(){
-                      this.totalcapital=0;
-                      this.totalInterest=0;
-                       for(var i=0;i<this.arrayDetailPledge.length;i++) 
-                        {
-                            this.totalcapital =  Number(this.totalcapital)+Number(this.arrayDetailPledge[i].capital);
-                            this.totalInterest =  Number(this.totalInterest)+Number(this.arrayDetailPledge[i].interest);
-                            
-                        }
-                   
-            },  
            
             cambiarPagina(page){
 				let me = this;				

@@ -132,6 +132,10 @@ class CustomerHistoryController extends Controller
     public function creditByCustomer(Request $request){
        
         $sqlx="";
+        $sqlxdetail="";
+
+        $detailCredit="";
+
         $id_customer="";
         $id_credit="";
         if(isset($request->id_customer))
@@ -141,13 +145,15 @@ class CustomerHistoryController extends Controller
         }else{
             $id_credit=$request->id_credit;
             $sqlx="SELECT * from credit where id=$id_credit";
+            //obtiendo los detalles
+            $sqlxdetail="SELECT * from detail_credit where id_credit=$id_credit";
+            $detailCredit=DB::select($sqlxdetail);
         }
-        
+
         $datax=DB::select($sqlx);
-        $t = json_decode(json_encode($datax), true);
-     
           return [
               'datax'=>$datax,
+              'detailCredit'=>$detailCredit
           ];
     
     
