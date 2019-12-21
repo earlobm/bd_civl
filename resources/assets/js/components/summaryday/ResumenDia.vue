@@ -1,205 +1,80 @@
 <template>
     <main class="main">
-        <div class="box-header with-border">
-            <section class="content-header">
-                <h3 class="box-title"><strong> 
-                    RESUMEN DEL DIA</strong>                            
-                </h3>
-                <ol class="breadcrumb">
-                    <li><a href="#"><i class="fa fa-database"></i>Registro</a></li>
-                    <li class="active">Resumen</li>
-                </ol>
-            </section>
-            <!--Hola-->
-            <div class="box-tools pull-right">
-            <!--<button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button> hola hola-->
-            <!-- <button class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>-->
-            </div>
-        </div>
-        <div class="box-body">
+        <section class="content-header">
+            <h1>
+              Resumen Diario
+              <small>Detalle</small>
+            </h1>
+            <ol class="breadcrumb">
+              <li><a href="#"><i class="fa fa-dashboard"></i> Operaciones</a></li>
+              <li class="active">Resumen Diario</li>
+            </ol>
+        </section>
+        <section class="content">
             <div class="row">
-                <div class="col-md-12">
-                    <div class="container-fluid">
-                        <!-- Ejemplo de tabla Listado -->
-                            <div class="card">                            
-                                <div class="card-body">    
-                                    <div class="row">
-                                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">                               
-                                                <div class="box-body">
-                                                    <template v-if="listado==0">
-                                                            <div align="center">
-                                                                <img src="img/loadx.gif" alt="technoserve" align="middle">
-                                                                <p>Cargando...</p>
-                                                            </div>
-                                                    </template>
-                                                    <template v-if="listado==1">
-                                                        <div class="row">                                                            
-                                                            <div class="col-md-4">
-                                                                <div class="form-group">
-                                                                    <label for="sexo">Sucursal:</label>
-                                                                    <div class="input-group">
-                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-map-signs"></i></span>                                                                             
-                                                                                <select @change="getMercado($event.target.value)" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;" v-model="id_sucursal_edit">
-                                                                                    <option selected="selected" value="" >Seleccione</option>
-                                                                                    <option v-for="miselect in arraySucursal" :selected="miselect.id == id_sucursal_edit" :key="miselect.id" :value="miselect.id">{{ miselect.name}}</option>
-                                                                                </select>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-md-4">
-                                                                <div class="form-group">
-                                                                    <label for="sexo">Mercado:</label>
-                                                                    <div class="input-group">
-                                                                        <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-map-signs"></i></span>                                                                              
-                                                                        <select class="form-control"  style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;" v-model="id_mercado_edit">
-                                                                            <option selected="selected" value="" >Seleccione</option>
-                                                                            <option v-for="miselect in arrayMercado" :selected="miselect.id == id_mercado_edit" :key="miselect.id" :value="miselect.id">{{ miselect.name}}</option>
-                                                                        </select>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-md-4">
-                                                                <div class="form-group">
-                                                                    <label for="edad">FECHA DEL DIA:</label>
-                                                                    <div class="input-group">
-                                                                        <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-calendar "></i></span>
-                                                                        <date-picker v-model="date_creation" @dp-change="getResumenDia" :config="options" style="border-top-right-radius: 3px;border-bottom-right-radius: 3px;"></date-picker>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            
-                                                           </div> 
-                                                        <div class="row">
-                                                            <div class="col-md-12">
-                                                                <div class="box-body table-responsive no-padding">
-                                                                    <table  class="table table-hover" style="font-size:12px">
-                                                                        <thead style="background: #90a4ae;color: #fff;">                                                                                   
-                                                                            <tr>
-                                                                                <th style="vertical-align: middle; text-align: center;">#</th>
-                                                                                <th style="vertical-align: middle; text-align: center;">TOTAL ENTREGADO</th>
-                                                                                <th style="vertical-align: middle; text-align: center;">ASESOR FINANCIERO</th>
-                                                                                <th style="vertical-align: middle;">SUCURSAL</th>
-                                                                                <th style="vertical-align: middle;">MERCADO</th>
-                                                                                <th style="text-align: center; vertical-align: middle;">OPERACION</th>
-                                                                            </tr> 
-                                                                        </thead>
-                                                                        <tbody>
-                                                                            <tr v-for="(midata,index) in list_resumenday" :key="index" >
-                                                                                <td style="vertical-align: middle; text-align: center;" >{{(index+1)}}</td>
-                                                                                <td style="vertical-align: middle; text-align: center;" v-text="midata.amount_delivered"></td>
-                                                                                <td style="vertical-align: middle; text-align: center;" v-text="midata.names+' '+midata.paternal_last_name+' '+midata.maternal_last_name"></td>
-                                                                                <td style="vertical-align: middle;" v-text="midata.name_sucursal"></td>
-                                                                                <td style="vertical-align: middle;" v-text="midata.name_mercado"></td>
-                                                                                <td style="text-align: center; vertical-align: middle;">                                                                                    
-                                                                                    <button type="button" @click="operation(midata.id)" class="btn btn-editar btn-sm" data-toggle="tooltip" title="Editar">
-                                                                                        <i class="fa fa-chrome"></i>
-                                                                                    </button>      
-                                                                                </td> 
-                                                                            </tr>                       
-                                                                        </tbody>
-                                                                    </table>
-                                                                </div>
-                                                                <div class="dataTables_paginate paging_simple_numbers" style=" float: right !important;">
-                                                                    <nav>
-                                                                        <ul class="pagination">
-                                                                            <ul class="pagination">
-                                                                                <li class="page-item" v-if="pagination.current_page > 1">
-                                                                                    <a class="page-link" href="#" @click.prevent="cambiarPagina(Number(pagination.current_page) - 1)"><i class="fa fa-angle-left" style="color:#189900;cursor: pointer"></i></a>
-                                                                                </li>
-                                                                                <li class="page-item" v-for="page in pagesNumber" :key="page" :class="[page == isActived ? 'active' : '']">
-                                                                                    <a class="page-link" href="#" @click.prevent="cambiarPagina(page)" v-text="page"></a>
-                                                                                </li>
-                                                                                <li class="page-item" v-if="pagination.current_page < pagination.last_page">
-                                                                                    <a class="page-link" href="#" @click.prevent="cambiarPagina(Number(pagination.current_page) + 1)"><i class="fa fa-angle-right" style="color:#189900;cursor: pointer"></i></a>
-                                                                                </li>
-                                                                            </ul> 
-                                                                        </ul>                        
-                                                                    </nav>
-                                                                </div>
-                                                            </div>                                               
-                                                            
-                                                        </div>
-
-                                                                                                                                                                      
-                                                        
-                                                    </template>
-                                                </div>  
-                                            </div>
-                                        
-                                    </div>     
-                                </div>
-                            </div>
-                            
-                    </div>
-                    
-                </div>
+               
+                <!-- Lista de Clientes -->
                 
-            </div>
-            
-        </div>
-        <div class="modal fade" tabindex="-1" :class="{'mostrar' : modal_add}" role="dialog" aria-labelledby="myModalLabel" style="display: none;" aria-hidden="true">
-            <div class="modal-dialog modal-lg" role="document">
-                <div class="modal-content">
-                    <div class="modal-header" style="background: #012D74;">
-                        <button type="button" class="close" @click="close_modal(1)" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                            <h4 class="modal-title" style="color: #FFFFFF"><i class="fa fa-plus"></i> AGREGAR PERSONAL</h4>
-                    </div>
-
-                    <div class="modal-body">  
-                        <div class="row">    
-                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"> 
-                                <div class="box-body">                                     
-                                    <div class="row">
+                    <div class="col-md-12">
+                        <div class="box box-primary">
+                            <div class="box-body">
+                                 <template v-if="listado==0">
+                                        <div align="center">
+                                            <img src="img/loadx.gif" alt="technoserve" align="middle">
+                                        </div>
+                                </template>
+                                <template v-if="listado==1">
+                                <div class="row">
+                                    <div class="box-tools pull-right" style="right: -15px;">
+                                        <div class="col-md-12" style="margin-top: 6px;">
+                                            <p  class="col-md-8" style="text-align:right"><i class="fa fa-filter"></i> Ver Filtros:</p>
+                                            <div class="col-md-4" style="margin-top: -10px;">
+                                                <div class="checkbox">
+                                                    <label class="switch" style="width: 92px; height: 18px;">
+                                                        <input type="checkbox" v-model="filter">
+                                                        <span class="slider round"></span>
+                                                    </label>
+                                                </div> 
+                                            </div> 
+                                        </div> 
+                                    </div>
+                                </div>
+                                <div class="box-body">
+                                    <div class="row" v-if="filter==1">
                                         <div class="col-md-12">
-                                            <div class="form-horizontal">
-                                                <div class="form-group">
-                                                    <label  class="col-md-2 control-label">DNI:</label>
-                                                    <div class="col-md-10">
-                                                        <div class="input-group">
-                                                            <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;  color:#1e2172">
-                                                                <i class="fa fa-indent"></i>
-                                                            </span>
-                                                            <input maxlength="8" v-model="number_doc_add" type="text" @keyup.enter="get_data_reniec()" class="form-control">
-                                                            <span class="input-group-btn">
-                                                                <button data-toggle="tooltip" title="Buscar" type="submit" @click="get_data_reniec()" class="btn btn-search btn-flat" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;"><i class="fa fa-check"></i> VALIDAR</button>
-                                                            </span>
+                                            <div class="container-fluid">                           
+                                                <div class="row">
+                                                    <div class="col-md-4">
+                                                        <div class="form-group">
+                                                            <label for="sexo">Sucursal:</label>
+                                                            <div class="input-group">
+                                                                        <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-map-signs"></i></span>                                                                             
+                                                                        <select @change="getMercado($event.target.value)" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;" v-model="id_sucursal_edit">
+                                                                            <option selected="selected" value="" >Seleccione</option>
+                                                                            <option v-for="miselect in arraySucursal" :selected="miselect.id == id_sucursal_edit" :key="miselect.id" :value="miselect.id">{{ miselect.name}}</option>
+                                                                        </select>
+                                                            </div>
                                                         </div>
                                                     </div>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label  class="col-md-2 control-label">Apellido Paterno:</label>
-                                                    <div class="col-md-10">
-                                                        <div class="input-group">
-                                                            <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;  color:#1e2172">
-                                                                <i class="fa fa-indent"></i>
-                                                            </span>
-                                                            <input v-model="paternal_last_name" type="text" @keyup="validarDataPersonal()" class="form-control" style="border-bottom-right-radius:
-                                                             3px;border-top-right-radius: 3px;">
+                                                    <div class="col-md-4">
+                                                        <div class="form-group">
+                                                            <label for="sexo">Mercado:</label>
+                                                            <div class="input-group">
+                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-map-signs"></i></span>                                                                              
+                                                                <select class="form-control"  style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;" v-model="id_mercado_edit">
+                                                                    <option selected="selected" value="" >Seleccione</option>
+                                                                    <option v-for="miselect in arrayMercado" :selected="miselect.id == id_mercado_edit" :key="miselect.id" :value="miselect.id">{{ miselect.name}}</option>
+                                                                </select>
+                                                            </div>
                                                         </div>
                                                     </div>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label  class="col-md-2 control-label">Apellido Materno:</label>
-                                                    <div class="col-md-10">
-                                                        <div class="input-group">
-                                                            <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;  color:#1e2172">
-                                                                <i class="fa fa-indent"></i>
-                                                            </span>
-                                                            <input v-model="maternal_last_name" type="text" @keyup="validarDataPersonal()" class="form-control" style="border-bottom-right-radius: 3px;
-                                                            border-top-right-radius: 3px;">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label  class="col-md-2 control-label">Nombres:</label>
-                                                    <div class="col-md-10">
-                                                        <div class="input-group">
-                                                            <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;  color:#1e2172">
-                                                                <i class="fa fa-indent"></i>
-                                                            </span>
-                                                            <input maxlength="8" v-model="names" type="text" @keyup="validarDataPersonal()" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">
+                                                    <div class="col-md-4">
+                                                        <div class="form-group">
+                                                            <label for="edad">Fecha:</label>
+                                                            <div class="input-group">
+                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-calendar "></i></span>
+                                                                <date-picker v-model="date_creation" @dp-change="getResumenDia" :config="options" style="border-top-right-radius: 3px;border-bottom-right-radius: 3px;"></date-picker>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -207,16 +82,71 @@
                                         </div>
                                     </div>
                                 </div>
+                                </template>
                             </div>
-                        </div>                       
+                        </div>
                     </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-danger" @click="close_modal(1)"><i class="fa fa-times"></i> CERRAR</button>
-                        <button type="button" @click="save_personal()" class="btn btn-save"><i class="fa fa-save"></i>&nbsp;GUARDAR PERSONAL</button>                        
+                    <div class="col-md-12"  v-if="visible">
+                        <div class="box box-primary">
+                            <div class="box-header with-border">
+                                <h1 class="box-title"><i class="fa fa-list"></i> Detalle
+                                </h1>
+                            
+                                <!-- <h1 class="box-title"><i class="fa fa-list"></i> Lista de Clientes</h1> -->
+                                <div class="box-tools pull-right">
+                                    <span class="label label-success">TOTAL DE REGISTROS: {{list_resumenday.length}}</span>
+                                    <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                                    </button>
+                                    <!-- <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button> -->
+                                </div>
+                            </div>
+                            <template v-if="listado==0">
+                                <div align="center">
+                                    <img src="img/loadx.gif" alt="technoserve" align="middle">
+                                    <!-- <p>Cargando...</p> -->
+                                </div>
+                            </template>
+                            <template v-if="listado==1">
+                                <div class="box-body table-responsive no-padding">
+                                    <table  class="table table-hover" style="font-size:12px">
+                                        <thead style="background: #90a4ae;color: #fff;">                                                                                   
+                                            <tr>
+                                                <th style="vertical-align: middle; text-align: center;">#</th>
+                                                <th style="vertical-align: middle; text-align: center;">TOTAL ENTREGADO</th>
+                                                <th style="vertical-align: middle; text-align: center;">ASESOR FINANCIERO</th>
+                                                <th style="vertical-align: middle;">SUCURSAL</th>
+                                                <th style="vertical-align: middle;">MERCADO</th>
+                                                <th style="text-align: center; vertical-align: middle;">OPERACION</th>
+                                            </tr> 
+                                        </thead>
+                                        <tbody>
+                                            <tr v-for="(midata,index) in list_resumenday" :key="index" >
+                                                <td style="vertical-align: middle; text-align: center;" >{{(index+1)}}</td>
+                                                <td style="vertical-align: middle; text-align: center;" v-text="midata.amount_delivered"></td>
+                                                <td style="vertical-align: middle; text-align: center;" v-text="midata.names+' '+midata.paternal_last_name+' '+midata.maternal_last_name"></td>
+                                                <td style="vertical-align: middle;" v-text="midata.name_sucursal"></td>
+                                                <td style="vertical-align: middle;" v-text="midata.name_mercado"></td>
+                                                <td style="text-align: center; vertical-align: middle;">                                                                                    
+                                                    <button type="button" @click="operation(midata.id)" class="btn btn-editar btn-sm" data-toggle="tooltip" title="Editar">
+                                                        <i class="fa fa-chrome"></i>
+                                                    </button>      
+                                                </td> 
+                                            </tr>                       
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="box-footer">
+                                    <div class="btn-group" style="float:right">
+                                        <button  type="button" @click="save()" class="btn btn-save" data-toggle="tooltip" title="Registrar los pagos">
+                                            <i class="fa fa-save"></i>&nbsp;GUARDAR
+                                        </button> 
+                                    </div>
+                                </div>                           
+                            </template>                        
+                        </div>                   
                     </div>
-                </div>
-            </div>
-        </div>
+            </div>                
+		</section>
     </main>
 </template>
 
@@ -278,6 +208,7 @@
                 id_person:'', id_branch_office:'',
                 id_mercado_edit:'',
                 id_sucursal_edit:'',
+                filter:1,visible:1, 
 
             }
         },

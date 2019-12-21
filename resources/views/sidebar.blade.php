@@ -59,14 +59,14 @@
                 </li>
 
                 <li @click="menu=102"  class="menux" class="treeview">
-                  <a href="#"><i class="fa fa-tags" style="color: #FF5100"></i>Balance diario
+                  <a href="#"><i class="fa fa-tags" style="color: #FF5100"></i>Balance Diario
                       <!-- <i class="fa fa-angle-left pull-right"></i> -->
                   </a>
                 </li>
 
 
                 <li @click="menu=25"  class="menux" class="treeview">
-                  <a href="#"><i class="fa fa-sitemap" style="color: #00A5C8 !important;"></i>Resumen del Dia
+                  <a href="#"><i class="fa fa-sitemap" style="color: #00A5C8 !important;"></i>Resumen Diario
                       <!-- <i class="fa fa-angle-left pull-right"></i> -->
                   </a>
                 </li>
