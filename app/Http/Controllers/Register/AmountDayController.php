@@ -107,8 +107,10 @@ class AmountDayController extends Controller
         }
         public function getMercado(Request $request){
         $id=$request->id;
-            $queyMercado="select mer.id, mer.name
-            from branch_office su inner join market mer on su.id=mer.id_branch_office where su.state=1
+            $queyMercado="SELECT mer.id, mer.name
+            from branch_office su 
+            inner join market mer on su.id=mer.id_branch_office 
+            where su.state=1
             and mer.state=1 and su.id=$id";
             $listMercado = DB::select($queyMercado);
             return [
@@ -132,9 +134,27 @@ class AmountDayController extends Controller
                 'datax'=>$listMercado
             ];
         }
+        public function getAmountDayFecha(Request $request){
+            $id=$request->id;
+            $date_register=$request->date_register;
+           // $date_register=$request->date_register;
+            $queyMercado="SELECT amo.id,per.names, per.paternal_last_name,per.maternal_last_name, 
+            per.number_doc, su.name as name_sucursal,mer.name as name_mercado,amo.date_register,amo.amount_delivered,amo.amount_assigned
+                                from branch_office su 
+                                inner join market mer on su.id=mer.id_branch_office 
+                                inner join employee em on mer.id=em.id_market
+                                inner join person per on per.id= em.id_person
+                                inner join amount_day amo on em.id=amo.id_employee
+                                where su.state=1 and em.id='$id' and amo.date_register='$date_register'
+                                and mer.state=1 and amo.state=1 order by amo.date_register desc" ;
+            $listMercado = DB::select($queyMercado);
+            return [
+                'datax'=>$listMercado
+            ];
+        }
         public function getEmpleado(Request $request){
             $id=$request->id;
-                $queyMercado="select em.id,per.names, per.paternal_last_name,per.maternal_last_name, per.number_doc
+                $queyMercado="SELECT em.id as id_promoter,per.names, per.paternal_last_name,per.maternal_last_name, per.number_doc
                 from branch_office su 
                 inner join market mer on su.id=mer.id_branch_office 
                 inner join employee em on mer.id=em.id_market

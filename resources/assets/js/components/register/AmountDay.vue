@@ -31,92 +31,8 @@
                                                             </div>
                                                     </template>
                                                     <template v-if="listado==1">
-                                                        <div class="row">                                                            
-                                                            <div class="col-md-3">
-                                                                <div class="form-group">
-                                                                    <label for="sexo">Sucursal:</label>
-                                                                    <div class="input-group">
-                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-map-signs"></i></span>                                                                             
-                                                                                <select @change="getMercado($event.target.value)" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;" v-model="id_sucursal_edit">
-                                                                                    <option selected="selected" value="" >Seleccione</option>
-                                                                                    <option v-for="miselect in arraySucursal" :selected="miselect.id == id_sucursal_edit" :key="miselect.id" :value="miselect.id">{{ miselect.name}}</option>
-                                                                                </select>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-md-3">
-                                                                <div class="form-group">
-                                                                    <label for="sexo">Mercado:</label>
-                                                                    <div class="input-group">
-                                                                        <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-map-signs"></i></span>                                                                              
-                                                                        <select class="form-control"  style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;" v-model="id_mercado_edit">
-                                                                            <option selected="selected" value="" >Seleccione</option>
-                                                                            <option v-for="miselect in arrayMercado" :selected="miselect.id == id_mercado_edit" :key="miselect.id" :value="miselect.id">{{ miselect.name}}</option>
-                                                                        </select>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-md-3">
-                                                                <div class="form-group">
-                                                                    <label for="sexo">Promotor:</label>
-                                                                    <div class="input-group">
-                                                                        <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-map-signs"></i></span>                                                                              
-                                                                        <select class="form-control"  style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;" v-model="id_mercado_edit">
-                                                                            <option selected="selected" value="" >Seleccione</option>
-                                                                            <option v-for="miselect in arrayMercado" :selected="miselect.id == id_mercado_edit" :key="miselect.id" :value="miselect.id">{{ miselect.name}}</option>
-                                                                        </select>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-md-3">
-                                                                <div class="form-group">
-                                                                    <label for="edad">FECHA DEL DIA:</label>
-                                                                    <div class="input-group">
-                                                                        <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-calendar "></i></span>
-                                                                        <date-picker v-model="date_creation" @dp-change="getResumenDia" :config="options" style="border-top-right-radius: 3px;border-bottom-right-radius: 3px;"></date-picker>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            
-                                                           </div> 
                                                         <div class="row">
-                                                            <div class="col-md-3">
-                                                                <div class="form-group">
-                                                                    <label for="sexo">Sucursal:</label>
-                                                                    <div class="input-group">
-                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-map-signs"></i></span>                                                                             
-                                                                                <select @change="getMercado($event.target.value)" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;" v-model="id_sucursal_edit">
-                                                                                    <option selected="selected" value="" >Seleccione</option>
-                                                                                    <option v-for="miselect in arraySucursal" :selected="miselect.id == id_sucursal_edit" :key="miselect.id" :value="miselect.id">{{ miselect.name}}</option>
-                                                                                </select>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-
-                                                            <div class="col-md-3">
-                                                                <div class="form-group">
-                                                                    <label for="sexo">Mercado:</label>
-                                                                    <div class="input-group">
-                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-map-signs"></i></span>                                                                              
-                                                                                <select class="form-control"  style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;" v-model="id_mercado_edit">
-                                                                                    <option selected="selected" value="" >Seleccione</option>
-                                                                                    <option v-for="miselect in arrayMercado" :selected="miselect.id == id_mercado_edit" :key="miselect.id" :value="miselect.id">{{ miselect.name}}</option>
-                                                                                </select>
-                                                                    </div>
-                                                                </div>
-                                                            </div>       
- 
-                                                            <div class="col-md-3">
-                                                                <div class="form-group">
-                                                                    <label for="edad">FECHA DEL DIA:</label>
-                                                                    <div class="input-group">
-                                                                        <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-calendar "></i></span>
-                                                                        <date-picker v-model="date_creation" @dp-change="getResumenDia" :config="options" style="border-top-right-radius: 3px;border-bottom-right-radius: 3px;"></date-picker>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            
-                                                            <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                                                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                                                                 <div class="btn-group" style="float:right;margin-left: 10px;"> 
                                                                     <div >   
                                                                     </div>
@@ -128,7 +44,60 @@
                                                                 </div>
                                                                 
                                                             </div>
+                                                             <div >
+                                                            
+                                                            </div>
                                                         </div>
+                                                       
+                                                        <div class="row">                                                            
+                                                            <div class="col-md-3">
+                                                                <div class="form-group">
+                                                                    <label for="sexo">Sucursal:</label>
+                                                                            <div class="input-group">
+                                                                            <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-map-signs"></i></span>                                                                             
+                                                                            <select @change="getMarket($event.target.value)" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;" v-model="id_branch_office">
+                                                                                <option selected="selected" value="" >SELECCIONE</option>
+                                                                                <option v-for="miselect in arraySucursal" :selected="miselect.id == id_branch_office" :key="miselect.id" :value="miselect.id">{{ miselect.name}}</option>
+                                                                            </select>
+                                                                            </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <div class="form-group">
+                                                                    <label for="sexo">Mercado:</label>
+                                                                    <div class="input-group">
+                                                                        <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-map-signs"></i></span>                                                                              
+                                                                        <select class="form-control" @change="getEmployee($event.target.value)" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;" v-model="id_market_edit">
+                                                                            <option selected="selected" value="" >Seleccione</option>
+                                                                            <option v-for="miselect in arrayMercado" :selected="miselect.id == id_market_edit" :key="miselect.id" :value="miselect.id">{{ miselect.name}}</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <div class="form-group">
+                                                                    <label for="sexo">Promotor:</label>
+                                                                    <div class="input-group">
+                                                                        <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-map-signs"></i></span>                                                                              
+                                                                        <select class="form-control"  style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;" v-model="id_promoter">
+                                                                            <option selected="selected" value="" >Seleccione</option>
+                                                                            <option v-for="miselect in arrayEmployee" :selected="miselect.id_promoter == id_promoter" :key="miselect.id" :value="miselect.id_promoter">{{ miselect.names}} {{ miselect.paternal_last_name}} {{ miselect.maternal_last_name}}</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <div class="form-group">
+                                                                    <label for="edad">FECHA DEL DIA:</label>
+                                                                    <div class="input-group">
+                                                                        <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-calendar "></i></span>
+                                                                        <date-picker v-model="date_creation" @dp-change="getAmountDia" :config="options" style="border-top-right-radius: 3px;border-bottom-right-radius: 3px;"></date-picker>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            
+                                                           </div> 
+                                                        
 
                                                         <div class="row">
                                                             <div class="col-md-12">
@@ -317,9 +286,10 @@
                 listado:1,
                 //fechas
                 authUser:1,
-                date_register: ''+new Date().getDate()+'/'+(Number(new Date().getMonth())+1)+'/'+new Date().getFullYear(),
+                date_creation: ''+new Date().getFullYear()+'/'+(Number(new Date().getMonth())+1)+'/'+new Date().getDate(),
+                date_register: ''+new Date().getFullYear()+'/'+(Number(new Date().getMonth())+1)+'/'+new Date().getDate(),
                 options: {
-                format: 'DD/MM/YYYY',
+                format: 'YYYY/MM/DD',
                 useCurrent: false,
                  locale: 'es',
                  showClose: true,
@@ -334,6 +304,8 @@
                 },offset: 3,
 
                 name:'',id_empleado_edit:-1,nro_doc:'',
+                //id_promoter:-1,
+                //id_promoter
                 errorClase : 0,id:-1,
                 errors:{},
                 errorInputActivity5:'form-group', errorInputActivity6:'form-group',
@@ -341,7 +313,9 @@
                 buscar:'',amountAsing:0,amountDeli:0,
                 id_person:0,id_sucursal_edit:-1,id_mercado_edit:-1,
                 errorAmount:'form-group',
-                arrayMercado:[],arraySucursal:[],arrayEmpleado:[]
+                arrayMercado:[],arraySucursal:[],arrayEmpleado:[],
+                arrayEmployee:[],id_promoter:-1,
+                //arrayEmployee
             }
         },
          components: {
@@ -461,6 +435,74 @@
                 }
                 }) 
             },
+            getAmountDia(){
+                let me=this;
+              // me.listado=0
+              if(me.id_promoter==""){
+                  alert('SELECIONE SUCURSAL Y MERCADO');
+
+              }else{
+                  console.log(me.id_promoter);
+                  var url= 'getAmountDayFecha?id='+me.id_promoter+'&date_register='+me.date_creation;
+                axios.get(url).then(function (response) {
+                    var respuesta= response.data;
+                    me.list = respuesta.datax;
+
+                })
+                .catch(function (error) {
+                    console.log(error);
+                });
+              }
+                
+            },
+            getEmployee(id){
+                let me=this;
+               // me.listado=0;
+                var url= 'getEmpleado?id='+id;
+                axios.get(url).then(function (response) {
+                    var respuesta= response.data;
+                    me.arrayEmployee = respuesta.datax;
+                })
+                .catch(function (error) {
+                    console.log(error);
+                });
+            },
+            getListBranchOffice(){
+                let me=this;
+               // me.listado=0;
+                var url= 'getlistSucursal';
+                axios.get(url).then(function (response) {
+                    var respuesta= response.data;
+                    me.arraySucursal = respuesta.datax;
+                })
+                .catch(function (error) {
+                    console.log(error);
+                });
+            },
+            getMarket(id){
+                let me=this;
+               // me.listado=0;
+                var url= 'getMercado?id='+id;
+                axios.get(url).then(function (response) {
+                    var respuesta= response.data;
+                    me.arrayMercado = respuesta.datax;
+                })
+                .catch(function (error) {
+                    console.log(error);
+                });
+            },
+            getPromoter(id){
+                let me=this;
+               // me.listado=0;
+                var url= 'getPromoert?id='+id;
+                axios.get(url).then(function (response) {
+                    var respuesta= response.data;
+                    me.arrayMercado = respuesta.datax;
+                })
+                .catch(function (error) {
+                    console.log(error);
+                });
+            },
             getLitSucursal(){
                 let me=this;
                // me.listado=0;
@@ -575,6 +617,7 @@
         },
         mounted() {
            this.listar(1);
+           this.getListBranchOffice();
           
          }
          
