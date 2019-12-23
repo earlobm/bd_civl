@@ -26664,8 +26664,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
-<<<<<<< HEAD
-=======
 //
 //
 //
@@ -26682,7 +26680,38 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
->>>>>>> a17de6d81c5139a70313dcde67aa6d047ef1071c
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -26973,8 +27002,6 @@ var render = function() {
                                         _vm._v("Sucursal:")
                                       ]),
                                       _vm._v(" "),
-<<<<<<< HEAD
-=======
                                       _c(
                                         "div",
                                         { staticClass: "input-group" },
@@ -27294,19 +27321,17 @@ var render = function() {
                                 ]),
                                 _vm._v(" "),
                                 _c("div", { staticClass: "row" }, [
-                                  _c(
-                                    "div",
-                                    {
-                                      staticClass:
-                                        "col-xs-9 col-sm-9 col-md-9 col-lg-9"
-                                    },
-                                    [
->>>>>>> a17de6d81c5139a70313dcde67aa6d047ef1071c
+                                  _c("div", { staticClass: "col-md-3" }, [
+                                    _c("div", { staticClass: "form-group" }, [
+                                      _c("label", { attrs: { for: "sexo" } }, [
+                                        _vm._v("Sucursal:")
+                                      ]),
+                                      _vm._v(" "),
                                       _c(
                                         "div",
                                         { staticClass: "input-group" },
                                         [
-                                          _vm._m(3),
+                                          _vm._m(7),
                                           _vm._v(" "),
                                           _c(
                                             "select",
@@ -27407,7 +27432,7 @@ var render = function() {
                                         "div",
                                         { staticClass: "input-group" },
                                         [
-                                          _vm._m(4),
+                                          _vm._m(8),
                                           _vm._v(" "),
                                           _c(
                                             "select",
@@ -27500,7 +27525,7 @@ var render = function() {
                                         "div",
                                         { staticClass: "input-group" },
                                         [
-                                          _vm._m(5),
+                                          _vm._m(9),
                                           _vm._v(" "),
                                           _c("date-picker", {
                                             staticStyle: {
@@ -27594,11 +27619,7 @@ var render = function() {
                                             staticStyle: { "font-size": "12px" }
                                           },
                                           [
-<<<<<<< HEAD
-                                            _vm._m(6),
-=======
-                                            _vm._m(7),
->>>>>>> a17de6d81c5139a70313dcde67aa6d047ef1071c
+                                            _vm._m(10),
                                             _vm._v(" "),
                                             _c(
                                               "tbody",
@@ -28054,11 +28075,7 @@ var render = function() {
                                 ]),
                                 _vm._v(" "),
                                 _c("div", { staticClass: "row" }, [
-<<<<<<< HEAD
-                                  _vm._m(7),
-=======
-                                  _vm._m(8),
->>>>>>> a17de6d81c5139a70313dcde67aa6d047ef1071c
+                                  _vm._m(11),
                                   _vm._v(" "),
                                   _c("div", { staticClass: "col-md-4" }, [
                                     _c("div", { staticClass: "form-group" }, [
@@ -28070,11 +28087,7 @@ var render = function() {
                                         "div",
                                         { staticClass: "input-group" },
                                         [
-<<<<<<< HEAD
-                                          _vm._m(8),
-=======
-                                          _vm._m(9),
->>>>>>> a17de6d81c5139a70313dcde67aa6d047ef1071c
+                                          _vm._m(12),
                                           _vm._v(" "),
                                           _c(
                                             "select",
@@ -28175,11 +28188,7 @@ var render = function() {
                                         "div",
                                         { staticClass: "input-group" },
                                         [
-<<<<<<< HEAD
-                                          _vm._m(9),
-=======
-                                          _vm._m(10),
->>>>>>> a17de6d81c5139a70313dcde67aa6d047ef1071c
+                                          _vm._m(13),
                                           _vm._v(" "),
                                           _c(
                                             "select",
@@ -28262,11 +28271,7 @@ var render = function() {
                                         "div",
                                         { staticClass: "input-group" },
                                         [
-<<<<<<< HEAD
-                                          _vm._m(10),
-=======
-                                          _vm._m(11),
->>>>>>> a17de6d81c5139a70313dcde67aa6d047ef1071c
+                                          _vm._m(14),
                                           _vm._v(" "),
                                           _c(
                                             "select",
@@ -28359,11 +28364,7 @@ var render = function() {
                                           "div",
                                           { staticClass: "input-group" },
                                           [
-<<<<<<< HEAD
-                                            _vm._m(11),
-=======
-                                            _vm._m(12),
->>>>>>> a17de6d81c5139a70313dcde67aa6d047ef1071c
+                                            _vm._m(15),
                                             _vm._v(" "),
                                             _c("input", {
                                               directives: [
@@ -28418,11 +28419,7 @@ var render = function() {
                                           "div",
                                           { staticClass: "input-group" },
                                           [
-<<<<<<< HEAD
-                                            _vm._m(12),
-=======
-                                            _vm._m(13),
->>>>>>> a17de6d81c5139a70313dcde67aa6d047ef1071c
+                                            _vm._m(16),
                                             _vm._v(" "),
                                             _c("input", {
                                               directives: [
@@ -28472,11 +28469,7 @@ var render = function() {
                                         "div",
                                         { staticClass: "input-group" },
                                         [
-<<<<<<< HEAD
-                                          _vm._m(13),
-=======
-                                          _vm._m(14),
->>>>>>> a17de6d81c5139a70313dcde67aa6d047ef1071c
+                                          _vm._m(17),
                                           _vm._v(" "),
                                           _c("date-picker", {
                                             staticStyle: {
@@ -28607,8 +28600,6 @@ var staticRenderFns = [
           "border-top-left-radius": "3px"
         }
       },
-<<<<<<< HEAD
-=======
       [_c("i", { staticClass: "fa fa-map-signs" })]
     )
   },
@@ -28625,7 +28616,54 @@ var staticRenderFns = [
           "border-top-left-radius": "3px"
         }
       },
->>>>>>> a17de6d81c5139a70313dcde67aa6d047ef1071c
+      [_c("i", { staticClass: "fa fa-calendar " })]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "span",
+      {
+        staticClass: "input-group-addon",
+        staticStyle: {
+          "border-bottom-left-radius": "3px",
+          "border-top-left-radius": "3px"
+        }
+      },
+      [_c("i", { staticClass: "fa fa-map-signs" })]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "span",
+      {
+        staticClass: "input-group-addon",
+        staticStyle: {
+          "border-bottom-left-radius": "3px",
+          "border-top-left-radius": "3px"
+        }
+      },
+      [_c("i", { staticClass: "fa fa-map-signs" })]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "span",
+      {
+        staticClass: "input-group-addon",
+        staticStyle: {
+          "border-bottom-left-radius": "3px",
+          "border-top-left-radius": "3px"
+        }
+      },
       [_c("i", { staticClass: "fa fa-calendar " })]
     )
   },

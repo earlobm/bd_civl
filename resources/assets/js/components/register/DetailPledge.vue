@@ -735,6 +735,7 @@
                 axios.get(url).then(function (response) {
                     var respuesta= response.data;
                     me.id=respuesta.datax[0].id;
+                    me.id=respuesta.datax[0].id;
                     me.price_sales=respuesta.datax[0].suggested_price;
                     me.product = respuesta.datax[0].producto+' '+ respuesta.datax[0].caracteristicas;
                 })
@@ -880,26 +881,7 @@
                 
             },
            
-            edit_data(id){
-                let me=this;
-                me.listado=2;
-                me.limpiar();
-                var url= 'get_branch_office?id='+id;
-                axios.get(url).then(function (response) {
-                    var respuesta= response.data;
-                    me.id=respuesta.datax[0].id;
-                    me.name = respuesta.datax[0].name;
-                    me.address = respuesta.datax[0].address;
-                    me.phone = respuesta.datax[0].phone;
-                    me.notes =respuesta.datax[0].notes;
-                    me.date_init=moment(respuesta.datax[0].date_init).toDate();
-                    me.validarData();
-                })
-                .catch(function (error) {
-                    console.log(error);
-                });
-                              
-            },
+            
 
             save_data(){
                 if (this.validarData()){

@@ -60,7 +60,10 @@ class DailyCollectionController extends Controller
         $fecha_registro= $request->fecha_registro;
         
         //haciendo las penejadas :v
-        $query = "select id,total,amount_pending,mora_previous from movement where id_credit = $idCredito and date_register = '$fecha_registro' and alias_operation='PC' and state=1 ";
+        $query = "SELECT id,total,amount_pending,mora_previous 
+        from movement 
+        where id_credit = $idCredito 
+        and date_register = '$fecha_registro' and alias_operation='PC' and state=1 ";
         $myquery=DB::select($query);
         $t = json_decode(json_encode($myquery), true);
 
@@ -90,8 +93,8 @@ class DailyCollectionController extends Controller
                     $md->mora = $monto;
                     $cred->pay_mora = $monto;
                     //actualizamos el saldo y la fecha de vencimimento
-                    $queryxz = "update credit set saldo = ($saldo + ($pagoMora * -1))
-                    , date_expiration ='$fecha_hoy',mora=0,day_mora=0 where id =$idCredito";
+                    $queryxz = "UPDATE credit set saldo = ($saldo + ($pagoMora * -1)),
+                    date_expiration ='$fecha_hoy',mora=0,day_mora=0 where id =$idCredito";
                     DB::statement($queryxz);
 
                 }
