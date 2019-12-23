@@ -77,7 +77,11 @@ Route::get('/creditByCustomer', 'Operation\CustomerHistoryController@creditByCus
 //resumenDay
 Route::get('/getListaResumenDay', 'Register\AmountDayController@getListaResumenDay');
 Route::get('/getResumenDayFecha', 'Register\AmountDayController@getResumenDayFecha');
+<<<<<<< HEAD
 Route::get('/get_summary_day', 'Register\AmountDayController@get_summary_day');
+=======
+Route::get('/getAmountDayFecha', 'Register\AmountDayController@getAmountDayFecha');
+>>>>>>> fb8797b53ca74e3ec0a6e6df1b34b1f9cc1f7c21
 
 Route::get('/geEdittListaEmpleadoList', 'Register\EmployeeController@geEdittListaEmpleadoList');
 Route::post('/delete_PersonalEmploye', 'Register\EmployeeController@delete_PersonalEmploye'); 
