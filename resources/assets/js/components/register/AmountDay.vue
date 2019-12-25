@@ -9,46 +9,36 @@
               <li class="active">REGISTRO</li>
             </ol>
         </section>
+
+        <section class="content">
+    <div class="row">
         
-        <div class="box-body">
-            <div class="row">
                 <div class="col-md-12">
-                    <div class="box-header with-border">                            
-                            <h1 class="box-title"><i class="fa fa-edit"></i> Monto del dia por Representante                                
-                            </h1>
-                        </div>
-                    <div class="container-fluid">
-                        <!-- Ejemplo de tabla Listado -->
-                            <div class="card">                            
-                                <div class="card-body">    
-                                    <div class="row">
-                                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">                               
-                                                <div class="box-body">
-                                                    <template v-if="listado==0">
-                                                            <div align="center">
-                                                                <img src="img/loadx.gif" alt="technoserve" align="middle">
-                                                                <p>Cargando...</p>
-                                                            </div>
-                                                    </template>
-                                                    <template v-if="listado==1">
-                                                        <div class="row">
-                                                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                                                <div class="btn-group" style="float:right;margin-left: 10px;"> 
-                                                                    <div >   
-                                                                    </div>
-                                                                    <label for="edad" style="visibility:hidden" >
-                                                                    </label>  
-                                                                    <button type="button" @click="agregar()" class="btn btn-add">
-                                                                        <i class="fa fa-plus"></i>&nbsp;Agregar Monto del dia
-                                                                    </button>
-                                                                </div>
-                                                                
-                                                            </div>
-                                                             <div >
-                                                            
-                                                            </div>
-                                                        </div>
-                                                       
+                    <div class="box box-primary">
+                        <div class="box-body">
+                            <div class="row">
+                                <div class="box-tools pull-right" style="right: -15px;">
+                                    <div class="col-md-12" style="margin-top: 6px;">
+                                        <p  class="col-md-8" style="text-align:right"><i class="fa fa-filter"></i> Ver Filtros:</p>
+                                        <div class="col-md-4" style="margin-top: -10px;">
+                                            <div class="checkbox">
+                                                <label class="switch" style="width: 92px; height: 18px;">
+                                                    <input type="checkbox" v-model="filter">
+                                                    <span class="slider round"></span>
+                                                </label>
+                                            </div> 
+                                        </div> 
+                                    </div> 
+                                </div>
+                            </div>
+                            <div class="box-body">
+                                <div class="row" v-if="filter==1">
+                                    <div class="col-md-12">
+                                        <div class="container-fluid"> 
+                                            <div class="row">
+
+                        <!-- Ejemplo de tabla Listado -->               
+                                                
                                                         <div class="row">                                                            
                                                             <div class="col-md-3">
                                                                 <div class="form-group">
@@ -96,10 +86,39 @@
                                                                 </div>
                                                             </div>
                                                             
-                                                           </div> 
+                                                           </div>
+                                                    </div>
+                                                    </div>
+                                                </div>   
+                                            </div>
+                                        </div> 
+                                    </div>                  
+                                </div>
                                                         
-
-                                                        <div class="row">
+                            </div>
+                            <div class="col-md-12"  v-if="visible">
+                                <div class="box box-primary">
+                                    <div class="box-header with-border">
+                                        <h1 class="box-title"><i class="fa fa-list"></i> Monto del dia del Representante
+                                        </h1>
+                                    
+                                        <!-- <h1 class="box-title"><i class="fa fa-list"></i> Lista de Clientes</h1> -->
+                                        <div class="box-tools pull-right">
+                                            <span class="label label-success">TOTAL DE REGISTROS: {{list.length}}</span>
+                                            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                                            </button>
+                                            <!-- <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button> -->
+                                        </div>
+                                    </div>
+                                    <template v-if="listado==0">
+                                        <div align="center">
+                                            <img src="img/loadx.gif" alt="technoserve" align="middle">
+                                            <!-- <p>Cargando...</p> -->
+                                        </div>
+                                    </template>
+                                    <template v-if="listado==1">
+                                        <div class="box-body table-responsive no-padding">
+                                                                    <div class="row">
                                                             <div class="col-md-12">
                                                                 <div class="box-body table-responsive no-padding">
                                                                     <table  class="table table-hover" style="font-size:12px">
@@ -142,11 +161,7 @@
                                                                     </table>
                                                                 </div>
                                                                 <div class="row"> 
-                                                                    <div class="col-sm-5">
-                                                                        <div class="dataTables_info" style="padding-top:12px">
-                                                                            <i class="fa fa-caret-right"></i><strong> Total de registros : </strong><span class="label label-success">{{pagination.total}}</span>
-                                                                        </div>
-                                                                    </div>
+                                                                    
                                                                     <div class="col-sm-7">
                                                                         <div class="dataTables_paginate paging_simple_numbers" style=" float: right !important;">
                                                                             <nav>
@@ -165,23 +180,35 @@
                                                                         </div>
                                                                     </div>
                                                                 </div>
-                                                            </div>                                               
-                                                            
+                                                            </div>  
                                                         </div>
-                                                    </template>
-                                                    <template v-if="listado==2">
-                                                        <div class="row">                                                    
-                                                            <div class="col-md-12">
-                                                                <div class="btn-group" style="float:right;">
-                                                                    <button type="button" @click="volver()" class="btn btn-danger">
-                                                                        <i class="fa fa-arrow-left"></i>&nbsp;Volver a la lista
-                                                                    </button>
-                                                                    <button type="button" @click="save()" class="btn btn-save">
-                                                                        <i class="fa fa-save"></i>&nbsp;Guardar Monto del dia
+                                                        
+                                                     </div> 
+                                                     <div class="box-footer"> 
+                                                                
+                                                                
+                                                    </div>
+                                                    <div class="box-footer"> 
+                                                                <div class="btn-group" style="float:right;"> 
+                                                                     
+                                                                    <button type="button" @click="agregar()" class="btn btn-add">
+                                                                        <i class="fa fa-plus"></i>&nbsp;Agregar Monto del dia
                                                                     </button>
                                                                 </div>
-                                                            </div>
-                                                        </div>
+                                                                
+                                                    </div>
+                                
+                                
+                                      
+
+                        <!-- Ejemplo de tabla Listado -->              
+                                                            
+                                                       
+                                                    
+                                                
+                                                 </template>  
+                                                    <template v-if="listado==2">
+                                                        
                                                         <div class="row"> 
                                                                             
                                                             <div class="col-md-12">
@@ -253,20 +280,30 @@
                                                             
                                                                                                                                                                                                     
                                                         </div>
+                                    
+                                                                <div class="box-footer">  
+                                                                <div class="btn-group" style="float:right;">
+                                                                    <button type="button" @click="volver()" class="btn btn-danger">
+                                                                        <i class="fa fa-arrow-left"></i>&nbsp;Volver a la lista
+                                                                    </button>
+                                                                    <button type="button" @click="save()" class="btn btn-save">
+                                                                        <i class="fa fa-save"></i>&nbsp;Guardar Monto del dia
+                                                                    </button>
+                                                                </div>
+                                                                </div>
 
                                                         
                                                         
                                                     </template>
-                                                </div>  
-                                            </div>
+                                                 
+                                            
                                         
-                                    </div>     
-                                </div>
-                            </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+                                       
+                            
+                    </div> 
+             </div>    
+    </div>  
+    </section>  
     </main>
 </template>
 
@@ -283,7 +320,9 @@
                 list : [],id_parent:'',year:'',
                 listRecibido:[],
                 authUser:'',porcent: 50,
+                visible:1,
                 listado:1,
+                filter:1,
                 //fechas
                 authUser:1,
                 date_creation: ''+new Date().getFullYear()+'/'+(Number(new Date().getMonth())+1)+'/'+new Date().getDate(),
@@ -312,6 +351,10 @@
                 errorInputAmount:'form-group',
                 buscar:'',amountAsing:0,amountDeli:0,
                 id_person:0,id_sucursal_edit:-1,id_mercado_edit:-1,
+                //id_branch_office
+                id_branch_office:-1,
+                id_market_edit:-1,
+                //id_market_edit
                 errorAmount:'form-group',
                 arrayMercado:[],arraySucursal:[],arrayEmpleado:[],
                 arrayEmployee:[],id_promoter:-1,
