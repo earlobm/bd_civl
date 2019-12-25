@@ -68,7 +68,7 @@ class AmountDayController extends Controller
         $clasex->save();
     }
         public function getEditListAmountDay(Request $request){
-            $queyAmount="select amo.id,per.names, per.paternal_last_name,per.maternal_last_name, per.number_doc, su.name as name_sucursal,mer.name as name_mercado,amo.date_register,amo.amount_delivered,amo.amount_assigned,
+            $queyAmount="select amo.id, per.names, per.paternal_last_name,per.maternal_last_name, per.number_doc, su.name as name_sucursal,mer.name as name_mercado,amo.date_register,amo.amount_delivered,amo.amount_assigned,
             mer.id as id_market,su.id as id_sucursal,em.id as id_employee
             from branch_office su 
             inner join market mer on su.id=mer.id_branch_office 
@@ -120,7 +120,11 @@ class AmountDayController extends Controller
         public function getResumenDayFecha(Request $request){
             $id=$request->id;
             $date_register=$request->date_register;
-            $queyMercado="SELECT amo.id,per.names, per.paternal_last_name,per.maternal_last_name, per.number_doc,amo.amount_delivered, su.name as name_sucursal,mer.name as name_mercado,amo.date_register
+            $queyMercado="SELECT amo.id, per.names, 
+            per.paternal_last_name,per.maternal_last_name, 
+            per.number_doc, amo.amount_delivered, 
+            su.name as name_sucursal, mer.name as name_mercado,
+            amo.date_register, amo.id_employee
             from branch_office su 
             inner join market mer on su.id=mer.id_branch_office 
             inner join employee em on mer.id=em.id_market
@@ -181,14 +185,16 @@ class AmountDayController extends Controller
                     ];
                 }
                 public function getListaResumenDay(Request $request){
-                    $ldate = date('Y-m-d');
-                    
-                    $queyListEmployeDay="SELECT amo.id,per.names, per.paternal_last_name,per.maternal_last_name, per.number_doc,amo.amount_delivered, su.name as name_sucursal,mer.name as name_mercado,amo.date_register
+                    $ldate = date('Y-m-d');                    
+                    $queyListEmployeDay="SELECT amo.id, per.names,
+                    per.paternal_last_name,per.maternal_last_name, 
+                    per.number_doc, amo.amount_delivered, su.name as name_sucursal, 
+                    mer.name as name_mercado, amo.date_register, amo.id_employee
                     from branch_office su 
-                    inner join market mer on su.id=mer.id_branch_office 
-                    inner join employee em on mer.id=em.id_market
+                    inner join market mer on su.id=mer.id_branch_office
+                    inner join employee em on em.id_market=mer.id
                     inner join person per on per.id= em.id_person
-                    inner join amount_day amo on em.id=amo.id_employee
+                    inner join amount_day amo on amo.id_employee = em.id
                     where su.state=1 and amo.amount_delivered <> 0 and mer.state=1 and amo.state=1 and amo.date_register='$ldate'";
                     $listEmployeDay = DB::select($queyListEmployeDay);
                     return [
@@ -283,7 +289,52 @@ class AmountDayController extends Controller
             }
         }
 
-   
+    public function get_summary_day(Request $request){
+        $id=$request->id;
+        $id_employee=$request->id_employee;
+        $date_register=$request->date_register;
+
+        $quey="SELECT amo.id,
+        concat(per.paternal_last_name, ' ', per.maternal_last_name,', ', per.names) as promoter, 
+        per.number_doc, amo.amount_delivered, amo.amount_assigned,
+        su.name as name_branch, mer.name as name_market,
+        amo.date_register
+        from branch_office su 
+        inner join market mer on su.id=mer.id_branch_office 
+        inner join employee em on mer.id=em.id_market
+        inner join person per on per.id= em.id_person
+        inner join amount_day amo on em.id=amo.id_employee
+        where su.state=1 and amo.amount_delivered <> 0
+        and mer.state=1 and amo.state=1 
+        and amo.id='$id'" ;
+        $array_promoter = DB::select($quey);
+
+        $queyx="SELECT cu.code, concat(p.paternal_last_name, ' ', p.maternal_last_name,', ', p.names) as customer, m.capital, m.mora
+        from movement m 
+        inner join credit c on c.id=m.id_credit 
+        inner join employee e on e.id=m.id_promoter
+        inner join customer cu on cu.id=c.id_customer
+        inner join person p on p.id= cu.id_person
+        where m.state=1 
+        and e.id='$id_employee' and m.date_register='$date_register'" ;
+        $array_movement = DB::select($queyx);
+
+        $queyz="SELECT sum(m.capital) as total_capital, sum(m.mora) as total_mora
+        from movement m 
+        inner join credit c on c.id=m.id_credit 
+        inner join employee e on e.id=m.id_promoter
+        inner join customer cu on cu.id=c.id_customer
+        inner join person p on p.id= cu.id_person
+        where m.state=1 
+        and e.id='$id_employee' and m.date_register='$date_register'" ;
+        $array_movementz = DB::select($queyz);
+        
+        return [
+            'datax'=>$array_promoter,
+            'dataz'=>$array_movement,
+            'total_cobranza'=>$array_movementz,
+        ];
+    }
 
 }
 

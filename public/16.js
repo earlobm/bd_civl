@@ -26786,7 +26786,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
                 if (result.value) {
                     //recorriendo la lista
                     for (var i = 0; i < me.listCredit.length; i++) {
-
                         var monto = me.listCredit[i].pago;
                         if (monto == null) {
                             monto = -1;

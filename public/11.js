@@ -27097,6 +27097,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
             axios.get(url).then(function (response) {
                 var respuesta = response.data;
                 me.id = respuesta.datax[0].id;
+                me.id = respuesta.datax[0].id;
                 me.price_sales = respuesta.datax[0].suggested_price;
                 me.product = respuesta.datax[0].producto + ' ' + respuesta.datax[0].caracteristicas;
             }).catch(function (error) {
@@ -27228,24 +27229,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
             me.pagination.current_page = page;
             //me.listado=1;
             me.list_data(page);
-        },
-        edit_data: function edit_data(id) {
-            var me = this;
-            me.listado = 2;
-            me.limpiar();
-            var url = 'get_branch_office?id=' + id;
-            axios.get(url).then(function (response) {
-                var respuesta = response.data;
-                me.id = respuesta.datax[0].id;
-                me.name = respuesta.datax[0].name;
-                me.address = respuesta.datax[0].address;
-                me.phone = respuesta.datax[0].phone;
-                me.notes = respuesta.datax[0].notes;
-                me.date_init = __WEBPACK_IMPORTED_MODULE_1_moment_timezone___default()(respuesta.datax[0].date_init).toDate();
-                me.validarData();
-            }).catch(function (error) {
-                console.log(error);
-            });
         },
         save_data: function save_data() {
             var _this3 = this;

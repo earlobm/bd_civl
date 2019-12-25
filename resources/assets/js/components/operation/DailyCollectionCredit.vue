@@ -352,39 +352,35 @@
                     if (result.value){            
                         //recorriendo la lista
                         for (var i=0;i<me.listCredit.length;i++){
+                            var monto = me.listCredit[i].pago;
+                            if(monto==null){
+                                monto = -1; 
+                            }else if(monto==''){
+                                monto = -1;
+                            }
 
-                                var monto = me.listCredit[i].pago;
-                                if(monto==null)
-                                {
-                                   monto = -1; 
-                                }else if(monto=='')
-                                {
-                                   monto = -1;
-                                }
+                            var idCredito = me.listCredit[i].id;
+                            var idpromotor = me.listCredit[i].idpromotor;
+                            var idCliente = me.listCredit[i].idcliente;
+                            var fecha_vence = me.listCredit[i].fecha_vence;
+                            var saldo = me.listCredit[i].saldo;
+                            var mora = me.listCredit[i].mora;
+                            var cliente = me.listCredit[i].nombres;
 
-                                var idCredito = me.listCredit[i].id;
-                                var idpromotor = me.listCredit[i].idpromotor;
-                                var idCliente = me.listCredit[i].idcliente;
-                                var fecha_vence = me.listCredit[i].fecha_vence;
-                                var saldo = me.listCredit[i].saldo;
-                                var mora = me.listCredit[i].mora;
-                                var cliente = me.listCredit[i].nombres;
-
-                                if (monto >= 0){
-                                      me.listado=0;  
-                                      axios.post('save_payment',{
-                                                'idCredito':idCredito,'monto':monto,
-                                                'fecha_vence' :fecha_vence,'cliente':cliente,
-                                                'idCliente' :idCliente,'saldo':saldo,
-                                                'mora' :mora,'idpromotor':idpromotor,
-                                                'fecha_registro' : moment(moment(this.date_register, 'DD/MM/YYYY')).format('YYYY-MM-DD')                             
-                                            }).then(function (response) {
-                                                me.list_data(1);
-                                            }).catch(function (error) {
-                                                console.log(error);
-                                            });
-                                }
-                                
+                            if (monto >= 0){
+                                me.listado=0;  
+                                axios.post('save_payment',{
+                                    'idCredito':idCredito,'monto':monto,
+                                    'fecha_vence' :fecha_vence,'cliente':cliente,
+                                    'idCliente' :idCliente,'saldo':saldo,
+                                    'mora' :mora,'idpromotor':idpromotor,
+                                    'fecha_registro' : moment(moment(this.date_register, 'DD/MM/YYYY')).format('YYYY-MM-DD')                             
+                                }).then(function (response) {
+                                    me.list_data(1);
+                                }).catch(function (error) {
+                                    console.log(error);
+                                });
+                            }                                
                         }
                         //fin de recorrido    
                         

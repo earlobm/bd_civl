@@ -14400,7 +14400,7 @@ Vue.component('dailybalance', function () {
 var app = new Vue({
   el: '#app',
   data: {
-    menu: 101,
+    menu: 25,
     idanio: 211,
     ruta: 'http://localhost:81/poi/public'
     // menu : 11

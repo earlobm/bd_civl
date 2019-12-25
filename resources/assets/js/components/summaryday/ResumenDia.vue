@@ -11,70 +11,60 @@
             </ol>
         </section>
         <section class="content">
-            <div class="row">
-               
-                <!-- Lista de Clientes -->
-                
-                    <div class="col-md-12">
-                        <div class="box box-primary">
-                            <div class="box-body">
-                                 <template v-if="listado==0">
-                                        <div align="center">
-                                            <img src="img/loadx.gif" alt="technoserve" align="middle">
-                                        </div>
-                                </template>
-                                <template v-if="listado==1">
-                                <div class="row">
-                                    <div class="box-tools pull-right" style="right: -15px;">
-                                        <div class="col-md-12" style="margin-top: 6px;">
-                                            <p  class="col-md-8" style="text-align:right"><i class="fa fa-filter"></i> Ver Filtros:</p>
-                                            <div class="col-md-4" style="margin-top: -10px;">
-                                                <div class="checkbox">
-                                                    <label class="switch" style="width: 92px; height: 18px;">
-                                                        <input type="checkbox" v-model="filter">
-                                                        <span class="slider round"></span>
-                                                    </label>
-                                                </div> 
+            <div class="row">              
+                <div class="col-md-12">
+                    <div class="box box-primary">
+                        <div class="box-body">                        
+                            <div class="row">
+                                <div class="box-tools pull-right" style="right: -15px;">
+                                    <div class="col-md-12" style="margin-top: 6px;">
+                                        <p  class="col-md-8" style="text-align:right"><i class="fa fa-filter"></i> Ver Filtros:</p>
+                                        <div class="col-md-4" style="margin-top: -10px;">
+                                            <div class="checkbox">
+                                                <label class="switch" style="width: 92px; height: 18px;">
+                                                    <input type="checkbox" v-model="filter">
+                                                    <span class="slider round"></span>
+                                                </label>
                                             </div> 
                                         </div> 
-                                    </div>
+                                    </div> 
                                 </div>
-                                <div class="box-body">
-                                    <div class="row" v-if="filter==1">
-                                        <div class="col-md-12">
-                                            <div class="container-fluid">                           
-                                                <div class="row">
-                                                    <div class="col-md-4">
-                                                        <div class="form-group">
-                                                            <label for="sexo">Sucursal:</label>
-                                                            <div class="input-group">
-                                                                        <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-map-signs"></i></span>                                                                             
-                                                                        <select @change="getMercado($event.target.value)" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;" v-model="id_sucursal_edit">
-                                                                            <option selected="selected" value="" >Seleccione</option>
-                                                                            <option v-for="miselect in arraySucursal" :selected="miselect.id == id_sucursal_edit" :key="miselect.id" :value="miselect.id">{{ miselect.name}}</option>
-                                                                        </select>
-                                                            </div>
+                            </div>
+                            <div class="box-body">
+                                <div class="row" v-if="filter==1">
+                                    <div class="col-md-12">
+                                        <div class="container-fluid">                           
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <div class="form-group">
+                                                        <label for="sexo">Sucursal:</label>
+                                                        <div class="input-group">
+                                                                    <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-map-signs"></i></span>                                                                             
+                                                                    <select @change="getMercado($event.target.value)" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;" v-model="id_sucursal_edit">
+                                                                        <option selected="selected" value="" >Seleccione</option>
+                                                                        <option v-for="miselect in arraySucursal" :selected="miselect.id == id_sucursal_edit" :key="miselect.id" :value="miselect.id">{{ miselect.name}}</option>
+                                                                    </select>
                                                         </div>
                                                     </div>
-                                                    <div class="col-md-4">
-                                                        <div class="form-group">
-                                                            <label for="sexo">Mercado:</label>
-                                                            <div class="input-group">
-                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-map-signs"></i></span>                                                                              
-                                                                <select class="form-control"  style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;" v-model="id_mercado_edit">
-                                                                    <option selected="selected" value="" >Seleccione</option>
-                                                                    <option v-for="miselect in arrayMercado" :selected="miselect.id == id_mercado_edit" :key="miselect.id" :value="miselect.id">{{ miselect.name}}</option>
-                                                                </select>
-                                                            </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="form-group">
+                                                        <label for="sexo">Mercado:</label>
+                                                        <div class="input-group">
+                                                            <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-map-signs"></i></span>                                                                              
+                                                            <select class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;" v-model="id_mercado_edit">
+                                                                <option selected="selected" value="" >Seleccione</option>
+                                                                <option v-for="miselect in arrayMercado"  @click="getResumenDia" :selected="miselect.id == id_mercado_edit" :key="miselect.id" :value="miselect.id">{{ miselect.name}}</option>
+                                                            </select>
                                                         </div>
                                                     </div>
-                                                    <div class="col-md-4">
-                                                        <div class="form-group">
-                                                            <label for="edad">Fecha:</label>
-                                                            <div class="input-group">
-                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-calendar "></i></span>
-                                                                <date-picker v-model="date_creation" @dp-change="getResumenDia" :config="options" style="border-top-right-radius: 3px;border-bottom-right-radius: 3px;"></date-picker>
-                                                            </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="form-group">
+                                                        <label for="edad">Fecha:</label>
+                                                        <div class="input-group">
+                                                            <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-calendar "></i></span>
+                                                            <date-picker v-model="date_creation" @dp-change="getResumenDia" :config="options" style="border-top-right-radius: 3px;border-bottom-right-radius: 3px;"></date-picker>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -82,69 +72,173 @@
                                         </div>
                                     </div>
                                 </div>
-                                </template>
-                            </div>
+                            </div>                            
                         </div>
                     </div>
-                    <div class="col-md-12"  v-if="visible">
-                        <div class="box box-primary">
-                            <div class="box-header with-border">
-                                <h1 class="box-title"><i class="fa fa-list"></i> Detalle
-                                </h1>
-                            
-                                <!-- <h1 class="box-title"><i class="fa fa-list"></i> Lista de Clientes</h1> -->
+                </div>
+                <div class="col-md-12">
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <h1 class="box-title"><i class="fa fa-list"></i> Detalle
+                            </h1>                        
+                            <!-- <h1 class="box-title"><i class="fa fa-list"></i> Lista de Clientes</h1> -->
+                            <template v-if="listado==1">
                                 <div class="box-tools pull-right">
                                     <span class="label label-success">TOTAL DE REGISTROS: {{list_resumenday.length}}</span>
                                     <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
                                     </button>
                                     <!-- <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button> -->
                                 </div>
-                            </div>
-                            <template v-if="listado==0">
-                                <div align="center">
-                                    <img src="img/loadx.gif" alt="technoserve" align="middle">
-                                    <!-- <p>Cargando...</p> -->
-                                </div>
                             </template>
-                            <template v-if="listado==1">
-                                <div class="box-body table-responsive no-padding">
-                                    <table  class="table table-hover" style="font-size:12px">
-                                        <thead style="background: #90a4ae;color: #fff;">                                                                                   
-                                            <tr>
-                                                <th style="vertical-align: middle; text-align: center;">#</th>
-                                                <th style="vertical-align: middle; text-align: center;">TOTAL ENTREGADO</th>
-                                                <th style="vertical-align: middle; text-align: center;">ASESOR FINANCIERO</th>
-                                                <th style="vertical-align: middle;">SUCURSAL</th>
-                                                <th style="vertical-align: middle;">MERCADO</th>
-                                                <th style="text-align: center; vertical-align: middle;">OPERACION</th>
-                                            </tr> 
-                                        </thead>
-                                        <tbody>
-                                            <tr v-for="(midata,index) in list_resumenday" :key="index" >
-                                                <td style="vertical-align: middle; text-align: center;" >{{(index+1)}}</td>
-                                                <td style="vertical-align: middle; text-align: center;" v-text="midata.amount_delivered"></td>
-                                                <td style="vertical-align: middle; text-align: center;" v-text="midata.names+' '+midata.paternal_last_name+' '+midata.maternal_last_name"></td>
-                                                <td style="vertical-align: middle;" v-text="midata.name_sucursal"></td>
-                                                <td style="vertical-align: middle;" v-text="midata.name_mercado"></td>
-                                                <td style="text-align: center; vertical-align: middle;">                                                                                    
-                                                    <button type="button" @click="operation(midata.id)" class="btn btn-editar btn-sm" data-toggle="tooltip" title="Editar">
-                                                        <i class="fa fa-chrome"></i>
-                                                    </button>      
-                                                </td> 
-                                            </tr>                       
-                                        </tbody>
-                                    </table>
-                                </div>
-                                <div class="box-footer">
-                                    <div class="btn-group" style="float:right">
-                                        <button  type="button" @click="save()" class="btn btn-save" data-toggle="tooltip" title="Registrar los pagos">
-                                            <i class="fa fa-save"></i>&nbsp;GUARDAR
-                                        </button> 
+                        </div>
+                        <template v-if="listado==0">
+                            <div align="center">
+                                <img src="img/loadx.gif" alt="technoserve" align="middle">
+                                <!-- <p>Cargando...</p> -->
+                            </div>
+                        </template>
+                        <template v-if="listado==1">
+                            <div class="box-body table-responsive no-padding">
+                                <table  class="table table-hover" style="font-size:12px">
+                                    <thead style="background: #90a4ae;color: #fff;">                                                                                   
+                                        <tr>
+                                            <th style="vertical-align: middle; text-align: center;">#</th>
+                                            <th style="vertical-align: middle; text-align: center;">PROMOTORES</th>
+                                            <th style="vertical-align: middle;">SUCURSAL</th>
+                                            <th style="vertical-align: middle;">MERCADO</th>
+                                            <th style="vertical-align: middle; text-align: center;">TOTAL ENTREGADO</th>
+                                            <th style="text-align: center; vertical-align: middle;">ACCIONES</th>
+                                        </tr> 
+                                    </thead>
+                                    <tbody>
+                                        <tr v-for="(midata,index) in list_resumenday" :key="index" >
+                                            <td style="vertical-align: middle; text-align: center;" >{{(index+1)}}</td>                                                
+                                            <td style="vertical-align: middle; text-align: center;" v-text="midata.names+' '+midata.paternal_last_name+' '+midata.maternal_last_name"></td>
+                                            <td style="vertical-align: middle;" v-text="midata.name_sucursal"></td>
+                                            <td style="vertical-align: middle;" v-text="midata.name_mercado"></td>
+                                            <td style="vertical-align: middle; text-align: center;" v-text="midata.amount_delivered"></td>
+                                            <td style="text-align: center; vertical-align: middle;">                                                                                    
+                                                <button type="button" @click="operation(midata.id_employee, date_creation,midata.id)" class="btn btn-editar btn-sm" data-toggle="tooltip" title="Ver detalles...">
+                                                    <i class="fa fa-clipboard"></i>
+                                                </button>      
+                                            </td> 
+                                        </tr>                       
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="box-footer">
+                            </div>                           
+                        </template> 
+                        <template v-if="listado==2">
+                            <div class="box-body">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="container-fluid">                           
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="box box-widget widget-user" style="margin-top:15px">
+                                                        <div class="widget-user-header bg-aqua-active">
+                                                            <h3 class="widget-user-username">{{promoter}}</h3>
+                                                            <h5 class="widget-user-desc">Promotor</h5>
+                                                        </div>
+                                                        <div class="widget-user-image">
+                                                            <img class="img-circle" src="/img/user1-128x128.jpg" alt="User Avatar">
+                                                        </div>
+                                                        <div class="box-footer">
+                                                            <div class="row">
+                                                                <div class="col-sm-3 border-right">
+                                                                    <div class="description-block">
+                                                                        <h5 class="description-header">{{name_branch}}</h5>
+                                                                        <span class="description-text">SUCURSAL</span>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-sm-3 border-right">
+                                                                    <div class="description-block">
+                                                                        <h5 class="description-header">{{name_market}}</h5>
+                                                                        <span class="description-text">MERCADO</span>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-sm-3 border-right">
+                                                                    <div class="description-block">
+                                                                        <h5 class="description-header">{{date_register}}</h5>
+                                                                        <span class="description-text">FECHA</span>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-sm-3">
+                                                                    <div class="description-block">
+                                                                        <h5 class="description-header">{{amount_delivered}}</h5>
+                                                                        <span class="description-text">TOTAL ENTREGADO</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                <div class="box-body table-responsive no-padding">
+                                                    <table  class="table table-hover" style="font-size:12px">
+                                                        <thead style="background: rgb(32, 32, 32);color: #fff;">                                                                                   
+                                                            <tr>  
+                                                                <th colspan="7" style="vertical-align: middle;">CAJA</th>
+                                                                <th width="20%" style="vertical-align: middle; text-align: right;">TOTAL</th>
+                                                            </tr>
+                                                            <tr>
+                                                                <th colspan="6" style="vertical-align: middle; text-align: right;background: #fff; color: rgb(32, 32, 32);" >MONTO DEL DÍA</th>
+                                                                <th colspan="2" width="20%" style="vertical-align: middle; text-align: right;background: #fff; color: rgb(32, 32, 32);" >{{amount_assigned}}</th> 
+                                                            </tr>
+                                                        </thead>
+                                                    </table> 
+                                                    <table  class="table table-hover" style="font-size:12px">
+                                                        <thead style="background: rgb(32, 32, 32);color: #fff;">
+                                                            <tr>  
+                                                                <th colspan="8" style="vertical-align: middle;">COBRANZA</th>
+                                                            </tr>
+                                                            <tr>  
+                                                                <th style="vertical-align: middle;text-align: center; background: #fff; color: rgb(32, 32, 32);">#</th>
+                                                                <th style="vertical-align: middle;text-align: center; background: #fff; color: rgb(32, 32, 32);">CÓDIGO</th>
+                                                                <th colspan="2" style="vertical-align: middle; background: #fff; color: rgb(32, 32, 32);">CLIENTE</th>
+                                                                <th style="vertical-align: middle; text-align: right; background: #fff; color: rgb(32, 32, 32);">MONTO COBRADO</th>
+                                                                <th style="vertical-align: middle; text-align: right; background: #fff; color: rgb(32, 32, 32);">MORA</th>
+                                                                <th colspan="2" width="20%" style="vertical-align: middle; background: #fff; color: rgb(32, 32, 32);"></th>
+                                                            </tr> 
+                                                        </thead>
+                                                        <tbody>    
+                                                            <tr v-for="(midata,index) in list_customer_credit_day" :key="index" >
+                                                                <td style="vertical-align: middle;text-align: center;" >{{(index+1)}}</td>
+                                                                <td style="vertical-align: middle; text-align: center;" v-text="midata.code"></td>
+                                                                <td colspan="2" style="vertical-align: middle;" v-text="midata.customer"></td>  
+                                                                <td width="10%" style="vertical-align: middle; text-align: right;" v-text="midata.capital"></td>  
+                                                                <td width="10%" style="vertical-align: middle; text-align: right;" v-text="midata.mora"></td>  
+                                                                <td colspan="2" width="20%" style="vertical-align: middle; text-align: center;"></td>  
+                                                            </tr>                     
+                                                        </tbody>
+                                                        <thead >
+                                                            <tr>
+                                                                <th colspan="4" style="vertical-align: middle; text-align: right; background: #fff; color: rgb(32, 32, 32);" >Totales</th>
+                                                                <th width="10%" style="vertical-align: middle; text-align: right;" >{{total_capital}}</th>
+                                                                <th width="10%" style="vertical-align: middle; text-align: right;" >{{total_mora}}</th> 
+                                                                <th colspan="2" width="20%" style="vertical-align: middle; text-align: right;" ></th> 
+                                                            </tr>
+                                                            <tr>
+                                                                <th colspan="6" style="vertical-align: middle; text-align: right; background: #fff; color: rgb(32, 32, 32);" >TOTAL DE COBRANZA</th>
+                                                                <th colspan="2" width="20%" style="vertical-align: middle; text-align: right;" >{{total_capital}}</th> 
+                                                            </tr>
+                                                            <tr>
+                                                                <th colspan="6" style="vertical-align: middle; text-align: right; background: #fff; color: rgb(32, 32, 32);" >TOTAL DE MORA</th>
+                                                                <th colspan="2" width="20%" style="vertical-align: middle; text-align: right;" >{{total_mora}}</th> 
+                                                            </tr>
+                                                        </thead>
+                                                    </table>                            
+                                                </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>                           
-                            </template>                        
-                        </div>                   
-                    </div>
+                                </div>
+                            </div>
+                        </template>                       
+                    </div>                   
+                </div>
             </div>                
 		</section>
     </main>
@@ -209,7 +303,9 @@
                 id_mercado_edit:'',
                 id_sucursal_edit:'',
                 filter:1,visible:1, 
-
+                promoter:'',amount_delivered:'',name_branch:'',name_market:'',date_register:'',
+                list_summary_day:[],amount_assigned:'',
+                list_customer_credit_day:[],total_mora:'', total_capital:'',
             }
         },
          components: {
@@ -280,22 +376,22 @@
                 });
             },
             getResumenDia(){
-                let me=this;
-              // me.listado=0
-              if(me.id_mercado_edit==""){
-                  alert('SELECIONE SUCURSAL Y MERCADO');
+                let me=this;               
+                if(me.id_mercado_edit==""){
+                    alert('SELECIONE SUCURSAL Y MERCADO');
 
-              }else{
-                  var url= 'getResumenDayFecha?id='+me.id_mercado_edit+'&date_register='+me.date_creation;
-                axios.get(url).then(function (response) {
-                    var respuesta= response.data;
-                    me.list_resumenday = respuesta.datax;
-
-                })
-                .catch(function (error) {
-                    console.log(error);
-                });
-              }
+                }else{
+                    me.listado=0
+                    var url= 'getResumenDayFecha?id='+me.id_mercado_edit+'&date_register='+me.date_creation;
+                    axios.get(url).then(function (response) {
+                        var respuesta= response.data;
+                        me.list_resumenday = respuesta.datax;
+                        me.listado=1
+                    })
+                    .catch(function (error) {
+                        console.log(error);
+                    });
+                }
                 
             },
             //getResumenDia
@@ -323,36 +419,6 @@
                                 me.validarData();
                             }
                         }                    
-                    })
-                    .catch(function (error) {
-                        console.log(error);
-                    });
-                    //obtener datos
-                    
-                }
-            },
-            get_data_reniec(){
-                //obteniendo datos de RENIEC
-                if (this.number_doc_add.length==8){   
-                    let me=this;              
-                    var url= 'getDatabyNroDocP?nro_doc='+me.number_doc_add;
-                    axios.get(url).then(function (response) {
-                        var respuesta= response.data;
-                        var tipo=respuesta.tipo;
-                        if(respuesta.datax.length>0){
-                        if(tipo=='reniec'){
-                                me.paternal_last_name = respuesta.datax[0];
-                                me.names = respuesta.datax[1];
-                                me.maternal_last_name = respuesta.datax[2];                            
-                            me.validarDataPersonal();
-                            }
-                            else{
-                                me.paternal_last_name = 'EL PERSONAL  YA SE ENCUENTRA REGISTRADO';
-                                me.validarDataPersonal();
-                            }
-
-                        }
-                    
                     })
                     .catch(function (error) {
                         console.log(error);
@@ -436,24 +502,29 @@
                 //me.listado=1;
 				me.list_data(page);
                 
-            },
-           
-            operation(id){
+            },           
+            
+            operation(id_employee, date_creation, id){
                 let me=this;
-                me.listado=2;
-                me.limpiar();
-                me. get_branch();
-                var url= 'editMercado?id='+id;
+                me.filter=0;
+                me.listado=0;
+                // me.limpiar();
+                // me. get_branch();
+                var url= 'get_summary_day?id_employee='+id_employee +'&date_register='+ me.date_creation +'&id='+ id;
                 axios.get(url).then(function (response) {
                     var respuesta= response.data;
                     me.id=respuesta.datax[0].id;
-                    me.id_person=respuesta.datax[0].id_person;
-                    me.number_doc = respuesta.datax[0].number_doc;
-                    me.personal = respuesta.datax[0].paternal_last_name+' ' +respuesta.datax[0].maternal_last_name+' ' +respuesta.datax[0].names; 
-                    me.code = respuesta.datax[0].code;
-                    me.name =respuesta.datax[0].name;
-                    me.date_creation =respuesta.datax[0].date_creation;
-                    me.validarData();
+                    me.promoter=respuesta.datax[0].promoter;
+                    me.name_branch=respuesta.datax[0].name_branch;
+                    me.name_market=respuesta.datax[0].name_market;
+                    me.amount_delivered=respuesta.datax[0].amount_delivered;
+                    me.amount_assigned=respuesta.datax[0].amount_assigned;
+                    me.date_register=respuesta.datax[0].date_register;
+                    me.list_customer_credit_day=respuesta.dataz;
+
+                    me.total_capital=respuesta.total_cobranza[0].total_capital;
+                    me.total_mora=respuesta.total_cobranza[0].total_mora;
+                    me.listado=2;
                 })
                 .catch(function (error) {
                     console.log(error);
@@ -593,8 +664,8 @@
                 var url= '/downloadprogram?buscar='+buscar;
                 window.location.href = url;
             },
-        limpiar(){
-               this.errorInputActivity='form-group';
+            limpiar(){
+                this.errorInputActivity='form-group';
                 this.errorInputActivity2='form-group';
                 this.errors = {};
                 this.errors.number_doc="";
@@ -607,9 +678,9 @@
                 this.number_doc_add="";
                 this.name="";
                 this.names="";
-                 this.paternal_last_name="";
+                this.paternal_last_name="";
                 this.maternal_last_name="";
-                 this.phone="";
+                this.phone="";
                 this.address="";
                 this.id=-1;
             },
@@ -619,16 +690,15 @@
                 var url= 'getListaResumenDay?page='+page;
                 axios.get(url).then(function (response) {
                     var respuesta= response.data;
-                     me.list_resumenday=respuesta.datax;
-                     //me.pagination= respuesta.pagination; 
-                     me.listado=1;
+                    me.list_resumenday=respuesta.datax;
+                    //me.pagination= respuesta.pagination; 
+                    me.listado=1;
                 })
                 .catch(function (error) {
                     console.log(error);
-                });
-               
+                });            
             },
-           
+            
         },
         mounted() {
             this.getLitSucursal(1);
