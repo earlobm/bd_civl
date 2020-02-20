@@ -17,7 +17,7 @@ class UserController extends Controller
     }
     public function migrar()
     {
-        $midatax=DB::select('select * from usuario');
+        $midatax=DB::select('select * from users');
         $midata = json_decode(json_encode($midatax), true);
         foreach($midata as $index => $midatax) {
             try{

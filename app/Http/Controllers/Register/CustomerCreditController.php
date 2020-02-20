@@ -124,57 +124,22 @@ class CustomerCreditController extends Controller
         ];
     }
     public function get_customer_by_dni(Request $request){        
-        $sqlx="";
-        $tipo='';
-        $aval='';
-    
-        $dni=$request->nro_doc;
-        $sqlx="SELECT p.id, c.id as id_customer_credit, CASE WHEN c.id_guarantor is null or c.id_guarantor=0  THEN -1 ELSE c.id_guarantor END id_guarantor, c.code, 
-        p.id_type_document, p.number_doc, p.paternal_last_name, p.maternal_last_name, p.names,
-        p.phone, p.address, p.birthdate, p.sex, p.marital_status, p.email, p.reference, 
-        p.id_district,di.id_province, pr.id_department, p.id_job,  p.id_type_business, 
-
-        g.id_type_document as id_type_document_aval, g.number_doc as number_doc_aval, g.paternal_last_name as paternal_last_name_aval, g.maternal_last_name as maternal_last_name_aval, g.names as names_aval,        
-        g.phone as phone_aval, g.address as address_aval, g.birthdate as birthdate_aval, g.sex as sex_aval, g.marital_status as marital_status_aval, g.email as email_aval, g.reference as reference_aval,         
-        g.id_district as id_district_aval,di.id_province as id_province_aval, pr.id_department as id_department_aval,
-        g.id_job as id_job_aval,  g.id_type_business as id_type_business_aval, c.id_promoter
-        FROM customer c 
-        inner join person p on p.id=c.id_person
-        left join person g on g.id=c.id_guarantor
-        inner join district di on di.id=p.id_district
-        left join district dg on dg.id=g.id_district
-        inner join province pr on pr.id=di.id_province
-        left join province pg on pg.id=dg.id_province
-        inner join department de on de.id=pr.id_department
-        left join department deg on deg.id=pg.id_department
-        where p.number_doc='$dni' ";
-        $miArrayx = DB::select($sqlx);
-        $miArray = json_decode(json_encode($miArrayx), true);
-
-        $sqly="SELECT c.id_guarantor
-        FROM customer c 
-        inner join person p on p.id=c.id_person
-        inner join person g on g.id=c.id_guarantor
-        where p.number_doc='$dni' ";
-        $miArrayGuarantor = DB::select($sqly);
-        $ArrayGuarantor = json_decode(json_encode($miArrayGuarantor), true);
-
-        //Para traer los requerimientos que tiene el cliente
-        $sql="SELECT ct.id_type_document
-        FROM person p 
-        inner join customer c on c.id_person=p.id
-        inner join customer_type_doc ct on ct.id_customer=c.id
-        where ct.state=1 and p.number_doc='$dni' ";
-        $ArrayR = DB::select($sql);
-        $ArrayReq = json_decode(json_encode($ArrayR), true);
-
-        if(count($ArrayGuarantor)==0){
-            $aval='no';
+        if(isset($request->id)){
+            $id=$request->id;
+            $sqlx="select *  from person where idperson=$id";
+            $datax=DB::select($sqlx);
+              return [
+                  'datax'=>$datax
+              ];
 
         }else{
-            $aval='si';
-        }
-
+        $sqlx="";
+        $tipo='';
+      
+        $dni=$request->number_doc;
+        $sqlx="select * from person  where  number_doc='$dni' ";
+        $miArrayx = DB::select($sqlx);
+        $miArray = json_decode(json_encode($miArrayx), true);
         if(count($miArray)==0){
             $url = 'http://aplicaciones007.jne.gob.pe/srop_publico/Consulta/api/AfiliadoApi/GetNombresCiudadano';
             $ch = curl_init($url);
@@ -190,29 +155,30 @@ class CustomerCreditController extends Controller
             $miArray = explode("|", $html);
             if(count($miArray)==4){
                 //buscamos en el otro web service
-                libxml_use_internal_errors(true);
-                $htmlContent = file_get_contents('http://clientes.reniec.gob.pe/padronElectoral2012/consulta.htm?hTipo=2&hDni='.$dni.'&hApPat=&hApMat=&hNombre=');
-                $dom = new \DOMDocument();
-                $dom->loadHTML($htmlContent);
-                $dom->preserveWhiteSpace = false;
-                $dom->strictErrorChecking = false;
-                $content = $dom->getElementsByTagname('td');
-                $out = array();
-                foreach ($content as $item){
-                    $out[] = $item->nodeValue;
-                }
-
-                $miArray=array();
-                $miArray = explode(",", $out[7]);
-                $apellidosx=array();
-                $apellidosx = explode(" ", $miArray[0]);
-                $nombre=$miArray[1];
-                if(count($apellidosx)==2){
-                    $miArray[0]=$apellidosx[0] ;
-                    $miArray[2]=$apellidosx[1];
-                    $miArray[1]=$nombre;
-                }
-                
+                   libxml_use_internal_errors(true);
+                   $htmlContent = file_get_contents('http://clientes.reniec.gob.pe/padronElectoral2012/consulta.htm?hTipo=2&hDni='.$dni.'&hApPat=&hApMat=&hNombre=');
+                   $dom = new \DOMDocument();
+                   $dom->loadHTML($htmlContent);
+                   $dom->preserveWhiteSpace = false;
+                   $dom->strictErrorChecking = false;
+                   $content = $dom->getElementsByTagname('td');
+                   $out = array();
+                   foreach ($content as $item)
+                   {
+                       $out[] = $item->nodeValue;
+                   }
+   
+                   $miArray=array();
+                   $miArray = explode(",", $out[7]);
+                   $apellidosx=array();
+                   $apellidosx = explode(" ", $miArray[0]);
+                   $nombre=$miArray[1];
+                   if(count($apellidosx)==2){
+                       $miArray[0]=$apellidosx[0] ;
+                       $miArray[2]=$apellidosx[1];
+                       $miArray[1]=$nombre;
+                   }
+                   
                 }else{
                     $nombre=$miArray[2];
                 // $datos[0]=$datos[0];
@@ -222,15 +188,12 @@ class CustomerCreditController extends Controller
 
                 $tipo='reniec';
             
-        }else {
-            $tipo='bd';
-        }
-        return [
+        }else {$tipo='bd';}
+          return [
             'datax' => $miArray,
-            'tipo'=>$tipo,
-            'aval'=>$aval,
-            'requirements_data'=>$ArrayReq
-        ];
+            'tipo'=>$tipo
+          ];
+        }
         
     }
 
@@ -383,6 +346,31 @@ class CustomerCreditController extends Controller
         $clasex->save();
     
     }
+    public function saveCiudadano(Request $request){
+        if($request->idperson==-1){
+            $clasex = new Person();
+        }else{
+            $clasex = Person::findOrFail($request->idperson);
+        }
+        $clasex->name_paterno = $request->name_paterno;
+        $clasex->estado = 1;
+        $clasex->name_materno = $request->name_materno;
+        $clasex->name =$request->name;
+        $clasex->fecha_nacimiento =$request->fecha_nacimiento;
+        $clasex->sexo =$request->sexo;
+        $clasex->estado_civil =$request->estado_civil;
+        $clasex->edad =$request->edad;
+        $clasex->id_type_document =$request->id_type_document;
+        $clasex->profesion_oficio =$request->profesion_oficio;
+        $clasex->number_doc =$request->number_doc;
+        $clasex->id_district =$request->id_district;
+
+
+        $clasex->save(); 
+        /* $DateOfRequest= date("Y-m-d H:i:s");
+            $clasex->modificado ='Modificado por '.Auth::user()->nick.' '. $DateOfRequest;*/
+          return  $clasex->idperson; 
+        }
 
     public function save_data(Request $request){
         $DateOfRequest= date("Y-m-d H:i:s");
@@ -590,7 +578,7 @@ class CustomerCreditController extends Controller
     }
 
     public function list_department(Request $request){
-        $sqlx="SELECT * FROM department order by name";
+        $sqlx="SELECT * FROM departament order by departamento";
         $datax=DB::select($sqlx);
           return [
               'datax'=>$datax,
@@ -599,8 +587,8 @@ class CustomerCreditController extends Controller
     public function list_province(Request $request){       
         $id=$request->id;
         $sqlx="SELECT *
-          FROM province  where id_department=$id
-         order by name";
+          FROM province  where id_departmen=$id
+         order by provincia";
         $datax=DB::select($sqlx);
           return [
               'datax'=>$datax,
@@ -609,15 +597,15 @@ class CustomerCreditController extends Controller
     public function list_district(Request $request){       
         $id=$request->id;
         $sqlx="SELECT *
-          FROM district  where id_province=$id
-         order by name";
+          FROM distric  where idProv=$id
+         order by distrito";
         $datax=DB::select($sqlx);
           return [
               'datax'=>$datax,
           ];
     }
     public function list_type_document(Request $request){
-        $sqlx="SELECT * FROM type_document where state=1 and type=1 order by name";
+        $sqlx="SELECT iddocument, name FROM type_document where state=1 ";
         $datax=DB::select($sqlx);
           return [
               'datax'=>$datax,

@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Person extends Model{
   //protected $connection = 'mysql-utf8';
     protected $table='person';
-    protected $primaryKey='id';
+    protected $primaryKey='idperson';
     public $timestamps = false;
     const UPDATED_AT=NULL;
   /**

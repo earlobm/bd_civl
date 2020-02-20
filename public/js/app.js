@@ -29,7 +29,7 @@
 /******/
 /******/ 	// objects to store loaded and loading chunks
 /******/ 	var installedChunks = {
-/******/ 		25: 0
+/******/ 		26: 0
 /******/ 	};
 /******/
 /******/ 	// The require function
@@ -14313,10 +14313,10 @@ __webpack_provided_window_dot_Vue = __webpack_require__(3);
 
 // Registers
 Vue.component('customercredit', function () {
-  return __webpack_require__.e/* import() */(13).then(__webpack_require__.bind(null, 39));
+  return __webpack_require__.e/* import() */(14).then(__webpack_require__.bind(null, 39));
 });
 Vue.component('customerlist', function () {
-  return __webpack_require__.e/* import() */(12).then(__webpack_require__.bind(null, 40));
+  return __webpack_require__.e/* import() */(13).then(__webpack_require__.bind(null, 40));
 });
 Vue.component('staff', function () {
   return __webpack_require__.e/* import() */(7).then(__webpack_require__.bind(null, 41));
@@ -14325,82 +14325,86 @@ Vue.component('payment', function () {
   return __webpack_require__.e/* import() */(8).then(__webpack_require__.bind(null, 42));
 });
 Vue.component('branchoffice', function () {
-  return __webpack_require__.e/* import() */(14).then(__webpack_require__.bind(null, 43));
+  return __webpack_require__.e/* import() */(15).then(__webpack_require__.bind(null, 43));
 });
 Vue.component('market', function () {
-  return __webpack_require__.e/* import() */(9).then(__webpack_require__.bind(null, 44));
+  return __webpack_require__.e/* import() */(10).then(__webpack_require__.bind(null, 44));
 });
 Vue.component('detailpledge', function () {
-  return __webpack_require__.e/* import() */(11).then(__webpack_require__.bind(null, 45));
+  return __webpack_require__.e/* import() */(12).then(__webpack_require__.bind(null, 45));
 });
 Vue.component('contrato', function () {
   return __webpack_require__.e/* import() */(4).then(__webpack_require__.bind(null, 46));
 });
 Vue.component('montodia', function () {
-  return __webpack_require__.e/* import() */(15).then(__webpack_require__.bind(null, 47));
+  return __webpack_require__.e/* import() */(16).then(__webpack_require__.bind(null, 47));
 });
+Vue.component('reciennacido', function () {
+  return __webpack_require__.e/* import() */(9).then(__webpack_require__.bind(null, 48));
+});
+
 // RegistersCustomer
 Vue.component('document', function () {
-  return __webpack_require__.e/* import() */(10).then(__webpack_require__.bind(null, 48));
+  return __webpack_require__.e/* import() */(11).then(__webpack_require__.bind(null, 49));
 });
 Vue.component('business', function () {
-  return __webpack_require__.e/* import() */(6).then(__webpack_require__.bind(null, 49));
+  return __webpack_require__.e/* import() */(6).then(__webpack_require__.bind(null, 50));
 });
 // SummaryDay
 Vue.component('resumendia', function () {
-  return __webpack_require__.e/* import() */(1).then(__webpack_require__.bind(null, 50));
+  return __webpack_require__.e/* import() */(1).then(__webpack_require__.bind(null, 51));
 });
 
 Vue.component('reference', function () {
-  return __webpack_require__.e/* import() */(2).then(__webpack_require__.bind(null, 51));
+  return __webpack_require__.e/* import() */(2).then(__webpack_require__.bind(null, 52));
 });
 Vue.component('garmenttype', function () {
-  return __webpack_require__.e/* import() */(3).then(__webpack_require__.bind(null, 52));
+  return __webpack_require__.e/* import() */(3).then(__webpack_require__.bind(null, 53));
 });
 Vue.component('carhregister', function () {
-  return __webpack_require__.e/* import() */(21).then(__webpack_require__.bind(null, 53));
+  return __webpack_require__.e/* import() */(22).then(__webpack_require__.bind(null, 54));
 });
 Vue.component('income', function () {
-  return __webpack_require__.e/* import() */(19).then(__webpack_require__.bind(null, 54));
+  return __webpack_require__.e/* import() */(20).then(__webpack_require__.bind(null, 55));
 });
 Vue.component('egress', function () {
-  return __webpack_require__.e/* import() */(20).then(__webpack_require__.bind(null, 55));
+  return __webpack_require__.e/* import() */(21).then(__webpack_require__.bind(null, 56));
 });
 
 //Vue.component('example-component', require('./components/ExampleComponent.vue'));
 Vue.component('dashboardmain', function () {
-  return __webpack_require__.e/* import() */(23).then(__webpack_require__.bind(null, 56));
+  return __webpack_require__.e/* import() */(24).then(__webpack_require__.bind(null, 57));
 });
 //plan operativo 
 Vue.component('comboanio', function () {
-  return __webpack_require__.e/* import() */(24).then(__webpack_require__.bind(null, 57));
+  return __webpack_require__.e/* import() */(25).then(__webpack_require__.bind(null, 58));
 });
 
 //Security 11
 Vue.component('role', function () {
-  return __webpack_require__.e/* import() */(5).then(__webpack_require__.bind(null, 58));
+  return __webpack_require__.e/* import() */(5).then(__webpack_require__.bind(null, 59));
 });
 Vue.component('user', function () {
-  return __webpack_require__.e/* import() */(0).then(__webpack_require__.bind(null, 59));
+  return __webpack_require__.e/* import() */(0).then(__webpack_require__.bind(null, 60));
 });
 Vue.component('profile', function () {
-  return __webpack_require__.e/* import() */(22).then(__webpack_require__.bind(null, 60));
+  return __webpack_require__.e/* import() */(23).then(__webpack_require__.bind(null, 61));
 });
 //para creditos
 Vue.component('dailycollection', function () {
-  return __webpack_require__.e/* import() */(16).then(__webpack_require__.bind(null, 61));
+  return __webpack_require__.e/* import() */(17).then(__webpack_require__.bind(null, 62));
 });
 Vue.component('customerhistory', function () {
-  return __webpack_require__.e/* import() */(18).then(__webpack_require__.bind(null, 62));
+  return __webpack_require__.e/* import() */(19).then(__webpack_require__.bind(null, 63));
 });
 Vue.component('dailybalance', function () {
-  return __webpack_require__.e/* import() */(17).then(__webpack_require__.bind(null, 63));
+  return __webpack_require__.e/* import() */(18).then(__webpack_require__.bind(null, 64));
 });
 
 var app = new Vue({
   el: '#app',
   data: {
-    menu: 25,
+    menu: 0,
     idanio: 211,
     ruta: 'http://localhost:81/poi/public'
     // menu : 11

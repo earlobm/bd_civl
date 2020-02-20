@@ -36,14 +36,30 @@ Route::get('/main', function () {
 Route::get('/get_department', 'Register\CustomerCreditController@list_department'); 
 Route::get('/get_province', 'Register\CustomerCreditController@list_province');
 Route::get('/get_district', 'Register\CustomerCreditController@list_district'); 
+//madre
+Route::get('/get_department_madre', 'Register\NacidoController@get_department_madre'); 
+Route::get('/get_province_madre', 'Register\NacidoController@get_province_madre');
+Route::get('/get_district_madre', 'Register\NacidoController@get_district_madre');
+//padre
+Route::get('/get_department_padre', 'Register\NacidoController@get_department_padre'); 
+Route::get('/get_province_padre', 'Register\NacidoController@get_province_padre');
+Route::get('/get_district_padre', 'Register\NacidoController@get_district_padre');
+
 Route::get('/get_type_document', 'Register\CustomerCreditController@list_type_document'); 
 Route::post('/deleteCustomerCredit', 'Register\CustomerCreditController@delete'); 
-Route::get('/getListCustomerCredit', 'Register\CustomerCreditController@list_customer');  
-Route::get('/get_type_requirement', 'Register\CustomerCreditController@list_type_requerement');
-Route::get('/get_type_business', 'Register\CustomerCreditController@list_type_business');
-Route::get('/get_job', 'Register\CustomerCreditController@list_job');
-Route::get('/get_employee', 'Register\EmployeeController@list_employee');
+//Route::get('/getListCustomerCredit', 'Register\CustomerCreditController@list_customer');  
+//Route::get('/get_type_requirement', 'Register\CustomerCreditController@list_type_requerement');
+//Route::get('/get_type_business', 'Register\CustomerCreditController@list_type_business');
+//Route::get('/get_job', 'Register\CustomerCreditController@list_job');
+//Route::get('/get_employee', 'Register\EmployeeController@list_employee');
 Route::post('/save_customer_credit', 'Register\CustomerCreditController@save_data'); 
+//CIUDADANO
+Route::post('/saveCiudadano', 'Register\CustomerCreditController@saveCiudadano'); 
+//NACIDO
+Route::post('/saveNacido', 'Register\NacidoController@saveNacido');
+Route::get('/getDatabyNroDocP', 'Register\NacidoController@getDatabyNroDocP');  
+
+
 Route::post('/save_detail_credit', 'Register\CustomerCreditController@save_detail_credit'); 
 Route::get('/generate_code', 'Register\CustomerCreditController@generate_code');  
 Route::get('/get_customer_by_dni', 'Register\CustomerCreditController@get_customer_by_dni'); 
@@ -65,7 +81,7 @@ Route::post('/deleteBusiness', 'Register\TypeBusinessController@deleteBusiness')
 //personal
 Route::get('/getDatabyNroDocP', 'Register\PersonalController@getDatabyNroDocP'); 
 Route::post('/saveEmployee', 'Register\EmployeeController@saveEmployee');
-Route::get('/getListaEmpleadoList', 'Register\EmployeeController@list_employee');
+//Route::get('/getListaEmpleadoList', 'Register\EmployeeController@list_employee');
 //credit
 Route::get('/getListDailyCollection', 'Operation\DailyCollectionController@getListDailyCollection'); 
 Route::get('/getListDailyBalance', 'Operation\DailyBalanceController@getListDailyBalance'); 
@@ -77,11 +93,7 @@ Route::get('/creditByCustomer', 'Operation\CustomerHistoryController@creditByCus
 //resumenDay
 Route::get('/getListaResumenDay', 'Register\AmountDayController@getListaResumenDay');
 Route::get('/getResumenDayFecha', 'Register\AmountDayController@getResumenDayFecha');
-<<<<<<< HEAD
-Route::get('/get_summary_day', 'Register\AmountDayController@get_summary_day');
-=======
 Route::get('/getAmountDayFecha', 'Register\AmountDayController@getAmountDayFecha');
->>>>>>> fb8797b53ca74e3ec0a6e6df1b34b1f9cc1f7c21
 
 Route::get('/geEdittListaEmpleadoList', 'Register\EmployeeController@geEdittListaEmpleadoList');
 Route::post('/delete_PersonalEmploye', 'Register\EmployeeController@delete_PersonalEmploye'); 

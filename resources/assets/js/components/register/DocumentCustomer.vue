@@ -28,29 +28,48 @@
                                                 <div class="box-body">
                                                     <template v-if="listado==0">
                                                             <div align="center">
-                                                                <img src="img/loadx.gif" alt="technoserve" align="middle">
+                                                                <img src="img/robot.gif" alt="technoserve" align="middle">
                                                                 <p>Cargando...</p>
                                                             </div>
                                                     </template>
                                                     <template v-if="listado==1">
+                                                        <div class="row">                                                    
+                                                            <div class="col-md-12">
+                                                                <div class="btn-group" style="float:right;">
+                                                                    
+                                                                    <button type="button" @click="save_document()" class="btn btn-save">
+                                                                        <i class="fa fa-save"></i>&nbsp;GUARDAR
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="row">                                                                            
+                                                            <div class="col-md-12">
+                                                                <legend style="font-size:16px;"><i class="ion ion-edit"></i><strong>&nbsp;DATOS DEL DOCUMENTO</strong></legend>
+                                                            </div>   
+
+                                                            <div class="col-md-12">
+                                                                <div v-bind:class="errorInputActivity2">
+                                                                    <label for="ap_paterno">Tipo de Documento:</label>
+                                                                    <div class="input-group">
+                                                                        <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-user"></i></span>
+                                                                        <input v-model="name" type="text" class="form-control" placeholder="Apellido Paterno" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">                                                                            
+                                                                    </div>
+                                                                </div>
+                                                            </div>                                                                                                      
+                                                        </div>
                                                         <div class="row">
-                                                            <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
+                                                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                                                                 <div class="input-group" style="margin-bottom: 15px;">
-                                                                    <input type="text"  v-model="search_market" @keyup.enter="list_data(1)"  class="form-control" placeholder="Buscar por código o denominación del Mercado y/o datos del Personal." style="border-bottom-left-radius: 3px; border-top-left-radius: 3px;">
+                                                                    <input type="text"  v-model="search_market" @keyup.enter="list_data(1)"  class="form-control" placeholder="Buscar tipo de documento." style="border-bottom-left-radius: 3px; border-top-left-radius: 3px;">
                                                                     <span class="input-group-btn">
                                                                         <button type="submit" @click="list_data(1)"  class="btn btn-search btn-flat" style="border-bottom-right-radius: 3px; border-top-right-radius: 3px;"><i class="fa fa-search"></i> Buscar</button>
                                                                     </span>
                                                                 </div>                                               
                                                             </div>
-                                                            <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
-                                                                <div class="btn-group" style="float:right;margin-left: 10px;">   
-                                                                    <button type="button" @click="add_branch_office()" class="btn btn-add">
-                                                                        <i class="fa fa-plus"></i>&nbsp;AGREGAR DOCUMENTO
-                                                                    </button>
-                                                                </div>
-                                                                
-                                                            </div>
                                                         </div>
+                                                        
 
                                                         <div class="row">
                                                             <div class="col-md-12">
@@ -99,38 +118,6 @@
                                                                 </div>
                                                             </div>                                               
                                                             
-                                                        </div>
-                                                    </template>
-                                                    <template v-if="listado==2">
-                                                        <div class="row">                                                    
-                                                            <div class="col-md-12">
-                                                                <div class="btn-group" style="float:right;">
-                                                                    <button type="button" @click="volver()" class="btn btn-danger">
-                                                                        <i class="fa fa-close "></i>&nbsp;CANCELAR
-                                                                    </button>
-                                                                    <button type="button" @click="save_document()" class="btn btn-save">
-                                                                        <i class="fa fa-save"></i>&nbsp;GUARDAR
-                                                                    </button>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="row">                                                                            
-                                                            <div class="col-md-12">
-                                                                <legend style="font-size:16px;"><i class="ion ion-edit"></i><strong>&nbsp;DATOS DEL DOCUMENTO</strong></legend>
-                                                            </div>   
-
-                                                            <div class="col-md-12">
-                                                                <div v-bind:class="errorInputActivity2">
-                                                                    <label for="ap_paterno">Tipo de Documento:</label>
-                                                                    <div class="input-group">
-                                                                        <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-user"></i></span>
-                                                                        <input v-model="name" type="text" class="form-control" placeholder="Apellido Paterno" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">                                                                            
-                                                                    </div>
-                                                                </div>
-                                                            </div>  
-
-
-                                                                                                                                                                      
                                                         </div>
                                                     </template>
                                                 </div>  

@@ -25,6 +25,8 @@ Vue.component('market',() => System.import('./components/register/Market.vue'));
 Vue.component('detailpledge',() => System.import('./components/register/DetailPledge.vue'));
 Vue.component('contrato',() => System.import('./components/setting/ContratoBoleta.vue'));
 Vue.component('montodia',() => System.import('./components/register/AmountDay.vue'));
+Vue.component('reciennacido',() => System.import('./components/register/Nacido.vue'));
+
 // RegistersCustomer
 Vue.component('document',() => System.import('./components/register/DocumentCustomer.vue'));
 Vue.component('business',() => System.import('./components/register/TypeBusiness.vue'));
@@ -57,7 +59,7 @@ Vue.component('dailybalance',() => System.import('./components/operation/DailyBa
 const app = new Vue({
     el: '#app',
     data :{
-        menu : 25,
+        menu : 0,
         idanio:211,
         ruta:'http://localhost:81/poi/public'
        // menu : 11

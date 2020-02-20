@@ -40,6 +40,8 @@ class DocumentCustomerController extends Controller
          
         }
         
+       
+
     public function delete_Document(Request $request){
         $clasex = DocumentCustomer::findOrFail($request->id);
         $clasex->state =0;
@@ -47,7 +49,7 @@ class DocumentCustomerController extends Controller
     }
         
         public function getEditListDocument(Request $request){
-            $queyDocument="SELECT id,name FROM type_document where  state=1 and id='$request->id'";
+            $queyDocument="SELECT iddocument,name FROM type_document where  state=1 and iddocument='$request->id'";
             $listDocument = DB::select($queyDocument);
             //obteniendo la actividad
               return [
@@ -55,7 +57,7 @@ class DocumentCustomerController extends Controller
               ];
         }
         public function getlistDocument(Request $request){
-            $queyDocument="SELECT id,name FROM type_document where  state=1 ";
+            $queyDocument="SELECT iddocument,name FROM type_document where  state=1 ";
             $listDocument = DB::select($queyDocument);
             return [
                 'datax'=>$listDocument

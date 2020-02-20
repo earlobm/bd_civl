@@ -78,6 +78,10 @@
         <template v-if="menu==12">
         <garmenttype ></garmenttype>
         </template>
+        <!--recien nacido-->
+        <template v-if="menu==27">
+        <reciennacido ></reciennacido>
+        </template>
         
        <!--plan operativo -->
         <template v-if="menu==14">

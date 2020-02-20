@@ -48,37 +48,25 @@ class LoginController extends Controller
         return view('login');
        // return redirect('/');
     }
-
+    //public function login(Request $request){
     public function login(Request $request){
+        //desabilitar
         $this->validateLogin($request);        
 
         if (Auth::attempt(['nick' => $request->usuario,'password' => $request->password,'state'=>1])){
             $DateOfRequest = date("Y-m-d H:i:s");
-            $user = User::where('nick', $request->usuario)->firstOrFail();
-            $user->last_entry = $DateOfRequest;
-            $user->ip_access =$request->ip();
-            $user->save();
-            $sql="update credit set day_mora=case when DATEDIFF(NOW(),date_expiration+1)>0  
-            then DATEDIFF(NOW(),date_expiration+1) else 0 end
-            , mora = round((0.00385) * case when DATEDIFF(NOW(),date_expiration+1)>0  
-            then DATEDIFF(NOW(),date_expiration+1) else 0 end * saldo, 1)
-            where state =1 ";
-             DB::statement($sql);
-            // DB::statement("update detail_pledge set state=2 where current_date()>date_end and state=1");
-
-            //guardando el historial
-            // $clasex = new History();
-            // $clasex->id_user = $user->id;
-            // $clasex->ip_access =$request->ip();
-            // $clasex->date_access =$DateOfRequest;
-            // $clasex->acction =strpos($_SERVER['HTTP_USER_AGENT'], 'Mobile')?'Ingresó al sistema desde su Celular':'Ingresó al sistema desde su Computadora';
-            // $clasex->detail=$_SERVER['HTTP_USER_AGENT'];
-            // $clasex->save();
+            //$user = User::where('nick', $request->usuario)->firstOrFail();
+            //$user->last_entry = $DateOfRequest;
+            //$user->ip_access =$request->ip();
+            //$user->save();
+            // DB::statement($sql);
+            
 
             return redirect()->route('main');
         }
       
         // return redirect()->route('main');
+        //desabilitar 
         return back()
         ->withErrors(['usuario' => trans('auth.failed')])
         ->withInput(request(['usuario']));

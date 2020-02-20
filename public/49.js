@@ -1,6 +1,6 @@
 webpackJsonp([49],{
 
-/***/ 195:
+/***/ 193:
 /***/ (function(module, exports) {
 
 /* globals __VUE_SSR_CONTEXT__ */
@@ -110,7 +110,7 @@ module.exports = function normalizeComponent (
 
 /***/ }),
 
-/***/ 277:
+/***/ 275:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -181,7 +181,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 /***/ }),
 
-/***/ 278:
+/***/ 276:
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -198,8 +198,8 @@ var staticRenderFns = [
     return _c("main", { staticClass: "main" }, [
       _c("section", { staticClass: "content-header" }, [
         _c("h1", [
-          _vm._v("\n              Bienvenido\n              "),
-          _c("small", [_vm._v("al Sistema de Préstamo y Empeño")])
+          _vm._v("\n              BIENVENIDO\n              "),
+          _c("small", [_vm._v("AL SISTEMA MUNICIPAL")])
         ]),
         _vm._v(" "),
         _c("ol", { staticClass: "breadcrumb" }, [
@@ -247,7 +247,8 @@ var staticRenderFns = [
                                                 },
                                                 attrs: {
                                                   width: "100%",
-                                                  src: "img/LOGO-TUMIFINAL.png"
+                                                  src:
+                                                    "img/logo-perene-legal.png"
                                                 }
                                               })
                                             ]
@@ -288,11 +289,11 @@ if (false) {
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
-var normalizeComponent = __webpack_require__(195)
+var normalizeComponent = __webpack_require__(193)
 /* script */
-var __vue_script__ = __webpack_require__(277)
+var __vue_script__ = __webpack_require__(275)
 /* template */
-var __vue_template__ = __webpack_require__(278)
+var __vue_template__ = __webpack_require__(276)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */

@@ -4,11 +4,11 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="PRESTA CASH - SISTEMA FINANCIERO DE PRESTAMO Y EMPEÑO">
+    <meta name="description" content="SISTEMA MUNICIPAL">
     <meta name="author" content="De Pixel a Web">
-    <meta name="keyword" content="SISTEMA FINANCIERO DE PRESTAMO Y EMPEÑO">
+    <meta name="keyword" content="SISTEMA MUNICIPAL">
     <meta name="userId" content="{{ Auth::check() ? Auth::user()->id : ''}}">  
-    <title>PRESTA CASH | Sistema Financiero de Préstamo y Empeño</title>
+    <title>MUNI PERENE| Sistema Municipal</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.5 -->
@@ -16,7 +16,7 @@
      <link href="css/plantilla.css" rel="stylesheet">
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css">
     <!--<link rel="apple-touch-icon" href="{{asset('img/apple-touch-icon.png')}}">-->
-    <link rel="shortcut icon" href="{{asset('img/icon-tumi.png')}}">
+    <link rel="shortcut icon" href="{{asset('img/logomuni-logo.png')}}">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
     
   </head>  
@@ -28,9 +28,9 @@
         <!-- Logo -->
         <a href="#" class="logo" @click="menu=0">
           <!-- mini logo for sidebar mini 50x50 pixels -->
-          <span class="logo-mini"><img style="width:40px; height:37px;" src="{{asset('img/icon-tumi.png')}}" alt="User"></span>
+          <span class="logo-mini"><img style="width:40px; height:37px;" src="{{asset('img/logomuni-logo.png')}}" alt="User"></span>
           <!-- logo for regular state and mobile devices -->
-          <span class="logo-lg">PRESTA<b> CASH</b></span>
+          <span class="logo-lg">MUNI<b> PERENE</b></span>
         </a>
         <!-- Header Navbar: style can be found in header.less -->
         
@@ -101,8 +101,8 @@
           <div class="pull-right hidden-xs">
             <b>Versión</b> 1.0
           </div>
-            <strong>PRESTA CASH - TINGO MARIA 0.3.16.0743
-            </strong> Copyright &copy; 2019 Todos los derechos reservados <a target="_blank" href="https://www.facebook.com/depixelaweb/">De pixel @ Web.</a> 
+            <strong>MUNI PERENE- CHANCHAMAYO-PERENE 0.3.16.0743
+            </strong> Copyright &copy; 2020 Todos los derechos reservados <a target="_blank" href="https://www.facebook.com/depixelaweb/">De pixel @ Web.</a> 
         </footer>
       </div>
       
@@ -137,7 +137,7 @@
     width: 100%;
     height: 100%;
     z-index: 9999;
-    background: url('img/loadx1.gif') 50% 50% no-repeat rgb(249,249,249);
+    background: url('img/robot.gif') 50% 50% no-repeat rgb(249,249,249);
     opacity: .8;
 }
 </style>

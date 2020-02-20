@@ -1,6 +1,6 @@
 webpackJsonp([24],{
 
-/***/ 193:
+/***/ 194:
 /***/ (function(module, exports) {
 
 /* globals __VUE_SSR_CONTEXT__ */
@@ -110,7 +110,7 @@ module.exports = function normalizeComponent (
 
 /***/ }),
 
-/***/ 277:
+/***/ 280:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -128,102 +128,280 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-    props: ['idanio'],
-    mounted: function mounted() {
-        console.log('Component mounted.');
-    },
+    props: ['ruta'],
+    data: function data() {
+        return {
+            authUser: 1
 
-    created: function created() {
-        // this.idanio=this.idanio;
+        };
     },
-    methods: {
-        mostrar_colum: function mostrar_colum(val) {
-            this.idanio = val;
-        }
-    }
+    paginaActual: function paginaActual() {
+        this.listado = 1;
+    },
+    mounted: function mounted() {}
 });
 
 /***/ }),
 
-/***/ 278:
+/***/ 281:
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("li", { staticClass: "dropdown show" }, [
-    _vm._m(0),
-    _vm._v(" "),
-    _c(
-      "ul",
-      {
-        staticClass: "dropdown-menu",
-        staticStyle: { "border-radius": "3px", "margin-top": "1.5px" },
-        attrs: { role: "menu" }
-      },
-      [
-        _c("li", [
-          _c(
-            "a",
-            {
-              attrs: { href: "#" },
-              on: {
-                click: function($event) {
-                  return _vm.mostrar_colum((_vm.idanio = 2022))
-                }
-              }
-            },
-            [_vm._v("2022")]
-          )
-        ]),
-        _vm._v(" "),
-        _c("li", [
-          _c(
-            "a",
-            {
-              attrs: { href: "#" },
-              on: {
-                click: function($event) {
-                  return _vm.mostrar_colum((_vm.idanio = 2021))
-                }
-              }
-            },
-            [_vm._v("2021")]
-          )
-        ]),
-        _vm._v(" "),
-        _vm._m(1)
-      ]
-    )
-  ])
+  return _vm._m(0)
 }
 var staticRenderFns = [
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c(
-      "a",
-      {
-        staticClass: "dropdown-toggle",
-        attrs: { href: "#", "data-toggle": "dropdown", "aria-expanded": "true" }
-      },
-      [
-        _c("i", { staticClass: "fa fa-cog" }),
-        _c("b", [_vm._v("Año Operacional")]),
+    return _c("main", { staticClass: "main" }, [
+      _c("section", { staticClass: "content-header" }, [
+        _c("h1", [
+          _vm._v("\n              BIENVENIDO\n              "),
+          _c("small", [_vm._v("AL SISTEMA MUNICIPAL")])
+        ]),
         _vm._v(" "),
-        _c("span", { staticClass: "caret" })
-      ]
-    )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("li", [_c("a", { attrs: { href: "#" } }, [_vm._v("2020")])])
+        _c("ol", { staticClass: "breadcrumb" }, [
+          _c("li", [
+            _c("a", { attrs: { href: "#" } }, [
+              _c("i", { staticClass: "fa fa-home" }),
+              _vm._v(" Inicio")
+            ])
+          ])
+        ])
+      ]),
+      _vm._v(" "),
+      _c("section", { staticClass: "content" }, [
+        _c("div", { staticClass: "row" }, [
+          _c("div", { staticClass: "col-md-12" }, [
+            _c("div", { staticClass: "row" }, [
+              _c("div", { staticClass: "col-lg-3 col-xs-6" }, [
+                _c("div", { staticClass: "small-box bg-yellow" }, [
+                  _c("div", { staticClass: "inner" }, [
+                    _c("h3", [_vm._v("2352")]),
+                    _vm._v(" "),
+                    _c("p", [_vm._v("Ciudadanos")])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "icon" }, [
+                    _c("i", { staticClass: "ion ion-person-add" })
+                  ]),
+                  _vm._v(" "),
+                  _c(
+                    "a",
+                    {
+                      staticClass: "small-box-footer",
+                      attrs: { href: "#/customerlist/5" }
+                    },
+                    [
+                      _vm._v("Más Info "),
+                      _c("i", { staticClass: "fa fa-arrow-circle-right" })
+                    ]
+                  )
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-lg-3 col-xs-6" }, [
+                _c("div", { staticClass: "small-box bg-red" }, [
+                  _c("div", { staticClass: "inner" }, [
+                    _c("h3", [_vm._v("1210")]),
+                    _vm._v(" "),
+                    _c("p", [_vm._v("Recien Nacidos")])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "icon" }, [
+                    _c("i", { staticClass: "ion ion-pie-graph" })
+                  ]),
+                  _vm._v(" "),
+                  _c(
+                    "a",
+                    { staticClass: "small-box-footer", attrs: { href: "#" } },
+                    [
+                      _vm._v("Más Info "),
+                      _c("i", { staticClass: "fa fa-arrow-circle-right" })
+                    ]
+                  )
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-lg-3 col-xs-6" }, [
+                _c("div", { staticClass: "small-box bg-aqua" }, [
+                  _c("div", { staticClass: "inner" }, [
+                    _c("h3", [_vm._v(" 2109")]),
+                    _vm._v(" "),
+                    _c("p", [_vm._v("Matrimonio")])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "icon" }, [
+                    _c("i", { staticClass: "ion ion-bag" })
+                  ]),
+                  _vm._v(" "),
+                  _c(
+                    "a",
+                    { staticClass: "small-box-footer", attrs: { href: "#" } },
+                    [
+                      _vm._v("Más Info "),
+                      _c("i", { staticClass: "fa fa-arrow-circle-right" })
+                    ]
+                  )
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-lg-3 col-xs-6" }, [
+                _c("div", { staticClass: "small-box bg-green" }, [
+                  _c("div", { staticClass: "inner" }, [
+                    _c("h3", [_vm._v("124")]),
+                    _vm._v(" "),
+                    _c("p", [_vm._v("Difuntos")])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "icon" }, [
+                    _c("i", { staticClass: "ion ion-stats-bars" })
+                  ]),
+                  _vm._v(" "),
+                  _c(
+                    "a",
+                    { staticClass: "small-box-footer", attrs: { href: "#" } },
+                    [
+                      _vm._v("Más Info "),
+                      _c("i", { staticClass: "fa fa-arrow-circle-right" })
+                    ]
+                  )
+                ])
+              ])
+            ])
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "row" }, [
+          _c("div", { staticClass: "col-md-12" }, [
+            _c("div", { staticClass: "box box-primary" }, [
+              _c("div", { staticClass: "box-body" }, [
+                _c("div", { staticClass: "row" }, [
+                  _c("div", { staticClass: "col-md-12" }, [
+                    _c("div", { staticClass: "container-fluid" }, [
+                      _c("div", { staticClass: "card" }, [
+                        _c("div", { staticClass: "card-body" }, [
+                          _c("div", { staticClass: "row" }, [
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "col-lg-12 col-md-12 col-sm-12 col-xs-12"
+                              },
+                              [
+                                _c("div", { staticClass: "box-body" }, [
+                                  _c("div", { staticClass: "row" }, [
+                                    _c(
+                                      "section",
+                                      { attrs: { id: "widget-grid" } },
+                                      [
+                                        _c("div", { staticClass: "row" }, [
+                                          _c(
+                                            "article",
+                                            { staticClass: "col-sm-12" },
+                                            [
+                                              _c("img", {
+                                                staticStyle: {
+                                                  "border-radius": "3px"
+                                                },
+                                                attrs: {
+                                                  width: "100%",
+                                                  src:
+                                                    "img/logo-perene-legal.png"
+                                                }
+                                              })
+                                            ]
+                                          )
+                                        ])
+                                      ]
+                                    )
+                                  ])
+                                ])
+                              ]
+                            )
+                          ])
+                        ])
+                      ])
+                    ])
+                  ])
+                ])
+              ])
+            ])
+          ])
+        ])
+      ])
+    ])
   }
 ]
 render._withStripped = true
@@ -231,7 +409,7 @@ module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-390f2fcc", module.exports)
+    require("vue-hot-reload-api")      .rerender("data-v-cb7b9974", module.exports)
   }
 }
 
@@ -241,11 +419,11 @@ if (false) {
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
-var normalizeComponent = __webpack_require__(193)
+var normalizeComponent = __webpack_require__(194)
 /* script */
-var __vue_script__ = __webpack_require__(277)
+var __vue_script__ = __webpack_require__(280)
 /* template */
-var __vue_template__ = __webpack_require__(278)
+var __vue_template__ = __webpack_require__(281)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -262,7 +440,7 @@ var Component = normalizeComponent(
   __vue_scopeId__,
   __vue_module_identifier__
 )
-Component.options.__file = "resources/assets/js/components/ComboAnio.vue"
+Component.options.__file = "resources/assets/js/components/DashboardMain.vue"
 
 /* hot reload */
 if (false) {(function () {
@@ -271,9 +449,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-390f2fcc", Component.options)
+    hotAPI.createRecord("data-v-cb7b9974", Component.options)
   } else {
-    hotAPI.reload("data-v-390f2fcc", Component.options)
+    hotAPI.reload("data-v-cb7b9974", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true

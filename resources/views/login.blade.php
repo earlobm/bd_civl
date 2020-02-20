@@ -6,28 +6,28 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="PRESTA CASH - SISTEMA FINANCIERO DE PRESTAMO Y EMPEÑO">
+    <meta name="description" content="SISTEMA DE REGISTRO CIVIL">
     <meta name="author" content="De Pixel a Web">
-    <meta name="keyword" content="SISTEMA FINANCIERO DE PRESTAMO Y EMPEÑO">
+    <meta name="keyword" content="SISTEMA DE REGISTRO CIVIL">
 
-    <title>Ingreso | Sistema de Préstamo</title>
+    <title>Ingreso | Sistema Municipal</title>
 
     <link href="css/plantilla.css" rel="stylesheet">
-    <link rel="shortcut icon" href="{{asset('img/icon-tumi.png')}}">
+    <link rel="shortcut icon" href="{{asset('img/logomuni-logo.png')}}">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 </head>
 
-<body class="hold-transition login-page">
+<body class="hold-transition login-page" >
     <div class="login-box">
         <div class="login-logo">
-            <a>PRESTA<b> CASH</b></a>
+            <a>SISTEMA<b> MUNICIPAL</b></a>
         </div>
         <div class="box box-login">
             <div class="box-header with-border">
-                <H3 style="text-align:center; margin-top: 0; margin-bottom: 0;font-size: large" href="https://www.unas.edu.pe/UNASPOI/" target="_blank"><b>SISTEMA DE PRÉSTAMO</b> </H3>
+                <H3 style="text-align:center; margin-top: 0; margin-bottom: 0;font-size: large" href="https://www.unas.edu.pe/UNASPOI/" target="_blank"><b>SISTEMA MUNICIPAL</b> </H3>
             </div>
             <div class="login-box-body">
-                <p style="text-align: center; "><img src="{{asset('img/logo-tumi.png')}}" alt="Logo TUMI" style="width:130px; height:130px;"></p>
+                <p style="text-align: center; "><img src="{{asset('img/logomuni-logo.png')}}" alt="Logo TUMI" style="width:130px; height:130px;"></p>
 
                 <form class="was-validated" method="POST" action="{{ route('login')}}">
                     {{ csrf_field() }}

@@ -172,7 +172,7 @@
       'file' => 
       array (
         'driver' => 'file',
-        'path' => 'C:\\xampp\\htdocs\\credit\\storage\\framework/cache/data',
+        'path' => 'C:\\xampp\\htdocs\\bd_civil\\storage\\framework/cache/data',
       ),
       'memcached' => 
       array (
@@ -212,20 +212,20 @@
       'sqlite' => 
       array (
         'driver' => 'sqlite',
-        'database' => 'bd_credit',
+        'database' => 'bd_civil',
         'prefix' => '',
       ),
       'mysql' => 
       array (
         'driver' => 'mysql',
-        'host' => '107.180.57.58',
+        'host' => 'localhost',
         'port' => '3306',
-        'database' => 'bd_credit',
-        'username' => 'tumi',
-        'password' => 'tumi123',
+        'database' => 'bd_civil',
+        'username' => 'jordy',
+        'password' => 'jordy123',
         'unix_socket' => '',
-        'charset' => 'utf8mb4',
-        'collation' => 'utf8mb4_unicode_ci',
+        'charset' => 'utf8',
+        'collation' => 'utf8_unicode_ci',
         'prefix' => '',
         'strict' => true,
         'engine' => NULL,
@@ -233,11 +233,11 @@
       'pgsql' => 
       array (
         'driver' => 'pgsql',
-        'host' => '107.180.57.58',
+        'host' => 'localhost',
         'port' => '3306',
-        'database' => 'bd_credit',
-        'username' => 'tumi',
-        'password' => 'tumi123',
+        'database' => 'bd_civil',
+        'username' => 'jordy',
+        'password' => 'jordy123',
         'charset' => 'utf8',
         'prefix' => '',
         'schema' => 'public',
@@ -246,11 +246,11 @@
       'sqlsrv' => 
       array (
         'driver' => 'sqlsrv',
-        'host' => '107.180.57.58',
+        'host' => 'localhost',
         'port' => '3306',
-        'database' => 'bd_credit',
-        'username' => 'tumi',
-        'password' => 'tumi123',
+        'database' => 'bd_civil',
+        'username' => 'jordy',
+        'password' => 'jordy123',
         'charset' => 'utf8',
         'prefix' => '',
       ),
@@ -277,12 +277,12 @@
       'local' => 
       array (
         'driver' => 'local',
-        'root' => 'C:\\xampp\\htdocs\\credit\\storage\\app',
+        'root' => 'C:\\xampp\\htdocs\\bd_civil\\storage\\app',
       ),
       'public' => 
       array (
         'driver' => 'local',
-        'root' => 'C:\\xampp\\htdocs\\credit\\storage\\app/public',
+        'root' => 'C:\\xampp\\htdocs\\bd_civil\\storage\\app/public',
         'url' => 'http://localhost/storage',
         'visibility' => 'public',
       ),
@@ -327,13 +327,13 @@
       'single' => 
       array (
         'driver' => 'single',
-        'path' => 'C:\\xampp\\htdocs\\credit\\storage\\logs/laravel.log',
+        'path' => 'C:\\xampp\\htdocs\\bd_civil\\storage\\logs/laravel.log',
         'level' => 'debug',
       ),
       'daily' => 
       array (
         'driver' => 'daily',
-        'path' => 'C:\\xampp\\htdocs\\credit\\storage\\logs/laravel.log',
+        'path' => 'C:\\xampp\\htdocs\\bd_civil\\storage\\logs/laravel.log',
         'level' => 'debug',
         'days' => 7,
       ),
@@ -385,7 +385,7 @@
       'theme' => 'default',
       'paths' => 
       array (
-        0 => 'C:\\xampp\\htdocs\\credit\\resources\\views/vendor/mail',
+        0 => 'C:\\xampp\\htdocs\\bd_civil\\resources\\views/vendor/mail',
       ),
     ),
   ),
@@ -466,7 +466,7 @@
     'lifetime' => '120',
     'expire_on_close' => false,
     'encrypt' => false,
-    'files' => 'C:\\xampp\\htdocs\\credit\\storage\\framework/sessions',
+    'files' => 'C:\\xampp\\htdocs\\bd_civil\\storage\\framework/sessions',
     'connection' => NULL,
     'table' => 'sessions',
     'store' => NULL,
@@ -486,9 +486,9 @@
   array (
     'paths' => 
     array (
-      0 => 'C:\\xampp\\htdocs\\credit\\resources\\views',
+      0 => 'C:\\xampp\\htdocs\\bd_civil\\resources\\views',
     ),
-    'compiled' => 'C:\\xampp\\htdocs\\credit\\storage\\framework\\views',
+    'compiled' => 'C:\\xampp\\htdocs\\bd_civil\\storage\\framework\\views',
   ),
   'tcpdf' => 
   array (
@@ -525,7 +525,7 @@
         'host' => 'localhost',
         'port' => 11211,
       ),
-      'dir' => 'C:\\xampp\\htdocs\\credit\\storage\\cache',
+      'dir' => 'C:\\xampp\\htdocs\\bd_civil\\storage\\cache',
     ),
     'properties' => 
     array (
@@ -591,7 +591,7 @@
       ),
       'store' => 
       array (
-        'path' => 'C:\\xampp\\htdocs\\credit\\storage\\exports',
+        'path' => 'C:\\xampp\\htdocs\\bd_civil\\storage\\exports',
         'returnInfo' => false,
       ),
       'pdf' => 
@@ -601,15 +601,15 @@
         array (
           'DomPDF' => 
           array (
-            'path' => 'C:\\xampp\\htdocs\\credit\\vendor/dompdf/dompdf/',
+            'path' => 'C:\\xampp\\htdocs\\bd_civil\\vendor/dompdf/dompdf/',
           ),
           'tcPDF' => 
           array (
-            'path' => 'C:\\xampp\\htdocs\\credit\\vendor/tecnick.com/tcpdf/',
+            'path' => 'C:\\xampp\\htdocs\\bd_civil\\vendor/tecnick.com/tcpdf/',
           ),
           'mPDF' => 
           array (
-            'path' => 'C:\\xampp\\htdocs\\credit\\vendor/mpdf/mpdf/',
+            'path' => 'C:\\xampp\\htdocs\\bd_civil\\vendor/mpdf/mpdf/',
           ),
         ),
       ),
