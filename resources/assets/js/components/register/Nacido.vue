@@ -596,7 +596,7 @@
                                                                     <div class="form-group">
                                                                     <div class="col-md-4">
                                                                         <div v-bind:class="errorInputPaternal">
-                                                                            <label for="ap_paterno">Apellido Paterno:</label>
+                                                                            <label for="ap_paterno">Apellido PaternoPerrr:</label>
                                                                             <div class="input-group">
                                                                                 <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-user"></i></span>
                                                                                 <input v-model="name_paterno" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">                                                                            
