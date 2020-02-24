@@ -292,26 +292,19 @@ class CustomerCreditController extends Controller
                 $curre_pagex=0;
             }else{
                 $curre_pagex=$curre_pagex-1;
-                $curre_pagex=$curre_pagex*8;
+                $curre_pagex=$curre_pagex*10;
             }
             $sqlx="";
             $buscar=$request->buscar;
-            $sqlx="SELECT p.id, p.code, p.id_type_document, p.number_doc,p.names,p.paternal_last_name,
-            p.maternal_last_name, p.email,
-            p.address,p.phone,p.id_district, p.reference,
-            c.id as id_customer_credit,
-            (select count(id) from credit 
-                where id_customer=c.id
-                and state=1) as cred_active, 
-            (select count(id) from credit 
-                where id_customer=c.id
-                and state=2) as cred_cancel,
-            (select count(p.id) 
-            from person p inner join customer c on c.id_person=p.id 
-            where c.state=1 and  concat(p.number_doc,' ',p.names,' ',p.paternal_last_name,' ',p.maternal_last_name) like '%$buscar%') AS total 
+            $sqlx="SELECT per.idperson,de.id as id_departamento,dis.id as id_distrito,pro.id as id_provicnia,per.number_doc,per.name_materno,per.name_paterno,per.name,dis.distrito as distritos,pro.provincia as provincias,de.departamento as departamentos,per.sexo,per.fecha_nacimiento,per.estado_civil,per.edad, 
+            (select count(p.idperson) 
             from person p 
-            inner join customer c on c.id_person=p.id 
-            where c.state=1 and  concat(p.number_doc,' ',p.names,' ',p.paternal_last_name,' ',p.maternal_last_name)  like '%$buscar%' order by c.id limit 8 offset $curre_pagex";
+            where p.estado=1 and  concat(p.number_doc,' ',p.name,' ',p.name_paterno,' ',p.name_materno) like '%$buscar%') AS total
+            from person per 
+            inner join distric dis on per.id_district=dis.id 
+            inner join province pro on pro.id=dis.idProv 
+            inner join departament de on de.id=pro.id_departmen 
+            where per.estado=1 and  concat(per.number_doc,' ',per.name,' ',per.name_paterno,' ',per.name_materno)  like '%$buscar%' order by per.idperson limit 10 offset $curre_pagex";
     
             $lastPagex=0;
             $totalx=0;

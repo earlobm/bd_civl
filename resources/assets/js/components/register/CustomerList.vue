@@ -2,209 +2,24 @@
     <main class="main">
         <section class="content-header">
             <h1>
-              Clientes
+              Ciudadanos
               <small>Listado</small>
             </h1>
             <ol class="breadcrumb">
               <li><a href="#"><i class="fa fa-cogs"></i> Operaciones</a></li>
-              <li>Clientes</li>
-              <li class="active">Listar Clientes</li>
+              <li>Ciudadanos</li>
+              <li class="active">Listar Ciudadanos</li>
             </ol>
         </section>
 
 		<section class="content">
             <div class="row">
-                <template v-if="listadox==3">
-                <div class="col-md-12">
-                    <div class="box box-primary">
-                        <div class="box-header with-border">
-                            <template v-if="listadox==3">   
-                                <button type="button" @click="volver()" class="btn btn-atras btn-sm"><i class="fa fa-arrow-left"></i></button> 
-                            </template>
-                            <div class="box-tools pull-right">                                
-                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
-                                </button>
-                                <!-- <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button> -->
-                            </div>
-                        </div>                        
-                        <div class="box-body">
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="container-fluid">
-                                        <div class="card">                            
-                                            <div class="card-body">    
-                                                <div class="row">
-                                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">                               
-                                                        <div class="box-body">
-                                                            <template v-if="listadox==3">
-                                                                <div class="row">  
-                                                                    <div class="col-md-6">
-                                                                        <div class="form-group">
-                                                                            <label for="nombres">Cliente:</label>
-                                                                            <div class="input-group">
-                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-user"></i></span>
-                                                                                <input disabled v-model="name_customer" type="text" class="form-control" placeholder="Nombres" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">  
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-md-3">
-                                                                        <div class="form-group">
-                                                                            <label for="date_init">Fecha del Préstamo:</label>
-                                                                            <div class="input-group">
-                                                                                <div class="input-group-addon" style="border-top-left-radius: 3px;border-bottom-left-radius: 3px;">
-                                                                                    <i class="fa fa-calendar"></i>
-                                                                                </div>
-                                                                                <date-picker v-model="date_credit" :config="options" style="border-top-right-radius: 3px;border-bottom-right-radius: 3px;"></date-picker>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-md-3">
-                                                                        <div class="form-group">
-                                                                            <label for="date_init">Inicio de Pago:</label>
-                                                                            <div class="input-group">
-                                                                                <div class="input-group-addon" style="border-top-left-radius: 3px;border-bottom-left-radius: 3px;">
-                                                                                    <i class="fa fa-calendar"></i>
-                                                                                </div>
-                                                                                <date-picker v-model="date_init_payment" :config="options" style="border-top-right-radius: 3px;border-bottom-right-radius: 3px;"></date-picker>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-md-2">
-                                                                        <div v-bind:class="errorFamilyProduct">
-                                                                            <label for="family_produc">Monto:</label>
-                                                                            <div class="input-group">
-                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;">S/.</span>
-                                                                                <input v-model="capital" type="number" step="any"  min="1" @keyup="calculateAmount()" @click="calculateAmount()" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">  
-                                                                            </div>
-                                                                        </div>
-                                                                    </div><div class="col-md-2">
-                                                                        <div v-bind:class="errorCharacteristic">
-                                                                            <label for="nombres">Tasa de Interés:</label>
-                                                                            <div class="input-group">
-                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;">%</span>
-                                                                                <input v-model="interest_rate" type="number"  min="1"  @keyup="calculateInterestRateCash()" @click="calculateInterestRateCash()" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px; text-transform:uppercase;">  
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-md-2">
-                                                                        <div v-bind:class="errorCharacteristic">
-                                                                            <label for="nombres" style="visibility:hidden">Tasa:</label>
-                                                                            <div class="input-group">
-                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;">S/.</span>
-                                                                                <input v-model="interest_rate_cash" type="number" disabled class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px; text-transform:uppercase;">  
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-md-2">
-                                                                        <div v-bind:class="errorCharacteristic">
-                                                                            <label for="nombres">Total:</label>
-                                                                            <div class="input-group">
-                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;">S/.</span>
-                                                                                <input v-model="total_cash" type="number" disabled class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px; text-transform:uppercase;">  
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-md-2">
-                                                                        <div class="form-group">
-                                                                            <label for="type_product">Gastos Adm.:</label>
-                                                                            <div class="input-group">
-                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;">%</span>
-                                                                                <input v-model="rate_admin" type="number" min="0" class="form-control" @keyup="calculateAmount()" @click="calculateAmount()" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;text-transform:uppercase;">  
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-md-2">
-                                                                        <div v-bind:class="errorFamilyProduct">
-                                                                            <label for="family_produc" style="visibility: hidden">Porcentaje:</label>
-                                                                            <div class="input-group">
-                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;">S/.</span>
-                                                                                <input v-model="amount_admin" type="number" class="form-control" @keyup="calculateRate()" @click="calculateRate()" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">  
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-md-2">
-                                                                        <div v-bind:class="errorFamilyProduct">
-                                                                            <label for="family_produc">Central de Riesgo:</label>
-                                                                            <div class="input-group">
-                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;">S/.</span>
-                                                                                <input v-model="risk_center" type="number" min="0" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">  
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-md-2">
-                                                                        <div v-bind:class="errorCharacteristic">
-                                                                            <label for="nombres">Plazo:</label>
-                                                                            <div class="input-group">
-                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-hourglass"></i></span>
-                                                                                <input v-model="number_quota" type="number" min="0" pattern="^[0-9]+" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px; text-transform:uppercase;">  
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-md-2">
-                                                                        <div v-bind:class="errorWarehouse">
-                                                                            <label for="ap_paterno">Periodo:</label>
-                                                                            <div class="input-group">
-                                                                                <span class="input-group-addon" style="border-top-left-radius:3px;border-bottom-left-radius:3px"><i class="fa fa-calendar-plus-o"></i></span>
-                                                                                <select   v-model="period_credit" class="form-control select2" style="border-top-right-radius:3px;border-bottom-right-radius:3px">
-                                                                                    <option selected="selected" value="" >Seleccione</option>
-                                                                                    <option value="DIARIO">Diario</option>
-                                                                                    <option value="MENSUAL">Mensual</option>
-                                                                                    <option value="ANUAL">Anual</option>
-                                                                                </select>
-                                                                                
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>                                                                    
-                                                                    <div class="col-md-2">
-                                                                        <div v-bind:class="errorCharacteristic">
-                                                                            <label for="nombres">Días de Gracia:</label>
-                                                                            <div class="input-group">
-                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-life-ring"></i></span>
-                                                                                <input v-model="grace_day" type="number" min="0" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px; text-transform:uppercase;">  
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div  class="col-md-2">
-                                                                        <div class="form-group">
-                                                                            <label for="ap_paterno" style="visibility: hidden">Mora:</label>
-                                                                            <div class="checkbox">
-                                                                                <label class="container">
-                                                                                    <input type="checkbox" v-model="apply_mora">
-                                                                                    <strong>Aplicar Mora</strong>
-                                                                                    <span class="checkmark"></span>
-                                                                                </label>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>  
-                                                                </div>
-                                                            </template>
-                                                        </div>
-                                                    </div>                                                        
-                                                </div>     
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>    
-                        <div class="box-footer">
-                            <template v-if="listadox==3">
-                                <button type="button" @click="saveDetailCredit()" class="btn btn-save-pledge" style="float:right; margin-right: 10px;" data-toggle="tooltip" title="Agregar prenda a empeñar">
-                                    <i class="fa fa-legal"></i>&nbsp;OTORGAR CRÉDITO
-                                </button>
-                                <button type="button" @click="calculateCreditoDetail()" class="btn btn-new" style="float:right; margin-right: 10px;" data-toggle="tooltip" title="Nueva prenda">
-                                    <i class="fa fa-calculator"></i>&nbsp;CALCULAR
-                                </button>
-                            </template>
-                        </div>             
-                    </div> 
-                </div>
-                </template>
+                
                 <!-- Lista de Clientes -->
                 <div class="col-md-12"  v-if="visible">
                     <div class="box box-primary">
                         <div class="box-header with-border">
-                            <h1 class="box-title"><i class="fa fa-list"></i> Listado de Clientes
+                            <h1 class="box-title"><i class="fa fa-list"></i> Listado de Ciudadanos
                             </h1>
                         
                             <!-- <h1 class="box-title"><i class="fa fa-list"></i> Lista de Clientes</h1> -->
@@ -217,11 +32,11 @@
                         </div>
                         <template v-if="listado==0">
                             <div align="center">
-                                <img src="img/loadx.gif" alt="technoserve" align="middle">
+                                <img src="img/robot.gif" alt="muniperene" align="middle">
                                 <!-- <p>Cargando...</p> -->
                             </div>
                         </template>
-                        <template v-if="listado==2">
+                        <template v-if="listado==1">
                             <div class="box-body table-responsive no-padding">
                                 <div class="col-md-12">
                                         <div class="input-group" style="margin-bottom: 10px;margin-top: 10px;">
@@ -237,22 +52,32 @@
                                             <th style="vertical-align: middle;">#</th>
                                             <th style="vertical-align: middle;">DNI</th>
                                             <th style="vertical-align: middle;">NOMBRE</th>
-                                            <th style="vertical-align: middle;">DIRECCIÓN</th>
-                                            <th style="vertical-align: middle;">CELULAR</th>
+                                            <th style="vertical-align: middle;">FECHA_NACIMIENTO</th>
+                                            <th style="vertical-align: middle;">ESTADO_CIVIL</th>
+                                            <th style="vertical-align: middle;">EDAD</th>
+                                            <th style="vertical-align: middle;">PROFESION_OFICIO</th>
+                                            <th style="vertical-align: middle;">DEPARTAMENTO</th>
+                                            <th style="vertical-align: middle;">PROVINCIA</th>
+                                            <th style="vertical-align: middle;">DISTRITO</th>
                                             <th style="text-align: center; vertical-align: middle;">ACCIONES</th>
                                         </tr> 
                                     </thead>
                                     <tbody>
                                         <tr v-for="(midata,index) in list" :key="index" >
-                                            <td style="vertical-align: middle;" >{{(index+1)+((Number(pagination.current_page)-1)*8)}}</td>
+                                            <td style="vertical-align: middle;" >{{(index+1)+((Number(pagination.current_page)-1)*10)}}</td>
                                             <td style="vertical-align: middle;" v-text="midata.number_doc"></td>
-                                            <td style="vertical-align: middle;" v-text="midata.names+' '+midata.paternal_last_name+' '+midata.maternal_last_name"></td>
-                                            <td style="vertical-align: middle;" v-text="midata.address"></td>
-                                            <td style="vertical-align: middle;" v-text="midata.phone"></td>
+                                            <td style="vertical-align: middle;" v-text="midata.name+' '+midata.name_paterno+' '+midata.name_materno"></td>
+                                            <td style="vertical-align: middle;" v-text="midata.fecha_nacimiento"></td>
+                                            <td style="vertical-align: middle;" v-text="midata.estado_civil"></td>
+                                            <td style="vertical-align: middle;" v-text="midata.edad"></td>
+                                            <td style="vertical-align: middle;" v-text="midata.profesion_oficio"></td>
+                                            <td style="vertical-align: middle;" v-text="midata.departamentos"></td>
+                                            <td style="vertical-align: middle;" v-text="midata.provincias"></td>
+                                             <td style="vertical-align: middle;" v-text="midata.distritos"></td>
                                             <td style="text-align: center; vertical-align: middle;"> 
-                                                <button type="button" @click="giveCredit(midata)" class="btn btn-emprendar btn-sm" data-toggle="tooltip" title="Otorgar Crédito">
-                                                    <i class="fa fa-money"></i>
-                                                </button>                                                                                                                 
+                                                <button type="button" @click="editData(midata.id)" class="btn btn-editar btn-sm" data-toggle="tooltip" title="Editar">
+                                                    <i class="fa fa-pencil"></i>
+                                                </button>                                                                                                           
                                             
                                                 <button type="button" @click="eliminar(midata.id_customer_credit)" class="btn btn-eliminar btn-sm" data-toggle="tooltip" title="Eliminar Cliente">
                                                     <i class="fa fa-trash"></i>
@@ -288,48 +113,7 @@
                     </div>
                 </div>
                 <!-- Lista de Prendas-->
-                <template v-if="listadox==3">
-                    <div class="col-md-12">
-                        <div class="box box-primary">
-                            <div class="box-header with-border">
-                                <h1 class="box-title"><i class="fa fa-list"></i> Cronograma de Pago</h1>
-                                <div class="box-tools pull-right">
-                                    <span class="label label-success" style="margin-right:10px">TOTAL DE CUOTA: {{total_quota}}</span>
-                                    <span class="label label-warning" style="margin-right:10px">TOTAL DE CAPITAL: {{total_amount}}</span>
-                                    <span class="label label-danger">TOTAL DE INTERÉS: {{total_interest}}</span>
-                                    <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
-                                    </button>
-                                    <!-- <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button> -->
-                                </div>
-                            </div>
-                                
-                            <div class="box-body table-responsive no-padding">
-                                <table  class="table table-hover" style="font-size:12px">
-                                    <thead style="background: rgb(32, 32, 32);color: #fff;">                                                                                   
-                                        <tr>  
-                                            <th style="vertical-align: middle;">#</th>
-                                            <th style="vertical-align: middle; text-align: center;">FECHA DE VENCIMIENTO</th>
-                                            <th style="vertical-align: middle; text-align: center;">CUOTA</th>
-                                            <th style="vertical-align: middle; text-align: center;">CAPITAL</th>                                                                                        
-                                            <th style="vertical-align: middle; text-align: center;">INTERÉS</th>
-                                            <th style="vertical-align: middle; text-align: center;">SALDO PROYECTADO</th>
-                                        </tr> 
-                                    </thead>
-                                    <tbody>
-                                        <tr v-for="(midata,index) in arrayCreditDetail" :key="index" >
-                                            <td style="vertical-align: middle;" >{{(index+1)}}</td>
-                                            <td style="vertical-align: middle; text-align: center;" v-text="midata.date_expiration"></td>
-                                            <td style="vertical-align: middle; text-align: center;" v-text="midata.quota"></td>  
-                                            <td style="vertical-align: middle; text-align: center;" v-text="midata.capital"></td>  
-                                            <td style="vertical-align: middle; text-align: center;" v-text="midata.interest"></td>  
-                                            <td style="vertical-align: middle; text-align: center;" v-text="midata.saldo"></td>  
-                                        </tr>                       
-                                    </tbody>
-                                </table>                                
-                            </div>                            
-                        </div>
-                    </div>
-                </template>
+                
             </div>       
 		</section>
     </main>
@@ -464,197 +248,11 @@
             this.init();
         },
         methods : { 
-            calculateAmount(){
-                let me = this;
-                me.total_cash='';
-                me.interest_rate_cash='';
-                me.amount_admin=(Number(me.capital)* Number(me.rate_admin))/100;
-                
-                me.interest_rate_cash=(Number(me.capital)*Number(me.interest_rate))/100;
-                me.total_cash=Number(me.capital)+ Number(me.interest_rate_cash);
-                
-            },
-            calculateRate(){
-                let me = this;
-                me.rate_admin="";
-                me.rate_admin=(Number(me.amount_admin)* 100)/Number(me.capital);
-            },
-            calculateInterestRateCash(){
-                let me = this;
-                me.interest_rate_cash=(Number(me.capital)*Number(me.interest_rate))/100;
-                me.total_cash=Number(me.capital)+Number(me.interest_rate_cash);
-            },
-            generate_code(){
-                let me = this;
-                me.icon_generate='fa fa-refresh fa-spin';
-                var url= '/generate_code';                
-                axios.get(url).then(function (response) {
-                    var respuesta= response.data; 
-                    me.array_code= respuesta.datax;                   
-                    for(var i=0;i<me.array_code.length;i++){
-                        me.code=me.array_code[i].code; 
-                    } 
-                    me.icon_generate='fa fa-rotate-right';                	
-                })
-                .catch(function (error) {
-                    console.log(error);
-                });
-            },
-            get_type_document(){
-                let me=this;
-               // me.listado=0;
-                var url= 'get_type_document';
-                    axios.get(url).then(function (response) {
-                        var respuesta= response.data;
-                        me.array_type_document=respuesta.datax;
-                    })
-                    .catch(function (error) {
-                        console.log(error);
-                    });
-            },
-            get_department(){
-                let me=this;
-               // me.listado=0;
-                var url= 'get_department';
-                    axios.get(url).then(function (response) {
-                        var respuesta= response.data;
-                        me.array_department=respuesta.datax;
-                    })
-                    .catch(function (error) {
-                        console.log(error);
-                    });
-            },
-            get_province(id_department){
-                let me=this;
-               // me.listado=0;
-                var url= 'get_province?id='+ id_department;
-                    axios.get(url).then(function (response) {
-                        var respuesta= response.data;
-                        me.array_province=respuesta.datax;
-                    })
-                    .catch(function (error) {
-                        console.log(error);
-                    });
-            },
-            get_district(id_province){
-                let me=this;
-               // me.listado=0;
-                var url= 'get_district?id='+ id_province;
-                    axios.get(url).then(function (response) {
-                        var respuesta= response.data;
-                        me.array_district=respuesta.datax;
-                    })
-                    .catch(function (error) {
-                        console.log(error);
-                    });
-            },
-            calculateCreditoDetail(){
-                this.arrayCreditDetail=[];
-                var date = new Date(moment(moment(this.date_init_payment, 'DD/MM/YYYY')).format('YYYY-MM-DD'));
-                var saldo=Number(this.capital)+(Number(this.capital)* Number(this.interest_rate))/100;
-                
-                for( var i=0; i<this.number_quota;i++){
-                    var date_day= date.getDay();
-                    if(date_day==6){
-                        date.setDate(date.getDate() + 2);
-                    }else{
-                        date.setDate(date.getDate() + 1);
-                    }
-                    var date_expiration=date.getDate() + '/' + (date.getMonth() + 1) + '/' + date.getFullYear();
-                    var date_expiration_detail= date.getFullYear()+'-'+ (date.getMonth()+1) + '-' + date.getDate();
-                    var date_expiration_t= date.getFullYear()+'-'+ (date.getMonth()+1) + '-' + date.getDate();
-
-                    var quota=((Number(this.capital) + (Number(this.capital) * Number(this.interest_rate))/100)/Number(this.number_quota)).toFixed(1);
-                    var result = quota*(Number(this.number_quota)-1);
-                    result = (Number(this.capital) + (Number(this.capital) * Number(this.interest_rate))/100) - result;
-                    if(i==1){
-                        this.quota=quota;
-                    }
-                    if(i==(Number(this.number_quota)-1)){
-                        quota=result.toFixed(1);
-                    }
-
-                    var capital=(Number(this.capital)/Number(this.number_quota)).toFixed(1);
-                    var result = capital * (Number(this.number_quota) - 1);
-                    result = Number(this.capital) - result;
-                    if(i==(Number(this.number_quota)-1)){
-                        capital=result.toFixed(1);
-                    }
-
-                    var interest=(((Number(this.capital)*Number(this.interest_rate))/100)/Number(this.number_quota)).toFixed(1);
-                    var result = interest * (Number(this.number_quota) - 1);
-                    result = ((Number(this.capital) * Number(this.interest_rate))/100) - result;
-                    if(i==(Number(this.number_quota)-1)){
-                        interest=result.toFixed(1);
-                    }
-                    saldo=saldo-quota;
-                    if(i==(Number(this.number_quota)-1)){
-                        saldo=0;                        
-                    }
-                    this.date_ultimate=date_expiration_t;
-                    this.arrayCreditDetail.push({
-                        id:i+1,
-                        date_expiration: date_expiration,
-                        date_expiration_detail: date_expiration_detail,
-                        quota: quota,
-                        capital: capital,
-                        interest: interest,
-                        saldo: saldo.toFixed(1)
-                    });                    
-                }
-                this.total_quota=this.total_cash;
-                this.total_amount=this.capital;
-                this.total_interest=this.interest_rate_cash;
-            },
+            
             print_schedule_credit(id){
                 var url='download_detail_credit?id='+id;
                 //window.location.href = url;
                 window.open(url, '_blank');  
-            },
-            saveDetailCredit(){
-                let me =this;
-                this.calculateCreditoDetail();
-                swal({
-                    title: 'Esta seguro de guardar la informacion?',
-                    type: 'warning',
-                    showCancelButton: true,
-                    confirmButtonText: 'ACEPTAR',
-                    cancelButtonText: 'CANCELAR',confirmButtonClass: 'btn btn-success',
-                    cancelButtonClass: 'btn btn-danger',buttonsStyling: false,
-                    reverseButtons: true
-                }).then((result) =>{
-                    if (result.value){                
-                        axios.post('save_detail_credit',{     
-                            'date_credit': moment(moment(this.date_credit, 'DD/MM/YYYY')).format('YYYY-MM-DD'),
-                            'date_init_payment': moment(moment(this.date_init_payment, 'DD/MM/YYYY')).format('YYYY-MM-DD'),
-                            'date_expiration': moment(this.date_ultimate).format('YYYY-MM-DD'),
-                            'capital':this.capital,
-                            'interest':this.interest_rate_cash,
-                            'total':this.total_cash,
-                            'rate_admin':this.rate_admin,
-                            'amount_admin':this.amount_admin,
-                            'quota':this.quota,
-                            'number_quota':this.number_quota,
-                            'period_credit':this.period_credit,
-                            'grace_day':this.grace_day,
-                            'risk_center':this.risk_center,
-                            'apply_mora':this.apply_mora,
-                            'id_customer':this.id_customer_credit,
-                            'id_promoter':this.id_employee,
-                            'array_credit_detail':this.arrayCreditDetail
-                        }).then(function (response) {
-                                // me.clean_data();                                
-                                // me.list_data(1); 
-                                swal( 'Guardado!', 'El crédito ha sido otorgado con éxito.', 'success' ); 
-                                me.icon_save='fa fa-save';
-                                me.print_schedule_credit(response.data);
-                        }).catch(function (error) {
-                            console.log(error);
-                        });                        
-                    }else if(result.dismiss === swal.DismissReason.cancel) { 
-                        me.icon_save='fa fa-save';
-                    }
-                }) 
             },
             imprimirElemento(){
                  /* var ventana = window.open('', 'PRINT', 'height=600,width=800');
@@ -680,280 +278,7 @@
                 '&dateinit='+moment(moment(this.date_init, 'DD/MM/YYYY')).format('DD-MM-YYYY')+
                 '&dateend='+moment(moment(this.date_end, 'DD/MM/YYYY')).format('DD-MM-YYYY');
             	window.location.href = url;
-			 }, 
-            getFamilyProduct(id_parent){
-                let me=this;
-               // me.listado=0;
-                var url= 'getDependenceParent?id_parent='+id_parent;
-                    axios.get(url).then(function (response) {
-                        var respuesta= response.data;
-                        me.arrayFamilyProduct=respuesta.datax;
-                    })
-                    .catch(function (error) {
-                        console.log(error);
-                    });
-            },
-            addDay(day){
-                   
-                   var fecha=new Date();
-                        fecha.setDate(moment(moment(this.date_init, 'DD/MM/YYYY')).format('DD'));
-                        fecha.setMonth(moment(moment(this.date_init, 'DD/MM/YYYY')).format('MM')-1);
-                        fecha.setYear(moment(moment(this.date_init, 'DD/MM/YYYY')).format('YYYY'));
-                   var fechaoriginal = new Date();
-
-                   fechaoriginal.setDate(moment(moment(this.date_init, 'DD/MM/YYYY')).format('DD'));
-                    fechaoriginal.setMonth(moment(moment(this.date_init, 'DD/MM/YYYY')).format('MM')-1);
-                    fechaoriginal.setYear(moment(moment(this.date_init, 'DD/MM/YYYY')).format('YYYY'));
-                    var contador=0;
-                    var dayoriginal=day;
-                    if(this.period=='Diario'){
-                        //var addTime = i * 86400; //Tiempo en segundos
-                        fecha.setSeconds(86400); //Añado el tiempo
-                       for(var i=0;i<day;i++) 
-                        {
-                            if(fecha.getUTCDay()==0){
-                                contador++;
-                                day++;
-                            }
-                            fecha.setSeconds(86400);
-                        }
-                        contador=contador+dayoriginal;
-                        fechaoriginal.setSeconds(contador*86400);
-                   }
-                   if(this.period=='Semanal'){
-                         day=day*7;
-                         fechaoriginal.setDate(fechaoriginal.getDate()+day);
-                           
-                   }
-                    if(this.period=='Quincenal'){
-                       day=day*15;
-                         fechaoriginal.setDate(fechaoriginal.getDate()+day);
-                   }
-                    if(this.period=='Mensual'){
-                      fechaoriginal.setMonth(fechaoriginal.getMonth()+day);
-                      //comprobando domingo
-                         if(fechaoriginal.getUTCDay()==0){
-                                fechaoriginal.setSeconds(86400);
-                         } 
-                   }
-                  
-                var hoy= ''+fechaoriginal.getDate()+'/'+(Number(fechaoriginal.getMonth())+1)+'/'+fechaoriginal.getFullYear();
-                return hoy;
-                
-            },  
-            calculateTeabyTerm(){
-                this.interest=Number(this.capital)*(Number(this.tea)*Number(this.term))/100;
-                this.interest=Number((this.interest).toFixed(1));
-                //this.date_end='01-01-01';
-                // var hoy= ''+new Date().getDate()+'/'+(Number(new Date().getMonth())+1)+'/'+new Date().getFullYear();
-                this.date_end=this.addDay(Number(this.term));
-               },
-            calculateTeabyInteres(){
-                   if(this.period=='Diario'){
-                       this.interest=Number(this.capital)*(Number(this.tea)*Number(this.term))/100;
-                        this.interest=Number((this.interest).toFixed(1));
-                   }
-                   if(this.period=='Semanal'){
-                       this.interest=Number(this.capital)*(Number(this.tea)*Number(this.term))/100;
-                       this.interest=Number((this.interest).toFixed(1));
-                   }
-                    if(this.period=='Quincenal'){
-                       this.interest= (Number(this.capital)*(Number(this.tea)*Number(this.term))/100);
-                       this.interest=Number((this.interest).toFixed(1));
-                   }
-                    if(this.period=='Mensual'){
-                       this.interest= (Number(this.capital)*(Number(this.tea)*Number(this.term))/100);
-                       this.interest=Number((this.interest).toFixed(1));
-                   }
-                       
-               },
-            calculateTeabyPerioid(){
-                   if(this.period=='Diario'){
-                       this.tea=0.67;
-                       this.interest=Number(this.capital)*(Number(this.tea)*Number(this.term))/100;
-                        this.interest=Number((this.interest).toFixed(1));
-                   }
-                   if(this.period=='Semanal'){
-                       this.tea=5;
-                       this.interest=Number(this.capital)*(Number(this.tea)*Number(this.term))/100;
-                       this.interest=Number((this.interest).toFixed(1));
-                   }
-                    if(this.period=='Quincenal'){
-                       this.tea=10;
-                       this.interest= (Number(this.capital)*(Number(this.tea)*Number(this.term))/100);
-                       this.interest=Number((this.interest).toFixed(1));
-                   }
-                    if(this.period=='Mensual'){
-                       this.tea=20;
-                       this.interest= (Number(this.capital)*(Number(this.tea)*Number(this.term))/100);
-                       this.interest=Number((this.interest).toFixed(1));
-                   }
-                   this.calculateTeabyTerm();
-                       
-               },
-            getData(){
-                     //obteniendo datos de reniec
-                if (this.nro_doc.length==8){   
-                    let me=this;          
-                    me.icon_search_dni='fa fa-spinner fa-spin';    
-                    var url= 'getDataCustomerBynro_doc?nro_doc='+me.nro_doc;
-                    axios.get(url).then(function (response) {
-                         var respuesta= response.data;
-                         var tipo=respuesta.tipo;
-                          if(respuesta.datax.length>0){
-                            if(tipo=='bd'){
-                                    me.id=respuesta.datax[0].id;
-                                    me.name = respuesta.datax[0].names;
-                                    me.paternal_last_name = respuesta.datax[0].paternal_last_name;
-                                    me.maternal_last_name = respuesta.datax[0].maternal_last_name;
-                                    me.phone = respuesta.datax[0].phone;
-                                    me.address =respuesta.datax[0].address;
-                                    me.sex =respuesta.datax[0].sex;
-                                    me.marital_status =respuesta.datax[0].marital_status;
-                                    me.birthdate=moment(respuesta.datax[0].birthdate).toDate();
-                                    me.validarData();
-
-                                    }
-                                    else{
-                                    me.paternal_last_name = respuesta.datax[0];
-                                    me.name = respuesta.datax[1];
-
-                                    me.maternal_last_name = respuesta.datax[2];
-                                    me.validarData();
-                                    }
-                                    me.icon_search_dni='fa fa-search'; 
-    
-                        }
-                    
-                    })
-                    .catch(function (error) {
-                        console.log(error);
-                    });
-                    //obtener datos
-                    
-                }
-            },
-            validarReniec(){
-                     //obteniendo datos de reniec
-                if (this.nro_doc.length==8) 
-                {   
-                    let me=this;              
-                    var url= 'getDataCustomerBynro_doc?nro_doc='+me.nro_doc;
-                    axios.get(url).then(function (response) {
-                         var respuesta= response.data;
-                         var tipo=respuesta.tipo;
-                          if(respuesta.datax.length>0){
-                                    me.paternal_last_name = respuesta.datax[0];
-                                    me.name = respuesta.datax[1];
-                                    me.maternal_last_name = respuesta.datax[2];
-    
-                        }
-                    
-                    })
-                    .catch(function (error) {
-                        console.log(error);
-                    });
-                    //obtener datos
-                    
-                }
-            },
-            validarData(){
-                this.errors = {};
-                this.errorClase=0;
-                //input
-                this.errorInputActivity='form-group';
-                this.errorInputActivity2='form-group';
-                this.errorInputActivity3='form-group';
-                this.errorInputActivity4='form-group';
-                this.errorInputActivity5='form-group';
-                this.errorInputActivity6='form-group';
-                this.errorInputcapital='form-group';
-                this.errorComboTipoProduco='form-group';
-                this.errorTotalcapital='form-group';
-
-
-                if (!this.nro_doc) 
-                {  
-                    this.errorInputActivity='form-group has-error';
-                    this.errorClase = 1;
-                }
-                if (!this.name) 
-                {  
-                    this.errorInputActivity2='form-group has-error';
-                    this.errorClase = 1;
-                }
-                if (!this.paternal_last_name) 
-                {  
-                    this.errorInputActivity3='form-group has-error';
-                    this.errorClase = 1;
-                }
-                if (!this.maternal_last_name) 
-                {  
-                    this.errorInputActivity4='form-group has-error';
-                    this.errorClase = 1;
-                }
-                if (!this.code) 
-                {  
-                    this.errorInputActivity5='form-group has-error';
-                    this.errorClase = 1;
-                }
-                if (!this.address) 
-                {  
-                    this.errorInputActivity6='form-group has-error';
-                    this.errorClase = 1;
-                }
-                
-                return this.errorClase;
-            }, 
-            validateDataPledge(){
-                this.errorClase=0;
-                //input
-                this.errorcapital='form-group';
-                this.errorTerm='form-group';
-                this.errorTea='form-group';
-                this.errorInterested='form-group';
-                this.errorWarehouse='form-group';
-                this.errorFamilyProduct='form-group';
-                this.errorCharacteristic='form-group';
-
-                if (!this.capital) 
-                {  
-                    this.errorcapital='form-group has-error';
-                    this.errorClase = 1;
-                }
-                if (!this.term) 
-                {  
-                    this.errorTerm='form-group has-error';
-                    this.errorClase = 1;
-                }
-                if (!this.tea) 
-                {  
-                    this.errorTea='form-group has-error';
-                    this.errorClase = 1;
-                }
-                if (!this.interest) 
-                {  
-                    this.errorInterested='form-group has-error';
-                    this.errorClase = 1;
-                }
-                if (!this.id_warehouse) 
-                {  
-                    this.errorWarehouse='form-group has-error';
-                    this.errorClase = 1;
-                }
-                if (!this.guaranty) 
-                {  
-                    this.errorFamilyProduct='form-group has-error';
-                    this.errorClase = 1;
-                }
-                if (!this.characteristic) 
-                {  
-                    this.errorCharacteristic='form-group has-error';
-                    this.errorClase = 1;
-                }
-                
-                return this.errorClase;
-            },      
+			 },     
           
             cambiarPagina(page){
 				let me = this;				
@@ -1084,24 +409,12 @@
                     var respuesta= response.data;
                     me.list=respuesta.datax;
                     me.pagination= respuesta.pagination;                     
-                    me.listado=2;
+                    me.listado=1;
                 })
                 .catch(function (error) {
                     console.log(error);
                 });
                
-            },
-            get_type_document(){
-                let me=this;
-                var url= 'getTypeDocument';
-                axios.get(url).then(function (response) {
-                    var respuesta= response.data;
-                    me.listProgram = respuesta.datax;
-                })
-                .catch(function (error) {
-                    console.log(error);
-                });
-                
             },
 
             init: function() {
@@ -1112,8 +425,8 @@
         mounted() {
         //    this.lista_add_client();
             this.list_data(1);
-            this.calculateAmount(2);
-            this.calculateInterestRateCash();
+            //this.calculateAmount(2);
+            //this.calculateInterestRateCash();
          }
          
     }

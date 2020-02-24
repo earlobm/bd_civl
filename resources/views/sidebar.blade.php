@@ -26,7 +26,7 @@
               </a>
               <ul class="treeview-menu">                 
                 <li class="treeview">
-                  <a href="#"><i class="fa fa-users" style="color: #FFA100"></i>Ciudanos
+                  <a href="#"><i class="fa fa-users" style="color: #FFA100"></i>Ciudadanos
                       <i class="fa fa-angle-left pull-right"></i>
                   </a>
                   <ul class="treeview-menu">

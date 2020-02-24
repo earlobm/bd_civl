@@ -111,7 +111,11 @@ class NacidoController extends Controller
         $tipo='';
       
         $dni=$request->number_doc;
-        $sqlx="select * from person where number_doc='$dni' ";
+        $sqlx="SELECT per.idperson,de.id,dis.idProv,pro.id_departmen,per.name_materno,per.name_paterno,per.name,dis.distrito as distritos,pro.provincia as provincias,de.departamento as departamentos,per.sexo,per.fecha_nacimiento,per.estado_civil,per.edad from person per 
+        inner join distric dis on per.id_district=dis.id 
+        inner join province pro on pro.id=dis.idProv 
+        inner join departament de on de.id=pro.id_departmen 
+        where number_doc='$dni' ";
         $miArrayx = DB::select($sqlx);
         $miArray = json_decode(json_encode($miArrayx), true);
         if(count($miArray)==0){
@@ -161,6 +165,7 @@ class NacidoController extends Controller
                 }
 
                 $tipo='reniec';
+                
             
         }else {$tipo='bd';}
           return [
@@ -255,8 +260,8 @@ class NacidoController extends Controller
         ];
     }
     public function get_customer_by_dni(Request $request){        
-        if(isset($request->id)){
-            $id=$request->id;
+        if(isset($request->idperson)){
+            $id=$request->idperson;
             $sqlx="select *  from person where idperson=$id";
             $datax=DB::select($sqlx);
               return [
@@ -268,7 +273,11 @@ class NacidoController extends Controller
         $tipo='';
       
         $dni=$request->number_doc;
-        $sqlx="select * from person  where  number_doc='$dni' ";
+        $sqlx="SELECT per.idperson,de.id,dis.id,pro.id,per.name_materno,per.name_paterno,per.name,dis.distrito as distritos,pro.provincia as provincias,de.departamento as departamentos,per.sexo,per.fecha_nacimiento,per.estado_civil,per.edad from person per 
+        inner join distric dis on per.id_district=dis.id 
+        inner join province pro on pro.id=dis.idProv 
+        inner join departament de on de.id=pro.id_departmen 
+        where number_doc='$dni' ";
         $miArrayx = DB::select($sqlx);
         $miArray = json_decode(json_encode($miArrayx), true);
         if(count($miArray)==0){

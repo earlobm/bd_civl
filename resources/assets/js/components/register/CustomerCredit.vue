@@ -643,7 +643,7 @@
                 
                 
             },
-            // list_data(page){
+           // list_data(page){
             //     let me=this;                      
             //     me.listado=0;
             //     me.getDepartment();
@@ -659,7 +659,7 @@
             //         console.log(error);
             //     });
                
-            // },
+             //},
 
            
         },

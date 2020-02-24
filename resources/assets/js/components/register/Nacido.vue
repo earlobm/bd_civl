@@ -78,7 +78,7 @@
                                                                             <label for="sexo">Sexo:</label>
                                                                             <div class="input-group">
                                                                                 <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-transgender"></i></span>
-                                                                            <select class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;" v-model="sexo">
+                                                                            <select class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;" disabled v-model="sexo">
                                                                                 <option selected="selected" value="">Seleccione</option>
                                                                                 <option value="M">Masculino</option>
                                                                                 <option value="F">Femenino</option>
@@ -91,7 +91,7 @@
                                                                             <label for="estado_civil">Estado Civíl:</label>
                                                                             <div class="input-group">
                                                                                 <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-heart-o"></i></span>
-                                                                                <select class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;" v-model="estado_civil">
+                                                                                <select class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;" disabled v-model="estado_civil">
                                                                                     <option selected="selected" value="">Seleccione</option>
                                                                                     <option value="SOLTERO">Soltero (a)</option>
                                                                                     <option value="CASADO">Casado (a)</option>
@@ -106,7 +106,7 @@
                                                                             <label for="ap_paterno">Apellido Paterno:</label>
                                                                             <div class="input-group">
                                                                                 <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-user"></i></span>
-                                                                                <input v-model="name_paterno" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">                                                                            
+                                                                                <input disabled v-model="name_paterno" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">                                                                            
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -115,7 +115,7 @@
                                                                             <label for="ap_materno">Apellido Materno:</label>
                                                                             <div class="input-group">
                                                                                 <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-user"></i></span>
-                                                                                <input v-model="name_materno" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">  
+                                                                                <input disabled v-model="name_materno" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">  
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -124,7 +124,7 @@
                                                                             <label for="nombres">Nombres:</label>
                                                                             <div class="input-group">
                                                                                 <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-user"></i></span>
-                                                                                <input v-model="name" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">  
+                                                                                <input disabled v-model="name" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">  
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -137,7 +137,7 @@
                                                                             <label for="fecha">Fecha de Nacimiento:</label>
                                                                             <div class="input-group">
                                                                                 <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-birthday-cake "></i></span>
-                                                                            <date-picker v-model="fecha_nacimiento" :config="options" style="border-top-right-radius: 3px;border-bottom-right-radius: 3px;"></date-picker>
+                                                                            <date-picker disabled v-model="fecha_nacimiento" :config="options" style="border-top-right-radius: 3px;border-bottom-right-radius: 3px;"></date-picker>
                                                                                 
                                                                             </div>
                                                                         </div>
@@ -150,7 +150,7 @@
                                                                                 <label for="edad">Edad:</label>
                                                                                 <div class="input-group">
                                                                                     <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-hourglass-2"></i></span>
-                                                                                    <input v-model="edad" type="tel" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">  
+                                                                                    <input disabled v-model="edad" type="tel" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">  
                                                                                 </div>
                                                                             </div>
                                                                         </div>
@@ -160,45 +160,37 @@
                                                                             <label for="lugar">Lugar/Hopsital:</label>
                                                                             <div class="input-group">
                                                                                 <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-user"></i></span>
-                                                                                <input v-model="lugar" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">  
+                                                                                <input disabled  v-model="lugar" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">  
                                                                             </div>
                                                                         </div>
                                                                        
                                                                     </div> 
                                                                     <div class="col-md-4">
                                                                         <div v-bind:class="errorInputDepartment">
-                                                                            <label for="estado_civil">Departamento:</label>
+                                                                            <label for="departamento">Departamento:</label>
                                                                             <div class="input-group">
-                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-map-marker"></i></span>
-                                                                                <select @change="getProvince($event.target.value)" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;" v-model="department">
-                                                                                    <option selected="selected" value="">Seleccione</option>
-                                                                                    <option v-for="miselect in array_department" :selected="miselect.id == department" :key="miselect.id" :value="miselect.id">{{ miselect.departamento}}</option>
-                                                                                </select>
+                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-user"></i></span>
+                                                                                <input disabled v-model="department" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">                                                                            
                                                                             </div>
                                                                         </div>
+                                                                        
                                                                     </div>
                                                                     <div class="col-md-4">
                                                                         <div v-bind:class="errorInputProvince">
-                                                                            <label for="estado_civil">Provincia:</label>
+                                                                            <label for="Provincia">Provincia:</label>
                                                                             <div class="input-group">
-                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-map-marker"></i></span>
-                                                                                <select @change="getDistrict($event.target.value)" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;" v-model="province">
-                                                                                    <option selected="selected" value="">Seleccione</option>
-                                                                                    <option v-for="miselect in array_province" :selected="miselect.id == province" :key="miselect.id" :value="miselect.id">{{ miselect.provincia}}</option>
-                                                                                </select>
+                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-user"></i></span>
+                                                                                <input disabled v-model="province" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">                                                                            
                                                                             </div>
                                                                         </div>
                                                                     </div>
                                                                     
                                                                     <div class="col-md-4">
                                                                         <div v-bind:class="errorInputDistrict">
-                                                                            <label for="estado_civil">Distrito:</label>
+                                                                            <label for="Distrito">Distrito:</label>
                                                                             <div class="input-group">
-                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-map-marker"></i></span>
-                                                                                <select class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;" v-model="district">
-                                                                                    <option selected="selected" value="">Seleccione</option>
-                                                                                    <option v-for="miselect in array_district" :selected="miselect.id == district" :key="miselect.id" :value="miselect.id">{{ miselect.distrito}}</option>
-                                                                                </select>
+                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-user"></i></span>
+                                                                                <input disabled v-model="district" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">                                                                            
                                                                             </div>
                                                                         </div>
                                                                     </div> 
@@ -206,7 +198,7 @@
                                                                                                                                          
                                                                 </div> 
                                                             </template>
-                                                                <!-- Dar Crédito -->
+                                                                <!-- REGISTRO MADRE-->
                                                         </div>
                                                         <template v-if="listadox==1">
                                                             <div class="box-footer">
@@ -238,13 +230,26 @@
                                                                                 </span>
                                                                             </div>
                                                                         </div>
-                                                                    </div>  
+                                                                    </div> 
+                                                                    
+                                                                <div class="col-md-8">
+                                                                <div class="form-group">
+                                                                    <label for="ap_materno">Apellido y Nombres completo de la Madre:</label>
+                                                                    <div class="input-group">
+                                                                        <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-user"></i></span>
+                                                                        <input disabled v-model="personal_madre" type="text" class="form-control"  placeholder="Nombres y Apellidos ">  
+                                                                        <span class="input-group-btn">
+                                                                            <button data-toggle="tooltip" title="Agregar" type="submit" @click="add_person_madre()" class="btn btn-excel btn-flat" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;"><i class="fa fa-plus"></i> AGREGAR MADRE</button>
+                                                                        </span>
+                                                                    </div>
+                                                                </div>
+                                                                </div> 
                                                                       <div class="col-md-4">
                                                                         <div v-bind:class="errorInputMaritalStatemadre">
                                                                             <label for="estado_civil">Estado Civíl:</label>
                                                                             <div class="input-group">
                                                                                 <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-heart-o"></i></span>
-                                                                                <select class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;" v-model="estado_civil_madre">
+                                                                                <select class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;" disabled v-model="estado_civil_madre">
                                                                                     <option selected="selected" value="">Seleccione</option>
                                                                                     <option value="SOLTERO">Soltero (a)</option>
                                                                                     <option value="CASADO">Casado (a)</option>
@@ -259,7 +264,7 @@
                                                                             <label for="ap_paterno">Apellido Paterno:</label>
                                                                             <div class="input-group">
                                                                                 <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-user"></i></span>
-                                                                                <input v-model="last_madre_paterno" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">                                                                            
+                                                                                <input disabled v-model="last_madre_paterno" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">                                                                            
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -268,7 +273,7 @@
                                                                             <label for="ap_materno">Apellido Materno:</label>
                                                                             <div class="input-group">
                                                                                 <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-user"></i></span>
-                                                                                <input v-model="last_madre_materno" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">  
+                                                                                <input disabled v-model="last_madre_materno" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">  
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -277,7 +282,7 @@
                                                                             <label for="nombres">Nombres:</label>
                                                                             <div class="input-group">
                                                                                 <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-user"></i></span>
-                                                                                <input v-model="name_madre" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">  
+                                                                                <input disabled v-model="name_madre" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">  
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -289,7 +294,7 @@
                                                                             <label for="fecha">Fecha de Nacimiento:</label>
                                                                             <div class="input-group">
                                                                                 <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-birthday-cake "></i></span>
-                                                                            <date-picker v-model="fecha_nacimiento_madre" :config="options" style="border-top-right-radius: 3px;border-bottom-right-radius: 3px;"></date-picker>
+                                                                            <date-picker disabled v-model="fecha_nacimiento_madre" :config="options" style="border-top-right-radius: 3px;border-bottom-right-radius: 3px;"></date-picker>
                                                                                 
                                                                             </div>
                                                                         </div>
@@ -301,45 +306,36 @@
                                                                                 <label for="edad">Edad:</label>
                                                                                 <div class="input-group">
                                                                                     <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-hourglass-2"></i></span>
-                                                                                    <input v-model="edad_madre" type="tel" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">  
+                                                                                    <input disabled v-model="edad_madre" type="tel" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">  
                                                                                 </div>
                                                                             </div>
                                                                         </div>
                                                                     </div>
                                                                     <div class="col-md-4">
-                                                                        <div v-bind:class="errorInputDepartmentmadre">
-                                                                            <label for="estado_civil">Departamento:</label>
+                                                                         <div v-bind:class="errorInputDepartmentmadre">
+                                                                            <label for="departamento">Departamento:</label>
                                                                             <div class="input-group">
-                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-map-marker"></i></span>
-                                                                                <select @change="getProvince_madre($event.target.value)" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;" v-model="department_madre">
-                                                                                    <option selected="selected" value="">Seleccione</option>
-                                                                                    <option v-for="miselect in array_department_madre" :selected="miselect.id == department_madre" :key="miselect.id" :value="miselect.id">{{ miselect.departamento}}</option>
-                                                                                </select>
+                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-user"></i></span>
+                                                                                <input disabled v-model="department_madre" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">                                                                            
                                                                             </div>
                                                                         </div>
                                                                     </div>
                                                                     <div class="col-md-4">
                                                                         <div v-bind:class="errorInputProvincemadre">
-                                                                            <label for="estado_civil">Provincia:</label>
+                                                                            <label for="Provincia">Provincia:</label>
                                                                             <div class="input-group">
-                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-map-marker"></i></span>
-                                                                                <select @change="getDistrict_madre($event.target.value)" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;" v-model="province_madre">
-                                                                                    <option selected="selected" value="">Seleccione</option>
-                                                                                    <option v-for="miselect in array_province_madre" :selected="miselect.id == province_madre" :key="miselect.id" :value="miselect.id">{{ miselect.provincia}}</option>
-                                                                                </select>
+                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-user"></i></span>
+                                                                                <input disabled v-model="province_madre" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">                                                                            
                                                                             </div>
                                                                         </div>
                                                                     </div>
                                                                     
                                                                     <div class="col-md-4">
                                                                         <div v-bind:class="errorInputDistrictmadre">
-                                                                            <label for="estado_civil">Distrito:</label>
+                                                                            <label for="Provincia">Provincia:</label>
                                                                             <div class="input-group">
-                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-map-marker"></i></span>
-                                                                                <select class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;" v-model="district_madre">
-                                                                                    <option selected="selected" value="">Seleccione</option>
-                                                                                    <option v-for="miselect in array_district_madre" :selected="miselect.id == district_madre" :key="miselect.id" :value="miselect.id">{{ miselect.distrito}}</option>
-                                                                                </select>
+                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-user"></i></span>
+                                                                                <input disabled v-model="district_madre" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">                                                                            
                                                                             </div>
                                                                         </div>
                                                                     </div> 
@@ -349,7 +345,7 @@
                                                                             <label for="profesion">Profesion/Oficio:</label>
                                                                             <div class="input-group">
                                                                                 <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-user"></i></span>
-                                                                                <input v-model="profesion_oficio_madre" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">  
+                                                                                <input disabled v-model="profesion_oficio_madre" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">  
                                                                             </div>
                                                                         </div>
                                                                     </div>                                                                                                                                                                                                        
@@ -374,6 +370,7 @@
                                                                     </div> 
                                                                 </div>
                                                             </div>
+                                                            <!-- REGISTRO PADRE-->
                                                             <div class="box-body" v-if="add_padre">  
                                                                 <template v-if="listadox==1">                                                   
                                                                     <div class="row">
@@ -382,19 +379,46 @@
                                                                                 <label for="dni">N° de Documento:</label>
                                                                                 <div class="input-group">
                                                                                     <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;  color:#1e2172"><i class="fa fa-database"></i></span>
-                                                                                    <input maxlength="8" v-model="number_doc_padre" type="text" @keyup.enter="getDataBD()"  class="form-control">
+                                                                                    <input maxlength="8" v-model="number_doc_padre" type="text" @keyup.enter="get_data_padre()"  class="form-control">
                                                                                     <span class="input-group-btn">
-                                                                                        <button data-toggle="tooltip" title="Buscar en RENIEC" type="submit" @click="getDataBD()" class="btn btn-search btn-flat" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;"><i v-bind:class="icon_search_dni_aval"></i> BUSCAR</button>
+                                                                                        <button data-toggle="tooltip" title="Buscar en RENIEC" type="submit" @click="get_data_padre()" class="btn btn-search btn-flat" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;"><i v-bind:class="icon_search_dni_aval"></i> BUSCAR</button>
                                                                                     </span>
                                                                                 </div>
                                                                             </div>
-                                                                        </div>                                                                            
+                                                                        </div>  
+                                                                        <div class="col-md-8">
+                                                                <div class="form-group">
+                                                                    <label for="ap_materno">Apellido y Nombres completo de la Padre:</label>
+                                                                    <div class="input-group">
+                                                                        <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-user"></i></span>
+                                                                        <input disabled v-model="personal_padre" type="text" class="form-control"  placeholder="Nombres y Apellidos ">  
+                                                                        <span class="input-group-btn">
+                                                                            <button data-toggle="tooltip" title="Agregar" type="submit" @click="add_person_padre()" class="btn btn-excel btn-flat" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;"><i class="fa fa-plus"></i> AGREGAR PADRE</button>
+                                                                        </span>
+                                                                    </div>
+                                                                </div>
+                                                                </div>  
+                                                                        <div class="col-md-4">
+                                                                            <div v-bind:class="errorInputMaritalStatepadre">
+                                                                                <label for="estado_civil">Estado Civíl:</label>
+                                                                                <div class="input-group">
+                                                                                    <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-heart-o"></i></span>
+                                                                                <select class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;" disabled v-model="estado_civil_padre">
+                                                                                    <option selected="selected" value="">Seleccione</option>
+                                                                                    <option value="SOLTERO">Soltero (a)</option>
+                                                                                    <option value="CASADO">Casado (a)</option>
+                                                                                    <option value="VIUDO">Viudo (a)</option>
+                                                                                    <option value="SEPARADO">Separado (a)</option>
+                                                                                </select>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>                                                                         
                                                                         <div class="col-md-4">
                                                                             <div v-bind:class="errorInputPaternalpadre">
                                                                                 <label for="ap_paterno">Apellido Paterno:</label>
                                                                                 <div class="input-group">
                                                                                     <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-user"></i></span>
-                                                                                    <input v-model="paternal_last_name_padre" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">                                                                            
+                                                                                    <input disabled v-model="paternal_last_name_padre" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">                                                                            
                                                                                 </div>
                                                                             </div>
                                                                         </div>
@@ -403,7 +427,7 @@
                                                                                 <label for="ap_materno">Apellido Materno:</label>
                                                                                 <div class="input-group">
                                                                                     <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-user"></i></span>
-                                                                                    <input v-model="maternal_last_name_padre" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">  
+                                                                                    <input disabled v-model="maternal_last_name_padre" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">  
                                                                                 </div>
                                                                             </div>
                                                                         </div>
@@ -412,7 +436,7 @@
                                                                                 <label for="nombres">Nombres:</label>
                                                                                 <div class="input-group">
                                                                                     <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-user"></i></span>
-                                                                                    <input v-model="name_padre" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">  
+                                                                                    <input disabled v-model="name_padre" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">  
                                                                                 </div>
                                                                             </div>
                                                                         </div>
@@ -421,7 +445,7 @@
                                                                                 <label for="edad">Fecha de Nacimiento:</label>
                                                                                 <div class="input-group">
                                                                                     <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-birthday-cake "></i></span>
-                                                                                <date-picker v-model="birthdate_padre" :config="options" style="border-top-right-radius: 3px;border-bottom-right-radius: 3px;"></date-picker>
+                                                                                <date-picker disabled v-model="fecha_nacimiento_padre" :config="options" style="border-top-right-radius: 3px;border-bottom-right-radius: 3px;"></date-picker>
                                                                                     
                                                                                 </div>
                                                                             </div>
@@ -432,68 +456,45 @@
                                                                                 <label for="edad">Edad:</label>
                                                                                 <div class="input-group">
                                                                                     <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-hourglass-2"></i></span>
-                                                                                    <input v-model="edad_padre" type="tel" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">  
+                                                                                    <input disabled v-model="edad_padre" type="tel" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">  
                                                                                 </div>
                                                                             </div>
                                                                         </div>
                                                                     </div>
-                                                                        <div class="col-md-4">
-                                                                            <div v-bind:class="errorInputMaritalStatepadre">
-                                                                                <label for="estado_civil">Estado Civíl:</label>
-                                                                                <div class="input-group">
-                                                                                    <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-heart-o"></i></span>
-                                                                                <select class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;" v-model="estado_civil_padre">
-                                                                                    <option selected="selected" value="">Seleccione</option>
-                                                                                    <option value="SOLTERO">Soltero (a)</option>
-                                                                                    <option value="CASADO">Casado (a)</option>
-                                                                                    <option value="VIUDO">Viudo (a)</option>
-                                                                                    <option value="SEPARADO">Separado (a)</option>
-                                                                                </select>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
+                                                                        
                                                                         <div class="col-md-4">
                                                                             <div v-bind:class="errorInputDepartmentpadre">
-                                                                                <label for="estado_civil">Departamento:</label>
-                                                                                <div class="input-group">
-                                                                                    <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-map-marker"></i></span>
-                                                                                    <select @change="getProvince_padre($event.target.value)" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;" v-model="department_padre">
-                                                                                        <option selected="selected" value="">Seleccione</option>
-                                                                                        <option v-for="miselect in array_department_padre" :selected="miselect.id == department_padre" :key="miselect.id" :value="miselect.id">{{ miselect.departamento}}</option>
-                                                                                    </select>
-                                                                                </div>
+                                                                            <label for="departamento">Departamento:</label>
+                                                                            <div class="input-group">
+                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-user"></i></span>
+                                                                                <input disabled v-model="department_padre" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">                                                                            
                                                                             </div>
+                                                                        </div>
                                                                         </div>
                                                                         <div class="col-md-4">
                                                                             <div v-bind:class="errorInputProvincepadre">
-                                                                                <label for="estado_civil">Provincia:</label>
-                                                                                <div class="input-group">
-                                                                                    <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-map-marker"></i></span>
-                                                                                    <select @change="getDistrict_padre($event.target.value)" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;" v-model="province_padre">
-                                                                                        <option selected="selected" value="">Seleccione</option>
-                                                                                        <option v-for="miselect in array_province_padre" :selected="miselect.id == province_padre" :key="miselect.id" :value="miselect.id">{{ miselect.provincia}}</option>
-                                                                                    </select>
-                                                                                </div>
+                                                                            <label for="Provincia">Provincia:</label>
+                                                                            <div class="input-group">
+                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-user"></i></span>
+                                                                                <input disabled v-model="province_padre" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">                                                                            
                                                                             </div>
+                                                                        </div>
                                                                         </div>
                                                                         <div class="col-md-4">
                                                                             <div v-bind:class="errorInputDistrictpadre">
-                                                                                <label for="estado_civil">Distrito:</label>
-                                                                                <div class="input-group">
-                                                                                    <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-map-marker"></i></span>
-                                                                                    <select class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;" v-model="district_padre">
-                                                                                        <option selected="selected" value="">Seleccione</option>
-                                                                                        <option v-for="miselect in array_district_padre" :selected="miselect.id == district_padre" :key="miselect.id" :value="miselect.id">{{ miselect.distrito}}</option>
-                                                                                    </select>
-                                                                                </div>
+                                                                            <label for="Distrito">Distrito:</label>
+                                                                            <div class="input-group">
+                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-user"></i></span>
+                                                                                <input disabled v-model="district_padre" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">                                                                            
                                                                             </div>
+                                                                        </div>
                                                                         </div>
                                                                         <div class="col-md-4">
                                                                             <div v-bind:class="errorInputAddresspadre">
                                                                                 <label for="celular">Profesion/Oficio:</label>
                                                                                 <div class="input-group">
                                                                                     <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-location-arrow"></i></span>
-                                                                                    <input placeholder="Dirección domiciliaria" v-model="profesion_oficio_padre" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">
+                                                                                    <input placeholder="Dirección domiciliaria" disabled v-model="profesion_oficio_padre" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">
                                                                                 </div>
                                                                             </div>
                                                                         </div>                                                                                                                                                                                                          
@@ -528,18 +529,23 @@
                     
                     
                 </div>
-                <!-- Lista de Prendas-->
+                <!-- AGREGAR  MODAL NACIDOS-->
             </div>
+            
             <div class="modal fade" tabindex="-1" :class="{'mostrar' : modal_add}" role="dialog" aria-labelledby="myModalLabel" style="display: none;" aria-hidden="true">
+
+           
             <div class="modal-dialog modal-lg" role="document">
+            
                 <div class="modal-content">
+                
                     <div class="modal-header" style="background: #012D74;">
                         <button type="button" class="close" @click="close_modal(1)" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                             <h4 class="modal-title" style="color: #FFFFFF"><i class="fa fa-plus"></i> AGREGAR CIUADADANO</h4>
                     </div>
-
+                <div class="slimScrollDiv">
                     <div class="modal-body">  
                         <div class="row">    
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"> 
@@ -547,42 +553,44 @@
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="form-horizontal">
-                                                <div class="form-group">
-                                                    <label  class="col-md-2 control-label">DNI:</label>
+                                                
+                                                    <label  class="col-md-0 control-label">DNI:</label>
                                                     <div class="col-md-12">
                                                         <div class="input-group">
                                                             <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;  color:#1e2172">
                                                                 <i class="fa fa-indent"></i>
                                                             </span>
-                                                            <input maxlength="8" v-model="number_doc_add" type="text" @keyup.enter="get_data_reniec()" class="form-control">
+                                                            <input maxlength="8" v-model="number_doc_add" type="text" @keyup.enter="get_data_reniec_nacidos()" class="form-control">
                                                             <span class="input-group-btn">
-                                                                <button data-toggle="tooltip" title="Buscar" type="submit" @click="get_data_reniec()" class="btn btn-search btn-flat" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;"><i class="fa fa-check"></i> VALIDAR</button>
+                                                                <button data-toggle="tooltip" title="Buscar" type="submit" @click="get_data_reniec_nacidos()" class="btn btn-search btn-flat" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;"><i class="fa fa-check"></i> VALIDAR</button>
                                                             </span>
                                                         </div>
                                                     </div>
-                                                </div>
-                                                                    <div class="form-group">
+                                                
+                                                                    <div class="row">
+                                                                    
                                                                     <div class="col-md-3">
                                                                         <div v-bind:class="errorInputSex">
                                                                             <label for="sexo">Sexo:</label>
                                                                             <div class="input-group">
-                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-transgender"></i></span>
-                                                                            <select class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;" v-model="sexo">
-                                                                                <option selected="selected" value="">Seleccione</option>
-                                                                                <option value="M">Masculino</option>
-                                                                                <option value="F">Femenino</option>
-                                                                            </select>
+                                                                                        <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-transgender"></i></span>
+                                                                                    <select class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;" v-model="sexo_modal_nacido">
+                                                                                        <option selected="selected" value="">Seleccione</option>
+                                                                                        <option value="M">Masculino</option>
+                                                                                        <option value="F">Femenino</option>
+                                                                                    </select>
                                                                             </div>
                                                                         </div>
-                                                                    </div> 
-                                                                    </div>  
-                                                                        <div class="form-group">
-                                                                      <div class="col-md-4">
+                                                                    </div>
+                                                                    <div class="col-md-1">
+                                                                        
+                                                                    </div>
+                                                                    <div class="col-md-3">
                                                                         <div v-bind:class="errorInputMaritalState">
                                                                             <label for="estado_civil">Estado Civíl:</label>
                                                                             <div class="input-group">
                                                                                 <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-heart-o"></i></span>
-                                                                                <select class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;" v-model="estado_civil">
+                                                                                <select class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;" v-model="estado_civil_modal_nacido">
                                                                                     <option selected="selected" value="">Seleccione</option>
                                                                                     <option value="SOLTERO">Soltero (a)</option>
                                                                                     <option value="CASADO">Casado (a)</option>
@@ -591,115 +599,140 @@
                                                                                 </select>
                                                                             </div>
                                                                         </div>
-                                                                    </div>  
-                                                                    </div>                                                                 
-                                                                    <div class="form-group">
-                                                                    <div class="col-md-4">
+                                                                    </div> 
+                                                                    <div class="col-md-1">
+                                                                        
+                                                                    </div>
+                                                                    <div class="col-md-3">
                                                                         <div v-bind:class="errorInputPaternal">
-                                                                            <label for="ap_paterno">Apellido PaternoPerrr:</label>
+                                                                            <label for="ap_paterno">Apellido Paterno:</label>
                                                                             <div class="input-group">
                                                                                 <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-user"></i></span>
-                                                                                <input v-model="name_paterno" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">                                                                            
+                                                                                <input v-model="name_paterno_nacido_modal" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">                                                                            
                                                                             </div>
                                                                         </div>
                                                                     </div>
                                                                     </div>
 
                                                                     
-                                                                    <div class="form-group">
-                                                                    <div class="col-md-4">
+                                                                <div class="row">
+                                                                
+                                                                    <div class="col-md-3">
                                                                         <div v-bind:class="errorInputMaternal">
                                                                             <label for="ap_materno">Apellido Materno:</label>
                                                                             <div class="input-group">
                                                                                 <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-user"></i></span>
-                                                                                <input v-model="name_materno" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">  
+                                                                                <input v-model="name_materno_nacido_modal" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">  
                                                                             </div>
                                                                         </div>
                                                                     </div>
+                                                                    <div class="col-md-1">
+                                                                        
                                                                     </div>
                                                                     
-                                                                     <div class="form-group">
                                                                     <div class="col-md-3">
                                                                         <div v-bind:class="errorInputNames">
                                                                             <label for="nombres">Nombres:</label>
                                                                             <div class="input-group">
                                                                                 <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-user"></i></span>
-                                                                                <input v-model="name" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">  
+                                                                                <input v-model="name_nacido_modal" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">  
                                                                             </div>
                                                                         </div>
                                                                     </div>
+                                                                    <div class="col-md-1">
+                                                                        
                                                                     </div>
 
                                                                     
                                                                     <div class="col-md-3">
-                                                                        <div class="form-group">
-                                                                            <label for="fecha">Fecha de Nacimiento:</label>
-                                                                            <div class="input-group">
-                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-birthday-cake "></i></span>
-                                                                            <date-picker v-model="fecha_nacimiento" :config="options" style="border-top-right-radius: 3px;border-bottom-right-radius: 3px;"></date-picker>
-                                                                                
-                                                                            </div>
+                                                                        <div v-bind:class="errorInputLugar">
+                                                                                <label for="lugar">Lugar/Hopsital:</label>
+                                                                                <div class="input-group">
+                                                                                    <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-user"></i></span>
+                                                                                    <input v-model="lugar_nacido_modal" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">  
+                                                                                </div>
                                                                         </div>
+
                                                                     </div>
                                                                     
+                                                                </div>
+                                                                    
+                                                                <div class="row">
+                                                                
                                                                     <div class="col-md-3">
-                                                                          <div v-bind:class="errorInputEdad">      
-                                                                            <div class="form-group">
+                                                                        <div v-bind:class="errorInputEdad">
                                                                                 <label for="edad">Edad:</label>
                                                                                 <div class="input-group">
                                                                                     <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-hourglass-2"></i></span>
-                                                                                    <input v-model="edad" type="tel" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">  
+                                                                                    <input v-model="edad_nacido_modal" type="tel" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">  
                                                                                 </div>
-                                                                            </div>
+                                                                            
+                                                                            
                                                                         </div>
                                                                     </div>
-                                                                    <div class="col-md-3">
-                                                                        <div v-bind:class="errorInputLugar">
-                                                                            <label for="lugar">Lugar/Hopsital:</label>
-                                                                            <div class="input-group">
-                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-user"></i></span>
-                                                                                <input v-model="lugar" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">  
-                                                                            </div>
-                                                                        </div>
-                                                                       
-                                                                    </div> 
+                                                                    <div class="col-md-1">
+                                                                        
+                                                                    </div>
                                                                     <div class="col-md-3">
                                                                         <div v-bind:class="errorInputDepartment">
                                                                             <label for="estado_civil">Departamento:</label>
                                                                             <div class="input-group">
                                                                                 <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-map-marker"></i></span>
-                                                                                <select @change="getProvince($event.target.value)" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;" v-model="department">
+                                                                                <select @change="getProvince($event.target.value)" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;" v-model="department_nacido_modal">
                                                                                     <option selected="selected" value="">Seleccione</option>
-                                                                                    <option v-for="miselect in array_department" :selected="miselect.id == department" :key="miselect.id" :value="miselect.id">{{ miselect.departamento}}</option>
+                                                                                    <option v-for="miselect in array_department_nacido_modal" :selected="miselect.id == department" :key="miselect.id" :value="miselect.id">{{ miselect.departamento}}</option>
                                                                                 </select>
                                                                             </div>
                                                                         </div>
+                                                                       
+                                                                    </div> 
+                                                                    <div class="col-md-1">
+                                                                        
                                                                     </div>
+
                                                                     <div class="col-md-3">
                                                                         <div v-bind:class="errorInputProvince">
                                                                             <label for="estado_civil">Provincia:</label>
                                                                             <div class="input-group">
                                                                                 <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-map-marker"></i></span>
-                                                                                <select @change="getDistrict($event.target.value)" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;" v-model="province">
+                                                                                <select @change="getDistrict($event.target.value)" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;" v-model="province_nacido_modal">
                                                                                     <option selected="selected" value="">Seleccione</option>
-                                                                                    <option v-for="miselect in array_province" :selected="miselect.id == province" :key="miselect.id" :value="miselect.id">{{ miselect.provincia}}</option>
+                                                                                    <option v-for="miselect in array_province_nacido_modal" :selected="miselect.id == province" :key="miselect.id" :value="miselect.id">{{ miselect.provincia}}</option>
                                                                                 </select>
                                                                             </div>
                                                                         </div>
                                                                     </div>
-                                                                    
+                                                                </div>
+                                                                <div class="row">
                                                                     <div class="col-md-3">
                                                                         <div v-bind:class="errorInputDistrict">
                                                                             <label for="estado_civil">Distrito:</label>
                                                                             <div class="input-group">
                                                                                 <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-map-marker"></i></span>
-                                                                                <select class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;" v-model="district">
+                                                                                <select class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;" v-model="district_nacido_modal">
                                                                                     <option selected="selected" value="">Seleccione</option>
-                                                                                    <option v-for="miselect in array_district" :selected="miselect.id == district" :key="miselect.id" :value="miselect.id">{{ miselect.distrito}}</option>
+                                                                                    <option v-for="miselect in array_district_nacido_modal" :selected="miselect.id == district" :key="miselect.id" :value="miselect.id">{{ miselect.distrito}}</option>
                                                                                 </select>
                                                                             </div>
                                                                         </div>
+                                                                    </div>
+                                                                    <div class="col-md-1">
+                                                                        
+                                                                    </div>
+                                                                    
+                                                                    <div class="col-md-3">
+                                                                         <div v-bind:class="errorInputEdad"> 
+                                                                        
+                                                                            <label for="fecha">Fecha de Nacimiento:</label>
+                                                                            <div class="input-group">
+                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-birthday-cake "></i></span>
+                                                                            <date-picker v-model="fecha_nacimiento_nacido_modal" :config="options" style="border-top-right-radius: 3px;border-bottom-right-radius: 3px;"></date-picker>
+                                                                                
+                                                                            </div>
+                                                                        
+                                                                    </div>
                                                                     </div> 
+                                                                     </div>
                                             </div>
                                         </div>
                                     </div>
@@ -709,11 +742,451 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-danger" @click="close_modal(1)"><i class="fa fa-times"></i> CERRAR</button>
-                        <button type="button" @click="save_personal()" class="btn btn-save"><i class="fa fa-save"></i>&nbsp;GUARDAR PERSONAL</button>                        
+                        <button type="button" @click="save_personal_nacido_modal()" class="btn btn-save"><i class="fa fa-save"></i>&nbsp;GUARDAR NACIDO</button>                        
                     </div>
                 </div>
+            </div> 
             </div>
-        </div>       
+
+        </div>
+                    <!-- MODAL MADRE -->
+             <div class="modal fade" tabindex="-1" :class="{'mostrar' : modal_add_madre}" role="dialog" aria-labelledby="myModalLabel" style="display: none;" aria-hidden="true">
+
+           
+            <div class="modal-dialog modal-lg" role="document">
+            
+                <div class="modal-content">
+                
+                    <div class="modal-header" style="background: #012D74;">
+                        <button type="button" class="close" @click="close_modal_madre(1)" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                            <h4 class="modal-title" style="color: #FFFFFF"><i class="fa fa-plus"></i> AGREGAR MADRE</h4>
+                    </div>
+                <div class="slimScrollDiv">
+                    <div class="modal-body">  
+                        <div class="row">    
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"> 
+                                <div class="box-body">                                     
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-horizontal">
+                                                
+                                                    <label  class="col-md-0 control-label">DNI:</label>
+                                                    <div class="col-md-12">
+                                                        <div class="input-group">
+                                                            <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;  color:#1e2172">
+                                                                <i class="fa fa-indent"></i>
+                                                            </span>
+                                                            <input maxlength="8" v-model="number_doc_add_madre" type="text" @keyup.enter="get_data_reniec_madre()" class="form-control">
+                                                            <span class="input-group-btn">
+                                                                <button data-toggle="tooltip" title="Buscar" type="submit" @click="get_data_reniec_madre()" class="btn btn-search btn-flat" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;"><i class="fa fa-check"></i> VALIDAR</button>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                
+                                                                    <div class="row">
+                                                                    
+                                                                    <div class="col-md-3">
+                                                                        <div v-bind:class="errorInputSex">
+                                                                            <label for="sexo">Sexo:</label>
+                                                                            <div class="input-group">
+                                                                                        <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-transgender"></i></span>
+                                                                                    <select class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;" v-model="sexo_madre_modal">
+                                                                                        <option selected="selected" value="">Seleccione</option>
+                                                                                        <option value="M">Masculino</option>
+                                                                                        <option value="F">Femenino</option>
+                                                                                    </select>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-1">
+                                                                        
+                                                                    </div>
+                                                                    <div class="col-md-3">
+                                                                        <div v-bind:class="errorInputMaritalState">
+                                                                            <label for="estado_civil">Estado Civíl:</label>
+                                                                            <div class="input-group">
+                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-heart-o"></i></span>
+                                                                                <select class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;" v-model="estado_civil_madre_modal">
+                                                                                    <option selected="selected" value="">Seleccione</option>
+                                                                                    <option value="SOLTERO">Soltero (a)</option>
+                                                                                    <option value="CASADO">Casado (a)</option>
+                                                                                    <option value="VIUDO">Viudo (a)</option>
+                                                                                    <option value="SEPARADO">Separado (a)</option>
+                                                                                </select>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div> 
+                                                                    <div class="col-md-1">
+                                                                        
+                                                                    </div>
+                                                                    <div class="col-md-3">
+                                                                        <div v-bind:class="errorInputPaternal">
+                                                                            <label for="ap_paterno">Apellido Paterno:</label>
+                                                                            <div class="input-group">
+                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-user"></i></span>
+                                                                                <input v-model="name_paterno_madre_modal" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">                                                                            
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    </div>
+
+                                                                    
+                                                                <div class="row">
+                                                                
+                                                                    <div class="col-md-3">
+                                                                        <div v-bind:class="errorInputMaternal">
+                                                                            <label for="ap_materno">Apellido Materno:</label>
+                                                                            <div class="input-group">
+                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-user"></i></span>
+                                                                                <input v-model="name_materno_madre_modal" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">  
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-1">
+                                                                        
+                                                                    </div>
+                                                                    
+                                                                    <div class="col-md-3">
+                                                                        <div v-bind:class="errorInputNames">
+                                                                            <label for="nombres">Nombres:</label>
+                                                                            <div class="input-group">
+                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-user"></i></span>
+                                                                                <input v-model="name_madre_modal" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">  
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-1">
+                                                                        
+                                                                    </div>
+
+                                                                    
+                                                                    <div class="col-md-3">
+                                                                        <div v-bind:class="errorInputLugar">
+                                                                                <label for="lugar">Lugar/Hopsital:</label>
+                                                                                <div class="input-group">
+                                                                                    <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-user"></i></span>
+                                                                                    <input v-model="lugar_madre_modal" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">  
+                                                                                </div>
+                                                                        </div>
+
+                                                                    </div>
+                                                                    
+                                                                </div>
+                                                                    
+                                                                <div class="row">
+                                                                
+                                                                    <div class="col-md-3">
+                                                                        <div v-bind:class="errorInputEdad">
+                                                                                <label for="edad">Edad:</label>
+                                                                                <div class="input-group">
+                                                                                    <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-hourglass-2"></i></span>
+                                                                                    <input v-model="edad_madre_modal" type="tel" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">  
+                                                                                </div>
+                                                                            
+                                                                            
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-1">
+                                                                        
+                                                                    </div>
+                                                                    <div class="col-md-3">
+                                                                        <div v-bind:class="errorInputDepartment">
+                                                                            <label for="estado_civil">Departamento:</label>
+                                                                            <div class="input-group">
+                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-map-marker"></i></span>
+                                                                                <select @change="getProvince($event.target.value)" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;" v-model="department_madre_modal">
+                                                                                    <option selected="selected" value="">Seleccione</option>
+                                                                                    <option v-for="miselect in array_department_madre_modal" :selected="miselect.id == department" :key="miselect.id" :value="miselect.id">{{ miselect.departamento}}</option>
+                                                                                </select>
+                                                                            </div>
+                                                                        </div>
+                                                                       
+                                                                    </div> 
+                                                                    <div class="col-md-1">
+                                                                        
+                                                                    </div>
+
+                                                                    <div class="col-md-3">
+                                                                        <div v-bind:class="errorInputProvince">
+                                                                            <label for="estado_civil">Provincia:</label>
+                                                                            <div class="input-group">
+                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-map-marker"></i></span>
+                                                                                <select @change="getDistrict($event.target.value)" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;" v-model="province_madre_modal">
+                                                                                    <option selected="selected" value="">Seleccione</option>
+                                                                                    <option v-for="miselect in array_province_madre_modal" :selected="miselect.id == province" :key="miselect.id" :value="miselect.id">{{ miselect.provincia}}</option>
+                                                                                </select>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row">
+                                                                    <div class="col-md-3">
+                                                                        <div v-bind:class="errorInputDistrict">
+                                                                            <label for="estado_civil">Distrito:</label>
+                                                                            <div class="input-group">
+                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-map-marker"></i></span>
+                                                                                <select class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;" v-model="district_madre_modal">
+                                                                                    <option selected="selected" value="">Seleccione</option>
+                                                                                    <option v-for="miselect in array_district_madre_modal" :selected="miselect.id == district" :key="miselect.id" :value="miselect.id">{{ miselect.distrito}}</option>
+                                                                                </select>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-1">
+                                                                        
+                                                                    </div>
+                                                                    
+                                                                    <div class="col-md-3">
+                                                                         <div v-bind:class="errorInputEdad"> 
+                                                                        
+                                                                            <label for="fecha">Fecha de Nacimiento:</label>
+                                                                            <div class="input-group">
+                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-birthday-cake "></i></span>
+                                                                            <date-picker v-model="fecha_nacimiento_madre_modal" :config="options" style="border-top-right-radius: 3px;border-bottom-right-radius: 3px;"></date-picker>
+                                                                                
+                                                                            </div>
+                                                                        
+                                                                    </div>
+                                                                    </div> 
+                                                                     </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                       
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" @click="close_modal_madre(1)"><i class="fa fa-times"></i> CERRAR</button>
+                        <button type="button" @click="save_personal_madre_modal()" class="btn btn-save"><i class="fa fa-save"></i>&nbsp;GUARDAR MADRE</button>                        
+                    </div>
+                </div>
+            </div> 
+            </div>
+
+        </div> 
+         <!-- MODAL PADRE -->
+             <div class="modal fade" tabindex="-1" :class="{'mostrar' : modal_add_padre}" role="dialog" aria-labelledby="myModalLabel" style="display: none;" aria-hidden="true">
+
+           
+            <div class="modal-dialog modal-lg" role="document">
+            
+                <div class="modal-content">
+                
+                    <div class="modal-header" style="background: #012D74;">
+                        <button type="button" class="close" @click="close_modal_padre(1)" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                            <h4 class="modal-title" style="color: #FFFFFF"><i class="fa fa-plus"></i> AGREGAR PADRE</h4>
+                    </div>
+                <div class="slimScrollDiv">
+                    <div class="modal-body">  
+                        <div class="row">    
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"> 
+                                <div class="box-body">                                     
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-horizontal">
+                                                
+                                                    <label  class="col-md-0 control-label">DNI:</label>
+                                                    <div class="col-md-12">
+                                                        <div class="input-group">
+                                                            <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;  color:#1e2172">
+                                                                <i class="fa fa-indent"></i>
+                                                            </span>
+                                                            <input maxlength="8" v-model="number_doc_add_padre" type="text" @keyup.enter="get_data_reniec_padre()" class="form-control">
+                                                            <span class="input-group-btn">
+                                                                <button data-toggle="tooltip" title="Buscar" type="submit" @click="get_data_reniec_padre()" class="btn btn-search btn-flat" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;"><i class="fa fa-check"></i> VALIDAR</button>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                
+                                                                    <div class="row">
+                                                                    
+                                                                    <div class="col-md-3">
+                                                                        <div v-bind:class="errorInputSex">
+                                                                            <label for="sexo">Sexo:</label>
+                                                                            <div class="input-group">
+                                                                                        <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-transgender"></i></span>
+                                                                                    <select class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;" v-model="sexo_padre_modal">
+                                                                                        <option selected="selected" value="">Seleccione</option>
+                                                                                        <option value="M">Masculino</option>
+                                                                                        <option value="F">Femenino</option>
+                                                                                    </select>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-1">
+                                                                        
+                                                                    </div>
+                                                                    <div class="col-md-3">
+                                                                        <div v-bind:class="errorInputMaritalState">
+                                                                            <label for="estado_civil">Estado Civíl:</label>
+                                                                            <div class="input-group">
+                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-heart-o"></i></span>
+                                                                                <select class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;" v-model="estado_civil_padre_modal">
+                                                                                    <option selected="selected" value="">Seleccione</option>
+                                                                                    <option value="SOLTERO">Soltero (a)</option>
+                                                                                    <option value="CASADO">Casado (a)</option>
+                                                                                    <option value="VIUDO">Viudo (a)</option>
+                                                                                    <option value="SEPARADO">Separado (a)</option>
+                                                                                </select>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div> 
+                                                                    <div class="col-md-1">
+                                                                        
+                                                                    </div>
+                                                                    <div class="col-md-3">
+                                                                        <div v-bind:class="errorInputPaternal">
+                                                                            <label for="ap_paterno">Apellido Paterno:</label>
+                                                                            <div class="input-group">
+                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-user"></i></span>
+                                                                                <input v-model="name_paterno_padre_modal" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">                                                                            
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    </div>
+
+                                                                    
+                                                                <div class="row">
+                                                                
+                                                                    <div class="col-md-3">
+                                                                        <div v-bind:class="errorInputMaternal">
+                                                                            <label for="ap_materno">Apellido Materno:</label>
+                                                                            <div class="input-group">
+                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-user"></i></span>
+                                                                                <input v-model="name_materno_padre_modal" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">  
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-1">
+                                                                        
+                                                                    </div>
+                                                                    
+                                                                    <div class="col-md-3">
+                                                                        <div v-bind:class="errorInputNames">
+                                                                            <label for="nombres">Nombres:</label>
+                                                                            <div class="input-group">
+                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-user"></i></span>
+                                                                                <input v-model="name_padre_modal" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">  
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-1">
+                                                                        
+                                                                    </div>
+
+                                                                    
+                                                                    <div class="col-md-3">
+                                                                        <div v-bind:class="errorInputLugar">
+                                                                                <label for="lugar">Lugar/Hopsital:</label>
+                                                                                <div class="input-group">
+                                                                                    <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-user"></i></span>
+                                                                                    <input v-model="lugar_padre_modal" type="text" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">  
+                                                                                </div>
+                                                                        </div>
+
+                                                                    </div>
+                                                                    
+                                                                </div>
+                                                                    
+                                                                <div class="row">
+                                                                
+                                                                    <div class="col-md-3">
+                                                                        <div v-bind:class="errorInputEdad">
+                                                                                <label for="edad">Edad:</label>
+                                                                                <div class="input-group">
+                                                                                    <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-hourglass-2"></i></span>
+                                                                                    <input v-model="edad_padre_modal" type="tel" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;">  
+                                                                                </div>
+                                                                            
+                                                                            
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-1">
+                                                                        
+                                                                    </div>
+                                                                    <div class="col-md-3">
+                                                                        <div v-bind:class="errorInputDepartment">
+                                                                            <label for="estado_civil">Departamento:</label>
+                                                                            <div class="input-group">
+                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-map-marker"></i></span>
+                                                                                <select @change="getProvince($event.target.value)" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;" v-model="department_padre_modal">
+                                                                                    <option selected="selected" value="">Seleccione</option>
+                                                                                    <option v-for="miselect in array_department_padre_modal" :selected="miselect.id == department" :key="miselect.id" :value="miselect.id">{{ miselect.departamento}}</option>
+                                                                                </select>
+                                                                            </div>
+                                                                        </div>
+                                                                       
+                                                                    </div> 
+                                                                    <div class="col-md-1">
+                                                                        
+                                                                    </div>
+
+                                                                    <div class="col-md-3">
+                                                                        <div v-bind:class="errorInputProvince">
+                                                                            <label for="estado_civil">Provincia:</label>
+                                                                            <div class="input-group">
+                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-map-marker"></i></span>
+                                                                                <select @change="getDistrict($event.target.value)" class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;" v-model="province_padre_modal">
+                                                                                    <option selected="selected" value="">Seleccione</option>
+                                                                                    <option v-for="miselect in array_province_padre_modal" :selected="miselect.id == province" :key="miselect.id" :value="miselect.id">{{ miselect.provincia}}</option>
+                                                                                </select>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row">
+                                                                    <div class="col-md-3">
+                                                                        <div v-bind:class="errorInputDistrict">
+                                                                            <label for="estado_civil">Distrito:</label>
+                                                                            <div class="input-group">
+                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-map-marker"></i></span>
+                                                                                <select class="form-control" style="border-bottom-right-radius: 3px;border-top-right-radius: 3px;" v-model="district_padre_modal">
+                                                                                    <option selected="selected" value="">Seleccione</option>
+                                                                                    <option v-for="miselect in array_district_padre_modal" :selected="miselect.id == district" :key="miselect.id" :value="miselect.id">{{ miselect.distrito}}</option>
+                                                                                </select>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-1">
+                                                                        
+                                                                    </div>
+                                                                    
+                                                                    <div class="col-md-3">
+                                                                         <div v-bind:class="errorInputEdad"> 
+                                                                        
+                                                                            <label for="fecha">Fecha de Nacimiento:</label>
+                                                                            <div class="input-group">
+                                                                                <span class="input-group-addon" style="border-bottom-left-radius: 3px;border-top-left-radius: 3px;"><i class="fa fa-birthday-cake "></i></span>
+                                                                            <date-picker v-model="fecha_nacimiento_padre_modal" :config="options" style="border-top-right-radius: 3px;border-bottom-right-radius: 3px;"></date-picker>
+                                                                                
+                                                                            </div>
+                                                                        
+                                                                    </div>
+                                                                    </div> 
+                                                                     </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                       
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" @click="close_modal_padre(1)"><i class="fa fa-times"></i> CERRAR</button>
+                        <button type="button" @click="save_personal_padre_modal()" class="btn btn-save"><i class="fa fa-save"></i>&nbsp;GUARDAR PADRE</button>                        
+                    </div>
+                </div>
+            </div> 
+            </div>
+
+        </div> 
+
+
 		</section>
     </main>
 </template>
@@ -735,9 +1208,14 @@
                 listadox:1,
                 listado:2,
                 modal_add:0,
+                 modal_add_madre:0,
+                 modal_add_padre:0,
+                
                 //fechas
                 authUser:1,
+                //fecha_nacimiento_nacido_modal
                 date_init: ''+new Date().getDate()+'/'+(Number(new Date().getMonth())+1)+'/'+new Date().getFullYear(),
+                fecha_nacimiento_nacido_modal: ''+new Date().getDate()+'/'+(Number(new Date().getMonth())+1)+'/'+new Date().getFullYear(),
                 fecha_nacimiento: ''+new Date().getDate()+'/'+(Number(new Date().getMonth())+1)+'/'+new Date().getFullYear(),
                 fecha_nacimiento_madre: ''+new Date().getDate()+'/'+(Number(new Date().getMonth())+1)+'/'+new Date().getFullYear(),
                 fecha_nacimiento_padre: ''+new Date().getDate()+'/'+(Number(new Date().getMonth())+1)+'/'+new Date().getFullYear(),
@@ -759,25 +1237,37 @@
 					'to' : 0,
                 },offset: 3,
                 idperson:-1,
+                //NACIDO
                 code:'', name:'', name_paterno:'',name_materno:'',profesion_oficio:'',
                 edad:'',address:'',number_doc:'', id_type_document:'', email:'',number_doc_madre:'',                 
-                department:'10', province:'92', district:'', id_type_business:'', 
-                reference:'', sexo:'', estado_civil:'',estado:'1',lugar:'',
+                department:'', province:'', district:'', id_type_business:'', 
+                reference:'', sexo:'', estado_civil:'',estado:'1',lugar:'',personal:'',
+                //NACIDO MODAL
+                name_nacido_modal:'', name_paterno_nacido_modal:'',name_materno_nacido_modal:'',profesion_oficio:'',
+                edad_nacido_modal:'',address:'',number_doc_add:'',               
+                department_nacido_modal:'', province_nacido_modal:'', district_nacido_modal:'', 
+                sexo_modal_nacido:'', estado_civil_modal_nacido:'',estado:'1',lugar_nacido_modal:'',
+                //MADRE MODAL
+                name_madre_modal:'', name_materno_madre_modal:'',name_paterno_madre_modal:'',profesion_oficio:'',
+                edad_madre_modal:'',number_doc_add_madre:'',               
+                department_madre_modal:'', province_madre_modal:'', district_madre_modal:'', 
+                sexo_modal_nacido:'', estado_civil_modal_nacido:'',estado:'1',lugar_nacido_modal:'',
+
 
                 code_aval:'', name_madre:'', paternal_last_name_madre:'',maternal_last_name_madre:'',
                 phone_aval:'',address_aval:'',number_doc_padre:'', 
-                department_madre:'10', province_madre:'92', district_madre:'',
-                reference_aval:'', sex_aval:'', estado_civil_madre:'',edad_madre:'',
+                department_madre:'', province_madre:'', district_madre:'',
+                reference_aval:'', sex_aval:'', estado_civil_madre:'',edad_madre:'',personal_madre:'',
                 profesion_oficio_madre:'',
 
                 code_aval:'', name_padre:'', paternal_last_name_padre:'',maternal_last_name_padre:'',
                 phone_aval:'',address_aval:'',
-                department_padre:'10', province_padre:'92', district_padre:'',
-                reference_aval:'', sex_aval:'', estado_civil_padre:'',edad_padre:'',
+                department_padre:'', province_padre:'', district_padre:'',
+                reference_aval:'', sex_aval:'', estado_civil_padre:'',edad_padre:'',personal_padre:'',
                 profesion_oficio_padre:'',
                 errorClase : 0,
                 errors:{},
-
+                //NACIDO
                 errorInputCode:'form-group',errorInputTypeDoc:'form-group',
                 errorInputNroDoc:'form-group',errorInputNames:'form-group',
                 errorInputPaternal:'form-group', errorInputMaternal:'form-group',
@@ -789,7 +1279,7 @@
                 errorInputJob:'form-group', errorInputTypeBusiness:'form-group',
                 errorInputEmployee:'form-group', errorInputDepartment:'form-group',
                 errorInputProvince:'form-group', errorInputDistrict:'form-group',
-
+                //MADRE
                 errorInputTypeDocmadre:'form-group',
                 errorInputNroDocmadre:'form-group',errorInputNamesmadre:'form-group',
                 errorInputPaternalmadre:'form-group', errorInputMaternalmadre:'form-group',
@@ -798,6 +1288,13 @@
                 errorInputJobAval:'form-group', errorInputTypeBusinessAval:'form-group',
                 errorInputDepartmentmadre:'form-group',
                 errorInputProvincemadre:'form-group', errorInputDistrictmadre:'form-group',
+                	//padre
+                errorInputNroDocpadre:'form-group',errorInputNamespadre:'form-group',
+                errorInputPaternalpadre:'form-group', errorInputMaternalpadre:'form-group',
+                errorInputEdadpadre:'form-group', 
+                errorInputMaritalStatepadre:'form-group',
+                errorInputDepartmentpadre:'form-group',
+                errorInputProvincepadre:'form-group', errorInputDistrictpadre:'form-group',
 
                 errorInputcapital:'form-group',errorComboTipoProduco:'form-group',
 
@@ -811,9 +1308,9 @@
                 errorTea:'form-group',errorInterested:'form-group',errorWarehouse:'form-group',
                 errorFamilyProduct:'form-group',errorCharacteristic:'form-group',
 
-                array_department:[], array_province: [], array_district: [], array_type_document:[],array_code:[],
-                array_department_madre:[], array_province_madre: [], array_district_madre: [],
-                array_department_padre:[], array_province_padre: [], array_district_padre: [],
+                array_department_nacido_modal:[], array_province_nacido_modal: [], array_district_nacido_modal: [], array_type_document:[],array_code:[],
+                array_department_madre_modal:[], array_province_madre_modal: [], array_district_madre_modal: [],
+                array_department_padre_modal:[], array_province_padre_modal: [], array_district_padre_modal: [],
                 totalcapital:0,totalInterest:0,modalTicket:0,idcustomer:-1,array_requirement : [],array_requirement_true : [], requirements:[],
                 midatax:[], list:[],totalNumber:0, 
                 id_customer_credit:-1, id_guarantor:-1,
@@ -880,19 +1377,41 @@
             add_person(){     
                 let me= this;                  
                 me.modal_add=1;
-                me.number_doc_add=this.number_doc;                
+                me.number_doc_add=this.number_doc; 
+                this.getDepartment();
+               // add_person               
+            },
+             add_person_madre(){     
+                let me= this;                  
+                me.modal_add_madre=1;
+                 this.getDepartment_madre();
+                //me.number_doc_add=this.number_doc;                
+            },
+             add_person_padre(){     
+                let me= this;                  
+                me.modal_add_padre=1;
+                 this.getDepartment_padre();
+                //me.number_doc_add=this.number_doc;                
             },
             close_modal(){
                 let me= this;
                 me.modal_add=0;
             },
+            close_modal_madre(){
+                let me= this;
+                me.modal_add_madre=0;
+            },
+            close_modal_padre(){
+                let me= this;
+                me.modal_add_padre=0;
+            },
             getDepartment(){
                 let me=this;
-                me.listado=0;
+                //me.listado=0;
                 var url= 'get_department';
                     axios.get(url).then(function (response) {
                         var respuesta= response.data;
-                        me.array_department=respuesta.datax;
+                        me.array_department_nacido_modal=respuesta.datax;
                     })
                     .catch(function (error) {
                         console.log(error);
@@ -904,7 +1423,7 @@
                 var url= 'get_province?id='+ id_department;
                     axios.get(url).then(function (response) {
                         var respuesta= response.data;
-                        me.array_province=respuesta.datax;
+                        me.array_province_nacido_modal=respuesta.datax;
                     })
                     .catch(function (error) {
                         console.log(error);
@@ -916,7 +1435,7 @@
                 var url= 'get_district?id='+ id_province;
                     axios.get(url).then(function (response) {
                         var respuesta= response.data;
-                        me.array_district=respuesta.datax;
+                        me.array_district_nacido_modal=respuesta.datax;
                     })
                     .catch(function (error) {
                         console.log(error);
@@ -966,7 +1485,7 @@
                 var url= 'get_department_padre';
                     axios.get(url).then(function (response) {
                         var respuesta= response.data;
-                        me.array_department_padre=respuesta.datax;
+                        me.array_department_nacido_modal=respuesta.datax;
                     })
                     .catch(function (error) {
                         console.log(error);
@@ -996,25 +1515,86 @@
                         console.log(error);
                     });
             },
-            getData(){//obteniendo datos de reniec                     
+            getData(){//obteniendo datos de la bd                    
                 if (this.number_doc.length==8){   
                     let me=this;              
-                    var url= 'get_customer_by_dni?number_doc='+me.number_doc;
+                    var url= 'getDatabyNroDocP?number_doc='+me.number_doc;
+                    axios.get(url).then(function (response) {
+                        var respuesta= response.data;
+                        var tipo=respuesta.tipo;
+                        if(respuesta.datax.length>0){
+                            if(tipo=='bd'){
+                                  //me.idperson=respuesta.datax[0].idperson ;  
+
+                                me.name_paterno= respuesta.datax[0].name_paterno;
+                                me.name = respuesta.datax[0].name;
+                                me.name_materno = respuesta.datax[0].name_materno;
+                                me.personal = respuesta.datax[0].name_paterno+' ' +respuesta.datax[0].name_materno+' ' +respuesta.datax[0].name; 
+                                 me.sexo= respuesta.datax[0].sexo;
+                                me.estado_civil = respuesta.datax[0].estado_civil;
+                                me.edad = respuesta.datax[0].edad; 
+                                me.fecha_nacimiento= moment(respuesta.datax[0].fecha_nacimiento).toDate();
+                                me.estado_civil = respuesta.datax[0].estado_civil;
+                                //me.edad = respuesta.datax[0].edad;
+                                me.department= respuesta.datax[0].departamentos;
+                                me.district= respuesta.datax[0].distritos;
+                                me.province= respuesta.datax[0].provincias;
+
+                                
+                                //me.validarData();
+                            }
+                            else{
+                               
+                               me.name = 'AGREGUE RECIEN NACIDO';
+                               me.name_paterno= 'AGREGUE RECIEN NACIDO';
+                                me.name_materno = 'AGREGUE RECIEN NACIDO';
+                                me.personal = 'AGREGUE RECIEN NACIDO';  
+                                //me.name_materno = respuesta.datax[0].name_materno; 
+                               // me.validarData();
+                            }
+                        }                    
+                    })
+                    .catch(function (error) {
+                        console.log(error);
+                    });
+                    //obtener datos
+                    
+                }
+            },
+            get_data_reniec_nacidos(){//obteniendo datos de la bd                    
+                if (this.number_doc_add.length==8){   
+                    let me=this;              
+                    var url= 'getDatabyNroDocP?number_doc='+me.number_doc_add;
                     axios.get(url).then(function (response) {
                         var respuesta= response.data;
                         var tipo=respuesta.tipo;
                         if(respuesta.datax.length>0){
                             if(tipo=='reniec'){
-                                me.name_paterno= respuesta.datax[0];
-                                me.name = respuesta.datax[1];
-                                me.name_materno = respuesta.datax[2];                        
-                                me.validarData();
+                                  //me.idperson=respuesta.datax[0].idperson ;  
+
+                                me.name_paterno_nacido_modal= respuesta.datax[0];
+                                me.name_nacido_modal = respuesta.datax[1];
+                                me.name_materno_nacido_modal = respuesta.datax[2];
+                                //me.personal = respuesta.datax[0].name_paterno+' ' +respuesta.datax[0].name_materno+' ' +respuesta.datax[0].name; 
+                                 //me.sexo= respuesta.datax[0].sexo;
+                                //me.estado_civil = respuesta.datax[0].estado_civil;
+                                //me.edad = respuesta.datax[0].edad; 
+                                //me.fecha_nacimiento= moment(respuesta.datax[0].fecha_nacimiento).toDate();
+                                //me.estado_civil = respuesta.datax[0].estado_civil;
+                                //me.edad = respuesta.datax[0].edad;
+                                //me.department= respuesta.datax[0].departamentos;
+                                //me.district= respuesta.datax[0].distritos;
+                                //me.province= respuesta.datax[0].provincias;
+                                //me.validarData();
                             }
                             else{
-                                me.name_paterno = 'EL PERSONAL  YA SE ENCUENTRA REGISTRADO';
-                                me.name = 'EL PERSONAL  YA SE ENCUENTRA REGISTRADO';
-                                me.name_materno = 'EL PERSONAL  YA SE ENCUENTRA REGISTRADO';
-                                me.validarData();
+                               
+                               me.name_paterno_nacido_modal = 'YA EXISTE RECIEN NACIDO';
+                               me.name_nacido_modal= 'YA EXISTE RECIEN NACIDO';
+                                me.name_materno_nacido_modal = 'YA EXISTE RECIEN NACIDO';
+                                //me.personal = 'YA EXISTE RECIEN NACIDO';  
+                                //me.name_materno = respuesta.datax[0].name_materno; 
+                               // me.validarData();
                             }
                         }                    
                     })
@@ -1029,7 +1609,7 @@
                 //obteniendo datos de la base de datos
                 if (this.number_doc_madre.length==8){   
                     let me=this;              
-                    var url= 'getDatabyNroDocP?number_doc_madre='+me.number_doc_madre;
+                    var url= 'getDatabyNroDocP?number_doc='+me.number_doc_madre;
                     axios.get(url).then(function (response) {
                         var respuesta= response.data;
                         var tipo=respuesta.tipo;
@@ -1037,14 +1617,19 @@
                             if(tipo=='bd'){
                                     //me.idperson=respuesta.datax[0].idperson;
                                     
-                                        //me.number_doc_madre = respuesta.datax[0].number_doc_madre;  
-                                        me.last_madre_paterno = respuesta.datax[0].name_materno;   
-                                        //me.last_madre_materno = respuesta.datax[0].last_madre_materno;   
-                                        //me.name_materno = respuesta.datax[0].name_materno; 
-                                        //me.edad_madre = respuesta.datax[0].edad_madre;   
-                                        //me.estado_civil_madre= respuesta.datax[0].estado_civil;   
-                                        //me.profesion_oficio_madre = respuesta.datax[0].profesion_oficio;   
-                                        //me.fecha_nacimiento_madre = moment(respuesta.datax[0].fecha_nacimiento).toDate();;                            
+                                me.last_madre_paterno= respuesta.datax[0].name_paterno;
+                                me.last_madre_materno = respuesta.datax[0].name;
+                                me.name_madre = respuesta.datax[0].name_materno;
+                                me.personal_madre = respuesta.datax[0].name_paterno+' ' +respuesta.datax[0].name_materno+' ' +respuesta.datax[0].name; 
+                                // me.sexo= respuesta.datax[0].sexo;
+                                me.estado_civil_madre = respuesta.datax[0].estado_civil;
+                                me.edad_madre = respuesta.datax[0].edad; 
+                                me.fecha_nacimiento_madre= moment(respuesta.datax[0].fecha_nacimiento).toDate();
+                                //me.estado_civil = respuesta.datax[0].estado_civil;
+                                //me.edad = respuesta.datax[0].edad;
+                                me.department_madre= respuesta.datax[0].departamentos;
+                                me.district_madre= respuesta.datax[0].distritos;
+                                me.province_madre= respuesta.datax[0].provincias;                         
 
                                    // me.validarData();
                             }
@@ -1052,6 +1637,52 @@
                                 me.last_madre_materno = 'LA MADRE NO SE ENCUENTRA REGISTRADA';
                                 me.name_madre = 'LA MADRE NO SE ENCUENTRA REGISTRADA';
                                 me.last_madre_paterno = 'LA MADRE NO SE ENCUENTRA REGISTRADA';
+                                 me.personal_madre = 'LA MADRE NO SE ENCUENTRA REGISTRADA'; 
+                                
+                                me.validarData();
+                            }
+                        }                    
+                    })
+                    .catch(function (error) {
+                        console.log(error);
+                    });
+                    //obtener datos
+                    
+                }
+            },
+            get_data_padre(){
+                //obteniendo datos de la base de datos
+                if (this.number_doc_padre.length==8){   
+                    let me=this;              
+                    var url= 'getDatabyNroDocP?number_doc='+me.number_doc_padre;
+                    axios.get(url).then(function (response) {
+                        var respuesta= response.data;
+                        var tipo=respuesta.tipo;
+                        if(respuesta.datax.length>0){
+                            if(tipo=='bd'){
+                                    //me.idperson=respuesta.datax[0].idperson;
+                                    
+                                me.paternal_last_name_padre= respuesta.datax[0].name_paterno;
+                                me.maternal_last_name_padre = respuesta.datax[0].name_materno;
+                                me.name_padre = respuesta.datax[0].name;
+                                me.personal_madre = respuesta.datax[0].name_paterno+' ' +respuesta.datax[0].name_materno+' ' +respuesta.datax[0].name; 
+                                // me.sexo= respuesta.datax[0].sexo;
+                                me.estado_civil_padre = respuesta.datax[0].estado_civil;
+                                me.edad_padre = respuesta.datax[0].edad; 
+                                me.fecha_nacimiento_padre= moment(respuesta.datax[0].fecha_nacimiento).toDate();
+                                //me.estado_civil = respuesta.datax[0].estado_civil;
+                                //me.edad = respuesta.datax[0].edad;
+                                me.department_padre= respuesta.datax[0].departamentos;
+                                me.district_padre= respuesta.datax[0].distritos;
+                                me.province_padre= respuesta.datax[0].provincias;                         
+
+                                   // me.validarData();
+                            }
+                            else{
+                                me.maternal_last_name_madre = 'LA PADRE NO SE ENCUENTRA REGISTRADA';
+                                me.name_padre = 'LA PADRE NO SE ENCUENTRA REGISTRADA';
+                                me.paternal_last_name_padre = 'LA PADRE NO SE ENCUENTRA REGISTRADA';
+                                 me.personal_madre = 'LA PADRE NO SE ENCUENTRA REGISTRADA'; 
                                 
                                 me.validarData();
                             }
@@ -1326,11 +1957,11 @@
         mounted() {
         //    this.lista_add_client();
         //    this.list_data(1);
-            this.getDepartment();
-            this.getDepartment_madre();
-            this.getDepartment_padre();
-            this.getProvince_padre(10);
-            this.getDistrict_padre(92);
+            //this.getDepartment();
+            //this.getDepartment_madre();
+            //this.getDepartment_padre();
+            //this.getProvince_padre(10);
+            //this.getDistrict_padre(92);
             //this.getTypeBusiness();
            // this.getJob();
             //this.getEmployee();
@@ -1339,13 +1970,13 @@
 
             //this.getTypeRequirement();            
             //this.calculateTeabyTerm();
-            this.getProvince(10);
-            this.getProvince_madre(10);
+            //this.getProvince(10);
+            //this.getProvince_madre(10);
             
 
 
-            this.getDistrict(92);
-            this.getDistrict_madre(92);
+           // this.getDistrict(92);
+            //this.getDistrict_madre(92);
             
 
 
